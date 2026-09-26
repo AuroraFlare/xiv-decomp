@@ -1,0 +1,212 @@
+{
+  "source": "client/chara/mon/m701/act/cmn/lib/base/0730",
+  "bytes": 22592,
+  "sha256": "cd49fe8f72d3f84323d0828afe95f0955400e43d139fe52eba34e397fed47d6f",
+  "resources": [
+    {
+      "depth": "outer",
+      "id": "caster",
+      "path": "DataSet\\caster",
+      "type": "0x62696e",
+      "bytes": 21155,
+      "sha256": "bb54521960deba998cf50ff7ee8d6a320daa35dac7a5046983cddd2ae3a7161a",
+      "effects": []
+    },
+    {
+      "depth": "outer/RES:caster",
+      "id": "cbfm_sigh",
+      "path": "mcc\\base\\b001\\bin\\cbfm_sigh",
+      "type": "MCB",
+      "bytes": 584,
+      "sha256": "20f151b148b1e6727cdb64240467847906a0211c672c3feea9e289068210d507",
+      "effects": [],
+      "header": {
+        "header_version": 2,
+        "header_abi_hex": "0x00300000",
+        "declared_payload_bytes": 584,
+        "rst_offset_hex": "0x30",
+        "act_offset_hex": "0x88",
+        "track_offset_hex": "0xC8",
+        "block_offset_hex": "0xF8",
+        "duration_units": 1050000,
+        "entry_count": 2,
+        "clip_classes": "RaptureFootstepLoopTriggerClip;MotionCommandClip",
+        "block_padding_bytes": 0,
+        "companion_resource_id": "cbfm_sigh",
+        "companion_resource_type": "btm"
+      },
+      "commands": [
+        {
+          "entry_ordinal": 0,
+          "record_offset_hex": "0x110",
+          "record_size": 24,
+          "record_sha256": "c578deee95cc42c1dc6ed2c955e4b32b77786b5b82e1e481dd2317e19730f213",
+          "class_index": 0,
+          "clip_class": "RaptureFootstepLoopTriggerClip",
+          "actor_index": 0,
+          "start_units": 0,
+          "target_track_id": 3,
+          "raw_flags_hex": "0x00A0",
+          "timeline_clip_id": 0,
+          "body_bytes": 16,
+          "body_sha256": "01801bc95dd67ac32a3fe51240a64ef53194d69d7f74cdad27084b93ececd18c",
+          "body_identifiers": ""
+        },
+        {
+          "entry_ordinal": 1,
+          "record_offset_hex": "0x128",
+          "record_size": 16,
+          "record_sha256": "0463c3299283161bd5c41bbbabc931ef1d22cad74180ae01d48587348e1d9753",
+          "class_index": 1,
+          "clip_class": "MotionCommandClip",
+          "actor_index": 0,
+          "start_units": 0,
+          "target_track_id": 2,
+          "raw_flags_hex": "0x00A0",
+          "timeline_clip_id": 1,
+          "body_bytes": 8,
+          "body_sha256": "16d344a119db9af51450f5ed725ecbed5ead2765423097f1a2e1adcd7d54dd14",
+          "body_identifiers": ""
+        }
+      ]
+    },
+    {
+      "depth": "outer/RES:caster",
+      "id": "cbfm_sigh",
+      "path": "miga\\base\\b001\\bin\\cbfm_sigh",
+      "type": "MTB",
+      "bytes": 20279,
+      "sha256": "ee1921433d92e610b3573112c44c93143806a000a98b27d90ac55f6892e2a2d1",
+      "effects": [],
+      "motion": {
+        "header_version": 67,
+        "header_abi_hex": "0x00400200",
+        "pointer_field_offset_hex": "0x44",
+        "motion_header_pointer_raw_hex": "0x70",
+        "motion_header_offset_hex": "0x80",
+        "fps": 30.0,
+        "frames": 105.0,
+        "duration_seconds": 3.5,
+        "bones": 41
+      }
+    },
+    {
+      "depth": "outer",
+      "id": "main",
+      "path": "bin\\main",
+      "type": "SCB",
+      "bytes": 1136,
+      "sha256": "d74eab90f0194a72564a70fa958a0435b00ad20f4f3d5f8843e27316ecb1fc7b",
+      "effects": [],
+      "header": {
+        "scb_version": 2,
+        "scb_abi_hex": "0x00300000",
+        "outer_duration_units": 9000000,
+        "authored_block_count": 1,
+        "clip_count": 2,
+        "clip_classes": "BindActorClip;MotionClip",
+        "ridt_count": 3,
+        "ridt_resources": "skl_m701b001;cbfm_sigh;cbfm_sigh",
+        "ridt_types": "brt;bcm;btm",
+        "cact_units": 9,
+        "actor_count": 1,
+        "actor_names": "caster"
+      },
+      "actors": [
+        {
+          "actor_index": 0,
+          "actor_name": "caster",
+          "record_offset_hex": "0xD0",
+          "record_bytes": 116,
+          "record_sha256": "e773936d58f0dead9bad7e5c88ba51939dbbd190a2a36c17d5a6f75603b2e47c",
+          "remaining_strings": "caster;Empty"
+        }
+      ],
+      "blocks": [
+        {
+          "block_ordinal": 0,
+          "block_label": "Block000",
+          "block_label_raw_hex": "42 6c 6f 63 6b 30 30 30 00 00 00 00 00 00 00 00",
+          "block_offset_hex": "0x220",
+          "duration_units": 1050000,
+          "duration_seconds": 1.05,
+          "entry_count": 2,
+          "padding_bytes": 0,
+          "clip_classes": "BindActorClip;MotionClip"
+        }
+      ],
+      "references": [
+        [
+          "skl_m701b001",
+          "brt"
+        ],
+        [
+          "cbfm_sigh",
+          "bcm"
+        ],
+        [
+          "cbfm_sigh",
+          "btm"
+        ]
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "block_ordinal": 0,
+      "block_label": "Block000",
+      "entry_ordinal": 0,
+      "record_offset_hex": "0x260",
+      "record_size": 20,
+      "class_index": 0,
+      "clip_class": "BindActorClip",
+      "actor_index": 0,
+      "actor_name": "caster",
+      "start_units": 0,
+      "start_seconds": 0.0,
+      "target_track_id": 5,
+      "raw_flags_hex": "0x0080",
+      "timeline_clip_id": 0,
+      "resource_ref_index": "",
+      "resource_ref_id": "",
+      "resource_ref_type": "",
+      "scheduler_target_name": "",
+      "scheduler_target_path": "",
+      "effect_end_target_count": 0,
+      "effect_end_target_ids": "",
+      "body_bytes": 12,
+      "body_sha256": "b965a6e5b6e17c9516fcf81676770d7922ca677d2142a2823422dd84a36b74d5",
+      "effect_end_target_classes": "",
+      "scheduler": "main",
+      "depth": "outer"
+    },
+    {
+      "block_ordinal": 0,
+      "block_label": "Block000",
+      "entry_ordinal": 1,
+      "record_offset_hex": "0x274",
+      "record_size": 44,
+      "class_index": 1,
+      "clip_class": "MotionClip",
+      "actor_index": 0,
+      "actor_name": "caster",
+      "start_units": 0,
+      "start_seconds": 0.0,
+      "target_track_id": 6,
+      "raw_flags_hex": "0x00A0",
+      "timeline_clip_id": 1,
+      "resource_ref_index": 1,
+      "resource_ref_id": "cbfm_sigh",
+      "resource_ref_type": "bcm",
+      "scheduler_target_name": "",
+      "scheduler_target_path": "",
+      "effect_end_target_count": 0,
+      "effect_end_target_ids": "",
+      "body_bytes": 36,
+      "body_sha256": "a438fd8d3aae8ea10f2a582f4fdc76d13324c79426c7a83dd902c8eb0ac27f39",
+      "effect_end_target_classes": "",
+      "scheduler": "main",
+      "depth": "outer"
+    }
+  ]
+}

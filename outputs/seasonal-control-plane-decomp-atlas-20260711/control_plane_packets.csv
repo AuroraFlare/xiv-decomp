@@ -1,0 +1,3 @@
+control_plane,opcode_hex,packet_size_hex,payload_contract,scope,client_entry,seasonal_role
+player special-event work,0x0196,0x38,byte +0x01 bitfield -> work 1-8; uint16 +0x02..+0x10 -> work 9-16,player/actor scoped; sent in CreatePlayerRelatedPackets only to MyPlayer,handler 0x00576050; Lua getter 0x00707CC0,event-mode UI/content gates; no recovered weather or city-layout mutation
+area weather,0x000D,0x28,uint16 weather id + uint16 transition packed into an 8-byte payload,area/zone weather; source actor id is zero,Lua _setWeather virtual thunk 0x0071E410,selects atmosphere resources and DAT-authored city decoration masks

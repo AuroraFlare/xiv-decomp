@@ -1,0 +1,31 @@
+{
+  "client_snapshot": "2012.09.19.0001 / 1.23b",
+  "special_event_opcode": "0x0196",
+  "weather_opcode": "0x000D",
+  "special_event_work_fields": 16,
+  "special_event_boolean_fields": 8,
+  "special_event_uint16_fields": 8,
+  "recovered_lua_indexes": [
+    9
+  ],
+  "recovered_mode_values": [
+    8,
+    11,
+    18,
+    20
+  ],
+  "local_default_mode9": 18,
+  "mode8_shop_rows": 3,
+  "mode11_shop_rows": 3,
+  "summer_event_mode": 18,
+  "summer_weather_id": 8029,
+  "native_addresses": {
+    "get_special_event_native": "0x00707CC0",
+    "get_byte_helper": "0x0075D390",
+    "get_word_helper": "0x0075D3A0",
+    "bulk_set_helper": "0x0075D2D0",
+    "packet_handler": "0x00576050",
+    "set_weather_virtual_thunk": "0x0071E410"
+  },
+  "conclusion": "SpecialEventWork is player event-mode/UI state; weather/decor is a separate area weather and layout-selector control plane."
+}

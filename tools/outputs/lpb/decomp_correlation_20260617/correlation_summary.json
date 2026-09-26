@@ -1,0 +1,1025 @@
+{
+  "created_at": "2026-06-17T16:48:42",
+  "scope": "third-pass correlation pack over all 2517 decompiled client Lua scripts",
+  "source_batches": [
+    "C:\\Users\\drime\\source\\repos\\AuroraFlare\\FF14-Memory\\tools\\outputs\\lpb\\decomp_more_20260617",
+    "C:\\Users\\drime\\source\\repos\\AuroraFlare\\FF14-Memory\\tools\\outputs\\lpb\\decomp_further_20260617"
+  ],
+  "files_seen": 2517,
+  "classes": 2423,
+  "methods": 11823,
+  "method_call_edges": 55715,
+  "bridge_calls": 23846,
+  "bridge_matrix_rows": 5886,
+  "event_protocol_candidates": 6213,
+  "require_edges": 2451,
+  "text_loads": 455,
+  "text_sheets_joined": 455,
+  "actor_class_rows": 4422,
+  "actor_scripts": 356,
+  "system_protocol_rows": 29,
+  "top_bridge_calls": [
+    {
+      "receiver": "worldMaster",
+      "call_method": "say",
+      "calls": 979,
+      "file_count": 146,
+      "method_count": 410,
+      "top_tags": "quest:641;chara:351;object:182;populace:167;item:80;instance:36;hamlet:14;caravan:6;achievement:3;cutscene:2;area:1",
+      "sample_methods": "chara/npc/gimmick/gimmickterminal::GimmickTerminal.eventTalkTerminal;chara/npc/mapobj/mapobjportdoor::MapObjPortDoor.eventIn;chara/npc/object/aetheryte/aetherytechild::AetheryteChild.eventAetheryteChildDesion;chara/npc/object/aetheryte/aetherytechild::AetheryteChild.eventAetheryteChildSelect;chara/npc/object/aetheryte/aetherytechild::AetheryteChild.processGuildleveBoost;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.aetheryteTips;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.eventAetheryteParentDesion;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.eventAetheryteParentSelect;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.processGuildleveBoost;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.showAetheryteTips;chara/npc/object/bookshelf::BookShelf.bookTalk;chara/npc/object/materiabook::MateriaBook.materiabookTalk;chara/npc/object/objectitemstorage::ObjectItemStorage.storageMenu;chara/npc/object/raiddungeonbarrier::RaidDungeonBarrier.eventTalkRead;chara/npc/object/raiddungeonposter::RaidDungeonPoster.eventTalkRead"
+    },
+    {
+      "receiver": "A2_3",
+      "call_method": "_runCharaScheduler",
+      "calls": 917,
+      "file_count": 193,
+      "method_count": 193,
+      "top_tags": "quest:917",
+      "sample_methods": "quest/scenario/blm/blm0j1::Blm0j1.processEventYayakeStart;quest/scenario/blm/blm0j2::Blm0j2.processEvent_hint;quest/scenario/blm/blm0j3::Blm0j3.processEvent_hint;quest/scenario/blm/blm0j4::Blm0j4.processEvent_hint;quest/scenario/blm/blm0j5::Blm0j5.processEvent_DAZA_Start;quest/scenario/blm/blm0j6::Blm0j6.processEventStartBeforeDaza;quest/scenario/brd/brd0j1::Brd0j1.processEventGEORJEAUXStart;quest/scenario/brd/brd0j2::Brd0j2.processEventJEHANTELStart;quest/scenario/brd/brd0j3::Brd0j3.processEventJEHANTELStart;quest/scenario/brd/brd0j4::Brd0j4.processEventStartBefore;quest/scenario/brd/brd0j5::Brd0j5.processEvent_JEHANTEL_Start;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELHint;quest/scenario/com/com0g1::Com0g1.processEventStart;quest/scenario/com/com0g2::Com0g2.processEventFulkeStart;quest/scenario/com/com0g3::Com0g3.processEventStart"
+    },
+    {
+      "receiver": "worldMaster",
+      "call_method": "_getMyPlayer",
+      "calls": 451,
+      "file_count": 76,
+      "method_count": 156,
+      "top_tags": "widget:333;item:75;chara:39;system:32;command:30;retainer:23;instance:18;status:16;group:14;object:12;populace:11;director:9",
+      "sample_methods": "chara/charabaseclass::CharaBaseClass._onChangeAccessibleInServer;chara/charabaseclass::CharaBaseClass._onChangeActorMainStat;chara/charabaseclass::CharaBaseClass._onChangeNetStatSystem;chara/charabaseclass::CharaBaseClass._onChangeNetStatUser;chara/charabaseclass::CharaBaseClass._onChangeSystemFlag;chara/charabaseclass::CharaBaseClass._onUpdateGroupCurrent;chara/charabaseclass::CharaBaseClass.updateCommandAcquired;chara/charabaseclass::CharaBaseClass.updateGameParameters;chara/charabaseclass::CharaBaseClass.updateItemPackage;chara/npc/object/elevatorstandard::ElevatorStandard.playElevatorCutSeane;chara/npc/object/musicchange::MusicChange.eventCut;chara/npc/object/objectbed::ObjectBed.initForEvent;chara/npc/object/retainerfurniture::RetainerFurniture.eventPlayerTurn;chara/npc/object/retainermeetingspace::RetainerMeetingSpace.eventPlayerTurn;chara/npc/populace/populaceblackmarketeer::PopulaceBlackMarketeer.getGrandCompanyNumber"
+    },
+    {
+      "receiver": "A0_1",
+      "call_method": "showQuestInfomation",
+      "calls": 421,
+      "file_count": 195,
+      "method_count": 195,
+      "top_tags": "quest:421",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEventNogeloixStart;quest/scenario/alc/alc306::Alc306.processEventSlyhhiaStart;quest/scenario/arc/arc200::Arc200.processEventNonolatoStart;quest/scenario/arc/arc300::Arc300.processEventNonolatoStart;quest/scenario/arc/arc306::Arc306.processEventNonolatoStart;quest/scenario/blm/blm0j1::Blm0j1.processEventYayakeStart;quest/scenario/blm/blm0j5::Blm0j5.processEvent_DAZA_Start;quest/scenario/brd/brd0j1::Brd0j1.processEventGEORJEAUXStart;quest/scenario/brd/brd0j2::Brd0j2.processEventJEHANTELStart;quest/scenario/brd/brd0j3::Brd0j3.processEventJEHANTELStart;quest/scenario/brd/brd0j5::Brd0j5.processEvent_JEHANTEL_Start;quest/scenario/bsm/bsm200::Bsm200.processEventBodenolfStart;quest/scenario/bsm/bsm300::Bsm300.processEventBodenolfStart;quest/scenario/bsm/bsm306::Bsm306.processEventBodenolfStart;quest/scenario/cnj/cnj300::Cnj300.processEventSoileineStart"
+    },
+    {
+      "receiver": "A2_6",
+      "call_method": "_runCharaScheduler",
+      "calls": 321,
+      "file_count": 118,
+      "method_count": 118,
+      "top_tags": "quest:321",
+      "sample_methods": "quest/scenario/blm/blm0j2::Blm0j2.processEventLALAIStart;quest/scenario/blm/blm0j3::Blm0j3.processEventLALAIStart;quest/scenario/blm/blm0j4::Blm0j4.processEventDOZOLMELOCStart;quest/scenario/blm/blm0j5::Blm0j5.processEvent_DAZA_Follow;quest/scenario/blm/blm0j6::Blm0j6.processEventStart;quest/scenario/brd/brd0j2::Brd0j2.processEventJEHANTELStart_1;quest/scenario/brd/brd0j3::Brd0j3.processEventJEHANTELStart_1;quest/scenario/brd/brd0j4::Brd0j4.processEventStart;quest/scenario/brd/brd0j5::Brd0j5.processEvent_JEHANTEL_Follow;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELStart;quest/scenario/com/com0g1::Com0g1.processEventStartAfter;quest/scenario/com/com0g5::Com0g5.processEventFulkeStart;quest/scenario/com/com0g6::Com0g6.processEventStart;quest/scenario/com/com0l5::Com0l5.processEventGUINCUMStart;quest/scenario/com/com0u1::Com0u1.processEvent_000"
+    },
+    {
+      "receiver": "A2_9",
+      "call_method": "_runCharaScheduler",
+      "calls": 273,
+      "file_count": 113,
+      "method_count": 113,
+      "top_tags": "quest:273",
+      "sample_methods": "quest/scenario/blm/blm0j2::Blm0j2.processEvent000_LALAI;quest/scenario/blm/blm0j3::Blm0j3.processEvent000;quest/scenario/blm/blm0j5::Blm0j5.processEvent_KAZAGGCHAH_Follow;quest/scenario/blm/blm0j6::Blm0j6.processEventDaza01;quest/scenario/brd/brd0j2::Brd0j2.processEvent000;quest/scenario/brd/brd0j3::Brd0j3.processEvent000;quest/scenario/brd/brd0j4::Brd0j4.processEventJehantel;quest/scenario/brd/brd0j5::Brd0j5.processEvent_getAF_info;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELS_000_Follow;quest/scenario/com/com0g1::Com0g1.processEventAilithShiren;quest/scenario/com/com0g5::Com0g5.followEvent005;quest/scenario/com/com0g6::Com0g6.processEventStartAfter;quest/scenario/com/com0l1::Com0l1.processEvent_010;quest/scenario/com/com0l5::Com0l5.processEvent_000;quest/scenario/com/com0u1::Com0u1.processEvent_010"
+    },
+    {
+      "receiver": "A2_3",
+      "call_method": "startCliantTalkTurn",
+      "calls": 268,
+      "file_count": 258,
+      "method_count": 258,
+      "top_tags": "quest:268",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEventNogeloixStart;quest/scenario/alc/alc306::Alc306.processEventSlyhhiaStart;quest/scenario/arc/arc200::Arc200.processEventNonolatoStart;quest/scenario/arc/arc300::Arc300.processEventNonolatoStart;quest/scenario/arc/arc306::Arc306.processEventNonolatoStart;quest/scenario/blm/blm0j1::Blm0j1.processEventYayakeStart;quest/scenario/blm/blm0j2::Blm0j2.processEvent_hint;quest/scenario/blm/blm0j3::Blm0j3.processEvent_hint;quest/scenario/blm/blm0j4::Blm0j4.processEvent_hint;quest/scenario/blm/blm0j5::Blm0j5.processEvent_DAZA_Start;quest/scenario/blm/blm0j6::Blm0j6.processEventStartBeforeDaza;quest/scenario/brd/brd0j1::Brd0j1.processEventGEORJEAUXStart;quest/scenario/brd/brd0j2::Brd0j2.processEventJEHANTELStart;quest/scenario/brd/brd0j3::Brd0j3.processEventJEHANTELStart;quest/scenario/brd/brd0j4::Brd0j4.processEventStartBefore"
+    },
+    {
+      "receiver": "worldMaster",
+      "call_method": "ask",
+      "calls": 231,
+      "file_count": 52,
+      "method_count": 80,
+      "top_tags": "quest:169;chara:64;object:49;item:18;populace:10;retainer:6;area:2;monster:1;caravan:1;command:1;system:1",
+      "sample_methods": "chara/npc/mapobj/mapobjportdoor::MapObjPortDoor.eventIn;chara/npc/mapobj/mapobjportdoor::MapObjPortDoor.eventOut;chara/npc/monster/chocobo/chocobocaravanguard::ChocoboCaravanGuard.chocoboCommand;chara/npc/object/aetheryte/aetherytebaseclass::AetheryteBaseClass.askRetryRegionalleve;chara/npc/object/aetheryte/aetherytechild::AetheryteChild.eventAetheryteChildSelect;chara/npc/object/aetheryte/aetherytechild::AetheryteChild.processGuildleveBoost;chara/npc/object/aetheryte/aetherytechild::AetheryteChild.processGuildleveJoin;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.aetheryteTips;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.eventAetheryteParentSelect;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.processGuildleveBoost;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.processGuildleveJoin;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.showAetheryteTips;chara/npc/object/materiabook::MateriaBook.materiabookTalk;chara/npc/object/objectitemstorage::ObjectItemStorage.selectCategory;chara/npc/object/objectitemstorage::ObjectItemStorage.storageMenu"
+    },
+    {
+      "receiver": "A2_12",
+      "call_method": "_runCharaScheduler",
+      "calls": 176,
+      "file_count": 75,
+      "method_count": 75,
+      "top_tags": "quest:176",
+      "sample_methods": "quest/scenario/blm/blm0j2::Blm0j2.processEvent000_KAZAGGCHAH;quest/scenario/blm/blm0j3::Blm0j3.processEvent000_1;quest/scenario/blm/blm0j4::Blm0j4.processEvent000_DOZOLMELOC;quest/scenario/blm/blm0j5::Blm0j5.processEvent_DOZOLMELOC_Follow;quest/scenario/blm/blm0j6::Blm0j6.processEventKazagg01;quest/scenario/com/com0g1::Com0g1.processEventAilithShirenFree;quest/scenario/com/com0g6::Com0g6.processEventLewin;quest/scenario/com/com0l1::Com0l1.processEvent_010_1;quest/scenario/com/com0l5::Com0l5.processEvent_005_merlwyb;quest/scenario/com/com0u1::Com0u1.processEvent_010_1;quest/scenario/com/com0u4::Com0u4.processEvent_010_1;quest/scenario/com/com0u5::Com0u5.processEvent010;quest/scenario/com/com0u6::Com0u6.processEvent_005;quest/scenario/com/com5l1::Com5l1.processEvent_010_1;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithAnene_001"
+    },
+    {
+      "receiver": "A2_6",
+      "call_method": "startCliantTalkTurn",
+      "calls": 171,
+      "file_count": 164,
+      "method_count": 164,
+      "top_tags": "quest:171",
+      "sample_methods": "quest/scenario/arc/arc300::Arc300.processEvent007;quest/scenario/blm/blm0j2::Blm0j2.processEventLALAIStart;quest/scenario/blm/blm0j3::Blm0j3.processEventLALAIStart;quest/scenario/blm/blm0j4::Blm0j4.processEventDOZOLMELOCStart;quest/scenario/blm/blm0j5::Blm0j5.processEvent_DAZA_Follow;quest/scenario/blm/blm0j6::Blm0j6.processEventStart;quest/scenario/brd/brd0j2::Brd0j2.processEventJEHANTELStart_1;quest/scenario/brd/brd0j3::Brd0j3.processEventJEHANTELStart_1;quest/scenario/brd/brd0j4::Brd0j4.processEventStart;quest/scenario/brd/brd0j5::Brd0j5.processEvent_JEHANTEL_Follow;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELStart;quest/scenario/bsm/bsm306::Bsm306.processEvent005;quest/scenario/cnj/cnj200::Cnj200.processEvent010_2;quest/scenario/cnj/cnj300::Cnj300.processEvent005_2;quest/scenario/cnj/cnj306::Cnj306.processEvent005_2"
+    },
+    {
+      "receiver": "A2_15",
+      "call_method": "_runCharaScheduler",
+      "calls": 158,
+      "file_count": 69,
+      "method_count": 69,
+      "top_tags": "quest:158",
+      "sample_methods": "quest/scenario/blm/blm0j2::Blm0j2.processEvent000_DOZOLMELOC;quest/scenario/blm/blm0j3::Blm0j3.processEvent000_2;quest/scenario/blm/blm0j4::Blm0j4.processEvent000_LALAI;quest/scenario/blm/blm0j5::Blm0j5.processEvent_LALAI_Follow;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELS_010_Follow;quest/scenario/com/com0g4::Com0g4.processEventFulkeFree;quest/scenario/com/com0g5::Com0g5.processEvent010;quest/scenario/com/com0l5::Com0l5.processEvent_005_merlwyb_01;quest/scenario/com/com0u4::Com0u4.processEvent_020;quest/scenario/com/com0u5::Com0u5.processEvent010_2;quest/scenario/com/com0u6::Com0u6.processEvent_005_01;quest/scenario/com/com5l0::Com5l0.processEvent_005;quest/scenario/com/com5l1::Com5l1.processEvent_020;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithAnene_002;quest/scenario/defaulttalk/dftlak::DftLak.defaultTalkWithRashaht_001"
+    },
+    {
+      "receiver": "A2_9",
+      "call_method": "startCliantTalkTurn",
+      "calls": 153,
+      "file_count": 151,
+      "method_count": 151,
+      "top_tags": "quest:153",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent005;quest/scenario/blm/blm0j2::Blm0j2.processEvent000_LALAI;quest/scenario/blm/blm0j3::Blm0j3.processEvent000;quest/scenario/blm/blm0j6::Blm0j6.processEventDaza01;quest/scenario/brd/brd0j2::Brd0j2.processEvent000;quest/scenario/brd/brd0j3::Brd0j3.processEvent000;quest/scenario/brd/brd0j4::Brd0j4.processEventJehantel;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELS_000_Follow;quest/scenario/cnj/cnj200::Cnj200.processEvent010_3;quest/scenario/cnj/cnj300::Cnj300.processEvent005_3;quest/scenario/cnj/cnj306::Cnj306.processEvent005_3;quest/scenario/com/com0g1::Com0g1.processEventAilithShiren;quest/scenario/com/com0g5::Com0g5.followEvent005;quest/scenario/com/com0g6::Com0g6.processEventStartAfter;quest/scenario/com/com0l1::Com0l1.processEvent_010"
+    },
+    {
+      "receiver": "desktopWidget",
+      "call_method": "closeWidgetDirect",
+      "calls": 144,
+      "file_count": 58,
+      "method_count": 115,
+      "top_tags": "widget:144;item:41;retainer:14;party:12;quest:7;linkshell:6;achievement:4;cutscene:2;group:2;status:2;config:1;hamlet:1",
+      "sample_methods": "widget/achievementlistwidget::AchievementListWidget.clearItemHelp;widget/achievementlistwidget::AchievementListWidget.processUICommandCancel;widget/achievementtitlelistwidget::AchievementTitleListWidget.processUICommandCancel;widget/achievementtitlelistwidget::AchievementTitleListWidget.processUICommandSelection;widget/actionsettingwidget::ActionSettingWidget.processUICommandCancel;widget/addresslistnamingwidget::AddressListNamingWidget.processUICommandCancel;widget/addresslistnamingwidget::AddressListNamingWidget.processUICommandClose;widget/addresslistnamingwidget::AddressListNamingWidget.processUICommandOperate;widget/addresslistsubwidget::AddressListSubWidget.openDeleteDialog;widget/addresslistsubwidget::AddressListSubWidget.openPartyDialog;widget/addresslistsubwidget::AddressListSubWidget.processBeforeShow;widget/addresslistsubwidget::AddressListSubWidget.processUICommandCancel;widget/addresslistsubwidget::AddressListSubWidget.processUICommandOperate;widget/addresslistsubwidget::AddressListSubWidget.setSubWindowOperation;widget/ask/journaldetailwidget::JournalDetailWidget.finish"
+    },
+    {
+      "receiver": "A2_18",
+      "call_method": "_runCharaScheduler",
+      "calls": 130,
+      "file_count": 50,
+      "method_count": 50,
+      "top_tags": "quest:130",
+      "sample_methods": "quest/scenario/blm/blm0j2::Blm0j2.processEvent000_DAZA;quest/scenario/blm/blm0j3::Blm0j3.processEvent005;quest/scenario/blm/blm0j4::Blm0j4.processEvent000_KAZAGGCHAH;quest/scenario/blm/blm0j5::Blm0j5.processEvent_getAF_info;quest/scenario/blm/blm0j6::Blm0j6.processEventDozol01;quest/scenario/com/com0l5::Com0l5.processEvent_005_uri;quest/scenario/com/com0u4::Com0u4.processEvent_020_1;quest/scenario/com/com0u5::Com0u5.processEvent010_3;quest/scenario/com/com0u6::Com0u6.processEvent_005_02;quest/scenario/com/com5u0::Com5u0.processEvent_005_1;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithAnene_003;quest/scenario/defaulttalk/dftsea::DftSea.defaultTalkWithAshakkal_001;quest/scenario/defaulttalk/dftwil::DftWil.defaultTalkWithKiora_003;quest/scenario/drg/drg0j1::Drg0j1.processEventClear;quest/scenario/drg/drg0j4::Drg0j4.processEvent_getAF_info"
+    },
+    {
+      "receiver": "A2_12",
+      "call_method": "startCliantTalkTurn",
+      "calls": 113,
+      "file_count": 113,
+      "method_count": 113,
+      "top_tags": "quest:113",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent007;quest/scenario/blm/blm0j2::Blm0j2.processEvent000_KAZAGGCHAH;quest/scenario/blm/blm0j3::Blm0j3.processEvent000_1;quest/scenario/blm/blm0j4::Blm0j4.processEvent000_DOZOLMELOC;quest/scenario/blm/blm0j6::Blm0j6.processEventKazagg01;quest/scenario/cnj/cnj200::Cnj200.processEvent010_4;quest/scenario/cnj/cnj300::Cnj300.processEvent005_4;quest/scenario/cnj/cnj306::Cnj306.processEvent005_4;quest/scenario/com/com0g1::Com0g1.processEventAilithShirenFree;quest/scenario/com/com0g6::Com0g6.processEventLewin;quest/scenario/com/com0l1::Com0l1.processEvent_010_1;quest/scenario/com/com0l5::Com0l5.processEvent_005_merlwyb;quest/scenario/com/com0u1::Com0u1.processEvent_010_1;quest/scenario/com/com0u4::Com0u4.processEvent_010_1;quest/scenario/com/com0u5::Com0u5.processEvent010"
+    },
+    {
+      "receiver": "A2_10",
+      "call_method": "_runCharaScheduler",
+      "calls": 111,
+      "file_count": 29,
+      "method_count": 29,
+      "top_tags": "quest:111",
+      "sample_methods": "quest/scenario/blm/blm0j1::Blm0j1.processEventLalai000Follow;quest/scenario/brd/brd0j1::Brd0j1.processEvent000;quest/scenario/com/com5g1::Com5g1.processEvent_000;quest/scenario/drg/drg0j1::Drg0j1.processEventAlberic;quest/scenario/etc/etc0u4::Etc0u4.processEvent005_1;quest/scenario/etc/etc104::Etc104.processEvent_000;quest/scenario/etc/etc1g0::Etc1g0.processEvent010;quest/scenario/etc/etc3l2::Etc3l2.processEvent010;quest/scenario/etc/etc3u9::Etc3u9.processEventClear;quest/scenario/gcg/gcg301::Gcg301.processEvent_010;quest/scenario/gcg/gcg302::Gcg302.processEventChallinie;quest/scenario/gcg/gcg303::Gcg303.processEventEnie;quest/scenario/gcg/gcg304::Gcg304.processEvent_005;quest/scenario/gcg/gcg305::Gcg305.processEventTall;quest/scenario/gcl/gcl101::Gcl101.processEventAubreyStart"
+    },
+    {
+      "receiver": "A2_15",
+      "call_method": "startCliantTalkTurn",
+      "calls": 109,
+      "file_count": 108,
+      "method_count": 108,
+      "top_tags": "quest:109",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent008;quest/scenario/blm/blm0j2::Blm0j2.processEvent000_DOZOLMELOC;quest/scenario/blm/blm0j3::Blm0j3.processEvent000_2;quest/scenario/blm/blm0j4::Blm0j4.processEvent000_LALAI;quest/scenario/blm/blm0j6::Blm0j6.processEventLalai01;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELS_010_Follow;quest/scenario/bsm/bsm400::Bsm400.processEvent042;quest/scenario/cnj/cnj200::Cnj200.processEvent010_5;quest/scenario/cnj/cnj300::Cnj300.processEvent005_5;quest/scenario/cnj/cnj306::Cnj306.processEvent005_5;quest/scenario/com/com0g5::Com0g5.processEvent010;quest/scenario/com/com0l5::Com0l5.processEvent_005_merlwyb_01;quest/scenario/com/com0u4::Com0u4.processEvent_020;quest/scenario/com/com0u5::Com0u5.processEvent010_2;quest/scenario/com/com0u6::Com0u6.processEvent_005_01"
+    },
+    {
+      "receiver": "A2_7",
+      "call_method": "_runCharaScheduler",
+      "calls": 108,
+      "file_count": 34,
+      "method_count": 34,
+      "top_tags": "quest:108",
+      "sample_methods": "quest/scenario/blm/blm0j1::Blm0j1.processEventYayake000Follow;quest/scenario/brd/brd0j1::Brd0j1.processEvent000_GEORJEAUX;quest/scenario/com/com0g4::Com0g4.processEventStartAfter;quest/scenario/com/com0l6::Com0l6.processEventGUINCUMHint;quest/scenario/com/com5u0::Com5u0.processEvent_000;quest/scenario/defaulttalk/dftlak::DftLak.defaultTalkWithLangliva_001;quest/scenario/drg/drg0j1::Drg0j1.processEventStartAfter;quest/scenario/etc/etc104::Etc104.processEventHobhasYet;quest/scenario/etc/etc1g0::Etc1g0.processEvent000;quest/scenario/etc/etc1l0::Etc1l0.processEvent000;quest/scenario/etc/etc1l3::Etc1l3.processEvent000Chaunollet;quest/scenario/etc/etc1u0::Etc1u0.processEvent000;quest/scenario/etc/etc3g1::Etc3g1.processEvent000_2;quest/scenario/etc/etc3l2::Etc3l2.processEvent000;quest/scenario/etc/etc3u9::Etc3u9.processEventFree"
+    },
+    {
+      "receiver": "A0_0",
+      "call_method": "setControlCommandCondition",
+      "calls": 94,
+      "file_count": 27,
+      "method_count": 27,
+      "top_tags": "widget:94;config:49;item:14;system:10;retainer:5;quest:4;achievement:2;caravan:1;search:1;party:1",
+      "sample_methods": "widget/achievementlistwidget::AchievementListWidget.init;widget/ask/aetherytelistwidget::AetheryteListWidget.initAsk;widget/ask/chocobonamingwidget::ChocoboNamingWidget.initAsk;widget/ask/eventitemselectwidget::EventItemSelectWidget.initAsk;widget/ask/guildleveareaorderwidget::GuildleveAreaOrderWidget.initAsk;widget/ask/guildlevecardorderwidget::GuildleveCardOrderWidget.initAsk;widget/ask/itemsearchwidget::ItemSearchWidget.initAsk;widget/ask/journallistwidget::JournalListWidget.initAsk;widget/ask/negotiationabilitylistwidget::NegotiationAbilityListWidget.initAsk;widget/bazaareditwidget::BazaarEditWidget.init;widget/configcamerawidget::ConfigCameraWidget.init;widget/configkeyboardwidget::ConfigKeyboardWidget.init;widget/configmapwidget::ConfigMapWidget.init;widget/confignameplatewidget::ConfigNamePlateWidget.init;widget/configsoundwidget::ConfigSoundWidget.init"
+    },
+    {
+      "receiver": "A2_18",
+      "call_method": "startCliantTalkTurn",
+      "calls": 87,
+      "file_count": 87,
+      "method_count": 87,
+      "top_tags": "quest:87",
+      "sample_methods": "quest/scenario/arc/arc300::Arc300.processEvent025;quest/scenario/blm/blm0j2::Blm0j2.processEvent000_DAZA;quest/scenario/blm/blm0j3::Blm0j3.processEvent005;quest/scenario/blm/blm0j4::Blm0j4.processEvent000_KAZAGGCHAH;quest/scenario/blm/blm0j6::Blm0j6.processEventDozol01;quest/scenario/bsm/bsm200::Bsm200.processEvent005_2;quest/scenario/bsm/bsm306::Bsm306.processEvent005_4;quest/scenario/cnj/cnj200::Cnj200.processEvent010_6;quest/scenario/cnj/cnj300::Cnj300.processEvent005_6;quest/scenario/cnj/cnj306::Cnj306.processEvent005_6;quest/scenario/com/com0l5::Com0l5.processEvent_005_uri;quest/scenario/com/com0u4::Com0u4.processEvent_020_1;quest/scenario/com/com0u5::Com0u5.processEvent010_3;quest/scenario/com/com0u6::Com0u6.processEvent_005_02;quest/scenario/com/com5u0::Com5u0.processEvent_005_1"
+    },
+    {
+      "receiver": "debug",
+      "call_method": "_ask",
+      "calls": 85,
+      "file_count": 9,
+      "method_count": 13,
+      "top_tags": "chara:85;debug:85;quest:61;instance:4;item:4;party:3",
+      "sample_methods": "chara/npc/debug/debugcraftassist::DebugCraftAssist.askBuyItem;chara/npc/debug/debugcraftassist::DebugCraftAssist.askChangeTool;chara/npc/debug/debugcraftassist::DebugCraftAssist.askItemNumber;chara/npc/debug/debugcraftassist::DebugCraftAssist.askMainMenu;chara/npc/debug/debugharvestassist::DebugHarvestAssist.select;chara/npc/debug/partytester::PartyTester.choice;chara/npc/debug/pathchecker::PathChecker.choiceGambit;chara/npc/debug/populacemenuman::PopulaceMenuMan.debugMenuEvent;chara/npc/debug/populacequesttestmanstandard::PopulaceQuestTestManStandard.debugMenuEvent;chara/npc/debug/populacesnpccuttestman::PopulaceSnpcCutTestMan.debugMenuEvent;chara/npc/debug/sensechecker::SenseChecker.choiceGambit;chara/npc/debug/testraiddungeonentrance::TestRaidDungeonEntrance.askMainMenu;chara/npc/debug/testraiddungeonentrance::TestRaidDungeonEntrance.askYesNo"
+    },
+    {
+      "receiver": "desktopWidget",
+      "call_method": "openChildWidget",
+      "calls": 85,
+      "file_count": 42,
+      "method_count": 49,
+      "top_tags": "widget:85;item:18;config:18;party:6;group:4;linkshell:3;quest:2;retainer:2;achievement:1;caravan:1;system:1;status:1",
+      "sample_methods": "widget/achievementlistwidget::AchievementListWidget.processTimer;widget/addresslistsubwidget::AddressListSubWidget.openDeleteDialog;widget/addresslistsubwidget::AddressListSubWidget.openPartyDialog;widget/addresslistwidget::AddressListWidget.processUICommandEvent;widget/ask/chocobonamingwidget::ChocoboNamingWidget.processUICommandOperate;widget/ask/grandcompanyshopwidget::GrandCompanyShopWidget.operateBuy;widget/ask/itemstoragegetwidget::ItemStorageGetWidget.processUICommandSelection;widget/ask/journaldetailwidget::JournalDetailWidget.processUICommandOperate;widget/ask/journallistwidget::JournalListWidget.processUICommandOperate;widget/ask/journallistwidget::JournalListWidget.processUICommandSelection;widget/ask/linkshelllistwidget::LinkshellListWidget.processUICommandSelectionChanged;widget/ask/negotiationwidget::NegotiationWidget.processUICommandCancel;widget/ask/negotiationwidget::NegotiationWidget.processUICommandOperate;widget/ask/questdetailwidget::QuestDetailWidget.processUICommandOperate;widget/ask/retainernamingwidget::RetainerNamingWidget.processUICommandOperate"
+    },
+    {
+      "receiver": "A2_24",
+      "call_method": "_runCharaScheduler",
+      "calls": 81,
+      "file_count": 30,
+      "method_count": 30,
+      "top_tags": "quest:81",
+      "sample_methods": "quest/scenario/blm/blm0j6::Blm0j6.processEventDozol02;quest/scenario/com/com0g5::Com0g5.processEvent010_1;quest/scenario/com/com0u4::Com0u4.processEvent_030_1;quest/scenario/com/com5g1::Com5g1.processEvent_010_2;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithSylbyrt_002;quest/scenario/defaulttalk/dftwil::DftWil.defaultTalkWithOpondhao_002;quest/scenario/drg/drg0j6::Drg0j6.processEvent030;quest/scenario/etc/etc3g0::Etc3g0.processEventNellaureSpeakAfter;quest/scenario/etc/etc3g1::Etc3g1.processEventTatagoi_2;quest/scenario/etc/etc3g2::Etc3g2.processEvent_015;quest/scenario/etc/etc3l0::Etc3l0.followEvent030;quest/scenario/etc/etc3u1::Etc3u1.processEvent005_K_2;quest/scenario/etc/etc5u1::Etc5u1.processEvent_020;quest/scenario/gcg/gcg701::Gcg701.processEventVORSAILEcomp;quest/scenario/gcl/gcl107::Gcl107.processEventMerlwyb1"
+    },
+    {
+      "receiver": "A0_193",
+      "call_method": "setVisibility",
+      "calls": 78,
+      "file_count": 1,
+      "method_count": 1,
+      "top_tags": "retainer:78;widget:78;item:78",
+      "sample_methods": "widget/ask/retaineritemlistwidget::RetainerItemListWidget.displayBazaarGrid"
+    },
+    {
+      "receiver": "A0_234",
+      "call_method": "setVisibility",
+      "calls": 78,
+      "file_count": 1,
+      "method_count": 1,
+      "top_tags": "retainer:78;widget:78",
+      "sample_methods": "widget/bazaarlistwidget::BazaarListWidget.displayBazaarGrid"
+    },
+    {
+      "receiver": "A0_253",
+      "call_method": "setVisibility",
+      "calls": 78,
+      "file_count": 1,
+      "method_count": 1,
+      "top_tags": "widget:78;item:78",
+      "sample_methods": "widget/itemlistwidget::ItemListWidget.displayBazaarGrid"
+    },
+    {
+      "receiver": "A2_24",
+      "call_method": "startCliantTalkTurn",
+      "calls": 75,
+      "file_count": 74,
+      "method_count": 74,
+      "top_tags": "quest:75",
+      "sample_methods": "quest/scenario/arc/arc306::Arc306.processEvent005_3;quest/scenario/blm/blm0j6::Blm0j6.processEventDozol02;quest/scenario/bsm/bsm306::Bsm306.processEvent005_6;quest/scenario/bsm/bsm400::Bsm400.processEvent010_2;quest/scenario/cnj/cnj200::Cnj200.processEvent010_8;quest/scenario/cnj/cnj300::Cnj300.processEvent005_8;quest/scenario/cnj/cnj306::Cnj306.processEvent005_8;quest/scenario/com/com0g5::Com0g5.processEvent010_1;quest/scenario/com/com0u4::Com0u4.processEvent_030_1;quest/scenario/com/com0u5::Com0u5.processEvent010_5;quest/scenario/com/com5g1::Com5g1.processEvent_010_2;quest/scenario/cul/cul300::Cul300.processEvent005_8;quest/scenario/cul/cul400::Cul400.processEvent005_3;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithSylbyrt_002;quest/scenario/defaulttalk/dftroc::DftRoc.defaultTalkWithLadislas_001"
+    },
+    {
+      "receiver": "A2_21",
+      "call_method": "startCliantTalkTurn",
+      "calls": 72,
+      "file_count": 71,
+      "method_count": 71,
+      "top_tags": "quest:72",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent015;quest/scenario/arc/arc300::Arc300.processEvent025_2;quest/scenario/arc/arc306::Arc306.processEvent005_2;quest/scenario/blm/blm0j4::Blm0j4.processEvent000_DAZA;quest/scenario/blm/blm0j6::Blm0j6.processEventDaza02;quest/scenario/bsm/bsm200::Bsm200.processEvent005_3;quest/scenario/bsm/bsm306::Bsm306.processEvent005_5;quest/scenario/cnj/cnj200::Cnj200.processEvent010_7;quest/scenario/cnj/cnj300::Cnj300.processEvent005_7;quest/scenario/cnj/cnj306::Cnj306.processEvent005_7;quest/scenario/com/com0l5::Com0l5.processEvent_005_uri_01;quest/scenario/com/com0u4::Com0u4.processEvent_030;quest/scenario/com/com5l0::Com5l0.processEvent_005_01;quest/scenario/cul/cul400::Cul400.processEvent005_2;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithSylbyrt_001"
+    },
+    {
+      "receiver": "A0_3",
+      "call_method": "setUICommandCondition",
+      "calls": 71,
+      "file_count": 1,
+      "method_count": 1,
+      "top_tags": "widget:71",
+      "sample_methods": "widget/desktopwidget_connector::(top-level)"
+    },
+    {
+      "receiver": "A2_27",
+      "call_method": "startCliantTalkTurn",
+      "calls": 71,
+      "file_count": 71,
+      "method_count": 71,
+      "top_tags": "quest:71",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent002_2;quest/scenario/alc/alc306::Alc306.processEvent002_2;quest/scenario/arc/arc306::Arc306.processEvent005_4;quest/scenario/blm/blm0j6::Blm0j6.processEventKazagg02;quest/scenario/bsm/bsm400::Bsm400.processEvent010_3;quest/scenario/cnj/cnj200::Cnj200.processEvent010_9;quest/scenario/cnj/cnj300::Cnj300.processEvent005_9;quest/scenario/cnj/cnj306::Cnj306.processEvent005_9;quest/scenario/com/com0g5::Com0g5.processEvent010_2;quest/scenario/com/com0l5::Com0l5.processEvent_015_01;quest/scenario/com/com0u4::Com0u4.processEvent_040;quest/scenario/com/com0u5::Com0u5.processEvent010_6;quest/scenario/com/com5g1::Com5g1.processEvent_010_3;quest/scenario/com/com5l0::Com5l0.processEvent_010;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithSylbyrt_003"
+    },
+    {
+      "receiver": "A2_36",
+      "call_method": "startCliantTalkTurn",
+      "calls": 69,
+      "file_count": 69,
+      "method_count": 69,
+      "top_tags": "quest:69",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent002_5;quest/scenario/alc/alc306::Alc306.processEvent002_5;quest/scenario/arc/arc300::Arc300.processEvent003_2;quest/scenario/arc/arc306::Arc306.processEvent005_7;quest/scenario/blm/blm0j6::Blm0j6.processEventKazagg03;quest/scenario/bsm/bsm400::Bsm400.processEvent010_6;quest/scenario/cnj/cnj200::Cnj200.processEvent015;quest/scenario/cnj/cnj306::Cnj306.processEvent005_12;quest/scenario/com/com0g5::Com0g5.processEvent010_5;quest/scenario/com/com0u5::Com0u5.processEvent015_3;quest/scenario/com/com5g1::Com5g1.processEvent_010_6;quest/scenario/com/com5u0::Com5u0.processEvent_015_1;quest/scenario/cul/cul300::Cul300.processEvent012;quest/scenario/cul/cul306::Cul306.processEvent030_3;quest/scenario/cul/cul400::Cul400.processEvent005_7"
+    },
+    {
+      "receiver": "worldMaster",
+      "call_method": "_getServerTime",
+      "calls": 67,
+      "file_count": 24,
+      "method_count": 44,
+      "top_tags": "widget:35;chara:27;item:18;area:14;retainer:9;player:6;quest:5;mail:3;instance:2;status:2;command:1;hamlet:1",
+      "sample_methods": "chara/charabaseclass_parameter::CharaBaseClass.getElapsedTimeAtCureMPFromAetheryte;chara/npc/mapobj/doorstandard::DoorStandard._onReaction;chara/npc/mapobj/doorstandard::DoorStandard.processTimer;chara/npc/mapobj/mapobjclam::MapObjClam._onReaction;chara/npc/mapobj/mapobjclam::MapObjClam.processTimer;chara/npc/mapobj/mapobjshiprouteland::MapObjShipRouteLand.initForEvent;chara/npc/retainer/retainerbaseclass::RetainerBaseClass.initForEvent;chara/npc/retainer/retainerbaseclass::RetainerBaseClass.processTimer;chara/npc/retainer/retainerbaseclass::RetainerBaseClass.updateRetainerItemPackage;chara/player/playerbaseclass::PlayerBaseClass._onChocoboRentalRide;chara/player/playerbaseclass::PlayerBaseClass.canRequestInformation;chara/player/playerbaseclass::PlayerBaseClass.getWarpRecastTime;chara/player/playerbaseclass::PlayerBaseClass.recordRequestInformation;command/game/gamecommandbaseclass::GameCommandBaseClass.processCanCommandForRecastTime;director/guildleve/privateglbattlesurvivenormal::PrivateGLBattleSurviveNormal.getArticleParamOnGuildleveInfo"
+    },
+    {
+      "receiver": "A2_33",
+      "call_method": "startCliantTalkTurn",
+      "calls": 65,
+      "file_count": 64,
+      "method_count": 64,
+      "top_tags": "quest:65",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent002_4;quest/scenario/alc/alc306::Alc306.processEvent002_4;quest/scenario/arc/arc306::Arc306.processEvent005_6;quest/scenario/blm/blm0j6::Blm0j6.processEventDozol03;quest/scenario/bsm/bsm400::Bsm400.processEvent010_5;quest/scenario/cnj/cnj200::Cnj200.processEvent010_11;quest/scenario/cnj/cnj300::Cnj300.processEvent005_11;quest/scenario/cnj/cnj306::Cnj306.processEvent005_11;quest/scenario/com/com0g5::Com0g5.processEvent010_4;quest/scenario/com/com0u4::Com0u4.processEvent_050;quest/scenario/com/com5g1::Com5g1.processEvent_010_5;quest/scenario/cul/cul300::Cul300.processEvent010_2;quest/scenario/cul/cul306::Cul306.processEvent030_2;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithHongavunga_002;quest/scenario/defaulttalk/dftroc::DftRoc.defaultTalkWithPuroro_001"
+    },
+    {
+      "receiver": "A2_21",
+      "call_method": "_runCharaScheduler",
+      "calls": 64,
+      "file_count": 37,
+      "method_count": 37,
+      "top_tags": "quest:64",
+      "sample_methods": "quest/scenario/blm/blm0j4::Blm0j4.processEvent000_DAZA;quest/scenario/blm/blm0j6::Blm0j6.processEventDaza02;quest/scenario/com/com0g5::Com0g5.processEvent012;quest/scenario/com/com0l5::Com0l5.processEvent_005_uri_01;quest/scenario/com/com0u4::Com0u4.processEvent_030;quest/scenario/com/com5l0::Com5l0.processEvent_005_01;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithSylbyrt_001;quest/scenario/defaulttalk/dftsea::DftSea.defaultTalkWithPiralnaut_001;quest/scenario/defaulttalk/dftwil::DftWil.defaultTalkWithOpondhao_001;quest/scenario/etc/etc102::Etc102.processEvent_005;quest/scenario/etc/etc2g4::Etc2g4.processEvent_030;quest/scenario/etc/etc3g0::Etc3g0.processEventNellaureSpeak;quest/scenario/etc/etc3g1::Etc3g1.processEventTatagoi;quest/scenario/etc/etc3l0::Etc3l0.processEvent030;quest/scenario/etc/etc3u1::Etc3u1.processEvent005_A"
+    },
+    {
+      "receiver": "A2_30",
+      "call_method": "startCliantTalkTurn",
+      "calls": 64,
+      "file_count": 64,
+      "method_count": 64,
+      "top_tags": "quest:64",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent002_3;quest/scenario/alc/alc306::Alc306.processEvent002_3;quest/scenario/arc/arc300::Arc300.processEvent040;quest/scenario/arc/arc306::Arc306.processEvent005_5;quest/scenario/blm/blm0j6::Blm0j6.processEventDaza03;quest/scenario/bsm/bsm400::Bsm400.processEvent010_4;quest/scenario/cnj/cnj200::Cnj200.processEvent010_10;quest/scenario/cnj/cnj300::Cnj300.processEvent005_10;quest/scenario/cnj/cnj306::Cnj306.processEvent005_10;quest/scenario/com/com0g5::Com0g5.processEvent010_3;quest/scenario/com/com0u4::Com0u4.processEvent_040_1;quest/scenario/com/com0u5::Com0u5.processEvent015;quest/scenario/com/com5g1::Com5g1.processEvent_010_4;quest/scenario/cul/cul400::Cul400.processEvent005_5;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithHongavunga_001"
+    },
+    {
+      "receiver": "A0_4",
+      "call_method": "showQuestInfomation",
+      "calls": 62,
+      "file_count": 29,
+      "method_count": 29,
+      "top_tags": "quest:62",
+      "sample_methods": "quest/scenario/blm/blm0j2::Blm0j2.processEventLALAIStart;quest/scenario/blm/blm0j3::Blm0j3.processEventLALAIStart;quest/scenario/blm/blm0j4::Blm0j4.processEventDOZOLMELOCStart;quest/scenario/blm/blm0j6::Blm0j6.processEventStart;quest/scenario/brd/brd0j4::Brd0j4.processEventStart;quest/scenario/brd/brd0j6::Brd0j6.processEventJEHANTELStart;quest/scenario/com/com0g5::Com0g5.processEventFulkeStart;quest/scenario/com/com0g6::Com0g6.processEventStart;quest/scenario/com/com0l5::Com0l5.processEventGUINCUMStart;quest/scenario/com/com0u5::Com0u5.processEventAubreyStart;quest/scenario/com/com0u6::Com0u6.processEventAUBREYStart;quest/scenario/drg/drg0j2::Drg0j2.processEventALBERICStart;quest/scenario/drg/drg0j3::Drg0j3.processEventALBERICStart;quest/scenario/drg/drg0j4::Drg0j4.processEvent_ALBERIC_Start;quest/scenario/drg/drg0j6::Drg0j6.processEventALBERICStart"
+    },
+    {
+      "receiver": "A2_39",
+      "call_method": "startCliantTalkTurn",
+      "calls": 62,
+      "file_count": 62,
+      "method_count": 62,
+      "top_tags": "quest:62",
+      "sample_methods": "quest/scenario/alc/alc300::Alc300.processEvent002_6;quest/scenario/alc/alc306::Alc306.processEvent002_6;quest/scenario/arc/arc300::Arc300.processEvent003_3;quest/scenario/arc/arc306::Arc306.processEvent005_8;quest/scenario/blm/blm0j6::Blm0j6.processEventLalai02;quest/scenario/bsm/bsm400::Bsm400.processEvent010_7;quest/scenario/cnj/cnj200::Cnj200.processEvent015_2;quest/scenario/cnj/cnj300::Cnj300.processEvent010_2;quest/scenario/com/com0g5::Com0g5.processEvent020;quest/scenario/com/com0u5::Com0u5.processEvent015_4;quest/scenario/com/com5g1::Com5g1.processEvent_020;quest/scenario/com/com5u0::Com5u0.processEvent_015_2;quest/scenario/cul/cul300::Cul300.processEvent012_2;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithNoncomananco_001;quest/scenario/defaulttalk/dftsea::DftSea.defaultTalkWithPulmia_001"
+    },
+    {
+      "receiver": "A0_17",
+      "call_method": "_runCharaScheduler",
+      "calls": 60,
+      "file_count": 5,
+      "method_count": 5,
+      "top_tags": "chara:60;populace:60;quest:4;item:1",
+      "sample_methods": "chara/npc/populace/populacecompanyshop::PopulaceCompanyShop.eventTalkFestival;chara/npc/populace/populacefactionglworker::PopulaceFactionGLWorker.eventTalkFaction03Start;chara/npc/populace/populacenmreward::PopulaceNMReward.eventTalkStep0_2;chara/npc/populace/populacerequestwarden::PopulaceRequestWarden.eventTalkStep04;chara/npc/populace/populacespecialeventcryer::PopulaceSpecialEventCryer.eventTalkCrystalExchange2"
+    },
+    {
+      "receiver": "A2_27",
+      "call_method": "_runCharaScheduler",
+      "calls": 59,
+      "file_count": 30,
+      "method_count": 30,
+      "top_tags": "quest:59",
+      "sample_methods": "quest/scenario/blm/blm0j6::Blm0j6.processEventKazagg02;quest/scenario/com/com0g5::Com0g5.processEvent010_2;quest/scenario/com/com0l5::Com0l5.processEvent_015_01;quest/scenario/com/com0u4::Com0u4.processEvent_040;quest/scenario/com/com0u5::Com0u5.processEvent010_6;quest/scenario/com/com5g1::Com5g1.processEvent_010_3;quest/scenario/com/com5l0::Com5l0.processEvent_010;quest/scenario/defaulttalk/dftfst::DftFst.defaultTalkWithSylbyrt_003;quest/scenario/defaulttalk/dftsea::DftSea.defaultTalkWithCharlys_001;quest/scenario/defaulttalk/dftwil::DftWil.defaultTalkWithOpondhao_003;quest/scenario/etc/etc1g6::Etc1g6.followEvent020;quest/scenario/etc/etc3g1::Etc3g1.processEventAraire;quest/scenario/etc/etc3u1::Etc3u1.processEvent005_N_2;quest/scenario/etc/etc5g1::Etc5g1.processEvent_010_5;quest/scenario/gcg/gcg701::Gcg701.processEventVORSAILEcomp2"
+    },
+    {
+      "receiver": "worldMaster",
+      "call_method": "askRestrictChoices",
+      "calls": 55,
+      "file_count": 20,
+      "method_count": 22,
+      "top_tags": "chara:38;quest:26;object:23;populace:13;item:12;retainer:3;linkshell:1;monster:1;caravan:1",
+      "sample_methods": "chara/npc/monster/chocobo/chocobocaravanguard::ChocoboCaravanGuard.chocoboCommand;chara/npc/object/aetheryte/aetherytechild::AetheryteChild.eventAetheryteChildSelect;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.aetheryteTips;chara/npc/object/aetheryte/aetheryteparent::AetheryteParent.eventAetheryteParentSelect;chara/npc/object/bookshelf::BookShelf.bookTalk;chara/npc/object/guildlevewarppoint::GuildleveWarpPoint.eventTalkGuildleveWarp;chara/npc/object/materiabook::MateriaBook.materiabookTalk;chara/npc/object/retainerfurniture::RetainerFurniture.eventTalkRetainerMenu;chara/npc/object/retainermeetingspace::RetainerMeetingSpace.eventTalkRetainerMenu;chara/npc/populace/populacecompanyguide::PopulaceCompanyGuide.eventTalkComMember;chara/npc/populace/populacecompanyshop::PopulaceCompanyShop.eventTalkMainMenu;chara/npc/populace/populacefactionglworker::PopulaceFactionGLWorker.eventTalkGuildleveWarp;chara/npc/populace/populaceguildlevepublisher::PopulaceGuildlevePublisher.eventTalkType;chara/npc/populace/populacelinkshellmanager::PopulaceLinkshellManager.eventTalkStep22;chara/npc/retainer/ordinaryretainer::OrdinaryRetainer.eventTalkRetainerMenu"
+    }
+  ],
+  "top_actor_scripts": [
+    {
+      "script_logical_path": "chara/npc/populace/populacestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 983,
+      "model_or_actor_id_count": 822,
+      "categories": "19:881;1:75;0:18;3:9",
+      "condition_names": "noticeEvent:951;talkDefault:893;pushDefault:63;emoteDefault1:16;emoteDefault2:5;emoteDefault3:5;emoteDefault4:5;emoteDefault5:5;emoteDefault6:5",
+      "class_names": "PopulaceStandard",
+      "base_classes": "NpcBaseClass",
+      "text_sheets": "",
+      "method_count": 1,
+      "top_tags": "chara:983;populace:983"
+    },
+    {
+      "script_logical_path": "chara/npc/retainer/ordinaryretainer",
+      "script_decompiled": "True",
+      "actor_class_count": 225,
+      "model_or_actor_id_count": 225,
+      "categories": "0:210;19:15",
+      "condition_names": "talkDefault:1;noticeEvent:1;outChara:1",
+      "class_names": "OrdinaryRetainer",
+      "base_classes": "RetainerBaseClass",
+      "text_sheets": "319:ordinaryRetainer",
+      "method_count": 12,
+      "top_tags": "retainer:225;chara:225"
+    },
+    {
+      "script_logical_path": "chara/npc/populace/shop/populaceshopsalesman",
+      "script_decompiled": "True",
+      "actor_class_count": 155,
+      "model_or_actor_id_count": 155,
+      "categories": "19:153;0:2",
+      "condition_names": "talkDefault:153;noticeEvent:153",
+      "class_names": "PopulaceShopSalesman",
+      "base_classes": "ShopBaseClass",
+      "text_sheets": "565:populaceShopSalesman",
+      "method_count": 13,
+      "top_tags": "item:155;chara:155;populace:155"
+    },
+    {
+      "script_logical_path": "chara/npc/populace/populacesnpcstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 116,
+      "model_or_actor_id_count": 1,
+      "categories": "19:116",
+      "condition_names": "talkDefault:116;noticeEvent:116",
+      "class_names": "PopulaceSnpcStandard",
+      "base_classes": "NpcBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:116;populace:116"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/empire/empirestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 111,
+      "model_or_actor_id_count": 98,
+      "categories": "23:111",
+      "condition_names": "noticeEvent:111",
+      "class_names": "EmpireStandard",
+      "base_classes": "EmpireBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:111;monster:111"
+    },
+    {
+      "script_logical_path": "chara/npc/mapobj/marketstand",
+      "script_decompiled": "True",
+      "actor_class_count": 90,
+      "model_or_actor_id_count": 1,
+      "categories": "1:90",
+      "condition_names": "noticeEvent:90",
+      "class_names": "MarketStand",
+      "base_classes": "NpcBaseClass",
+      "text_sheets": "",
+      "method_count": 8,
+      "top_tags": "area:90;chara:90"
+    },
+    {
+      "script_logical_path": "chara/npc/object/aetheryte/aetherytechild",
+      "script_decompiled": "True",
+      "actor_class_count": 81,
+      "model_or_actor_id_count": 1,
+      "categories": "3:81",
+      "condition_names": "talkDefault:81;pushCommand:81;noticeEvent:81;pushCommandIn:81;pushCommandOut:81",
+      "class_names": "AetheryteChild",
+      "base_classes": "AetheryteBaseClass",
+      "text_sheets": "299:aetheryteChild",
+      "method_count": 6,
+      "top_tags": "chara:81;object:81"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/gnole/gnolestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 77,
+      "model_or_actor_id_count": 41,
+      "categories": "23:77",
+      "condition_names": "noticeEvent:77",
+      "class_names": "GnoleStandard",
+      "base_classes": "GnoleBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:77;monster:77"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/birdman/birdmanstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 59,
+      "model_or_actor_id_count": 34,
+      "categories": "23:59",
+      "condition_names": "noticeEvent:59",
+      "class_names": "BirdmanStandard",
+      "base_classes": "BirdmanBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:59;monster:59"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/wolf/wolfstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 52,
+      "model_or_actor_id_count": 44,
+      "categories": "23:52",
+      "condition_names": "noticeEvent:52",
+      "class_names": "WolfStandard",
+      "base_classes": "WolfBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:52;monster:52"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/petitghost/petitghoststandard",
+      "script_decompiled": "True",
+      "actor_class_count": 47,
+      "model_or_actor_id_count": 44,
+      "categories": "23:47",
+      "condition_names": "noticeEvent:47",
+      "class_names": "PetitghostStandard",
+      "base_classes": "PetitghostBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:47;monster:47"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/pixie/pixiestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 46,
+      "model_or_actor_id_count": 46,
+      "categories": "23:46",
+      "condition_names": "noticeEvent:46",
+      "class_names": "PixieStandard",
+      "base_classes": "PixieBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:46;monster:46"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/flower/flowerpoisonousstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 43,
+      "model_or_actor_id_count": 41,
+      "categories": "23:43",
+      "condition_names": "noticeEvent:43",
+      "class_names": "FlowerPoisonousStandard",
+      "base_classes": "FlowerBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:43;monster:43"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/orebeetle/orebeetlestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 43,
+      "model_or_actor_id_count": 41,
+      "categories": "23:43",
+      "condition_names": "noticeEvent:43",
+      "class_names": "OrebeetleStandard",
+      "base_classes": "OrebeetleBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:43;monster:43"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/longlegs/longlegsstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 41,
+      "model_or_actor_id_count": 37,
+      "categories": "23:41",
+      "condition_names": "noticeEvent:41",
+      "class_names": "LonglegsStandard",
+      "base_classes": "LonglegsBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:41;monster:41"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/sprite/spritestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 37,
+      "model_or_actor_id_count": 33,
+      "categories": "23:37",
+      "condition_names": "noticeEvent:37",
+      "class_names": "SpriteStandard",
+      "base_classes": "SpriteBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:37;monster:37"
+    },
+    {
+      "script_logical_path": "chara/npc/object/aetheryte/aetheryteparent",
+      "script_decompiled": "True",
+      "actor_class_count": 37,
+      "model_or_actor_id_count": 2,
+      "categories": "3:37",
+      "condition_names": "talkDefault:37;noticeEvent:37;pushCommand:36;pushCommandIn:36;pushCommandOut:36",
+      "class_names": "AetheryteParent",
+      "base_classes": "AetheryteBaseClass",
+      "text_sheets": "303:aetheryteParent",
+      "method_count": 9,
+      "top_tags": "chara:37;object:37"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/crab/crabstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 35,
+      "model_or_actor_id_count": 30,
+      "categories": "23:35",
+      "condition_names": "noticeEvent:35",
+      "class_names": "CrabStandard",
+      "base_classes": "CrabBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:35;monster:35"
+    },
+    {
+      "script_logical_path": "chara/npc/populace/populaceitemrepairer",
+      "script_decompiled": "True",
+      "actor_class_count": 35,
+      "model_or_actor_id_count": 35,
+      "categories": "19:35",
+      "condition_names": "talkDefault:35;noticeEvent:35",
+      "class_names": "PopulaceItemRepairer",
+      "base_classes": "NpcBaseClass",
+      "text_sheets": "2204:populaceItemRepairer",
+      "method_count": 7,
+      "top_tags": "item:35;chara:35;populace:35"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/slug/slugstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 34,
+      "model_or_actor_id_count": 33,
+      "categories": "23:34",
+      "condition_names": "noticeEvent:34",
+      "class_names": "SlugStandard",
+      "base_classes": "SlugBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:34;monster:34"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/willothewisp/willothewispnormalstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 33,
+      "model_or_actor_id_count": 28,
+      "categories": "23:33",
+      "condition_names": "noticeEvent:33",
+      "class_names": "WillOTheWispNormalStandard",
+      "base_classes": "WillOTheWispBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:33;monster:33"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/salamander/salamanderstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 32,
+      "model_or_actor_id_count": 30,
+      "categories": "23:32",
+      "condition_names": "noticeEvent:32",
+      "class_names": "SalamanderStandard",
+      "base_classes": "SalamanderBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:32;monster:32"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/basilisk/basiliskstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 31,
+      "model_or_actor_id_count": 28,
+      "categories": "23:31",
+      "condition_names": "noticeEvent:31",
+      "class_names": "BasiliskStandard",
+      "base_classes": "BasiliskBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:31;monster:31"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/lizardman/lizardmanthaumaturgestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 30,
+      "model_or_actor_id_count": 20,
+      "categories": "23:30",
+      "condition_names": "noticeEvent:30",
+      "class_names": "LizardmanThaumaturgeStandard",
+      "base_classes": "LizardmanBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:30;monster:30"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/winglizard/winglizardstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 30,
+      "model_or_actor_id_count": 29,
+      "categories": "23:30",
+      "condition_names": "noticeEvent:30",
+      "class_names": "WinglizardStandard",
+      "base_classes": "WinglizardBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:30;monster:30"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/dodo/dodostandard",
+      "script_decompiled": "True",
+      "actor_class_count": 28,
+      "model_or_actor_id_count": 22,
+      "categories": "23:28",
+      "condition_names": "noticeEvent:28",
+      "class_names": "DodoStandard",
+      "base_classes": "DodoBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:28;monster:28"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/lizardman/lizardmanpugiliststandard",
+      "script_decompiled": "True",
+      "actor_class_count": 28,
+      "model_or_actor_id_count": 17,
+      "categories": "23:28",
+      "condition_names": "noticeEvent:28",
+      "class_names": "LizardmanPugilistStandard",
+      "base_classes": "LizardmanBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:28;monster:28"
+    },
+    {
+      "script_logical_path": "chara/npc/monster/termite/termitestandard",
+      "script_decompiled": "True",
+      "actor_class_count": 28,
+      "model_or_actor_id_count": 25,
+      "categories": "23:28",
+      "condition_names": "noticeEvent:28",
+      "class_names": "TermiteStandard",
+      "base_classes": "TermiteBaseClass",
+      "text_sheets": "",
+      "method_count": 0,
+      "top_tags": "chara:28;monster:28"
+    },
+    {
+      "script_logical_path": "chara/npc/populace/populacerequestwarden",
+      "script_decompiled": "True",
+      "actor_class_count": 28,
+      "model_or_actor_id_count": 28,
+      "categories": "19:26;0:2",
+      "condition_names": "talkDefault:26;noticeEvent:26",
+      "class_names": "PopulaceRequestWarden",
+      "base_classes": "NpcBaseClass",
+      "text_sheets": "1355:populaceRequestWarden",
+      "method_count": 20,
+      "top_tags": "quest:28;chara:28;populace:28"
+    },
+    {
+      "script_logical_path": "chara/npc/debug/populacequesttestmanstandard",
+      "script_decompiled": "True",
+      "actor_class_count": 27,
+      "model_or_actor_id_count": 1,
+      "categories": "19:27",
+      "condition_names": "talkDefault:27;noticeEvent:27",
+      "class_names": "PopulaceQuestTestManStandard",
+      "base_classes": "NpcBaseClass",
+      "text_sheets": "",
+      "method_count": 1,
+      "top_tags": "quest:27;chara:27;debug:27"
+    }
+  ],
+  "top_system_protocols": [
+    {
+      "tag": "quest",
+      "file_count": 699,
+      "method_count": 6936,
+      "bridge_call_count": 14404,
+      "top_protocol_flags": "scheduler:2111;cutscene:570;warp:305;quest:281;widget:268;item:64;status:22;linkshell:8;bazaar:2",
+      "top_bridge_calls": "A2_3:_runCharaScheduler:917;worldMaster:say:641;A0_1:showQuestInfomation:421;A2_6:_runCharaScheduler:321;A2_9:_runCharaScheduler:273;A2_3:startCliantTalkTurn:268;A2_12:_runCharaScheduler:176;A2_6:startCliantTalkTurn:171;worldMaster:ask:169;A2_15:_runCharaScheduler:158;A2_9:startCliantTalkTurn:153;A2_18:_runCharaScheduler:130;A2_12:startCliantTalkTurn:113;A2_10:_runCharaScheduler:111;A2_15:startCliantTalkTurn:109;A2_7:_runCharaScheduler:108;A2_18:startCliantTalkTurn:87;A2_24:_runCharaScheduler:81;A2_24:startCliantTalkTurn:75;A2_21:startCliantTalkTurn:72"
+    },
+    {
+      "tag": "widget",
+      "file_count": 172,
+      "method_count": 2975,
+      "bridge_call_count": 5621,
+      "top_protocol_flags": "widget:802;item:710;status:109;bazaar:75;quest:44;retainer:43;money:39;linkshell:26;trade:22;group:9;cutscene:5;warp:2;raid:1",
+      "top_bridge_calls": "worldMaster:_getMyPlayer:205;desktopWidget:closeWidgetDirect:142;A0_0:setControlCommandCondition:94;desktopWidget:openChildWidget:84;A0_193:setVisibility:78;A0_234:setVisibility:78;A0_253:setVisibility:78;desktopWidget:_getKeyboardFocusedWidget:54;desktopWidget:resetConfigWork:50;A0_754:maskSlot:44;A0_12:_getParentWidget:36;desktopWidget:getPlayerItemInPackage:32;worldMaster:_getServerTime:31;A0_0:setContent:28;desktopWidget:getRetainerItem:28;A0_0:setVisibility:27;A0_2:setVisibility:26;A0_457:maskSlot:26;A0_0:setCloseCondition:25;desktopWidget:closeChildWidget:23"
+    },
+    {
+      "tag": "item",
+      "file_count": 81,
+      "method_count": 1285,
+      "bridge_call_count": 2780,
+      "top_protocol_flags": "item:429;widget:388;bazaar:46;retainer:42;status:42;money:33;trade:30;scheduler:15;quest:7",
+      "top_bridge_calls": "worldMaster:say:80;A0_193:setVisibility:78;A0_253:setVisibility:78;worldMaster:_getMyPlayer:71;desktopWidget:closeWidgetDirect:41;A0_47:askExtendWidget:32;desktopWidget:getRetainerItem:28;desktopWidget:_getKeyboardFocusedWidget:27;A0_12:_getParentWidget:27;desktopWidget:askForEventMode:21;A0_2:setVisibility:20;A0_28:setVisibility:19;A0_20:setVisibility:19;worldMaster:_getServerTime:18;desktopWidget:changeFocusedWidget:18;worldMaster:ask:18;desktopWidget:openChildWidget:18;A0_214:displayRepairIcon:18;desktopWidget:checkKeyboardFocused:17;A0_2:setButtonEvents:17"
+    },
+    {
+      "tag": "chara",
+      "file_count": 222,
+      "method_count": 1250,
+      "bridge_call_count": 1974,
+      "top_protocol_flags": "widget:182;scheduler:166;item:53;quest:26;group:19;retainer:18;warp:13;raid:11;cutscene:10;status:10;linkshell:8;trade:6;money:5;bazaar:2",
+      "top_bridge_calls": "worldMaster:say:351;debug:_ask:85;worldMaster:ask:64;A0_17:_runCharaScheduler:60;A0_3:_runCharaScheduler:47;A0_30:_runCharaScheduler:42;worldMaster:_getMyPlayer:39;worldMaster:askRestrictChoices:38;desktopWidget:askForEventMode:35;A0_0:_loadTextDataPermanently:32;A0_47:askExtendWidget:32;worldMaster:_getServerTime:27;A0_10:_runCharaScheduler:25;A0_5:_runCharaScheduler:24;A0_1:_runCharaScheduler:22;desktopWidget:askEventModeWidgetYield:21;A0_2:_runCharaScheduler:19;A0_1:startCliantTalkTurn:17;A0_0:_runBgSchedulerFromMidstream:16;A0_1:askExtendWidget:15"
+    },
+    {
+      "tag": "populace",
+      "file_count": 71,
+      "method_count": 606,
+      "bridge_call_count": 1151,
+      "top_protocol_flags": "scheduler:138;widget:109;item:16;quest:10;cutscene:7;linkshell:6;warp:6;raid:5;group:5;money:4;retainer:3;status:2",
+      "top_bridge_calls": "worldMaster:say:167;A0_17:_runCharaScheduler:60;A0_3:_runCharaScheduler:47;A0_30:_runCharaScheduler:42;A0_47:askExtendWidget:32;desktopWidget:askForEventMode:27;A0_10:_runCharaScheduler:25;A0_5:_runCharaScheduler:23;A0_0:_loadTextDataPermanently:21;A0_1:_runCharaScheduler:21;A0_2:_runCharaScheduler:19;A0_1:startCliantTalkTurn:17;A0_5:_waitForCharaSchedulerFinished:15;worldMaster:askMultipleTextMacro:15;A0_1:askExtendWidget:13;worldMaster:askRestrictChoices:13;A0_9:_runCharaScheduler:13;A0_27:_runCharaScheduler:12;worldMaster:_getMyPlayer:11;A0_9:_waitForCharaSchedulerFinished:11"
+    },
+    {
+      "tag": "retainer",
+      "file_count": 19,
+      "method_count": 355,
+      "bridge_call_count": 834,
+      "top_protocol_flags": "widget:112;item:102;retainer:51;bazaar:37;money:16;status:9;trade:8;group:3;quest:2;scheduler:1;cutscene:1",
+      "top_bridge_calls": "A0_193:setVisibility:78;A0_234:setVisibility:78;worldMaster:_getMyPlayer:23;desktopWidget:getRetainerItem:22;desktopWidget:closeWidgetDirect:14;A0_224:setControlProperty:12;A0_7:setVisibility:12;desktopWidget:isValidRetainer:11;worldMaster:_getServerTime:9;A0_27:setVisibility:8;desktopWidget:getRetainerItemDealData:8;A0_193:setText:8;A0_25:setVisibility:8;A0_234:setText:8;desktopWidget:getBazaarItem:7;worldMaster:ask:6;desktopWidget:noticeRetainerTradeResult:6;A0_193:setIcon:6;L8_64:closeBazaarEdit:6;A0_234:setIcon:6"
+    },
+    {
+      "tag": "object",
+      "file_count": 64,
+      "method_count": 217,
+      "bridge_call_count": 390,
+      "top_protocol_flags": "widget:24;item:15;scheduler:10;retainer:9;raid:5;trade:4;warp:3;cutscene:2;quest:1",
+      "top_bridge_calls": "worldMaster:say:182;worldMaster:ask:49;worldMaster:askRestrictChoices:23;desktopWidget:askEventModeWidgetYield:12;worldMaster:_getMyPlayer:12;A0_0:_runCharaScheduler:10;A0_0:_loadTextDataPermanently:9;A0_3:askExtendWidget:6;desktopWidget:noticeRetainerTradeResult:4;L2_51:_getItem:3;L2_49:_getItem:3;A0_62:canAddItemLocal:2;A1_63:addItem:2;A1_77:_canAddItem:2;A0_24:askExtendWidget:2;L2_41:updateRetainerItemPackage:2;desktopWidget:openRetainerTradeWidget:2;desktopWidget:closeRetainerTradeWidget:2;desktopWidget:selectRetainerTradeWidget:2;A0_88:getRetainer:2"
+    },
+    {
+      "tag": "command",
+      "file_count": 112,
+      "method_count": 424,
+      "bridge_call_count": 294,
+      "top_protocol_flags": "widget:12;item:7;warp:5;trade:5;quest:3;bazaar:3;cutscene:2;group:2;linkshell:1;money:1;retainer:1",
+      "top_bridge_calls": "worldMaster:_getMyPlayer:30;A0_404:getCommandId:23;A0_19:getGameCommandData:14;A0_23:getGameCommandData:12;desktopWidget:dictateNoticeTradeWidget:10;A0_1:getCommandId:6;A0_0:getCommandId:5;A0_19:getCanCommandErrTextIdForActorStat:5;A1_1:_hasItemPackage:5;A0_370:getCommandHPCost:4;A0_410:getCommandId:4;A0_413:getCommandId:4;A1_4:searchReadyCommand:4;A1_1:canRequestInformation:3;worldMaster:createCutScene:3;A0_0:getCommandTargettingMode:3;desktopWidget:orderBazaarWidget:3;desktopWidget:askEventModeWidgetYield:3;desktopWidget:executeTextCommand:3;worldMaster:_printDebugLog:2"
+    },
+    {
+      "tag": "party",
+      "file_count": 17,
+      "method_count": 119,
+      "bridge_call_count": 169,
+      "top_protocol_flags": "widget:28;item:15;group:8;status:6",
+      "top_bridge_calls": "desktopWidget:closeWidgetDirect:12;desktopWidget:countPartyMember:9;desktopWidget:closeChildWidget:8;desktopWidget:getWindowSize:7;desktopWidget:isMyPartyLeaderForMyPlayer:7;worldMaster:_getMyPlayer:6;desktopWidget:getChildWidgetByWindowName:6;desktopWidget:openChildWidget:6;A0_0:_setUICommandCondition:4;desktopWidget:getPlayerConfirmGroupCommandVariation:4;debug:_ask:3;desktopWidget:processUpdateGroupInformation:3;A0_1:updateRootStatus:3;A0_21:setContent:3;A0_36:getChildWidgetByWindowName:3;A0_12:_getParentWidget:2;L9_21:getChildWidgetByWindowName:2;desktopWidget:getPartyMemberDisplayName:2;desktopWidget:isPartyMemberActorMe:2;desktopWidget:isJoinedPartyMember:2"
+    },
+    {
+      "tag": "config",
+      "file_count": 10,
+      "method_count": 68,
+      "bridge_call_count": 168,
+      "top_protocol_flags": "widget:36",
+      "top_bridge_calls": "desktopWidget:resetConfigWork:50;A0_0:setControlCommandCondition:49;desktopWidget:openChildWidget:18;desktopWidget:setConfigWork:11;A0_0:setCloseCondition:7;desktopWidget:setConfigFlag:6;A0_0:update:4;desktopWidget:setDefaultCamera:3;desktopWidget:getConfigWork:2;A0_19:setChecked:2;A0_12:_getParentWidget:2;A0_29:setChecked:1;A0_7:sendControlCommand:1;desktopWidget:closeWidgetDirect:1;A0_2:setCommandParameter:1;A0_12:getButtonColor:1;A0_2:update:1;A0_28:setChecked:1;A0_35:setSelectedIndex:1;A0_24:setChecked:1"
+    },
+    {
+      "tag": "instance",
+      "file_count": 40,
+      "method_count": 140,
+      "bridge_call_count": 158,
+      "top_protocol_flags": "widget:31;raid:22;cutscene:9;item:7;warp:3;scheduler:1;status:1",
+      "top_bridge_calls": "worldMaster:say:36;worldMaster:_getMyPlayer:18;A0_0:_loadTextDataPermanently:9;desktopWidget:closeRaidDungeonExecutionWidget:7;A0_3:askExtendWidget:6;worldMaster:createCutScene:6;desktopWidget:openRaidDungeonExecutionWidget:5;debug:_ask:4;A0_1:askExtendWidget:4;worldMaster:notify:3;desktopWidget:orderDesktopWidgetMode:3;desktopWidget:openPublicEffectWidget:3;desktopWidget:askForEventMode:2;A0_62:canAddItemLocal:2;A1_63:addItem:2;A1_77:_canAddItem:2;A0_1:startCliantTalkTurn:2;worldMaster:_getServerTime:2;A0_0:executeCutScene:2;desktopWidget:processUpdateGeneralNotificationDialog:2"
+    },
+    {
+      "tag": "status",
+      "file_count": 103,
+      "method_count": 255,
+      "bridge_call_count": 151,
+      "top_protocol_flags": "status:17;widget:14;item:11;money:1",
+      "top_bridge_calls": "A0_301:setContentsListItem:20;worldMaster:_getMyPlayer:16;desktopWidget:getPlayerItemInPackage:5;desktopWidget:getPlayerMainSkillNumber:5;A0_355:updatePcParameter:5;A0_355:updateGameParameter:5;A0_355:updateBattleParameter:5;A0_10:setEnable:4;A0_14:getTemplateControl:3;desktopWidget:demandPlayerExpInfomation:3;A0_272:getTemplateControl:3;A0_349:getSelectedIndex:3;desktopWidget:_getKeyboardFocusedWidget:2;A0_27:setStatusIcon:2;A0_40:setStatusTime:2;A0_40:_sendStoryboardCommand:2;A0_4:setText:2;A0_4:setHelpParameter:2;A0_191:setIcon:2;A0_301:setVisibility:2"
+    },
+    {
+      "tag": "linkshell",
+      "file_count": 17,
+      "method_count": 89,
+      "bridge_call_count": 127,
+      "top_protocol_flags": "linkshell:30;widget:30;group:7;item:3;status:2",
+      "top_bridge_calls": "desktopWidget:askLinkshellListWidget:6;desktopWidget:closeWidgetDirect:6;desktopWidget:askLinkshellSelectIconWidget:5;L1_48:_getAllGroup:4;L1_88:getCommunityGroup:4;A0_32:setListProperty:4;desktopWidget:askLinkshellNamingWidget:3;A0_0:setContent:3;desktopWidget:openChildWidget:3;A0_12:setKeyboardFocusedControl:3;worldMaster:_getMyPlayer:3;L1_39:isNpcLinkshellChatCalling:3;L1_47:isNpcLinkshellChatCalling:3;desktopWidget:askLinkshellConfirmWidget:2;A0_0:setCommandParameter:2;A0_0:setIcon:2;A0_0:setText:2;A0_7:setBaseAskResult:2;A0_2:setBaseAskResult:2;A0_11:getChildWidgetByWindowName:2"
+    },
+    {
+      "tag": "system",
+      "file_count": 58,
+      "method_count": 132,
+      "bridge_call_count": 126,
+      "top_protocol_flags": "widget:18;item:6;trade:5;quest:3;bazaar:3;warp:3;group:2;linkshell:1;money:1;retainer:1;cutscene:1",
+      "top_bridge_calls": "worldMaster:_getMyPlayer:31;desktopWidget:dictateNoticeTradeWidget:10;A0_0:setControlCommandCondition:10;desktopWidget:resetConfigWork:10;A1_1:_hasItemPackage:5;A1_4:searchReadyCommand:4;A1_1:canRequestInformation:3;desktopWidget:orderBazaarWidget:3;desktopWidget:askEventModeWidgetYield:3;desktopWidget:executeTextCommand:3;A1_1:getContentCommandVariation:2;worldMaster:_getSpecialEventWork:2;desktopWidget:getEventModeWidget:2;desktopWidget:openEventModeWidgetYield:2;worldMaster:createCutScene:2;A1_1:isNpcLinkshellChatCalling:1;A2_2:getNormalItemMateriaFreeIndex:1;A2_2:getMateriaAttachedCount:1;A3_3:isEnchantMateria:1;A1_1:getMoneyOnHand:1"
+    },
+    {
+      "tag": "caravan",
+      "file_count": 13,
+      "method_count": 91,
+      "bridge_call_count": 123,
+      "top_protocol_flags": "scheduler:22;widget:17;warp:5;cutscene:4;status:1",
+      "top_bridge_calls": "A0_13:_runCharaScheduler:9;worldMaster:askMultipleTextMacro:6;A0_3:_runCharaScheduler:6;worldMaster:say:6;worldMaster:createCutScene:4;worldMaster:_transformIntoChocobo:4;desktopWidget:openPublicEffectWidget:4;desktopWidget:setMiniMapWidgetMarkerData:3;A0_3:startCliantTalkTurn:2;A0_1:startCliantTalkTurn:2;A0_6:_runCharaScheduler:2;A0_1:askExtendWidget:2;A0_3:askExtendWidget:2;A0_12:askExtendWidget:2;A0_16:askExtendWidget:2;A0_26:startCliantTalkTurn:2;A0_36:startCliantTalkTurn:2;A0_2:_runCharaScheduler:2;A0_41:askExtendWidget:2;A1_21:_fadeInAfterWarp:2"
+    },
+    {
+      "tag": "player",
+      "file_count": 2,
+      "method_count": 79,
+      "bridge_call_count": 119,
+      "top_protocol_flags": "widget:22;quest:9;warp:3;linkshell:2;item:2;raid:1;status:1;group:1",
+      "top_bridge_calls": "A0_9:_isEventPlaying:12;A0_42:_bindWork:11;worldMaster:_getServerTime:6;desktopWidget:_appendLogPool:5;desktopWidget:openWarningInformDialogWidget:5;A0_225:_getAllGroup:4;desktopWidget:closeAllEventModeWidget:3;A0_64:_callSuperClassFunc:2;A0_64:searchReadyCommand:2;A0_79:_executeCommand:2;desktopWidget:processUpdateQuestComplete:2;desktopWidget:_lockTargetCursorControl:2;desktopWidget:orderDesktopWidgetMode:2;desktopWidget:cancelDesktopWidgetMode:2;desktopWidget:_unlockTargetCursorControl:2;desktopWidget:processRentalChocobo:2;worldMaster:notify:2;desktopWidget:processUpdatePlaceDrivenCommandVariation:2;A0_240:_getItem:2;A0_6:canRequestInformation:1"
+    },
+    {
+      "tag": "debug",
+      "file_count": 18,
+      "method_count": 69,
+      "bridge_call_count": 118,
+      "top_protocol_flags": "widget:5;money:1;cutscene:1;quest:1;item:1",
+      "top_bridge_calls": "debug:_ask:85;A0_0:getActorClassId:4;A0_34:_getProperty:4;debug:getQuestActorForPreview:3;desktopWidget:askEventModeWidgetYield:2;worldMaster:_printDebugLog:2;A0_16:_setProperty:2;A0_34:_setProperty:2;A0_0:startCliantTalkTurn:1;debug:_printLog:1;A0_1:processLoopForLoopInterval:1;A0_1:processLoopForTimeCostViewer:1;string:startsWith:1;desktopWidget:showDisp:1;desktopWidget:setDispFront:1;worldMaster:_getMyPlayer:1;A0_0:_addItem:1;A0_5:_getProperty:1;A0_5:_setProperty:1;A0_15:_getProperty:1"
+    },
+    {
+      "tag": "hamlet",
+      "file_count": 11,
+      "method_count": 106,
+      "bridge_call_count": 93,
+      "top_protocol_flags": "item:13;widget:12;quest:5;status:4;raid:1;scheduler:1;linkshell:1;warp:1",
+      "top_bridge_calls": "worldMaster:say:14;A0_17:getCraftItemID:5;desktopWidget:askForEventMode:4;A0_112:sendControlCommand:4;worldMaster:_getMyPlayer:2;A0_3:startCliantTalkTurn:2;A0_5:startCliantTalkTurn:2;desktopWidget:openEventModeWidgetYield:2;desktopWidget:closeEventModeWidget:2;desktopWidget:getChildWidgetByWindowName:2;A0_18:sendControlCommand:2;A0_0:sendCommand:2;A0_36:setMaximum:2;A0_36:setValue:2;A0_36:sendControlCommand:2;A0_112:getBingoItemIndexTable:2;A0_8:_loadTextDataPermanently:1;desktopWidget:openPublicEffectWidget:1;desktopWidget:askHamletDefenseScoreWidget:1;desktopWidget:openHamletExecutionWidget:1"
+    },
+    {
+      "tag": "area",
+      "file_count": 29,
+      "method_count": 68,
+      "bridge_call_count": 83,
+      "top_protocol_flags": "scheduler:18;widget:5;raid:1;item:1;quest:1;status:1;bazaar:1",
+      "top_bridge_calls": "A0_0:_runBgSchedulerFromMidstream:16;worldMaster:_getServerTime:14;A0_0:prepareSpreadSheet:11;A0_0:_runBgScheduler:7;A0_6:_runBgScheduler:6;A0_5:_runBgScheduler:5;A0_9:_runBgScheduler:4;A0_24:askForCustomizeOption:4;worldMaster:ask:2;A0_23:askExtendWidget:2;A0_36:askExtendWidget:2;desktopWidget:processUpdatePublicInformationDialog:1;A0_35:_setInstanceRaid:1;A0_43:processLoop:1;A0_3:executeScheduler:1;A0_6:_runBgSchedulerFromMidstream:1;worldMaster:isHydaelynNight:1;worldMaster:say:1;A0_32:askForCustomizeOption:1;desktopWidget:orderBazaarWidget:1"
+    },
+    {
+      "tag": "group",
+      "file_count": 15,
+      "method_count": 85,
+      "bridge_call_count": 79,
+      "top_protocol_flags": "group:21;widget:16;trade:3",
+      "top_bridge_calls": "worldMaster:_getMyPlayer:14;desktopWidget:processUpdateCurrentCommunityGroup:6;desktopWidget:processUpdateGroupInformation:4;desktopWidget:processUpdateConfirmGroupCommandVariation:4;desktopWidget:processUpdateConfirmTradeCommandVariation:4;desktopWidget:openChildWidget:4;A0_9:_callSuperClassFunc:3;A0_7:_callSuperClassFunc:2;A0_19:_callSuperClassFunc:2;A1_31:getCommunityGroupCurrent:2;A0_10:_callSuperClassFunc:2;desktopWidget:processUpdateMyPlayerRestrictionByContents:2;A0_12:_callSuperClassFunc:2;A0_0:_setUICommandCondition:2;desktopWidget:closeWidgetDirect:2;A0_5:_callSuperClassFunc:1;A1_1:getConfirmGroupCommandVariation:1;A0_0:initAsCommunityGroup:1;A0_15:updateMemberInformation:1;A0_16:_callSuperClassFunc:1"
+    },
+    {
+      "tag": "mail",
+      "file_count": 1,
+      "method_count": 65,
+      "bridge_call_count": 78,
+      "top_protocol_flags": "item:18;widget:15;status:3;bazaar:2",
+      "top_bridge_calls": "A0_104:setVisibility:7;worldMaster:_getMyPlayer:4;A0_95:setVisibility:3;worldMaster:_getServerTime:3;desktopWidget:getPlayerItemInPackage:2;A0_97:displayFocusedItemHelp:2;A0_139:setControlCommandCondition:2;A0_179:setItemToXmlLight:2;A0_230:setPrice:2;A0_341:setVisibility:2;A0_38:setIcon:1;A0_38:setVisibility:1;A0_90:getChildWidgetByWindowName:1;A0_90:closeShopEdit:1;A0_90:updateWindowDisplay:1;A0_95:updateListFocus:1;A0_97:getChildWidgetByWindowName:1;A0_97:closeShopEdit:1;desktopWidget:_getKeyboardFocusedWidget:1;A0_108:setText:1"
+    },
+    {
+      "tag": "judge",
+      "file_count": 12,
+      "method_count": 72,
+      "bridge_call_count": 68,
+      "top_protocol_flags": "widget:25;item:4;quest:2;cutscene:1;group:1;status:1;scheduler:1",
+      "top_bridge_calls": "desktopWidget:closeEventModeWidget:6;desktopWidget:askEventModeWidgetYield:6;A0_0:prepareSpreadSheet:5;desktopWidget:openEventModeWidgetYield:5;desktopWidget:cancelMainTargetCharacter:5;worldMaster:_getMyPlayer:4;desktopWidget:updateEventModeWidget:4;desktopWidget:selectEventModeWidgetYield:4;desktopWidget:askForEventMode:3;desktopWidget:getChildWidgetByWindowName:3;worldMaster:createCutScene:2;A1_146:getGuildleveQuest:2;A3_9:ask:2;A3_9:startCliantTalkTurn:2;gameCommandSheet:_getData:1;A0_32:_loadTextDataPermanently:1;desktopWidget:orderCraftProgressWidgetUpdate:1;A1_60:_getExtendedTemporaryItem:1;desktopWidget:selectCraftRecipeDetailWidget:1;A1_95:_getExtendedTemporaryItem:1"
+    },
+    {
+      "tag": "achievement",
+      "file_count": 5,
+      "method_count": 40,
+      "bridge_call_count": 57,
+      "top_protocol_flags": "widget:12;item:11",
+      "top_bridge_calls": "A0_0:setUICommandCondition:5;worldMaster:_getMyPlayer:4;desktopWidget:closeWidgetDirect:4;worldMaster:say:3;desktopWidget:getWindowSize:3;A0_0:setCloseCondition:2;A0_0:setControlCommandCondition:2;A0_38:getChildWidgetByWindowName:2;A0_52:getChildWidgetByWindowName:2;A0_88:setFixedListItemParam:2;A0_18:_getParentWidget:2;A0_23:_getParentWidget:2;A0_27:_getParentWidget:2;A0_29:setItemVisibility:2;A0_0:setConfirmCondition:1;A0_1:_getParentWidget:1;A0_6:_getParentWidget:1;A0_0:initChildWidget:1;A0_1:addAchievementCategoryItem:1;A0_15:updateAchievementPoint:1"
+    },
+    {
+      "tag": "search",
+      "file_count": 6,
+      "method_count": 31,
+      "bridge_call_count": 43,
+      "top_protocol_flags": "item:10;quest:3;widget:3;status:1",
+      "top_bridge_calls": "A0_0:setCloseCondition:3;A0_28:setBaseAskResult:2;A0_0:setOperatorCloseCondition:2;A0_0:setOperatorOpenChildCondition:2;A0_0:setListProperty:2;A0_4:setListProperty:2;A0_0:setConfirmCondition:1;A0_0:setControlCommandCondition:1;A0_1:initItemTypeSelectPhase:1;A0_1:initItemSelectPhase:1;A0_4:setBaseAskResult:1;A0_9:operateItemTypeSelectPhase:1;A0_9:operateItemSelectPhase:1;A0_15:selectionChangedItemTypeSelectPhase:1;A0_15:selectionChangedItemSelectPhase:1;A0_21:cancelItemTypeSelectPhase:1;A0_21:cancelItemSelectPhase:1;A0_27:setVisibility:1;A0_27:updateListProperty:1;A0_33:setBaseAskResult:1"
+    },
+    {
+      "tag": "cutscene",
+      "file_count": 6,
+      "method_count": 24,
+      "bridge_call_count": 33,
+      "top_protocol_flags": "cutscene:7;widget:6",
+      "top_bridge_calls": "worldMaster:_getMyPlayer:4;A0_5:askExtendWidget:2;worldMaster:say:2;worldMaster:createCutScene:2;A0_18:_getParentWidget:2;desktopWidget:closeWidgetDirect:2;A0_0:_loadTextDataPermanently:1;desktopWidget:isEventLockonCameraEnable:1;A0_2:processClientTalkEvent:1;desktopWidget:cancelAllTarget:1;A0_5:processCutScenePlay:1;L9_17:getCutSceneReplayData:1;L9_17:startFadeOutCutSceneDefault:1;L9_17:startSnpcNQCutScene:1;L9_17:startSnpcHQCutScene:1;L9_17:startNQCutScene:1;L9_17:startHQCutScene:1;desktopWidget:getStaticWidget:1;L9_17:startFadeInCutSceneDefault:1;A0_25:setBaseAskResult:1"
+    },
+    {
+      "tag": "director",
+      "file_count": 27,
+      "method_count": 35,
+      "bridge_call_count": 4,
+      "top_protocol_flags": "",
+      "top_bridge_calls": "worldMaster:_getMyPlayer:3;debugCommandSheet:_loadKeyTemporarily:1"
+    },
+    {
+      "tag": "monster",
+      "file_count": 29,
+      "method_count": 32,
+      "bridge_call_count": 3,
+      "top_protocol_flags": "",
+      "top_bridge_calls": "A0_3:startCliantTalkTurn:1;worldMaster:askRestrictChoices:1;worldMaster:ask:1"
+    },
+    {
+      "tag": "gamedata",
+      "file_count": 1,
+      "method_count": 1,
+      "bridge_call_count": 0,
+      "top_protocol_flags": "",
+      "top_bridge_calls": ""
+    },
+    {
+      "tag": "world",
+      "file_count": 1,
+      "method_count": 7,
+      "bridge_call_count": 0,
+      "top_protocol_flags": "",
+      "top_bridge_calls": ""
+    }
+  ],
+  "actor_class_sql_audit": {
+    "total_value_rows": 7984,
+    "empty_class_path_rows": 3562,
+    "slash_class_path_rows": 4417,
+    "other_value_rows": 5,
+    "joined_actor_rows": 4422,
+    "unresolved_actor_script_rows": 21
+  },
+  "unresolved_requires": 0,
+  "target_system_slices": {
+    "target_system_method_summaries.csv": 7541,
+    "target_system_event_protocols.csv": 5231,
+    "target_system_bridge_calls.csv": 15684,
+    "target_system_actor_scripts.csv": 323,
+    "target_system_text_sheets.csv": 402
+  }
+}

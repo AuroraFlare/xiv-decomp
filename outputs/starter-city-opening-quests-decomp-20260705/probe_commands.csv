@@ -1,0 +1,16 @@
+code,quest_id,quest_name,command_order,phase,command,repeat_count,purpose,expected_anchor
+man0l0,110001,Shapeless Melody,1,accept,!quest 110001 add,,ensure the opening quest is in the player journal,journal contains quest
+man0l0,110001,Shapeless Melody,2,direct content checkpoint,!questcomplete man0l0 jellyfish,,enter the private content fight checkpoint,man0l01 starts with Quest/QuestDirectorMan0l001
+man0l0,110001,Shapeless Melody,3,inspect in content,!quest info 110001,,confirm sequence and counters after content entry,SEQ_005 is active
+man0l0,110001,Shapeless Melody,4,complete objective,!testbnpckill 2205403,3,simulate objective kill credit,3x 2205403 reaches completion
+man0l0,110001,Shapeless Melody,5,inspect after return,!quest info 110001,,confirm return handoff state,SEQ_010 in zone 230
+man0g0,110005,Sundered Skies,1,accept,!quest 110005 add,,ensure the opening quest is in the player journal,journal contains quest
+man0g0,110005,Sundered Skies,2,direct content checkpoint,!questcomplete man0g0 wolf,,enter the private content fight checkpoint,man0g01 starts with Quest/QuestDirectorMan0g001
+man0g0,110005,Sundered Skies,3,inspect in content,!quest info 110005,,confirm sequence and counters after content entry,SEQ_005 is active
+man0g0,110005,Sundered Skies,4,complete objective,!testbnpckill 2201407,3,simulate objective kill credit,3x 2201407 reaches completion
+man0g0,110005,Sundered Skies,5,inspect after return,!quest info 110005,,confirm return handoff state,SEQ_010 in zone 155
+man0u0,110009,Flowers for All,1,accept,!quest 110009 add,,ensure the opening quest is in the player journal,journal contains quest
+man0u0,110009,Flowers for All,2,direct content checkpoint,!questcomplete man0u0 goobbue,,enter the private content fight checkpoint,man0u01 starts with Quest/QuestDirectorMan0u001
+man0u0,110009,Flowers for All,3,inspect in content,!quest info 110009,,confirm sequence and counters after content entry,SEQ_005 is active
+man0u0,110009,Flowers for All,4,complete objective,!testbnpckill 2203301,1,simulate objective kill credit,1x 2203301 reaches completion
+man0u0,110009,Flowers for All,5,inspect after return,!quest info 110009,,confirm return handoff state,SEQ_010 in zone 175

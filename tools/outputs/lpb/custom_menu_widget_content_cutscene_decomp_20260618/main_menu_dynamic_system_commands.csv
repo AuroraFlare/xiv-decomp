@@ -1,0 +1,18 @@
+command_id,command_name,source_lines,surface,condition,behavior,notes
+24302,ContentCommand,"526-686,793-983; command/system/contentcommand.lua",SystemMenu dynamic row,player getContentCommandVariation() not nil,"Adds menu row with content variation. Execute direct if no subtarget/100; otherwise requestSelectSubTarget(variation,true), then execute selected target.","Ranges: 10000 none, 20000 all, 30000 PC, 40000 NPC, 50000 party."
+24301,PlaceDrivenCommand,667-685,SystemMenu dynamic row,player getPlaceDrivenCommandVariation(1) returns variation,Adds place/rect command row with icon 265 and variation payload.,Paired with rect/place command visibility flag.
+24303,ConfirmGroup,793-827,SystemMenu confirmation,group confirm variation present,Opens CommonAskWidget with group confirmation text; ask result later executes command.,Variation 10001/10002 selects different text.
+24304,ConfirmWarp,827-838,SystemMenu confirmation,warp confirm variation present,"Opens CommonAskWidget using packTextParameter(1130,target,variation), choices 1131/1132/1136.",
+24305,ConfirmTrade,838-850,SystemMenu confirmation,trade confirm variation present,Opens CommonAskWidget with text 1124 and choices 1125/1126/1136.,
+24306,ConfirmRaise,850-862,SystemMenu confirmation,raise confirm variation present,Opens CommonAskWidget with text 1127 and choices 1128/1129/1136.,
+24215,Bazaar,862-866,SystemMenu command,selected,desktopWidget.executeBazaarCommand(),
+22001,ReadyCommand,866-879,Ready/system row,equipped ready command slot selected,"getPlayerEquippedReadyCommand(slot), executePlayerCommand(command,...,myPlayer)",Slot index carried in SystemCommandInfo.
+29497,ReadyCommandAlt,879-891,Ready/system row,alternative ready command selected,"getPlayerEquippedReadyCommand(slot), executePlayerCommand(command)",Likely special ready/action command path.
+24232,CurrentLinkshellInvite,891-900,SystemMenu command,selected,desktopWidget.executePlayerCurrentLinkshellInvite(),
+24233,TargetLinkshellInviteCancel,900-908,SystemMenu command,selected,desktopWidget.executePlayerTargetLinkshellInviteCancel(),
+24238,Check,908-916,SystemMenu command,selected,desktopWidget.executePlayerCheck(),
+0,DropItem,916-924,SystemMenu command,selected,desktopWidget.openDropItemWidget(),Zero command ID is handled specially.
+24312,Sit/Pose,924-938,SystemMenu command,selected,"executePlayerSystemCommand(24312, infoOrNil); info 0 becomes nil.",
+24244,Repair,938-946,SystemMenu command,selected,desktopWidget.executePlayerRepair(),
+22016,MateriaAttach,946-954,SystemMenu command,selected,desktopWidget.openMateriaAttachContractWidget(),
+fallback,ExecutePlayerSystemCommand,954-983,SystemMenu command,any other command ID,"desktopWidget.executePlayerSystemCommand(commandId, commandInfo)",Keeps unknown commands native/system-side.

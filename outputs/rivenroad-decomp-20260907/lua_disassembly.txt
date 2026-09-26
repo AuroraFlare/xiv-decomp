@@ -1,0 +1,49 @@
+
+chara\npc\monster\whitegeneral\whitegeneralmeteor.luac :: initForBattle
+pc 000 off 0x0000F1 raw 0040008B  SELF      R2 R0 K0('_setGroundOn')
+pc 001 off 0x0000F5 raw 00000102  LOADBOOL  R4 0 0
+pc 002 off 0x0000F9 raw 0180409C  CALL      R2 3 1
+pc 003 off 0x0000FD raw 0080001E  RETURN    R0 1 0
+
+director\instanceraid\instanceraidlesserwhitegeneral.luac :: processStartEvent
+pc 000 off 0x000153 raw 0040008B  SELF      R2 R0 K0('executeCutScene')
+pc 001 off 0x000157 raw 00004101  LOADK     R4 1 ; K1='gc010715'
+pc 002 off 0x00015B raw 00800140  MOVE      R5 1 0
+pc 003 off 0x00015F raw 00800182  LOADBOOL  R6 1 0
+pc 004 off 0x000163 raw 0280409C  CALL      R2 5 1
+pc 005 off 0x000167 raw 0080001E  RETURN    R0 1 0
+
+director\instanceraid\instanceraidlesserwhitegeneral.luac :: processCutSceneEvent
+pc 000 off 0x0001B6 raw 00000105  GETGLOBAL R4 0 ; K0='worldMaster'
+pc 001 off 0x0001BA raw 0240410B  SELF      R4 R4 K1('_getMyPlayer')
+pc 002 off 0x0001BE raw 0100811C  CALL      R4 2 2
+pc 003 off 0x0001C2 raw 0240814B  SELF      R5 R4 K2('_fadeOut')
+pc 004 off 0x0001C6 raw 0000C1C1  LOADK     R7 3 ; K3=1.0
+pc 005 off 0x0001CA raw 0180415C  CALL      R5 3 1
+pc 006 off 0x0001CE raw 0241014B  SELF      R5 R4 K4('_waitForFading')
+pc 007 off 0x0001D2 raw 0100415C  CALL      R5 2 1
+pc 008 off 0x0001D6 raw 0241414B  SELF      R5 R4 K5('_setWeather')
+pc 009 off 0x0001DA raw 018001C0  MOVE      R7 3 0
+pc 010 off 0x0001DE raw 00018201  LOADK     R8 6 ; K6=0.0
+pc 011 off 0x0001E2 raw 0200415C  CALL      R5 4 1
+pc 012 off 0x0001E6 raw 0041C14B  SELF      R5 R0 K7('executeCutScene')
+pc 013 off 0x0001EA raw 008001C0  MOVE      R7 1 0
+pc 014 off 0x0001EE raw 01000200  MOVE      R8 2 0
+pc 015 off 0x0001F2 raw 00800242  LOADBOOL  R9 1 0
+pc 016 off 0x0001F6 raw 0280415C  CALL      R5 5 1
+pc 017 off 0x0001FA raw 0242014B  SELF      R5 R4 K8('_fadeIn')
+pc 018 off 0x0001FE raw 0000C1C1  LOADK     R7 3 ; K3=1.0
+pc 019 off 0x000202 raw 0180415C  CALL      R5 3 1
+pc 020 off 0x000206 raw 0042414B  SELF      R5 R0 K9('_wait')
+pc 021 off 0x00020A raw 0000C1C1  LOADK     R7 3 ; K3=1.0
+pc 022 off 0x00020E raw 0180415C  CALL      R5 3 1
+pc 023 off 0x000212 raw 0080001E  RETURN    R0 1 0
+
+director\instanceraid\instanceraidlesserwhitegeneral.luac :: processDummy
+pc 000 off 0x0002D3 raw 0080001E  RETURN    R0 1 0
+
+director\monster\whitegeneral\monsterwhitegenerallesser.luac :: init
+pc 000 off 0x000113 raw 0080001E  RETURN    R0 1 0
+
+director\monster\whitegeneral\monsterwhitegeneralnormal.luac :: init
+pc 000 off 0x000113 raw 0080001E  RETURN    R0 1 0

@@ -1,0 +1,10 @@
+step,function,source_lines,behavior,notes
+1,"processUpdateContentsInformation(actor, verb, updateIndex)",3333-3364,"Validates actor; actor:getKindContentsInformation() kind 1 selects type 1/GuildleveExecutionWidget, kind 2 selects type 2/ChocoboCaravanWidget; other kinds return.","Decompiler shows impossible break/return artifacts, but constants and call target are clear."
+2,"updateContentsInformation(actor,type,widgetName,verb,updateIndex)",3366-3433,"Finds current content slot via getContentsIndex(actor,type), then handles start/update/finish/cancel.","Verb is a string: start, update, finish, cancel."
+3,start,3370-3387,"If actor/type has no slot, getFreeContentsIndex() then openContentsWidget(slot,type,actor,widgetName,actor).",Widget init receives owner actor.
+4,update,3388-3418,"If slot/widget missing and create-widget command is not playing, opens widget. Else calls widget:update(actor, updateIndex or 1).",Main live-content refresh hook.
+5,finish/cancel,3419-3433,"If actor owns a slot, closeContentsWidget(slot,actor,widgetName).",finish and cancel share close path in decompiled branch shape.
+6,getFreeContentsIndex/getContentsIndex,5776-5807,Intended slot scan is 1..4 over work.widgetOwner and work.contentsType.,Decompiler inserted premature do return 0 before loops; treat loop as intended bytecode shape.
+7,openContentsWidget,15117-15161,"Validates actor, ensures existing owner/type match, maps slot to layer slot+5, openWidget(layer, widgetName, nil, nil, true, ...), then records owner/type.",Slots 1..4 map to root widget layers 6..9.
+8,closeContentsWidget,15162-15188,"Checks isValidContentsOwner(slot,actor), clears owner/type, maps slot to layer slot+5, closes widget.","closeWidget appears twice in decomp, likely duplication around return."
+9,getContentsWidget/isValidContentsOwner,15190-15236,"getContentsWidget validates owner and returns getWidget(layer,widgetName). isValidContentsOwner rejects nil/dead/mismatched owners and clears dead owners.","Owner identity is actor object identity, not content ID."

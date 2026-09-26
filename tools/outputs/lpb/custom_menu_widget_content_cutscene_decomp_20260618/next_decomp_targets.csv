@@ -1,0 +1,10 @@
+priority,target,why,suggested_sources
+P0,DesktopWidget.setDesktopModeDetail mode flag write sites,"Central to cutscene/content widget visibility, but luadec stripped method names into locals after mode branches.",desktopwidget_connector.lua lines 4370-4671 plus bytecode/luac control-flow inspection
+P0,Native callers of processUpdateContentsInformation,"Lua contracts show kind 1/2 only, but retail-accurate content widgets need the native/user-message source that sets kind, verb, and updateIndex.",method_call_edges.csv callers; native receive/generic-data handlers
+P0,ContentRewardWidget provider implementations,Reward widget is provider-driven; need concrete getContentRewardItem/main-title/button text implementations.,rg getContentRewardItem/getContentRewardMainTitle/getContentRewardButtonText across decomp packs
+P1,JournalListWidget completed replay ranges,Mode 7 uses cutReplaySheet and _isCompletedCutSceneReplayQuest; exact filters need cleaner extraction.,journallistwidget.lua lines 708-745 plus sheet schema
+P1,QuestDetailWidget and JournalDetailWidget operation buttons,"Needed for widgets that open maps, abandon/retry/release guildleves, or accept/refuse quests.",journaldetailwidget.lua and questdetailwidget.lua full operation/ask-result methods
+P1,HamletDefenseWidget full command animation table,"Live command methods are known, but icon/help/text IDs and animation names need normalization.",hamletdefensewidget.lua full file; instanceraidhamletdefense.lua user messages
+P1,Custom menu returned L2/L3 caller contract,PopulaceMenuMan returns top option/result code; caller deciding actual warp/quest/summon behavior is not connected here.,callers of PopulaceMenuMan.debugMenuEvent and debug NPC event scripts
+P2,UI asset/control declarations,"Lua gives control names, but exact layouts/states need ULD/XAML/control metadata if present.",client UI resource dumps or widget control metadata
+P2,CutSceneSkip show/hide native linkage,DesktopWidget.showCutSceneSkip only sets arg actor in Lua; native/widget base likely performs visibility.,method_call_edges.csv showCutSceneSkip/hideCutSceneSkip; cutscene actor classes

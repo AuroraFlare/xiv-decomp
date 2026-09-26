@@ -1,0 +1,26 @@
+## delegateEvent (root/proto13)
+source=nil lines=2163..2171 params=4 nups=0 vararg=3 stack=11 code=8 constants=1 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = '_callFunction'
+
+### instructions
+pc 000 off 0x000A56 raw 0140014B  SELF      R5 R2 K0('_callFunction')
+pc 001 off 0x000A5A raw 018001C0  MOVE      R7 3 0
+pc 002 off 0x000A5E raw 00800200  MOVE      R8 1 0
+pc 003 off 0x000A62 raw 00000240  MOVE      R9 0 0
+pc 004 off 0x000A66 raw 000002A5  VARARG    R10 0 0
+pc 005 off 0x000A6A raw 0000015D  TAILCALL  R5 0 0
+pc 006 off 0x000A6E raw 0000015E  RETURN    R5 0 0
+pc 007 off 0x000A72 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..005 -> exit
+B006 pc 006..006 -> exit
+B007 pc 007..007 -> exit

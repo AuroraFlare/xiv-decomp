@@ -1,0 +1,104 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+
+===== 0x0065BE50 =====
+entry=0065be50
+body=[[0065be50, 0065be61] [00850ed0, 00850ef4]]
+completed=true
+message=
+
+undefined1 __fastcall FUN_0065be50(int param_1)
+
+{
+  int iVar1;
+  
+  if (*(int *)(param_1 + 0x2b10) == 0) {
+    return 0;
+  }
+  iVar1 = *(int *)(*(int *)(param_1 + 0x2b10) + 4);
+  if (iVar1 != 0) {
+    iVar1 = (**(code **)(**(int **)(iVar1 + 0x40) + 4))();
+    if ((*(byte *)(iVar1 + 3) & 0x80) != 0) {
+      return *(undefined1 *)(iVar1 + 0x35);
+    }
+  }
+  return 0;
+}
+
+
+-- listing --
+0065be50  MOV ECX,dword ptr [ECX + 0x2b10]
+0065be56  TEST ECX,ECX
+0065be58  JZ 0x0065be5f
+0065be5a  JMP 0x00850ed0
+0065be5f  XOR AL,AL
+0065be61  RET
+00850ed0  MOV EAX,dword ptr [ECX + 0x4]
+00850ed3  PUSH EBX
+00850ed4  XOR BL,BL
+00850ed6  TEST EAX,EAX
+00850ed8  JZ 0x00850ef1
+00850eda  MOV EAX,dword ptr [EAX + 0x40]
+00850edd  MOV EDX,dword ptr [EAX]
+00850edf  MOV ECX,EAX
+00850ee1  MOV EAX,dword ptr [EDX + 0x4]
+00850ee4  CALL EAX
+00850ee6  TEST byte ptr [EAX + 0x3],0x80
+00850eea  JZ 0x00850ef1
+00850eec  MOV AL,byte ptr [EAX + 0x35]
+00850eef  POP EBX
+00850ef0  RET
+00850ef1  MOV AL,BL
+00850ef3  POP EBX
+00850ef4  RET
+
+===== 0x0065C550 =====
+entry=0065c550
+body=[[0065c550, 0065c561] [008511d0, 008511f4]]
+completed=true
+message=
+
+undefined1 __fastcall FUN_0065c550(int param_1)
+
+{
+  int iVar1;
+  
+  if (*(int *)(param_1 + 0x2b10) == 0) {
+    return 0;
+  }
+  iVar1 = *(int *)(*(int *)(param_1 + 0x2b10) + 4);
+  if (iVar1 != 0) {
+    iVar1 = (**(code **)(**(int **)(iVar1 + 0x40) + 4))();
+    if ((*(byte *)(iVar1 + 3) & 0x80) != 0) {
+      return *(undefined1 *)(iVar1 + 0x3b);
+    }
+  }
+  return 0;
+}
+
+
+-- listing --
+0065c550  MOV ECX,dword ptr [ECX + 0x2b10]
+0065c556  TEST ECX,ECX
+0065c558  JZ 0x0065c55f
+0065c55a  JMP 0x008511d0
+0065c55f  XOR AL,AL
+0065c561  RET
+008511d0  MOV EAX,dword ptr [ECX + 0x4]
+008511d3  PUSH EBX
+008511d4  XOR BL,BL
+008511d6  TEST EAX,EAX
+008511d8  JZ 0x008511f1
+008511da  MOV EAX,dword ptr [EAX + 0x40]
+008511dd  MOV EDX,dword ptr [EAX]
+008511df  MOV ECX,EAX
+008511e1  MOV EAX,dword ptr [EDX + 0x4]
+008511e4  CALL EAX
+008511e6  TEST byte ptr [EAX + 0x3],0x80
+008511ea  JZ 0x008511f1
+008511ec  MOV AL,byte ptr [EAX + 0x3b]
+008511ef  POP EBX
+008511f0  RET
+008511f1  MOV AL,BL
+008511f3  POP EBX
+008511f4  RET

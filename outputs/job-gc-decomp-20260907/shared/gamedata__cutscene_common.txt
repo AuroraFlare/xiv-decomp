@@ -1,0 +1,500 @@
+## startCutScene (root/proto8)
+source=nil lines=1002..1260 params=4 nups=0 vararg=3 stack=15 code=289 constants=35 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = 'worldMaster'
+K001 = '_getMyPlayer'
+K002 = '_fadeInNowLoadingForNoticeEventJustInArea'
+K003 = '_loadCutScene'
+K004 = 'desktopWidget'
+K005 = 'getStaticWidget'
+K006 = 14.0
+K007 = 'display'
+K008 = 1.0
+K009 = 2.0
+K010 = 3.0
+K011 = 4.0
+K012 = 5.0
+K013 = 6.0
+K014 = 7.0
+K015 = 8.0
+K016 = false
+K017 = 61.0
+K018 = 62.0
+K019 = 63.0
+K020 = 64.0
+K021 = 'orderDesktopWidgetMode'
+K022 = 'type'
+K023 = 'select'
+K024 = 'boolean'
+K025 = true
+K026 = nil
+K027 = 'number'
+K028 = 'string'
+K029 = 'showCutSceneSkip'
+K030 = '_play'
+K031 = '_replay'
+K032 = 'hideCutSceneSkip'
+K033 = 'cancelDesktopWidgetMode'
+K034 = '_waitForMapLoaded'
+
+### instructions
+pc 000 off 0x001D11 raw 00000145  GETGLOBAL R5 0 ; K0='worldMaster'
+pc 001 off 0x001D15 raw 02C0414B  SELF      R5 R5 K1('_getMyPlayer')
+pc 002 off 0x001D19 raw 0100815C  CALL      R5 2 2
+pc 003 off 0x001D1D raw 02C0814B  SELF      R5 R5 K2('_fadeInNowLoadingForNoticeEventJustInArea')
+pc 004 off 0x001D21 raw 0100415C  CALL      R5 2 1
+pc 005 off 0x001D25 raw 0040C14B  SELF      R5 R0 K3('_loadCutScene')
+pc 006 off 0x001D29 raw 0100415C  CALL      R5 2 1
+pc 007 off 0x001D2D raw 00010145  GETGLOBAL R5 4 ; K4='desktopWidget'
+pc 008 off 0x001D31 raw 02C1414B  SELF      R5 R5 K5('getStaticWidget')
+pc 009 off 0x001D35 raw 000181C1  LOADK     R7 6 ; K6=14.0
+pc 010 off 0x001D39 raw 0180815C  CALL      R5 3 2
+pc 011 off 0x001D3D raw 02C1C14B  SELF      R5 R5 K7('display')
+pc 012 off 0x001D41 raw 000001C2  LOADBOOL  R7 0 0
+pc 013 off 0x001D45 raw 0180415C  CALL      R5 3 1
+pc 014 off 0x001D49 raw 03000143  LOADNIL   R5 6 0
+pc 015 off 0x001D4D raw 01C20017  EQ        R0 R3 K8(1.0) ; skip next when comparison != False
+pc 016 off 0x001D51 raw 80008016  JMP       R0 +3 ; -> pc 020
+pc 017 off 0x001D55 raw 00000142  LOADBOOL  R5 0 0
+pc 018 off 0x001D59 raw 00000182  LOADBOOL  R6 0 0
+pc 019 off 0x001D5D raw 80084016  JMP       R0 +34 ; -> pc 054
+pc 020 off 0x001D61 raw 01C24017  EQ        R0 R3 K9(2.0) ; skip next when comparison != False
+pc 021 off 0x001D65 raw 80008016  JMP       R0 +3 ; -> pc 025
+pc 022 off 0x001D69 raw 00000142  LOADBOOL  R5 0 0
+pc 023 off 0x001D6D raw 00000182  LOADBOOL  R6 0 0
+pc 024 off 0x001D71 raw 80070016  JMP       R0 +29 ; -> pc 054
+pc 025 off 0x001D75 raw 01C28017  EQ        R0 R3 K10(3.0) ; skip next when comparison != False
+pc 026 off 0x001D79 raw 80008016  JMP       R0 +3 ; -> pc 030
+pc 027 off 0x001D7D raw 00000142  LOADBOOL  R5 0 0
+pc 028 off 0x001D81 raw 00800182  LOADBOOL  R6 1 0
+pc 029 off 0x001D85 raw 8005C016  JMP       R0 +24 ; -> pc 054
+pc 030 off 0x001D89 raw 01C2C017  EQ        R0 R3 K11(4.0) ; skip next when comparison != False
+pc 031 off 0x001D8D raw 80008016  JMP       R0 +3 ; -> pc 035
+pc 032 off 0x001D91 raw 00000142  LOADBOOL  R5 0 0
+pc 033 off 0x001D95 raw 00800182  LOADBOOL  R6 1 0
+pc 034 off 0x001D99 raw 80048016  JMP       R0 +19 ; -> pc 054
+pc 035 off 0x001D9D raw 01C30017  EQ        R0 R3 K12(5.0) ; skip next when comparison != False
+pc 036 off 0x001DA1 raw 80008016  JMP       R0 +3 ; -> pc 040
+pc 037 off 0x001DA5 raw 00800142  LOADBOOL  R5 1 0
+pc 038 off 0x001DA9 raw 00800182  LOADBOOL  R6 1 0
+pc 039 off 0x001DAD raw 80034016  JMP       R0 +14 ; -> pc 054
+pc 040 off 0x001DB1 raw 01C34017  EQ        R0 R3 K13(6.0) ; skip next when comparison != False
+pc 041 off 0x001DB5 raw 80008016  JMP       R0 +3 ; -> pc 045
+pc 042 off 0x001DB9 raw 00800142  LOADBOOL  R5 1 0
+pc 043 off 0x001DBD raw 00800182  LOADBOOL  R6 1 0
+pc 044 off 0x001DC1 raw 80020016  JMP       R0 +9 ; -> pc 054
+pc 045 off 0x001DC5 raw 01C38017  EQ        R0 R3 K14(7.0) ; skip next when comparison != False
+pc 046 off 0x001DC9 raw 80008016  JMP       R0 +3 ; -> pc 050
+pc 047 off 0x001DCD raw 00800142  LOADBOOL  R5 1 0
+pc 048 off 0x001DD1 raw 00000182  LOADBOOL  R6 0 0
+pc 049 off 0x001DD5 raw 8000C016  JMP       R0 +4 ; -> pc 054
+pc 050 off 0x001DD9 raw 01C3C017  EQ        R0 R3 K15(8.0) ; skip next when comparison != False
+pc 051 off 0x001DDD raw 80004016  JMP       R0 +2 ; -> pc 054
+pc 052 off 0x001DE1 raw 00800142  LOADBOOL  R5 1 0
+pc 053 off 0x001DE5 raw 00000182  LOADBOOL  R6 0 0
+pc 054 off 0x001DE9 raw 01C20017  EQ        R0 R3 K8(1.0) ; skip next when comparison != False
+pc 055 off 0x001DED raw 80004016  JMP       R0 +2 ; -> pc 058
+pc 056 off 0x001DF1 raw 000200C1  LOADK     R3 8 ; K8=1.0
+pc 057 off 0x001DF5 raw 80068016  JMP       R0 +27 ; -> pc 085
+pc 058 off 0x001DF9 raw 01C24017  EQ        R0 R3 K9(2.0) ; skip next when comparison != False
+pc 059 off 0x001DFD raw 80004016  JMP       R0 +2 ; -> pc 062
+pc 060 off 0x001E01 raw 000240C1  LOADK     R3 9 ; K9=2.0
+pc 061 off 0x001E05 raw 80058016  JMP       R0 +23 ; -> pc 085
+pc 062 off 0x001E09 raw 01C28017  EQ        R0 R3 K10(3.0) ; skip next when comparison != False
+pc 063 off 0x001E0D raw 80004016  JMP       R0 +2 ; -> pc 066
+pc 064 off 0x001E11 raw 000200C1  LOADK     R3 8 ; K8=1.0
+pc 065 off 0x001E15 raw 80048016  JMP       R0 +19 ; -> pc 085
+pc 066 off 0x001E19 raw 01C2C017  EQ        R0 R3 K11(4.0) ; skip next when comparison != False
+pc 067 off 0x001E1D raw 80004016  JMP       R0 +2 ; -> pc 070
+pc 068 off 0x001E21 raw 000240C1  LOADK     R3 9 ; K9=2.0
+pc 069 off 0x001E25 raw 80038016  JMP       R0 +15 ; -> pc 085
+pc 070 off 0x001E29 raw 01C30017  EQ        R0 R3 K12(5.0) ; skip next when comparison != False
+pc 071 off 0x001E2D raw 80004016  JMP       R0 +2 ; -> pc 074
+pc 072 off 0x001E31 raw 000200C1  LOADK     R3 8 ; K8=1.0
+pc 073 off 0x001E35 raw 80028016  JMP       R0 +11 ; -> pc 085
+pc 074 off 0x001E39 raw 01C34017  EQ        R0 R3 K13(6.0) ; skip next when comparison != False
+pc 075 off 0x001E3D raw 80004016  JMP       R0 +2 ; -> pc 078
+pc 076 off 0x001E41 raw 000240C1  LOADK     R3 9 ; K9=2.0
+pc 077 off 0x001E45 raw 80018016  JMP       R0 +7 ; -> pc 085
+pc 078 off 0x001E49 raw 01C38017  EQ        R0 R3 K14(7.0) ; skip next when comparison != False
+pc 079 off 0x001E4D raw 80004016  JMP       R0 +2 ; -> pc 082
+pc 080 off 0x001E51 raw 000200C1  LOADK     R3 8 ; K8=1.0
+pc 081 off 0x001E55 raw 80008016  JMP       R0 +3 ; -> pc 085
+pc 082 off 0x001E59 raw 01C3C017  EQ        R0 R3 K15(8.0) ; skip next when comparison != False
+pc 083 off 0x001E5D raw 80000016  JMP       R0 +1 ; -> pc 085
+pc 084 off 0x001E61 raw 000240C1  LOADK     R3 9 ; K9=2.0
+pc 085 off 0x001E65 raw 00C20017  EQ        R0 R1 K8(1.0) ; skip next when comparison != False
+pc 086 off 0x001E69 raw 80000016  JMP       R0 +1 ; -> pc 088
+pc 087 off 0x001E6D raw 7FFFC016  JMP       R0 +0 ; -> pc 088
+pc 088 off 0x001E71 raw 00C20017  EQ        R0 R1 K8(1.0) ; skip next when comparison != False
+pc 089 off 0x001E75 raw 80048016  JMP       R0 +19 ; -> pc 109
+pc 090 off 0x001E79 raw 02C40017  EQ        R0 R5 K16(false) ; skip next when comparison != False
+pc 091 off 0x001E7D raw 80040016  JMP       R0 +17 ; -> pc 109
+pc 092 off 0x001E81 raw 01444017  EQ        R0 R2 K17(61.0) ; skip next when comparison != False
+pc 093 off 0x001E85 raw 80000016  JMP       R0 +1 ; -> pc 095
+pc 094 off 0x001E89 raw 80020016  JMP       R0 +9 ; -> pc 104
+pc 095 off 0x001E8D raw 01448017  EQ        R0 R2 K18(62.0) ; skip next when comparison != False
+pc 096 off 0x001E91 raw 80000016  JMP       R0 +1 ; -> pc 098
+pc 097 off 0x001E95 raw 80014016  JMP       R0 +6 ; -> pc 104
+pc 098 off 0x001E99 raw 0144C017  EQ        R0 R2 K19(63.0) ; skip next when comparison != False
+pc 099 off 0x001E9D raw 80000016  JMP       R0 +1 ; -> pc 101
+pc 100 off 0x001EA1 raw 80008016  JMP       R0 +3 ; -> pc 104
+pc 101 off 0x001EA5 raw 01450017  EQ        R0 R2 K20(64.0) ; skip next when comparison != False
+pc 102 off 0x001EA9 raw 80000016  JMP       R0 +1 ; -> pc 104
+pc 103 off 0x001EAD raw 7FFFC016  JMP       R0 +0 ; -> pc 104
+pc 104 off 0x001EB1 raw 000101C5  GETGLOBAL R7 4 ; K4='desktopWidget'
+pc 105 off 0x001EB5 raw 03C541CB  SELF      R7 R7 K21('orderDesktopWidgetMode')
+pc 106 off 0x001EB9 raw 01000240  MOVE      R9 2 0
+pc 107 off 0x001EBD raw 018041DC  CALL      R7 3 1
+pc 108 off 0x001EC1 raw 7FFFC016  JMP       R0 +0 ; -> pc 109
+pc 109 off 0x001EC5 raw 000201C1  LOADK     R7 8 ; K8=1.0
+pc 110 off 0x001EC9 raw 01450057  EQ        R1 R2 K20(64.0) ; skip next when comparison != True
+pc 111 off 0x001ECD raw 801BC016  JMP       R0 +112 ; -> pc 224
+pc 112 off 0x001ED1 raw 00000202  LOADBOOL  R8 0 0
+pc 113 off 0x001ED5 raw 04440017  EQ        R0 R8 K16(false) ; skip next when comparison != False
+pc 114 off 0x001ED9 raw 80064016  JMP       R0 +26 ; -> pc 141
+pc 115 off 0x001EDD raw 00058245  GETGLOBAL R9 22 ; K22='type'
+pc 116 off 0x001EE1 raw 0005C285  GETGLOBAL R10 23 ; K23='select'
+pc 117 off 0x001EE5 raw 038002C0  MOVE      R11 7 0
+pc 118 off 0x001EE9 raw 00000325  VARARG    R12 0 0
+pc 119 off 0x001EED raw 0000029C  CALL      R10 0 0
+pc 120 off 0x001EF1 raw 0000825C  CALL      R9 0 2
+pc 121 off 0x001EF5 raw 04C60057  EQ        R1 R9 K24('boolean') ; skip next when comparison != True
+pc 122 off 0x001EF9 raw 80004016  JMP       R0 +2 ; -> pc 125
+pc 123 off 0x001EFD raw 00800202  LOADBOOL  R8 1 0
+pc 124 off 0x001F01 raw 7FFCC016  JMP       R0 -12 ; -> pc 113
+pc 125 off 0x001F05 raw 0005C245  GETGLOBAL R9 23 ; K23='select'
+pc 126 off 0x001F09 raw 03800280  MOVE      R10 7 0
+pc 127 off 0x001F0D raw 000002E5  VARARG    R11 0 0
+pc 128 off 0x001F11 raw 0000825C  CALL      R9 0 2
+pc 129 off 0x001F15 raw 04C64017  EQ        R0 R9 K25(true) ; skip next when comparison != False
+pc 130 off 0x001F19 raw 80004016  JMP       R0 +2 ; -> pc 133
+pc 131 off 0x001F1D raw 03C201CC  ADD       R7 R7 K8(1.0)
+pc 132 off 0x001F21 raw 7FFAC016  JMP       R0 -20 ; -> pc 113
+pc 133 off 0x001F25 raw 0005C245  GETGLOBAL R9 23 ; K23='select'
+pc 134 off 0x001F29 raw 03800280  MOVE      R10 7 0
+pc 135 off 0x001F2D raw 000002E5  VARARG    R11 0 0
+pc 136 off 0x001F31 raw 0000825C  CALL      R9 0 2
+pc 137 off 0x001F35 raw 04C40017  EQ        R0 R9 K16(false) ; skip next when comparison != False
+pc 138 off 0x001F39 raw 7FF94016  JMP       R0 -26 ; -> pc 113
+pc 139 off 0x001F3D raw 03C201CC  ADD       R7 R7 K8(1.0)
+pc 140 off 0x001F41 raw 7FF8C016  JMP       R0 -28 ; -> pc 113
+pc 141 off 0x001F45 raw 03C20017  EQ        R0 R7 K8(1.0) ; skip next when comparison != False
+pc 142 off 0x001F49 raw 80000016  JMP       R0 +1 ; -> pc 144
+pc 143 off 0x001F4D raw 80000016  JMP       R0 +1 ; -> pc 145
+pc 144 off 0x001F51 raw 000241C1  LOADK     R7 9 ; K9=2.0
+pc 145 off 0x001F55 raw 03800240  MOVE      R9 7 0
+pc 146 off 0x001F59 raw 00020281  LOADK     R10 8 ; K8=1.0
+pc 147 off 0x001F5D raw 00000202  LOADBOOL  R8 0 0
+pc 148 off 0x001F61 raw 04440017  EQ        R0 R8 K16(false) ; skip next when comparison != False
+pc 149 off 0x001F65 raw 8011C016  JMP       R0 +72 ; -> pc 222
+pc 150 off 0x001F69 raw 0005C2C5  GETGLOBAL R11 23 ; K23='select'
+pc 151 off 0x001F6D raw 03800300  MOVE      R12 7 0
+pc 152 off 0x001F71 raw 00000365  VARARG    R13 0 0
+pc 153 off 0x001F75 raw 000082DC  CALL      R11 0 2
+pc 154 off 0x001F79 raw 05C68017  EQ        R0 R11 K26(nil) ; skip next when comparison != False
+pc 155 off 0x001F7D raw 80004016  JMP       R0 +2 ; -> pc 158
+pc 156 off 0x001F81 raw 00800202  LOADBOOL  R8 1 0
+pc 157 off 0x001F85 raw 7FFD4016  JMP       R0 -10 ; -> pc 148
+pc 158 off 0x001F89 raw 000582C5  GETGLOBAL R11 22 ; K22='type'
+pc 159 off 0x001F8D raw 0005C305  GETGLOBAL R12 23 ; K23='select'
+pc 160 off 0x001F91 raw 03800340  MOVE      R13 7 0
+pc 161 off 0x001F95 raw 000003A5  VARARG    R14 0 0
+pc 162 off 0x001F99 raw 0000031C  CALL      R12 0 0
+pc 163 off 0x001F9D raw 000082DC  CALL      R11 0 2
+pc 164 off 0x001FA1 raw 05C6C017  EQ        R0 R11 K27('number') ; skip next when comparison != False
+pc 165 off 0x001FA5 raw 80080016  JMP       R0 +33 ; -> pc 199
+pc 166 off 0x001FA9 raw 04C20017  EQ        R0 R9 K8(1.0) ; skip next when comparison != False
+pc 167 off 0x001FAD raw 80004016  JMP       R0 +2 ; -> pc 170
+pc 168 off 0x001FB1 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 169 off 0x001FB5 raw 800C4016  JMP       R0 +50 ; -> pc 220
+pc 170 off 0x001FB9 raw 04C24017  EQ        R0 R9 K9(2.0) ; skip next when comparison != False
+pc 171 off 0x001FBD raw 80004016  JMP       R0 +2 ; -> pc 174
+pc 172 off 0x001FC1 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 173 off 0x001FC5 raw 800B4016  JMP       R0 +46 ; -> pc 220
+pc 174 off 0x001FC9 raw 04C28017  EQ        R0 R9 K10(3.0) ; skip next when comparison != False
+pc 175 off 0x001FCD raw 80004016  JMP       R0 +2 ; -> pc 178
+pc 176 off 0x001FD1 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 177 off 0x001FD5 raw 800A4016  JMP       R0 +42 ; -> pc 220
+pc 178 off 0x001FD9 raw 04C2C017  EQ        R0 R9 K11(4.0) ; skip next when comparison != False
+pc 179 off 0x001FDD raw 80004016  JMP       R0 +2 ; -> pc 182
+pc 180 off 0x001FE1 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 181 off 0x001FE5 raw 80094016  JMP       R0 +38 ; -> pc 220
+pc 182 off 0x001FE9 raw 04C30017  EQ        R0 R9 K12(5.0) ; skip next when comparison != False
+pc 183 off 0x001FED raw 80004016  JMP       R0 +2 ; -> pc 186
+pc 184 off 0x001FF1 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 185 off 0x001FF5 raw 80084016  JMP       R0 +34 ; -> pc 220
+pc 186 off 0x001FF9 raw 04C34017  EQ        R0 R9 K13(6.0) ; skip next when comparison != False
+pc 187 off 0x001FFD raw 80004016  JMP       R0 +2 ; -> pc 190
+pc 188 off 0x002001 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 189 off 0x002005 raw 80074016  JMP       R0 +30 ; -> pc 220
+pc 190 off 0x002009 raw 04C38017  EQ        R0 R9 K14(7.0) ; skip next when comparison != False
+pc 191 off 0x00200D raw 80004016  JMP       R0 +2 ; -> pc 194
+pc 192 off 0x002011 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 193 off 0x002015 raw 80064016  JMP       R0 +26 ; -> pc 220
+pc 194 off 0x002019 raw 04C3C017  EQ        R0 R9 K15(8.0) ; skip next when comparison != False
+pc 195 off 0x00201D raw 8005C016  JMP       R0 +24 ; -> pc 220
+pc 196 off 0x002021 raw 04C2024C  ADD       R9 R9 K8(1.0)
+pc 197 off 0x002025 raw 80054016  JMP       R0 +22 ; -> pc 220
+pc 198 off 0x002029 raw 80050016  JMP       R0 +21 ; -> pc 220
+pc 199 off 0x00202D raw 000582C5  GETGLOBAL R11 22 ; K22='type'
+pc 200 off 0x002031 raw 0005C305  GETGLOBAL R12 23 ; K23='select'
+pc 201 off 0x002035 raw 03800340  MOVE      R13 7 0
+pc 202 off 0x002039 raw 000003A5  VARARG    R14 0 0
+pc 203 off 0x00203D raw 0000031C  CALL      R12 0 0
+pc 204 off 0x002041 raw 000082DC  CALL      R11 0 2
+pc 205 off 0x002045 raw 05C70017  EQ        R0 R11 K28('string') ; skip next when comparison != False
+pc 206 off 0x002049 raw 80030016  JMP       R0 +13 ; -> pc 220
+pc 207 off 0x00204D raw 05420017  EQ        R0 R10 K8(1.0) ; skip next when comparison != False
+pc 208 off 0x002051 raw 80004016  JMP       R0 +2 ; -> pc 211
+pc 209 off 0x002055 raw 0542028C  ADD       R10 R10 K8(1.0)
+pc 210 off 0x002059 raw 80020016  JMP       R0 +9 ; -> pc 220
+pc 211 off 0x00205D raw 05424017  EQ        R0 R10 K9(2.0) ; skip next when comparison != False
+pc 212 off 0x002061 raw 80004016  JMP       R0 +2 ; -> pc 215
+pc 213 off 0x002065 raw 0542028C  ADD       R10 R10 K8(1.0)
+pc 214 off 0x002069 raw 80010016  JMP       R0 +5 ; -> pc 220
+pc 215 off 0x00206D raw 05428017  EQ        R0 R10 K10(3.0) ; skip next when comparison != False
+pc 216 off 0x002071 raw 80004016  JMP       R0 +2 ; -> pc 219
+pc 217 off 0x002075 raw 0542028C  ADD       R10 R10 K8(1.0)
+pc 218 off 0x002079 raw 80000016  JMP       R0 +1 ; -> pc 220
+pc 219 off 0x00207D raw 0542028C  ADD       R10 R10 K8(1.0)
+pc 220 off 0x002081 raw 03C201CC  ADD       R7 R7 K8(1.0)
+pc 221 off 0x002085 raw 7FED4016  JMP       R0 -74 ; -> pc 148
+pc 222 off 0x002089 raw 03C20017  EQ        R0 R7 K8(1.0) ; skip next when comparison != False
+pc 223 off 0x00208D raw 7FFFC016  JMP       R0 +0 ; -> pc 224
+pc 224 off 0x002091 raw 04800203  LOADNIL   R8 9 0
+pc 225 off 0x002095 raw 00C20017  EQ        R0 R1 K8(1.0) ; skip next when comparison != False
+pc 226 off 0x002099 raw 8002C016  JMP       R0 +12 ; -> pc 239
+pc 227 off 0x00209D raw 01C20017  EQ        R0 R3 K8(1.0) ; skip next when comparison != False
+pc 228 off 0x0020A1 raw 8000C016  JMP       R0 +4 ; -> pc 233
+pc 229 off 0x0020A5 raw 00010285  GETGLOBAL R10 4 ; K4='desktopWidget'
+pc 230 off 0x0020A9 raw 0547428B  SELF      R10 R10 K29('showCutSceneSkip')
+pc 231 off 0x0020AD raw 00000300  MOVE      R12 0 0
+pc 232 off 0x0020B1 raw 0180429C  CALL      R10 3 1
+pc 233 off 0x0020B5 raw 0047828B  SELF      R10 R0 K30('_play')
+pc 234 off 0x0020B9 raw 00000325  VARARG    R12 0 0
+pc 235 off 0x0020BD raw 0000C29C  CALL      R10 0 3
+pc 236 off 0x0020C1 raw 05800240  MOVE      R9 11 0
+pc 237 off 0x0020C5 raw 05000200  MOVE      R8 10 0
+pc 238 off 0x0020C9 raw 80010016  JMP       R0 +5 ; -> pc 244
+pc 239 off 0x0020CD raw 0047C28B  SELF      R10 R0 K31('_replay')
+pc 240 off 0x0020D1 raw 00000325  VARARG    R12 0 0
+pc 241 off 0x0020D5 raw 0000C29C  CALL      R10 0 3
+pc 242 off 0x0020D9 raw 05800240  MOVE      R9 11 0
+pc 243 off 0x0020DD raw 05000200  MOVE      R8 10 0
+pc 244 off 0x0020E1 raw 00010285  GETGLOBAL R10 4 ; K4='desktopWidget'
+pc 245 off 0x0020E5 raw 0541428B  SELF      R10 R10 K5('getStaticWidget')
+pc 246 off 0x0020E9 raw 00018301  LOADK     R12 6 ; K6=14.0
+pc 247 off 0x0020ED raw 0180829C  CALL      R10 3 2
+pc 248 off 0x0020F1 raw 0541C28B  SELF      R10 R10 K7('display')
+pc 249 off 0x0020F5 raw 00000302  LOADBOOL  R12 0 0
+pc 250 off 0x0020F9 raw 0180429C  CALL      R10 3 1
+pc 251 off 0x0020FD raw 04464017  EQ        R0 R8 K25(true) ; skip next when comparison != False
+pc 252 off 0x002101 raw 80030016  JMP       R0 +13 ; -> pc 266
+pc 253 off 0x002105 raw 03440017  EQ        R0 R6 K16(false) ; skip next when comparison != False
+pc 254 off 0x002109 raw 80028016  JMP       R0 +11 ; -> pc 266
+pc 255 off 0x00210D raw 01C20017  EQ        R0 R3 K8(1.0) ; skip next when comparison != False
+pc 256 off 0x002111 raw 8000C016  JMP       R0 +4 ; -> pc 261
+pc 257 off 0x002115 raw 00010285  GETGLOBAL R10 4 ; K4='desktopWidget'
+pc 258 off 0x002119 raw 0548028B  SELF      R10 R10 K32('hideCutSceneSkip')
+pc 259 off 0x00211D raw 00000300  MOVE      R12 0 0
+pc 260 off 0x002121 raw 0180429C  CALL      R10 3 1
+pc 261 off 0x002125 raw 00010285  GETGLOBAL R10 4 ; K4='desktopWidget'
+pc 262 off 0x002129 raw 0548428B  SELF      R10 R10 K33('cancelDesktopWidgetMode')
+pc 263 off 0x00212D raw 01000300  MOVE      R12 2 0
+pc 264 off 0x002131 raw 0180429C  CALL      R10 3 1
+pc 265 off 0x002135 raw 80014016  JMP       R0 +6 ; -> pc 272
+pc 266 off 0x002139 raw 01C20017  EQ        R0 R3 K8(1.0) ; skip next when comparison != False
+pc 267 off 0x00213D raw 8000C016  JMP       R0 +4 ; -> pc 272
+pc 268 off 0x002141 raw 00010285  GETGLOBAL R10 4 ; K4='desktopWidget'
+pc 269 off 0x002145 raw 0548028B  SELF      R10 R10 K32('hideCutSceneSkip')
+pc 270 off 0x002149 raw 00000300  MOVE      R12 0 0
+pc 271 off 0x00214D raw 0180429C  CALL      R10 3 1
+pc 272 off 0x002151 raw 04C68057  EQ        R1 R9 K26(nil) ; skip next when comparison != True
+pc 273 off 0x002155 raw 80000016  JMP       R0 +1 ; -> pc 275
+pc 274 off 0x002159 raw 7FFFC016  JMP       R0 +0 ; -> pc 275
+pc 275 off 0x00215D raw 01450057  EQ        R1 R2 K20(64.0) ; skip next when comparison != True
+pc 276 off 0x002161 raw 8001C016  JMP       R0 +8 ; -> pc 285
+pc 277 off 0x002165 raw 04464017  EQ        R0 R8 K25(true) ; skip next when comparison != False
+pc 278 off 0x002169 raw 80014016  JMP       R0 +6 ; -> pc 285
+pc 279 off 0x00216D raw 00000285  GETGLOBAL R10 0 ; K0='worldMaster'
+pc 280 off 0x002171 raw 0540428B  SELF      R10 R10 K1('_getMyPlayer')
+pc 281 off 0x002175 raw 0100829C  CALL      R10 2 2
+pc 282 off 0x002179 raw 054882CB  SELF      R11 R10 K34('_waitForMapLoaded')
+pc 283 off 0x00217D raw 06800343  LOADNIL   R13 13 0
+pc 284 off 0x002181 raw 018042DC  CALL      R11 3 1
+pc 285 off 0x002185 raw 04000280  MOVE      R10 8 0
+pc 286 off 0x002189 raw 048002C0  MOVE      R11 9 0
+pc 287 off 0x00218D raw 0180029E  RETURN    R10 3 0
+pc 288 off 0x002191 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..015 -> B016, B017
+B016 pc 016..016 -> B020
+B017 pc 017..019 -> B054
+B020 pc 020..020 -> B021, B022
+B021 pc 021..021 -> B025
+B022 pc 022..024 -> B054
+B025 pc 025..025 -> B026, B027
+B026 pc 026..026 -> B030
+B027 pc 027..029 -> B054
+B030 pc 030..030 -> B031, B032
+B031 pc 031..031 -> B035
+B032 pc 032..034 -> B054
+B035 pc 035..035 -> B036, B037
+B036 pc 036..036 -> B040
+B037 pc 037..039 -> B054
+B040 pc 040..040 -> B041, B042
+B041 pc 041..041 -> B045
+B042 pc 042..044 -> B054
+B045 pc 045..045 -> B046, B047
+B046 pc 046..046 -> B050
+B047 pc 047..049 -> B054
+B050 pc 050..050 -> B051, B052
+B051 pc 051..051 -> B054
+B052 pc 052..053 -> B054
+B054 pc 054..054 -> B055, B056
+B055 pc 055..055 -> B058
+B056 pc 056..057 -> B085
+B058 pc 058..058 -> B059, B060
+B059 pc 059..059 -> B062
+B060 pc 060..061 -> B085
+B062 pc 062..062 -> B063, B064
+B063 pc 063..063 -> B066
+B064 pc 064..065 -> B085
+B066 pc 066..066 -> B067, B068
+B067 pc 067..067 -> B070
+B068 pc 068..069 -> B085
+B070 pc 070..070 -> B071, B072
+B071 pc 071..071 -> B074
+B072 pc 072..073 -> B085
+B074 pc 074..074 -> B075, B076
+B075 pc 075..075 -> B078
+B076 pc 076..077 -> B085
+B078 pc 078..078 -> B079, B080
+B079 pc 079..079 -> B082
+B080 pc 080..081 -> B085
+B082 pc 082..082 -> B083, B084
+B083 pc 083..083 -> B085
+B084 pc 084..084 -> B085
+B085 pc 085..085 -> B086, B087
+B086 pc 086..086 -> B088
+B087 pc 087..087 -> B088
+B088 pc 088..088 -> B089, B090
+B089 pc 089..089 -> B109
+B090 pc 090..090 -> B091, B092
+B091 pc 091..091 -> B109
+B092 pc 092..092 -> B093, B094
+B093 pc 093..093 -> B095
+B094 pc 094..094 -> B104
+B095 pc 095..095 -> B096, B097
+B096 pc 096..096 -> B098
+B097 pc 097..097 -> B104
+B098 pc 098..098 -> B099, B100
+B099 pc 099..099 -> B101
+B100 pc 100..100 -> B104
+B101 pc 101..101 -> B102, B103
+B102 pc 102..102 -> B104
+B103 pc 103..103 -> B104
+B104 pc 104..108 -> B109
+B109 pc 109..110 -> B111, B112
+B111 pc 111..111 -> B224
+B112 pc 112..112 -> B113
+B113 pc 113..113 -> B114, B115
+B114 pc 114..114 -> B141
+B115 pc 115..121 -> B122, B123
+B122 pc 122..122 -> B125
+B123 pc 123..124 -> B113
+B125 pc 125..129 -> B130, B131
+B130 pc 130..130 -> B133
+B131 pc 131..132 -> B113
+B133 pc 133..137 -> B138, B139
+B138 pc 138..138 -> B113
+B139 pc 139..140 -> B113
+B141 pc 141..141 -> B142, B143
+B142 pc 142..142 -> B144
+B143 pc 143..143 -> B145
+B144 pc 144..144 -> B145
+B145 pc 145..147 -> B148
+B148 pc 148..148 -> B149, B150
+B149 pc 149..149 -> B222
+B150 pc 150..154 -> B155, B156
+B155 pc 155..155 -> B158
+B156 pc 156..157 -> B148
+B158 pc 158..164 -> B165, B166
+B165 pc 165..165 -> B199
+B166 pc 166..166 -> B167, B168
+B167 pc 167..167 -> B170
+B168 pc 168..169 -> B220
+B170 pc 170..170 -> B171, B172
+B171 pc 171..171 -> B174
+B172 pc 172..173 -> B220
+B174 pc 174..174 -> B175, B176
+B175 pc 175..175 -> B178
+B176 pc 176..177 -> B220
+B178 pc 178..178 -> B179, B180
+B179 pc 179..179 -> B182
+B180 pc 180..181 -> B220
+B182 pc 182..182 -> B183, B184
+B183 pc 183..183 -> B186
+B184 pc 184..185 -> B220
+B186 pc 186..186 -> B187, B188
+B187 pc 187..187 -> B190
+B188 pc 188..189 -> B220
+B190 pc 190..190 -> B191, B192
+B191 pc 191..191 -> B194
+B192 pc 192..193 -> B220
+B194 pc 194..194 -> B195, B196
+B195 pc 195..195 -> B220
+B196 pc 196..197 -> B220
+B198 pc 198..198 -> B220
+B199 pc 199..205 -> B206, B207
+B206 pc 206..206 -> B220
+B207 pc 207..207 -> B208, B209
+B208 pc 208..208 -> B211
+B209 pc 209..210 -> B220
+B211 pc 211..211 -> B212, B213
+B212 pc 212..212 -> B215
+B213 pc 213..214 -> B220
+B215 pc 215..215 -> B216, B217
+B216 pc 216..216 -> B219
+B217 pc 217..218 -> B220
+B219 pc 219..219 -> B220
+B220 pc 220..221 -> B148
+B222 pc 222..222 -> B223, B224
+B223 pc 223..223 -> B224
+B224 pc 224..225 -> B226, B227
+B226 pc 226..226 -> B239
+B227 pc 227..227 -> B228, B229
+B228 pc 228..228 -> B233
+B229 pc 229..232 -> B233
+B233 pc 233..238 -> B244
+B239 pc 239..243 -> B244
+B244 pc 244..251 -> B252, B253
+B252 pc 252..252 -> B266
+B253 pc 253..253 -> B254, B255
+B254 pc 254..254 -> B266
+B255 pc 255..255 -> B256, B257
+B256 pc 256..256 -> B261
+B257 pc 257..260 -> B261
+B261 pc 261..265 -> B272
+B266 pc 266..266 -> B267, B268
+B267 pc 267..267 -> B272
+B268 pc 268..271 -> B272
+B272 pc 272..272 -> B273, B274
+B273 pc 273..273 -> B275
+B274 pc 274..274 -> B275
+B275 pc 275..275 -> B276, B277
+B276 pc 276..276 -> B285
+B277 pc 277..277 -> B278, B279
+B278 pc 278..278 -> B285
+B279 pc 279..284 -> B285
+B285 pc 285..287 -> exit
+B288 pc 288..288 -> exit

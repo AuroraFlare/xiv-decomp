@@ -1,0 +1,40 @@
+## processAskResult (root/proto2)
+source=nil lines=88..107 params=2 nups=0 vararg=0 stack=6 code=14 constants=6 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = 1.0
+K001 = 'getArgActor'
+K002 = nil
+K003 = '_skip'
+K004 = 'setArgActor'
+K005 = 'hide'
+
+### instructions
+pc 000 off 0x0002DC raw 00C00017  EQ        R0 R1 K0(1.0) ; skip next when comparison != False
+pc 001 off 0x0002E0 raw 80020016  JMP       R0 +9 ; -> pc 011
+pc 002 off 0x0002E4 raw 0040408B  SELF      R2 R0 K1('getArgActor')
+pc 003 off 0x0002E8 raw 0100809C  CALL      R2 2 2
+pc 004 off 0x0002EC raw 01408057  EQ        R1 R2 K2(nil) ; skip next when comparison != True
+pc 005 off 0x0002F0 raw 80010016  JMP       R0 +5 ; -> pc 011
+pc 006 off 0x0002F4 raw 0140C0CB  SELF      R3 R2 K3('_skip')
+pc 007 off 0x0002F8 raw 010040DC  CALL      R3 2 1
+pc 008 off 0x0002FC raw 004100CB  SELF      R3 R0 K4('setArgActor')
+pc 009 off 0x000300 raw 02800143  LOADNIL   R5 5 0
+pc 010 off 0x000304 raw 018040DC  CALL      R3 3 1
+pc 011 off 0x000308 raw 0041408B  SELF      R2 R0 K5('hide')
+pc 012 off 0x00030C raw 0100409C  CALL      R2 2 1
+pc 013 off 0x000310 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..000 -> B001, B002
+B001 pc 001..001 -> B011
+B002 pc 002..004 -> B005, B006
+B005 pc 005..005 -> B011
+B006 pc 006..010 -> B011
+B011 pc 011..013 -> exit

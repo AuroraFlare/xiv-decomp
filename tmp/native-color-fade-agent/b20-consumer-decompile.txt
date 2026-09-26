@@ -1,0 +1,111 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+
+===== 0x00585dd8 =====
+entry=00585dd8
+body=[[00585dd8, 00585e1c]]
+completed=true
+message=
+
+void FUN_00585dd8(void)
+
+{
+  int unaff_EBP;
+  
+  if (*(char *)(unaff_EBP + 0xb20) != '\0') {
+    func_0x004d7980(8,unaff_EBP + 0xaac,0x74);
+    *(byte *)(unaff_EBP + 0x26d) = *(byte *)(unaff_EBP + 0x26d) & 0xfb;
+    func_0x00585930(0,1);
+    *(byte *)(unaff_EBP + 0x26d) = *(byte *)(unaff_EBP + 0x26d) | 0x40;
+    *(undefined1 *)(unaff_EBP + 0xb20) = 0;
+  }
+  return;
+}
+
+
+-- listing --
+00585dd8  CMP byte ptr [EBP + 0xb20],0x0
+00585ddf  JZ 0x00585e17
+00585de1  PUSH 0x74
+00585de3  LEA EDX,[EBP + 0xaac]
+00585de9  PUSH EDX
+00585dea  PUSH 0x8
+00585dec  MOV ECX,EBP
+00585dee  CALL 0x004d7980
+00585df3  FLDZ
+00585df5  AND byte ptr [EBP + 0x26d],0xfb
+00585dfc  PUSH 0x1
+00585dfe  PUSH ECX
+00585dff  MOV ECX,EBP
+00585e01  FSTP float ptr [ESP]
+00585e04  CALL 0x00585930
+00585e09  OR byte ptr [EBP + 0x26d],0x40
+00585e10  MOV byte ptr [EBP + 0xb20],0x0
+00585e17  POP ESI
+00585e18  POP EBP
+00585e19  ADD ESP,0x74
+00585e1c  RET
+
+===== 0x00585dc2 =====
+entry=00585dc2
+body=[[00585dc2, 00585dd7]]
+completed=true
+message=
+
+void FUN_00585dc2(void)
+
+{
+  int unaff_EBP;
+  
+  *(undefined1 *)(unaff_EBP + 0xb20) = 1;
+  *(undefined4 *)(unaff_EBP + 0xb24) = 0;
+  return;
+}
+
+
+-- listing --
+00585dc2  MOV byte ptr [EBP + 0xb20],0x1
+00585dc9  MOV dword ptr [EBP + 0xb24],0x0
+00585dd3  POP EBP
+00585dd4  ADD ESP,0x74
+00585dd7  RET
+
+===== 0x00585d00 =====
+entry=00585d00
+body=[[00585d00, 00585d04]]
+completed=true
+message=
+
+void FUN_00585d00(void)
+
+{
+  char *in_EAX;
+  
+  *in_EAX = *in_EAX + (char)in_EAX;
+  return;
+}
+
+
+-- listing --
+00585d00  ADD byte ptr [EAX],AL
+00585d02  POP ESI
+00585d03  POP ECX
+00585d04  RET
+
+===== 0x00585c00 =====
+entry=00585c00
+body=[[00585c00, 00585c00]]
+completed=true
+message=
+
+/* WARNING: Control flow encountered bad instruction data */
+
+void FUN_00585c00(void)
+
+{
+                    /* WARNING: Bad instruction - Truncating control flow here */
+  halt_baddata();
+}
+
+
+-- listing --

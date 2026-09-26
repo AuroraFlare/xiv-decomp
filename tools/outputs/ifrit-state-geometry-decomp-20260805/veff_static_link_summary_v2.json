@@ -1,0 +1,103 @@
+{
+  "source_rows": 85,
+  "decoded_rows": 85,
+  "resolver": {
+    "ResolveStaticLink": "0x00BDBF10",
+    "GetControlModuleOfStaticLink": "0x00BDC520",
+    "plain_key_layout": {
+      "class": "bits 28..31 = 0",
+      "producer_instance": "bits 16..27",
+      "producer_output_slot": "bits 0..15",
+      "direction": "key-owning consumer input -> producer output"
+    },
+    "class_1": "control-module registry/provider/fallback link",
+    "class_2": "external/context 16-bit lookup with registry fallback",
+    "class_3": "invalid/unhandled error path"
+  },
+  "states": {
+    "4": {
+      "link_class_counts": {
+        "0": 41,
+        "1": 12
+      },
+      "unique_key_counts": {
+        "0x00010000": 1,
+        "0x00010001": 1,
+        "0x00010002": 1,
+        "0x00010003": 1,
+        "0x00010004": 1,
+        "0x00020000": 1,
+        "0x00020001": 1,
+        "0x00020002": 1,
+        "0x00020003": 1,
+        "0x00020004": 1,
+        "0x00030000": 1,
+        "0x00030001": 1,
+        "0x00030002": 1,
+        "0x00030003": 1,
+        "0x00030004": 1,
+        "0x00040000": 1,
+        "0x00040001": 1,
+        "0x00040002": 1,
+        "0x00040003": 1,
+        "0x00040004": 1,
+        "0x00050000": 1,
+        "0x00050001": 1,
+        "0x00050002": 1,
+        "0x00050003": 1,
+        "0x00050004": 1,
+        "0x00060000": 1,
+        "0x00060001": 1,
+        "0x00060002": 1,
+        "0x00060003": 1,
+        "0x00060004": 1,
+        "0x00070000": 1,
+        "0x00070001": 1,
+        "0x00070002": 1,
+        "0x00070003": 1,
+        "0x00070004": 1,
+        "0x00080000": 1,
+        "0x00080001": 1,
+        "0x00080002": 1,
+        "0x00080003": 1,
+        "0x00080004": 1,
+        "0x00090001": 1,
+        "0x10000000": 12
+      }
+    },
+    "5": {
+      "link_class_counts": {
+        "0": 18,
+        "1": 14
+      },
+      "unique_key_counts": {
+        "0x00010000": 1,
+        "0x00010001": 1,
+        "0x00010002": 1,
+        "0x00010003": 1,
+        "0x00010004": 1,
+        "0x00020000": 1,
+        "0x00020001": 1,
+        "0x00020002": 1,
+        "0x00020003": 1,
+        "0x00020004": 1,
+        "0x00030000": 1,
+        "0x00030001": 1,
+        "0x00030002": 1,
+        "0x00030003": 1,
+        "0x00030004": 1,
+        "0x00040001": 1,
+        "0x00040002": 1,
+        "0x00040003": 1,
+        "0x10000000": 12,
+        "0x100A0000": 2
+      }
+    }
+  },
+  "supersedes": [
+    "veff_secondary_tail_keys.csv:key_kind",
+    "veff_secondary_tail_keys.csv:direction",
+    "veff_link_key_summary.json:interpretation_guard"
+  ],
+  "scope_guard": "The owning serialized control record is the consumer. The dump's tail-array field has not yet been mapped to the resolver's ordinary versus self-local destination array, so class-1 rows retain both runtime behaviors instead of guessing one."
+}

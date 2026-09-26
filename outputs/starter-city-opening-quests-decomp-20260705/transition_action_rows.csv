@@ -1,0 +1,87 @@
+code,quest_id,quest_name,source_file,line,function,action,args,line_text
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,59,onStart,StartSequence,SEQ_000,quest:StartSequence(SEQ_000);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,143,onPush,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,173,onNotice,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,183,seq000_onTalk,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,235,seq000_onTalk,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,256,seq010_onTalk,ReplaceQuest,"quest, ""Man0l1""","player:ReplaceQuest(quest, ""Man0l1"");"
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,265,seq010_onTalk,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,301,doExitDoor,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,311,doExitDoor,AddDirector,director,player:AddDirectorWithoutContentGroup(director);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,312,doExitDoor,StartDirector,false,director:StartDirector(false);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,314,doExitDoor,SetLoginDirector,director,player:SetLoginDirector(director);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,316,doExitDoor,DoZoneChangeContent,"player, contentArea, -4.8, 16.35, 8.1, 0.2, 16","GetWorldManager():DoZoneChangeContent(player, contentArea, -4.8, 16.35, 8.1, 0.2, 16);"
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,318,doExitDoor,StartContentGroup,,director:StartContentGroup();
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,319,doExitDoor,StartSequence,SEQ_005,quest:StartSequence(SEQ_005);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,320,doExitDoor,KickEvent,"director, ""noticeEvent"", true","player:KickEvent(director, ""noticeEvent"", true);"
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,323,doExitDoor,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,29,onKillBNpc,StartSequence,"0, true","quest:StartSequence(0, true); -- silent, without journal update message."
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,30,onKillBNpc,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,37,onKillBNpc,ContentFinished,,player.CurrentArea:ContentFinished();
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,38,onKillBNpc,DoZoneChange,"player, 230, ""PrivateAreaMasterPast"", 1, 15, -826.868469, 6, 193.745865, -0.008368492","GetWorldManager():DoZoneChange(player, 230, ""PrivateAreaMasterPast"", 1, 15, -826.868469, 6, 193.745865, -0.008368492);"
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,39,onKillBNpc,StartSequence,10,quest:StartSequence(10); -- To display Journal update message after the event/warp handoff.
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,55,onEventStarted,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,58,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,62,onEventStarted,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,70,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,81,onEventStarted,EndEvent,,player:EndEvent();
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,85,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,96,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0l0,110001,Shapeless Melody,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,104,onEventStarted,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,66,onStart,StartSequence,SEQ_000,quest:StartSequence(SEQ_000);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,123,onPush,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,130,onPush,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,132,onPush,ReplaceQuest,"quest, ""Man0g1""","player:ReplaceQuest(quest, ""Man0g1"");"
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,137,onPush,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,143,onNotice,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,152,seq000_onTalk,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,171,seq000_onTalk,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,189,seq010_onTalk,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,223,doContentArea,AddDirector,director,player:AddDirectorWithoutContentGroup(director);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,224,doContentArea,StartDirector,false,director:StartDirector(false);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,226,doContentArea,SetLoginDirector,director,player:SetLoginDirector(director);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,228,doContentArea,DoZoneChangeContent,"player, contentArea, 362.4087, 4, -703.8168, 1.5419, 16","GetWorldManager():DoZoneChangeContent(player, contentArea, 362.4087, 4, -703.8168, 1.5419, 16);"
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,230,doContentArea,StartContentGroup,,director:StartContentGroup();
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,231,doContentArea,StartSequence,SEQ_005,quest:StartSequence(SEQ_005);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,232,doContentArea,KickEvent,"director, ""noticeEvent"", true","player:KickEvent(director, ""noticeEvent"", true);"
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,29,onKillBNpc,StartSequence,"0, true","quest:StartSequence(0, true); -- silent, without journal update message."
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,30,onKillBNpc,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,37,onKillBNpc,ContentFinished,,player.CurrentArea:ContentFinished();
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,38,onKillBNpc,DoZoneChange,"player, 155, ""PrivateAreaMasterPast"", 1, 15, 175.38, -1.21, -1156.51, -2.1","GetWorldManager():DoZoneChange(player, 155, ""PrivateAreaMasterPast"", 1, 15, 175.38, -1.21, -1156.51, -2.1);"
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,39,onKillBNpc,StartSequence,10,quest:StartSequence(10); -- To display Journal update message after the event/warp handoff.
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,55,onEventStarted,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,58,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,62,onEventStarted,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,70,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,81,onEventStarted,EndEvent,,player:EndEvent();
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,84,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,95,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0g0,110005,Sundered Skies,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,103,onEventStarted,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,100,onStart,StartSequence,SEQ_000,quest:StartSequence(SEQ_000);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,108,onNotice,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,184,onPush,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,196,onPush,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,212,onPush,ReplaceQuest,"quest, ""Man0u1""","player:ReplaceQuest(quest, ""Man0u1"")"
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,225,seq000_onTalk,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,267,seq000_onTalk,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,296,seq010_onTalk,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,333,doExitTrigger,AddDirector,director,player:AddDirectorWithoutContentGroup(director);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,334,doExitTrigger,StartDirector,false,director:StartDirector(false);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,336,doExitTrigger,SetLoginDirector,director,player:SetLoginDirector(director);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,338,doExitTrigger,DoZoneChangeContent,"player, contentArea, -17.7, 192, 37.7, 0.93, 16","GetWorldManager():DoZoneChangeContent(player, contentArea, -17.7, 192, 37.7, 0.93, 16);"
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,340,doExitTrigger,StartContentGroup,,director:StartContentGroup();
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,341,doExitTrigger,StartSequence,SEQ_005,quest:StartSequence(SEQ_005);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,342,doExitTrigger,KickEvent,"director, ""noticeEvent"", true","player:KickEvent(director, ""noticeEvent"", true);"
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,29,onKillBNpc,StartSequence,"0, true","quest:StartSequence(0, true); -- silent, without journal update message."
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,30,onKillBNpc,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,37,onKillBNpc,ContentFinished,,player.CurrentArea:ContentFinished();
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,38,onKillBNpc,DoZoneChange,"player, 175, ""PrivateAreaMasterPast"", 3, 15, -22.81, 196, 87.82, 2.98","GetWorldManager():DoZoneChange(player, 175, ""PrivateAreaMasterPast"", 3, 15, -22.81, 196, 87.82, 2.98);"
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,39,onKillBNpc,StartSequence,10,quest:StartSequence(10); -- To display Journal update message after the event/warp handoff.
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,55,onEventStarted,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,58,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,62,onEventStarted,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,70,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,81,onEventStarted,EndEvent,,player:EndEvent();
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,85,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,95,onEventStarted,kickEventContinue,"player, director, ""noticeEvent"", ""noticeEvent""","kickEventContinue(player, director, ""noticeEvent"", ""noticeEvent"");"
+man0u0,110009,Flowers for All,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,103,onEventStarted,EndEvent,,player:EndEvent();

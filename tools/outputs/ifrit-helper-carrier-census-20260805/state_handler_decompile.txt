@@ -1,0 +1,2018 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+
+===== 0x004DD01A =====
+entry=004dd01a
+body=[[004dd01a, 004dd020] [004dd3a9, 004dd3ce]]
+completed=true
+message=
+
+void FUN_004dd01a(void)
+
+{
+  code *in_EAX;
+  undefined4 *unaff_FS_OFFSET;
+  undefined4 in_stack_00000a08;
+  
+  (*in_EAX)();
+  *unaff_FS_OFFSET = in_stack_00000a08;
+  func_0x009d20f4();
+  return;
+}
+
+
+-- listing --
+004dd01a  CALL EAX
+004dd01c  JMP 0x004dd3a9
+004dd3a9  MOV ECX,dword ptr [ESP + 0xa08]
+004dd3b0  MOV dword ptr FS:[0x0],ECX
+004dd3b7  POP ECX
+004dd3b8  POP EDI
+004dd3b9  POP ESI
+004dd3ba  POP EBX
+004dd3bb  MOV ECX,dword ptr [ESP + 0x9f0]
+004dd3c2  XOR ECX,ESP
+004dd3c4  CALL 0x009d20f4
+004dd3c9  MOV ESP,EBP
+004dd3cb  POP EBP
+004dd3cc  RET 0x8
+
+===== 0x007A82F0 =====
+entry=007a82f0
+body=[[007a82f0, 007a8360] [007a8384, 007a893f]]
+completed=true
+message=
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_007a82f0(int *param_1,uint param_2)
+
+{
+  int *piVar1;
+  undefined1 uVar2;
+  uint uVar3;
+  int *piVar4;
+  undefined4 uVar5;
+  int iVar6;
+  byte bVar7;
+  undefined4 *unaff_EBX;
+  undefined *unaff_ESI;
+  int *unaff_FS_OFFSET;
+  int iStack_4cc;
+  undefined4 *puStack_4c8;
+  int iStack_4c4;
+  undefined4 uStack_4c0;
+  undefined4 *puStack_4bc;
+  int iStack_4b8;
+  undefined4 uStack_4b4;
+  undefined4 uStack_4b0;
+  undefined4 uStack_4ac;
+  undefined4 uStack_4a8;
+  undefined4 *puStack_4a4;
+  int *piStack_4a0;
+  int iStack_49c;
+  undefined1 auStack_498 [16];
+  uint uStack_488;
+  uint auStack_484 [3];
+  undefined1 uStack_478;
+  undefined4 uStack_470;
+  undefined4 uStack_46c;
+  undefined4 uStack_468;
+  undefined1 uStack_464;
+  undefined4 uStack_460;
+  undefined4 uStack_45c;
+  undefined4 uStack_458;
+  undefined1 uStack_454;
+  undefined1 auStack_450 [8];
+  undefined1 auStack_448 [16];
+  byte bStack_438;
+  undefined1 auStack_240 [16];
+  byte bStack_230;
+  undefined1 auStack_30 [4];
+  undefined1 auStack_2c [4];
+  undefined4 uStack_28;
+  uint uStack_1c;
+  int iStack_14;
+  undefined *puStack_10;
+  undefined4 uStack_c;
+  
+  uStack_c = 0xffffffff;
+  puStack_10 = &UNK_00ea90ac;
+  iStack_14 = *unaff_FS_OFFSET;
+  uStack_1c = _DAT_012ea8b0 ^ (uint)&iStack_4cc;
+  uVar3 = _DAT_012ea8b0 ^ (uint)&stack0xfffffb28;
+  *unaff_FS_OFFSET = (int)&iStack_14;
+  if (param_1[0x13] != param_2) {
+    auStack_484[0] = param_1[0x13] ^ param_2;
+    param_1[0x13] = param_2;
+    bVar7 = 0;
+    uVar2 = FUN_0065be50(uVar3);
+    switch(uVar2) {
+    case 0:
+      bVar7 = 0;
+      break;
+    case 1:
+      bVar7 = 1;
+      break;
+    case 2:
+      bVar7 = 3;
+      break;
+    case 3:
+      bVar7 = 7;
+      break;
+    case 4:
+      bVar7 = 0xf;
+      break;
+    case 5:
+      bVar7 = 0x1f;
+      break;
+    case 6:
+      bVar7 = 0x3f;
+      break;
+    case 7:
+      bVar7 = 0x7f;
+      break;
+    case 8:
+      bVar7 = 0xff;
+    }
+    uStack_4c0 = CONCAT13(*(byte *)(param_1 + 0x13) & bVar7,
+                          CONCAT12(~bVar7 & *(byte *)(param_1 + 0x13),(undefined2)uStack_4c0));
+    uVar2 = FUN_0065c550();
+    uStack_4b4 = CONCAT13(uVar2,(undefined3)uStack_4b4);
+    piVar4 = (int *)(**(code **)(**(int **)(*param_1 + 0x114) + 8))();
+    if ((piVar4 != (int *)0x0) && (piVar1 = *(int **)(*param_1 + 0x12f0), piVar1 != (int *)0x0)) {
+      uStack_488 = uStack_4b4 >> 0x18;
+      piStack_4a0 = param_1 + 9;
+      iStack_49c = 0;
+      do {
+        uVar3 = 1 << ((byte)iStack_49c & 0x1f);
+        if ((auStack_484[0] & uStack_488 & uVar3) != 0) {
+          if ((uStack_4c0._2_1_ & (byte)uVar3) == 0) {
+            if (*piStack_4a0 != 0) {
+              (**(code **)(*piVar1 + 0x10))(*piStack_4a0);
+              *puStack_4a4 = 0;
+              func_0x009d4f83(auStack_30,0x10,&UNK_00fe75cc,piStack_4a0);
+              func_0x0062e2d0(&iStack_49c,auStack_30,0x10);
+              unaff_ESI = &UNK_00736362;
+              puStack_4c8 = (undefined4 *)
+                            (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb2c,&uStack_4a8);
+              if (puStack_4c8 != (undefined4 *)0x0) {
+                func_0x0080c830();
+                uStack_c = 1;
+                bStack_438 = bStack_438 | 0xc;
+                uStack_468 = *(undefined4 *)(*param_1 + 0xdc);
+                uStack_470 = _DAT_012c856c;
+                uStack_46c = 0;
+                uStack_464 = 0xff;
+                func_0x0080a7b0(&uStack_470);
+                uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+                uStack_4b4 = _DAT_012c8570;
+                uStack_4b0 = 0;
+                uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+                func_0x0080d8a0(&uStack_4b4);
+                uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+                iStack_4c4 = *piVar1 + 8;
+                uVar5 = (**(code **)(*piVar4 + 0x6c))(unaff_EBX,unaff_EBX,auStack_448);
+                (*(code *)*puStack_4c8)(iStack_4c4,uVar5);
+                goto LAB_007a8699;
+              }
+            }
+          }
+          else {
+            func_0x009d4f83(auStack_2c,0x10,&UNK_00fe75bc,iStack_49c);
+            func_0x0062e2d0(auStack_450,auStack_2c,0x10);
+            puStack_4c8 = (undefined4 *)&UNK_00736362;
+            iStack_4b8 = (**(code **)(*(int *)*param_1 + 0x10))(&puStack_4c8,&uStack_45c);
+            if (iStack_4b8 != 0) {
+              func_0x0080c830();
+              uStack_c = 0;
+              bStack_230 = bStack_230 | 0xc;
+              uStack_458 = *(undefined4 *)(*param_1 + 0xdc);
+              uStack_45c = 0;
+              uStack_460 = _DAT_012c856c;
+              uStack_454 = 0xff;
+              func_0x0080a7b0(&uStack_460);
+              auStack_484[2] = *(undefined4 *)(*param_1 + 0xdc);
+              auStack_484[0] = _DAT_012c8570;
+              auStack_484[1] = 0;
+              uStack_478 = 0xff;
+              func_0x0080d8a0(auStack_484);
+              unaff_EBX = *(undefined4 **)(*param_1 + 0xdc);
+              iStack_4cc = *piVar1 + 8;
+              uVar5 = (**(code **)(*piVar4 + 0x6c))(uStack_4c0,uStack_4c0,auStack_240);
+              uVar5 = (*(code *)*unaff_EBX)(unaff_ESI,uVar5);
+              *puStack_4bc = uVar5;
+LAB_007a8699:
+              uStack_28 = 0xffffffff;
+              func_0x0080c8e0();
+            }
+          }
+        }
+        piStack_4a0 = piStack_4a0 + 1;
+        iStack_49c = iStack_49c + 1;
+      } while (iStack_49c < 8);
+      if (uStack_4c0._3_1_ == '\0') {
+        if (param_1[0x11] != 0) {
+          (**(code **)(*piVar1 + 0x10))(param_1[0x11]);
+          param_1[0x11] = 0;
+        }
+        func_0x0062e2d0(auStack_498,&UNK_00fe75dc,0x10);
+        puStack_4c8 = (undefined4 *)
+                      (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb30,&puStack_4a4);
+        if (puStack_4c8 == (undefined4 *)0x0) goto LAB_007a891a;
+        func_0x0080c830();
+        uStack_c = 2;
+        bStack_438 = bStack_438 | 0xc;
+        uStack_4a8 = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b0 = _DAT_012c856c;
+        uStack_4ac = 0;
+        puStack_4a4 = (undefined4 *)CONCAT31(puStack_4a4._1_3_,0xff);
+        func_0x0080a7b0(&uStack_4b0);
+        uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b4 = _DAT_012c8570;
+        uStack_4b0 = 0;
+        uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+        func_0x0080d8a0(&uStack_4b4);
+        uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+        iStack_4c4 = *piVar1 + 8;
+        uVar5 = (**(code **)(*piVar4 + 0x6c))(&UNK_00736362,&UNK_00736362,auStack_448);
+      }
+      else {
+        func_0x009d4f83(auStack_2c,0x10,&UNK_00fe75e8,uStack_4c0._3_1_);
+        func_0x0062e2d0(auStack_498,auStack_2c,0x10);
+        puStack_4c8 = (undefined4 *)
+                      (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb30,&puStack_4a4);
+        if (puStack_4c8 == (undefined4 *)0x0) goto LAB_007a891a;
+        if (param_1[0x11] != 0) {
+          (**(code **)(*piVar1 + 0x10))(param_1[0x11]);
+          param_1[0x11] = 0;
+        }
+        func_0x0080c830();
+        uStack_c = 3;
+        bStack_438 = bStack_438 | 0xc;
+        uStack_4a8 = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b0 = _DAT_012c856c;
+        uStack_4ac = 0;
+        puStack_4a4 = (undefined4 *)CONCAT31(puStack_4a4._1_3_,0xff);
+        func_0x0080a7b0(&uStack_4b0);
+        uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b4 = _DAT_012c8570;
+        uStack_4b0 = 0;
+        uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+        func_0x0080d8a0(&uStack_4b4);
+        uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+        iStack_4c4 = *piVar1 + 8;
+        uVar5 = (**(code **)(*piVar4 + 0x6c))(&UNK_00736362,&UNK_00736362,auStack_448);
+      }
+      iVar6 = (*(code *)*puStack_4c8)(iStack_4c4,uVar5);
+      param_1[0x11] = iVar6;
+      uStack_28 = 0xffffffff;
+      func_0x0080c8e0();
+    }
+  }
+LAB_007a891a:
+  *unaff_FS_OFFSET = iStack_14;
+  func_0x009d20f4();
+  return;
+}
+
+
+-- listing --
+007a82f0  PUSH EBP
+007a82f1  MOV EBP,ESP
+007a82f3  AND ESP,0xfffffff8
+007a82f6  PUSH -0x1
+007a82f8  PUSH 0xea90ac
+007a82fd  MOV EAX,FS:[0x0]
+007a8303  PUSH EAX
+007a8304  SUB ESP,0x4b8
+007a830a  MOV EAX,[0x012ea8b0]
+007a830f  XOR EAX,ESP
+007a8311  MOV dword ptr [ESP + 0x4b0],EAX
+007a8318  PUSH EBX
+007a8319  PUSH ESI
+007a831a  PUSH EDI
+007a831b  MOV EAX,[0x012ea8b0]
+007a8320  XOR EAX,ESP
+007a8322  PUSH EAX
+007a8323  LEA EAX,[ESP + 0x4c8]
+007a832a  MOV FS:[0x0],EAX
+007a8330  MOV ESI,ECX
+007a8332  MOV EAX,dword ptr [ESI + 0x4c]
+007a8335  MOV ECX,dword ptr [EBP + 0x8]
+007a8338  CMP EAX,ECX
+007a833a  JZ 0x007a891a
+007a8340  XOR EAX,ECX
+007a8342  MOV dword ptr [ESI + 0x4c],ECX
+007a8345  MOV ECX,dword ptr [ESI]
+007a8347  MOV dword ptr [ESP + 0x58],EAX
+007a834b  XOR BL,BL
+007a834d  CALL 0x0065be50
+007a8352  MOVZX EAX,AL
+007a8355  CMP EAX,0x8
+007a8358  JA 0x007a8384
+007a835a  JMP dword ptr [EAX*0x4 + 0x7a8940]
+007a8384  MOV AL,byte ptr [ESI + 0x4c]
+007a8387  MOV CL,BL
+007a8389  NOT CL
+007a838b  AND CL,AL
+007a838d  MOV byte ptr [ESP + 0x1e],CL
+007a8391  MOV ECX,dword ptr [ESI]
+007a8393  AND AL,BL
+007a8395  MOV byte ptr [ESP + 0x1f],AL
+007a8399  CALL 0x0065c550
+007a839e  MOV byte ptr [ESP + 0x2b],AL
+007a83a2  MOV EAX,dword ptr [ESI]
+007a83a4  MOV ECX,dword ptr [EAX + 0x114]
+007a83aa  MOV EDX,dword ptr [ECX]
+007a83ac  MOV EAX,dword ptr [EDX + 0x8]
+007a83af  CALL EAX
+007a83b1  MOV EBX,EAX
+007a83b3  TEST EBX,EBX
+007a83b5  JZ 0x007a891a
+007a83bb  MOV ECX,dword ptr [ESI]
+007a83bd  MOV EDI,dword ptr [ECX + 0x12f0]
+007a83c3  TEST EDI,EDI
+007a83c5  JZ 0x007a891a
+007a83cb  MOVZX EDX,byte ptr [ESP + 0x2b]
+007a83d0  XOR ECX,ECX
+007a83d2  LEA EAX,[ESI + 0x24]
+007a83d5  MOV dword ptr [ESP + 0x40],ECX
+007a83d9  MOV dword ptr [ESP + 0x54],EDX
+007a83dd  MOV dword ptr [ESP + 0x3c],EAX
+007a83e1  MOV EDX,dword ptr [ESP + 0x58]
+007a83e5  MOV EAX,0x1
+007a83ea  SHL EAX,CL
+007a83ec  MOV ECX,dword ptr [ESP + 0x54]
+007a83f0  AND ECX,EAX
+007a83f2  TEST EDX,ECX
+007a83f4  JZ 0x007a869e
+007a83fa  TEST byte ptr [ESP + 0x1e],AL
+007a83fe  JZ 0x007a8549
+007a8404  MOV EAX,dword ptr [ESP + 0x40]
+007a8408  PUSH EAX
+007a8409  PUSH 0xfe75bc
+007a840e  LEA ECX,[ESP + 0x4b8]
+007a8415  PUSH 0x10
+007a8417  PUSH ECX
+007a8418  CALL 0x009d4f83
+007a841d  ADD ESP,0x10
+007a8420  PUSH 0x10
+007a8422  LEA EDX,[ESP + 0x4b4]
+007a8429  LEA EAX,[ESP + 0x90]
+007a8430  PUSH EDX
+007a8431  PUSH EAX
+007a8432  MOV ECX,EAX
+007a8434  CALL 0x0062e2d0
+007a8439  MOV ECX,dword ptr [ESI]
+007a843b  LEA EAX,[ESP + 0x8c]
+007a8442  PUSH EAX
+007a8443  MOV dword ptr [ESP + 0x24],0x736362
+007a844b  MOV EDX,dword ptr [ECX]
+007a844d  MOV EDX,dword ptr [EDX + 0x10]
+007a8450  LEA EAX,[ESP + 0x24]
+007a8454  PUSH EAX
+007a8455  CALL EDX
+007a8457  TEST EAX,EAX
+007a8459  MOV dword ptr [ESP + 0x24],EAX
+007a845d  JZ 0x007a869e
+007a8463  LEA ECX,[ESP + 0x2a4]
+007a846a  CALL 0x0080c830
+007a846f  XOR ECX,ECX
+007a8471  MOV dword ptr [ESP + 0x4d0],ECX
+007a8478  MOV EAX,dword ptr [ESI]
+007a847a  OR byte ptr [ESP + 0x2ac],0xc
+007a8482  MOV EAX,dword ptr [EAX + 0xdc]
+007a8488  MOV EDX,dword ptr [0x012c856c]
+007a848e  MOV dword ptr [ESP + 0x84],EAX
+007a8495  LEA EAX,[ESP + 0x7c]
+007a8499  MOV dword ptr [ESP + 0x80],ECX
+007a84a0  PUSH EAX
+007a84a1  LEA ECX,[ESP + 0x2a8]
+007a84a8  MOV dword ptr [ESP + 0x80],EDX
+007a84af  MOV byte ptr [ESP + 0x8c],0xff
+007a84b7  CALL 0x0080a7b0
+007a84bc  MOV ECX,dword ptr [ESI]
+007a84be  MOV EAX,dword ptr [ECX + 0xdc]
+007a84c4  MOV EDX,dword ptr [0x012c8570]
+007a84ca  MOV dword ptr [ESP + 0x64],EAX
+007a84ce  LEA EAX,[ESP + 0x5c]
+007a84d2  PUSH EAX
+007a84d3  LEA ECX,[ESP + 0x2a8]
+007a84da  MOV dword ptr [ESP + 0x60],EDX
+007a84de  MOV dword ptr [ESP + 0x64],0x0
+007a84e6  MOV byte ptr [ESP + 0x6c],0xff
+007a84eb  CALL 0x0080d8a0
+007a84f0  MOV EAX,dword ptr [EDI]
+007a84f2  MOV ECX,dword ptr [ESI]
+007a84f4  MOV EDX,dword ptr [ECX + 0xdc]
+007a84fa  ADD EAX,0x8
+007a84fd  MOV dword ptr [ESP + 0x18],EAX
+007a8501  LEA EAX,[ESP + 0x2a4]
+007a8508  PUSH EAX
+007a8509  MOV EAX,dword ptr [ESP + 0x28]
+007a850d  PUSH EAX
+007a850e  MOV dword ptr [ESP + 0x1c],EDX
+007a8512  MOV EDX,dword ptr [EBX]
+007a8514  PUSH EAX
+007a8515  MOV EAX,dword ptr [EDX + 0x6c]
+007a8518  MOV ECX,EBX
+007a851a  CALL EAX
+007a851c  MOV ECX,dword ptr [ESP + 0x1c]
+007a8520  MOV EDX,dword ptr [ESP + 0x20]
+007a8524  PUSH EAX
+007a8525  MOV EAX,dword ptr [EDX]
+007a8527  PUSH ECX
+007a8528  MOV ECX,EDI
+007a852a  CALL EAX
+007a852c  MOV ECX,dword ptr [ESP + 0x3c]
+007a8530  MOV dword ptr [ECX],EAX
+007a8532  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a853d  LEA ECX,[ESP + 0x2a4]
+007a8544  JMP 0x007a8699
+007a8549  MOV EDX,dword ptr [ESP + 0x3c]
+007a854d  MOV EAX,dword ptr [EDX]
+007a854f  TEST EAX,EAX
+007a8551  JZ 0x007a869e
+007a8557  MOV EDX,dword ptr [EDI]
+007a8559  PUSH EAX
+007a855a  MOV EAX,dword ptr [EDX + 0x10]
+007a855d  MOV ECX,EDI
+007a855f  CALL EAX
+007a8561  MOV EDX,dword ptr [ESP + 0x40]
+007a8565  MOV ECX,dword ptr [ESP + 0x3c]
+007a8569  PUSH EDX
+007a856a  PUSH 0xfe75cc
+007a856f  LEA EAX,[ESP + 0x4b8]
+007a8576  PUSH 0x10
+007a8578  PUSH EAX
+007a8579  MOV dword ptr [ECX],0x0
+007a857f  CALL 0x009d4f83
+007a8584  ADD ESP,0x10
+007a8587  PUSH 0x10
+007a8589  LEA ECX,[ESP + 0x4b4]
+007a8590  PUSH ECX
+007a8591  LEA EDX,[ESP + 0x4c]
+007a8595  PUSH EDX
+007a8596  MOV ECX,EDX
+007a8598  CALL 0x0062e2d0
+007a859d  MOV ECX,dword ptr [ESI]
+007a859f  LEA EDX,[ESP + 0x44]
+007a85a3  PUSH EDX
+007a85a4  MOV dword ptr [ESP + 0x1c],0x736362
+007a85ac  MOV EAX,dword ptr [ECX]
+007a85ae  MOV EAX,dword ptr [EAX + 0x10]
+007a85b1  LEA EDX,[ESP + 0x1c]
+007a85b5  PUSH EDX
+007a85b6  CALL EAX
+007a85b8  TEST EAX,EAX
+007a85ba  MOV dword ptr [ESP + 0x14],EAX
+007a85be  JZ 0x007a869e
+007a85c4  LEA ECX,[ESP + 0x9c]
+007a85cb  CALL 0x0080c830
+007a85d0  MOV dword ptr [ESP + 0x4d0],0x1
+007a85db  MOV ECX,dword ptr [ESI]
+007a85dd  OR byte ptr [ESP + 0xa4],0xc
+007a85e5  MOV EAX,dword ptr [ECX + 0xdc]
+007a85eb  MOV EDX,dword ptr [0x012c856c]
+007a85f1  MOV dword ptr [ESP + 0x74],EAX
+007a85f5  LEA EAX,[ESP + 0x6c]
+007a85f9  PUSH EAX
+007a85fa  LEA ECX,[ESP + 0xa0]
+007a8601  MOV dword ptr [ESP + 0x70],EDX
+007a8605  MOV dword ptr [ESP + 0x74],0x0
+007a860d  MOV byte ptr [ESP + 0x7c],0xff
+007a8612  CALL 0x0080a7b0
+007a8617  MOV ECX,dword ptr [ESI]
+007a8619  MOV EAX,dword ptr [ECX + 0xdc]
+007a861f  MOV EDX,dword ptr [0x012c8570]
+007a8625  MOV dword ptr [ESP + 0x34],EAX
+007a8629  LEA EAX,[ESP + 0x2c]
+007a862d  PUSH EAX
+007a862e  LEA ECX,[ESP + 0xa0]
+007a8635  MOV dword ptr [ESP + 0x30],EDX
+007a8639  MOV dword ptr [ESP + 0x34],0x0
+007a8641  MOV byte ptr [ESP + 0x3c],0xff
+007a8646  CALL 0x0080d8a0
+007a864b  MOV EAX,dword ptr [EDI]
+007a864d  MOV ECX,dword ptr [ESI]
+007a864f  MOV EDX,dword ptr [ECX + 0xdc]
+007a8655  ADD EAX,0x8
+007a8658  MOV dword ptr [ESP + 0x20],EAX
+007a865c  LEA EAX,[ESP + 0x9c]
+007a8663  PUSH EAX
+007a8664  MOV EAX,dword ptr [ESP + 0x18]
+007a8668  PUSH EAX
+007a8669  MOV dword ptr [ESP + 0x2c],EDX
+007a866d  MOV EDX,dword ptr [EBX]
+007a866f  PUSH EAX
+007a8670  MOV EAX,dword ptr [EDX + 0x6c]
+007a8673  MOV ECX,EBX
+007a8675  CALL EAX
+007a8677  MOV ECX,dword ptr [ESP + 0x2c]
+007a867b  MOV EDX,dword ptr [ESP + 0x28]
+007a867f  PUSH EAX
+007a8680  MOV EAX,dword ptr [EDX]
+007a8682  PUSH ECX
+007a8683  MOV ECX,EDI
+007a8685  CALL EAX
+007a8687  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a8692  LEA ECX,[ESP + 0x9c]
+007a8699  CALL 0x0080c8e0
+007a869e  MOV ECX,dword ptr [ESP + 0x40]
+007a86a2  ADD dword ptr [ESP + 0x3c],0x4
+007a86a7  ADD ECX,0x1
+007a86aa  CMP ECX,0x8
+007a86ad  MOV dword ptr [ESP + 0x40],ECX
+007a86b1  JL 0x007a83e1
+007a86b7  MOV AL,byte ptr [ESP + 0x1f]
+007a86bb  TEST AL,AL
+007a86bd  JNZ 0x007a87cf
+007a86c3  MOV EAX,dword ptr [ESI + 0x44]
+007a86c6  TEST EAX,EAX
+007a86c8  JZ 0x007a86db
+007a86ca  MOV EDX,dword ptr [EDI]
+007a86cc  PUSH EAX
+007a86cd  MOV EAX,dword ptr [EDX + 0x10]
+007a86d0  MOV ECX,EDI
+007a86d2  CALL EAX
+007a86d4  MOV dword ptr [ESI + 0x44],0x0
+007a86db  PUSH 0x10
+007a86dd  PUSH 0xfe75dc
+007a86e2  LEA ECX,[ESP + 0x4c]
+007a86e6  PUSH ECX
+007a86e7  CALL 0x0062e2d0
+007a86ec  MOV ECX,dword ptr [ESI]
+007a86ee  LEA EAX,[ESP + 0x44]
+007a86f2  PUSH EAX
+007a86f3  MOV dword ptr [ESP + 0x1c],0x736362
+007a86fb  MOV EDX,dword ptr [ECX]
+007a86fd  MOV EDX,dword ptr [EDX + 0x10]
+007a8700  LEA EAX,[ESP + 0x1c]
+007a8704  PUSH EAX
+007a8705  CALL EDX
+007a8707  TEST EAX,EAX
+007a8709  MOV dword ptr [ESP + 0x14],EAX
+007a870d  JZ 0x007a891a
+007a8713  LEA ECX,[ESP + 0x9c]
+007a871a  CALL 0x0080c830
+007a871f  MOV dword ptr [ESP + 0x4d0],0x2
+007a872a  MOV EAX,dword ptr [ESI]
+007a872c  MOV ECX,dword ptr [0x012c856c]
+007a8732  OR byte ptr [ESP + 0xa4],0xc
+007a873a  MOV EAX,dword ptr [EAX + 0xdc]
+007a8740  LEA EDX,[ESP + 0x2c]
+007a8744  MOV dword ptr [ESP + 0x2c],ECX
+007a8748  PUSH EDX
+007a8749  LEA ECX,[ESP + 0xa0]
+007a8750  MOV dword ptr [ESP + 0x34],0x0
+007a8758  MOV dword ptr [ESP + 0x38],EAX
+007a875c  MOV byte ptr [ESP + 0x3c],0xff
+007a8761  CALL 0x0080a7b0
+007a8766  MOV EAX,dword ptr [ESI]
+007a8768  MOV EAX,dword ptr [EAX + 0xdc]
+007a876e  MOV ECX,dword ptr [0x012c8570]
+007a8774  LEA EDX,[ESP + 0x2c]
+007a8778  MOV dword ptr [ESP + 0x2c],ECX
+007a877c  PUSH EDX
+007a877d  LEA ECX,[ESP + 0xa0]
+007a8784  MOV dword ptr [ESP + 0x34],0x0
+007a878c  MOV dword ptr [ESP + 0x38],EAX
+007a8790  MOV byte ptr [ESP + 0x3c],0xff
+007a8795  CALL 0x0080d8a0
+007a879a  MOV EAX,dword ptr [ESI]
+007a879c  MOV ECX,dword ptr [EAX + 0xdc]
+007a87a2  MOV EAX,dword ptr [EDI]
+007a87a4  ADD EAX,0x8
+007a87a7  MOV dword ptr [ESP + 0x20],EAX
+007a87ab  MOV EAX,dword ptr [ESP + 0x14]
+007a87af  LEA EDX,[ESP + 0x9c]
+007a87b6  PUSH EDX
+007a87b7  MOV EDX,dword ptr [EBX]
+007a87b9  PUSH EAX
+007a87ba  MOV dword ptr [ESP + 0x2c],ECX
+007a87be  PUSH EAX
+007a87bf  MOV EAX,dword ptr [EDX + 0x6c]
+007a87c2  MOV ECX,EBX
+007a87c4  CALL EAX
+007a87c6  MOV EDX,dword ptr [ESP + 0x28]
+007a87ca  JMP 0x007a88f4
+007a87cf  MOVZX ECX,AL
+007a87d2  PUSH ECX
+007a87d3  PUSH 0xfe75e8
+007a87d8  LEA EDX,[ESP + 0x4b8]
+007a87df  PUSH 0x10
+007a87e1  PUSH EDX
+007a87e2  CALL 0x009d4f83
+007a87e7  ADD ESP,0x10
+007a87ea  PUSH 0x10
+007a87ec  LEA EAX,[ESP + 0x4b4]
+007a87f3  PUSH EAX
+007a87f4  LEA ECX,[ESP + 0x4c]
+007a87f8  PUSH ECX
+007a87f9  CALL 0x0062e2d0
+007a87fe  MOV ECX,dword ptr [ESI]
+007a8800  LEA EAX,[ESP + 0x44]
+007a8804  PUSH EAX
+007a8805  MOV dword ptr [ESP + 0x1c],0x736362
+007a880d  MOV EDX,dword ptr [ECX]
+007a880f  MOV EDX,dword ptr [EDX + 0x10]
+007a8812  LEA EAX,[ESP + 0x1c]
+007a8816  PUSH EAX
+007a8817  CALL EDX
+007a8819  TEST EAX,EAX
+007a881b  MOV dword ptr [ESP + 0x14],EAX
+007a881f  JZ 0x007a891a
+007a8825  MOV EAX,dword ptr [ESI + 0x44]
+007a8828  TEST EAX,EAX
+007a882a  JZ 0x007a883d
+007a882c  MOV EDX,dword ptr [EDI]
+007a882e  PUSH EAX
+007a882f  MOV EAX,dword ptr [EDX + 0x10]
+007a8832  MOV ECX,EDI
+007a8834  CALL EAX
+007a8836  MOV dword ptr [ESI + 0x44],0x0
+007a883d  LEA ECX,[ESP + 0x9c]
+007a8844  CALL 0x0080c830
+007a8849  MOV dword ptr [ESP + 0x4d0],0x3
+007a8854  MOV ECX,dword ptr [ESI]
+007a8856  OR byte ptr [ESP + 0xa4],0xc
+007a885e  MOV EAX,dword ptr [ECX + 0xdc]
+007a8864  MOV EDX,dword ptr [0x012c856c]
+007a886a  MOV dword ptr [ESP + 0x34],EAX
+007a886e  LEA EAX,[ESP + 0x2c]
+007a8872  PUSH EAX
+007a8873  LEA ECX,[ESP + 0xa0]
+007a887a  MOV dword ptr [ESP + 0x30],EDX
+007a887e  MOV dword ptr [ESP + 0x34],0x0
+007a8886  MOV byte ptr [ESP + 0x3c],0xff
+007a888b  CALL 0x0080a7b0
+007a8890  MOV ECX,dword ptr [ESI]
+007a8892  MOV EAX,dword ptr [ECX + 0xdc]
+007a8898  MOV EDX,dword ptr [0x012c8570]
+007a889e  MOV dword ptr [ESP + 0x34],EAX
+007a88a2  LEA EAX,[ESP + 0x2c]
+007a88a6  PUSH EAX
+007a88a7  LEA ECX,[ESP + 0xa0]
+007a88ae  MOV dword ptr [ESP + 0x30],EDX
+007a88b2  MOV dword ptr [ESP + 0x34],0x0
+007a88ba  MOV byte ptr [ESP + 0x3c],0xff
+007a88bf  CALL 0x0080d8a0
+007a88c4  MOV EAX,dword ptr [EDI]
+007a88c6  MOV ECX,dword ptr [ESI]
+007a88c8  MOV EDX,dword ptr [ECX + 0xdc]
+007a88ce  ADD EAX,0x8
+007a88d1  MOV dword ptr [ESP + 0x20],EAX
+007a88d5  LEA EAX,[ESP + 0x9c]
+007a88dc  PUSH EAX
+007a88dd  MOV EAX,dword ptr [ESP + 0x18]
+007a88e1  PUSH EAX
+007a88e2  MOV dword ptr [ESP + 0x2c],EDX
+007a88e6  MOV EDX,dword ptr [EBX]
+007a88e8  PUSH EAX
+007a88e9  MOV EAX,dword ptr [EDX + 0x6c]
+007a88ec  MOV ECX,EBX
+007a88ee  CALL EAX
+007a88f0  MOV EDX,dword ptr [ESP + 0x28]
+007a88f4  MOV ECX,dword ptr [ESP + 0x2c]
+007a88f8  PUSH EAX
+007a88f9  MOV EAX,dword ptr [EDX]
+007a88fb  PUSH ECX
+007a88fc  MOV ECX,EDI
+007a88fe  CALL EAX
+007a8900  MOV dword ptr [ESI + 0x44],EAX
+007a8903  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a890e  LEA ECX,[ESP + 0x9c]
+007a8915  CALL 0x0080c8e0
+007a891a  MOV ECX,dword ptr [ESP + 0x4c8]
+007a8921  MOV dword ptr FS:[0x0],ECX
+007a8928  POP ECX
+007a8929  POP EDI
+007a892a  POP ESI
+007a892b  POP EBX
+007a892c  MOV ECX,dword ptr [ESP + 0x4b0]
+007a8933  XOR ECX,ESP
+007a8935  CALL 0x009d20f4
+007a893a  MOV ESP,EBP
+007a893c  POP EBP
+007a893d  RET 0x8
+
+===== 0x007A8457 =====
+entry=007a82f0
+body=[[007a82f0, 007a8360] [007a8384, 007a893f]]
+completed=true
+message=
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_007a82f0(int *param_1,uint param_2)
+
+{
+  int *piVar1;
+  undefined1 uVar2;
+  uint uVar3;
+  int *piVar4;
+  undefined4 uVar5;
+  int iVar6;
+  byte bVar7;
+  undefined4 *unaff_EBX;
+  undefined *unaff_ESI;
+  int *unaff_FS_OFFSET;
+  int iStack_4cc;
+  undefined4 *puStack_4c8;
+  int iStack_4c4;
+  undefined4 uStack_4c0;
+  undefined4 *puStack_4bc;
+  int iStack_4b8;
+  undefined4 uStack_4b4;
+  undefined4 uStack_4b0;
+  undefined4 uStack_4ac;
+  undefined4 uStack_4a8;
+  undefined4 *puStack_4a4;
+  int *piStack_4a0;
+  int iStack_49c;
+  undefined1 auStack_498 [16];
+  uint uStack_488;
+  uint auStack_484 [3];
+  undefined1 uStack_478;
+  undefined4 uStack_470;
+  undefined4 uStack_46c;
+  undefined4 uStack_468;
+  undefined1 uStack_464;
+  undefined4 uStack_460;
+  undefined4 uStack_45c;
+  undefined4 uStack_458;
+  undefined1 uStack_454;
+  undefined1 auStack_450 [8];
+  undefined1 auStack_448 [16];
+  byte bStack_438;
+  undefined1 auStack_240 [16];
+  byte bStack_230;
+  undefined1 auStack_30 [4];
+  undefined1 auStack_2c [4];
+  undefined4 uStack_28;
+  uint uStack_1c;
+  int iStack_14;
+  undefined *puStack_10;
+  undefined4 uStack_c;
+  
+  uStack_c = 0xffffffff;
+  puStack_10 = &UNK_00ea90ac;
+  iStack_14 = *unaff_FS_OFFSET;
+  uStack_1c = _DAT_012ea8b0 ^ (uint)&iStack_4cc;
+  uVar3 = _DAT_012ea8b0 ^ (uint)&stack0xfffffb28;
+  *unaff_FS_OFFSET = (int)&iStack_14;
+  if (param_1[0x13] != param_2) {
+    auStack_484[0] = param_1[0x13] ^ param_2;
+    param_1[0x13] = param_2;
+    bVar7 = 0;
+    uVar2 = FUN_0065be50(uVar3);
+    switch(uVar2) {
+    case 0:
+      bVar7 = 0;
+      break;
+    case 1:
+      bVar7 = 1;
+      break;
+    case 2:
+      bVar7 = 3;
+      break;
+    case 3:
+      bVar7 = 7;
+      break;
+    case 4:
+      bVar7 = 0xf;
+      break;
+    case 5:
+      bVar7 = 0x1f;
+      break;
+    case 6:
+      bVar7 = 0x3f;
+      break;
+    case 7:
+      bVar7 = 0x7f;
+      break;
+    case 8:
+      bVar7 = 0xff;
+    }
+    uStack_4c0 = CONCAT13(*(byte *)(param_1 + 0x13) & bVar7,
+                          CONCAT12(~bVar7 & *(byte *)(param_1 + 0x13),(undefined2)uStack_4c0));
+    uVar2 = FUN_0065c550();
+    uStack_4b4 = CONCAT13(uVar2,(undefined3)uStack_4b4);
+    piVar4 = (int *)(**(code **)(**(int **)(*param_1 + 0x114) + 8))();
+    if ((piVar4 != (int *)0x0) && (piVar1 = *(int **)(*param_1 + 0x12f0), piVar1 != (int *)0x0)) {
+      uStack_488 = uStack_4b4 >> 0x18;
+      piStack_4a0 = param_1 + 9;
+      iStack_49c = 0;
+      do {
+        uVar3 = 1 << ((byte)iStack_49c & 0x1f);
+        if ((auStack_484[0] & uStack_488 & uVar3) != 0) {
+          if ((uStack_4c0._2_1_ & (byte)uVar3) == 0) {
+            if (*piStack_4a0 != 0) {
+              (**(code **)(*piVar1 + 0x10))(*piStack_4a0);
+              *puStack_4a4 = 0;
+              func_0x009d4f83(auStack_30,0x10,&UNK_00fe75cc,piStack_4a0);
+              func_0x0062e2d0(&iStack_49c,auStack_30,0x10);
+              unaff_ESI = &UNK_00736362;
+              puStack_4c8 = (undefined4 *)
+                            (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb2c,&uStack_4a8);
+              if (puStack_4c8 != (undefined4 *)0x0) {
+                func_0x0080c830();
+                uStack_c = 1;
+                bStack_438 = bStack_438 | 0xc;
+                uStack_468 = *(undefined4 *)(*param_1 + 0xdc);
+                uStack_470 = _DAT_012c856c;
+                uStack_46c = 0;
+                uStack_464 = 0xff;
+                func_0x0080a7b0(&uStack_470);
+                uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+                uStack_4b4 = _DAT_012c8570;
+                uStack_4b0 = 0;
+                uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+                func_0x0080d8a0(&uStack_4b4);
+                uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+                iStack_4c4 = *piVar1 + 8;
+                uVar5 = (**(code **)(*piVar4 + 0x6c))(unaff_EBX,unaff_EBX,auStack_448);
+                (*(code *)*puStack_4c8)(iStack_4c4,uVar5);
+                goto LAB_007a8699;
+              }
+            }
+          }
+          else {
+            func_0x009d4f83(auStack_2c,0x10,&UNK_00fe75bc,iStack_49c);
+            func_0x0062e2d0(auStack_450,auStack_2c,0x10);
+            puStack_4c8 = (undefined4 *)&UNK_00736362;
+            iStack_4b8 = (**(code **)(*(int *)*param_1 + 0x10))(&puStack_4c8,&uStack_45c);
+            if (iStack_4b8 != 0) {
+              func_0x0080c830();
+              uStack_c = 0;
+              bStack_230 = bStack_230 | 0xc;
+              uStack_458 = *(undefined4 *)(*param_1 + 0xdc);
+              uStack_45c = 0;
+              uStack_460 = _DAT_012c856c;
+              uStack_454 = 0xff;
+              func_0x0080a7b0(&uStack_460);
+              auStack_484[2] = *(undefined4 *)(*param_1 + 0xdc);
+              auStack_484[0] = _DAT_012c8570;
+              auStack_484[1] = 0;
+              uStack_478 = 0xff;
+              func_0x0080d8a0(auStack_484);
+              unaff_EBX = *(undefined4 **)(*param_1 + 0xdc);
+              iStack_4cc = *piVar1 + 8;
+              uVar5 = (**(code **)(*piVar4 + 0x6c))(uStack_4c0,uStack_4c0,auStack_240);
+              uVar5 = (*(code *)*unaff_EBX)(unaff_ESI,uVar5);
+              *puStack_4bc = uVar5;
+LAB_007a8699:
+              uStack_28 = 0xffffffff;
+              func_0x0080c8e0();
+            }
+          }
+        }
+        piStack_4a0 = piStack_4a0 + 1;
+        iStack_49c = iStack_49c + 1;
+      } while (iStack_49c < 8);
+      if (uStack_4c0._3_1_ == '\0') {
+        if (param_1[0x11] != 0) {
+          (**(code **)(*piVar1 + 0x10))(param_1[0x11]);
+          param_1[0x11] = 0;
+        }
+        func_0x0062e2d0(auStack_498,&UNK_00fe75dc,0x10);
+        puStack_4c8 = (undefined4 *)
+                      (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb30,&puStack_4a4);
+        if (puStack_4c8 == (undefined4 *)0x0) goto LAB_007a891a;
+        func_0x0080c830();
+        uStack_c = 2;
+        bStack_438 = bStack_438 | 0xc;
+        uStack_4a8 = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b0 = _DAT_012c856c;
+        uStack_4ac = 0;
+        puStack_4a4 = (undefined4 *)CONCAT31(puStack_4a4._1_3_,0xff);
+        func_0x0080a7b0(&uStack_4b0);
+        uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b4 = _DAT_012c8570;
+        uStack_4b0 = 0;
+        uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+        func_0x0080d8a0(&uStack_4b4);
+        uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+        iStack_4c4 = *piVar1 + 8;
+        uVar5 = (**(code **)(*piVar4 + 0x6c))(&UNK_00736362,&UNK_00736362,auStack_448);
+      }
+      else {
+        func_0x009d4f83(auStack_2c,0x10,&UNK_00fe75e8,uStack_4c0._3_1_);
+        func_0x0062e2d0(auStack_498,auStack_2c,0x10);
+        puStack_4c8 = (undefined4 *)
+                      (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb30,&puStack_4a4);
+        if (puStack_4c8 == (undefined4 *)0x0) goto LAB_007a891a;
+        if (param_1[0x11] != 0) {
+          (**(code **)(*piVar1 + 0x10))(param_1[0x11]);
+          param_1[0x11] = 0;
+        }
+        func_0x0080c830();
+        uStack_c = 3;
+        bStack_438 = bStack_438 | 0xc;
+        uStack_4a8 = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b0 = _DAT_012c856c;
+        uStack_4ac = 0;
+        puStack_4a4 = (undefined4 *)CONCAT31(puStack_4a4._1_3_,0xff);
+        func_0x0080a7b0(&uStack_4b0);
+        uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b4 = _DAT_012c8570;
+        uStack_4b0 = 0;
+        uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+        func_0x0080d8a0(&uStack_4b4);
+        uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+        iStack_4c4 = *piVar1 + 8;
+        uVar5 = (**(code **)(*piVar4 + 0x6c))(&UNK_00736362,&UNK_00736362,auStack_448);
+      }
+      iVar6 = (*(code *)*puStack_4c8)(iStack_4c4,uVar5);
+      param_1[0x11] = iVar6;
+      uStack_28 = 0xffffffff;
+      func_0x0080c8e0();
+    }
+  }
+LAB_007a891a:
+  *unaff_FS_OFFSET = iStack_14;
+  func_0x009d20f4();
+  return;
+}
+
+
+-- listing --
+007a82f0  PUSH EBP
+007a82f1  MOV EBP,ESP
+007a82f3  AND ESP,0xfffffff8
+007a82f6  PUSH -0x1
+007a82f8  PUSH 0xea90ac
+007a82fd  MOV EAX,FS:[0x0]
+007a8303  PUSH EAX
+007a8304  SUB ESP,0x4b8
+007a830a  MOV EAX,[0x012ea8b0]
+007a830f  XOR EAX,ESP
+007a8311  MOV dword ptr [ESP + 0x4b0],EAX
+007a8318  PUSH EBX
+007a8319  PUSH ESI
+007a831a  PUSH EDI
+007a831b  MOV EAX,[0x012ea8b0]
+007a8320  XOR EAX,ESP
+007a8322  PUSH EAX
+007a8323  LEA EAX,[ESP + 0x4c8]
+007a832a  MOV FS:[0x0],EAX
+007a8330  MOV ESI,ECX
+007a8332  MOV EAX,dword ptr [ESI + 0x4c]
+007a8335  MOV ECX,dword ptr [EBP + 0x8]
+007a8338  CMP EAX,ECX
+007a833a  JZ 0x007a891a
+007a8340  XOR EAX,ECX
+007a8342  MOV dword ptr [ESI + 0x4c],ECX
+007a8345  MOV ECX,dword ptr [ESI]
+007a8347  MOV dword ptr [ESP + 0x58],EAX
+007a834b  XOR BL,BL
+007a834d  CALL 0x0065be50
+007a8352  MOVZX EAX,AL
+007a8355  CMP EAX,0x8
+007a8358  JA 0x007a8384
+007a835a  JMP dword ptr [EAX*0x4 + 0x7a8940]
+007a8384  MOV AL,byte ptr [ESI + 0x4c]
+007a8387  MOV CL,BL
+007a8389  NOT CL
+007a838b  AND CL,AL
+007a838d  MOV byte ptr [ESP + 0x1e],CL
+007a8391  MOV ECX,dword ptr [ESI]
+007a8393  AND AL,BL
+007a8395  MOV byte ptr [ESP + 0x1f],AL
+007a8399  CALL 0x0065c550
+007a839e  MOV byte ptr [ESP + 0x2b],AL
+007a83a2  MOV EAX,dword ptr [ESI]
+007a83a4  MOV ECX,dword ptr [EAX + 0x114]
+007a83aa  MOV EDX,dword ptr [ECX]
+007a83ac  MOV EAX,dword ptr [EDX + 0x8]
+007a83af  CALL EAX
+007a83b1  MOV EBX,EAX
+007a83b3  TEST EBX,EBX
+007a83b5  JZ 0x007a891a
+007a83bb  MOV ECX,dword ptr [ESI]
+007a83bd  MOV EDI,dword ptr [ECX + 0x12f0]
+007a83c3  TEST EDI,EDI
+007a83c5  JZ 0x007a891a
+007a83cb  MOVZX EDX,byte ptr [ESP + 0x2b]
+007a83d0  XOR ECX,ECX
+007a83d2  LEA EAX,[ESI + 0x24]
+007a83d5  MOV dword ptr [ESP + 0x40],ECX
+007a83d9  MOV dword ptr [ESP + 0x54],EDX
+007a83dd  MOV dword ptr [ESP + 0x3c],EAX
+007a83e1  MOV EDX,dword ptr [ESP + 0x58]
+007a83e5  MOV EAX,0x1
+007a83ea  SHL EAX,CL
+007a83ec  MOV ECX,dword ptr [ESP + 0x54]
+007a83f0  AND ECX,EAX
+007a83f2  TEST EDX,ECX
+007a83f4  JZ 0x007a869e
+007a83fa  TEST byte ptr [ESP + 0x1e],AL
+007a83fe  JZ 0x007a8549
+007a8404  MOV EAX,dword ptr [ESP + 0x40]
+007a8408  PUSH EAX
+007a8409  PUSH 0xfe75bc
+007a840e  LEA ECX,[ESP + 0x4b8]
+007a8415  PUSH 0x10
+007a8417  PUSH ECX
+007a8418  CALL 0x009d4f83
+007a841d  ADD ESP,0x10
+007a8420  PUSH 0x10
+007a8422  LEA EDX,[ESP + 0x4b4]
+007a8429  LEA EAX,[ESP + 0x90]
+007a8430  PUSH EDX
+007a8431  PUSH EAX
+007a8432  MOV ECX,EAX
+007a8434  CALL 0x0062e2d0
+007a8439  MOV ECX,dword ptr [ESI]
+007a843b  LEA EAX,[ESP + 0x8c]
+007a8442  PUSH EAX
+007a8443  MOV dword ptr [ESP + 0x24],0x736362
+007a844b  MOV EDX,dword ptr [ECX]
+007a844d  MOV EDX,dword ptr [EDX + 0x10]
+007a8450  LEA EAX,[ESP + 0x24]
+007a8454  PUSH EAX
+007a8455  CALL EDX
+007a8457  TEST EAX,EAX
+007a8459  MOV dword ptr [ESP + 0x24],EAX
+007a845d  JZ 0x007a869e
+007a8463  LEA ECX,[ESP + 0x2a4]
+007a846a  CALL 0x0080c830
+007a846f  XOR ECX,ECX
+007a8471  MOV dword ptr [ESP + 0x4d0],ECX
+007a8478  MOV EAX,dword ptr [ESI]
+007a847a  OR byte ptr [ESP + 0x2ac],0xc
+007a8482  MOV EAX,dword ptr [EAX + 0xdc]
+007a8488  MOV EDX,dword ptr [0x012c856c]
+007a848e  MOV dword ptr [ESP + 0x84],EAX
+007a8495  LEA EAX,[ESP + 0x7c]
+007a8499  MOV dword ptr [ESP + 0x80],ECX
+007a84a0  PUSH EAX
+007a84a1  LEA ECX,[ESP + 0x2a8]
+007a84a8  MOV dword ptr [ESP + 0x80],EDX
+007a84af  MOV byte ptr [ESP + 0x8c],0xff
+007a84b7  CALL 0x0080a7b0
+007a84bc  MOV ECX,dword ptr [ESI]
+007a84be  MOV EAX,dword ptr [ECX + 0xdc]
+007a84c4  MOV EDX,dword ptr [0x012c8570]
+007a84ca  MOV dword ptr [ESP + 0x64],EAX
+007a84ce  LEA EAX,[ESP + 0x5c]
+007a84d2  PUSH EAX
+007a84d3  LEA ECX,[ESP + 0x2a8]
+007a84da  MOV dword ptr [ESP + 0x60],EDX
+007a84de  MOV dword ptr [ESP + 0x64],0x0
+007a84e6  MOV byte ptr [ESP + 0x6c],0xff
+007a84eb  CALL 0x0080d8a0
+007a84f0  MOV EAX,dword ptr [EDI]
+007a84f2  MOV ECX,dword ptr [ESI]
+007a84f4  MOV EDX,dword ptr [ECX + 0xdc]
+007a84fa  ADD EAX,0x8
+007a84fd  MOV dword ptr [ESP + 0x18],EAX
+007a8501  LEA EAX,[ESP + 0x2a4]
+007a8508  PUSH EAX
+007a8509  MOV EAX,dword ptr [ESP + 0x28]
+007a850d  PUSH EAX
+007a850e  MOV dword ptr [ESP + 0x1c],EDX
+007a8512  MOV EDX,dword ptr [EBX]
+007a8514  PUSH EAX
+007a8515  MOV EAX,dword ptr [EDX + 0x6c]
+007a8518  MOV ECX,EBX
+007a851a  CALL EAX
+007a851c  MOV ECX,dword ptr [ESP + 0x1c]
+007a8520  MOV EDX,dword ptr [ESP + 0x20]
+007a8524  PUSH EAX
+007a8525  MOV EAX,dword ptr [EDX]
+007a8527  PUSH ECX
+007a8528  MOV ECX,EDI
+007a852a  CALL EAX
+007a852c  MOV ECX,dword ptr [ESP + 0x3c]
+007a8530  MOV dword ptr [ECX],EAX
+007a8532  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a853d  LEA ECX,[ESP + 0x2a4]
+007a8544  JMP 0x007a8699
+007a8549  MOV EDX,dword ptr [ESP + 0x3c]
+007a854d  MOV EAX,dword ptr [EDX]
+007a854f  TEST EAX,EAX
+007a8551  JZ 0x007a869e
+007a8557  MOV EDX,dword ptr [EDI]
+007a8559  PUSH EAX
+007a855a  MOV EAX,dword ptr [EDX + 0x10]
+007a855d  MOV ECX,EDI
+007a855f  CALL EAX
+007a8561  MOV EDX,dword ptr [ESP + 0x40]
+007a8565  MOV ECX,dword ptr [ESP + 0x3c]
+007a8569  PUSH EDX
+007a856a  PUSH 0xfe75cc
+007a856f  LEA EAX,[ESP + 0x4b8]
+007a8576  PUSH 0x10
+007a8578  PUSH EAX
+007a8579  MOV dword ptr [ECX],0x0
+007a857f  CALL 0x009d4f83
+007a8584  ADD ESP,0x10
+007a8587  PUSH 0x10
+007a8589  LEA ECX,[ESP + 0x4b4]
+007a8590  PUSH ECX
+007a8591  LEA EDX,[ESP + 0x4c]
+007a8595  PUSH EDX
+007a8596  MOV ECX,EDX
+007a8598  CALL 0x0062e2d0
+007a859d  MOV ECX,dword ptr [ESI]
+007a859f  LEA EDX,[ESP + 0x44]
+007a85a3  PUSH EDX
+007a85a4  MOV dword ptr [ESP + 0x1c],0x736362
+007a85ac  MOV EAX,dword ptr [ECX]
+007a85ae  MOV EAX,dword ptr [EAX + 0x10]
+007a85b1  LEA EDX,[ESP + 0x1c]
+007a85b5  PUSH EDX
+007a85b6  CALL EAX
+007a85b8  TEST EAX,EAX
+007a85ba  MOV dword ptr [ESP + 0x14],EAX
+007a85be  JZ 0x007a869e
+007a85c4  LEA ECX,[ESP + 0x9c]
+007a85cb  CALL 0x0080c830
+007a85d0  MOV dword ptr [ESP + 0x4d0],0x1
+007a85db  MOV ECX,dword ptr [ESI]
+007a85dd  OR byte ptr [ESP + 0xa4],0xc
+007a85e5  MOV EAX,dword ptr [ECX + 0xdc]
+007a85eb  MOV EDX,dword ptr [0x012c856c]
+007a85f1  MOV dword ptr [ESP + 0x74],EAX
+007a85f5  LEA EAX,[ESP + 0x6c]
+007a85f9  PUSH EAX
+007a85fa  LEA ECX,[ESP + 0xa0]
+007a8601  MOV dword ptr [ESP + 0x70],EDX
+007a8605  MOV dword ptr [ESP + 0x74],0x0
+007a860d  MOV byte ptr [ESP + 0x7c],0xff
+007a8612  CALL 0x0080a7b0
+007a8617  MOV ECX,dword ptr [ESI]
+007a8619  MOV EAX,dword ptr [ECX + 0xdc]
+007a861f  MOV EDX,dword ptr [0x012c8570]
+007a8625  MOV dword ptr [ESP + 0x34],EAX
+007a8629  LEA EAX,[ESP + 0x2c]
+007a862d  PUSH EAX
+007a862e  LEA ECX,[ESP + 0xa0]
+007a8635  MOV dword ptr [ESP + 0x30],EDX
+007a8639  MOV dword ptr [ESP + 0x34],0x0
+007a8641  MOV byte ptr [ESP + 0x3c],0xff
+007a8646  CALL 0x0080d8a0
+007a864b  MOV EAX,dword ptr [EDI]
+007a864d  MOV ECX,dword ptr [ESI]
+007a864f  MOV EDX,dword ptr [ECX + 0xdc]
+007a8655  ADD EAX,0x8
+007a8658  MOV dword ptr [ESP + 0x20],EAX
+007a865c  LEA EAX,[ESP + 0x9c]
+007a8663  PUSH EAX
+007a8664  MOV EAX,dword ptr [ESP + 0x18]
+007a8668  PUSH EAX
+007a8669  MOV dword ptr [ESP + 0x2c],EDX
+007a866d  MOV EDX,dword ptr [EBX]
+007a866f  PUSH EAX
+007a8670  MOV EAX,dword ptr [EDX + 0x6c]
+007a8673  MOV ECX,EBX
+007a8675  CALL EAX
+007a8677  MOV ECX,dword ptr [ESP + 0x2c]
+007a867b  MOV EDX,dword ptr [ESP + 0x28]
+007a867f  PUSH EAX
+007a8680  MOV EAX,dword ptr [EDX]
+007a8682  PUSH ECX
+007a8683  MOV ECX,EDI
+007a8685  CALL EAX
+007a8687  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a8692  LEA ECX,[ESP + 0x9c]
+007a8699  CALL 0x0080c8e0
+007a869e  MOV ECX,dword ptr [ESP + 0x40]
+007a86a2  ADD dword ptr [ESP + 0x3c],0x4
+007a86a7  ADD ECX,0x1
+007a86aa  CMP ECX,0x8
+007a86ad  MOV dword ptr [ESP + 0x40],ECX
+007a86b1  JL 0x007a83e1
+007a86b7  MOV AL,byte ptr [ESP + 0x1f]
+007a86bb  TEST AL,AL
+007a86bd  JNZ 0x007a87cf
+007a86c3  MOV EAX,dword ptr [ESI + 0x44]
+007a86c6  TEST EAX,EAX
+007a86c8  JZ 0x007a86db
+007a86ca  MOV EDX,dword ptr [EDI]
+007a86cc  PUSH EAX
+007a86cd  MOV EAX,dword ptr [EDX + 0x10]
+007a86d0  MOV ECX,EDI
+007a86d2  CALL EAX
+007a86d4  MOV dword ptr [ESI + 0x44],0x0
+007a86db  PUSH 0x10
+007a86dd  PUSH 0xfe75dc
+007a86e2  LEA ECX,[ESP + 0x4c]
+007a86e6  PUSH ECX
+007a86e7  CALL 0x0062e2d0
+007a86ec  MOV ECX,dword ptr [ESI]
+007a86ee  LEA EAX,[ESP + 0x44]
+007a86f2  PUSH EAX
+007a86f3  MOV dword ptr [ESP + 0x1c],0x736362
+007a86fb  MOV EDX,dword ptr [ECX]
+007a86fd  MOV EDX,dword ptr [EDX + 0x10]
+007a8700  LEA EAX,[ESP + 0x1c]
+007a8704  PUSH EAX
+007a8705  CALL EDX
+007a8707  TEST EAX,EAX
+007a8709  MOV dword ptr [ESP + 0x14],EAX
+007a870d  JZ 0x007a891a
+007a8713  LEA ECX,[ESP + 0x9c]
+007a871a  CALL 0x0080c830
+007a871f  MOV dword ptr [ESP + 0x4d0],0x2
+007a872a  MOV EAX,dword ptr [ESI]
+007a872c  MOV ECX,dword ptr [0x012c856c]
+007a8732  OR byte ptr [ESP + 0xa4],0xc
+007a873a  MOV EAX,dword ptr [EAX + 0xdc]
+007a8740  LEA EDX,[ESP + 0x2c]
+007a8744  MOV dword ptr [ESP + 0x2c],ECX
+007a8748  PUSH EDX
+007a8749  LEA ECX,[ESP + 0xa0]
+007a8750  MOV dword ptr [ESP + 0x34],0x0
+007a8758  MOV dword ptr [ESP + 0x38],EAX
+007a875c  MOV byte ptr [ESP + 0x3c],0xff
+007a8761  CALL 0x0080a7b0
+007a8766  MOV EAX,dword ptr [ESI]
+007a8768  MOV EAX,dword ptr [EAX + 0xdc]
+007a876e  MOV ECX,dword ptr [0x012c8570]
+007a8774  LEA EDX,[ESP + 0x2c]
+007a8778  MOV dword ptr [ESP + 0x2c],ECX
+007a877c  PUSH EDX
+007a877d  LEA ECX,[ESP + 0xa0]
+007a8784  MOV dword ptr [ESP + 0x34],0x0
+007a878c  MOV dword ptr [ESP + 0x38],EAX
+007a8790  MOV byte ptr [ESP + 0x3c],0xff
+007a8795  CALL 0x0080d8a0
+007a879a  MOV EAX,dword ptr [ESI]
+007a879c  MOV ECX,dword ptr [EAX + 0xdc]
+007a87a2  MOV EAX,dword ptr [EDI]
+007a87a4  ADD EAX,0x8
+007a87a7  MOV dword ptr [ESP + 0x20],EAX
+007a87ab  MOV EAX,dword ptr [ESP + 0x14]
+007a87af  LEA EDX,[ESP + 0x9c]
+007a87b6  PUSH EDX
+007a87b7  MOV EDX,dword ptr [EBX]
+007a87b9  PUSH EAX
+007a87ba  MOV dword ptr [ESP + 0x2c],ECX
+007a87be  PUSH EAX
+007a87bf  MOV EAX,dword ptr [EDX + 0x6c]
+007a87c2  MOV ECX,EBX
+007a87c4  CALL EAX
+007a87c6  MOV EDX,dword ptr [ESP + 0x28]
+007a87ca  JMP 0x007a88f4
+007a87cf  MOVZX ECX,AL
+007a87d2  PUSH ECX
+007a87d3  PUSH 0xfe75e8
+007a87d8  LEA EDX,[ESP + 0x4b8]
+007a87df  PUSH 0x10
+007a87e1  PUSH EDX
+007a87e2  CALL 0x009d4f83
+007a87e7  ADD ESP,0x10
+007a87ea  PUSH 0x10
+007a87ec  LEA EAX,[ESP + 0x4b4]
+007a87f3  PUSH EAX
+007a87f4  LEA ECX,[ESP + 0x4c]
+007a87f8  PUSH ECX
+007a87f9  CALL 0x0062e2d0
+007a87fe  MOV ECX,dword ptr [ESI]
+007a8800  LEA EAX,[ESP + 0x44]
+007a8804  PUSH EAX
+007a8805  MOV dword ptr [ESP + 0x1c],0x736362
+007a880d  MOV EDX,dword ptr [ECX]
+007a880f  MOV EDX,dword ptr [EDX + 0x10]
+007a8812  LEA EAX,[ESP + 0x1c]
+007a8816  PUSH EAX
+007a8817  CALL EDX
+007a8819  TEST EAX,EAX
+007a881b  MOV dword ptr [ESP + 0x14],EAX
+007a881f  JZ 0x007a891a
+007a8825  MOV EAX,dword ptr [ESI + 0x44]
+007a8828  TEST EAX,EAX
+007a882a  JZ 0x007a883d
+007a882c  MOV EDX,dword ptr [EDI]
+007a882e  PUSH EAX
+007a882f  MOV EAX,dword ptr [EDX + 0x10]
+007a8832  MOV ECX,EDI
+007a8834  CALL EAX
+007a8836  MOV dword ptr [ESI + 0x44],0x0
+007a883d  LEA ECX,[ESP + 0x9c]
+007a8844  CALL 0x0080c830
+007a8849  MOV dword ptr [ESP + 0x4d0],0x3
+007a8854  MOV ECX,dword ptr [ESI]
+007a8856  OR byte ptr [ESP + 0xa4],0xc
+007a885e  MOV EAX,dword ptr [ECX + 0xdc]
+007a8864  MOV EDX,dword ptr [0x012c856c]
+007a886a  MOV dword ptr [ESP + 0x34],EAX
+007a886e  LEA EAX,[ESP + 0x2c]
+007a8872  PUSH EAX
+007a8873  LEA ECX,[ESP + 0xa0]
+007a887a  MOV dword ptr [ESP + 0x30],EDX
+007a887e  MOV dword ptr [ESP + 0x34],0x0
+007a8886  MOV byte ptr [ESP + 0x3c],0xff
+007a888b  CALL 0x0080a7b0
+007a8890  MOV ECX,dword ptr [ESI]
+007a8892  MOV EAX,dword ptr [ECX + 0xdc]
+007a8898  MOV EDX,dword ptr [0x012c8570]
+007a889e  MOV dword ptr [ESP + 0x34],EAX
+007a88a2  LEA EAX,[ESP + 0x2c]
+007a88a6  PUSH EAX
+007a88a7  LEA ECX,[ESP + 0xa0]
+007a88ae  MOV dword ptr [ESP + 0x30],EDX
+007a88b2  MOV dword ptr [ESP + 0x34],0x0
+007a88ba  MOV byte ptr [ESP + 0x3c],0xff
+007a88bf  CALL 0x0080d8a0
+007a88c4  MOV EAX,dword ptr [EDI]
+007a88c6  MOV ECX,dword ptr [ESI]
+007a88c8  MOV EDX,dword ptr [ECX + 0xdc]
+007a88ce  ADD EAX,0x8
+007a88d1  MOV dword ptr [ESP + 0x20],EAX
+007a88d5  LEA EAX,[ESP + 0x9c]
+007a88dc  PUSH EAX
+007a88dd  MOV EAX,dword ptr [ESP + 0x18]
+007a88e1  PUSH EAX
+007a88e2  MOV dword ptr [ESP + 0x2c],EDX
+007a88e6  MOV EDX,dword ptr [EBX]
+007a88e8  PUSH EAX
+007a88e9  MOV EAX,dword ptr [EDX + 0x6c]
+007a88ec  MOV ECX,EBX
+007a88ee  CALL EAX
+007a88f0  MOV EDX,dword ptr [ESP + 0x28]
+007a88f4  MOV ECX,dword ptr [ESP + 0x2c]
+007a88f8  PUSH EAX
+007a88f9  MOV EAX,dword ptr [EDX]
+007a88fb  PUSH ECX
+007a88fc  MOV ECX,EDI
+007a88fe  CALL EAX
+007a8900  MOV dword ptr [ESI + 0x44],EAX
+007a8903  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a890e  LEA ECX,[ESP + 0x9c]
+007a8915  CALL 0x0080c8e0
+007a891a  MOV ECX,dword ptr [ESP + 0x4c8]
+007a8921  MOV dword ptr FS:[0x0],ECX
+007a8928  POP ECX
+007a8929  POP EDI
+007a892a  POP ESI
+007a892b  POP EBX
+007a892c  MOV ECX,dword ptr [ESP + 0x4b0]
+007a8933  XOR ECX,ESP
+007a8935  CALL 0x009d20f4
+007a893a  MOV ESP,EBP
+007a893c  POP EBP
+007a893d  RET 0x8
+
+===== 0x007A852C =====
+entry=007a82f0
+body=[[007a82f0, 007a8360] [007a8384, 007a893f]]
+completed=true
+message=
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_007a82f0(int *param_1,uint param_2)
+
+{
+  int *piVar1;
+  undefined1 uVar2;
+  uint uVar3;
+  int *piVar4;
+  undefined4 uVar5;
+  int iVar6;
+  byte bVar7;
+  undefined4 *unaff_EBX;
+  undefined *unaff_ESI;
+  int *unaff_FS_OFFSET;
+  int iStack_4cc;
+  undefined4 *puStack_4c8;
+  int iStack_4c4;
+  undefined4 uStack_4c0;
+  undefined4 *puStack_4bc;
+  int iStack_4b8;
+  undefined4 uStack_4b4;
+  undefined4 uStack_4b0;
+  undefined4 uStack_4ac;
+  undefined4 uStack_4a8;
+  undefined4 *puStack_4a4;
+  int *piStack_4a0;
+  int iStack_49c;
+  undefined1 auStack_498 [16];
+  uint uStack_488;
+  uint auStack_484 [3];
+  undefined1 uStack_478;
+  undefined4 uStack_470;
+  undefined4 uStack_46c;
+  undefined4 uStack_468;
+  undefined1 uStack_464;
+  undefined4 uStack_460;
+  undefined4 uStack_45c;
+  undefined4 uStack_458;
+  undefined1 uStack_454;
+  undefined1 auStack_450 [8];
+  undefined1 auStack_448 [16];
+  byte bStack_438;
+  undefined1 auStack_240 [16];
+  byte bStack_230;
+  undefined1 auStack_30 [4];
+  undefined1 auStack_2c [4];
+  undefined4 uStack_28;
+  uint uStack_1c;
+  int iStack_14;
+  undefined *puStack_10;
+  undefined4 uStack_c;
+  
+  uStack_c = 0xffffffff;
+  puStack_10 = &UNK_00ea90ac;
+  iStack_14 = *unaff_FS_OFFSET;
+  uStack_1c = _DAT_012ea8b0 ^ (uint)&iStack_4cc;
+  uVar3 = _DAT_012ea8b0 ^ (uint)&stack0xfffffb28;
+  *unaff_FS_OFFSET = (int)&iStack_14;
+  if (param_1[0x13] != param_2) {
+    auStack_484[0] = param_1[0x13] ^ param_2;
+    param_1[0x13] = param_2;
+    bVar7 = 0;
+    uVar2 = FUN_0065be50(uVar3);
+    switch(uVar2) {
+    case 0:
+      bVar7 = 0;
+      break;
+    case 1:
+      bVar7 = 1;
+      break;
+    case 2:
+      bVar7 = 3;
+      break;
+    case 3:
+      bVar7 = 7;
+      break;
+    case 4:
+      bVar7 = 0xf;
+      break;
+    case 5:
+      bVar7 = 0x1f;
+      break;
+    case 6:
+      bVar7 = 0x3f;
+      break;
+    case 7:
+      bVar7 = 0x7f;
+      break;
+    case 8:
+      bVar7 = 0xff;
+    }
+    uStack_4c0 = CONCAT13(*(byte *)(param_1 + 0x13) & bVar7,
+                          CONCAT12(~bVar7 & *(byte *)(param_1 + 0x13),(undefined2)uStack_4c0));
+    uVar2 = FUN_0065c550();
+    uStack_4b4 = CONCAT13(uVar2,(undefined3)uStack_4b4);
+    piVar4 = (int *)(**(code **)(**(int **)(*param_1 + 0x114) + 8))();
+    if ((piVar4 != (int *)0x0) && (piVar1 = *(int **)(*param_1 + 0x12f0), piVar1 != (int *)0x0)) {
+      uStack_488 = uStack_4b4 >> 0x18;
+      piStack_4a0 = param_1 + 9;
+      iStack_49c = 0;
+      do {
+        uVar3 = 1 << ((byte)iStack_49c & 0x1f);
+        if ((auStack_484[0] & uStack_488 & uVar3) != 0) {
+          if ((uStack_4c0._2_1_ & (byte)uVar3) == 0) {
+            if (*piStack_4a0 != 0) {
+              (**(code **)(*piVar1 + 0x10))(*piStack_4a0);
+              *puStack_4a4 = 0;
+              func_0x009d4f83(auStack_30,0x10,&UNK_00fe75cc,piStack_4a0);
+              func_0x0062e2d0(&iStack_49c,auStack_30,0x10);
+              unaff_ESI = &UNK_00736362;
+              puStack_4c8 = (undefined4 *)
+                            (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb2c,&uStack_4a8);
+              if (puStack_4c8 != (undefined4 *)0x0) {
+                func_0x0080c830();
+                uStack_c = 1;
+                bStack_438 = bStack_438 | 0xc;
+                uStack_468 = *(undefined4 *)(*param_1 + 0xdc);
+                uStack_470 = _DAT_012c856c;
+                uStack_46c = 0;
+                uStack_464 = 0xff;
+                func_0x0080a7b0(&uStack_470);
+                uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+                uStack_4b4 = _DAT_012c8570;
+                uStack_4b0 = 0;
+                uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+                func_0x0080d8a0(&uStack_4b4);
+                uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+                iStack_4c4 = *piVar1 + 8;
+                uVar5 = (**(code **)(*piVar4 + 0x6c))(unaff_EBX,unaff_EBX,auStack_448);
+                (*(code *)*puStack_4c8)(iStack_4c4,uVar5);
+                goto LAB_007a8699;
+              }
+            }
+          }
+          else {
+            func_0x009d4f83(auStack_2c,0x10,&UNK_00fe75bc,iStack_49c);
+            func_0x0062e2d0(auStack_450,auStack_2c,0x10);
+            puStack_4c8 = (undefined4 *)&UNK_00736362;
+            iStack_4b8 = (**(code **)(*(int *)*param_1 + 0x10))(&puStack_4c8,&uStack_45c);
+            if (iStack_4b8 != 0) {
+              func_0x0080c830();
+              uStack_c = 0;
+              bStack_230 = bStack_230 | 0xc;
+              uStack_458 = *(undefined4 *)(*param_1 + 0xdc);
+              uStack_45c = 0;
+              uStack_460 = _DAT_012c856c;
+              uStack_454 = 0xff;
+              func_0x0080a7b0(&uStack_460);
+              auStack_484[2] = *(undefined4 *)(*param_1 + 0xdc);
+              auStack_484[0] = _DAT_012c8570;
+              auStack_484[1] = 0;
+              uStack_478 = 0xff;
+              func_0x0080d8a0(auStack_484);
+              unaff_EBX = *(undefined4 **)(*param_1 + 0xdc);
+              iStack_4cc = *piVar1 + 8;
+              uVar5 = (**(code **)(*piVar4 + 0x6c))(uStack_4c0,uStack_4c0,auStack_240);
+              uVar5 = (*(code *)*unaff_EBX)(unaff_ESI,uVar5);
+              *puStack_4bc = uVar5;
+LAB_007a8699:
+              uStack_28 = 0xffffffff;
+              func_0x0080c8e0();
+            }
+          }
+        }
+        piStack_4a0 = piStack_4a0 + 1;
+        iStack_49c = iStack_49c + 1;
+      } while (iStack_49c < 8);
+      if (uStack_4c0._3_1_ == '\0') {
+        if (param_1[0x11] != 0) {
+          (**(code **)(*piVar1 + 0x10))(param_1[0x11]);
+          param_1[0x11] = 0;
+        }
+        func_0x0062e2d0(auStack_498,&UNK_00fe75dc,0x10);
+        puStack_4c8 = (undefined4 *)
+                      (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb30,&puStack_4a4);
+        if (puStack_4c8 == (undefined4 *)0x0) goto LAB_007a891a;
+        func_0x0080c830();
+        uStack_c = 2;
+        bStack_438 = bStack_438 | 0xc;
+        uStack_4a8 = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b0 = _DAT_012c856c;
+        uStack_4ac = 0;
+        puStack_4a4 = (undefined4 *)CONCAT31(puStack_4a4._1_3_,0xff);
+        func_0x0080a7b0(&uStack_4b0);
+        uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b4 = _DAT_012c8570;
+        uStack_4b0 = 0;
+        uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+        func_0x0080d8a0(&uStack_4b4);
+        uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+        iStack_4c4 = *piVar1 + 8;
+        uVar5 = (**(code **)(*piVar4 + 0x6c))(&UNK_00736362,&UNK_00736362,auStack_448);
+      }
+      else {
+        func_0x009d4f83(auStack_2c,0x10,&UNK_00fe75e8,uStack_4c0._3_1_);
+        func_0x0062e2d0(auStack_498,auStack_2c,0x10);
+        puStack_4c8 = (undefined4 *)
+                      (**(code **)(*(int *)*param_1 + 0x10))(&stack0xfffffb30,&puStack_4a4);
+        if (puStack_4c8 == (undefined4 *)0x0) goto LAB_007a891a;
+        if (param_1[0x11] != 0) {
+          (**(code **)(*piVar1 + 0x10))(param_1[0x11]);
+          param_1[0x11] = 0;
+        }
+        func_0x0080c830();
+        uStack_c = 3;
+        bStack_438 = bStack_438 | 0xc;
+        uStack_4a8 = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b0 = _DAT_012c856c;
+        uStack_4ac = 0;
+        puStack_4a4 = (undefined4 *)CONCAT31(puStack_4a4._1_3_,0xff);
+        func_0x0080a7b0(&uStack_4b0);
+        uStack_4ac = *(undefined4 *)(*param_1 + 0xdc);
+        uStack_4b4 = _DAT_012c8570;
+        uStack_4b0 = 0;
+        uStack_4a8 = CONCAT31(uStack_4a8._1_3_,0xff);
+        func_0x0080d8a0(&uStack_4b4);
+        uStack_4c0 = *(undefined4 *)(*param_1 + 0xdc);
+        iStack_4c4 = *piVar1 + 8;
+        uVar5 = (**(code **)(*piVar4 + 0x6c))(&UNK_00736362,&UNK_00736362,auStack_448);
+      }
+      iVar6 = (*(code *)*puStack_4c8)(iStack_4c4,uVar5);
+      param_1[0x11] = iVar6;
+      uStack_28 = 0xffffffff;
+      func_0x0080c8e0();
+    }
+  }
+LAB_007a891a:
+  *unaff_FS_OFFSET = iStack_14;
+  func_0x009d20f4();
+  return;
+}
+
+
+-- listing --
+007a82f0  PUSH EBP
+007a82f1  MOV EBP,ESP
+007a82f3  AND ESP,0xfffffff8
+007a82f6  PUSH -0x1
+007a82f8  PUSH 0xea90ac
+007a82fd  MOV EAX,FS:[0x0]
+007a8303  PUSH EAX
+007a8304  SUB ESP,0x4b8
+007a830a  MOV EAX,[0x012ea8b0]
+007a830f  XOR EAX,ESP
+007a8311  MOV dword ptr [ESP + 0x4b0],EAX
+007a8318  PUSH EBX
+007a8319  PUSH ESI
+007a831a  PUSH EDI
+007a831b  MOV EAX,[0x012ea8b0]
+007a8320  XOR EAX,ESP
+007a8322  PUSH EAX
+007a8323  LEA EAX,[ESP + 0x4c8]
+007a832a  MOV FS:[0x0],EAX
+007a8330  MOV ESI,ECX
+007a8332  MOV EAX,dword ptr [ESI + 0x4c]
+007a8335  MOV ECX,dword ptr [EBP + 0x8]
+007a8338  CMP EAX,ECX
+007a833a  JZ 0x007a891a
+007a8340  XOR EAX,ECX
+007a8342  MOV dword ptr [ESI + 0x4c],ECX
+007a8345  MOV ECX,dword ptr [ESI]
+007a8347  MOV dword ptr [ESP + 0x58],EAX
+007a834b  XOR BL,BL
+007a834d  CALL 0x0065be50
+007a8352  MOVZX EAX,AL
+007a8355  CMP EAX,0x8
+007a8358  JA 0x007a8384
+007a835a  JMP dword ptr [EAX*0x4 + 0x7a8940]
+007a8384  MOV AL,byte ptr [ESI + 0x4c]
+007a8387  MOV CL,BL
+007a8389  NOT CL
+007a838b  AND CL,AL
+007a838d  MOV byte ptr [ESP + 0x1e],CL
+007a8391  MOV ECX,dword ptr [ESI]
+007a8393  AND AL,BL
+007a8395  MOV byte ptr [ESP + 0x1f],AL
+007a8399  CALL 0x0065c550
+007a839e  MOV byte ptr [ESP + 0x2b],AL
+007a83a2  MOV EAX,dword ptr [ESI]
+007a83a4  MOV ECX,dword ptr [EAX + 0x114]
+007a83aa  MOV EDX,dword ptr [ECX]
+007a83ac  MOV EAX,dword ptr [EDX + 0x8]
+007a83af  CALL EAX
+007a83b1  MOV EBX,EAX
+007a83b3  TEST EBX,EBX
+007a83b5  JZ 0x007a891a
+007a83bb  MOV ECX,dword ptr [ESI]
+007a83bd  MOV EDI,dword ptr [ECX + 0x12f0]
+007a83c3  TEST EDI,EDI
+007a83c5  JZ 0x007a891a
+007a83cb  MOVZX EDX,byte ptr [ESP + 0x2b]
+007a83d0  XOR ECX,ECX
+007a83d2  LEA EAX,[ESI + 0x24]
+007a83d5  MOV dword ptr [ESP + 0x40],ECX
+007a83d9  MOV dword ptr [ESP + 0x54],EDX
+007a83dd  MOV dword ptr [ESP + 0x3c],EAX
+007a83e1  MOV EDX,dword ptr [ESP + 0x58]
+007a83e5  MOV EAX,0x1
+007a83ea  SHL EAX,CL
+007a83ec  MOV ECX,dword ptr [ESP + 0x54]
+007a83f0  AND ECX,EAX
+007a83f2  TEST EDX,ECX
+007a83f4  JZ 0x007a869e
+007a83fa  TEST byte ptr [ESP + 0x1e],AL
+007a83fe  JZ 0x007a8549
+007a8404  MOV EAX,dword ptr [ESP + 0x40]
+007a8408  PUSH EAX
+007a8409  PUSH 0xfe75bc
+007a840e  LEA ECX,[ESP + 0x4b8]
+007a8415  PUSH 0x10
+007a8417  PUSH ECX
+007a8418  CALL 0x009d4f83
+007a841d  ADD ESP,0x10
+007a8420  PUSH 0x10
+007a8422  LEA EDX,[ESP + 0x4b4]
+007a8429  LEA EAX,[ESP + 0x90]
+007a8430  PUSH EDX
+007a8431  PUSH EAX
+007a8432  MOV ECX,EAX
+007a8434  CALL 0x0062e2d0
+007a8439  MOV ECX,dword ptr [ESI]
+007a843b  LEA EAX,[ESP + 0x8c]
+007a8442  PUSH EAX
+007a8443  MOV dword ptr [ESP + 0x24],0x736362
+007a844b  MOV EDX,dword ptr [ECX]
+007a844d  MOV EDX,dword ptr [EDX + 0x10]
+007a8450  LEA EAX,[ESP + 0x24]
+007a8454  PUSH EAX
+007a8455  CALL EDX
+007a8457  TEST EAX,EAX
+007a8459  MOV dword ptr [ESP + 0x24],EAX
+007a845d  JZ 0x007a869e
+007a8463  LEA ECX,[ESP + 0x2a4]
+007a846a  CALL 0x0080c830
+007a846f  XOR ECX,ECX
+007a8471  MOV dword ptr [ESP + 0x4d0],ECX
+007a8478  MOV EAX,dword ptr [ESI]
+007a847a  OR byte ptr [ESP + 0x2ac],0xc
+007a8482  MOV EAX,dword ptr [EAX + 0xdc]
+007a8488  MOV EDX,dword ptr [0x012c856c]
+007a848e  MOV dword ptr [ESP + 0x84],EAX
+007a8495  LEA EAX,[ESP + 0x7c]
+007a8499  MOV dword ptr [ESP + 0x80],ECX
+007a84a0  PUSH EAX
+007a84a1  LEA ECX,[ESP + 0x2a8]
+007a84a8  MOV dword ptr [ESP + 0x80],EDX
+007a84af  MOV byte ptr [ESP + 0x8c],0xff
+007a84b7  CALL 0x0080a7b0
+007a84bc  MOV ECX,dword ptr [ESI]
+007a84be  MOV EAX,dword ptr [ECX + 0xdc]
+007a84c4  MOV EDX,dword ptr [0x012c8570]
+007a84ca  MOV dword ptr [ESP + 0x64],EAX
+007a84ce  LEA EAX,[ESP + 0x5c]
+007a84d2  PUSH EAX
+007a84d3  LEA ECX,[ESP + 0x2a8]
+007a84da  MOV dword ptr [ESP + 0x60],EDX
+007a84de  MOV dword ptr [ESP + 0x64],0x0
+007a84e6  MOV byte ptr [ESP + 0x6c],0xff
+007a84eb  CALL 0x0080d8a0
+007a84f0  MOV EAX,dword ptr [EDI]
+007a84f2  MOV ECX,dword ptr [ESI]
+007a84f4  MOV EDX,dword ptr [ECX + 0xdc]
+007a84fa  ADD EAX,0x8
+007a84fd  MOV dword ptr [ESP + 0x18],EAX
+007a8501  LEA EAX,[ESP + 0x2a4]
+007a8508  PUSH EAX
+007a8509  MOV EAX,dword ptr [ESP + 0x28]
+007a850d  PUSH EAX
+007a850e  MOV dword ptr [ESP + 0x1c],EDX
+007a8512  MOV EDX,dword ptr [EBX]
+007a8514  PUSH EAX
+007a8515  MOV EAX,dword ptr [EDX + 0x6c]
+007a8518  MOV ECX,EBX
+007a851a  CALL EAX
+007a851c  MOV ECX,dword ptr [ESP + 0x1c]
+007a8520  MOV EDX,dword ptr [ESP + 0x20]
+007a8524  PUSH EAX
+007a8525  MOV EAX,dword ptr [EDX]
+007a8527  PUSH ECX
+007a8528  MOV ECX,EDI
+007a852a  CALL EAX
+007a852c  MOV ECX,dword ptr [ESP + 0x3c]
+007a8530  MOV dword ptr [ECX],EAX
+007a8532  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a853d  LEA ECX,[ESP + 0x2a4]
+007a8544  JMP 0x007a8699
+007a8549  MOV EDX,dword ptr [ESP + 0x3c]
+007a854d  MOV EAX,dword ptr [EDX]
+007a854f  TEST EAX,EAX
+007a8551  JZ 0x007a869e
+007a8557  MOV EDX,dword ptr [EDI]
+007a8559  PUSH EAX
+007a855a  MOV EAX,dword ptr [EDX + 0x10]
+007a855d  MOV ECX,EDI
+007a855f  CALL EAX
+007a8561  MOV EDX,dword ptr [ESP + 0x40]
+007a8565  MOV ECX,dword ptr [ESP + 0x3c]
+007a8569  PUSH EDX
+007a856a  PUSH 0xfe75cc
+007a856f  LEA EAX,[ESP + 0x4b8]
+007a8576  PUSH 0x10
+007a8578  PUSH EAX
+007a8579  MOV dword ptr [ECX],0x0
+007a857f  CALL 0x009d4f83
+007a8584  ADD ESP,0x10
+007a8587  PUSH 0x10
+007a8589  LEA ECX,[ESP + 0x4b4]
+007a8590  PUSH ECX
+007a8591  LEA EDX,[ESP + 0x4c]
+007a8595  PUSH EDX
+007a8596  MOV ECX,EDX
+007a8598  CALL 0x0062e2d0
+007a859d  MOV ECX,dword ptr [ESI]
+007a859f  LEA EDX,[ESP + 0x44]
+007a85a3  PUSH EDX
+007a85a4  MOV dword ptr [ESP + 0x1c],0x736362
+007a85ac  MOV EAX,dword ptr [ECX]
+007a85ae  MOV EAX,dword ptr [EAX + 0x10]
+007a85b1  LEA EDX,[ESP + 0x1c]
+007a85b5  PUSH EDX
+007a85b6  CALL EAX
+007a85b8  TEST EAX,EAX
+007a85ba  MOV dword ptr [ESP + 0x14],EAX
+007a85be  JZ 0x007a869e
+007a85c4  LEA ECX,[ESP + 0x9c]
+007a85cb  CALL 0x0080c830
+007a85d0  MOV dword ptr [ESP + 0x4d0],0x1
+007a85db  MOV ECX,dword ptr [ESI]
+007a85dd  OR byte ptr [ESP + 0xa4],0xc
+007a85e5  MOV EAX,dword ptr [ECX + 0xdc]
+007a85eb  MOV EDX,dword ptr [0x012c856c]
+007a85f1  MOV dword ptr [ESP + 0x74],EAX
+007a85f5  LEA EAX,[ESP + 0x6c]
+007a85f9  PUSH EAX
+007a85fa  LEA ECX,[ESP + 0xa0]
+007a8601  MOV dword ptr [ESP + 0x70],EDX
+007a8605  MOV dword ptr [ESP + 0x74],0x0
+007a860d  MOV byte ptr [ESP + 0x7c],0xff
+007a8612  CALL 0x0080a7b0
+007a8617  MOV ECX,dword ptr [ESI]
+007a8619  MOV EAX,dword ptr [ECX + 0xdc]
+007a861f  MOV EDX,dword ptr [0x012c8570]
+007a8625  MOV dword ptr [ESP + 0x34],EAX
+007a8629  LEA EAX,[ESP + 0x2c]
+007a862d  PUSH EAX
+007a862e  LEA ECX,[ESP + 0xa0]
+007a8635  MOV dword ptr [ESP + 0x30],EDX
+007a8639  MOV dword ptr [ESP + 0x34],0x0
+007a8641  MOV byte ptr [ESP + 0x3c],0xff
+007a8646  CALL 0x0080d8a0
+007a864b  MOV EAX,dword ptr [EDI]
+007a864d  MOV ECX,dword ptr [ESI]
+007a864f  MOV EDX,dword ptr [ECX + 0xdc]
+007a8655  ADD EAX,0x8
+007a8658  MOV dword ptr [ESP + 0x20],EAX
+007a865c  LEA EAX,[ESP + 0x9c]
+007a8663  PUSH EAX
+007a8664  MOV EAX,dword ptr [ESP + 0x18]
+007a8668  PUSH EAX
+007a8669  MOV dword ptr [ESP + 0x2c],EDX
+007a866d  MOV EDX,dword ptr [EBX]
+007a866f  PUSH EAX
+007a8670  MOV EAX,dword ptr [EDX + 0x6c]
+007a8673  MOV ECX,EBX
+007a8675  CALL EAX
+007a8677  MOV ECX,dword ptr [ESP + 0x2c]
+007a867b  MOV EDX,dword ptr [ESP + 0x28]
+007a867f  PUSH EAX
+007a8680  MOV EAX,dword ptr [EDX]
+007a8682  PUSH ECX
+007a8683  MOV ECX,EDI
+007a8685  CALL EAX
+007a8687  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a8692  LEA ECX,[ESP + 0x9c]
+007a8699  CALL 0x0080c8e0
+007a869e  MOV ECX,dword ptr [ESP + 0x40]
+007a86a2  ADD dword ptr [ESP + 0x3c],0x4
+007a86a7  ADD ECX,0x1
+007a86aa  CMP ECX,0x8
+007a86ad  MOV dword ptr [ESP + 0x40],ECX
+007a86b1  JL 0x007a83e1
+007a86b7  MOV AL,byte ptr [ESP + 0x1f]
+007a86bb  TEST AL,AL
+007a86bd  JNZ 0x007a87cf
+007a86c3  MOV EAX,dword ptr [ESI + 0x44]
+007a86c6  TEST EAX,EAX
+007a86c8  JZ 0x007a86db
+007a86ca  MOV EDX,dword ptr [EDI]
+007a86cc  PUSH EAX
+007a86cd  MOV EAX,dword ptr [EDX + 0x10]
+007a86d0  MOV ECX,EDI
+007a86d2  CALL EAX
+007a86d4  MOV dword ptr [ESI + 0x44],0x0
+007a86db  PUSH 0x10
+007a86dd  PUSH 0xfe75dc
+007a86e2  LEA ECX,[ESP + 0x4c]
+007a86e6  PUSH ECX
+007a86e7  CALL 0x0062e2d0
+007a86ec  MOV ECX,dword ptr [ESI]
+007a86ee  LEA EAX,[ESP + 0x44]
+007a86f2  PUSH EAX
+007a86f3  MOV dword ptr [ESP + 0x1c],0x736362
+007a86fb  MOV EDX,dword ptr [ECX]
+007a86fd  MOV EDX,dword ptr [EDX + 0x10]
+007a8700  LEA EAX,[ESP + 0x1c]
+007a8704  PUSH EAX
+007a8705  CALL EDX
+007a8707  TEST EAX,EAX
+007a8709  MOV dword ptr [ESP + 0x14],EAX
+007a870d  JZ 0x007a891a
+007a8713  LEA ECX,[ESP + 0x9c]
+007a871a  CALL 0x0080c830
+007a871f  MOV dword ptr [ESP + 0x4d0],0x2
+007a872a  MOV EAX,dword ptr [ESI]
+007a872c  MOV ECX,dword ptr [0x012c856c]
+007a8732  OR byte ptr [ESP + 0xa4],0xc
+007a873a  MOV EAX,dword ptr [EAX + 0xdc]
+007a8740  LEA EDX,[ESP + 0x2c]
+007a8744  MOV dword ptr [ESP + 0x2c],ECX
+007a8748  PUSH EDX
+007a8749  LEA ECX,[ESP + 0xa0]
+007a8750  MOV dword ptr [ESP + 0x34],0x0
+007a8758  MOV dword ptr [ESP + 0x38],EAX
+007a875c  MOV byte ptr [ESP + 0x3c],0xff
+007a8761  CALL 0x0080a7b0
+007a8766  MOV EAX,dword ptr [ESI]
+007a8768  MOV EAX,dword ptr [EAX + 0xdc]
+007a876e  MOV ECX,dword ptr [0x012c8570]
+007a8774  LEA EDX,[ESP + 0x2c]
+007a8778  MOV dword ptr [ESP + 0x2c],ECX
+007a877c  PUSH EDX
+007a877d  LEA ECX,[ESP + 0xa0]
+007a8784  MOV dword ptr [ESP + 0x34],0x0
+007a878c  MOV dword ptr [ESP + 0x38],EAX
+007a8790  MOV byte ptr [ESP + 0x3c],0xff
+007a8795  CALL 0x0080d8a0
+007a879a  MOV EAX,dword ptr [ESI]
+007a879c  MOV ECX,dword ptr [EAX + 0xdc]
+007a87a2  MOV EAX,dword ptr [EDI]
+007a87a4  ADD EAX,0x8
+007a87a7  MOV dword ptr [ESP + 0x20],EAX
+007a87ab  MOV EAX,dword ptr [ESP + 0x14]
+007a87af  LEA EDX,[ESP + 0x9c]
+007a87b6  PUSH EDX
+007a87b7  MOV EDX,dword ptr [EBX]
+007a87b9  PUSH EAX
+007a87ba  MOV dword ptr [ESP + 0x2c],ECX
+007a87be  PUSH EAX
+007a87bf  MOV EAX,dword ptr [EDX + 0x6c]
+007a87c2  MOV ECX,EBX
+007a87c4  CALL EAX
+007a87c6  MOV EDX,dword ptr [ESP + 0x28]
+007a87ca  JMP 0x007a88f4
+007a87cf  MOVZX ECX,AL
+007a87d2  PUSH ECX
+007a87d3  PUSH 0xfe75e8
+007a87d8  LEA EDX,[ESP + 0x4b8]
+007a87df  PUSH 0x10
+007a87e1  PUSH EDX
+007a87e2  CALL 0x009d4f83
+007a87e7  ADD ESP,0x10
+007a87ea  PUSH 0x10
+007a87ec  LEA EAX,[ESP + 0x4b4]
+007a87f3  PUSH EAX
+007a87f4  LEA ECX,[ESP + 0x4c]
+007a87f8  PUSH ECX
+007a87f9  CALL 0x0062e2d0
+007a87fe  MOV ECX,dword ptr [ESI]
+007a8800  LEA EAX,[ESP + 0x44]
+007a8804  PUSH EAX
+007a8805  MOV dword ptr [ESP + 0x1c],0x736362
+007a880d  MOV EDX,dword ptr [ECX]
+007a880f  MOV EDX,dword ptr [EDX + 0x10]
+007a8812  LEA EAX,[ESP + 0x1c]
+007a8816  PUSH EAX
+007a8817  CALL EDX
+007a8819  TEST EAX,EAX
+007a881b  MOV dword ptr [ESP + 0x14],EAX
+007a881f  JZ 0x007a891a
+007a8825  MOV EAX,dword ptr [ESI + 0x44]
+007a8828  TEST EAX,EAX
+007a882a  JZ 0x007a883d
+007a882c  MOV EDX,dword ptr [EDI]
+007a882e  PUSH EAX
+007a882f  MOV EAX,dword ptr [EDX + 0x10]
+007a8832  MOV ECX,EDI
+007a8834  CALL EAX
+007a8836  MOV dword ptr [ESI + 0x44],0x0
+007a883d  LEA ECX,[ESP + 0x9c]
+007a8844  CALL 0x0080c830
+007a8849  MOV dword ptr [ESP + 0x4d0],0x3
+007a8854  MOV ECX,dword ptr [ESI]
+007a8856  OR byte ptr [ESP + 0xa4],0xc
+007a885e  MOV EAX,dword ptr [ECX + 0xdc]
+007a8864  MOV EDX,dword ptr [0x012c856c]
+007a886a  MOV dword ptr [ESP + 0x34],EAX
+007a886e  LEA EAX,[ESP + 0x2c]
+007a8872  PUSH EAX
+007a8873  LEA ECX,[ESP + 0xa0]
+007a887a  MOV dword ptr [ESP + 0x30],EDX
+007a887e  MOV dword ptr [ESP + 0x34],0x0
+007a8886  MOV byte ptr [ESP + 0x3c],0xff
+007a888b  CALL 0x0080a7b0
+007a8890  MOV ECX,dword ptr [ESI]
+007a8892  MOV EAX,dword ptr [ECX + 0xdc]
+007a8898  MOV EDX,dword ptr [0x012c8570]
+007a889e  MOV dword ptr [ESP + 0x34],EAX
+007a88a2  LEA EAX,[ESP + 0x2c]
+007a88a6  PUSH EAX
+007a88a7  LEA ECX,[ESP + 0xa0]
+007a88ae  MOV dword ptr [ESP + 0x30],EDX
+007a88b2  MOV dword ptr [ESP + 0x34],0x0
+007a88ba  MOV byte ptr [ESP + 0x3c],0xff
+007a88bf  CALL 0x0080d8a0
+007a88c4  MOV EAX,dword ptr [EDI]
+007a88c6  MOV ECX,dword ptr [ESI]
+007a88c8  MOV EDX,dword ptr [ECX + 0xdc]
+007a88ce  ADD EAX,0x8
+007a88d1  MOV dword ptr [ESP + 0x20],EAX
+007a88d5  LEA EAX,[ESP + 0x9c]
+007a88dc  PUSH EAX
+007a88dd  MOV EAX,dword ptr [ESP + 0x18]
+007a88e1  PUSH EAX
+007a88e2  MOV dword ptr [ESP + 0x2c],EDX
+007a88e6  MOV EDX,dword ptr [EBX]
+007a88e8  PUSH EAX
+007a88e9  MOV EAX,dword ptr [EDX + 0x6c]
+007a88ec  MOV ECX,EBX
+007a88ee  CALL EAX
+007a88f0  MOV EDX,dword ptr [ESP + 0x28]
+007a88f4  MOV ECX,dword ptr [ESP + 0x2c]
+007a88f8  PUSH EAX
+007a88f9  MOV EAX,dword ptr [EDX]
+007a88fb  PUSH ECX
+007a88fc  MOV ECX,EDI
+007a88fe  CALL EAX
+007a8900  MOV dword ptr [ESI + 0x44],EAX
+007a8903  MOV dword ptr [ESP + 0x4d0],0xffffffff
+007a890e  LEA ECX,[ESP + 0x9c]
+007a8915  CALL 0x0080c8e0
+007a891a  MOV ECX,dword ptr [ESP + 0x4c8]
+007a8921  MOV dword ptr FS:[0x0],ECX
+007a8928  POP ECX
+007a8929  POP EDI
+007a892a  POP ESI
+007a892b  POP EBX
+007a892c  MOV ECX,dword ptr [ESP + 0x4b0]
+007a8933  XOR ECX,ESP
+007a8935  CALL 0x009d20f4
+007a893a  MOV ESP,EBP
+007a893c  POP EBP
+007a893d  RET 0x8

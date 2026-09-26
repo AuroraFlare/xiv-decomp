@@ -1,0 +1,10 @@
+source,evidence
+tools\outputs\lpb\airship_ferry_region_resource_data_20260621\region_resource_all_rows.csv,Mined RegionResourceData rows bind special weather ids to wtr_* resource tokens and DAT keys.
+outputs\citystate-seasonal-scheduler-decomp-atlas-20260703\weather_overlay_scheduler_strings.csv,"Weather overlay DAT string scan surfaces event asset refs, City prop/tree refs, scheduler groups, and VFX scene defs."
+tools\outputs\lpb\decomp_further_20260617\lua\director\weather\weatherdirectorbaseclass.lua,"Recovered client WeatherDirector syncs a 16-bit weatherId and calls player _setWeather(weatherId, 15)."
+Data\scripts\weather_registry.lua,"Auditable allowlists separate weather-only, debug-probe, and combined-event ids by area family."
+Data\scripts\commands\gm\weather.lua,GM command fails closed against the registry; combined ids emit no weather packet and route to !eventdecor.
+Data\scripts\commands\gm\warp.lua,GM warp command hard-forces 8028/wtr_smmn after several primal/Nael trial warps.
+Map Server\Packets\Send\SetWeatherPacket.cs,Server packet encodes weatherId with transitionTime for opcode 0x000D.
+Map Server\WeatherManager.cs,Runtime automatic weather uses SQL pools; fireworks_enabled can force 8029 at night.
+docs\citystate_decor_probe_bridge_atlas_2026-07-03.md,City decor/furnishing schedulers are a separate BG-scheduler layer from weather resource overlays.

@@ -1,0 +1,16 @@
+===== 0x4dd01a =====
+FUN_004dd01a [[004dd01a, 004dd020] [004dd3a9, 004dd3ce]]
+004dd01a  CALL EAX
+004dd01c  JMP 0x004dd3a9
+004dd3a9  MOV ECX,dword ptr [ESP + 0xa08]
+004dd3b0  MOV dword ptr FS:[0x0],ECX
+004dd3b7  POP ECX
+004dd3b8  POP EDI
+004dd3b9  POP ESI
+004dd3ba  POP EBX
+004dd3bb  MOV ECX,dword ptr [ESP + 0x9f0]
+004dd3c2  XOR ECX,ESP
+004dd3c4  CALL 0x009d20f4
+004dd3c9  MOV ESP,EBP
+004dd3cb  POP EBP
+004dd3cc  RET 0x8

@@ -1,0 +1,127 @@
+[
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/golem/golemwhitegeneral.luac",
+    "sha256": "d2f5a0ca993d3066cc018775d22bc5e84bba66e5777f3a0867086214317dbc28",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/golem/golemwhitegeneralnormal.luac",
+    "sha256": "aef2f51231b591981c664c149f47bb470879a807d1640b2edf79f714a1e9ced8",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/golem/golemwhitegeneralnormal2.luac",
+    "sha256": "a1243b91d889ea1aeeeaba5da41c9a642ed739d02cdf4623f0288eba720f4aa5",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/lentigo/lentigowhitegeneralmeteor.luac",
+    "sha256": "72547aa53e699229269834e06aae3cf79b56fcdd9183690b4afe04b348f8492d",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/lentigo/lentigowhitegeneralws.luac",
+    "sha256": "7273643e2578f6bbbda7b96f668bf2b98656f18af729ac07af5768882fe0b3c9",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/whitegeneral/whitegeneralbaseclass.luac",
+    "sha256": "eeb6949a1bc7aa9affde9b6a969f6c3a52a14d03d30630a927c1df1fc97902b0",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/whitegeneral/whitegenerallesser.luac",
+    "sha256": "242d69a9776f689d2ef807e70638e499fe194ba865632f428e679b8a504e1eb8",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/whitegeneral/whitegeneralmeteor.luac",
+    "sha256": "3a50ecb5fe884b1557793ed3631b8d5a58d739385d1eb9c2f359de4975a7fa1d",
+    "methods": {
+      "initForBattle": {
+        "parameters": 1,
+        "constants": [
+          "_setGroundOn"
+        ],
+        "instructions": 4
+      }
+    }
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/chara/npc/monster/whitegeneral/whitegeneralnormal.luac",
+    "sha256": "56e775cf30187e3b9008eaeb319f5aff679574e066f0220f91a75a01082f112e",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/command/game/weaponskill/whitegeneralattackweaponskill.luac",
+    "sha256": "6adc82fdd9f38c5411a9f8b0be846294874ded23838ae18987acfb12ea412635",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/director/instanceraid/instanceraidlesserwhitegeneral.luac",
+    "sha256": "5f5d1b3e8dfe776d208803166eed1b92c987817a43112a26d5ba50c7290433d4",
+    "methods": {
+      "processStartEvent": {
+        "parameters": 2,
+        "constants": [
+          "executeCutScene",
+          "gc010715"
+        ],
+        "instructions": 6
+      },
+      "processCutSceneEvent": {
+        "parameters": 4,
+        "constants": [
+          "worldMaster",
+          "_getMyPlayer",
+          "_fadeOut",
+          1.0,
+          "_waitForFading",
+          "_setWeather",
+          0.0,
+          "executeCutScene",
+          "_fadeIn",
+          "_wait"
+        ],
+        "instructions": 24
+      },
+      "processDummy": {
+        "parameters": 1,
+        "constants": [],
+        "instructions": 1
+      }
+    }
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/director/instanceraid/instanceraidnormalwhitegeneral.luac",
+    "sha256": "9cb91d078304277fd3a8d97e562c64e049d2b241332aafcc0bef633bace769ee",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/director/monster/whitegeneral/monsterwhitegeneralbaseclass.luac",
+    "sha256": "2510b9bc678cede76b664ff97be6ba9f727bb6126ba425c8047f4b88bc005985",
+    "methods": {}
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/director/monster/whitegeneral/monsterwhitegenerallesser.luac",
+    "sha256": "d40e9eabc3cb3496f1763ca4d4186dbf4e65c12bdc51668e316bae972ff2385a",
+    "methods": {
+      "init": {
+        "parameters": 1,
+        "constants": [],
+        "instructions": 1
+      }
+    }
+  },
+  {
+    "path": "tools/outputs/lpb/content_systems_20260612/luac/director/monster/whitegeneral/monsterwhitegeneralnormal.luac",
+    "sha256": "e1f8df9c91f24ab2624fcedd3159ef7bb615bbfb8aed7d608b0159b174b13d1e",
+    "methods": {
+      "init": {
+        "parameters": 1,
+        "constants": [],
+        "instructions": 1
+      }
+    }
+  }
+]

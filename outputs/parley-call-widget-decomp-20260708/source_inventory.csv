@@ -1,0 +1,28 @@
+surface,path,exists,line_count,sha1_12,role,signals
+parley_judge,tools/outputs/lpb/decomp_further_20260617/lua/judge/negotiation/negotiationjudge.lua,True,74,90d12789a418,Event-mode wrapper for Ask/Negotiation* widgets.,_runCharaScheduler; askEventModeWidgetYield; closeEventModeWidget; openEventModeWidgetYield; selectEventModeWidgetYield; updateEventModeWidget
+parley_command_client,tools/outputs/lpb/decomp_further_20260617/lua/command/game/negotiationcommand.lua,True,31,711a56c121e9,Recovered client command validation contract.,
+parley_widget,tools/outputs/lpb/decomp_further_20260617/lua/widget/ask/negotiationwidget.lua,True,946,b27f4329adf6,Main tile/minigame widget.,7103; 7107; 7124; 7125; 7126; openChildWidget
+parley_list_widget,tools/outputs/lpb/decomp_further_20260617/lua/widget/ask/negotiationlistwidget.lua,True,125,abf0aea14f70,Topic/list selector before Parley.,7101; 7104
+parley_ask_widget,tools/outputs/lpb/decomp_further_20260617/lua/widget/ask/negotiationaskwidget.lua,True,64,4a56cbb34f63,Parley or give-up ask surface.,7102
+parley_ability_widget,tools/outputs/lpb/decomp_further_20260617/lua/widget/ask/negotiationabilitylistwidget.lua,True,169,c4d2c911512b,Five ability selector popup.,7108; 7109; 7110; 7111; 7112; 7113; 7114; 7115; 7116; 7117; closeEventModeWidget
+parley_message_widget,tools/outputs/lpb/decomp_further_20260617/lua/widget/negotiationmessagewidget.lua,True,24,133b3273878e,Floating negotiation turn/message surface.,7122; 7123
+desktop_widget,tools/outputs/lpb/decomp_further_20260617/lua/widget/desktopwidget_connector.lua,True,15467,9ccfe6e60403,Ready-command and shortcut bridge.,24213; 291; 292; 293; 29497; _runCharaScheduler; askEventModeWidgetYield; canTargetNegotiation; closeEventModeWidget; executeNegotiationCommand; executePlayerCommand; executePlayerCommandLocal; executePlayerNPCLinkshellChat; getLinkpearlStatus; getNpcLinkshellChatLinkshellLength; hasNpcLinkshell; isNpcLinkshellChatCalling; openChildWidget; openEventModeWidgetYield; selectEventModeWidgetYield
+main_menu_widget,tools/outputs/lpb/decomp_further_20260617/lua/widget/mainmenuwidget.lua,True,1241,f63b9d880b84,Main-menu ready command icon/help bridge.,2124; 29497; 30232; 74619; 75732; canTargetNegotiation; executePlayerCommand
+console_icon_tray,tools/outputs/lpb/decomp_further_20260617/lua/widget/consoleicontraywidget.lua,True,1089,f31301f45019,Console tray Parley and NPC Linkpearl buttons.,291; 292; 293; canTargetNegotiation; executeNegotiationCommand; getLinkpearlStatus; openChildWidget; updateQuestLinkPerlIcon
+npc_linkshell_list_widget,tools/outputs/lpb/decomp_more_20260617/lua/widget/npclinkshelllistwidget.lua,True,172,f5dbca03ceec,NPC Linkpearl list and per-linkpearl icon state.,291; 292; 293; 3482; 75802; 75803; 75804; executePlayerNPCLinkshellChat; getNpcLinkshellChatLinkshellLength; hasNpcLinkshell; isNpcLinkshellChatCalling
+npc_linkshell_command_client,tools/outputs/lpb/decomp_more_20260617/lua/command/system/npclinkshellchatcommand.lua,True,5,3252c4a4e2b8,Recovered client canFire guard.,isNpcLinkshellChatCalling
+local_parley_command_stub,Data/scripts/commands/NegotiationCommand.lua,True,56,eb8fe3e3566e,Local probe script documenting widget calls and update codes.,
+local_npc_linkshell_command,Data/scripts/commands/NpcLinkshellChatCommand.lua,True,17,bc84cebd1ccd,Local command delegates NPC LS handling to active quests.,HandleNpcLs
+local_together_we_stand,Data/scripts/quests/man/man206.lua,True,598,ad68f55ee72a,Together We Stand NPC Linkpearl sequence.,NewNpcLsMsg; StartSequenceForNpcLs
+local_player,Map Server/Actors/Chara/Player/Player.cs,True,12625,f5454397c70e,"Ready-command, negotiation flag, and NPC LS state sync.",22009; 29497; HandleNpcLs; SetNpcLs
+local_battle_save,Map Server/Actors/Chara/BattleSave.cs,True,42,a9d4e3b59acd,Negotiation flag storage.,
+local_quest_runtime,Map Server/Actors/Quest/Quest.cs,True,403,ea7ade70b530,NPC LS message lifecycle and sequence transition helper.,25119; EndOfNpcLsMsgs; NewNpcLsMsg; ReadNpcLsMsg; SetNpcLs; StartSequenceForNpcLs
+ai_command_dat,AI Scripts/command.csv,True,2701,9a736b3da268,Recovered command labels/descriptions.,22009; 22901; 24213; 29497
+local_command_dat,Data/command.csv,True,1664,cbba92dabbc7,Local command row flags.,22009; 22901; 24213; 29497
+server_battle_commands_sql,Data/sql/server_battle_commands.sql,True,1894,35c74dfe4844,Local battle command row for Parley.,29497
+man300_dat_text,docs/Dat Mining/man300.csv,True,366,d25078946f29,Toll of the Warden dialogue and Parley references.,291; 292; 293
+man206_dat_text,docs/Dat Mining/man206.csv,True,374,5819bbf8604e,Together We Stand dialogue and linkpearl references.,291; 292; 293
+negotiation_table_text,docs/Dat Mining/xtx_negotiationTable.csv,True,64,c9e656e65444,Parley titles and ask text.,
+negotiation_item_text,docs/Dat Mining/xtx_negotiationItem.csv,True,93,0be15be027ea,Parley topic/item display text.,
+negotiation_item_data,docs/Dat Mining/negotiationItem.csv,True,52,2a652bac3f0b,Parley topic/item data id bridge.,
+patch_119_notes,docs/patches/Patch_1.19.md,True,1525,83afa35549de,Patch note anchor for direct NPC Linkpearl display.,

@@ -1,0 +1,10 @@
+message_or_method,source_lines,behavior,widget_calls
+setHamletID,3-24,ContentID 8/9/10 maps hamletID 1/2/3.,none
+processInitialize,32-85,"Initializes hamletRank, cargoTarget, battleValue, bossFlag, harvestTbl[3], lineStatusTbl[3], goodsStatusTbl[4], fieldBuffTbl[6].",none
+processStartEffect,89-96,printNPCSay(1); open public effect widget 14/15/16 by hamletID.,desktopWidget.openPublicEffectWidget
+processFailedEffect,97-100,printNPCSay(3); open public effect widget 20.,desktopWidget.openPublicEffectWidget
+localClearEvent,101-106,"printNPCSay(2); if player has hamlet defense score, asks score widget for current content ID.",desktopWidget.askHamletDefenseScoreWidget
+openInformationWidget,107-109,Opens live hamlet execution widget.,desktopWidget.openHamletExecutionWidget
+processUserMessage 1..10,110-188,"Updates director work tables and pushes state into HamletDefenseWidget when present. Exact Lua is heavily decompiled, but final fan-out calls title/timer, defense lines, goods, target goods, war potential, gathering items, army buffs, enemy buffs, boss status, popup info.",getHamletExecutionWidget + cmdSet* methods
+dispInformation,189-248,"Maps message IDs 11..28 to local text ID, army/enemy flag, and optional buff icon; calls popup and worldMaster:notify.",desktopWidget.getHamletPopupWidget
+printNPCSay/getLocalText,249-271,Logs local text through showLog using hamlet speaker IDs 1600146/1200220/1000062 and local text table.,desktopWidget.showLog

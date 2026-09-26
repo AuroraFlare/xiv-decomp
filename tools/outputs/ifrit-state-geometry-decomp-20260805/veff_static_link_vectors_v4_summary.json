@@ -1,0 +1,150 @@
+{
+  "source": "client/chara/mon/m999/equ/e001/met_mdl/0001",
+  "source_sha256": "c80a1e587b5b0e21cc19cad2baa08c75ed31482ea3fd5219e125053c00e3b105",
+  "rows": 150,
+  "states": {
+    "4": {
+      "semantic": "Radiant Plume localized state package",
+      "lockstep_record_count_including_two_prefix_records": 66,
+      "ordinary_paired_control_count": 64,
+      "vectors": {
+        "head_00_04": {
+          "records_with_vector": 44,
+          "key_count": 44,
+          "link_class_counts": {
+            "0": 12,
+            "1": 32
+          },
+          "unique_key_counts": {
+            "0x00000000": 4,
+            "0x00000001": 2,
+            "0x00000002": 1,
+            "0x00000040": 1,
+            "0x00000041": 1,
+            "0x00000B36": 1,
+            "0x00000B47": 1,
+            "0x00003068": 1,
+            "0x10000000": 32
+          }
+        },
+        "tail_14_18": {
+          "records_with_vector": 21,
+          "key_count": 53,
+          "link_class_counts": {
+            "0": 41,
+            "1": 12
+          },
+          "unique_key_counts": {
+            "0x00010000": 1,
+            "0x00010001": 1,
+            "0x00010002": 1,
+            "0x00010003": 1,
+            "0x00010004": 1,
+            "0x00020000": 1,
+            "0x00020001": 1,
+            "0x00020002": 1,
+            "0x00020003": 1,
+            "0x00020004": 1,
+            "0x00030000": 1,
+            "0x00030001": 1,
+            "0x00030002": 1,
+            "0x00030003": 1,
+            "0x00030004": 1,
+            "0x00040000": 1,
+            "0x00040001": 1,
+            "0x00040002": 1,
+            "0x00040003": 1,
+            "0x00040004": 1,
+            "0x00050000": 1,
+            "0x00050001": 1,
+            "0x00050002": 1,
+            "0x00050003": 1,
+            "0x00050004": 1,
+            "0x00060000": 1,
+            "0x00060001": 1,
+            "0x00060002": 1,
+            "0x00060003": 1,
+            "0x00060004": 1,
+            "0x00070000": 1,
+            "0x00070001": 1,
+            "0x00070002": 1,
+            "0x00070003": 1,
+            "0x00070004": 1,
+            "0x00080000": 1,
+            "0x00080001": 1,
+            "0x00080002": 1,
+            "0x00080003": 1,
+            "0x00080004": 1,
+            "0x00090001": 1,
+            "0x10000000": 12
+          }
+        }
+      }
+    },
+    "5": {
+      "semantic": "Eruption pre-impact ground formation",
+      "lockstep_record_count_including_two_prefix_records": 35,
+      "ordinary_paired_control_count": 33,
+      "vectors": {
+        "head_00_04": {
+          "records_with_vector": 21,
+          "key_count": 21,
+          "link_class_counts": {
+            "0": 12,
+            "1": 9
+          },
+          "unique_key_counts": {
+            "0x00000000": 4,
+            "0x00000001": 3,
+            "0x00000015": 1,
+            "0x00000022": 1,
+            "0x00000902": 1,
+            "0x00000944": 1,
+            "0x00002198": 1,
+            "0x10000000": 9
+          }
+        },
+        "tail_14_18": {
+          "records_with_vector": 11,
+          "key_count": 32,
+          "link_class_counts": {
+            "0": 18,
+            "1": 14
+          },
+          "unique_key_counts": {
+            "0x00010000": 1,
+            "0x00010001": 1,
+            "0x00010002": 1,
+            "0x00010003": 1,
+            "0x00010004": 1,
+            "0x00020000": 1,
+            "0x00020001": 1,
+            "0x00020002": 1,
+            "0x00020003": 1,
+            "0x00020004": 1,
+            "0x00030000": 1,
+            "0x00030001": 1,
+            "0x00030002": 1,
+            "0x00030003": 1,
+            "0x00030004": 1,
+            "0x00040001": 1,
+            "0x00040002": 1,
+            "0x00040003": 1,
+            "0x10000000": 12,
+            "0x100A0000": 2
+          }
+        }
+      }
+    }
+  },
+  "confirmed": [
+    "0x00BD13B0 constructs the 0x24 and 0x1c tables with one shared count",
+    "the retail loader walks the tables in lockstep",
+    "both 0x1c pointer/count pairs address QIX-class keys"
+  ],
+  "supersedes": [
+    "veff_static_links_v2.csv as a complete link inventory",
+    "the claim that same-index 0x24/0x1c joins are only mechanical"
+  ],
+  "guard": "Source-vector identity and paired ownership are exact. The compaction mapping from head_00_04/tail_14_18 to resolver destinations +0x34/+0x3c is not yet proven, so no ordinary-versus-expression label is guessed."
+}

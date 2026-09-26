@@ -1,0 +1,168 @@
+## startNQCutScene (root/proto1)
+source=nil lines=6895..6909 params=3 nups=0 vararg=3 stack=13 code=20 constants=7 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = 'worldMaster'
+K001 = 'createCutScene'
+K002 = 'startCutScene'
+K003 = 1.0
+K004 = 61.0
+K005 = true
+K006 = '_delete'
+
+### instructions
+pc 000 off 0x000776 raw 00000185  GETGLOBAL R6 0 ; K0='worldMaster'
+pc 001 off 0x00077A raw 0340418B  SELF      R6 R6 K1('createCutScene')
+pc 002 off 0x00077E raw 00800200  MOVE      R8 1 0
+pc 003 off 0x000782 raw 00000240  MOVE      R9 0 0
+pc 004 off 0x000786 raw 0200819C  CALL      R6 4 2
+pc 005 off 0x00078A raw 034081CB  SELF      R7 R6 K2('startCutScene')
+pc 006 off 0x00078E raw 0000C241  LOADK     R9 3 ; K3=1.0
+pc 007 off 0x000792 raw 00010281  LOADK     R10 4 ; K4=61.0
+pc 008 off 0x000796 raw 010002C0  MOVE      R11 2 0
+pc 009 off 0x00079A raw 00000325  VARARG    R12 0 0
+pc 010 off 0x00079E raw 0000C1DC  CALL      R7 0 3
+pc 011 off 0x0007A2 raw 04000140  MOVE      R5 8 0
+pc 012 off 0x0007A6 raw 03800100  MOVE      R4 7 0
+pc 013 off 0x0007AA raw 02414017  EQ        R0 R4 K5(true) ; skip next when comparison != False
+pc 014 off 0x0007AE raw 80008016  JMP       R0 +3 ; -> pc 018
+pc 015 off 0x0007B2 raw 034181CB  SELF      R7 R6 K6('_delete')
+pc 016 off 0x0007B6 raw 010041DC  CALL      R7 2 1
+pc 017 off 0x0007BA raw 7FFFC016  JMP       R0 +0 ; -> pc 018
+pc 018 off 0x0007BE raw 0100015E  RETURN    R5 2 0
+pc 019 off 0x0007C2 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..013 -> B014, B015
+B014 pc 014..014 -> B018
+B015 pc 015..017 -> B018
+B018 pc 018..018 -> exit
+B019 pc 019..019 -> exit
+
+## startFadeOutCutSceneDefault (root/proto6)
+source=nil lines=7166..7172 params=2 nups=0 vararg=0 stack=6 code=7 constants=3 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = 1.0
+K001 = '_fadeOut'
+K002 = '_waitForFading'
+
+### instructions
+pc 000 off 0x000E7F raw 00000081  LOADK     R2 0 ; K0=1.0
+pc 001 off 0x000E83 raw 00C040CB  SELF      R3 R1 K1('_fadeOut')
+pc 002 off 0x000E87 raw 01000140  MOVE      R5 2 0
+pc 003 off 0x000E8B raw 018040DC  CALL      R3 3 1
+pc 004 off 0x000E8F raw 00C080CB  SELF      R3 R1 K2('_waitForFading')
+pc 005 off 0x000E93 raw 010040DC  CALL      R3 2 1
+pc 006 off 0x000E97 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..006 -> exit
+
+## startFadeInCutSceneDefault (root/proto7)
+source=nil lines=7180..7189 params=2 nups=0 vararg=0 stack=6 code=10 constants=4 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = 1.0
+K001 = '_waitForMapLoaded'
+K002 = '_fadeIn'
+K003 = '_waitForFading'
+
+### instructions
+pc 000 off 0x000EEE raw 00000081  LOADK     R2 0 ; K0=1.0
+pc 001 off 0x000EF2 raw 00C040CB  SELF      R3 R1 K1('_waitForMapLoaded')
+pc 002 off 0x000EF6 raw 02800143  LOADNIL   R5 5 0
+pc 003 off 0x000EFA raw 018040DC  CALL      R3 3 1
+pc 004 off 0x000EFE raw 00C080CB  SELF      R3 R1 K2('_fadeIn')
+pc 005 off 0x000F02 raw 01000140  MOVE      R5 2 0
+pc 006 off 0x000F06 raw 018040DC  CALL      R3 3 1
+pc 007 off 0x000F0A raw 00C0C0CB  SELF      R3 R1 K3('_waitForFading')
+pc 008 off 0x000F0E raw 010040DC  CALL      R3 2 1
+pc 009 off 0x000F12 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..009 -> exit
+
+## startFadeInCutSceneAfterWarp (root/proto10)
+source=nil lines=7231..7241 params=2 nups=0 vararg=0 stack=5 code=13 constants=5 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = '_getCurrentAreaMaster'
+K001 = '_getZoneName'
+K002 = 'test'
+K003 = 'startFadeInCutSceneDefault'
+K004 = '_fadeInAfterWarp'
+
+### instructions
+pc 000 off 0x001042 raw 0040008B  SELF      R2 R0 K0('_getCurrentAreaMaster')
+pc 001 off 0x001046 raw 0100809C  CALL      R2 2 2
+pc 002 off 0x00104A raw 0140408B  SELF      R2 R2 K1('_getZoneName')
+pc 003 off 0x00104E raw 0100809C  CALL      R2 2 2
+pc 004 off 0x001052 raw 01408017  EQ        R0 R2 K2('test') ; skip next when comparison != False
+pc 005 off 0x001056 raw 8000C016  JMP       R0 +4 ; -> pc 010
+pc 006 off 0x00105A raw 0040C08B  SELF      R2 R0 K3('startFadeInCutSceneDefault')
+pc 007 off 0x00105E raw 00800100  MOVE      R4 1 0
+pc 008 off 0x001062 raw 0180409C  CALL      R2 3 1
+pc 009 off 0x001066 raw 0080001E  RETURN    R0 1 0
+pc 010 off 0x00106A raw 00C1008B  SELF      R2 R1 K4('_fadeInAfterWarp')
+pc 011 off 0x00106E raw 0100409C  CALL      R2 2 1
+pc 012 off 0x001072 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..004 -> B005, B006
+B005 pc 005..005 -> B010
+B006 pc 006..009 -> exit
+B010 pc 010..012 -> exit
+
+## questBaseRewardSeting (root/proto33)
+source=nil lines=7816..7822 params=3 nups=0 vararg=0 stack=6 code=9 constants=4 children=0
+
+### locals
+<stripped>
+
+### upvalues
+<stripped>
+
+### constants
+K000 = '_fadeInNowLoadingForNoticeEventJustInArea'
+K001 = 'startFadeInCutSceneDefault'
+K002 = '_wait'
+K003 = 0.5
+
+### instructions
+pc 000 off 0x0023B6 raw 00C000CB  SELF      R3 R1 K0('_fadeInNowLoadingForNoticeEventJustInArea')
+pc 001 off 0x0023BA raw 010040DC  CALL      R3 2 1
+pc 002 off 0x0023BE raw 004040CB  SELF      R3 R0 K1('startFadeInCutSceneDefault')
+pc 003 off 0x0023C2 raw 00800140  MOVE      R5 1 0
+pc 004 off 0x0023C6 raw 018040DC  CALL      R3 3 1
+pc 005 off 0x0023CA raw 004080CB  SELF      R3 R0 K2('_wait')
+pc 006 off 0x0023CE raw 0000C141  LOADK     R5 3 ; K3=0.5
+pc 007 off 0x0023D2 raw 018040DC  CALL      R3 3 1
+pc 008 off 0x0023D6 raw 0080001E  RETURN    R0 1 0
+
+### basic blocks
+B000 pc 000..008 -> exit

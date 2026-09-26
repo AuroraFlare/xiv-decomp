@@ -1,0 +1,83 @@
+code,quest_id,quest_name,source_file,line,function,operation,owner_expr,flag_expr,flag_value,line_text
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,70,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT0,0,local rostnsthalCanPush = not data:GetFlag(FLAG_SEQ000_MINITUT0);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,71,onStateChange,GetFlag,data,FLAG_SEQ000_TARGET_STARTED,4,local rostnsthalCanTalk = data:GetFlag(FLAG_SEQ000_TARGET_STARTED);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,72,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT1,1,local rostnsthalFlag = (rostnsthalCanTalk and not data:GetFlag(FLAG_SEQ000_MINITUT1) and QFLAG_TALK or QFLAG_NONE);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,73,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT2,2,local vixenFlag = (not data:GetFlag(FLAG_SEQ000_MINITUT2) and QFLAG_TALK or QFLAG_NONE);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,74,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT3,3,local babyfaceFlag = (not data:GetFlag(FLAG_SEQ000_MINITUT3) and QFLAG_TALK or QFLAG_NONE);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,77,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT1,1,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3)) and QFLAG_PUSH or QFLAG_NONE;
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,77,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT2,2,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3)) and QFLAG_PUSH or QFLAG_NONE;
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,77,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT3,3,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3)) and QFLAG_PUSH or QFLAG_NONE;
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,80,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT1,1,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3));
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,80,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT2,2,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3));
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,80,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT3,3,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3));
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,139,onPush,GetFlag,data,FLAG_SEQ000_TARGET_STARTED,4,if (not data:GetFlag(FLAG_SEQ000_TARGET_STARTED)) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,141,onPush,SetFlag,data,FLAG_SEQ000_TARGET_STARTED,4,data:SetFlag(FLAG_SEQ000_TARGET_STARTED);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,182,seq000_onTalk,GetFlag,data,FLAG_SEQ000_TARGET_STARTED,4,if (not data:GetFlag(FLAG_SEQ000_TARGET_STARTED)) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,187,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (not data:GetFlag(FLAG_SEQ000_MINITUT0)) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,189,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT0,0,data:SetFlag(FLAG_SEQ000_MINITUT0);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,192,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if (not data:GetFlag(FLAG_SEQ000_MINITUT1)) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,193,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT1,1,data:SetFlag(FLAG_SEQ000_MINITUT1);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,205,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT3,3,if (not data:GetFlag(FLAG_SEQ000_MINITUT3)) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,207,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT3,3,data:SetFlag(FLAG_SEQ000_MINITUT3);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,220,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT2,2,if (not data:GetFlag(FLAG_SEQ000_MINITUT2)) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,222,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT2,2,data:SetFlag(FLAG_SEQ000_MINITUT2);
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,274,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if ((not data:GetFlag(FLAG_SEQ000_MINITUT1)) or (not data:GetFlag(FLAG_SEQ000_MINITUT0))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,274,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if ((not data:GetFlag(FLAG_SEQ000_MINITUT1)) or (not data:GetFlag(FLAG_SEQ000_MINITUT0))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,278,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if ((data:GetFlag(FLAG_SEQ000_MINITUT0)) and (not data:GetFlag(FLAG_SEQ000_MINITUT2))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,278,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT2,2,if ((data:GetFlag(FLAG_SEQ000_MINITUT0)) and (not data:GetFlag(FLAG_SEQ000_MINITUT2))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,282,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if ((data:GetFlag(FLAG_SEQ000_MINITUT0)) and (not data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,282,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT3,3,if ((data:GetFlag(FLAG_SEQ000_MINITUT0)) and (not data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,286,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if ((data:GetFlag(FLAG_SEQ000_MINITUT1)) and (data:GetFlag(FLAG_SEQ000_MINITUT2)) and (data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,286,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT2,2,if ((data:GetFlag(FLAG_SEQ000_MINITUT1)) and (data:GetFlag(FLAG_SEQ000_MINITUT2)) and (data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,286,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT3,3,if ((data:GetFlag(FLAG_SEQ000_MINITUT1)) and (data:GetFlag(FLAG_SEQ000_MINITUT2)) and (data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,76,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT0,0,local ydaCanPush = not data:GetFlag(FLAG_SEQ000_MINITUT0);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,78,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT1,1,local papalymoFlag = (not data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT0) and QFLAG_TALK or QFLAG_NONE);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,78,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT0,0,local papalymoFlag = (not data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT0) and QFLAG_TALK or QFLAG_NONE);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,80,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (not data:GetFlag(FLAG_SEQ000_MINITUT0)) or (data:GetFlag(FLAG_SEQ000_MINITUT1)) then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,80,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if (not data:GetFlag(FLAG_SEQ000_MINITUT0)) or (data:GetFlag(FLAG_SEQ000_MINITUT1)) then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,90,onStateChange,GetFlag,data,FLAG_SEQ010_TKEBBE,0,local tkebbeTalk = (not data:GetFlag(FLAG_SEQ010_TKEBBE) and QFLAG_TALK or QFLAG_NONE);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,120,onPush,GetFlag,data,FLAG_SEQ000_TARGET_STARTED,3,if (not data:GetFlag(FLAG_SEQ000_TARGET_STARTED)) then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,122,onPush,SetFlag,data,FLAG_SEQ000_TARGET_STARTED,3,data:SetFlag(FLAG_SEQ000_TARGET_STARTED);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,151,seq000_onTalk,GetFlag,data,FLAG_SEQ000_TARGET_STARTED,3,if (not data:GetFlag(FLAG_SEQ000_TARGET_STARTED)) then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,155,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (not data:GetFlag(FLAG_SEQ000_MINITUT0)) then -- If Talk tutorial
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,157,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT0,0,data:SetFlag(FLAG_SEQ000_MINITUT0); -- Disable Yda's PushEvent and set up Papalymo
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,158,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT1,1,elseif (data:GetFlag(FLAG_SEQ000_MINITUT1)) then -- If Talked to after Papaylmo
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,164,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (data:GetFlag(FLAG_SEQ000_MINITUT0)) then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,166,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT1,1,data:SetFlag(FLAG_SEQ000_MINITUT1);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,185,seq010_onTalk,SetFlag,data,FLAG_SEQ010_TKEBBE,0,data:SetFlag(FLAG_SEQ010_TKEBBE);
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,199,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (not data:GetFlag(FLAG_SEQ000_MINITUT0)) or (data:GetFlag(FLAG_SEQ000_MINITUT1))  then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,199,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if (not data:GetFlag(FLAG_SEQ000_MINITUT0)) or (data:GetFlag(FLAG_SEQ000_MINITUT1))  then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,203,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (data:GetFlag(FLAG_SEQ000_MINITUT0)) and (not data:GetFlag(FLAG_SEQ000_MINITUT1)) then
+man0g0,110005,Sundered Skies,Data/scripts/quests/man/man0g0.lua,203,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if (data:GetFlag(FLAG_SEQ000_MINITUT0)) and (not data:GetFlag(FLAG_SEQ000_MINITUT1)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,117,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT0,0,local asciliaCanPush = not data:GetFlag(FLAG_SEQ000_MINITUT0);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,118,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT1,1,local asciliaFlag = (not data:GetFlag(FLAG_SEQ000_MINITUT1)) and QFLAG_TALK or QFLAG_NONE;
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,119,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT2,2,local fretfulfarmhandFlag = (not data:GetFlag(FLAG_SEQ000_MINITUT2) and QFLAG_TALK or QFLAG_OFF);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,120,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT3,3,local gildiggingmistressFlag = (not data:GetFlag(FLAG_SEQ000_MINITUT3) and QFLAG_TALK or QFLAG_OFF);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,124,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT1,1,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3)) and QFLAG_PUSH or QFLAG_NONE;
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,124,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT2,2,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3)) and QFLAG_PUSH or QFLAG_NONE;
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,124,onStateChange,GetFlag,data,FLAG_SEQ000_MINITUT3,3,(data:GetFlag(FLAG_SEQ000_MINITUT1) and data:GetFlag(FLAG_SEQ000_MINITUT2) and data:GetFlag(FLAG_SEQ000_MINITUT3)) and QFLAG_PUSH or QFLAG_NONE;
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,147,onStateChange,GetFlag,data,FLAG_SEQ010_TALK0,0,local yayatokiFlag = (not data:GetFlag(FLAG_SEQ010_TALK0) and QFLAG_TALK or QFLAG_OFF);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,181,onPush,GetFlag,data,FLAG_SEQ000_TARGET_STARTED,4,if (not data:GetFlag(FLAG_SEQ000_TARGET_STARTED)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,183,onPush,SetFlag,data,FLAG_SEQ000_TARGET_STARTED,4,data:SetFlag(FLAG_SEQ000_TARGET_STARTED);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,188,onPush,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if (data:GetFlag(FLAG_SEQ000_MINITUT1) and
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,189,onPush,GetFlag,data,FLAG_SEQ000_MINITUT2,2,data:GetFlag(FLAG_SEQ000_MINITUT2) and
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,190,onPush,GetFlag,data,FLAG_SEQ000_MINITUT3,3,data:GetFlag(FLAG_SEQ000_MINITUT3)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,224,seq000_onTalk,GetFlag,data,FLAG_SEQ000_TARGET_STARTED,4,if (not data:GetFlag(FLAG_SEQ000_TARGET_STARTED)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,228,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (not data:GetFlag(FLAG_SEQ000_MINITUT0)) then -- If Talk tutorial
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,230,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT0,0,data:SetFlag(FLAG_SEQ000_MINITUT0); -- Used to disable her PushEvent / Allow for her next TalkEvent
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,233,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT1,1,data:SetFlag(FLAG_SEQ000_MINITUT1); -- Ascilia has now been talked to.
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,236,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT2,2,if (not data:GetFlag(FLAG_SEQ000_MINITUT2)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,238,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT2,2,data:SetFlag(FLAG_SEQ000_MINITUT2);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,243,seq000_onTalk,GetFlag,data,FLAG_SEQ000_MINITUT3,3,if (not data:GetFlag(FLAG_SEQ000_MINITUT3)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,245,seq000_onTalk,SetFlag,data,FLAG_SEQ000_MINITUT3,3,data:SetFlag(FLAG_SEQ000_MINITUT3);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,288,seq010_onTalk,GetFlag,data,FLAG_SEQ010_TALK0,0,if (not data:GetFlag(FLAG_SEQ010_TALK0)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,290,seq010_onTalk,SetFlag,data,FLAG_SEQ010_TALK0,0,data:SetFlag(FLAG_SEQ010_TALK0);
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,291,seq010_onTalk,GetFlag,data,FLAG_SEQ010_TALK0,0,elseif (data:GetFlag(FLAG_SEQ010_TALK0)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,305,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT0,0,if (data:GetFlag(FLAG_SEQ000_MINITUT0)) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,306,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT1,1,"if (not data:GetFlag(FLAG_SEQ000_MINITUT1)) then table.insert(possibleMarkers, MRKR_ASCILIA); end"
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,307,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT2,2,"if (not data:GetFlag(FLAG_SEQ000_MINITUT2)) then table.insert(possibleMarkers, MRKR_FRETFUL_FARMHAND); end"
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,308,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT3,3,"if (not data:GetFlag(FLAG_SEQ000_MINITUT3)) then table.insert(possibleMarkers, MRKR_GIL_DIGGING_MISTRESS); end"
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,311,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT1,1,if ((data:GetFlag(FLAG_SEQ000_MINITUT1)) and (data:GetFlag(FLAG_SEQ000_MINITUT2)) and (data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,311,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT2,2,if ((data:GetFlag(FLAG_SEQ000_MINITUT1)) and (data:GetFlag(FLAG_SEQ000_MINITUT2)) and (data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,311,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ000_MINITUT3,3,if ((data:GetFlag(FLAG_SEQ000_MINITUT1)) and (data:GetFlag(FLAG_SEQ000_MINITUT2)) and (data:GetFlag(FLAG_SEQ000_MINITUT3))) then
+man0u0,110009,Flowers for All,Data/scripts/quests/man/man0u0.lua,315,getJournalMapMarkerList,GetFlag,data,FLAG_SEQ010_TALK0,0,if (not data:GetFlag(FLAG_SEQ010_TALK0)) then

@@ -1,0 +1,13 @@
+code,quest_id,quest_name,sequence,phase,server_anchor,client_anchor,expected_state
+man0l0,110001,Shapeless Melody,000,city tutorial setup,Data/scripts/quests/man/man0l0.lua,processTtrNomal002;processTtrNomal003,required opening talks and tutorial pushes unlock the content entry
+man0l0,110001,Shapeless Melody,005,private content fight,man0l01 / Quest/QuestDirectorMan0l001,processTtrBtl001;processTtrBtl002,kill 3x 2205403 then send attention 51073:1
+man0l0,110001,Shapeless Melody,005 -> 010,post-fight return,Data/scripts/directors/Quest/QuestDirectorMan0l001.lua,processEvent000_3,"finish content, warp to zone 230 type 1, start SEQ_010"
+man0l0,110001,Shapeless Melody,010,city handoff,Data/scripts/quests/man/man0l0.lua,Hob choice 1 -> Man0l1,next city quest replacement only occurs through the explicit handoff actor
+man0g0,110005,Sundered Skies,000,city tutorial setup,Data/scripts/quests/man/man0g0.lua,processTtrNomal002;processTtrNomal003,required opening talks and tutorial pushes unlock the content entry
+man0g0,110005,Sundered Skies,005,private content fight,man0g01 / Quest/QuestDirectorMan0g001,processTtrBtl001;processTtrBtl002,kill 3x 2201407 then send attention 51073:2
+man0g0,110005,Sundered Skies,005 -> 010,post-fight return,Data/scripts/directors/Quest/QuestDirectorMan0g001.lua,processEvent020_1,"finish content, warp to zone 155 type 1, start SEQ_010"
+man0g0,110005,Sundered Skies,010,city handoff,Data/scripts/quests/man/man0g0.lua,Push 1099046 -> Man0g1,next city quest replacement only occurs through the explicit handoff actor
+man0u0,110009,Flowers for All,000,city tutorial setup,Data/scripts/quests/man/man0u0.lua,processTtrNomal002;processTtrNomal003,required opening talks and tutorial pushes unlock the content entry
+man0u0,110009,Flowers for All,005,private content fight,man0u01 / Quest/QuestDirectorMan0u001,processTtrBtl001;processTtrBtl002,kill 1x 2203301 then send attention 51073:3
+man0u0,110009,Flowers for All,005 -> 010,post-fight return,Data/scripts/directors/Quest/QuestDirectorMan0u001.lua,processEvent020,"finish content, warp to zone 175 type 3, start SEQ_010"
+man0u0,110009,Flowers for All,010,city handoff,Data/scripts/quests/man/man0u0.lua,Push 1099046 -> Man0u1,next city quest replacement only occurs through the explicit handoff actor

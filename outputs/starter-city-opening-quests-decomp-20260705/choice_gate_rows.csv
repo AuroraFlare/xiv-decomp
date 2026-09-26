@@ -1,0 +1,5 @@
+code,quest_id,quest_name,source_file,line,function,choice_var,event_method,operator,expected_value,related_choice_line,line_text
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,254,seq010_onTalk,choice,processEvent020_9,,,254,"local choice = callClientFunction(player, ""delegateEvent"", player, quest, ""processEvent020_9"");"
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,255,seq010_onTalk,choice,processEvent020_9,==,1,254,if (choice == 1) then
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,298,doExitDoor,choice,processEventNewRectAsk,,,298,"local choice = callClientFunction(player, ""delegateEvent"", player, quest, ""processEventNewRectAsk"", nil);"
+man0l0,110001,Shapeless Melody,Data/scripts/quests/man/man0l0.lua,299,doExitDoor,choice,processEventNewRectAsk,==,1,298,if (choice == 1) then

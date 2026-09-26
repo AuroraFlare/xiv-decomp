@@ -1,0 +1,9 @@
+mode,mode_level,role,cutscene_related,observed_effects,source_lines
+120,1,tutorial mode,False,"orderTutorialMode locks player/target controls, masks tutorial controls, then orderDesktopWidgetMode(120).","4311-4350,4686-4706"
+32,2,event/menu mode,False,setDesktopModeDetail closes PcProfileWidget and updates ActionMenuWidget false/false.,4370-4671
+61,3 inferred,cutscene-family mode,true/inferred,Mode table branch with logHideFlag true and alpha around 0.12 in decompiled locals.,"4311-4368,4370-4671"
+62,3 inferred,cutscene-family mode,true/inferred,Cutscene-family branch with narrower visibility flags.,"4311-4368,4370-4671"
+63,3 inferred,cutscene-family mode,true/inferred,Cutscene-family branch combining mode 61-style log hiding with extra flag set.,"4311-4368,4370-4671"
+64,3,cutscene mode,True,isCutSceneMode definitely returns true for mode 64; openMapForCutScene uses root layer 11 MapNavigationWidget mode arg 2.,"4311-4368,5008-5056"
+126,4,player-control lock/transition,adjacent,cancelDesktopWidgetMode(126) unlocks player control; setDesktopModeDetail toggles visibility/control flags.,"4237-4299,4370-4671"
+127,5,global close/fade/end state,adjacent,"closes layer 11 map, clears cutsceneMapFlag, closes cutscene effect, closes log layers 2/3, hides MainMenu.",4370-4444

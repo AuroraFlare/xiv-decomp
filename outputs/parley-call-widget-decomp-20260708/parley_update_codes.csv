@@ -1,0 +1,19 @@
+code,name,args,effect,evidence,confidence
+1-12,topic slot update,"slot, key, itemIconId, pointValue, selectedFlag, disabledFlag",Populates one of twelve grid tiles and increments visible topic count.,Ask/NegotiationWidget.updateAskParameter branch for low slot ids; local command stub comment.,high
+13,operation result/history,"selection, opponentOrPlayerFlag, iconId, value, isEnemy, showHistory","Displays a selected operation, plays player/enemy operation SFX, and can write a history icon.",Ask/NegotiationWidget.updateAskParameter SFX and selected-icon branch.,medium
+14,negotiation gauge,"max, value",Sets the negotiation progress gauge maximum and current value.,Local stub plus ProgressBar branch.,high
+15,achievement gauge,"max, value",Sets the achievement/result progress gauge maximum and current value.,Local stub plus ProgressBar branch.,high
+16,additional item 1,visible/available flag,Toggles first additional reward/item indicator and can play add-item SFX.,Ask/NegotiationWidget update branch 16.,medium
+17,additional item 2,visible/available flag,Toggles second additional reward/item indicator and can play add-item SFX.,Ask/NegotiationWidget update branch 17.,medium
+18,additional item 3,visible/available flag,Toggles third additional reward/item indicator and can play add-item SFX.,Ask/NegotiationWidget update branch 18.,medium
+19,selected/history icon,"historyIndex, iconId",Writes one of the six last-selected item icons.,Local stub and update branch indexing selected icons.,high
+20,ability availability,five booleans or ids,Updates which ability buttons are usable in the child ability list.,Ask/NegotiationAbilityListWidget wiring and update branch.,medium
+21,phase/result visibility,unknown,Toggles a result/phase visibility group; exact meaning still needs a runtime probe.,Recovered branch exists but local comment left blank.,low
+22,clear timer,none or ignored,Clears/resets the time gauge.,Local stub and time-gauge branch.,high
+23,player move SFX,none or ignored,Plays the player-side move sound.,Local stub and SFX branch.,high
+24,opponent move SFX,none or ignored,Plays the opponent-side move sound.,Local stub and SFX branch.,high
+25,time-up SFX,none or ignored,Plays time-up sound and closes ability selector if it is open.,Local stub and update branch.,high
+26,move or merge topic tile,"fromSlot, toSlot, newKey, newIcon, newValue","Moves/merges a topic from one grid tile to another, hides old slot, and updates count.",Ask/NegotiationWidget icon/value copy branch.,medium
+27,double or halve values,"slot or all, bool/direction",Doubles or halves topic point values based on the supplied flag.,Ask/NegotiationWidget value transform branch.,medium
+28,pause timer,none or ignored,Pauses the Parley input timer.,Local stub and timer branch.,high
+29,resume timer,none or ignored,Resumes the Parley input timer.,Local stub and timer branch.,high

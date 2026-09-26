@@ -1,0 +1,6 @@
+table_name,columns,why
+quest_rewards.csv,"quest_id,code,sort_order,reward_type,reward_id,quantity,class_job_id,source,auto_grant,confidence,duplicate_grant_risk,notes",separates reward display from auto-granted CompleteQuest data
+quest_markers.csv,"quest_id,code,sequence,marker_constant,marker_id,slot,x,z,map_group,map_id,radius,marker_class,visible,source,confidence",keeps DAT marker joins auditable without rewriting Lua markers blindly
+quest_actor_surfaces.csv,"quest_id,code,sequence,actor_role,actor_constant,actor_class_id,actor_class_path,display_name_id,quest_flag,source_file,source_line,confidence,gap_status",tracks ENPC/object actors separately from owner proof
+quest_bnpc_objectives.csv,"quest_id,code,sequence,objective_constant,actor_class_id,actor_class_path,objective_item_id,objective_count,bnpc_id,display_name,min_level,max_level,materialization_status,confidence,next_action",keeps objective identity distinct from spawn and kill-route proof
+quest_spawn_points.csv,"quest_id,code,actor_class_id,bnpc_id,spawn_surface,spawn_id,unique_id,zone_id,private_area,x,y,z,rot,source,confidence,needs_capture",prevents ambient spawn rows from being mixed with private SQB materialization candidates

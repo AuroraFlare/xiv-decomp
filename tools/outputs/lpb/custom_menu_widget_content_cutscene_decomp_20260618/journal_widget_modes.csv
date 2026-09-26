@@ -1,0 +1,8 @@
+mode,name,source_lines,list_contents,selection_behavior,ask_result
+1,Main journal browse,"3-53,89-176,533-584",questType 1: active scenario quests + active guildleves + passive guildleves; other questTypes use completed quest list,Opens QuestDetailWidget for specific scenario ranges; otherwise JournalDetailWidget.,nil/closed directly
+2,Active guildleve select,"54-176,533-584,594-628",active guildleve list,Used by DesktopWidget.askActiveGuildleveSelectWidget.,resultJournalID when finished by parent path
+3,Passive guildleve/quest select,"54-176,533-584",scenario quests + passive guildleves,"If JournalType 2, sets guildleveFlag true; finish result used by askPassiveGuildleveSelectWidget.","resultJournalID,guildleveFlag"
+4,Guildleve change bonus select,"128-145,254-269,533-584",active guildleve list,"Requires arg actor; calls argActor:selectGuildleveChangeBonus(JournalIndex), then finish(JournalID).",resultSelectFlag
+5,Quest list selection,"128-133,533-584",scenario quest list,finish(JournalID).,resultJournalID
+6,Passive guildleve release,"154-166,533-584",passive guildleve list,finish(JournalIndex).,resultJournalID
+7,Cutscene replay quest selection,"3-53,166-176,533-584,708-745",completed cutscene replay quests from cutReplaySheet and _isCompletedCutSceneReplayQuest,"Open child ReplayCutsceneSelectWidget unless special 110820 family, then finish directly.",resultJournalID/cutsceneId
