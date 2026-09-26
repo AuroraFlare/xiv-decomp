@@ -1,0 +1,58 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Etc5l3", "ScenarioBaseClass")
+function Etc5l3.initText(A0_0)
+  A0_0:_loadTextDataPermanently(9300, "etc5l3")
+end
+function Etc5l3.processEventKOPURUStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:say(A0_1, 6, 0)
+  A2_3:_runCharaScheduler(354107392)
+  A2_3:say(A0_1, 91, 0)
+  A2_3:say(A0_1, 7, 0)
+  A2_3:finishCliantTalkTurn()
+end
+function Etc5l3.processEventKOROLONStart(A0_4, A1_5, A2_6)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  A2_6:say(A0_4, 4, 0)
+  A2_6:_runCharaScheduler(354107392)
+  A2_6:say(A0_4, 90, 0)
+  A2_6:say(A0_4, 5, 0)
+  A2_6:finishCliantTalkTurn()
+end
+function Etc5l3.processEventMYTESYNStart(A0_7, A1_8, A2_9)
+  A2_9:startCliantTalkTurn(2, A1_8)
+  A2_9:say(A0_7, 2, 0)
+  A2_9:_runCharaScheduler(354107392)
+  A2_9:say(A0_7, 89, 0)
+  A2_9:say(A0_7, 3, 0)
+  A2_9:finishCliantTalkTurn()
+end
+function Etc5l3.processEvent_005(A0_10, A1_11, A2_12)
+  A0_10:startFadeOutCutSceneDefault(A1_11)
+  A0_10:startNQCutScene("etc5l320", 1, true)
+  A0_10:startFadeInCutSceneAfterWarp(A1_11)
+end
+function Etc5l3.processEvent_005_1(A0_13, A1_14, A2_15)
+  A2_15:startCliantTalkTurn(2, A1_14)
+  A2_15:say(A0_13, 39, 0)
+  A2_15:finishCliantTalkTurn()
+end
+function Etc5l3.processEvent_005_2(A0_16, A1_17, A2_18)
+  A2_18:startCliantTalkTurn(2, A1_17)
+  A2_18:say(A0_16, 40, 0)
+  A2_18:finishCliantTalkTurn()
+end
+function Etc5l3.processEvent_005_3(A0_19, A1_20, A2_21)
+  A2_21:startCliantTalkTurn(2, A1_20)
+  A2_21:say(A0_19, 41, 0)
+  A2_21:_runCharaScheduler(70836224)
+  A2_21:finishCliantTalkTurn()
+end
+function Etc5l3.processEvent_005_4(A0_22, A1_23, A2_24, A3_25, A4_26)
+  desktopWidget:openPublicInformDialogWidget(A0_22, 42, A3_25, A4_26)
+end
+function Etc5l3.processEvent_020(A0_27, A1_28, A2_29)
+  A0_27:startFadeOutCutSceneDefault(A1_28)
+  A0_27:startNQCutScene("etc5l330", 1, true)
+  A0_27:startFadeInCutSceneDefault(A1_28)
+end

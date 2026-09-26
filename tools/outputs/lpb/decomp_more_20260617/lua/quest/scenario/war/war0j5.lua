@@ -1,0 +1,62 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("War0j5", "ScenarioBaseClass")
+function War0j5.initText(A0_0)
+  A0_0:_loadTextDataPermanently(8196, "war0j5")
+end
+function War0j5.processEventCURIOUS_GORGEStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(354099200)
+  A2_3:say(A0_1, 2, 0)
+  A0_1:startFadeOut(A1_2, 1)
+  A0_1:_wait(1)
+  A0_1:startFadeIn(A1_2, 1)
+  A2_3:say(A0_1, 3, 0)
+  A2_3:say(A0_1, 17, 0)
+  A2_3:_runCharaScheduler(354058240)
+  A2_3:say(A0_1, 4, 0)
+  A0_1:_wait(1)
+  A2_3:say(A0_1, 5, 0)
+  A2_3:say(A0_1, 6, 0)
+  A2_3:_runCharaScheduler(353964032)
+  A0_1:_wait(1)
+  A2_3:say(A0_1, 7, 0)
+  A2_3:_runCharaScheduler(354103296)
+  A2_3:say(A0_1, 8, 0)
+  A2_3:say(A0_1, 9, 0)
+  A2_3:say(A0_1, 10, 0)
+  A2_3:_runCharaScheduler(70881280)
+  A2_3:say(A0_1, 11, 0)
+  A2_3:say(A0_1, 12, 0)
+  if A0_1:showQuestInfomation() == 1 then
+    A2_3:_runCharaScheduler(354050048)
+    A2_3:say(A0_1, 14, 0)
+  else
+    A2_3:_runCharaScheduler(354082816)
+    A0_1:_wait(1)
+    A2_3:say(A0_1, 13, 0)
+  end
+  A2_3:finishCliantTalkTurn()
+  return (A0_1:showQuestInfomation())
+end
+function War0j5.processEvent000(A0_4, A1_5, A2_6)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  A2_6:_runCharaScheduler(354000896)
+  A2_6:say(A0_4, 15, 0)
+  A2_6:say(A0_4, 16, 0)
+  A2_6:finishCliantTalkTurn()
+end
+function War0j5.onJobQuestCompleteFirst(A0_7, A1_8)
+  desktopWidget:openPublicInformLongDialogWidget(worldMaster, 51119)
+end
+function War0j5.onJobQuestCompleteSecond(A0_9, A1_10)
+  A0_9:showGetJobAbilityWidget(A1_10, 27192, 3)
+end
+function War0j5.onJobQuestCompleteThird(A0_11, A1_12)
+  A0_11:showEventBeforeNpsLS(A1_12, 1600318, 77)
+end
+function War0j5.processEventChuui(A0_13, A1_14, A2_15)
+  worldMaster:say(worldMaster, 51131, 111205, 17)
+end
+function War0j5.processEventChuui2(A0_16, A1_17, A2_18)
+  worldMaster:say(worldMaster, 51132, 111205, 17)
+end

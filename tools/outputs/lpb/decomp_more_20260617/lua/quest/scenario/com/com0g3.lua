@@ -1,0 +1,32 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Com0g3", "ScenarioBaseClass")
+function Com0g3.initText(A0_0)
+  A0_0:_loadTextDataPermanently(5984, "com0g3")
+end
+function Com0g3.processEventStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(84094976)
+  A0_1:_wait(2)
+  A2_3:say(A0_1, 2, 0)
+  A2_3:say(A0_1, 3, 0)
+  if A2_3:ask(A0_1, 14, 2) == 1 then
+    A2_3:say(A0_1, 4, 0)
+    A2_3:_runCharaScheduler(353976320)
+    A2_3:say(A0_1, 5, 0)
+    A2_3:say(A0_1, 6, 0)
+    A2_3:_runCharaScheduler(353980416)
+    A2_3:say(A0_1, 7, 0)
+    A2_3:say(A0_1, 8, 0)
+    A2_3:_runCharaScheduler(353964032)
+    A2_3:say(A0_1, 9, 0)
+    A2_3:say(A0_1, 10, 0)
+    A2_3:_runCharaScheduler(354050048)
+    A2_3:say(A0_1, 11, 0)
+    A2_3:finishCliantTalkTurn()
+    return (A2_3:ask(A0_1, 14, 2))
+  else
+    A2_3:say(A0_1, 17, 0)
+    A2_3:finishCliantTalkTurn()
+    return (A2_3:ask(A0_1, 14, 2))
+  end
+end

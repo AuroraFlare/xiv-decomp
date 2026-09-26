@@ -1,0 +1,235 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Alc300", "ScenarioBaseClass")
+function Alc300.initText(A0_0)
+  A0_0:_loadTextDataPermanently(1383, "alc300")
+end
+function Alc300.processEventNogeloixStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:say(A0_1, 3, 0)
+  A2_3:say(A0_1, 4, 0)
+  if A0_1:showQuestInfomation() == 1 then
+    A2_3:say(A0_1, 6, 0)
+  else
+    A2_3:say(A0_1, 5, 0)
+  end
+  A2_3:finishCliantTalkTurn()
+  return (A0_1:showQuestInfomation())
+end
+function Alc300.processEvent003(A0_4, A1_5, A2_6)
+  A2_6:say(A0_4, 12, 0)
+end
+function Alc300.processEvent005(A0_7, A1_8, A2_9)
+  A2_9:startCliantTalkTurn(2, A1_8)
+  A2_9:say(A0_7, 13, 0)
+  A2_9:say(A0_7, 14, 0)
+  A2_9:say(A0_7, 15, 0)
+  A2_9:say(A0_7, 16, 0)
+  A2_9:say(A0_7, 17, 0)
+  A2_9:say(A0_7, 18, 0)
+  A2_9:say(A0_7, 19, 0)
+  A2_9:finishCliantTalkTurn()
+end
+function Alc300.processEvent007(A0_10, A1_11, A2_12)
+  A2_12:startCliantTalkTurn(2, A1_11)
+  A2_12:say(A0_10, 21, 0)
+  A2_12:say(A0_10, 22, 0)
+  A2_12:say(A0_10, 74, 0)
+  A2_12:say(A0_10, 23, 0)
+  A2_12:say(A0_10, 75, 0)
+  A2_12:say(A0_10, 24, 0)
+  A2_12:say(A0_10, 76, 0)
+  A2_12:finishCliantTalkTurn()
+end
+function Alc300.processEvent008(A0_13, A1_14, A2_15)
+  A2_15:startCliantTalkTurn(2, A1_14)
+  A2_15:say(A0_13, 31, 0)
+  A2_15:say(A0_13, 32, 0)
+  A2_15:finishCliantTalkTurn()
+end
+function Alc300.processEvent010(A0_16, A1_17, A2_18)
+  A0_16:startFadeOutCutSceneDefault(A1_17)
+  A0_16:startNQCutScene("alc30010", 2)
+  A0_16:startFadeInCutSceneDefault(A1_17)
+end
+function Alc300.processEvent015(A0_19, A1_20, A2_21)
+  A2_21:startCliantTalkTurn(2, A1_20)
+  A2_21:say(A0_19, 40, 0)
+  A2_21:say(A0_19, 41, 0)
+  A2_21:finishCliantTalkTurn()
+end
+function Alc300.processEvent020(A0_22, A1_23, A2_24)
+  A0_22:startFadeOutCutSceneDefault(A1_23)
+  A0_22:startNQCutScene("alc30020", 2)
+  A0_22:startFadeInCutSceneAfterWarp(A1_23)
+end
+function Alc300.processEvent002_2(A0_25, A1_26, A2_27)
+  A2_27:startCliantTalkTurn(2, A1_26)
+  A2_27:say(A0_25, 65, 0)
+  A2_27:say(A0_25, 66, 0)
+  A2_27:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_3(A0_28, A1_29, A2_30)
+  A2_30:startCliantTalkTurn(2, A1_29)
+  A2_30:say(A0_28, 67, 0)
+  A2_30:say(A0_28, 68, 0)
+  A2_30:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_4(A0_31, A1_32, A2_33)
+  A2_33:startCliantTalkTurn(2, A1_32)
+  A2_33:say(A0_31, 69, 0)
+  A2_33:say(A0_31, 70, 0)
+  A2_33:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_5(A0_34, A1_35, A2_36)
+  A2_36:startCliantTalkTurn(2, A1_35)
+  A2_36:say(A0_34, 71, 0)
+  A2_36:say(A0_34, 72, 0)
+  A2_36:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_6(A0_37, A1_38, A2_39)
+  A2_39:startCliantTalkTurn(2, A1_38)
+  A2_39:say(A0_37, 7, 0)
+  A2_39:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_7(A0_40, A1_41, A2_42)
+  A2_42:startCliantTalkTurn(2, A1_41)
+  A2_42:say(A0_40, 8, 0)
+  A2_42:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_8(A0_43, A1_44, A2_45)
+  A2_45:startCliantTalkTurn(2, A1_44)
+  A2_45:say(A0_43, 9, 0)
+  A2_45:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_9(A0_46, A1_47, A2_48)
+  A2_48:startCliantTalkTurn(2, A1_47)
+  A2_48:say(A0_46, 10, 0)
+  A2_48:finishCliantTalkTurn()
+end
+function Alc300.processEvent002_10(A0_49, A1_50, A2_51)
+  A2_51:startCliantTalkTurn(2, A1_50)
+  A2_51:say(A0_49, 11, 0)
+  A2_51:finishCliantTalkTurn()
+end
+function Alc300.processEvent005_2(A0_52, A1_53, A2_54)
+  A2_54:say(A0_52, 20, 0)
+end
+function Alc300.processEvent005_3(A0_55, A1_56, A2_57)
+  A2_57:startCliantTalkTurn(2, A1_56)
+  A2_57:say(A0_55, 73, 0)
+  A2_57:finishCliantTalkTurn()
+end
+function Alc300.processEvent007_2(A0_58, A1_59, A2_60)
+  A2_60:startCliantTalkTurn(2, A1_59)
+  A2_60:say(A0_58, 77, 0)
+  A2_60:say(A0_58, 78, 0)
+  A2_60:say(A0_58, 79, 0)
+  A2_60:finishCliantTalkTurn()
+end
+function Alc300.processEvent007_3(A0_61, A1_62, A2_63)
+  A2_63:startCliantTalkTurn(2, A1_62)
+  A2_63:say(A0_61, 80, 0)
+  A2_63:say(A0_61, 81, 0)
+  A2_63:finishCliantTalkTurn()
+end
+function Alc300.processEvent007_4(A0_64, A1_65, A2_66)
+  A2_66:startCliantTalkTurn(2, A1_65)
+  A2_66:say(A0_64, 82, 0)
+  A2_66:say(A0_64, 83, 0)
+  A2_66:finishCliantTalkTurn()
+end
+function Alc300.processEvent007_5(A0_67, A1_68, A2_69)
+  A2_69:startCliantTalkTurn(2, A1_68)
+  A2_69:say(A0_67, 84, 0)
+  A2_69:say(A0_67, 85, 0)
+  A2_69:finishCliantTalkTurn()
+end
+function Alc300.processEvent007_6(A0_70, A1_71, A2_72)
+  A2_72:startCliantTalkTurn(2, A1_71)
+  A2_72:say(A0_70, 25, 0)
+  A2_72:say(A0_70, 26, 0)
+  A2_72:finishCliantTalkTurn()
+end
+function Alc300.processEvent007_7(A0_73, A1_74, A2_75)
+  A2_75:startCliantTalkTurn(2, A1_74)
+  A2_75:say(A0_73, 27, 0)
+  A2_75:say(A0_73, 28, 0)
+  A2_75:finishCliantTalkTurn()
+end
+function Alc300.processEvent008_2(A0_76, A1_77, A2_78)
+  A2_78:startCliantTalkTurn(2, A1_77)
+  A2_78:say(A0_76, 86, 0)
+  A2_78:say(A0_76, 87, 0)
+  A2_78:finishCliantTalkTurn()
+end
+function Alc300.processEvent008_3(A0_79, A1_80, A2_81)
+  A2_81:startCliantTalkTurn(2, A1_80)
+  A2_81:say(A0_79, 98, 0)
+  if A2_81:ask(A0_79, 99, 2) == 1 then
+    A2_81:say(A0_79, 102, 0)
+    A2_81:say(A0_79, 103, 0)
+  else
+    A2_81:say(A0_79, 104, 0)
+  end
+  A2_81:finishCliantTalkTurn()
+  return (A2_81:ask(A0_79, 99, 2))
+end
+function Alc300.processEvent008_4(A0_82, A1_83, A2_84)
+  A2_84:startCliantTalkTurn(2, A1_83)
+  A2_84:say(A0_82, 105, 0)
+  A2_84:finishCliantTalkTurn()
+end
+function Alc300.processEvent008_5(A0_85, A1_86, A2_87)
+  A2_87:startCliantTalkTurn(2, A1_86)
+  A2_87:say(A0_85, 106, 0)
+  A2_87:say(A0_85, 107, 0)
+  A2_87:say(A0_85, 108, 0)
+  if A2_87:ask(A0_85, 99, 2) == 1 then
+    A2_87:say(A0_85, 109, 0)
+  else
+    A2_87:say(A0_85, 110, 0)
+  end
+  A2_87:finishCliantTalkTurn()
+  return (A2_87:ask(A0_85, 99, 2))
+end
+function Alc300.processEvent008_6(A0_88, A1_89, A2_90)
+  A2_90:startCliantTalkTurn(2, A1_89)
+  A2_90:say(A0_88, 111, 0)
+  A2_90:finishCliantTalkTurn()
+end
+function Alc300.processEvent010_2(A0_91, A1_92, A2_93)
+  A2_93:startCliantTalkTurn(2, A1_92)
+  A2_93:say(A0_91, 88, 0)
+  A2_93:say(A0_91, 89, 0)
+  A2_93:finishCliantTalkTurn()
+end
+function Alc300.processEvent010_3(A0_94, A1_95, A2_96)
+  A2_96:startCliantTalkTurn(2, A1_95)
+  A2_96:say(A0_94, 90, 0)
+  A2_96:say(A0_94, 91, 0)
+  A2_96:finishCliantTalkTurn()
+end
+function Alc300.processEvent010_4(A0_97, A1_98, A2_99)
+  A2_99:startCliantTalkTurn(2, A1_98)
+  A2_99:say(A0_97, 92, 0)
+  A2_99:say(A0_97, 93, 0)
+  A2_99:finishCliantTalkTurn()
+end
+function Alc300.processEvent010_5(A0_100, A1_101, A2_102)
+  A2_102:startCliantTalkTurn(2, A1_101)
+  A2_102:say(A0_100, 94, 0)
+  A2_102:say(A0_100, 95, 0)
+  A2_102:finishCliantTalkTurn()
+end
+function Alc300.processEvent015_2(A0_103, A1_104, A2_105)
+  A2_105:startCliantTalkTurn(2, A1_104)
+  A2_105:say(A0_103, 96, 0)
+  A2_105:say(A0_103, 97, 0)
+  A2_105:finishCliantTalkTurn()
+end
+function Alc300.processEvent015_3(A0_106, A1_107, A2_108)
+  A2_108:startCliantTalkTurn(2, A1_107)
+  A2_108:say(A0_106, 42, 0)
+  A2_108:say(A0_106, 43, 0)
+  A2_108:finishCliantTalkTurn()
+end

@@ -1,0 +1,133 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Sum6a0", "ScenarioBaseClass")
+function Sum6a0.initText(A0_0)
+  A0_0:_loadTextDataPermanently(3181, "sum6a0")
+end
+function Sum6a0.processEventLOUISOIXStart(A0_1, A1_2, A2_3, A3_4, A4_5)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(83914752)
+  A2_3:say(A0_1, 2, 0)
+  A2_3:_runCharaScheduler(354041856)
+  A2_3:say(A0_1, 4, 0)
+  A2_3:say(A0_1, 5, 0)
+  A2_3:_runCharaScheduler(83943424)
+  A2_3:say(A0_1, 7, 0)
+  A2_3:say(A0_1, 9, 0)
+  A2_3:_runCharaScheduler(354086912)
+  A2_3:say(A0_1, 10, 0)
+  A2_3:say(A0_1, 11, 0)
+  A2_3:say(A0_1, 12, 0)
+  A2_3:_runCharaScheduler(353959936)
+  A2_3:say(A0_1, 14, 0)
+  A2_3:say(A0_1, 15, 0)
+  A2_3:_runCharaScheduler(354041856)
+  A2_3:say(A0_1, 18, 0)
+  A2_3:_runCharaScheduler(353959936)
+  A2_3:say(A0_1, 20, 0)
+  A2_3:say(A0_1, 22, 0)
+  A2_3:_runCharaScheduler(353959936)
+  A2_3:say(A0_1, 25, 0)
+  A2_3:say(A0_1, 26, 0)
+  A2_3:say(A0_1, 55, 0)
+  A2_3:say(A0_1, 57, 0)
+  A2_3:say(A0_1, 28, 0)
+  worldMaster:say(A0_1, 29, 0, 0, 0, A3_4)
+  A2_3:say(A0_1, 36, 0)
+  if A0_1:showQuestInfomation() == 1 then
+    A2_3:_runCharaScheduler(354082816)
+    A2_3:say(A0_1, 38, 0)
+    A2_3:say(A0_1, 40, 0)
+  else
+    A2_3:_runCharaScheduler(353959936)
+    A2_3:say(A0_1, 37, 0)
+  end
+  A2_3:finishCliantTalkTurn()
+  return (A0_1:showQuestInfomation())
+end
+function Sum6a0.processEventLOUISOIX2ndStart(A0_6, A1_7, A2_8, A3_9, A4_10)
+  A2_8:startCliantTalkTurn(2, A1_7)
+  A2_8:_runCharaScheduler(354082816)
+  A2_8:say(A0_6, 23, 0)
+  A2_8:say(A0_6, 24, 0)
+  A2_8:_runCharaScheduler(353959936)
+  A2_8:say(A0_6, 25, 0)
+  A2_8:say(A0_6, 26, 0)
+  A2_8:_runCharaScheduler(354082816)
+  A2_8:say(A0_6, 55, 0)
+  A2_8:say(A0_6, 57, 0)
+  A2_8:say(A0_6, 28, 0)
+  worldMaster:say(A0_6, 29, 0, 0, 0, A3_9)
+  A2_8:say(A0_6, 36, 0)
+  if A0_6:showQuestInfomation() == 1 then
+    A2_8:_runCharaScheduler(354082816)
+    A2_8:say(A0_6, 38, 0)
+    A2_8:say(A0_6, 40, 0)
+  else
+    A2_8:_runCharaScheduler(353959936)
+    A2_8:say(A0_6, 37, 0)
+  end
+  A2_8:finishCliantTalkTurn()
+  return (A0_6:showQuestInfomation())
+end
+function Sum6a0.processEvent_005(A0_11, A1_12, A2_13)
+  A2_13:startCliantTalkTurn(2, A1_12)
+  A2_13:_runCharaScheduler(353959936)
+  A2_13:say(A0_11, 41, 0)
+  if A2_13:ask(A0_11, 42, 2) == 1 then
+    A2_13:_runCharaScheduler(354082816)
+    A2_13:say(A0_11, 46, 0)
+    A0_11:startFadeOut(A1_12, 1)
+    A0_11:_wait(2)
+    A0_11:startFadeIn(A1_12, 1)
+    A2_13:_runCharaScheduler(354107392)
+    A2_13:say(A0_11, 47, 0)
+  else
+    A2_13:_runCharaScheduler(354082816)
+    A2_13:say(A0_11, 48, 0)
+    A2_13:say(A0_11, 49, 0)
+    A2_13:say(A0_11, 50, 0)
+  end
+  A2_13:_runCharaScheduler(353959936)
+  A2_13:say(A0_11, 51, 0)
+  A2_13:finishCliantTalkTurn()
+  return (A2_13:ask(A0_11, 42, 2))
+end
+function Sum6a0.processEvent_005_2(A0_14, A1_15, A2_16)
+  A2_16:startCliantTalkTurn(2, A1_15)
+  A2_16:_runCharaScheduler(353959936)
+  A2_16:say(A0_14, 41, 0)
+  if A2_16:ask(A0_14, 42, 2) == 1 then
+    A2_16:_runCharaScheduler(354041856)
+    A2_16:say(A0_14, 45, 0)
+  else
+    A2_16:_runCharaScheduler(354082816)
+    A2_16:say(A0_14, 48, 0)
+    A2_16:say(A0_14, 49, 0)
+    A2_16:say(A0_14, 50, 0)
+    A2_16:_runCharaScheduler(353959936)
+    A2_16:say(A0_14, 51, 0)
+  end
+  A2_16:finishCliantTalkTurn()
+end
+function Sum6a0.processEvent_005_3(A0_17, A1_18, A2_19)
+  A2_19:startCliantTalkTurn(2, A1_18)
+  A2_19:_runCharaScheduler(354082816)
+  A2_19:say(A0_17, 54, 0)
+  A2_19:say(A0_17, 51, 0)
+  A2_19:finishCliantTalkTurn()
+end
+function Sum6a0.processEvent_010(A0_20, A1_21, A2_22)
+  A2_22:startCliantTalkTurn(2, A1_21)
+  A2_22:say(A0_20, 52, 0)
+  A2_22:_runCharaScheduler(354082816)
+  A2_22:say(A0_20, 56, 0)
+  A2_22:say(A0_20, 53, 0)
+  A2_22:finishCliantTalkTurn()
+end
+function Sum6a0.processEventContentExit(A0_23, A1_24, A2_25, A3_26)
+  if worldMaster:ask(A2_25, worldMaster, 52042, 2, 3) == 1 then
+    return true
+  else
+    return false
+  end
+end

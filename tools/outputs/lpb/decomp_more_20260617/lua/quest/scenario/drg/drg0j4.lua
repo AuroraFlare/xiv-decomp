@@ -1,0 +1,68 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Drg0j4", "ScenarioBaseClass")
+function Drg0j4.initText(A0_0)
+  A0_0:_loadTextDataPermanently(8820, "drg0j4")
+end
+function Drg0j4.processEvent_ALBERIC_Hint(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(354082816)
+  A2_3:say(A0_1, 40, 0)
+  A2_3:say(A0_1, 43, 0)
+  worldMaster:say(A0_1, 41, 0)
+  A2_3:finishCliantTalkTurn()
+end
+function Drg0j4.processEvent_ALBERIC_Start(A0_4, A1_5, A2_6)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  A2_6:say(A0_4, 2, 0)
+  A2_6:_runCharaScheduler(354086912)
+  A2_6:say(A0_4, 3, 0)
+  A2_6:say(A0_4, 4, 0)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  if A0_4:showQuestInfomation() == 1 then
+    A2_6:_runCharaScheduler(353980416)
+    A2_6:say(A0_4, 6, 0)
+  else
+    A2_6:_runCharaScheduler(354041856)
+    A2_6:say(A0_4, 5, 0)
+  end
+  A2_6:finishCliantTalkTurn()
+  return (A0_4:showQuestInfomation())
+end
+function Drg0j4.processEvent_ALBERIC_Follow(A0_7, A1_8, A2_9)
+  A2_9:startCliantTalkTurn(2, A1_8)
+  A2_9:_runCharaScheduler(354086912)
+  A2_9:say(A0_7, 7, 0)
+  A2_9:say(A0_7, 33, 0)
+  A2_9:finishCliantTalkTurn()
+end
+function Drg0j4.processEvent_NQ_Drg0j410(A0_10, A1_11, A2_12)
+  A0_10:startFadeOutCutSceneDefault(A1_11)
+  A0_10:startNQCutScene("Drg0j410", 1)
+  A0_10:startFadeInCutSceneDefault(A1_11)
+end
+function Drg0j4.processEvent_ALBERIC_Guidance(A0_13, A1_14, A2_15)
+  A2_15:_runCharaScheduler(354086912)
+  A2_15:say(A0_13, 32, 0)
+  A0_13:_wait(1)
+  A2_15:startCliantTalkTurn(2, A1_14)
+  A2_15:say(A0_13, 34, 0)
+  A2_15:_runCharaScheduler(354082816)
+  A2_15:say(A0_13, 35, 0)
+  A2_15:say(A0_13, 36, 0)
+  A2_15:say(A0_13, 37, 0)
+  A2_15:_runCharaScheduler(354103296)
+  A2_15:say(A0_13, 38, 0)
+  A2_15:say(A0_13, 39, 0)
+  A2_15:say(A0_13, 42, 0)
+  A2_15:finishCliantTalkTurn()
+end
+function Drg0j4.processEvent_getAF_info(A0_16, A1_17, A2_18, A3_19)
+  A2_18:_runCharaScheduler(67108910)
+  A0_16:showGetJobItemWidget(A1_17, A3_19, 0)
+end
+function Drg0j4.processEventChuui(A0_20, A1_21, A2_22)
+  worldMaster:say(worldMaster, 51131, 111324, 19)
+end
+function Drg0j4.processEventChuui2(A0_23, A1_24, A2_25)
+  worldMaster:say(worldMaster, 51132, 111304, 19)
+end

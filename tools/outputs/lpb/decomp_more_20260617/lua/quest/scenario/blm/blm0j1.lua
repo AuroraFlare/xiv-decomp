@@ -1,0 +1,151 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Blm0j1", "ScenarioBaseClass")
+function Blm0j1.initText(A0_0)
+  A0_0:_loadTextDataPermanently(8612, "blm0j1")
+end
+function Blm0j1.processEventYayakeStart(A0_1, A1_2, A2_3, A3_4)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  if A3_4 == 0 then
+    A2_3:_runCharaScheduler(353959936)
+    A2_3:say(A0_1, 51, 0)
+    if worldMaster:askRestrictChoices(A0_1, A0_1, 52, true, true) == nil or worldMaster:askRestrictChoices(A0_1, A0_1, 52, true, true) == 2 then
+      A2_3:_runCharaScheduler(354082816)
+      A2_3:say(A0_1, 55, 0)
+      A2_3:finishCliantTalkTurn()
+    else
+    end
+  end
+  if 0 == 0 then
+    A2_3:_runCharaScheduler(353964032)
+    A2_3:say(A0_1, 2, 0)
+    A2_3:say(A0_1, 3, 0)
+    A2_3:_runCharaScheduler(354099200)
+    A2_3:say(A0_1, 4, 0)
+    A2_3:_runCharaScheduler(354041856)
+    A2_3:say(A0_1, 7, 0)
+    A2_3:say(A0_1, 8, 0)
+    A2_3:_runCharaScheduler(354082816)
+    A2_3:say(A0_1, 71, 0)
+    A2_3:say(A0_1, 72, 0)
+    A2_3:_runCharaScheduler(354103296)
+    A2_3:say(A0_1, 9, 0)
+    A2_3:say(A0_1, 10, 0)
+    A2_3:_runCharaScheduler(354099200)
+    A2_3:say(A0_1, 70, 0)
+    A2_3:say(A0_1, 73, 0)
+    A2_3:_runCharaScheduler(353964032)
+    A2_3:say(A0_1, 74, 0)
+    if A0_1:showQuestInfomation() == 1 then
+      A2_3:_runCharaScheduler(353964032)
+      A2_3:say(A0_1, 13, 0)
+      A2_3:_runCharaScheduler(354041856)
+      A2_3:say(A0_1, 15, 0)
+    else
+      A2_3:_runCharaScheduler(354082816)
+      A2_3:say(A0_1, 11, 0)
+      A2_3:say(A0_1, 12, 0)
+    end
+    A2_3:finishCliantTalkTurn()
+    return (A0_1:showQuestInfomation())
+  end
+end
+function Blm0j1.processEventYayake000Follow(A0_5, A1_6, A2_7)
+  A2_7:startCliantTalkTurn(2, A1_6)
+  A2_7:_runCharaScheduler(354103296)
+  A2_7:say(A0_5, 16, 0)
+  A2_7:say(A0_5, 17, 0)
+  A2_7:_runCharaScheduler(354041856)
+  A2_7:say(A0_5, 18, 0)
+  A2_7:finishCliantTalkTurn()
+end
+function Blm0j1.processEventLalai000Follow(A0_8, A1_9, A2_10)
+  A2_10:startCliantTalkTurn(2, A1_9)
+  A2_10:_runCharaScheduler(354041856)
+  A2_10:say(A0_8, 58, 0)
+  A2_10:finishCliantTalkTurn()
+end
+function Blm0j1.processEventKazaggchah000Follow(A0_11, A1_12, A2_13)
+  A2_13:startCliantTalkTurn(2, A1_12)
+  A2_13:_runCharaScheduler(70017024)
+  A2_13:say(A0_11, 59, 0)
+  A2_13:finishCliantTalkTurn()
+end
+function Blm0j1.processEventDozolmeloc000Follow(A0_14, A1_15, A2_16)
+  A2_16:startCliantTalkTurn(2, A1_15)
+  A2_16:_runCharaScheduler(70017024)
+  A2_16:say(A0_14, 60, 0)
+  A2_16:finishCliantTalkTurn()
+end
+function Blm0j1.processEventDaza000Follow(A0_17, A1_18, A2_19)
+  A2_19:startCliantTalkTurn(2, A1_18)
+  A2_19:_runCharaScheduler(70017024)
+  A2_19:say(A0_17, 61, 0)
+  A2_19:finishCliantTalkTurn()
+end
+function Blm0j1.processEventYayakeFollow(A0_20, A1_21, A2_22)
+  A2_22:startCliantTalkTurn(2, A1_21)
+  A2_22:finishCliantTalkTurn()
+end
+function Blm0j1.processEvent010(A0_23, A1_24, A2_25)
+  A0_23:startFadeOutCutSceneDefault(A1_24)
+  A0_23:startNQCutScene("blm0j110", 1)
+  desktopWidget:openPublicInformDialogWidget(worldMaster, 25117, 11000556, 1)
+  worldMaster:notify(worldMaster, 25117, 11000556, 1)
+  A0_23:_wait(5)
+  A0_23:startFadeInCutSceneDefault(A1_24)
+end
+function Blm0j1.processEventLalai010Follow(A0_26, A1_27, A2_28)
+  A2_28:startCliantTalkTurn(2, A1_27)
+  A2_28:_runCharaScheduler(353964032)
+  A2_28:say(A0_26, 62, 0)
+  A2_28:finishCliantTalkTurn()
+end
+function Blm0j1.processEventKazaggchah010Follow(A0_29, A1_30, A2_31)
+  A2_31:startCliantTalkTurn(2, A1_30)
+  A2_31:_runCharaScheduler(70017024)
+  A2_31:say(A0_29, 63, 0)
+  A2_31:finishCliantTalkTurn()
+end
+function Blm0j1.processEventDozolmeloc010Follow(A0_32, A1_33, A2_34)
+  A2_34:startCliantTalkTurn(2, A1_33)
+  A2_34:_runCharaScheduler(70017024)
+  A2_34:say(A0_32, 64, 0)
+  A2_34:finishCliantTalkTurn()
+end
+function Blm0j1.processEventDaza010Follow(A0_35, A1_36, A2_37)
+  A2_37:startCliantTalkTurn(2, A1_36)
+  A2_37:_runCharaScheduler(70017024)
+  A2_37:say(A0_35, 65, 0)
+  A2_37:finishCliantTalkTurn()
+end
+function Blm0j1.processEvent020(A0_38, A1_39, A2_40)
+  A0_38:startFadeOutCutSceneDefault(A1_39)
+  A0_38:startNQCutScene("blm0j120", 1)
+  A0_38:startFadeInCutSceneDefault(A1_39)
+end
+function Blm0j1.processEventClear(A0_41, A1_42, A2_43, A3_44)
+  worldMaster:say(A0_41, 49, 0)
+  A0_41:showGetJobItemWidget(A1_42, A3_44)
+  A0_41:_wait(6)
+  desktopWidget:openPublicInformLongDialogWidget(A0_41, 79)
+  A0_41:_wait(8)
+  A0_41:showGetJobAbilityWidget(A1_42, 27305, 1)
+  A0_41:_wait(6)
+end
+function Blm0j1.processEventClearAfter(A0_45, A1_46, A2_47)
+  A2_47:startCliantTalkTurn(2, A1_46)
+  A2_47:_runCharaScheduler(353964032)
+  A2_47:say(A0_45, 67, 0)
+  A2_47:say(A0_45, 68, 0)
+  worldMaster:say(A0_45, 69, 0)
+  A2_47:finishCliantTalkTurn()
+end
+function Blm0j1.processEvent_Yayake_Hint(A0_48, A1_49, A2_50)
+  worldMaster:say(worldMaster, 51130, 111261, 22, 30, 2, 15)
+end
+function Blm0j1.processEventChuui(A0_51, A1_52, A2_53)
+  worldMaster:say(worldMaster, 51131, 111261, 22)
+end
+function Blm0j1.processEventChuui2(A0_54, A1_55, A2_56)
+  worldMaster:say(worldMaster, 51132, 111261, 22)
+end

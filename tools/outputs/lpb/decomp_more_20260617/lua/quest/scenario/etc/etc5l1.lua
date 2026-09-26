@@ -1,0 +1,40 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Etc5l1", "ScenarioBaseClass")
+function Etc5l1.initText(A0_0)
+  A0_0:_loadTextDataPermanently(9268, "etc5l1")
+end
+function Etc5l1.processEventOTOPAPOTTOPAStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:say(A0_1, 2, 0)
+  A2_3:say(A0_1, 67, 0)
+  A2_3:finishCliantTalkTurn()
+end
+function Etc5l1.processEventOTOPAPOTTOPAStart_2(A0_4, A1_5, A2_6)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  A2_6:say(A0_4, 3, 0)
+  A2_6:finishCliantTalkTurn()
+end
+function Etc5l1.processEvent_000_1(A0_7, A1_8, A2_9)
+  A2_9:startCliantTalkTurn(2, A1_8)
+  A2_9:say(A0_7, 10, 0)
+  A2_9:finishCliantTalkTurn()
+end
+function Etc5l1.processEvent_010(A0_10, A1_11, A2_12)
+  A2_12:startCliantTalkTurn(2, A1_11)
+  A2_12:say(A0_10, 11, 0)
+  A2_12:say(A0_10, 12, 0)
+  A2_12:say(A0_10, 13, 0)
+  A2_12:say(A0_10, 14, 0)
+  A2_12:say(A0_10, 68, 0)
+  A2_12:finishCliantTalkTurn()
+end
+function Etc5l1.processEvent_010_1(A0_13, A1_14, A2_15)
+  A2_15:startCliantTalkTurn(2, A1_14)
+  A2_15:say(A0_13, 53, 0)
+  A2_15:finishCliantTalkTurn()
+end
+function Etc5l1.processEvent_020(A0_16, A1_17, A2_18, A3_19)
+  A0_16:startFadeOutCutSceneDefault(A1_17)
+  A0_16:startNQCutScene("etc5l120", 1, true, A3_19)
+  A0_16:startFadeInCutSceneDefault(A1_17)
+end

@@ -1,0 +1,60 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Etc303", "ScenarioBaseClass")
+function Etc303.initText(A0_0)
+  A0_0:_loadTextDataPermanently(7472, "etc303")
+end
+function Etc303.processEventHASTHWABStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(354177024)
+  A2_3:say(A0_1, 2, 0)
+  A2_3:say(A0_1, 3, 0)
+  A2_3:say(A0_1, 4, 0)
+  A2_3:say(A0_1, 5, 0)
+  A2_3:_runCharaScheduler(354041856)
+  A2_3:say(A0_1, 6, 0)
+  A2_3:say(A0_1, 7, 0)
+  A2_3:say(A0_1, 8, 0)
+  A2_3:_runCharaScheduler(353984512)
+  A2_3:say(A0_1, 9, 0)
+  A2_3:say(A0_1, 10, 0)
+  A2_3:say(A0_1, 11, 0)
+  A2_3:_runCharaScheduler(354099200)
+  A2_3:say(A0_1, 12, 0)
+  A2_3:say(A0_1, 13, 0)
+  A2_3:say(A0_1, 14, 0)
+  if A0_1:showQuestInfomation() == 1 then
+    A2_3:_runCharaScheduler(354066432)
+    A2_3:say(A0_1, 16, 0)
+  else
+    A2_3:_runCharaScheduler(354078720)
+    A2_3:say(A0_1, 15, 0)
+  end
+  A2_3:finishCliantTalkTurn()
+  return (A0_1:showQuestInfomation())
+end
+function Etc303.processEvent_000(A0_4, A1_5, A2_6)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  A2_6:_runCharaScheduler(354066432)
+  A2_6:say(A0_4, 17, 0)
+  A2_6:finishCliantTalkTurn()
+end
+function Etc303.processEvent_005(A0_7, A1_8, A2_9, A3_10)
+  A2_9:startCliantTalkTurn(2, A1_8)
+  A2_9:_runCharaScheduler(353984512)
+  A2_9:say(A0_7, 18, 0)
+  A2_9:say(A0_7, 19, 0)
+  A2_9:say(A0_7, 20, 0)
+  if A3_10 == 1 then
+    A2_9:_runCharaScheduler(354066432)
+    A2_9:say(A0_7, 21, 0)
+    A2_9:say(A0_7, 22, 0)
+  elseif A3_10 == 2 then
+    A2_9:_runCharaScheduler(354041856)
+    A2_9:say(A0_7, 23, 0)
+    A2_9:say(A0_7, 24, 0)
+  else
+    A2_9:_runCharaScheduler(354054144)
+    A2_9:say(A0_7, 25, 0)
+  end
+  A2_9:finishCliantTalkTurn()
+end

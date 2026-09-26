@@ -1,0 +1,494 @@
+{
+  "created_at": "2026-06-17T16:44:28",
+  "scope": "combined full client script manifest via decomp_more_20260617 + decomp_further_20260617",
+  "combined_scripts": 2517,
+  "combined_decompiled": 2517,
+  "new_delta_scripts": 1507,
+  "new_delta_decompiled": 1507,
+  "new_delta_errors": 0,
+  "batch_counts": {
+    "decomp_further_20260617": 1507,
+    "decomp_more_20260617": 1010
+  },
+  "top_level_counts": {
+    "actorbaseclass": 1,
+    "actorbaseclass_u": 1,
+    "area": 43,
+    "chara": 991,
+    "command": 139,
+    "commanddebugger": 5,
+    "debug": 5,
+    "director": 293,
+    "gamedata": 6,
+    "global_u": 1,
+    "group": 25,
+    "item": 26,
+    "judge": 23,
+    "quest": 629,
+    "status": 133,
+    "system": 10,
+    "widget": 179,
+    "world": 7
+  },
+  "tag_counts": {
+    "chara": 991,
+    "quest": 911,
+    "monster": 763,
+    "widget": 180,
+    "command": 146,
+    "status": 143,
+    "item": 99,
+    "instance": 86,
+    "populace": 76,
+    "object": 75,
+    "system": 69,
+    "area": 64,
+    "director": 39,
+    "hamlet": 33,
+    "debug": 29,
+    "group": 29,
+    "judge": 23,
+    "retainer": 21,
+    "party": 20,
+    "linkshell": 17,
+    "caravan": 14,
+    "config": 10,
+    "cutscene": 8,
+    "player": 8,
+    "world": 7,
+    "search": 6,
+    "achievement": 5,
+    "gamedata": 3,
+    "mail": 1,
+    "actorbaseclass": 1,
+    "actorbaseclass_u": 1,
+    "global_u": 1
+  },
+  "classes": 2423,
+  "methods": 11823,
+  "event_entrypoints": 6192,
+  "require_edges": 2451,
+  "text_data_loads": 455,
+  "call_sites": 55715,
+  "high_signal_calls": 23706,
+  "monster_species": 82,
+  "npc_subtypes": 15,
+  "top_base_classes": {
+    "ScenarioBaseClass": 618,
+    "NpcBaseClass": 170,
+    "StatusBaseClass": 132,
+    "WidgetBaseClass": 117,
+    "QuestDirectorBaseClass": 116,
+    "MonsterBaseClass": 89,
+    "SimpleQuestBattleBaseClass": 60,
+    "EmpireBaseClass": 59,
+    "SystemCommandBaseClass": 55,
+    "AskBaseClass": 52,
+    "FighterBaseClass": 43,
+    "DirectorBaseClass": 37,
+    "GuildleveBaseClass": 31,
+    "BirdmanBaseClass": 28,
+    "LizardmanBaseClass": 25,
+    "GameCommandBaseClass": 25,
+    "ZoneBaseClass": 24,
+    "RebelBaseClass": 20,
+    "GnoleBaseClass": 18,
+    "ElementalBaseClass": 17,
+    "JudgeBaseClass": 16,
+    "BattleCommandBaseClass": 16,
+    "MagicBaseClass": 16,
+    "NormalItemBaseClass": 16,
+    "GimmickNpcBaseClass": 14,
+    "SpriteBaseClass": 13,
+    "InstanceRaidBaseClass": 12,
+    "TermiteBaseClass": 11,
+    "WolfBaseClass": 11,
+    "AhrimanBaseClass": 10
+  },
+  "top_method_names": {
+    "initText": 589,
+    "init": 165,
+    "initForEvent": 144,
+    "processEvent010": 113,
+    "processUICommandOperate": 98,
+    "processEvent020": 88,
+    "processUICommandCancel": 71,
+    "processEvent010_2": 65,
+    "processEvent030": 64,
+    "processUICommandDefault": 59,
+    "processEvent000": 55,
+    "canFire": 54,
+    "initAsk": 53,
+    "processEvent005_2": 50,
+    "processEvent020_2": 50,
+    "processEvent040": 48,
+    "isGoodStatus": 48,
+    "processEvent010_3": 44,
+    "processEventChuui": 42,
+    "processUICommandClose": 42,
+    "processEventChuui2": 41,
+    "processEventStart": 41,
+    "processEvent_010": 40,
+    "processEvent050": 39,
+    "processEvent010_4": 38,
+    "setWindowFocus": 38,
+    "processEvent030_2": 37,
+    "processEventClear": 37,
+    "processEvent000_2": 37,
+    "processEvent005": 36
+  },
+  "top_receiver_methods": [
+    {
+      "receiver": "A2_3",
+      "method": "say",
+      "calls": 2546
+    },
+    {
+      "receiver": "worldMaster",
+      "method": "say",
+      "calls": 979
+    },
+    {
+      "receiver": "A2_3",
+      "method": "_runCharaScheduler",
+      "calls": 917
+    },
+    {
+      "receiver": "A2_6",
+      "method": "say",
+      "calls": 741
+    },
+    {
+      "receiver": "A2_9",
+      "method": "say",
+      "calls": 675
+    },
+    {
+      "receiver": "worldMaster",
+      "method": "_getMyPlayer",
+      "calls": 451
+    },
+    {
+      "receiver": "A0_0",
+      "method": "_loadTextDataPermanently",
+      "calls": 448
+    },
+    {
+      "receiver": "A2_12",
+      "method": "say",
+      "calls": 426
+    },
+    {
+      "receiver": "A0_1",
+      "method": "showQuestInfomation",
+      "calls": 421
+    },
+    {
+      "receiver": "A2_15",
+      "method": "say",
+      "calls": 406
+    },
+    {
+      "receiver": "A2_3",
+      "method": "finishCliantTalkTurn",
+      "calls": 329
+    },
+    {
+      "receiver": "A2_6",
+      "method": "_runCharaScheduler",
+      "calls": 321
+    },
+    {
+      "receiver": "A2_18",
+      "method": "say",
+      "calls": 312
+    },
+    {
+      "receiver": "A2_10",
+      "method": "say",
+      "calls": 281
+    },
+    {
+      "receiver": "A2_9",
+      "method": "_runCharaScheduler",
+      "calls": 273
+    },
+    {
+      "receiver": "A2_3",
+      "method": "startCliantTalkTurn",
+      "calls": 268
+    },
+    {
+      "receiver": "A2_24",
+      "method": "say",
+      "calls": 233
+    },
+    {
+      "receiver": "worldMaster",
+      "method": "ask",
+      "calls": 231
+    },
+    {
+      "receiver": "A2_21",
+      "method": "say",
+      "calls": 229
+    },
+    {
+      "receiver": "A2_27",
+      "method": "say",
+      "calls": 217
+    },
+    {
+      "receiver": "A0_1",
+      "method": "_wait",
+      "calls": 202
+    },
+    {
+      "receiver": "A2_39",
+      "method": "say",
+      "calls": 196
+    },
+    {
+      "receiver": "A2_7",
+      "method": "say",
+      "calls": 186
+    },
+    {
+      "receiver": "A2_54",
+      "method": "say",
+      "calls": 183
+    },
+    {
+      "receiver": "A2_6",
+      "method": "finishCliantTalkTurn",
+      "calls": 178
+    },
+    {
+      "receiver": "A2_12",
+      "method": "_runCharaScheduler",
+      "calls": 176
+    },
+    {
+      "receiver": "A2_36",
+      "method": "say",
+      "calls": 173
+    },
+    {
+      "receiver": "A0_3",
+      "method": "say",
+      "calls": 173
+    },
+    {
+      "receiver": "A0_0",
+      "method": "setConfirmCondition",
+      "calls": 172
+    },
+    {
+      "receiver": "A2_6",
+      "method": "startCliantTalkTurn",
+      "calls": 171
+    }
+  ],
+  "top_text_sheets": [
+    {
+      "sheet_id": "6829",
+      "sheet_name": "raidDungeonBarrier",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6736",
+      "sheet_name": "raidDungeonExit",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6813",
+      "sheet_name": "raidDungeonLight",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6753",
+      "sheet_name": "raidDungeonPoster",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6781",
+      "sheet_name": "raidDungeonWarp",
+      "loads": 1
+    },
+    {
+      "sheet_id": "9920",
+      "sheet_name": "instanceRaidGuideAurumVale",
+      "loads": 1
+    },
+    {
+      "sheet_id": "9936",
+      "sheet_name": "instanceRaidGuideCuttersCry",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6704",
+      "sheet_name": "raidFst0Dungeon03Guide",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6720",
+      "sheet_name": "raidRoc0Dungeon01Guide",
+      "loads": 1
+    },
+    {
+      "sheet_id": "9984",
+      "sheet_name": "populaceCutScenePlayer",
+      "loads": 1
+    },
+    {
+      "sheet_id": "2221",
+      "sheet_name": "populaceLinkshellManager",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1355",
+      "sheet_name": "populaceRequestWarden",
+      "loads": 1
+    },
+    {
+      "sheet_id": "545",
+      "sheet_name": "populaceRetainerManager",
+      "loads": 1
+    },
+    {
+      "sheet_id": "319",
+      "sheet_name": "ordinaryRetainer",
+      "loads": 1
+    },
+    {
+      "sheet_id": "10208",
+      "sheet_name": "InstanceRaidHamletDefense",
+      "loads": 1
+    },
+    {
+      "sheet_id": "323",
+      "sheet_name": "pgAeth",
+      "loads": 1
+    },
+    {
+      "sheet_id": "327",
+      "sheet_name": "pgConv",
+      "loads": 1
+    },
+    {
+      "sheet_id": "151",
+      "sheet_name": "acn200",
+      "loads": 1
+    },
+    {
+      "sheet_id": "155",
+      "sheet_name": "acn300",
+      "loads": 1
+    },
+    {
+      "sheet_id": "159",
+      "sheet_name": "acn306",
+      "loads": 1
+    },
+    {
+      "sheet_id": "163",
+      "sheet_name": "acn400",
+      "loads": 1
+    },
+    {
+      "sheet_id": "221",
+      "sheet_name": "acn500",
+      "loads": 1
+    },
+    {
+      "sheet_id": "225",
+      "sheet_name": "acn506",
+      "loads": 1
+    },
+    {
+      "sheet_id": "335",
+      "sheet_name": "alc200",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1383",
+      "sheet_name": "alc300",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1396",
+      "sheet_name": "alc306",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1409",
+      "sheet_name": "alc400",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1422",
+      "sheet_name": "alc500",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1435",
+      "sheet_name": "alc506",
+      "loads": 1
+    },
+    {
+      "sheet_id": "347",
+      "sheet_name": "arc200",
+      "loads": 1
+    },
+    {
+      "sheet_id": "351",
+      "sheet_name": "arc300",
+      "loads": 1
+    },
+    {
+      "sheet_id": "355",
+      "sheet_name": "arc306",
+      "loads": 1
+    },
+    {
+      "sheet_id": "359",
+      "sheet_name": "arc400",
+      "loads": 1
+    },
+    {
+      "sheet_id": "363",
+      "sheet_name": "arc500",
+      "loads": 1
+    },
+    {
+      "sheet_id": "367",
+      "sheet_name": "arc506",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8612",
+      "sheet_name": "blm0j1",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8628",
+      "sheet_name": "blm0j2",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8644",
+      "sheet_name": "blm0j3",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8660",
+      "sheet_name": "blm0j4",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8676",
+      "sheet_name": "blm0j5",
+      "loads": 1
+    }
+  ]
+}

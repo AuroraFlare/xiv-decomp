@@ -1,0 +1,13 @@
+require("/Judge/JudgeBaseClass")
+_defineClass("CommonJudge", "JudgeBaseClass")
+function CommonJudge.init(A0_0)
+  A0_0:prepareSpreadSheet("itemData")
+  A0_0:prepareSpreadSheet("equipment")
+  A0_0:prepareSpreadSheet("weapon")
+  A0_0:prepareSpreadSheet("armor")
+  A0_0:prepareSpreadSheet("accessory")
+  A0_0:prepareSpreadSheet("gameCommand")
+  A0_0:prepareSpreadSheet("gameCommandBasic")
+  A0_0:prepareSpreadSheet("compatibility")
+  A0_0:prepareSpreadSheet("exp_BPCost")
+end

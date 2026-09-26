@@ -1,0 +1,10 @@
+require("/Judge/Preface/MusicChangePrefaceBaseClass")
+_defineClass("CutSceneOnceBeaconPrefaceJudge", "MusicChangePrefaceBaseClass")
+function CutSceneOnceBeaconPrefaceJudge.processEvent(A0_0, A1_1, A2_2, A3_3)
+  worldMaster:_getMyPlayer():_fadeOut(1)
+  worldMaster:_getMyPlayer():_waitForFading()
+  worldMaster:createCutScene(A2_2, A3_3):startCutScene(1, 61, 1)
+  worldMaster:createCutScene(A2_2, A3_3):_delete()
+  worldMaster:_getMyPlayer():_fadeIn(1)
+  worldMaster:_getMyPlayer():_waitForFading()
+end

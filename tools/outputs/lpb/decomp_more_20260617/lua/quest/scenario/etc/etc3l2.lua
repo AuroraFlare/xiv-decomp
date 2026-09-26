@@ -1,0 +1,103 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Etc3l2", "ScenarioBaseClass")
+function Etc3l2.initText(A0_0)
+  A0_0:_loadTextDataPermanently(4675, "etc3l2")
+end
+function Etc3l2.processEventMynadaegStart(A0_1, A1_2, A2_3, A3_4)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(354177024)
+  A2_3:say(A0_1, 2, 0)
+  A2_3:say(A0_1, 3, 0)
+  if A3_4 == 1 then
+    A2_3:say(A0_1, 39, 0)
+    A2_3:_runCharaScheduler(354177024)
+    A2_3:say(A0_1, 40, 0)
+    A2_3:say(A0_1, 41, 0)
+  else
+    A2_3:say(A0_1, 4, 0)
+    A2_3:_runCharaScheduler(354177024)
+    A2_3:say(A0_1, 5, 0)
+    A2_3:say(A0_1, 6, 0)
+  end
+  A2_3:say(A0_1, 7, 0)
+  if A0_1:showQuestInfomation() == 1 then
+    A2_3:_runCharaScheduler(354177024)
+    A2_3:say(A0_1, 9, 0)
+  else
+    A2_3:_runCharaScheduler(354177024)
+    A2_3:say(A0_1, 8, 0)
+  end
+  A2_3:finishCliantTalkTurn()
+  return (A0_1:showQuestInfomation())
+end
+function Etc3l2.processEvent000(A0_5, A1_6, A2_7)
+  A2_7:startCliantTalkTurn(2, A1_6)
+  A2_7:_runCharaScheduler(354177024)
+  A2_7:say(A0_5, 10, 0)
+  A2_7:say(A0_5, 34, 0)
+  A2_7:say(A0_5, 11, 0)
+  A2_7:finishCliantTalkTurn()
+end
+function Etc3l2.processEvent010(A0_8, A1_9, A2_10)
+  A2_10:startCliantTalkTurn(1, A1_9)
+  A2_10:_runCharaScheduler(353968128)
+  A2_10:say(A0_8, 12, 0)
+  A2_10:say(A0_8, 37, 0)
+  A2_10:say(A0_8, 13, 0)
+  A2_10:_runCharaScheduler(354082816)
+  A2_10:say(A0_8, 14, 0)
+  A2_10:say(A0_8, 15, 0)
+  A2_10:finishCliantTalkTurn()
+end
+function Etc3l2.processEvent010_2(A0_11, A1_12, A2_13, A3_14)
+  A2_13:startCliantTalkTurn(1, A1_12)
+  A2_13:_runCharaScheduler(354082816)
+  A2_13:say(A0_11, 16, 0)
+  if A3_14 == 1 then
+    A2_13:_runCharaScheduler(353959936)
+    A2_13:say(A0_11, 42, 0)
+  else
+    A2_13:_runCharaScheduler(353959936)
+    A2_13:say(A0_11, 17, 0)
+  end
+  A2_13:say(A0_11, 18, 0)
+  A2_13:say(A0_11, 19, 0)
+  A2_13:_runCharaScheduler(353959936)
+  A2_13:say(A0_11, 20, 0)
+  A2_13:say(A0_11, 38, 0)
+  A2_13:say(A0_11, 21, 0)
+  if worldMaster:ask(A0_11, worldMaster, 51030, 2) == 1 then
+    A0_11:runCharaSchedulerPastAreaIn(A1_12)
+  else
+    A2_13:say(A0_11, 33, 0)
+    A2_13:finishCliantTalkTurn()
+  end
+  return (worldMaster:ask(A0_11, worldMaster, 51030, 2))
+end
+function Etc3l2.processEvent010_3(A0_15, A1_16, A2_17)
+  A0_15:startFadeOutCutSceneDefault(A1_16)
+  A0_15:startNQCutScene("etc3l210", 1)
+  A0_15:startFadeInCutSceneAfterWarp(A1_16)
+end
+function Etc3l2.processEvent015(A0_18, A1_19, A2_20)
+  A2_20:startCliantTalkTurn(2, A1_19)
+  A2_20:_runCharaScheduler(354177024)
+  A2_20:say(A0_18, 25, 0)
+  A2_20:say(A0_18, 26, 0)
+  A2_20:say(A0_18, 27, 0)
+  A1_19:_runCharaScheduler(68378624)
+  A0_18:_wait(3)
+  A2_20:_runCharaScheduler(354115584)
+  A2_20:say(A0_18, 28, 0)
+  A0_18:startFadeOut(A1_19, 1)
+  A0_18:_wait(2)
+  A0_18:startFadeIn(A1_19, 1)
+  A2_20:say(A0_18, 29, 0)
+  A2_20:say(A0_18, 35, 0)
+  A2_20:_runCharaScheduler(354177024)
+  A2_20:say(A0_18, 30, 0)
+  A2_20:say(A0_18, 31, 0)
+  A2_20:_runCharaScheduler(354177024)
+  A2_20:say(A0_18, 32, 0)
+  A2_20:finishCliantTalkTurn()
+end

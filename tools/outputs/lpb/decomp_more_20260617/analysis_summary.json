@@ -1,0 +1,458 @@
+{
+  "created_at": "2026-06-17T16:33:18",
+  "lua_files": 1010,
+  "classes": 1001,
+  "methods": 7140,
+  "text_loads": 396,
+  "high_signal_api_hits": 2180,
+  "cutscene_call_lines": 2014,
+  "quest_npc_linkshell_calls": 32,
+  "retainer_linkshell_surface_files": 31,
+  "family_counts": {
+    "cutscene": 8,
+    "instance": 112,
+    "linkshell": 17,
+    "quest": 861,
+    "retainer": 14
+  },
+  "methods_by_family": {
+    "cutscene": 24,
+    "instance": 138,
+    "instance;quest": 3,
+    "linkshell": 89,
+    "quest": 6633,
+    "retainer": 253
+  },
+  "api_hits_by_family": {
+    "cutscene": 25,
+    "instance": 32,
+    "linkshell": 246,
+    "quest": 1659,
+    "retainer": 218
+  },
+  "top_api_patterns": {
+    "startNQCutScene": 571,
+    "startFadeInCutSceneDefault": 381,
+    "startFadeInCutSceneAfterWarp": 306,
+    "linkshell": 232,
+    "askExtendWidget": 209,
+    "RetainerItemListWidget": 86,
+    "NpcLinkshell": 52,
+    "getRetainerItem": 48,
+    "startHQCutScene": 42,
+    "tellByNpcLinkshellChat": 32,
+    "askRestrictChoices": 25,
+    "processUpdateContentsInformation": 20,
+    "openPublicEffectWidget": 19,
+    "askEventModeWidgetYield": 17,
+    "isValidRetainer": 17,
+    "createCutScene": 15,
+    "openCutSceneEffectWidget": 15,
+    "startCutScene": 10,
+    "getBazaarItem": 8,
+    "getLinkshell": 7,
+    "noticeRetainerTradeResult": 6,
+    "askLinkshellListWidget": 6,
+    "askLinkshellSelectIconWidget": 5,
+    "openRaidDungeonExecutionWidget": 5,
+    "getRetainerItemPackageCapacity": 5,
+    "askForCustomizeOption": 4,
+    "openRetainerTradeWidget": 3,
+    "closeRetainerTradeWidget": 3,
+    "selectRetainerTradeWidget": 3,
+    "openRetainerItemListWidget": 3,
+    "closeRetainerItemListWidget": 3,
+    "selectRetainerItemListWidget": 3,
+    "_getPendingCutSceneActor": 3,
+    "askRetainerListWidget": 2,
+    "askLinkshellNamingWidget": 2,
+    "askLinkshellConfirmWidget": 2,
+    "askRetainerNamingWidget": 2,
+    "eventNoticeCutScene": 2,
+    "getLinkshellIconID": 2,
+    "getRetainerName": 2
+  },
+  "top_base_classes": {
+    "ScenarioBaseClass": 618,
+    "QuestDirectorBaseClass": 116,
+    "SimpleQuestBattleBaseClass": 60,
+    "NpcBaseClass": 34,
+    "EmpireBaseClass": 20,
+    "InstanceRaidBaseClass": 12,
+    "AskBaseClass": 12,
+    "DirectorBaseClass": 11,
+    "WidgetBaseClass": 11,
+    "SystemCommandBaseClass": 9,
+    "PrivateAreaBaseClass": 8,
+    "RaidGimmickMonsterBaseClass": 8,
+    "SlugBaseClass": 5,
+    "TermiteBaseClass": 5,
+    "RaidGimmickBaseClass": 5,
+    "PassiveGuildleveBaseClass": 5,
+    "SpiderBaseClass": 4,
+    "PublicRaidBaseClass": 4,
+    "PrivateAreaContentBaseClass": 3,
+    "QuestBaseClass": 3,
+    "FlowerBaseClass": 2,
+    "RebelBaseClass": 2,
+    "ScalelizardBaseClass": 2,
+    "InspectableGuideBaseClass": 2,
+    "InstanceRaidGuideBaseClass": 2,
+    "HasQuestGuideBaseClass": 2,
+    "NoQuestGuideBaseClass": 2,
+    "OccupancyGuideBaseClass": 2,
+    "OccupancyDirectorBaseClass": 2,
+    "RelationGroupBaseClass": 2
+  },
+  "top_text_sheets": [
+    {
+      "sheet_id": "6829",
+      "sheet_name": "raidDungeonBarrier",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6736",
+      "sheet_name": "raidDungeonExit",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6813",
+      "sheet_name": "raidDungeonLight",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6753",
+      "sheet_name": "raidDungeonPoster",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6781",
+      "sheet_name": "raidDungeonWarp",
+      "loads": 1
+    },
+    {
+      "sheet_id": "9920",
+      "sheet_name": "instanceRaidGuideAurumVale",
+      "loads": 1
+    },
+    {
+      "sheet_id": "9936",
+      "sheet_name": "instanceRaidGuideCuttersCry",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6704",
+      "sheet_name": "raidFst0Dungeon03Guide",
+      "loads": 1
+    },
+    {
+      "sheet_id": "6720",
+      "sheet_name": "raidRoc0Dungeon01Guide",
+      "loads": 1
+    },
+    {
+      "sheet_id": "9984",
+      "sheet_name": "populaceCutScenePlayer",
+      "loads": 1
+    },
+    {
+      "sheet_id": "2221",
+      "sheet_name": "populaceLinkshellManager",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1355",
+      "sheet_name": "populaceRequestWarden",
+      "loads": 1
+    },
+    {
+      "sheet_id": "545",
+      "sheet_name": "populaceRetainerManager",
+      "loads": 1
+    },
+    {
+      "sheet_id": "319",
+      "sheet_name": "ordinaryRetainer",
+      "loads": 1
+    },
+    {
+      "sheet_id": "10208",
+      "sheet_name": "InstanceRaidHamletDefense",
+      "loads": 1
+    },
+    {
+      "sheet_id": "323",
+      "sheet_name": "pgAeth",
+      "loads": 1
+    },
+    {
+      "sheet_id": "327",
+      "sheet_name": "pgConv",
+      "loads": 1
+    },
+    {
+      "sheet_id": "151",
+      "sheet_name": "acn200",
+      "loads": 1
+    },
+    {
+      "sheet_id": "155",
+      "sheet_name": "acn300",
+      "loads": 1
+    },
+    {
+      "sheet_id": "159",
+      "sheet_name": "acn306",
+      "loads": 1
+    },
+    {
+      "sheet_id": "163",
+      "sheet_name": "acn400",
+      "loads": 1
+    },
+    {
+      "sheet_id": "221",
+      "sheet_name": "acn500",
+      "loads": 1
+    },
+    {
+      "sheet_id": "225",
+      "sheet_name": "acn506",
+      "loads": 1
+    },
+    {
+      "sheet_id": "335",
+      "sheet_name": "alc200",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1383",
+      "sheet_name": "alc300",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1396",
+      "sheet_name": "alc306",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1409",
+      "sheet_name": "alc400",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1422",
+      "sheet_name": "alc500",
+      "loads": 1
+    },
+    {
+      "sheet_id": "1435",
+      "sheet_name": "alc506",
+      "loads": 1
+    },
+    {
+      "sheet_id": "347",
+      "sheet_name": "arc200",
+      "loads": 1
+    },
+    {
+      "sheet_id": "351",
+      "sheet_name": "arc300",
+      "loads": 1
+    },
+    {
+      "sheet_id": "355",
+      "sheet_name": "arc306",
+      "loads": 1
+    },
+    {
+      "sheet_id": "359",
+      "sheet_name": "arc400",
+      "loads": 1
+    },
+    {
+      "sheet_id": "363",
+      "sheet_name": "arc500",
+      "loads": 1
+    },
+    {
+      "sheet_id": "367",
+      "sheet_name": "arc506",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8612",
+      "sheet_name": "blm0j1",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8628",
+      "sheet_name": "blm0j2",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8644",
+      "sheet_name": "blm0j3",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8660",
+      "sheet_name": "blm0j4",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8676",
+      "sheet_name": "blm0j5",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8692",
+      "sheet_name": "blm0j6",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8292",
+      "sheet_name": "brd0j1",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8308",
+      "sheet_name": "brd0j2",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8324",
+      "sheet_name": "brd0j3",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8340",
+      "sheet_name": "brd0j4",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8356",
+      "sheet_name": "brd0j5",
+      "loads": 1
+    },
+    {
+      "sheet_id": "8372",
+      "sheet_name": "brd0j6",
+      "loads": 1
+    },
+    {
+      "sheet_id": "102",
+      "sheet_name": "bsm200",
+      "loads": 1
+    },
+    {
+      "sheet_id": "229",
+      "sheet_name": "bsm300",
+      "loads": 1
+    },
+    {
+      "sheet_id": "249",
+      "sheet_name": "bsm306",
+      "loads": 1
+    }
+  ],
+  "dat_tables": [
+    {
+      "table": "populaceRetainerManager.csv",
+      "exists": "True",
+      "data_rows": 178,
+      "relevant_rows": 56,
+      "matched_terms": "retainer:52;bazaar:10;linkpearl:2;quest:1",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "ordinaryRetainer.csv",
+      "exists": "True",
+      "data_rows": 999,
+      "relevant_rows": 13,
+      "matched_terms": "bazaar:7;retainer:4;quest:2",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "populaceLinkshellManager.csv",
+      "exists": "True",
+      "data_rows": 132,
+      "relevant_rows": 78,
+      "matched_terms": "linkshell:78;quest:1",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "xtx_communityMember.csv",
+      "exists": "True",
+      "data_rows": 4,
+      "relevant_rows": 0,
+      "matched_terms": "",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "communityMember.csv",
+      "exists": "True",
+      "data_rows": 4,
+      "relevant_rows": 0,
+      "matched_terms": "",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "xtx_npclslist.csv",
+      "exists": "True",
+      "data_rows": 41,
+      "relevant_rows": 1,
+      "matched_terms": "linkshell:1",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "xtx_npcLsBfrxtx.csv",
+      "exists": "True",
+      "data_rows": 501,
+      "relevant_rows": 23,
+      "matched_terms": "quest:22;linkpearl:1",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "xtx__text_ui.csv",
+      "exists": "True",
+      "data_rows": 3974,
+      "relevant_rows": 441,
+      "matched_terms": "quest:235;linkshell:117;retainer:52;bazaar:23;linkpearl:11;cutscene:5;mannequin:3",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "cutReplay.csv",
+      "exists": "True",
+      "data_rows": 614,
+      "relevant_rows": 0,
+      "matched_terms": "",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "xtx_cutReplay.csv",
+      "exists": "True",
+      "data_rows": 614,
+      "relevant_rows": 603,
+      "matched_terms": "cutscene:601;bazaar:2",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "quest.csv",
+      "exists": "True",
+      "data_rows": 735,
+      "relevant_rows": 0,
+      "matched_terms": "",
+      "notes": "line numbers include two-row CSV header"
+    },
+    {
+      "table": "xtx_quest.csv",
+      "exists": "True",
+      "data_rows": 735,
+      "relevant_rows": 66,
+      "matched_terms": "quest:65;bazaar:1",
+      "notes": "line numbers include two-row CSV header"
+    }
+  ],
+  "actor_class_refs": 232
+}

@@ -1,0 +1,10 @@
+require("/Judge/JudgeBaseClass")
+_defineClass("JudgeMaster", "JudgeBaseClass")
+function JudgeMaster._onInit(A0_0)
+  A0_0:_callSuperClassFunc("_onInit")
+  A0_0:prepareSpreadSheet("command")
+  A0_0:prepareSpreadSheet("status")
+  _getTutorialJudge()
+  _getStaticActor(320013)
+  _prepareAllCommandStaticActor()
+end

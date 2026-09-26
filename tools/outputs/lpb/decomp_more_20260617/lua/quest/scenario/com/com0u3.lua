@@ -1,0 +1,30 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Com0u3", "ScenarioBaseClass")
+function Com0u3.initText(A0_0)
+  A0_0:_loadTextDataPermanently(6272, "com0u3")
+end
+function Com0u3.processEventUSANZIStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(84099072)
+  A0_1:_wait(2)
+  A2_3:say(A0_1, 2, 0)
+  A2_3:say(A0_1, 3, 0)
+  if A2_3:ask(A0_1, 12, 2) == 1 then
+    A2_3:_runCharaScheduler(354045952)
+    A2_3:say(A0_1, 4, 0)
+    A2_3:say(A0_1, 5, 0)
+    A2_3:say(A0_1, 6, 0)
+    A2_3:_runCharaScheduler(353984512)
+    A2_3:say(A0_1, 7, 0)
+    A2_3:say(A0_1, 8, 0)
+    A2_3:say(A0_1, 9, 0)
+    A2_3:say(A0_1, 10, 0)
+    A2_3:_runCharaScheduler(354103296)
+    A2_3:say(A0_1, 11, 0)
+  else
+    A2_3:_runCharaScheduler(70823936)
+    A2_3:say(A0_1, 15, 0)
+  end
+  A2_3:finishCliantTalkTurn()
+  return (A2_3:ask(A0_1, 12, 2))
+end

@@ -1,0 +1,72 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("War0j6", "ScenarioBaseClass")
+function War0j6.initText(A0_0)
+  A0_0:_loadTextDataPermanently(8212, "war0j6")
+end
+function War0j6.processEventCURIOUS_GORGEHint(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:_runCharaScheduler(354082816)
+  A2_3:say(A0_1, 2, 0)
+  A2_3:say(A0_1, 3, 0)
+  A2_3:finishCliantTalkTurn()
+  worldMaster:say(A0_1, 4, 0)
+end
+function War0j6.processEventCURIOUS_GORGEStart(A0_4, A1_5, A2_6)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  A2_6:_runCharaScheduler(353972224)
+  A2_6:say(A0_4, 5, 0)
+  A2_6:say(A0_4, 6, 0)
+  A2_6:_runCharaScheduler(354086912)
+  A2_6:say(A0_4, 7, 0)
+  A2_6:say(A0_4, 8, 0)
+  A2_6:_runCharaScheduler(353964032)
+  A2_6:say(A0_4, 9, 0)
+  A2_6:say(A0_4, 10, 0)
+  A2_6:_runCharaScheduler(353959936)
+  A2_6:say(A0_4, 11, 0)
+  if A0_4:showQuestInfomation() == 1 then
+    A2_6:_runCharaScheduler(353968128)
+    A2_6:say(A0_4, 13, 0)
+  else
+    A2_6:_runCharaScheduler(353984512)
+    A2_6:say(A0_4, 12, 0)
+  end
+  A2_6:finishCliantTalkTurn()
+  return (A0_4:showQuestInfomation())
+end
+function War0j6.processEventCURIOUS_GORGEFollow(A0_7, A1_8, A2_9)
+  A2_9:startCliantTalkTurn(2, A1_8)
+  A2_9:_runCharaScheduler(354066432)
+  A2_9:say(A0_7, 14, 0)
+  A2_9:say(A0_7, 15, 0)
+  A2_9:finishCliantTalkTurn()
+end
+function War0j6.processEvent010(A0_10, A1_11, A2_12)
+  A0_10:startFadeOutCutSceneDefault(A1_11)
+  A0_10:startFadeInCutSceneDefault(A1_11)
+end
+function War0j6.processEventCURIOUS_GORGE010Follow(A0_13, A1_14, A2_15)
+  A2_15:startCliantTalkTurn(2, A1_14)
+  A2_15:_runCharaScheduler(354066432)
+  A2_15:say(A0_13, 39, 0)
+  A2_15:finishCliantTalkTurn()
+end
+function War0j6.processEvent020(A0_16, A1_17, A2_18)
+  A0_16:startFadeOutCutSceneDefault(A1_17)
+  A0_16:startNQCutScene("war0j620", 1)
+  A0_16:startFadeInCutSceneDefault(A1_17)
+end
+function War0j6.processEventClear(A0_19, A1_20, A2_21, A3_22)
+  desktopWidget:openPublicInformLongDialogWidget(A0_19, 42)
+  A0_19:_wait(8)
+  A0_19:showGetJobAbilityWidget(A1_20, 27189, 1)
+  A0_19:_wait(6)
+  A0_19:showGetJobItemWidget(A1_20, A3_22)
+  A0_19:_wait(6)
+end
+function War0j6.processEventChuui(A0_23, A1_24, A2_25)
+  worldMaster:say(worldMaster, 51131, 111206, 17)
+end
+function War0j6.processEventChuui2(A0_26, A1_27, A2_28)
+  worldMaster:say(worldMaster, 51132, 111206, 17)
+end

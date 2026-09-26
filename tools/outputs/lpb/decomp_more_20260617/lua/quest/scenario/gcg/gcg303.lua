@@ -1,0 +1,110 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Gcg303", "ScenarioBaseClass")
+function Gcg303.initText(A0_0)
+  A0_0:_loadTextDataPermanently(6912, "gcg303")
+end
+function Gcg303.processEventStart(A0_1, A1_2, A2_3, A3_4)
+  A2_3:_runCharaScheduler(354095104)
+  A2_3:startCliantTalkTurn(2, A1_2)
+  A2_3:say(A0_1, 2, 0)
+  if A3_4 == 1 then
+    A2_3:say(A0_1, 4, 0)
+  else
+    A2_3:say(A0_1, 3, 0)
+  end
+  A2_3:_runCharaScheduler(353959936)
+  A2_3:say(A0_1, 5, 0)
+  A2_3:say(A0_1, 6, 0)
+  A2_3:_runCharaScheduler(354103296)
+  A2_3:say(A0_1, 7, 0)
+  A2_3:say(A0_1, 8, 0)
+  A2_3:say(A0_1, 9, 0)
+  A2_3:_runCharaScheduler(84049920)
+  A2_3:say(A0_1, 10, 0)
+  A2_3:say(A0_1, 11, 0)
+  A2_3:_runCharaScheduler(353968128)
+  A2_3:say(A0_1, 13, 0)
+  if A0_1:showQuestInfomation() == 1 then
+    A2_3:_runCharaScheduler(354054144)
+    A2_3:say(A0_1, 15, 0)
+    A2_3:finishCliantTalkTurn()
+    return (A0_1:showQuestInfomation())
+  else
+    A2_3:_runCharaScheduler(354086912)
+    A2_3:say(A0_1, 14, 0)
+    A2_3:finishCliantTalkTurn()
+    return (A0_1:showQuestInfomation())
+  end
+end
+function Gcg303.processEventStartAfter(A0_5, A1_6, A2_7)
+  A2_7:startCliantTalkTurn(2, A1_6)
+  A2_7:_runCharaScheduler(353964032)
+  A2_7:say(A0_5, 16, 0)
+  A2_7:finishCliantTalkTurn()
+  return
+end
+function Gcg303.processEventEnie(A0_8, A1_9, A2_10)
+  A2_10:_runCharaScheduler(84049920)
+  A2_10:say(A0_8, 17, 0)
+  A2_10:finishCliantTalkTurn()
+  return
+end
+function Gcg303.processEventMog(A0_11, A1_12, A2_13, A3_14)
+  A2_13:_runCharaScheduler(70057984)
+  A2_13:say(A0_11, 18, 0)
+  A2_13:startCliantTalkTurn(2, A1_12)
+  if A3_14 == 1 then
+    A2_13:say(A0_11, 42, 0)
+  else
+    A2_13:say(A0_11, 19, 0)
+  end
+  A2_13:_runCharaScheduler(70057984)
+  A2_13:say(A0_11, 20, 0)
+  A2_13:finishCliantTalkTurn()
+  A2_13:say(A0_11, 21, 0)
+  A2_13:_runCharaScheduler(70078464)
+  A2_13:say(A0_11, 22, 0)
+  A2_13:startCliantTalkTurn(2, A1_12)
+  A2_13:say(A0_11, 23, 0)
+  A2_13:finishCliantTalkTurn()
+  return
+end
+function Gcg303.processEventKupo(A0_15, A1_16, A2_17)
+  A2_17:startCliantTalkTurn(2, A1_16)
+  A2_17:say(A0_15, 24, 0)
+  A2_17:finishCliantTalkTurn()
+  return
+end
+function Gcg303.processEventClear(A0_18, A1_19, A2_20)
+  A2_20:_runCharaScheduler(354058240)
+  A2_20:say(A0_18, 25, 0)
+  A0_18:_wait(2)
+  A2_20:_runCharaScheduler(354095104)
+  A2_20:say(A0_18, 26, 0)
+  A2_20:startCliantTalkTurn(2, A1_19)
+  A2_20:say(A0_18, 27, 0)
+  A2_20:_runCharaScheduler(84049920)
+  A2_20:say(A0_18, 28, 0)
+  A2_20:say(A0_18, 30, 0)
+  A2_20:say(A0_18, 31, 0)
+  A2_20:say(A0_18, 32, 0)
+  A2_20:_runCharaScheduler(354095104)
+  A2_20:say(A0_18, 33, 0)
+  A2_20:_runCharaScheduler(354086912)
+  A0_18:_wait(2)
+  A2_20:say(A0_18, 35, 0)
+  A2_20:_runCharaScheduler(70799360)
+  A2_20:finishCliantTalkTurn()
+  A2_20:say(A0_18, 36, 0)
+  A2_20:startCliantTalkTurn(2, A1_19)
+  A2_20:say(A0_18, 37, 0)
+  A2_20:say(A0_18, 38, 0)
+  A2_20:_runCharaScheduler(354054144)
+  A2_20:say(A0_18, 39, 0)
+  A1_19:_runCharaScheduler(354111488)
+  A2_20:_runCharaScheduler(354107392)
+  A0_18:_wait(1)
+  A2_20:say(A0_18, 40, 0)
+  A2_20:finishCliantTalkTurn()
+  return
+end

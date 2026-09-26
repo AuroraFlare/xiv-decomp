@@ -1,0 +1,68 @@
+require("/Quest/Scenario/ScenarioBaseClass")
+_defineClass("Pld0j3", "ScenarioBaseClass")
+function Pld0j3.initText(A0_0)
+  A0_0:_loadTextDataPermanently(9604, "pld0j3")
+end
+function Pld0j3.processEventJENLYNSStart(A0_1, A1_2, A2_3)
+  A2_3:startCliantTalkTurn(1, A1_2)
+  A2_3:_runCharaScheduler(70795264)
+  A2_3:say(A0_1, 4, 0)
+  A2_3:say(A0_1, 5, 0)
+  A2_3:say(A0_1, 6, 0)
+  A2_3:_runCharaScheduler(354086912)
+  A0_1:_wait(1)
+  A2_3:say(A0_1, 7, 0)
+  A2_3:say(A0_1, 8, 0)
+  A2_3:_runCharaScheduler(353972224)
+  A2_3:say(A0_1, 9, 0)
+  A2_3:say(A0_1, 10, 0)
+  A2_3:_runCharaScheduler(354041856)
+  A2_3:say(A0_1, 11, 0)
+  A2_3:say(A0_1, 12, 0)
+  if A0_1:showQuestInfomation() == 1 then
+    A2_3:_runCharaScheduler(70795264)
+    A2_3:say(A0_1, 14, 0)
+    A2_3:say(A0_1, 15, 0)
+    A0_1:startFadeOut(A1_2, 1)
+    A0_1:_wait(1)
+    A0_1:startFadeIn(A1_2, 1)
+    A2_3:say(A0_1, 16, 0)
+    A2_3:_waitForCharaSchedulerFinished(70795264)
+  else
+    A2_3:_runCharaScheduler(70795264)
+    A2_3:say(A0_1, 13, 0)
+    A2_3:_waitForCharaSchedulerFinished(70795264)
+  end
+  A2_3:finishCliantTalkTurn()
+  return (A0_1:showQuestInfomation())
+end
+function Pld0j3.processEventJENLYNSStart_1(A0_4, A1_5, A2_6)
+  A2_6:startCliantTalkTurn(2, A1_5)
+  A2_6:say(A0_4, 2, 0)
+  worldMaster:say(A0_4, 3, 0)
+  A2_6:finishCliantTalkTurn()
+end
+function Pld0j3.processEvent000(A0_7, A1_8, A2_9)
+  A2_9:startCliantTalkTurn(2, A1_8)
+  A2_9:say(A0_7, 17, 0)
+  A2_9:say(A0_7, 18, 0)
+  A2_9:_runCharaScheduler(354041856)
+  A2_9:say(A0_7, 19, 0)
+  A2_9:say(A0_7, 20, 0)
+  A2_9:finishCliantTalkTurn()
+end
+function Pld0j3.onJobQuestCompleteFirst(A0_10, A1_11)
+  desktopWidget:openPublicInformLongDialogWidget(worldMaster, 51127, 2000201)
+end
+function Pld0j3.onJobQuestCompleteSecond(A0_12, A1_13)
+  A0_12:showGetJobAbilityWidget(A1_13, 27149, 2)
+end
+function Pld0j3.onJobQuestCompleteThird(A0_14, A1_15)
+  A0_14:showEventBeforeNpsLS(A1_15, 1000146, 96)
+end
+function Pld0j3.processEventChuui(A0_16, A1_17, A2_18)
+  worldMaster:say(worldMaster, 51131, 111283, 16)
+end
+function Pld0j3.processEventChuui2(A0_19, A1_20, A2_21)
+  worldMaster:say(worldMaster, 51132, 111283, 16)
+end
