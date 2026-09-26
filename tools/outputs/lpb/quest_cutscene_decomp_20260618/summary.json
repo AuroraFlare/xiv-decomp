@@ -1,0 +1,613 @@
+{
+  "created_at": "2026-06-17T20:43:35",
+  "source_decomp": "tools\\outputs\\lpb\\decomp_more_20260617",
+  "quest_lua_files": 861,
+  "function_blocks": 6681,
+  "quest_cutscene_functions": 595,
+  "quest_cutscene_calls": 1960,
+  "direct_scene_key_count": 533,
+  "server_delegate_rows": 1337,
+  "server_delegate_joined_rows": 204,
+  "server_delegate_joined_scene_rows": 201,
+  "quest_event_call_rows": 22679,
+  "quest_event_summary_rows": 532,
+  "quest_event_text_rows": 22679,
+  "quest_event_text_joined_rows": 15887,
+  "quest_event_text_missing_sheet_mapping_rows": 56,
+  "quest_event_text_missing_sheet_file_rows": 0,
+  "quest_event_text_missing_text_row_rows": 32,
+  "quest_text_summary_rows": 531,
+  "quest_method_timeline_rows": 24639,
+  "quest_method_context_rows": 5652,
+  "quest_scene_dialogue_context_rows": 627,
+  "server_delegate_method_context_rows": 1337,
+  "server_delegate_flow_context_rows": 1337,
+  "server_quest_flow_rows": 5072,
+  "server_quest_flow_summary_rows": 525,
+  "summary_by_quest_rows": 523,
+  "protocol_rows": 10,
+  "dat_mining_source": "docs\\Dat Mining",
+  "text_sheet_mappings": 396,
+  "quest_scene_asset_crosscheck_rows": 529,
+  "quest_cutreplay_joined_rows": 518,
+  "quest_scene_key_gap_rows": 31,
+  "cutreplay_placeholder_meanings": 24,
+  "quest_scene_keys_with_assets": 528,
+  "quest_scene_keys_without_assets": 1,
+  "quest_scene_keys_with_cutReplay": 498,
+  "quest_scene_keys_without_cutReplay": 31,
+  "top_calls": [
+    [
+      "startFadeOutCutSceneDefault",
+      632
+    ],
+    [
+      "startNQCutScene",
+      565
+    ],
+    [
+      "startFadeInCutSceneDefault",
+      374
+    ],
+    [
+      "startFadeInCutSceneAfterWarp",
+      305
+    ],
+    [
+      "startSnpcNQCutScene",
+      42
+    ],
+    [
+      "startHQCutScene",
+      26
+    ],
+    [
+      "createCutScene",
+      4
+    ],
+    [
+      "startCutScene",
+      3
+    ],
+    [
+      "_waitForMapLoaded",
+      3
+    ],
+    [
+      "startSnpcHQCutScene",
+      3
+    ],
+    [
+      "_fadeInAfterWarp",
+      1
+    ],
+    [
+      "_fadeInNowLoadingForNoticeEventJustInArea",
+      1
+    ],
+    [
+      "startHQCutSceneDebugCase",
+      1
+    ]
+  ],
+  "top_event_calls": [
+    [
+      "say",
+      15720
+    ],
+    [
+      "_runCharaScheduler",
+      4718
+    ],
+    [
+      "_wait",
+      1063
+    ],
+    [
+      "ask",
+      556
+    ],
+    [
+      "showQuestInfomation",
+      547
+    ],
+    [
+      "tellByNpcLinkshellChat",
+      31
+    ],
+    [
+      "sayFreeDisplayName",
+      16
+    ],
+    [
+      "askEventModeWidgetYield",
+      12
+    ],
+    [
+      "notify",
+      6
+    ],
+    [
+      "showLog",
+      3
+    ],
+    [
+      "setMusic",
+      2
+    ],
+    [
+      "_turnDir",
+      1
+    ],
+    [
+      "_waitForTurning",
+      1
+    ],
+    [
+      "_setMusic",
+      1
+    ],
+    [
+      "askRetainerNamingWidget",
+      1
+    ],
+    [
+      "askQuestDetailWidget",
+      1
+    ]
+  ],
+  "top_text_join_statuses": [
+    [
+      "joined",
+      15887
+    ],
+    [
+      "no_text_id",
+      6704
+    ],
+    [
+      "missing_sheet_mapping",
+      56
+    ],
+    [
+      "missing_text_row",
+      32
+    ]
+  ],
+  "top_timeline_step_types": [
+    [
+      "dialogue_say",
+      15720
+    ],
+    [
+      "chara_control",
+      4720
+    ],
+    [
+      "fade_or_warp",
+      1316
+    ],
+    [
+      "wait",
+      1063
+    ],
+    [
+      "scene_launcher",
+      641
+    ],
+    [
+      "dialogue_ask",
+      556
+    ],
+    [
+      "quest_offer_or_detail_widget",
+      548
+    ],
+    [
+      "npc_linkshell_chat",
+      31
+    ],
+    [
+      "message_or_notification",
+      25
+    ],
+    [
+      "event_mode_widget",
+      10
+    ],
+    [
+      "cutscene_helper",
+      3
+    ],
+    [
+      "music",
+      3
+    ],
+    [
+      "other",
+      1
+    ],
+    [
+      "quest_ask_widget",
+      1
+    ],
+    [
+      "quest_reward_widget",
+      1
+    ]
+  ],
+  "top_server_flow_calls": [
+    [
+      "callClientFunction",
+      1293
+    ],
+    [
+      "SetENpc",
+      1155
+    ],
+    [
+      "EndEvent",
+      426
+    ],
+    [
+      "StartSequence",
+      390
+    ],
+    [
+      "GetFlag",
+      249
+    ],
+    [
+      "GetData",
+      178
+    ],
+    [
+      "GetSequence",
+      165
+    ],
+    [
+      "UpdateENPCs",
+      128
+    ],
+    [
+      "SendGameMessage",
+      103
+    ],
+    [
+      "CompleteQuest",
+      98
+    ],
+    [
+      "attentionMessage",
+      91
+    ],
+    [
+      "GetCounter",
+      85
+    ],
+    [
+      "WarpToPrivateArea",
+      83
+    ],
+    [
+      "IncCounter",
+      68
+    ],
+    [
+      "SetFlag",
+      68
+    ],
+    [
+      "AcceptQuest",
+      66
+    ],
+    [
+      "DoZoneChange",
+      62
+    ],
+    [
+      "AddExp",
+      41
+    ],
+    [
+      "AddItem",
+      36
+    ],
+    [
+      "NewNpcLsMsg",
+      35
+    ]
+  ],
+  "top_server_flow_categories": [
+    [
+      "quest_state",
+      2025
+    ],
+    [
+      "client_event_dispatch",
+      1293
+    ],
+    [
+      "quest_data",
+      690
+    ],
+    [
+      "event_end",
+      426
+    ],
+    [
+      "player_message",
+      225
+    ],
+    [
+      "warp_or_zone",
+      178
+    ],
+    [
+      "reward_or_inventory",
+      121
+    ],
+    [
+      "npc_linkshell",
+      56
+    ],
+    [
+      "chara_or_wait",
+      31
+    ],
+    [
+      "actor_or_marker",
+      22
+    ],
+    [
+      "music",
+      5
+    ]
+  ],
+  "top_replay_placeholders": [
+    [
+      "-200",
+      3359
+    ],
+    [
+      "-205",
+      39
+    ],
+    [
+      "-202",
+      38
+    ],
+    [
+      "-203",
+      38
+    ],
+    [
+      "-204",
+      38
+    ],
+    [
+      "-201",
+      36
+    ],
+    [
+      "-218",
+      13
+    ],
+    [
+      "-221",
+      6
+    ],
+    [
+      "-216",
+      2
+    ],
+    [
+      "-217",
+      2
+    ],
+    [
+      "-220",
+      2
+    ],
+    [
+      "-207",
+      2
+    ],
+    [
+      "-222",
+      2
+    ],
+    [
+      "-206",
+      1
+    ],
+    [
+      "-214",
+      1
+    ],
+    [
+      "-215",
+      1
+    ],
+    [
+      "-208",
+      1
+    ],
+    [
+      "-223",
+      1
+    ],
+    [
+      "-210",
+      1
+    ],
+    [
+      "-212",
+      1
+    ],
+    [
+      "-209",
+      1
+    ],
+    [
+      "-211",
+      1
+    ],
+    [
+      "-213",
+      1
+    ]
+  ],
+  "top_codes_by_scene_keys": [
+    {
+      "code": "man2l0",
+      "quest_ids": "110004",
+      "quest_names": "Never the Twain Shall Meet",
+      "unique_scene_key_count": 20
+    },
+    {
+      "code": "man0g1",
+      "quest_ids": "110006",
+      "quest_names": "Souls Gone Wild",
+      "unique_scene_key_count": 17
+    },
+    {
+      "code": "man0l1",
+      "quest_ids": "110002",
+      "quest_names": "Treasures of the Main",
+      "unique_scene_key_count": 17
+    },
+    {
+      "code": "man0u1",
+      "quest_ids": "110010",
+      "quest_names": "Court in the Sands",
+      "unique_scene_key_count": 17
+    },
+    {
+      "code": "man2g0",
+      "quest_ids": "110008",
+      "quest_names": "Beckon of the Elementals",
+      "unique_scene_key_count": 13
+    },
+    {
+      "code": "man2u0",
+      "quest_ids": "110012",
+      "quest_names": "Calamity Cometh",
+      "unique_scene_key_count": 13
+    },
+    {
+      "code": "man1g0",
+      "quest_ids": "110007",
+      "quest_names": "Whispers in the Wood",
+      "unique_scene_key_count": 11
+    },
+    {
+      "code": "man1l0",
+      "quest_ids": "110003",
+      "quest_names": "Legends Adrift",
+      "unique_scene_key_count": 11
+    },
+    {
+      "code": "man1u0",
+      "quest_ids": "110011",
+      "quest_names": "Golden Sacrifices",
+      "unique_scene_key_count": 11
+    },
+    {
+      "code": "man406",
+      "quest_ids": "110019",
+      "quest_names": "Futures Perfect",
+      "unique_scene_key_count": 10
+    },
+    {
+      "code": "cnj306",
+      "quest_ids": "110262",
+      "quest_names": "The Call of Nature",
+      "unique_scene_key_count": 9
+    },
+    {
+      "code": "man308",
+      "quest_ids": "110017",
+      "quest_names": "Lord Errant",
+      "unique_scene_key_count": 9
+    },
+    {
+      "code": "cul306",
+      "quest_ids": "110442",
+      "quest_names": "Something in the Soup",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "fsh300",
+      "quest_ids": "110501",
+      "quest_names": "The Beast of the Barrel",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "gla300",
+      "quest_ids": "110081",
+      "quest_names": "Unalienable Rights",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "lnc300",
+      "quest_ids": "110181",
+      "quest_names": "Culture Shock",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "man200",
+      "quest_ids": "110013",
+      "quest_names": "Fade to White",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "man206",
+      "quest_ids": "110014",
+      "quest_names": "Together We Stand",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "pgl300",
+      "quest_ids": "110061",
+      "quest_names": "Here There Be Pirates",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "pgl306",
+      "quest_ids": "110062",
+      "quest_names": "Two Sides to Every Chip",
+      "unique_scene_key_count": 8
+    },
+    {
+      "code": "arc300",
+      "quest_ids": "110161",
+      "quest_names": "The Foreboding Forest",
+      "unique_scene_key_count": 7
+    },
+    {
+      "code": "cnj300",
+      "quest_ids": "110261",
+      "quest_names": "Good Knight, Sweet Dreams",
+      "unique_scene_key_count": 7
+    },
+    {
+      "code": "exc306",
+      "quest_ids": "110102",
+      "quest_names": "Captain's Orders",
+      "unique_scene_key_count": 7
+    },
+    {
+      "code": "hrv306",
+      "quest_ids": "110482",
+      "quest_names": "A Moogle Bouquet",
+      "unique_scene_key_count": 7
+    },
+    {
+      "code": "man300",
+      "quest_ids": "110015",
+      "quest_names": "Toll of the Warden",
+      "unique_scene_key_count": 7
+    }
+  ]
+}
