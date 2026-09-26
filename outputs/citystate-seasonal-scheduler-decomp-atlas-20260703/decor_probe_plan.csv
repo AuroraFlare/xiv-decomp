@@ -1,0 +1,12 @@
+probe,surface,expected_signal,risk
+!weather moonfire 0 0,weather 8029 / wtr_smmr,Moonfire/summer weather resource overlay,"smaller immediate packet, but still mutates Area.weatherNormal; restore after test"
+!weather dalamudthunder 0 0,weather 8032 / wtr_xmas,Dalamud thunder weather overlay (the resource token is misleading),weather-only probe; do not treat the internal wtr_xmas token as decor proof
+!eventdecor halloween info / !eventdecor starlight info,weather 8027 / wtr_hall,area-specific combined-pack classification without sending a weather packet,8027 is blocked from !weather and may only be applied by the matching !eventdecor control
+!weather clear 0 1,weather restore,restore a normal clear packet zone-wide after manual weather probes,use only after confirming no test relies on the special weather staying active
+!spawnbgobj placed 2168 5900006,merchward_mapobj_deco layout=5013 instance=408,initForEvent runs scheduler show,temporary map-object spawn only; do not add DB rows until visible behavior is confirmed
+!spawnbgobj 5013 408 5900007,merchward_mapobj_deco negative hide check,same layout/instance should run hide through MapObjOnlyShowHide,confirms class 5900006 vs 5900007 polarity
+!spawnbgobj placed 2169 5900006,merchward_mapobj_flag layout=5013 instance=161,initForEvent runs scheduler show,temporary map-object spawn only; do not add DB rows until visible behavior is confirmed
+!spawnbgobj 5013 161 5900007,merchward_mapobj_flag negative hide check,same layout/instance should run hide through MapObjOnlyShowHide,confirms class 5900006 vs 5900007 polarity
+!spawnbgobj <layoutId> <instanceId> 5900036,MapObjFireworks generated v_l#/v_c#/v_r# schedulers,nighttime fireworks scheduler if layout/instance has those BG scheduler names,needs confirmed layout/instance; otherwise it may spawn a controller with nothing to drive
+!testbgscheduler target v_l1 0,live MapObjFireworks scheduler poke,runs one authored fireworks BG scheduler on the targeted live map object,target must be a live map-object NPC; scheduler names are limited to 1-8 printable ASCII chars
+!spawnbgmodel b933,seasonal/furnishing model preview,preview a BG model appearance without proving layout activation,model-identification only; does not prove city-state scheduler wiring

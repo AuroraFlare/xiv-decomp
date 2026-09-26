@@ -1,0 +1,151 @@
+{
+  "generated_by": "tools/build_castrum_novum_transmission_tower_decomp.py",
+  "client_root": "C:\\Program Files (x86)\\SquareEnix\\FINAL FANTASY XIV",
+  "region_resource_sha256": "c04b0d998aea4c1b13ed322292a5aa5af45485c698da2315171c3c024bcb9a74",
+  "content_id": 13,
+  "zones": [
+    251,
+    264
+  ],
+  "zone_param": 5014,
+  "layout_id": 511,
+  "layout_token": "lak_l0_dun01",
+  "layout_dat_key": "0x03E7000B",
+  "shutter_map_object": {
+    "layout_id": 511,
+    "instance_name": "isgrp_000012",
+    "packet_instance_id": 12,
+    "serialized_node_gid": 935,
+    "unit_tree": "sgrp_shutter",
+    "scheduler_aliases": [
+      "open",
+      "clos"
+    ]
+  },
+  "weather_candidate": {
+    "id": 8032,
+    "token": "wtr_xmas",
+    "display": "Dalamud Thunder",
+    "dat_key": "0x03E7000E"
+  },
+  "runtime_weather": {
+    "id": null,
+    "token": "layout_owned",
+    "status": "Tower zone-in SetWeather bootstrap suppressed; explicit GM weather remains diagnostic"
+  },
+  "live_layout_drawenv": "dwev_20",
+  "runtime_capture": {
+    "video": "C:\\Users\\drime\\Desktop\\transmission tower.mp4",
+    "sample_fps": 10,
+    "sample_count": 43,
+    "duration_sampled_seconds": 4.2,
+    "largest_nonstartup_luma_discontinuity_seconds": 2.0,
+    "largest_nonstartup_luma_discontinuity_ydif": 16.8811,
+    "pre_transition_satavg": 9.991054,
+    "post_transition_satavg": 3.8590345454545454,
+    "post_to_pre_saturation_ratio": 0.38624899289449793,
+    "distance_from_decompiled_2_4_second_drawenv_duration": 0.3999999999999999,
+    "finding": "The scene loses most of its chroma at one discrete render-state handoff; the UI remains colored in the contact sheet, so this is not a video-wide grayscale edit. The handoff occurs within one half-second of the decompiled 2.4-second DrawEnv package duration."
+  },
+  "weather_assignment_status": "8032 is a recovered special payload, but continuous duty assignment is rejected by runtime capture",
+  "weather_8030_8032_fcurve_values_exact_match": true,
+  "tower_high_signal_string_count": 75,
+  "thunder_dependency_rows": 6,
+  "layout_declared_node_count": 141,
+  "layout_descriptor_count": 26,
+  "divide_map_folder_count": 4,
+  "placed_instance_count": 67,
+  "unit_tree_member_count": 12,
+  "authored_light_count": 5,
+  "authored_light_type_values": [
+    1
+  ],
+  "authored_light_type_names": [
+    "point"
+  ],
+  "authored_light_decay_rates": [
+    0.0
+  ],
+  "placed_light_instance_count": 4,
+  "position_marker_instance_count": 2,
+  "timeline_count": 2,
+  "timeline_names": [
+    "time_bg_gate_open",
+    "time_bg_gate_close"
+  ],
+  "light_control_timeline_count": 0,
+  "timeline_clip_count": 4,
+  "screen_environment_component_count": 5,
+  "screen_environment_getter_backed_parameter_count": 45,
+  "screen_environment_enabled_states": {
+    "glare_0001": false,
+    "shadow_0001": false,
+    "ColorCorrection_0001": false,
+    "Blur_0001": false,
+    "VolumetricLight_0001": false
+  },
+  "weather_8076": {
+    "path": "outputs\\windower-weather-v16-purple-haze-20260725\\data\\29\\B0\\00\\32.DAT",
+    "sha256": "6a6c23836b0d6c5955eb0078bf7b23ca3249dde20857249f151c393886c36900",
+    "starlight_source_path": "outputs\\windower-weather-v16-purple-haze-20260725\\data\\29\\B0\\00\\30.DAT",
+    "starlight_source_sha256": "54d6b1a18324d039661fa3f47729faa30abf28cbea94f04d2be87f8b4dcb3c13",
+    "changed_bytes_from_starlight": 119,
+    "changed_fcurve_records_from_starlight": 0,
+    "zeroed_dependency_entry_indices": [
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "time_dwev_01_inherited_from_starlight": true,
+    "time_dwev_01_active_duration_seconds": 2.4,
+    "time_dwev_01_time_encoding": "serialized centiseconds",
+    "standardized_gridania_event_lane_inherited": true,
+    "mor_dhona_local_wrappers_with_dwev_01": 0,
+    "gridania_city_event_wrappers_with_dwev_01": 6,
+    "observed_active_tower_lane": "dwev_00",
+    "observed_transition_fraction": 1.0,
+    "observed_queued_drawenv_entry_count": 1,
+    "active_lane_extra_actors_vs_clear": [
+      "diffuseColor_00",
+      "lightMapOcclusi"
+    ],
+    "active_lane_material_constants": {
+      "diffuseColor_00.Attr": 0.0,
+      "lightMapOcclusi.Attr": 1.0
+    },
+    "active_lane_material2_rgba_application_proven": true,
+    "time_dwev_01_present": true,
+    "enabled_screen_components": 16
+  },
+  "fcurve_property_counts": {
+    "Alpha": 15,
+    "Ambient": 3,
+    "Attr": 18,
+    "BottomColor": 3,
+    "CharaBias": 102,
+    "Color": 102,
+    "Diffuse": 3,
+    "Extra": 78,
+    "Fog": 24,
+    "Glare": 21,
+    "MainLight_Key0": 3,
+    "MainLight_Key1": 3,
+    "MiddleColor": 3,
+    "MoveRatio": 78,
+    "Range": 3,
+    "Root": 162,
+    "SubLight_Key0": 3,
+    "SubLight_Key1": 3,
+    "TopColor": 3,
+    "TransForm": 78,
+    "VfxBias": 102,
+    "Virtical_Key0": 3,
+    "Virtical_Key0_Color": 3,
+    "Virtical_Key1": 3,
+    "Virtical_Key1_Color": 3,
+    "Virtical_Key2": 3,
+    "Virtical_Key2_Color": 3
+  }
+}

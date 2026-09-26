@@ -1,0 +1,320 @@
+# 111203 war0j3
+
+## <root> params=0 proto=root
+pc 000 off 0x000020 raw 00000005  GETGLOBAL R0 0 ; K0='require'
+pc 001 off 0x000024 raw 00004041  LOADK     R1 1 ; K1='/Quest/Scenario/ScenarioBaseClass'
+pc 002 off 0x000028 raw 0100401C  CALL      R0 2 1
+pc 003 off 0x00002C raw 00008005  GETGLOBAL R0 2 ; K2='_defineClass'
+pc 004 off 0x000030 raw 0000C041  LOADK     R1 3 ; K3='War0j3'
+pc 005 off 0x000034 raw 00010081  LOADK     R2 4 ; K4='ScenarioBaseClass'
+pc 006 off 0x000038 raw 0180401C  CALL      R0 3 1
+pc 007 off 0x00003C raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 008 off 0x000040 raw 00000064  CLOSURE   R1 0 ; root/proto0
+pc 009 off 0x000044 raw 82804009  SETTABLE  R0 K5('initText') R1
+pc 010 off 0x000048 raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 011 off 0x00004C raw 00004064  CLOSURE   R1 1 ; root/proto1
+pc 012 off 0x000050 raw 83004009  SETTABLE  R0 K6('processEvent_hint') R1
+pc 013 off 0x000054 raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 014 off 0x000058 raw 00008064  CLOSURE   R1 2 ; root/proto2
+pc 015 off 0x00005C raw 83804009  SETTABLE  R0 K7('processEventCURIOUSGORGEStart') R1
+pc 016 off 0x000060 raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 017 off 0x000064 raw 0000C064  CLOSURE   R1 3 ; root/proto3
+pc 018 off 0x000068 raw 84004009  SETTABLE  R0 K8('processEvent000_2') R1
+pc 019 off 0x00006C raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 020 off 0x000070 raw 00010064  CLOSURE   R1 4 ; root/proto4
+pc 021 off 0x000074 raw 84804009  SETTABLE  R0 K9('processEvent005') R1
+pc 022 off 0x000078 raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 023 off 0x00007C raw 00014064  CLOSURE   R1 5 ; root/proto5
+pc 024 off 0x000080 raw 85004009  SETTABLE  R0 K10('processEvent010') R1
+pc 025 off 0x000084 raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 026 off 0x000088 raw 00018064  CLOSURE   R1 6 ; root/proto6
+pc 027 off 0x00008C raw 85804009  SETTABLE  R0 K11('processEventKokuti') R1
+pc 028 off 0x000090 raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 029 off 0x000094 raw 0001C064  CLOSURE   R1 7 ; root/proto7
+pc 030 off 0x000098 raw 86004009  SETTABLE  R0 K12('processEventChuui') R1
+pc 031 off 0x00009C raw 0000C005  GETGLOBAL R0 3 ; K3='War0j3'
+pc 032 off 0x0000A0 raw 00020064  CLOSURE   R1 8 ; root/proto8
+pc 033 off 0x0000A4 raw 86804009  SETTABLE  R0 K13('processEventChuui2') R1
+pc 034 off 0x0000A8 raw 0080001E  RETURN    R0 1 0
+
+## initText params=1 proto=root/proto0
+pc 000 off 0x000201 raw 0040004B  SELF      R1 R0 K0('_loadTextDataPermanently')
+pc 001 off 0x000205 raw 000040C1  LOADK     R3 1 ; K1=8164.0
+pc 002 off 0x000209 raw 00008101  LOADK     R4 2 ; K2='war0j3'
+pc 003 off 0x00020D raw 0200405C  CALL      R1 4 1
+pc 004 off 0x000211 raw 0080001E  RETURN    R0 1 0
+
+## processEvent_hint params=3 proto=root/proto1
+pc 000 off 0x000270 raw 014000CB  SELF      R3 R2 K0('startCliantTalkTurn')
+pc 001 off 0x000274 raw 00004141  LOADK     R5 1 ; K1=2.0
+pc 002 off 0x000278 raw 00800180  MOVE      R6 1 0
+pc 003 off 0x00027C raw 020040DC  CALL      R3 4 1
+pc 004 off 0x000280 raw 014080CB  SELF      R3 R2 K2('_runCharaScheduler')
+pc 005 off 0x000284 raw 0000C141  LOADK     R5 3 ; K3=353964032.0
+pc 006 off 0x000288 raw 018040DC  CALL      R3 3 1
+pc 007 off 0x00028C raw 014100CB  SELF      R3 R2 K4('say')
+pc 008 off 0x000290 raw 00000140  MOVE      R5 0 0
+pc 009 off 0x000294 raw 00004181  LOADK     R6 1 ; K1=2.0
+pc 010 off 0x000298 raw 000141C1  LOADK     R7 5 ; K5=0.0
+pc 011 off 0x00029C raw 028040DC  CALL      R3 5 1
+pc 012 off 0x0002A0 raw 000180C5  GETGLOBAL R3 6 ; K6='worldMaster'
+pc 013 off 0x0002A4 raw 01C100CB  SELF      R3 R3 K4('say')
+pc 014 off 0x0002A8 raw 00000140  MOVE      R5 0 0
+pc 015 off 0x0002AC raw 0001C181  LOADK     R6 7 ; K7=3.0
+pc 016 off 0x0002B0 raw 000141C1  LOADK     R7 5 ; K5=0.0
+pc 017 off 0x0002B4 raw 028040DC  CALL      R3 5 1
+pc 018 off 0x0002B8 raw 014200CB  SELF      R3 R2 K8('finishCliantTalkTurn')
+pc 019 off 0x0002BC raw 010040DC  CALL      R3 2 1
+pc 020 off 0x0002C0 raw 0080001E  RETURN    R0 1 0
+
+## processEventCURIOUSGORGEStart params=3 proto=root/proto2
+pc 000 off 0x000375 raw 014000CB  SELF      R3 R2 K0('startCliantTalkTurn')
+pc 001 off 0x000379 raw 00004141  LOADK     R5 1 ; K1=2.0
+pc 002 off 0x00037D raw 00800180  MOVE      R6 1 0
+pc 003 off 0x000381 raw 020040DC  CALL      R3 4 1
+pc 004 off 0x000385 raw 014080CB  SELF      R3 R2 K2('_runCharaScheduler')
+pc 005 off 0x000389 raw 0000C141  LOADK     R5 3 ; K3=354062336.0
+pc 006 off 0x00038D raw 018040DC  CALL      R3 3 1
+pc 007 off 0x000391 raw 014100CB  SELF      R3 R2 K4('say')
+pc 008 off 0x000395 raw 00000140  MOVE      R5 0 0
+pc 009 off 0x000399 raw 00014181  LOADK     R6 5 ; K5=4.0
+pc 010 off 0x00039D raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 011 off 0x0003A1 raw 028040DC  CALL      R3 5 1
+pc 012 off 0x0003A5 raw 014100CB  SELF      R3 R2 K4('say')
+pc 013 off 0x0003A9 raw 00000140  MOVE      R5 0 0
+pc 014 off 0x0003AD raw 0001C181  LOADK     R6 7 ; K7=5.0
+pc 015 off 0x0003B1 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 016 off 0x0003B5 raw 028040DC  CALL      R3 5 1
+pc 017 off 0x0003B9 raw 014100CB  SELF      R3 R2 K4('say')
+pc 018 off 0x0003BD raw 00000140  MOVE      R5 0 0
+pc 019 off 0x0003C1 raw 00020181  LOADK     R6 8 ; K8=6.0
+pc 020 off 0x0003C5 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 021 off 0x0003C9 raw 028040DC  CALL      R3 5 1
+pc 022 off 0x0003CD raw 014080CB  SELF      R3 R2 K2('_runCharaScheduler')
+pc 023 off 0x0003D1 raw 00024141  LOADK     R5 9 ; K9=67825664.0
+pc 024 off 0x0003D5 raw 018040DC  CALL      R3 3 1
+pc 025 off 0x0003D9 raw 014100CB  SELF      R3 R2 K4('say')
+pc 026 off 0x0003DD raw 00000140  MOVE      R5 0 0
+pc 027 off 0x0003E1 raw 00028181  LOADK     R6 10 ; K10=7.0
+pc 028 off 0x0003E5 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 029 off 0x0003E9 raw 028040DC  CALL      R3 5 1
+pc 030 off 0x0003ED raw 014100CB  SELF      R3 R2 K4('say')
+pc 031 off 0x0003F1 raw 00000140  MOVE      R5 0 0
+pc 032 off 0x0003F5 raw 0002C181  LOADK     R6 11 ; K11=8.0
+pc 033 off 0x0003F9 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 034 off 0x0003FD raw 028040DC  CALL      R3 5 1
+pc 035 off 0x000401 raw 014100CB  SELF      R3 R2 K4('say')
+pc 036 off 0x000405 raw 00000140  MOVE      R5 0 0
+pc 037 off 0x000409 raw 00030181  LOADK     R6 12 ; K12=9.0
+pc 038 off 0x00040D raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 039 off 0x000411 raw 028040DC  CALL      R3 5 1
+pc 040 off 0x000415 raw 014080CB  SELF      R3 R2 K2('_runCharaScheduler')
+pc 041 off 0x000419 raw 00034141  LOADK     R5 13 ; K13=354066432.0
+pc 042 off 0x00041D raw 018040DC  CALL      R3 3 1
+pc 043 off 0x000421 raw 014100CB  SELF      R3 R2 K4('say')
+pc 044 off 0x000425 raw 00000140  MOVE      R5 0 0
+pc 045 off 0x000429 raw 00038181  LOADK     R6 14 ; K14=10.0
+pc 046 off 0x00042D raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 047 off 0x000431 raw 028040DC  CALL      R3 5 1
+pc 048 off 0x000435 raw 014100CB  SELF      R3 R2 K4('say')
+pc 049 off 0x000439 raw 00000140  MOVE      R5 0 0
+pc 050 off 0x00043D raw 0003C181  LOADK     R6 15 ; K15=11.0
+pc 051 off 0x000441 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 052 off 0x000445 raw 028040DC  CALL      R3 5 1
+pc 053 off 0x000449 raw 014080CB  SELF      R3 R2 K2('_runCharaScheduler')
+pc 054 off 0x00044D raw 00040141  LOADK     R5 16 ; K16=353964032.0
+pc 055 off 0x000451 raw 018040DC  CALL      R3 3 1
+pc 056 off 0x000455 raw 014100CB  SELF      R3 R2 K4('say')
+pc 057 off 0x000459 raw 00000140  MOVE      R5 0 0
+pc 058 off 0x00045D raw 00044181  LOADK     R6 17 ; K17=12.0
+pc 059 off 0x000461 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 060 off 0x000465 raw 028040DC  CALL      R3 5 1
+pc 061 off 0x000469 raw 014100CB  SELF      R3 R2 K4('say')
+pc 062 off 0x00046D raw 00000140  MOVE      R5 0 0
+pc 063 off 0x000471 raw 00048181  LOADK     R6 18 ; K18=30.0
+pc 064 off 0x000475 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 065 off 0x000479 raw 028040DC  CALL      R3 5 1
+pc 066 off 0x00047D raw 014100CB  SELF      R3 R2 K4('say')
+pc 067 off 0x000481 raw 00000140  MOVE      R5 0 0
+pc 068 off 0x000485 raw 0004C181  LOADK     R6 19 ; K19=13.0
+pc 069 off 0x000489 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 070 off 0x00048D raw 028040DC  CALL      R3 5 1
+pc 071 off 0x000491 raw 004500CB  SELF      R3 R0 K20('showQuestInfomation')
+pc 072 off 0x000495 raw 010080DC  CALL      R3 2 2
+pc 073 off 0x000499 raw 01C54017  EQ        R0 R3 K21(1.0) ; skip next when comparison != False
+pc 074 off 0x00049D raw 80020016  JMP       R0 +9 ; -> pc 084
+pc 075 off 0x0004A1 raw 0140810B  SELF      R4 R2 K2('_runCharaScheduler')
+pc 076 off 0x0004A5 raw 00058181  LOADK     R6 22 ; K22=354099200.0
+pc 077 off 0x0004A9 raw 0180411C  CALL      R4 3 1
+pc 078 off 0x0004AD raw 0141010B  SELF      R4 R2 K4('say')
+pc 079 off 0x0004B1 raw 00000180  MOVE      R6 0 0
+pc 080 off 0x0004B5 raw 0005C1C1  LOADK     R7 23 ; K23=15.0
+pc 081 off 0x0004B9 raw 00018201  LOADK     R8 6 ; K6=0.0
+pc 082 off 0x0004BD raw 0280411C  CALL      R4 5 1
+pc 083 off 0x0004C1 raw 8001C016  JMP       R0 +8 ; -> pc 092
+pc 084 off 0x0004C5 raw 0140810B  SELF      R4 R2 K2('_runCharaScheduler')
+pc 085 off 0x0004C9 raw 00060181  LOADK     R6 24 ; K24=354041856.0
+pc 086 off 0x0004CD raw 0180411C  CALL      R4 3 1
+pc 087 off 0x0004D1 raw 0141010B  SELF      R4 R2 K4('say')
+pc 088 off 0x0004D5 raw 00000180  MOVE      R6 0 0
+pc 089 off 0x0004D9 raw 000641C1  LOADK     R7 25 ; K25=14.0
+pc 090 off 0x0004DD raw 00018201  LOADK     R8 6 ; K6=0.0
+pc 091 off 0x0004E1 raw 0280411C  CALL      R4 5 1
+pc 092 off 0x0004E5 raw 0146810B  SELF      R4 R2 K26('finishCliantTalkTurn')
+pc 093 off 0x0004E9 raw 0100411C  CALL      R4 2 1
+pc 094 off 0x0004ED raw 010000DE  RETURN    R3 2 0
+pc 095 off 0x0004F1 raw 0080001E  RETURN    R0 1 0
+
+## processEvent000_2 params=3 proto=root/proto3
+pc 000 off 0x000650 raw 014000CB  SELF      R3 R2 K0('startCliantTalkTurn')
+pc 001 off 0x000654 raw 00004141  LOADK     R5 1 ; K1=2.0
+pc 002 off 0x000658 raw 00800180  MOVE      R6 1 0
+pc 003 off 0x00065C raw 020040DC  CALL      R3 4 1
+pc 004 off 0x000660 raw 014080CB  SELF      R3 R2 K2('_runCharaScheduler')
+pc 005 off 0x000664 raw 0000C141  LOADK     R5 3 ; K3=353964032.0
+pc 006 off 0x000668 raw 018040DC  CALL      R3 3 1
+pc 007 off 0x00066C raw 014100CB  SELF      R3 R2 K4('say')
+pc 008 off 0x000670 raw 00000140  MOVE      R5 0 0
+pc 009 off 0x000674 raw 00014181  LOADK     R6 5 ; K5=16.0
+pc 010 off 0x000678 raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 011 off 0x00067C raw 028040DC  CALL      R3 5 1
+pc 012 off 0x000680 raw 014100CB  SELF      R3 R2 K4('say')
+pc 013 off 0x000684 raw 00000140  MOVE      R5 0 0
+pc 014 off 0x000688 raw 0001C181  LOADK     R6 7 ; K7=31.0
+pc 015 off 0x00068C raw 000181C1  LOADK     R7 6 ; K6=0.0
+pc 016 off 0x000690 raw 028040DC  CALL      R3 5 1
+pc 017 off 0x000694 raw 014200CB  SELF      R3 R2 K8('finishCliantTalkTurn')
+pc 018 off 0x000698 raw 010040DC  CALL      R3 2 1
+pc 019 off 0x00069C raw 0080001E  RETURN    R0 1 0
+
+## processEvent005 params=4 proto=root/proto4
+pc 000 off 0x000749 raw 0040010B  SELF      R4 R0 K0('startFadeOutCutSceneDefault')
+pc 001 off 0x00074D raw 00800180  MOVE      R6 1 0
+pc 002 off 0x000751 raw 0180411C  CALL      R4 3 1
+pc 003 off 0x000755 raw 0040410B  SELF      R4 R0 K1('startNQCutScene')
+pc 004 off 0x000759 raw 00008181  LOADK     R6 2 ; K2='war0j310'
+pc 005 off 0x00075D raw 0000C1C1  LOADK     R7 3 ; K3=1.0
+pc 006 off 0x000761 raw 00010201  LOADK     R8 4 ; K4=0.0
+pc 007 off 0x000765 raw 01800240  MOVE      R9 3 0
+pc 008 off 0x000769 raw 0300411C  CALL      R4 6 1
+pc 009 off 0x00076D raw 0041410B  SELF      R4 R0 K5('startFadeInCutSceneDefault')
+pc 010 off 0x000771 raw 00800180  MOVE      R6 1 0
+pc 011 off 0x000775 raw 0180411C  CALL      R4 3 1
+pc 012 off 0x000779 raw 0080001E  RETURN    R0 1 0
+
+## processEvent010 params=3 proto=root/proto5
+pc 000 off 0x00081B raw 014000CB  SELF      R3 R2 K0('startCliantTalkTurn')
+pc 001 off 0x00081F raw 00004141  LOADK     R5 1 ; K1=2.0
+pc 002 off 0x000823 raw 00800180  MOVE      R6 1 0
+pc 003 off 0x000827 raw 020040DC  CALL      R3 4 1
+pc 004 off 0x00082B raw 014080CB  SELF      R3 R2 K2('say')
+pc 005 off 0x00082F raw 00000140  MOVE      R5 0 0
+pc 006 off 0x000833 raw 0000C181  LOADK     R6 3 ; K3=21.0
+pc 007 off 0x000837 raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 008 off 0x00083B raw 028040DC  CALL      R3 5 1
+pc 009 off 0x00083F raw 014140CB  SELF      R3 R2 K5('_runCharaScheduler')
+pc 010 off 0x000843 raw 00018141  LOADK     R5 6 ; K6=354086912.0
+pc 011 off 0x000847 raw 018040DC  CALL      R3 3 1
+pc 012 off 0x00084B raw 014080CB  SELF      R3 R2 K2('say')
+pc 013 off 0x00084F raw 00000140  MOVE      R5 0 0
+pc 014 off 0x000853 raw 0001C181  LOADK     R6 7 ; K7=22.0
+pc 015 off 0x000857 raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 016 off 0x00085B raw 028040DC  CALL      R3 5 1
+pc 017 off 0x00085F raw 014080CB  SELF      R3 R2 K2('say')
+pc 018 off 0x000863 raw 00000140  MOVE      R5 0 0
+pc 019 off 0x000867 raw 00020181  LOADK     R6 8 ; K8=32.0
+pc 020 off 0x00086B raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 021 off 0x00086F raw 028040DC  CALL      R3 5 1
+pc 022 off 0x000873 raw 014080CB  SELF      R3 R2 K2('say')
+pc 023 off 0x000877 raw 00000140  MOVE      R5 0 0
+pc 024 off 0x00087B raw 00024181  LOADK     R6 9 ; K9=23.0
+pc 025 off 0x00087F raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 026 off 0x000883 raw 028040DC  CALL      R3 5 1
+pc 027 off 0x000887 raw 014140CB  SELF      R3 R2 K5('_runCharaScheduler')
+pc 028 off 0x00088B raw 00028141  LOADK     R5 10 ; K10=353959936.0
+pc 029 off 0x00088F raw 018040DC  CALL      R3 3 1
+pc 030 off 0x000893 raw 014080CB  SELF      R3 R2 K2('say')
+pc 031 off 0x000897 raw 00000140  MOVE      R5 0 0
+pc 032 off 0x00089B raw 0002C181  LOADK     R6 11 ; K11=24.0
+pc 033 off 0x00089F raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 034 off 0x0008A3 raw 028040DC  CALL      R3 5 1
+pc 035 off 0x0008A7 raw 004300CB  SELF      R3 R0 K12('startFadeOut')
+pc 036 off 0x0008AB raw 00800140  MOVE      R5 1 0
+pc 037 off 0x0008AF raw 00034181  LOADK     R6 13 ; K13=1.0
+pc 038 off 0x0008B3 raw 020040DC  CALL      R3 4 1
+pc 039 off 0x0008B7 raw 004380CB  SELF      R3 R0 K14('_wait')
+pc 040 off 0x0008BB raw 00004141  LOADK     R5 1 ; K1=2.0
+pc 041 off 0x0008BF raw 018040DC  CALL      R3 3 1
+pc 042 off 0x0008C3 raw 0043C0CB  SELF      R3 R0 K15('startFadeIn')
+pc 043 off 0x0008C7 raw 00800140  MOVE      R5 1 0
+pc 044 off 0x0008CB raw 00034181  LOADK     R6 13 ; K13=1.0
+pc 045 off 0x0008CF raw 020040DC  CALL      R3 4 1
+pc 046 off 0x0008D3 raw 014140CB  SELF      R3 R2 K5('_runCharaScheduler')
+pc 047 off 0x0008D7 raw 00018141  LOADK     R5 6 ; K6=354086912.0
+pc 048 off 0x0008DB raw 018040DC  CALL      R3 3 1
+pc 049 off 0x0008DF raw 014080CB  SELF      R3 R2 K2('say')
+pc 050 off 0x0008E3 raw 00000140  MOVE      R5 0 0
+pc 051 off 0x0008E7 raw 00040181  LOADK     R6 16 ; K16=26.0
+pc 052 off 0x0008EB raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 053 off 0x0008EF raw 028040DC  CALL      R3 5 1
+pc 054 off 0x0008F3 raw 014080CB  SELF      R3 R2 K2('say')
+pc 055 off 0x0008F7 raw 00000140  MOVE      R5 0 0
+pc 056 off 0x0008FB raw 00044181  LOADK     R6 17 ; K17=27.0
+pc 057 off 0x0008FF raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 058 off 0x000903 raw 028040DC  CALL      R3 5 1
+pc 059 off 0x000907 raw 014140CB  SELF      R3 R2 K5('_runCharaScheduler')
+pc 060 off 0x00090B raw 00048141  LOADK     R5 18 ; K18=353964032.0
+pc 061 off 0x00090F raw 018040DC  CALL      R3 3 1
+pc 062 off 0x000913 raw 014080CB  SELF      R3 R2 K2('say')
+pc 063 off 0x000917 raw 00000140  MOVE      R5 0 0
+pc 064 off 0x00091B raw 0004C181  LOADK     R6 19 ; K19=28.0
+pc 065 off 0x00091F raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 066 off 0x000923 raw 028040DC  CALL      R3 5 1
+pc 067 off 0x000927 raw 000500C5  GETGLOBAL R3 20 ; K20='worldMaster'
+pc 068 off 0x00092B raw 01C080CB  SELF      R3 R3 K2('say')
+pc 069 off 0x00092F raw 00000140  MOVE      R5 0 0
+pc 070 off 0x000933 raw 00054181  LOADK     R6 21 ; K21=29.0
+pc 071 off 0x000937 raw 000101C1  LOADK     R7 4 ; K4=0.0
+pc 072 off 0x00093B raw 028040DC  CALL      R3 5 1
+pc 073 off 0x00093F raw 014580CB  SELF      R3 R2 K22('finishCliantTalkTurn')
+pc 074 off 0x000943 raw 010040DC  CALL      R3 2 1
+pc 075 off 0x000947 raw 0080001E  RETURN    R0 1 0
+
+## processEventKokuti params=3 proto=root/proto6
+pc 000 off 0x000A8D raw 000000C5  GETGLOBAL R3 0 ; K0='desktopWidget'
+pc 001 off 0x000A91 raw 01C040CB  SELF      R3 R3 K1('openPublicInformLongDialogWidget')
+pc 002 off 0x000A95 raw 00000140  MOVE      R5 0 0
+pc 003 off 0x000A99 raw 00008181  LOADK     R6 2 ; K2=34.0
+pc 004 off 0x000A9D raw 020040DC  CALL      R3 4 1
+pc 005 off 0x000AA1 raw 0040C0CB  SELF      R3 R0 K3('_wait')
+pc 006 off 0x000AA5 raw 00010141  LOADK     R5 4 ; K4=8.0
+pc 007 off 0x000AA9 raw 018040DC  CALL      R3 3 1
+pc 008 off 0x000AAD raw 004140CB  SELF      R3 R0 K5('showGetJobAbilityWidget')
+pc 009 off 0x000AB1 raw 00800140  MOVE      R5 1 0
+pc 010 off 0x000AB5 raw 00018181  LOADK     R6 6 ; K6=27188.0
+pc 011 off 0x000AB9 raw 0001C1C1  LOADK     R7 7 ; K7=1.0
+pc 012 off 0x000ABD raw 028040DC  CALL      R3 5 1
+pc 013 off 0x000AC1 raw 0040C0CB  SELF      R3 R0 K3('_wait')
+pc 014 off 0x000AC5 raw 00020141  LOADK     R5 8 ; K8=6.0
+pc 015 off 0x000AC9 raw 018040DC  CALL      R3 3 1
+pc 016 off 0x000ACD raw 0080001E  RETURN    R0 1 0
+
+## processEventChuui params=3 proto=root/proto7
+pc 000 off 0x000B87 raw 000000C5  GETGLOBAL R3 0 ; K0='worldMaster'
+pc 001 off 0x000B8B raw 01C040CB  SELF      R3 R3 K1('say')
+pc 002 off 0x000B8F raw 00000145  GETGLOBAL R5 0 ; K0='worldMaster'
+pc 003 off 0x000B93 raw 00008181  LOADK     R6 2 ; K2=51131.0
+pc 004 off 0x000B97 raw 0000C1C1  LOADK     R7 3 ; K3=111203.0
+pc 005 off 0x000B9B raw 00010201  LOADK     R8 4 ; K4=17.0
+pc 006 off 0x000B9F raw 030040DC  CALL      R3 6 1
+pc 007 off 0x000BA3 raw 0080001E  RETURN    R0 1 0
+
+## processEventChuui2 params=3 proto=root/proto8
+pc 000 off 0x000C04 raw 000000C5  GETGLOBAL R3 0 ; K0='worldMaster'
+pc 001 off 0x000C08 raw 01C040CB  SELF      R3 R3 K1('say')
+pc 002 off 0x000C0C raw 00000145  GETGLOBAL R5 0 ; K0='worldMaster'
+pc 003 off 0x000C10 raw 00008181  LOADK     R6 2 ; K2=51132.0
+pc 004 off 0x000C14 raw 0000C1C1  LOADK     R7 3 ; K3=111203.0
+pc 005 off 0x000C18 raw 00010201  LOADK     R8 4 ; K4=17.0
+pc 006 off 0x000C1C raw 030040DC  CALL      R3 6 1
+pc 007 off 0x000C20 raw 0080001E  RETURN    R0 1 0

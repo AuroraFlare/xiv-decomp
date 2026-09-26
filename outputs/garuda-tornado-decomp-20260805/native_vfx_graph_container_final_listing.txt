@@ -1,0 +1,92 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+window=00bd4660..00bd4760
+00bd4662  LEA EDX,[EAX + EAX*0x8]
+00bd4665  LEA EAX,[EBX + EDX*0x8]
+00bd4668  CMP EBX,EAX
+00bd466a  MOV dword ptr [ESP + 0x54],EAX
+00bd466e  MOV dword ptr [ESP + 0x2c],ECX
+00bd4672  JZ 0x00bd46af
+00bd4674  MOVZX EAX,word ptr [EBX]
+00bd4677  MOV EDX,dword ptr [ESP + 0x2c]
+00bd467b  MOV ECX,dword ptr [EBP + 0x10]
+00bd467e  MOVZX EAX,AX
+00bd4681  IMUL EAX,EAX,0x34
+00bd4684  ADD EAX,dword ptr [ESP + 0x10]
+00bd4688  PUSH EAX
+00bd4689  PUSH EBX
+00bd468a  PUSH EDX
+00bd468b  CALL 0x00bac6f0
+00bd4690  TEST AL,AL
+00bd4692  JZ 0x00bd46c1
+00bd4694  MOV EAX,dword ptr [ESP + 0x2c]
+00bd4698  MOV ECX,dword ptr [EAX + 0x8]
+00bd469b  ADD dword ptr [ESP + 0x30],ECX
+00bd469f  ADD EAX,0x2c
+00bd46a2  ADD EBX,0x48
+00bd46a5  CMP EBX,dword ptr [ESP + 0x54]
+00bd46a9  MOV dword ptr [ESP + 0x2c],EAX
+00bd46ad  JNZ 0x00bd4674
+00bd46af  XOR EDX,EDX
+00bd46b1  MOV ECX,dword ptr [EBP + 0x8]
+00bd46b4  CMP ECX,EDX
+00bd46b6  JZ 0x00bd46e4
+00bd46b8  MOV EDX,dword ptr [ECX]
+00bd46ba  MOV EAX,dword ptr [EDX + 0x14]
+00bd46bd  CALL EAX
+00bd46bf  JMP 0x00bd46ed
+00bd46c1  PUSH 0x10c7948
+00bd46c6  PUSH 0x1
+00bd46c8  CALL 0x00415c90
+00bd46cd  PUSH EAX
+00bd46ce  CALL 0x004160e0
+00bd46d3  PUSH ESI
+00bd46d4  CALL 0x004162c0
+00bd46d9  JMP 0x00bd4010
+00bd46de  MOV dword ptr [ESP + 0xc],EDX
+00bd46e2  JMP 0x00bd46b1
+00bd46e4  MOV ECX,dword ptr [EBP + 0x10]
+00bd46e7  MOV EAX,dword ptr [ECX + 0x10c]
+00bd46ed  MOV dword ptr [ESP + 0x5c],ESI
+00bd46f1  MOV EDX,dword ptr [ESP + 0x30]
+00bd46f5  MOV ECX,dword ptr [ESP + 0x60]
+00bd46f9  PUSH EDX
+00bd46fa  MOV EDX,dword ptr [ESP + 0x68]
+00bd46fe  PUSH ECX
+00bd46ff  MOV ECX,dword ptr [ESP + 0x4c]
+00bd4703  PUSH EDX
+00bd4704  MOV EDX,dword ptr [ESP + 0x54]
+00bd4708  PUSH ECX
+00bd4709  MOV ECX,dword ptr [ESP + 0x1c]
+00bd470d  PUSH EDX
+00bd470e  MOV EDX,dword ptr [ESP + 0x24]
+00bd4712  PUSH ECX
+00bd4713  MOV ECX,dword ptr [ESP + 0x2c]
+00bd4717  PUSH EDX
+00bd4718  MOV EDX,dword ptr [ESP + 0x34]
+00bd471c  PUSH ECX
+00bd471d  MOV ECX,dword ptr [ESP + 0x54]
+00bd4721  PUSH EDX
+00bd4722  MOV EDX,dword ptr [ESP + 0x5c]
+00bd4726  PUSH ECX
+00bd4727  MOV ECX,dword ptr [ESP + 0x90]
+00bd472e  PUSH EDX
+00bd472f  MOV EDX,dword ptr [EBP + 0xc]
+00bd4732  PUSH ECX
+00bd4733  PUSH EDI
+00bd4734  PUSH EAX
+00bd4735  MOV EAX,dword ptr [EBP + 0x10]
+00bd4738  PUSH EDX
+00bd4739  PUSH EAX
+00bd473a  MOV ECX,ESI
+00bd473c  MOV dword ptr [ESP + 0xbc],0x2
+00bd4747  CALL 0x00bd3d20
+00bd474c  MOV ECX,dword ptr [ESP + 0x74]
+00bd4750  POP EDI
+00bd4751  MOV EAX,ESI
+00bd4753  POP ESI
+00bd4754  MOV dword ptr FS:[0x0],ECX
+00bd475b  POP EBX
+00bd475c  MOV ESP,EBP
+00bd475e  POP EBP
+00bd475f  RET

@@ -1,0 +1,73 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+window=00bac620..00bac700
+00bac620  PUSH -0x1
+00bac622  PUSH 0xeea7c1
+00bac627  MOV EAX,FS:[0x0]
+00bac62d  PUSH EAX
+00bac62e  MOV dword ptr FS:[0x0],ESP
+00bac635  PUSH ECX
+00bac636  MOV ECX,dword ptr [ESP + 0x14]
+00bac63a  MOV dword ptr [ESP],ECX
+00bac63d  TEST ECX,ECX
+00bac63f  MOV dword ptr [ESP + 0xc],0x0
+00bac647  JZ 0x00bac65d
+00bac649  MOV EAX,dword ptr [ESP + 0x20]
+00bac64d  MOV EDX,dword ptr [ESP + 0x1c]
+00bac651  PUSH EAX
+00bac652  MOV EAX,dword ptr [ESP + 0x1c]
+00bac656  PUSH EDX
+00bac657  PUSH EAX
+00bac658  CALL 0x00bd20c0
+00bac65d  MOV ECX,dword ptr [ESP + 0x4]
+00bac661  MOV dword ptr FS:[0x0],ECX
+00bac668  ADD ESP,0x10
+00bac66b  RET 0x10
+00bac670  PUSH -0x1
+00bac672  PUSH 0xeea7dc
+00bac677  MOV EAX,FS:[0x0]
+00bac67d  PUSH EAX
+00bac67e  MOV dword ptr FS:[0x0],ESP
+00bac685  PUSH ECX
+00bac686  MOV EAX,dword ptr [ESP + 0x14]
+00bac68a  MOV dword ptr [ESP],EAX
+00bac68d  TEST EAX,EAX
+00bac68f  MOV dword ptr [ESP + 0xc],0x0
+00bac697  JZ 0x00bac6de
+00bac699  MOV EDX,dword ptr [ESP + 0x44]
+00bac69d  PUSH EDX
+00bac69e  MOV EDX,dword ptr [ESP + 0x44]
+00bac6a2  PUSH EDX
+00bac6a3  MOV EDX,dword ptr [ESP + 0x44]
+00bac6a7  PUSH EDX
+00bac6a8  MOV EDX,dword ptr [ESP + 0x44]
+00bac6ac  PUSH EDX
+00bac6ad  MOV EDX,dword ptr [ESP + 0x44]
+00bac6b1  PUSH EDX
+00bac6b2  MOV EDX,dword ptr [ESP + 0x44]
+00bac6b6  PUSH EDX
+00bac6b7  MOV EDX,dword ptr [ESP + 0x44]
+00bac6bb  PUSH EDX
+00bac6bc  MOV EDX,dword ptr [ESP + 0x44]
+00bac6c0  PUSH EDX
+00bac6c1  MOV EDX,dword ptr [ESP + 0x44]
+00bac6c5  PUSH EDX
+00bac6c6  MOV EDX,dword ptr [ESP + 0x44]
+00bac6ca  PUSH EDX
+00bac6cb  MOV EDX,dword ptr [ESP + 0x44]
+00bac6cf  PUSH EDX
+00bac6d0  MOV EDX,dword ptr [ESP + 0x44]
+00bac6d4  PUSH EDX
+00bac6d5  PUSH ECX
+00bac6d6  PUSH EAX
+00bac6d7  MOV ECX,EAX
+00bac6d9  CALL 0x00bd2660
+00bac6de  MOV ECX,dword ptr [ESP + 0x4]
+00bac6e2  MOV dword ptr FS:[0x0],ECX
+00bac6e9  ADD ESP,0x10
+00bac6ec  RET 0x34
+00bac6f0  PUSH -0x1
+00bac6f2  PUSH 0xeea7f7
+00bac6f7  MOV EAX,FS:[0x0]
+00bac6fd  PUSH EAX
+00bac6fe  MOV dword ptr FS:[0x0],ESP

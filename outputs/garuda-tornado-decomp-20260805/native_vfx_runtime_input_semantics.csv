@@ -1,0 +1,13 @@
+consumer,parameter,parameter_offset_hex,storage,native_address,native_behavior,interpretation_boundary
+generic VFX evaluated input,control output handle,caller-selected,int16 node index + int16 component index,0x00E3A0A0,"selects the positive or negative node table, indexes the component, then returns output +0x20 or random-extension output +0x30",proves runtime handle layout; a serialized slice still needs its loader join before every four-byte word can be called a handle
+Position3DGenerated:GendNormal:CoordRoot,base position vector,+0x00..+0x08,three evaluated float32 values,0x00BA5060,initial translation term,client particle position only
+Position3DGenerated:GendNormal:CoordRoot,direction vector,+0x10..+0x18,three evaluated float32 values,0x00BA5060,multiplied independently by speed and acceleration scalars,not actor facing or a circular-orbit axis
+Position3DGenerated:GendNormal:CoordRoot,speed scalar,+0x40,evaluated float32,0x00BA5060,scales the direction vector's linear term,exact authored value unresolved
+Position3DGenerated:GendNormal:CoordRoot,acceleration or damping scalar,+0x44,evaluated float32,0x00BA5060 / 0x00BA5260,scales direction acceleration in normal mode and supplies the alternate mode's damping progression,exact authored value unresolved
+Position3DGenerated:GendNormal:CoordRoot,alternate integration mode,+0x48 bit 0,evaluated flag,0x00BA5060 / 0x00BA5260,selects damped integration instead of direct parabolic evaluation,does not select actor pursuit
+GenerateMaster,generation resource specification,+0x24,mode-tagged serialized resource input,0x00D6ACA0 / 0x00D99A70,constructs or dispatches the child particle resource,"presentation resource, not a server mob spawn"
+GenerateMaster,base emission probability,+0x0C,direct float32,0x00D6B1C1,base of the randomized emission threshold,exact authored value unresolved
+GenerateMaster,emission-probability random width,+0x2C,direct float32,0x00D6B193,multiplies an independent random sample in the threshold,exact authored value unresolved
+GenerateMaster,generation count,+0x30,"evaluated float32 handle, truncated to integer",0x00D6ADF3,number of child generations at each accepted emission point,exact authored handle/value unresolved
+GenerateMaster,base travel spacing,+0x34,evaluated float32 handle,0x00D6AE01,base owner-displacement distance before the next emission point,exact authored handle/value unresolved
+GenerateMaster,travel-spacing random width,+0x38,evaluated float32 handle,0x00D6AE12,adds a random spacing component and clamps the result to at least 0.0010000000474974513,exact authored handle/value unresolved

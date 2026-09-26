@@ -1,0 +1,338 @@
+
+## tools/outputs/lpb/decomp_further_20260617/luac/chara/player/playerbaseclass.luac::_onPostEvent params=4
+pc 000 off 0x00486A raw 00000105  GETGLOBAL R4 0 ; K0='desktopWidget'
+pc 001 off 0x00486E raw 0240410B  SELF      R4 R4 K1('cancelDesktopWidgetMode')
+pc 002 off 0x004872 raw 00008181  LOADK     R6 2 ; K2=16.0
+pc 003 off 0x004876 raw 0180411C  CALL      R4 3 1
+pc 004 off 0x00487A raw 00000105  GETGLOBAL R4 0 ; K0='desktopWidget'
+pc 005 off 0x00487E raw 0240C10B  SELF      R4 R4 K3('closeAllEventModeWidget')
+pc 006 off 0x004882 raw 0100411C  CALL      R4 2 1
+pc 007 off 0x004886 raw 00000105  GETGLOBAL R4 0 ; K0='desktopWidget'
+pc 008 off 0x00488A raw 0241010B  SELF      R4 R4 K4('_unlockTargetCursorControl')
+pc 009 off 0x00488E raw 0100411C  CALL      R4 2 1
+pc 010 off 0x004892 raw 0041410B  SELF      R4 R0 K5('_unlockLockonControl')
+pc 011 off 0x004896 raw 0100411C  CALL      R4 2 1
+pc 012 off 0x00489A raw 0041810B  SELF      R4 R0 K6('_unlockPlayerControl')
+pc 013 off 0x00489E raw 0100411C  CALL      R4 2 1
+pc 014 off 0x0048A2 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/chara/npc/npcbaseclass.luac::delegateEvent params=4
+pc 000 off 0x0013D3 raw 0140014B  SELF      R5 R2 K0('_callFunction')
+pc 001 off 0x0013D7 raw 018001C0  MOVE      R7 3 0
+pc 002 off 0x0013DB raw 00800200  MOVE      R8 1 0
+pc 003 off 0x0013DF raw 00000240  MOVE      R9 0 0
+pc 004 off 0x0013E3 raw 000002A5  VARARG    R10 0 0
+pc 005 off 0x0013E7 raw 0000015D  TAILCALL  R5 0 0
+pc 006 off 0x0013EB raw 0000015E  RETURN    R5 0 0
+pc 007 off 0x0013EF raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/chara/npc/npcbaseclass.luac::_onEventCancel params=4
+pc 000 off 0x00142E raw 80000016  JMP       R0 +1 ; -> pc 002
+pc 001 off 0x001432 raw 0080001E  RETURN    R0 1 0
+pc 002 off 0x001436 raw 00C0010B  SELF      R4 R1 K0('_setLockonTarget')
+pc 003 off 0x00143A raw 03000183  LOADNIL   R6 6 0
+pc 004 off 0x00143E raw 0180411C  CALL      R4 3 1
+pc 005 off 0x001442 raw 00004105  GETGLOBAL R4 1 ; K1='desktopWidget'
+pc 006 off 0x001446 raw 0240810B  SELF      R4 R4 K2('cancelAllTarget')
+pc 007 off 0x00144A raw 0100411C  CALL      R4 2 1
+pc 008 off 0x00144E raw 0140C057  EQ        R1 R2 K3('talkDefault') ; skip next when comparison != True
+pc 009 off 0x001452 raw 80074016  JMP       R0 +30 ; -> pc 040
+pc 010 off 0x001456 raw 01410057  EQ        R1 R2 K4('pushDefault') ; skip next when comparison != True
+pc 011 off 0x00145A raw 8006C016  JMP       R0 +28 ; -> pc 040
+pc 012 off 0x00145E raw 01414057  EQ        R1 R2 K5('emoteDefault1') ; skip next when comparison != True
+pc 013 off 0x001462 raw 80064016  JMP       R0 +26 ; -> pc 040
+pc 014 off 0x001466 raw 01418057  EQ        R1 R2 K6('emoteDefault2') ; skip next when comparison != True
+pc 015 off 0x00146A raw 8005C016  JMP       R0 +24 ; -> pc 040
+pc 016 off 0x00146E raw 0141C057  EQ        R1 R2 K7('emoteDefault3') ; skip next when comparison != True
+pc 017 off 0x001472 raw 80054016  JMP       R0 +22 ; -> pc 040
+pc 018 off 0x001476 raw 01420057  EQ        R1 R2 K8('emoteDefault4') ; skip next when comparison != True
+pc 019 off 0x00147A raw 8004C016  JMP       R0 +20 ; -> pc 040
+pc 020 off 0x00147E raw 01424057  EQ        R1 R2 K9('emoteDefault5') ; skip next when comparison != True
+pc 021 off 0x001482 raw 80044016  JMP       R0 +18 ; -> pc 040
+pc 022 off 0x001486 raw 01428057  EQ        R1 R2 K10('emoteDefault6') ; skip next when comparison != True
+pc 023 off 0x00148A raw 8003C016  JMP       R0 +16 ; -> pc 040
+pc 024 off 0x00148E raw 0142C057  EQ        R1 R2 K11('emoteDefault7') ; skip next when comparison != True
+pc 025 off 0x001492 raw 80034016  JMP       R0 +14 ; -> pc 040
+pc 026 off 0x001496 raw 01430057  EQ        R1 R2 K12('emoteDefault8') ; skip next when comparison != True
+pc 027 off 0x00149A raw 8002C016  JMP       R0 +12 ; -> pc 040
+pc 028 off 0x00149E raw 01434057  EQ        R1 R2 K13('pushCommand') ; skip next when comparison != True
+pc 029 off 0x0014A2 raw 80024016  JMP       R0 +10 ; -> pc 040
+pc 030 off 0x0014A6 raw 01438057  EQ        R1 R2 K14('commandContent') ; skip next when comparison != True
+pc 031 off 0x0014AA raw 8001C016  JMP       R0 +8 ; -> pc 040
+pc 032 off 0x0014AE raw 0143C057  EQ        R1 R2 K15('commandForced') ; skip next when comparison != True
+pc 033 off 0x0014B2 raw 80014016  JMP       R0 +6 ; -> pc 040
+pc 034 off 0x0014B6 raw 01440057  EQ        R1 R2 K16('commandDefault') ; skip next when comparison != True
+pc 035 off 0x0014BA raw 8000C016  JMP       R0 +4 ; -> pc 040
+pc 036 off 0x0014BE raw 01444057  EQ        R1 R2 K17('commandWeak') ; skip next when comparison != True
+pc 037 off 0x0014C2 raw 80004016  JMP       R0 +2 ; -> pc 040
+pc 038 off 0x0014C6 raw 01448017  EQ        R0 R2 K18('commandJudgeMode') ; skip next when comparison != False
+pc 039 off 0x0014CA raw 80004016  JMP       R0 +2 ; -> pc 042
+pc 040 off 0x0014CE raw 00C4C10B  SELF      R4 R1 K19('_resetFade')
+pc 041 off 0x0014D2 raw 0100411C  CALL      R4 2 1
+pc 042 off 0x0014D6 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/chara/npc/npcbaseclass_event.luac::finishCliantTalkTurn params=1
+pc 000 off 0x0008EE raw 0040004B  SELF      R1 R0 K0('_turnBack')
+pc 001 off 0x0008F2 raw 0100405C  CALL      R1 2 1
+pc 002 off 0x0008F6 raw 0040404B  SELF      R1 R0 K1('_cancelLookAt')
+pc 003 off 0x0008FA raw 0100405C  CALL      R1 2 1
+pc 004 off 0x0008FE raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/chara/npc/populace/populacecompanyofficer.luac::eventTalkStepBreak params=1
+pc 000 off 0x002476 raw 0040004B  SELF      R1 R0 K0('finishCliantTalkTurn')
+pc 001 off 0x00247A raw 0100405C  CALL      R1 2 1
+pc 002 off 0x00247E raw 00004041  LOADK     R1 1 ; K1=0.0
+pc 003 off 0x002482 raw 0100005E  RETURN    R1 2 0
+pc 004 off 0x002486 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/chara/npc/populace/populacecompanyofficer.luac::eventRankUpDone params=3
+pc 000 off 0x001833 raw 000000C1  LOADK     R3 0 ; K0=84090880.0
+pc 001 off 0x001837 raw 00004105  GETGLOBAL R4 1 ; K1='worldMaster'
+pc 002 off 0x00183B raw 0240810B  SELF      R4 R4 K2('_getMyPlayer')
+pc 003 off 0x00183F raw 0100811C  CALL      R4 2 2
+pc 004 off 0x001843 raw 0040C14B  SELF      R5 R0 K3('getActorClassId')
+pc 005 off 0x001847 raw 0100815C  CALL      R5 2 2
+pc 006 off 0x00184B raw 02C10017  EQ        R0 R5 K4(1500199.0) ; skip next when comparison != False
+pc 007 off 0x00184F raw 80008016  JMP       R0 +3 ; -> pc 011
+pc 008 off 0x001853 raw 000000C1  LOADK     R3 0 ; K0=84090880.0
+pc 009 off 0x001857 raw 8002C016  JMP       R0 +12 ; -> pc 022
+pc 010 off 0x00185B raw 80004016  JMP       R0 +2 ; -> pc 013
+pc 011 off 0x00185F raw 02C14017  EQ        R0 R5 K5(1500200.0) ; skip next when comparison != False
+pc 012 off 0x001863 raw 80008016  JMP       R0 +3 ; -> pc 016
+pc 013 off 0x001867 raw 000180C1  LOADK     R3 6 ; K6=84094976.0
+pc 014 off 0x00186B raw 80018016  JMP       R0 +7 ; -> pc 022
+pc 015 off 0x00186F raw 80004016  JMP       R0 +2 ; -> pc 018
+pc 016 off 0x001873 raw 02C1C017  EQ        R0 R5 K7(1500198.0) ; skip next when comparison != False
+pc 017 off 0x001877 raw 8000C016  JMP       R0 +4 ; -> pc 022
+pc 018 off 0x00187B raw 000200C1  LOADK     R3 8 ; K8=84099072.0
+pc 019 off 0x00187F raw 80004016  JMP       R0 +2 ; -> pc 022
+pc 020 off 0x001883 raw 80000016  JMP       R0 +1 ; -> pc 022
+pc 021 off 0x001887 raw 7FFFC016  JMP       R0 +0 ; -> pc 022
+pc 022 off 0x00188B raw 00024145  GETGLOBAL R5 9 ; K9='desktopWidget'
+pc 023 off 0x00188F raw 02C2814B  SELF      R5 R5 K10('setGrandCompanyStatusWidgetJoinStatus')
+pc 024 off 0x001893 raw 008001C0  MOVE      R7 1 0
+pc 025 off 0x001897 raw 0180415C  CALL      R5 3 1
+pc 026 off 0x00189B raw 00024145  GETGLOBAL R5 9 ; K9='desktopWidget'
+pc 027 off 0x00189F raw 02C2C14B  SELF      R5 R5 K11('setGrandCompanyStatusWidgetPoint')
+pc 028 off 0x0018A3 raw 010001C0  MOVE      R7 2 0
+pc 029 off 0x0018A7 raw 0180415C  CALL      R5 3 1
+pc 030 off 0x0018AB raw 0043014B  SELF      R5 R0 K12('_wait')
+pc 031 off 0x0018AF raw 000341C1  LOADK     R7 13 ; K13=2.0
+pc 032 off 0x0018B3 raw 0180415C  CALL      R5 3 1
+pc 033 off 0x0018B7 raw 0243814B  SELF      R5 R4 K14('_runCharaScheduler')
+pc 034 off 0x0018BB raw 018001C0  MOVE      R7 3 0
+pc 035 off 0x0018BF raw 0180415C  CALL      R5 3 1
+pc 036 off 0x0018C3 raw 0243C14B  SELF      R5 R4 K15('_waitForCharaSchedulerFinished')
+pc 037 off 0x0018C7 raw 018001C0  MOVE      R7 3 0
+pc 038 off 0x0018CB raw 0180415C  CALL      R5 3 1
+pc 039 off 0x0018CF raw 0044014B  SELF      R5 R0 K16('finishCliantTalkTurn')
+pc 040 off 0x0018D3 raw 0100415C  CALL      R5 2 1
+pc 041 off 0x0018D7 raw 00024145  GETGLOBAL R5 9 ; K9='desktopWidget'
+pc 042 off 0x0018DB raw 02C4414B  SELF      R5 R5 K17('closeGrandCompanyStatusWidget')
+pc 043 off 0x0018DF raw 0100415C  CALL      R5 2 1
+pc 044 off 0x0018E3 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::closeGrandCompanyStatusWidget params=1
+pc 000 off 0x02939C raw 0040004B  SELF      R1 R0 K0('closeWidget')
+pc 001 off 0x0293A0 raw 000040C1  LOADK     R3 1 ; K1=5.0
+pc 002 off 0x0293A4 raw 00008101  LOADK     R4 2 ; K2='GrandCompanyStatusWidget'
+pc 003 off 0x0293A8 raw 0200005D  TAILCALL  R1 4 0
+pc 004 off 0x0293AC raw 0000005E  RETURN    R1 0 0
+pc 005 off 0x0293B0 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::closeAllEventModeWidget params=1
+pc 000 off 0x01A15C raw 80000016  JMP       R0 +1 ; -> pc 002
+pc 001 off 0x01A160 raw 0080001E  RETURN    R0 1 0
+pc 002 off 0x01A164 raw 0040004B  SELF      R1 R0 K0('closeWidget')
+pc 003 off 0x01A168 raw 000040C1  LOADK     R3 1 ; K1=4.0
+pc 004 off 0x01A16C raw 02000103  LOADNIL   R4 4 0
+pc 005 off 0x01A170 raw 0200405C  CALL      R1 4 1
+pc 006 off 0x01A174 raw 0040004B  SELF      R1 R0 K0('closeWidget')
+pc 007 off 0x01A178 raw 000080C1  LOADK     R3 2 ; K2=5.0
+pc 008 off 0x01A17C raw 02000103  LOADNIL   R4 4 0
+pc 009 off 0x01A180 raw 0200405C  CALL      R1 4 1
+pc 010 off 0x01A184 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::getWidget params=3
+pc 000 off 0x0324D2 raw 80404017  EQ        R0 K0(nil) K1(true) ; skip next when comparison != False
+pc 001 off 0x0324D6 raw 80004016  JMP       R0 +2 ; -> pc 004
+pc 002 off 0x0324DA raw 018000C3  LOADNIL   R3 3 0
+pc 003 off 0x0324DE raw 010000DE  RETURN    R3 2 0
+pc 004 off 0x0324E2 raw 004080C6  GETTABLE  R3 R0 K2('work')
+pc 005 off 0x0324E6 raw 01C0C0C6  GETTABLE  R3 R3 K3('rootWidget')
+pc 006 off 0x0324EA raw 018040C6  GETTABLE  R3 R3 R1
+pc 007 off 0x0324EE raw 01C00057  EQ        R1 R3 K0(nil) ; skip next when comparison != True
+pc 008 off 0x0324F2 raw 80020016  JMP       R0 +9 ; -> pc 018
+pc 009 off 0x0324F6 raw 01C1010B  SELF      R4 R3 K4('_isAlive')
+pc 010 off 0x0324FA raw 0100811C  CALL      R4 2 2
+pc 011 off 0x0324FE raw 02414017  EQ        R0 R4 K5(false) ; skip next when comparison != False
+pc 012 off 0x032502 raw 80010016  JMP       R0 +5 ; -> pc 018
+pc 013 off 0x032506 raw 00408106  GETTABLE  R4 R0 K2('work')
+pc 014 off 0x03250A raw 0240C106  GETTABLE  R4 R4 K3('rootWidget')
+pc 015 off 0x03250E raw 00C00109  SETTABLE  R4 R1 K0(nil)
+pc 016 off 0x032512 raw 02000103  LOADNIL   R4 4 0
+pc 017 off 0x032516 raw 0100011E  RETURN    R4 2 0
+pc 018 off 0x03251A raw 0041810B  SELF      R4 R0 K6('getWidgetByName')
+pc 019 off 0x03251E raw 01800180  MOVE      R6 3 0
+pc 020 off 0x032522 raw 010001C0  MOVE      R7 2 0
+pc 021 off 0x032526 raw 0200011D  TAILCALL  R4 4 0
+pc 022 off 0x03252A raw 0000011E  RETURN    R4 0 0
+pc 023 off 0x03252E raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::getWidgetByName params=3
+pc 000 off 0x032397 raw 00C00017  EQ        R0 R1 K0(nil) ; skip next when comparison != False
+pc 001 off 0x03239B raw 80004016  JMP       R0 +2 ; -> pc 004
+pc 002 off 0x03239F raw 018000C3  LOADNIL   R3 3 0
+pc 003 off 0x0323A3 raw 010000DE  RETURN    R3 2 0
+pc 004 off 0x0323A7 raw 00C040CB  SELF      R3 R1 K1('_isAlive')
+pc 005 off 0x0323AB raw 010080DC  CALL      R3 2 2
+pc 006 off 0x0323AF raw 01C08017  EQ        R0 R3 K2(false) ; skip next when comparison != False
+pc 007 off 0x0323B3 raw 80004016  JMP       R0 +2 ; -> pc 010
+pc 008 off 0x0323B7 raw 018000C3  LOADNIL   R3 3 0
+pc 009 off 0x0323BB raw 010000DE  RETURN    R3 2 0
+pc 010 off 0x0323BF raw 01400017  EQ        R0 R2 K0(nil) ; skip next when comparison != False
+pc 011 off 0x0323C3 raw 80000016  JMP       R0 +1 ; -> pc 013
+pc 012 off 0x0323C7 raw 0100005E  RETURN    R1 2 0
+pc 013 off 0x0323CB raw 00C0C0CB  SELF      R3 R1 K3('getWindowName')
+pc 014 off 0x0323CF raw 010080DC  CALL      R3 2 2
+pc 015 off 0x0323D3 raw 01808017  EQ        R0 R3 R2 ; skip next when comparison != False
+pc 016 off 0x0323D7 raw 80000016  JMP       R0 +1 ; -> pc 018
+pc 017 off 0x0323DB raw 0100005E  RETURN    R1 2 0
+pc 018 off 0x0323DF raw 00C100CB  SELF      R3 R1 K4('_countChildWidgets')
+pc 019 off 0x0323E3 raw 010080DC  CALL      R3 2 2
+pc 020 off 0x0323E7 raw 02800103  LOADNIL   R4 5 0
+pc 021 off 0x0323EB raw 00014181  LOADK     R6 5 ; K5=1.0
+pc 022 off 0x0323EF raw 018001C0  MOVE      R7 3 0
+pc 023 off 0x0323F3 raw 00014201  LOADK     R8 5 ; K5=1.0
+pc 024 off 0x0323F7 raw 8002C1A0  FORPREP   R6 +12 ; -> pc 037
+pc 025 off 0x0323FB raw 00C1828B  SELF      R10 R1 K6('_getChildWidget')
+pc 026 off 0x0323FF raw 04800300  MOVE      R12 9 0
+pc 027 off 0x032403 raw 0180829C  CALL      R10 3 2
+pc 028 off 0x032407 raw 05000100  MOVE      R4 10 0
+pc 029 off 0x03240B raw 0041C28B  SELF      R10 R0 K7('getWidgetByName')
+pc 030 off 0x03240F raw 02000300  MOVE      R12 4 0
+pc 031 off 0x032413 raw 01000340  MOVE      R13 2 0
+pc 032 off 0x032417 raw 0200829C  CALL      R10 4 2
+pc 033 off 0x03241B raw 05000140  MOVE      R5 10 0
+pc 034 off 0x03241F raw 02C00057  EQ        R1 R5 K0(nil) ; skip next when comparison != True
+pc 035 off 0x032423 raw 80000016  JMP       R0 +1 ; -> pc 037
+pc 036 off 0x032427 raw 0100015E  RETURN    R5 2 0
+pc 037 off 0x03242B raw 7FFC819F  FORLOOP   R6 -13 ; -> pc 025
+pc 038 off 0x03242F raw 03000183  LOADNIL   R6 6 0
+pc 039 off 0x032433 raw 0100019E  RETURN    R6 2 0
+pc 040 off 0x032437 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::closeWidget params=3
+pc 000 off 0x032261 raw 80404017  EQ        R0 K0(nil) K1(true) ; skip next when comparison != False
+pc 001 off 0x032265 raw 80004016  JMP       R0 +2 ; -> pc 004
+pc 002 off 0x032269 raw 000000C2  LOADBOOL  R3 0 0
+pc 003 off 0x03226D raw 010000DE  RETURN    R3 2 0
+pc 004 off 0x032271 raw 004080CB  SELF      R3 R0 K2('getWidget')
+pc 005 off 0x032275 raw 00800140  MOVE      R5 1 0
+pc 006 off 0x032279 raw 01000180  MOVE      R6 2 0
+pc 007 off 0x03227D raw 020080DC  CALL      R3 4 2
+pc 008 off 0x032281 raw 01C00017  EQ        R0 R3 K0(nil) ; skip next when comparison != False
+pc 009 off 0x032285 raw 80004016  JMP       R0 +2 ; -> pc 012
+pc 010 off 0x032289 raw 00000102  LOADBOOL  R4 0 0
+pc 011 off 0x03228D raw 0100011E  RETURN    R4 2 0
+pc 012 off 0x032291 raw 0040C10B  SELF      R4 R0 K3('closeWidgetDirect')
+pc 013 off 0x032295 raw 01800180  MOVE      R6 3 0
+pc 014 off 0x032299 raw 0180011D  TAILCALL  R4 3 0
+pc 015 off 0x03229D raw 0000011E  RETURN    R4 0 0
+pc 016 off 0x0322A1 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::closeWidgetDirect params=2
+pc 000 off 0x0322F6 raw 80404017  EQ        R0 K0(nil) K1(true) ; skip next when comparison != False
+pc 001 off 0x0322FA raw 80004016  JMP       R0 +2 ; -> pc 004
+pc 002 off 0x0322FE raw 00000082  LOADBOOL  R2 0 0
+pc 003 off 0x032302 raw 0100009E  RETURN    R2 2 0
+pc 004 off 0x032306 raw 00C00017  EQ        R0 R1 K0(nil) ; skip next when comparison != False
+pc 005 off 0x03230A raw 80004016  JMP       R0 +2 ; -> pc 008
+pc 006 off 0x03230E raw 00000082  LOADBOOL  R2 0 0
+pc 007 off 0x032312 raw 0100009E  RETURN    R2 2 0
+pc 008 off 0x032316 raw 00C0808B  SELF      R2 R1 K2('_isAlive')
+pc 009 off 0x03231A raw 0100809C  CALL      R2 2 2
+pc 010 off 0x03231E raw 0140C017  EQ        R0 R2 K3(false) ; skip next when comparison != False
+pc 011 off 0x032322 raw 80004016  JMP       R0 +2 ; -> pc 014
+pc 012 off 0x032326 raw 00000082  LOADBOOL  R2 0 0
+pc 013 off 0x03232A raw 0100009E  RETURN    R2 2 0
+pc 014 off 0x03232E raw 0041008B  SELF      R2 R0 K4('closeWidgetLocal')
+pc 015 off 0x032332 raw 00800100  MOVE      R4 1 0
+pc 016 off 0x032336 raw 0180409C  CALL      R2 3 1
+pc 017 off 0x03233A raw 00800082  LOADBOOL  R2 1 0
+pc 018 off 0x03233E raw 0100009E  RETURN    R2 2 0
+pc 019 off 0x032342 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::closeWidgetLocal params=2
+pc 000 off 0x03219D raw 0040008B  SELF      R2 R0 K0('closeWidgetRecursive')
+pc 001 off 0x0321A1 raw 00800100  MOVE      R4 1 0
+pc 002 off 0x0321A5 raw 0180809C  CALL      R2 3 2
+pc 003 off 0x0321A9 raw 01404017  EQ        R0 R2 K1(true) ; skip next when comparison != False
+pc 004 off 0x0321AD raw 80024016  JMP       R0 +10 ; -> pc 015
+pc 005 off 0x0321B1 raw 004080CB  SELF      R3 R0 K2('getThreadOwnerWidget')
+pc 006 off 0x0321B5 raw 010080DC  CALL      R3 2 2
+pc 007 off 0x0321B9 raw 01C0C057  EQ        R1 R3 K3(nil) ; skip next when comparison != True
+pc 008 off 0x0321BD raw 80014016  JMP       R0 +6 ; -> pc 015
+pc 009 off 0x0321C1 raw 0041010B  SELF      R4 R0 K4('setThreadOwnerWidget')
+pc 010 off 0x0321C5 raw 03000183  LOADNIL   R6 6 0
+pc 011 off 0x0321C9 raw 0180411C  CALL      R4 3 1
+pc 012 off 0x0321CD raw 01C1410B  SELF      R4 R3 K5('close')
+pc 013 off 0x0321D1 raw 0100411C  CALL      R4 2 1
+pc 014 off 0x0321D5 raw 7FFFC016  JMP       R0 +0 ; -> pc 015
+pc 015 off 0x0321D9 raw 0080001E  RETURN    R0 1 0
+
+## tools/outputs/lpb/decomp_further_20260617/luac/widget/desktopwidget_connector.luac::closeWidgetRecursive params=2
+pc 000 off 0x031FFB raw 00C00017  EQ        R0 R1 K0(nil) ; skip next when comparison != False
+pc 001 off 0x031FFF raw 80004016  JMP       R0 +2 ; -> pc 004
+pc 002 off 0x032003 raw 00000082  LOADBOOL  R2 0 0
+pc 003 off 0x032007 raw 0100009E  RETURN    R2 2 0
+pc 004 off 0x03200B raw 00C0408B  SELF      R2 R1 K1('_countChildWidgets')
+pc 005 off 0x03200F raw 0100809C  CALL      R2 2 2
+pc 006 off 0x032013 raw 000000C2  LOADBOOL  R3 0 0
+pc 007 off 0x032017 raw 0000010A  NEWTABLE  R4 0 0
+pc 008 off 0x03201B raw 00008141  LOADK     R5 2 ; K2=1.0
+pc 009 off 0x03201F raw 01000180  MOVE      R6 2 0
+pc 010 off 0x032023 raw 000081C1  LOADK     R7 2 ; K2=1.0
+pc 011 off 0x032027 raw 8000C160  FORPREP   R5 +4 ; -> pc 016
+pc 012 off 0x03202B raw 00C0C24B  SELF      R9 R1 K3('_getChildWidget')
+pc 013 off 0x03202F raw 040002C0  MOVE      R11 8 0
+pc 014 off 0x032033 raw 0180825C  CALL      R9 3 2
+pc 015 off 0x032037 raw 04024109  SETTABLE  R4 R8 R9
+pc 016 off 0x03203B raw 7FFE815F  FORLOOP   R5 -5 ; -> pc 012
+pc 017 off 0x03203F raw 00008141  LOADK     R5 2 ; K2=1.0
+pc 018 off 0x032043 raw 01000180  MOVE      R6 2 0
+pc 019 off 0x032047 raw 000081C1  LOADK     R7 2 ; K2=1.0
+pc 020 off 0x03204B raw 80018160  FORPREP   R5 +7 ; -> pc 028
+pc 021 off 0x03204F raw 02020246  GETTABLE  R9 R4 R8
+pc 022 off 0x032053 raw 0041028B  SELF      R10 R0 K4('closeWidgetRecursive')
+pc 023 off 0x032057 raw 04800300  MOVE      R12 9 0
+pc 024 off 0x03205B raw 0180829C  CALL      R10 3 2
+pc 025 off 0x03205F raw 05414017  EQ        R0 R10 K5(true) ; skip next when comparison != False
+pc 026 off 0x032063 raw 80000016  JMP       R0 +1 ; -> pc 028
+pc 027 off 0x032067 raw 008000C2  LOADBOOL  R3 1 0
+pc 028 off 0x03206B raw 7FFDC15F  FORLOOP   R5 -8 ; -> pc 021
+pc 029 off 0x03206F raw 0041814B  SELF      R5 R0 K6('getThreadOwnerWidget')
+pc 030 off 0x032073 raw 0100815C  CALL      R5 2 2
+pc 031 off 0x032077 raw 02C00057  EQ        R1 R5 K0(nil) ; skip next when comparison != True
+pc 032 off 0x03207B raw 8001C016  JMP       R0 +8 ; -> pc 041
+pc 033 off 0x03207F raw 02C1C18B  SELF      R6 R5 K7('_isAlive')
+pc 034 off 0x032083 raw 0100819C  CALL      R6 2 2
+pc 035 off 0x032087 raw 03420017  EQ        R0 R6 K8(false) ; skip next when comparison != False
+pc 036 off 0x03208B raw 8000C016  JMP       R0 +4 ; -> pc 041
+pc 037 off 0x03208F raw 0042418B  SELF      R6 R0 K9('setThreadOwnerWidget')
+pc 038 off 0x032093 raw 04000203  LOADNIL   R8 8 0
+pc 039 off 0x032097 raw 0180419C  CALL      R6 3 1
+pc 040 off 0x03209B raw 02800143  LOADNIL   R5 5 0
+pc 041 off 0x03209F raw 00800182  LOADBOOL  R6 1 0
+pc 042 off 0x0320A3 raw 02C00057  EQ        R1 R5 K0(nil) ; skip next when comparison != True
+pc 043 off 0x0320A7 raw 8000C016  JMP       R0 +4 ; -> pc 048
+pc 044 off 0x0320AB raw 02804017  EQ        R0 R5 R1 ; skip next when comparison != False
+pc 045 off 0x0320AF raw 80004016  JMP       R0 +2 ; -> pc 048
+pc 046 off 0x0320B3 raw 008000C2  LOADBOOL  R3 1 0
+pc 047 off 0x0320B7 raw 00000182  LOADBOOL  R6 0 0
+pc 048 off 0x0320BB raw 03414017  EQ        R0 R6 K5(true) ; skip next when comparison != False
+pc 049 off 0x0320BF raw 80004016  JMP       R0 +2 ; -> pc 052
+pc 050 off 0x0320C3 raw 00C281CB  SELF      R7 R1 K10('close')
+pc 051 off 0x0320C7 raw 010041DC  CALL      R7 2 1
+pc 052 off 0x0320CB raw 010000DE  RETURN    R3 2 0
+pc 053 off 0x0320CF raw 0080001E  RETURN    R0 1 0

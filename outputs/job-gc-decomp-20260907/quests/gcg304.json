@@ -1,0 +1,5970 @@
+{
+  "quest_id": 111620,
+  "code": "gcg304",
+  "source": {
+    "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+    "bytes": 5025,
+    "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+  },
+  "root_constants": [
+    "require",
+    "/Quest/Scenario/ScenarioBaseClass",
+    "_defineClass",
+    "Gcg304",
+    "ScenarioBaseClass",
+    "initText",
+    "processEventALAIREStart",
+    "processEvent_000",
+    "processEvent_005",
+    "processEvent_005_01",
+    "processEvent_010",
+    "processEvent_010_01",
+    "processEvent_015"
+  ],
+  "methods": {
+    "processEventALAIREStart": {
+      "variants": [
+        {
+          "conditions": [
+            {
+              "pc": 18,
+              "offset": "0x291",
+              "op": "EQ",
+              "left": {
+                "symbol": "arg4"
+              },
+              "right": 1.0,
+              "result": true,
+              "next_pc": 20
+            },
+            {
+              "pc": 79,
+              "offset": "0x385",
+              "op": "EQ",
+              "left": {
+                "symbol": "call78.1.return1"
+              },
+              "right": 1.0,
+              "result": true,
+              "next_pc": 81
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x255",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x265",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 10,
+              "offset": "0x271",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 14,
+              "offset": "0x281",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 17,
+              "offset": "0x28D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353976320.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 24,
+              "offset": "0x2A9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                2.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 35,
+              "offset": "0x2D5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                4.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 40,
+              "offset": "0x2E9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                5.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 43,
+              "offset": "0x2F5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 48,
+              "offset": "0x309",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                6.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 53,
+              "offset": "0x31D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                7.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 56,
+              "offset": "0x329",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 61,
+              "offset": "0x33D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                8.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 66,
+              "offset": "0x351",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                9.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 71,
+              "offset": "0x365",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                10.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 76,
+              "offset": "0x379",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                11.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 78,
+              "offset": "0x381",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "showQuestInfomation",
+              "args": [],
+              "returns": [
+                {
+                  "symbol": "call78.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 83,
+              "offset": "0x395",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354099200.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 88,
+              "offset": "0x3A9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                13.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 101,
+              "offset": "0x3DD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 103,
+              "offset": "0x3E5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            },
+            {
+              "pc": 106,
+              "offset": "0x3F1",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 110,
+              "offset": "0x401",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 111,
+            "offset": "0x405",
+            "values": [
+              {
+                "symbol": "call78.1.return1"
+              }
+            ]
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 18,
+              "offset": "0x291",
+              "op": "EQ",
+              "left": {
+                "symbol": "arg4"
+              },
+              "right": 1.0,
+              "result": true,
+              "next_pc": 20
+            },
+            {
+              "pc": 79,
+              "offset": "0x385",
+              "op": "EQ",
+              "left": {
+                "symbol": "call78.1.return1"
+              },
+              "right": 1.0,
+              "result": false,
+              "next_pc": 80
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x255",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x265",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 10,
+              "offset": "0x271",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 14,
+              "offset": "0x281",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 17,
+              "offset": "0x28D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353976320.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 24,
+              "offset": "0x2A9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                2.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 35,
+              "offset": "0x2D5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                4.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 40,
+              "offset": "0x2E9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                5.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 43,
+              "offset": "0x2F5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 48,
+              "offset": "0x309",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                6.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 53,
+              "offset": "0x31D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                7.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 56,
+              "offset": "0x329",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 61,
+              "offset": "0x33D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                8.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 66,
+              "offset": "0x351",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                9.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 71,
+              "offset": "0x365",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                10.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 76,
+              "offset": "0x379",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                11.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 78,
+              "offset": "0x381",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "showQuestInfomation",
+              "args": [],
+              "returns": [
+                {
+                  "symbol": "call78.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 92,
+              "offset": "0x3B9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354078720.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 97,
+              "offset": "0x3CD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                12.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 101,
+              "offset": "0x3DD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 103,
+              "offset": "0x3E5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            },
+            {
+              "pc": 106,
+              "offset": "0x3F1",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 110,
+              "offset": "0x401",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 111,
+            "offset": "0x405",
+            "values": [
+              {
+                "symbol": "call78.1.return1"
+              }
+            ]
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 18,
+              "offset": "0x291",
+              "op": "EQ",
+              "left": {
+                "symbol": "arg4"
+              },
+              "right": 1.0,
+              "result": false,
+              "next_pc": 19
+            },
+            {
+              "pc": 79,
+              "offset": "0x385",
+              "op": "EQ",
+              "left": {
+                "symbol": "call78.1.return1"
+              },
+              "right": 1.0,
+              "result": true,
+              "next_pc": 81
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x255",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x265",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 10,
+              "offset": "0x271",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 14,
+              "offset": "0x281",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 17,
+              "offset": "0x28D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353976320.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 30,
+              "offset": "0x2C1",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                3.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 35,
+              "offset": "0x2D5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                4.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 40,
+              "offset": "0x2E9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                5.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 43,
+              "offset": "0x2F5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 48,
+              "offset": "0x309",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                6.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 53,
+              "offset": "0x31D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                7.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 56,
+              "offset": "0x329",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 61,
+              "offset": "0x33D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                8.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 66,
+              "offset": "0x351",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                9.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 71,
+              "offset": "0x365",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                10.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 76,
+              "offset": "0x379",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                11.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 78,
+              "offset": "0x381",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "showQuestInfomation",
+              "args": [],
+              "returns": [
+                {
+                  "symbol": "call78.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 83,
+              "offset": "0x395",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354099200.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 88,
+              "offset": "0x3A9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                13.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 101,
+              "offset": "0x3DD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 103,
+              "offset": "0x3E5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            },
+            {
+              "pc": 106,
+              "offset": "0x3F1",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 110,
+              "offset": "0x401",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 111,
+            "offset": "0x405",
+            "values": [
+              {
+                "symbol": "call78.1.return1"
+              }
+            ]
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 18,
+              "offset": "0x291",
+              "op": "EQ",
+              "left": {
+                "symbol": "arg4"
+              },
+              "right": 1.0,
+              "result": false,
+              "next_pc": 19
+            },
+            {
+              "pc": 79,
+              "offset": "0x385",
+              "op": "EQ",
+              "left": {
+                "symbol": "call78.1.return1"
+              },
+              "right": 1.0,
+              "result": false,
+              "next_pc": 80
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x255",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x265",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 10,
+              "offset": "0x271",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 14,
+              "offset": "0x281",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 17,
+              "offset": "0x28D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353976320.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 30,
+              "offset": "0x2C1",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                3.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 35,
+              "offset": "0x2D5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                4.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 40,
+              "offset": "0x2E9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                5.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 43,
+              "offset": "0x2F5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 48,
+              "offset": "0x309",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                6.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 53,
+              "offset": "0x31D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                7.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 56,
+              "offset": "0x329",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 61,
+              "offset": "0x33D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                8.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 66,
+              "offset": "0x351",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                9.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 71,
+              "offset": "0x365",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                10.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 76,
+              "offset": "0x379",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                11.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 78,
+              "offset": "0x381",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "showQuestInfomation",
+              "args": [],
+              "returns": [
+                {
+                  "symbol": "call78.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 92,
+              "offset": "0x3B9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354078720.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 97,
+              "offset": "0x3CD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                12.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 101,
+              "offset": "0x3DD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 103,
+              "offset": "0x3E5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            },
+            {
+              "pc": 106,
+              "offset": "0x3F1",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 110,
+              "offset": "0x401",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 111,
+            "offset": "0x405",
+            "values": [
+              {
+                "symbol": "call78.1.return1"
+              }
+            ]
+          }
+        }
+      ],
+      "covered_instructions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111
+      ],
+      "uncovered_instructions": [
+        112
+      ],
+      "structurally_unreachable_instructions": [
+        112
+      ],
+      "uncovered_reachable_instructions": [],
+      "covered_branch_edges": [
+        [
+          18,
+          19
+        ],
+        [
+          18,
+          20
+        ],
+        [
+          79,
+          80
+        ],
+        [
+          79,
+          81
+        ]
+      ],
+      "uncovered_branch_edges": [],
+      "loop_templates": 0,
+      "parameter_count": 4,
+      "instruction_count": 113,
+      "prototype": "root/proto1",
+      "source": {
+        "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+        "bytes": 5025,
+        "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+      }
+    },
+    "processEvent_000": {
+      "variants": [
+        {
+          "conditions": [],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x587",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 6,
+              "offset": "0x593",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 11,
+              "offset": "0x5A7",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                14.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 16,
+              "offset": "0x5BB",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                15.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 21,
+              "offset": "0x5CF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                45.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 23,
+              "offset": "0x5D7",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 24,
+            "offset": "0x5DB",
+            "values": []
+          }
+        }
+      ],
+      "covered_instructions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "uncovered_instructions": [],
+      "structurally_unreachable_instructions": [],
+      "uncovered_reachable_instructions": [],
+      "covered_branch_edges": [],
+      "uncovered_branch_edges": [],
+      "loop_templates": 0,
+      "parameter_count": 3,
+      "instruction_count": 25,
+      "prototype": "root/proto2",
+      "source": {
+        "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+        "bytes": 5025,
+        "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+      }
+    },
+    "processEvent_005": {
+      "variants": [
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0x6B1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": true,
+              "next_pc": 10
+            },
+            {
+              "pc": 20,
+              "offset": "0x6E1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": true,
+              "next_pc": 22
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x69D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x6AD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 12,
+              "offset": "0x6C1",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 15,
+              "offset": "0x6CD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0x6DD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 26,
+              "offset": "0x6F9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                16.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 31,
+              "offset": "0x70D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                17.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 34,
+              "offset": "0x719",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353959936.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 39,
+              "offset": "0x72D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                18.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 42,
+              "offset": "0x739",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 47,
+              "offset": "0x74D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                19.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 52,
+              "offset": "0x761",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                20.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 55,
+              "offset": "0x76D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                83992576.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 60,
+              "offset": "0x781",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                21.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 66,
+              "offset": "0x799",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                22.0,
+                0.0,
+                {
+                  "symbol": "arg4"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 69,
+              "offset": "0x7A5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354000896.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 74,
+              "offset": "0x7B9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                23.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 79,
+              "offset": "0x7CD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                24.0,
+                -1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 82,
+              "offset": "0x7D9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354078720.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 87,
+              "offset": "0x7ED",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                25.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 92,
+              "offset": "0x801",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                26.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 166,
+              "offset": "0x929",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 167,
+            "offset": "0x92D",
+            "values": []
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0x6B1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": true,
+              "next_pc": 10
+            },
+            {
+              "pc": 20,
+              "offset": "0x6E1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": false,
+              "next_pc": 21
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x69D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x6AD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 12,
+              "offset": "0x6C1",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 15,
+              "offset": "0x6CD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0x6DD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 98,
+              "offset": "0x819",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                49.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 103,
+              "offset": "0x82D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                50.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 106,
+              "offset": "0x839",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353959936.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 111,
+              "offset": "0x84D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                51.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 114,
+              "offset": "0x859",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 119,
+              "offset": "0x86D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                52.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 124,
+              "offset": "0x881",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                53.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 127,
+              "offset": "0x88D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                83992576.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 132,
+              "offset": "0x8A1",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                54.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 138,
+              "offset": "0x8B9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                55.0,
+                0.0,
+                {
+                  "symbol": "arg4"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 141,
+              "offset": "0x8C5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354000896.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 146,
+              "offset": "0x8D9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                56.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 151,
+              "offset": "0x8ED",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                57.0,
+                -1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 154,
+              "offset": "0x8F9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                69193728.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 159,
+              "offset": "0x90D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                58.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 164,
+              "offset": "0x921",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                59.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 166,
+              "offset": "0x929",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 167,
+            "offset": "0x92D",
+            "values": []
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0x6B1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": false,
+              "next_pc": 9
+            },
+            {
+              "pc": 20,
+              "offset": "0x6E1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": true,
+              "next_pc": 22
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x69D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x6AD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 15,
+              "offset": "0x6CD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0x6DD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 26,
+              "offset": "0x6F9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                16.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 31,
+              "offset": "0x70D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                17.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 34,
+              "offset": "0x719",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353959936.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 39,
+              "offset": "0x72D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                18.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 42,
+              "offset": "0x739",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 47,
+              "offset": "0x74D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                19.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 52,
+              "offset": "0x761",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                20.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 55,
+              "offset": "0x76D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                83992576.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 60,
+              "offset": "0x781",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                21.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 66,
+              "offset": "0x799",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                22.0,
+                0.0,
+                {
+                  "symbol": "arg4"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 69,
+              "offset": "0x7A5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354000896.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 74,
+              "offset": "0x7B9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                23.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 79,
+              "offset": "0x7CD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                24.0,
+                -1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 82,
+              "offset": "0x7D9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354078720.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 87,
+              "offset": "0x7ED",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                25.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 92,
+              "offset": "0x801",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                26.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 166,
+              "offset": "0x929",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 167,
+            "offset": "0x92D",
+            "values": []
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0x6B1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": false,
+              "next_pc": 9
+            },
+            {
+              "pc": 20,
+              "offset": "0x6E1",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": false,
+              "next_pc": 21
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0x69D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0x6AD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 15,
+              "offset": "0x6CD",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0x6DD",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 98,
+              "offset": "0x819",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                49.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 103,
+              "offset": "0x82D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                50.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 106,
+              "offset": "0x839",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353959936.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 111,
+              "offset": "0x84D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                51.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 114,
+              "offset": "0x859",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 119,
+              "offset": "0x86D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                52.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 124,
+              "offset": "0x881",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                53.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 127,
+              "offset": "0x88D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                83992576.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 132,
+              "offset": "0x8A1",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                54.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 138,
+              "offset": "0x8B9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                55.0,
+                0.0,
+                {
+                  "symbol": "arg4"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 141,
+              "offset": "0x8C5",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354000896.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 146,
+              "offset": "0x8D9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                56.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 151,
+              "offset": "0x8ED",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                57.0,
+                -1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 154,
+              "offset": "0x8F9",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                69193728.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 159,
+              "offset": "0x90D",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                58.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 164,
+              "offset": "0x921",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                59.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 166,
+              "offset": "0x929",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 167,
+            "offset": "0x92D",
+            "values": []
+          }
+        }
+      ],
+      "covered_instructions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "uncovered_instructions": [],
+      "structurally_unreachable_instructions": [],
+      "uncovered_reachable_instructions": [],
+      "covered_branch_edges": [
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          20,
+          22
+        ]
+      ],
+      "uncovered_branch_edges": [],
+      "loop_templates": 0,
+      "parameter_count": 4,
+      "instruction_count": 168,
+      "prototype": "root/proto3",
+      "source": {
+        "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+        "bytes": 5025,
+        "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+      }
+    },
+    "processEvent_005_01": {
+      "variants": [
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0xB2B",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": true,
+              "result": true,
+              "next_pc": 10
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0xB17",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0xB27",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 12,
+              "offset": "0xB3B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 17,
+              "offset": "0xB4F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                27.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 22,
+              "offset": "0xB63",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                46.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 27,
+              "offset": "0xB77",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                28.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 30,
+              "offset": "0xB83",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354099200.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 35,
+              "offset": "0xB97",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                47.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 64,
+              "offset": "0xC0B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 65,
+            "offset": "0xC0F",
+            "values": []
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0xB2B",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": true,
+              "result": false,
+              "next_pc": 9
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0xB17",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0xB27",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 39,
+              "offset": "0xBA7",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 44,
+              "offset": "0xBBB",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                60.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 49,
+              "offset": "0xBCF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                61.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 54,
+              "offset": "0xBE3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                62.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 57,
+              "offset": "0xBEF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354099200.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 62,
+              "offset": "0xC03",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                63.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 64,
+              "offset": "0xC0B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 65,
+            "offset": "0xC0F",
+            "values": []
+          }
+        }
+      ],
+      "covered_instructions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "uncovered_instructions": [],
+      "structurally_unreachable_instructions": [],
+      "uncovered_reachable_instructions": [],
+      "covered_branch_edges": [
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "uncovered_branch_edges": [],
+      "loop_templates": 0,
+      "parameter_count": 3,
+      "instruction_count": 66,
+      "prototype": "root/proto4",
+      "source": {
+        "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+        "bytes": 5025,
+        "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+      }
+    },
+    "processEvent_010": {
+      "variants": [
+        {
+          "conditions": [
+            {
+              "pc": 5,
+              "offset": "0xD22",
+              "op": "EQ",
+              "left": {
+                "symbol": "call4.1.return1"
+              },
+              "right": 1.0,
+              "result": true,
+              "next_pc": 7
+            }
+          ],
+          "calls": [
+            {
+              "pc": 4,
+              "offset": "0xD1E",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "ask",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                41.0,
+                2.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call4.1.return1"
+                }
+              ]
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 8,
+            "offset": "0xD2E",
+            "values": [
+              {
+                "symbol": "call4.1.return1"
+              }
+            ]
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 5,
+              "offset": "0xD22",
+              "op": "EQ",
+              "left": {
+                "symbol": "call4.1.return1"
+              },
+              "right": 1.0,
+              "result": false,
+              "next_pc": 6
+            }
+          ],
+          "calls": [
+            {
+              "pc": 4,
+              "offset": "0xD1E",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "ask",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                41.0,
+                2.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call4.1.return1"
+                }
+              ]
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 8,
+            "offset": "0xD2E",
+            "values": [
+              {
+                "symbol": "call4.1.return1"
+              }
+            ]
+          }
+        }
+      ],
+      "covered_instructions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "uncovered_instructions": [
+        9
+      ],
+      "structurally_unreachable_instructions": [
+        9
+      ],
+      "uncovered_reachable_instructions": [],
+      "covered_branch_edges": [
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "uncovered_branch_edges": [],
+      "loop_templates": 0,
+      "parameter_count": 3,
+      "instruction_count": 10,
+      "prototype": "root/proto5",
+      "source": {
+        "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+        "bytes": 5025,
+        "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+      }
+    },
+    "processEvent_010_01": {
+      "variants": [
+        {
+          "conditions": [],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0xD8E",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 10,
+              "offset": "0xDAA",
+              "owner": {
+                "object": "worldMaster"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                29.0,
+                1.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 12,
+              "offset": "0xDB2",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 13,
+            "offset": "0xDB6",
+            "values": []
+          }
+        }
+      ],
+      "covered_instructions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "uncovered_instructions": [],
+      "structurally_unreachable_instructions": [],
+      "uncovered_reachable_instructions": [],
+      "covered_branch_edges": [],
+      "uncovered_branch_edges": [],
+      "loop_templates": 0,
+      "parameter_count": 3,
+      "instruction_count": 14,
+      "prototype": "root/proto6",
+      "source": {
+        "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+        "bytes": 5025,
+        "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+      }
+    },
+    "processEvent_015": {
+      "variants": [
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0xE73",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": true,
+              "next_pc": 10
+            },
+            {
+              "pc": 20,
+              "offset": "0xEA3",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": true,
+              "next_pc": 22
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0xE5F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0xE6F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 12,
+              "offset": "0xE83",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 15,
+              "offset": "0xE8F",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0xE9F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 26,
+              "offset": "0xEBB",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                30.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 30,
+              "offset": "0xECB",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 34,
+              "offset": "0xEDB",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 39,
+              "offset": "0xEEF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                44.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 42,
+              "offset": "0xEFB",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 47,
+              "offset": "0xF0F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                31.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 52,
+              "offset": "0xF23",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                32.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 57,
+              "offset": "0xF37",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                33.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 61,
+              "offset": "0xF47",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 64,
+              "offset": "0xF53",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                69193728.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 69,
+              "offset": "0xF67",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                34.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 74,
+              "offset": "0xF7B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                35.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 79,
+              "offset": "0xF8F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                48.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 82,
+              "offset": "0xF9B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 87,
+              "offset": "0xFAF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                36.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 92,
+              "offset": "0xFC3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                37.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 95,
+              "offset": "0xFCF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353964032.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 100,
+              "offset": "0xFE3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                38.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 105,
+              "offset": "0xFF7",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                39.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 108,
+              "offset": "0x1003",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354107392.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 113,
+              "offset": "0x1017",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                40.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 115,
+              "offset": "0x101F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 211,
+            "offset": "0x119F",
+            "values": []
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0xE73",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": true,
+              "next_pc": 10
+            },
+            {
+              "pc": 20,
+              "offset": "0xEA3",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": false,
+              "next_pc": 21
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0xE5F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0xE6F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 12,
+              "offset": "0xE83",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353984512.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 15,
+              "offset": "0xE8F",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0xE9F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 121,
+              "offset": "0x1037",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                64.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 125,
+              "offset": "0x1047",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 129,
+              "offset": "0x1057",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 134,
+              "offset": "0x106B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                65.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 137,
+              "offset": "0x1077",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 142,
+              "offset": "0x108B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                66.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 147,
+              "offset": "0x109F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                67.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 152,
+              "offset": "0x10B3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                68.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 156,
+              "offset": "0x10C3",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 159,
+              "offset": "0x10CF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                69193728.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 164,
+              "offset": "0x10E3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                69.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 169,
+              "offset": "0x10F7",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                70.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 174,
+              "offset": "0x110B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                71.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 177,
+              "offset": "0x1117",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 182,
+              "offset": "0x112B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                72.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 187,
+              "offset": "0x113F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                73.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 190,
+              "offset": "0x114B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353964032.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 195,
+              "offset": "0x115F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                74.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 200,
+              "offset": "0x1173",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                75.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 203,
+              "offset": "0x117F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354107392.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 208,
+              "offset": "0x1193",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                76.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 210,
+              "offset": "0x119B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 211,
+            "offset": "0x119F",
+            "values": []
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0xE73",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": false,
+              "next_pc": 9
+            },
+            {
+              "pc": 20,
+              "offset": "0xEA3",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": true,
+              "next_pc": 22
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0xE5F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0xE6F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 15,
+              "offset": "0xE8F",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0xE9F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 26,
+              "offset": "0xEBB",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                30.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 30,
+              "offset": "0xECB",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 34,
+              "offset": "0xEDB",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 39,
+              "offset": "0xEEF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                44.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 42,
+              "offset": "0xEFB",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 47,
+              "offset": "0xF0F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                31.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 52,
+              "offset": "0xF23",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                32.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 57,
+              "offset": "0xF37",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                33.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 61,
+              "offset": "0xF47",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 64,
+              "offset": "0xF53",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                69193728.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 69,
+              "offset": "0xF67",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                34.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 74,
+              "offset": "0xF7B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                35.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 79,
+              "offset": "0xF8F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                48.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 82,
+              "offset": "0xF9B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 87,
+              "offset": "0xFAF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                36.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 92,
+              "offset": "0xFC3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                37.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 95,
+              "offset": "0xFCF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353964032.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 100,
+              "offset": "0xFE3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                38.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 105,
+              "offset": "0xFF7",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                39.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 108,
+              "offset": "0x1003",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354107392.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 113,
+              "offset": "0x1017",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                40.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 115,
+              "offset": "0x101F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 211,
+            "offset": "0x119F",
+            "values": []
+          }
+        },
+        {
+          "conditions": [
+            {
+              "pc": 8,
+              "offset": "0xE73",
+              "op": "EQ",
+              "left": {
+                "symbol": "call7.1.return1"
+              },
+              "right": 0.0,
+              "result": false,
+              "next_pc": 9
+            },
+            {
+              "pc": 20,
+              "offset": "0xEA3",
+              "op": "EQ",
+              "left": {
+                "symbol": "call19.1.return1"
+              },
+              "right": true,
+              "result": false,
+              "next_pc": 21
+            }
+          ],
+          "calls": [
+            {
+              "pc": 3,
+              "offset": "0xE5F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                2.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 7,
+              "offset": "0xE6F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "doSalute",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call7.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 15,
+              "offset": "0xE8F",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 19,
+              "offset": "0xE9F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "isUpperRank",
+              "args": [
+                2.0,
+                27.0
+              ],
+              "returns": [
+                {
+                  "symbol": "call19.1.return1"
+                }
+              ]
+            },
+            {
+              "pc": 121,
+              "offset": "0x1037",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                64.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 125,
+              "offset": "0x1047",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeOut",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 129,
+              "offset": "0x1057",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "startCliantTalkTurn",
+              "args": [
+                1.0,
+                {
+                  "object": "player"
+                }
+              ],
+              "returns": []
+            },
+            {
+              "pc": 134,
+              "offset": "0x106B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                65.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 137,
+              "offset": "0x1077",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "_wait",
+              "args": [
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 142,
+              "offset": "0x108B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                66.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 147,
+              "offset": "0x109F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                67.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 152,
+              "offset": "0x10B3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                68.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 156,
+              "offset": "0x10C3",
+              "owner": {
+                "object": "quest"
+              },
+              "method": "startFadeIn",
+              "args": [
+                {
+                  "object": "player"
+                },
+                1.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 159,
+              "offset": "0x10CF",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                69193728.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 164,
+              "offset": "0x10E3",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                69.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 169,
+              "offset": "0x10F7",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                70.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 174,
+              "offset": "0x110B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                71.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 177,
+              "offset": "0x1117",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354086912.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 182,
+              "offset": "0x112B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                72.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 187,
+              "offset": "0x113F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                73.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 190,
+              "offset": "0x114B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                353964032.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 195,
+              "offset": "0x115F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                74.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 200,
+              "offset": "0x1173",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                75.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 203,
+              "offset": "0x117F",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "_runCharaScheduler",
+              "args": [
+                354107392.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 208,
+              "offset": "0x1193",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "say",
+              "args": [
+                {
+                  "object": "quest"
+                },
+                76.0,
+                0.0
+              ],
+              "returns": []
+            },
+            {
+              "pc": 210,
+              "offset": "0x119B",
+              "owner": {
+                "object": "eventOwner"
+              },
+              "method": "finishCliantTalkTurn",
+              "args": [],
+              "returns": []
+            }
+          ],
+          "terminal": {
+            "kind": "return",
+            "pc": 211,
+            "offset": "0x119F",
+            "values": []
+          }
+        }
+      ],
+      "covered_instructions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211
+      ],
+      "uncovered_instructions": [],
+      "structurally_unreachable_instructions": [],
+      "uncovered_reachable_instructions": [],
+      "covered_branch_edges": [
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          20,
+          22
+        ]
+      ],
+      "uncovered_branch_edges": [],
+      "loop_templates": 0,
+      "parameter_count": 3,
+      "instruction_count": 212,
+      "prototype": "root/proto7",
+      "source": {
+        "path": "tools/outputs/lpb/decomp_more_20260617/luac/quest/scenario/gcg/gcg304.luac",
+        "bytes": 5025,
+        "sha256": "9ec2fac7c909a01343acade4bf345098b87feb894850e11b0e9fd05c6be9cbb5"
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+# tools/outputs/lpb/decomp_more_20260617/luac/director/quest/questdirectorgcu70101.luac
+
+## <root>
+pc 000 off 0x000020 raw 00000005  GETGLOBAL R0 0 ; K0='require'
+pc 001 off 0x000024 raw 00004041  LOADK     R1 1 ; K1='/Director/Quest/QuestDirectorBaseClass'
+pc 002 off 0x000028 raw 0100401C  CALL      R0 2 1
+pc 003 off 0x00002C raw 00008005  GETGLOBAL R0 2 ; K2='_defineClass'
+pc 004 off 0x000030 raw 0000C041  LOADK     R1 3 ; K3='QuestDirectorGcu70101'
+pc 005 off 0x000034 raw 00010081  LOADK     R2 4 ; K4='QuestDirectorBaseClass'
+pc 006 off 0x000038 raw 0180401C  CALL      R0 3 1
+pc 007 off 0x00003C raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 008 off 0x000040 raw 00000064  CLOSURE   R1 0 ; root/proto0
+pc 009 off 0x000044 raw 82804009  SETTABLE  R0 K5('initAsQuestDirector') R1
+pc 010 off 0x000048 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 011 off 0x00004C raw 00004064  CLOSURE   R1 1 ; root/proto1
+pc 012 off 0x000050 raw 83004009  SETTABLE  R0 K6('processUIInit') R1
+pc 013 off 0x000054 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 014 off 0x000058 raw 00008064  CLOSURE   R1 2 ; root/proto2
+pc 015 off 0x00005C raw 83804009  SETTABLE  R0 K7('processUIUpdate') R1
+pc 016 off 0x000060 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 017 off 0x000064 raw 0000C064  CLOSURE   R1 3 ; root/proto3
+pc 018 off 0x000068 raw 84004009  SETTABLE  R0 K8('processUIFinalize') R1
+pc 019 off 0x00006C raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 020 off 0x000070 raw 00010064  CLOSURE   R1 4 ; root/proto4
+pc 021 off 0x000074 raw 84804009  SETTABLE  R0 K9('getKindContentsInformation') R1
+pc 022 off 0x000078 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 023 off 0x00007C raw 00014064  CLOSURE   R1 5 ; root/proto5
+pc 024 off 0x000080 raw 85004009  SETTABLE  R0 K10('getGuildleveId') R1
+pc 025 off 0x000084 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 026 off 0x000088 raw 00018064  CLOSURE   R1 6 ; root/proto6
+pc 027 off 0x00008C raw 85804009  SETTABLE  R0 K11('getTitleOnGuildleveInfo') R1
+pc 028 off 0x000090 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 029 off 0x000094 raw 0001C064  CLOSURE   R1 7 ; root/proto7
+pc 030 off 0x000098 raw 86004009  SETTABLE  R0 K12('getMaxIndexNumberOnGuildleveInfo') R1
+pc 031 off 0x00009C raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 032 off 0x0000A0 raw 00020064  CLOSURE   R1 8 ; root/proto8
+pc 033 off 0x0000A4 raw 86804009  SETTABLE  R0 K13('getTimeDataOnGuildleveInfo') R1
+pc 034 off 0x0000A8 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 035 off 0x0000AC raw 00024064  CLOSURE   R1 9 ; root/proto9
+pc 036 off 0x0000B0 raw 87004009  SETTABLE  R0 K14('getInstructionOnGuildleveInfo') R1
+pc 037 off 0x0000B4 raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorGcu70101'
+pc 038 off 0x0000B8 raw 00028064  CLOSURE   R1 10 ; root/proto10
+pc 039 off 0x0000BC raw 87804009  SETTABLE  R0 K15('getArticleFullDataOnGuildleveInfo') R1
+pc 040 off 0x0000C0 raw 0080001E  RETURN    R0 1 0
+
+## initAsQuestDirector
+pc 000 off 0x00029B raw 00400046  GETTABLE  R1 R0 K0('work')
+pc 001 off 0x00029F raw 0000008A  NEWTABLE  R2 0 0
+pc 002 off 0x0002A3 raw 80808049  SETTABLE  R1 K1('_temp') R2
+pc 003 off 0x0002A7 raw 00400046  GETTABLE  R1 R0 K0('work')
+pc 004 off 0x0002AB raw 0180008A  NEWTABLE  R2 3 0
+pc 005 off 0x0002AF raw 010000CA  NEWTABLE  R3 2 0
+pc 006 off 0x0002B3 raw 0000C101  LOADK     R4 3 ; K3='directNumber'
+pc 007 off 0x0002B7 raw 00010141  LOADK     R5 4 ; K4='integer8'
+pc 008 off 0x0002BB raw 010040E2  SETLIST   R3 2 1
+pc 009 off 0x0002BF raw 0100010A  NEWTABLE  R4 2 0
+pc 010 off 0x0002C3 raw 00014141  LOADK     R5 5 ; K5='point'
+pc 011 off 0x0002C7 raw 00018181  LOADK     R6 6 ; K6='integer16'
+pc 012 off 0x0002CB raw 01004122  SETLIST   R4 2 1
+pc 013 off 0x0002CF raw 0100014A  NEWTABLE  R5 2 0
+pc 014 off 0x0002D3 raw 0001C181  LOADK     R6 7 ; K7='limitTime'
+pc 015 off 0x0002D7 raw 000201C1  LOADK     R7 8 ; K8='integer32'
+pc 016 off 0x0002DB raw 01004162  SETLIST   R5 2 1
+pc 017 off 0x0002DF raw 018040A2  SETLIST   R2 3 1
+pc 018 off 0x0002E3 raw 81008049  SETTABLE  R1 K2('_sync') R2
+pc 019 off 0x0002E7 raw 00400046  GETTABLE  R1 R0 K0('work')
+pc 020 off 0x0002EB raw 0100008A  NEWTABLE  R2 2 0
+pc 021 off 0x0002EF raw 020000CA  NEWTABLE  R3 4 0
+pc 022 off 0x0002F3 raw 00028101  LOADK     R4 10 ; K10='direct'
+pc 023 off 0x0002F7 raw 0002C141  LOADK     R5 11 ; K11=1.0
+pc 024 off 0x0002FB raw 0080018A  NEWTABLE  R6 1 0
+pc 025 off 0x0002FF raw 0000C1C1  LOADK     R7 3 ; K3='directNumber'
+pc 026 off 0x000303 raw 008041A2  SETLIST   R6 1 1
+pc 027 off 0x000307 raw 008001CA  NEWTABLE  R7 1 0
+pc 028 off 0x00030B raw 00014201  LOADK     R8 5 ; K5='point'
+pc 029 off 0x00030F raw 008041E2  SETLIST   R7 1 1
+pc 030 off 0x000313 raw 020040E2  SETLIST   R3 4 1
+pc 031 off 0x000317 raw 0180010A  NEWTABLE  R4 3 0
+pc 032 off 0x00031B raw 00030141  LOADK     R5 12 ; K12='time'
+pc 033 off 0x00031F raw 0002C181  LOADK     R6 11 ; K11=1.0
+pc 034 off 0x000323 raw 008001CA  NEWTABLE  R7 1 0
+pc 035 off 0x000327 raw 0001C201  LOADK     R8 7 ; K7='limitTime'
+pc 036 off 0x00032B raw 008041E2  SETLIST   R7 1 1
+pc 037 off 0x00032F raw 01804122  SETLIST   R4 3 1
+pc 038 off 0x000333 raw 010040A2  SETLIST   R2 2 1
+pc 039 off 0x000337 raw 84808049  SETTABLE  R1 K9('_tag') R2
+pc 040 off 0x00033B raw 0080001E  RETURN    R0 1 0
+
+## processUIInit
+pc 000 off 0x000408 raw 00000045  GETGLOBAL R1 0 ; K0='desktopWidget'
+pc 001 off 0x00040C raw 00C0404B  SELF      R1 R1 K1('openPublicEffectWidget')
+pc 002 off 0x000410 raw 000080C1  LOADK     R3 2 ; K2=16.0
+pc 003 off 0x000414 raw 0180405C  CALL      R1 3 1
+pc 004 off 0x000418 raw 0080001E  RETURN    R0 1 0
+
+## processUIUpdate
+pc 000 off 0x00047C raw 00400086  GETTABLE  R2 R0 K0('work')
+pc 001 off 0x000480 raw 01404086  GETTABLE  R2 R2 K1('directNumber')
+pc 002 off 0x000484 raw 01408017  EQ        R0 R2 K2(20.0) ; skip next when comparison != False
+pc 003 off 0x000488 raw 80014016  JMP       R0 +6 ; -> pc 010
+pc 004 off 0x00048C raw 0000C0C5  GETGLOBAL R3 3 ; K3='desktopWidget'
+pc 005 off 0x000490 raw 01C100CB  SELF      R3 R3 K4('openPublicEffectWidget')
+pc 006 off 0x000494 raw 00014141  LOADK     R5 5 ; K5=19.0
+pc 007 off 0x000498 raw 018040DC  CALL      R3 3 1
+pc 008 off 0x00049C raw 8006C016  JMP       R0 +28 ; -> pc 037
+pc 009 off 0x0004A0 raw 80004016  JMP       R0 +2 ; -> pc 012
+pc 010 off 0x0004A4 raw 01418017  EQ        R0 R2 K6(-1.0) ; skip next when comparison != False
+pc 011 off 0x0004A8 raw 80014016  JMP       R0 +6 ; -> pc 018
+pc 012 off 0x0004AC raw 0000C0C5  GETGLOBAL R3 3 ; K3='desktopWidget'
+pc 013 off 0x0004B0 raw 01C100CB  SELF      R3 R3 K4('openPublicEffectWidget')
+pc 014 off 0x0004B4 raw 00008141  LOADK     R5 2 ; K2=20.0
+pc 015 off 0x0004B8 raw 018040DC  CALL      R3 3 1
+pc 016 off 0x0004BC raw 8004C016  JMP       R0 +20 ; -> pc 037
+pc 017 off 0x0004C0 raw 7FFFC016  JMP       R0 +0 ; -> pc 018
+pc 018 off 0x0004C4 raw 00C1C017  EQ        R0 R1 K7('time') ; skip next when comparison != False
+pc 019 off 0x0004C8 raw 80014016  JMP       R0 +6 ; -> pc 026
+pc 020 off 0x0004CC raw 0000C0C5  GETGLOBAL R3 3 ; K3='desktopWidget'
+pc 021 off 0x0004D0 raw 01C200CB  SELF      R3 R3 K8('processUpdateContentsInformation')
+pc 022 off 0x0004D4 raw 00000140  MOVE      R5 0 0
+pc 023 off 0x0004D8 raw 00024181  LOADK     R6 9 ; K9='start'
+pc 024 off 0x0004DC raw 020040DC  CALL      R3 4 1
+pc 025 off 0x0004E0 raw 80028016  JMP       R0 +11 ; -> pc 037
+pc 026 off 0x0004E4 raw 004000C6  GETTABLE  R3 R0 K0('work')
+pc 027 off 0x0004E8 raw 01C280C6  GETTABLE  R3 R3 K10('limitTime')
+pc 028 off 0x0004EC raw 8580C018  LT        R0 K11(0.0) R3 ; skip next when comparison != False
+pc 029 off 0x0004F0 raw 80018016  JMP       R0 +7 ; -> pc 037
+pc 030 off 0x0004F4 raw 0000C0C5  GETGLOBAL R3 3 ; K3='desktopWidget'
+pc 031 off 0x0004F8 raw 01C200CB  SELF      R3 R3 K8('processUpdateContentsInformation')
+pc 032 off 0x0004FC raw 00000140  MOVE      R5 0 0
+pc 033 off 0x000500 raw 00030181  LOADK     R6 12 ; K12='update'
+pc 034 off 0x000504 raw 000341C1  LOADK     R7 13 ; K13=1.0
+pc 035 off 0x000508 raw 028040DC  CALL      R3 5 1
+pc 036 off 0x00050C raw 7FFFC016  JMP       R0 +0 ; -> pc 037
+pc 037 off 0x000510 raw 0080001E  RETURN    R0 1 0
+
+## processUIFinalize
+pc 000 off 0x00060A raw 00000045  GETGLOBAL R1 0 ; K0='desktopWidget'
+pc 001 off 0x00060E raw 00C0404B  SELF      R1 R1 K1('processUpdateContentsInformation')
+pc 002 off 0x000612 raw 000000C0  MOVE      R3 0 0
+pc 003 off 0x000616 raw 00008101  LOADK     R4 2 ; K2='cancel'
+pc 004 off 0x00061A raw 0200405C  CALL      R1 4 1
+pc 005 off 0x00061E raw 0040C046  GETTABLE  R1 R0 K3('work')
+pc 006 off 0x000622 raw 00C10046  GETTABLE  R1 R1 K4('directNumber')
+pc 007 off 0x000626 raw 00C14017  EQ        R0 R1 K5(0.0) ; skip next when comparison != False
+pc 008 off 0x00062A raw 8000C016  JMP       R0 +4 ; -> pc 013
+pc 009 off 0x00062E raw 00000045  GETGLOBAL R1 0 ; K0='desktopWidget'
+pc 010 off 0x000632 raw 00C1804B  SELF      R1 R1 K6('openPublicEffectWidget')
+pc 011 off 0x000636 raw 0001C0C1  LOADK     R3 7 ; K7=13.0
+pc 012 off 0x00063A raw 0180405C  CALL      R1 3 1
+pc 013 off 0x00063E raw 0080001E  RETURN    R0 1 0
+
+## getKindContentsInformation
+pc 000 off 0x0006F9 raw 00000041  LOADK     R1 0 ; K0=1.0
+pc 001 off 0x0006FD raw 0100005E  RETURN    R1 2 0
+pc 002 off 0x000701 raw 0080001E  RETURN    R0 1 0
+
+## getGuildleveId
+pc 000 off 0x000736 raw 00000041  LOADK     R1 0 ; K0=0.0
+pc 001 off 0x00073A raw 0100005E  RETURN    R1 2 0
+pc 002 off 0x00073E raw 0080001E  RETURN    R0 1 0
+
+## getTitleOnGuildleveInfo
+pc 000 off 0x000773 raw 00000045  GETGLOBAL R1 0 ; K0='worldMaster'
+pc 001 off 0x000777 raw 00004081  LOADK     R2 1 ; K1=51114.0
+pc 002 off 0x00077B raw 008000C0  MOVE      R3 1 0
+pc 003 off 0x00077F raw 01000100  MOVE      R4 2 0
+pc 004 off 0x000783 raw 018000DE  RETURN    R3 3 0
+pc 005 off 0x000787 raw 0080001E  RETURN    R0 1 0
+
+## getMaxIndexNumberOnGuildleveInfo
+pc 000 off 0x0007CD raw 00000041  LOADK     R1 0 ; K0=1.0
+pc 001 off 0x0007D1 raw 0100005E  RETURN    R1 2 0
+pc 002 off 0x0007D5 raw 0080001E  RETURN    R0 1 0
+
+## getTimeDataOnGuildleveInfo
+pc 000 off 0x00080A raw 00400046  GETTABLE  R1 R0 K0('work')
+pc 001 off 0x00080E raw 00C04046  GETTABLE  R1 R1 K1('limitTime')
+pc 002 off 0x000812 raw 00C0808D  SUB       R2 R1 K2(60.0)
+pc 003 off 0x000816 raw 008000C0  MOVE      R3 1 0
+pc 004 off 0x00081A raw 01000100  MOVE      R4 2 0
+pc 005 off 0x00081E raw 018000DE  RETURN    R3 3 0
+pc 006 off 0x000822 raw 0080001E  RETURN    R0 1 0
+
+## getInstructionOnGuildleveInfo
+pc 000 off 0x000870 raw 00000045  GETGLOBAL R1 0 ; K0='worldMaster'
+pc 001 off 0x000874 raw 00004081  LOADK     R2 1 ; K1=51115.0
+pc 002 off 0x000878 raw 008000C0  MOVE      R3 1 0
+pc 003 off 0x00087C raw 01000100  MOVE      R4 2 0
+pc 004 off 0x000880 raw 018000DE  RETURN    R3 3 0
+pc 005 off 0x000884 raw 0080001E  RETURN    R0 1 0
+
+## getArticleFullDataOnGuildleveInfo
+pc 000 off 0x0008CA raw 00000081  LOADK     R2 0 ; K0=1.0
+pc 001 off 0x0008CE raw 000000C1  LOADK     R3 0 ; K0=1.0
+pc 002 off 0x0008D2 raw 00404106  GETTABLE  R4 R0 K1('work')
+pc 003 off 0x0008D6 raw 02408106  GETTABLE  R4 R4 K2('point')
+pc 004 off 0x0008DA raw 0000C141  LOADK     R5 3 ; K3=1000.0
+pc 005 off 0x0008DE raw 00010181  LOADK     R6 4 ; K4=0.0
+pc 006 off 0x0008E2 raw 004041C6  GETTABLE  R7 R0 K1('work')
+pc 007 off 0x0008E6 raw 03C081C6  GETTABLE  R7 R7 K2('point')
+pc 008 off 0x0008EA raw 8181C019  LE        R0 K3(1000.0) R7 ; skip next when comparison != False
+pc 009 off 0x0008EE raw 80000016  JMP       R0 +1 ; -> pc 011
+pc 010 off 0x0008F2 raw 00014081  LOADK     R2 5 ; K5=2.0
+pc 011 off 0x0008F6 raw 000181C1  LOADK     R7 6 ; K6=6.0
+pc 012 off 0x0008FA raw 0001C205  GETGLOBAL R8 7 ; K7='worldMaster'
+pc 013 off 0x0008FE raw 00020241  LOADK     R9 8 ; K8=33621.0
+pc 014 off 0x000902 raw 01000280  MOVE      R10 2 0
+pc 015 off 0x000906 raw 038002C0  MOVE      R11 7 0
+pc 016 off 0x00090A raw 01800300  MOVE      R12 3 0
+pc 017 off 0x00090E raw 02000340  MOVE      R13 4 0
+pc 018 off 0x000912 raw 02800380  MOVE      R14 5 0
+pc 019 off 0x000916 raw 030003C0  MOVE      R15 6 0
+pc 020 off 0x00091A raw 04000400  MOVE      R16 8 0
+pc 021 off 0x00091E raw 04800440  MOVE      R17 9 0
+pc 022 off 0x000922 raw 00024481  LOADK     R18 9 ; K9=11000427.0
+pc 023 off 0x000926 raw 000004C1  LOADK     R19 0 ; K0=1.0
+pc 024 off 0x00092A raw 0580029E  RETURN    R10 11 0
+pc 025 off 0x00092E raw 0080001E  RETURN    R0 1 0

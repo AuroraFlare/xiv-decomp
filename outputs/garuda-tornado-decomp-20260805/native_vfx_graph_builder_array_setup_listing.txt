@@ -1,0 +1,26 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+window=00bd4000..00bd43e5
+00bd4000  ADD dword ptr [EAX],EAX
+00bd4002  ADD byte ptr [EAX],AL
+00bd4004  ADD AL,CH
+00bd4006  XCHG byte ptr [ESP + EAX*0x4],BL
+00bd4009  CALL dword ptr [EAX + -0x18]
+00bd400c  SHL byte ptr [EAX],0x1
+00bd400e  TEST BH,BH
+00bd4010  ADD ESP,0x10
+00bd4013  XOR EAX,EAX
+00bd4015  MOV ECX,dword ptr [ESP + 0x74]
+00bd4019  MOV dword ptr FS:[0x0],ECX
+00bd4020  POP EDI
+00bd4021  POP ESI
+00bd4022  POP EBX
+00bd4023  MOV ESP,EBP
+00bd4025  POP EBP
+00bd4026  RET
+00bd4105  FDIVR float ptr [ECX + 0xc]
+00bd4108  ADD dword ptr [EAX + -0x18],EDX
+00bd410b  SBB dword ptr [EBX],0xe850ff84
+00bd4111  RETF
+00bd43e0  AND AL,0x40
+00bd43e2  MOV dword ptr [ESP + 0x34],EAX

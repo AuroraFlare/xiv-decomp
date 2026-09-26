@@ -1,0 +1,4 @@
+opcode,source,server_authored_fields,absent_decision_fields,client_role,garuda_boundary
+0x00CC,Map Server/Packets/Send/Actor/ActorInstantiatePacket.cs,objectName; className at payload offset 0x24; initParams,target; path; retarget rule; speed; lifetime,bind the runtime actor to its client Lua class,"capture className=LentigoGarudaTyphoon, then track that actor ID through 0x00D0/0x00CF"
+0x00CF,Map Server/Packets/Send/Actor/MoveActorToPositionPacket.cs,x; y; z; rotation; moveState; floatingHeight,target; path; retarget rule; duration; lifetime,render/interpolate authoritative actor endpoint,a retail capture is required to recover South-wind destinations and path timing
+0x00D0,Map Server/Packets/Send/Actor/SetActorSpeedPacket.cs,stopSpeed; walkSpeed; runSpeed; activeSpeed,target; path; retarget rule; lifetime,apply server-provided actor speed profile,a retail capture is required to recover the typhoon speed profile

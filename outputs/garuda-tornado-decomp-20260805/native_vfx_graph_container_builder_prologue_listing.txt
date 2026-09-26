@@ -1,0 +1,77 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+window=00bd3f70..00bd4050
+00bd3f70  PUSH EBP
+00bd3f71  MOV EBP,ESP
+00bd3f73  AND ESP,0xfffffff0
+00bd3f76  MOV EAX,FS:[0x0]
+00bd3f7c  PUSH -0x1
+00bd3f7e  PUSH 0xeeb8a8
+00bd3f83  PUSH EAX
+00bd3f84  MOV dword ptr FS:[0x0],ESP
+00bd3f8b  SUB ESP,0x68
+00bd3f8e  PUSH EBX
+00bd3f8f  PUSH ESI
+00bd3f90  PUSH EDI
+00bd3f91  MOV EDI,dword ptr [EBP + 0x14]
+00bd3f94  MOVZX EAX,word ptr [EDI]
+00bd3f97  MOVZX ECX,AX
+00bd3f9a  CMP CX,0x1d
+00bd3f9e  JZ 0x00bd4027
+00bd3fa4  MOVZX EAX,AX
+00bd3fa7  MOVZX EAX,AX
+00bd3faa  PUSH 0x1d
+00bd3fac  PUSH EAX
+00bd3fad  PUSH 0x10c7a20
+00bd3fb2  PUSH 0x2
+00bd3fb4  CALL 0x00415c90
+00bd3fb9  PUSH EAX
+00bd3fba  CALL 0x004160e0
+00bd3fbf  MOV ECX,dword ptr [EBP + 0x8]
+00bd3fc2  MOV EDX,dword ptr [ECX]
+00bd3fc4  MOV EAX,dword ptr [EDX + 0x10]
+00bd3fc7  ADD ESP,0x14
+00bd3fca  CALL EAX
+00bd3fcc  MOV ECX,dword ptr [EAX]
+00bd3fce  MOV dword ptr [0x013684d4],ECX
+00bd3fd4  MOV EDX,dword ptr [EAX + 0x4]
+00bd3fd7  MOV dword ptr [0x013684d8],EDX
+00bd3fdd  MOV ECX,dword ptr [EAX + 0x8]
+00bd3fe0  PUSH 0x13684d4
+00bd3fe5  MOV dword ptr [0x013684dc],ECX
+00bd3feb  MOV EDX,dword ptr [EAX + 0xc]
+00bd3fee  PUSH 0x10c79fc
+00bd3ff3  MOV dword ptr [0x013684e0],EDX
+00bd3ff9  PUSH 0x2
+00bd4000  ADD dword ptr [EAX],EAX
+00bd4002  ADD byte ptr [EAX],AL
+00bd4004  ADD AL,CH
+00bd4006  XCHG byte ptr [ESP + EAX*0x4],BL
+00bd4009  CALL dword ptr [EAX + -0x18]
+00bd400c  SHL byte ptr [EAX],0x1
+00bd400e  TEST BH,BH
+00bd4010  ADD ESP,0x10
+00bd4013  XOR EAX,EAX
+00bd4015  MOV ECX,dword ptr [ESP + 0x74]
+00bd4019  MOV dword ptr FS:[0x0],ECX
+00bd4020  POP EDI
+00bd4021  POP ESI
+00bd4022  POP EBX
+00bd4023  MOV ESP,EBP
+00bd4025  POP EBP
+00bd4026  RET
+00bd4027  MOV EAX,dword ptr [EDI + 0x34]
+00bd402a  TEST EAX,EAX
+00bd402c  MOV dword ptr [ESP + 0x5c],EAX
+00bd4030  JLE 0x00bd407b
+00bd4032  MOV ESI,dword ptr [EDI + 0x30]
+00bd4035  MOV EBX,dword ptr [EDI + 0x58]
+00bd4038  LEA EAX,[EAX + EAX*0x8]
+00bd403b  LEA EAX,[ESI + EAX*0x4]
+00bd403e  CMP ESI,EAX
+00bd4040  MOV dword ptr [ESP + 0x48],EAX
+00bd4044  JZ 0x00bd407b
+00bd4046  MOVZX EAX,word ptr [ESI + 0x1c]
+00bd404a  MOVZX EAX,AX
+00bd404d  LEA ECX,[EAX + EAX*0x2]
+00bd4050  LEA EDX,[ESP + 0xc]

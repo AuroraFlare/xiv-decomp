@@ -1,0 +1,214 @@
+line 383405: 004D895F                 pop     esi
+line 383406: 004D8960                 retn    4
+line 383407: 004D8963 ; ---------------------------------------------------------------------------
+line 383408: 004D8963
+line 383409: 004D8963 loc_4D8963:                             ; CODE XREF: sub_4D8860+7B↑j
+line 383410: 004D8963                                         ; DATA XREF: .text:jpt_4D88DB↓o
+line 383411: 004D8963                 mov     ecx, [esi+80h]  ; jumptable 004D88DB case 304
+line 383412: 004D8969                 test    ecx, ecx
+line 383413: 004D896B                 jz      def_4D88DB      ; jumptable 004D88DB default case, cases 206-301,308,309,313-316,318-342,365,366,369-372,374-378,380-397,399-401,403,404,406-421,423
+line 383414: 004D8971                 add     edi, 10h
+line 383415: 004D8974                 push    edi
+line 383416: 004D8975                 call    sub_575040
+line 383417: 004D897A                 pop     edi
+line 383418: 004D897B                 pop     esi
+line 383419: 004D897C                 retn    4
+line 383420: 004D897F ; ---------------------------------------------------------------------------
+line 383421: 004D897F
+line 383422: 004D897F loc_4D897F:                             ; CODE XREF: sub_4D8860+7B↑j
+line 383423: 004D897F                                         ; DATA XREF: .text:jpt_4D88DB↓o
+line 383424: 004D897F                 mov     ecx, [esi+80h]  ; jumptable 004D88DB case 305
+line 383425: 004D8985                 test    ecx, ecx
+line 383426: 004D8987                 jz      def_4D88DB      ; jumptable 004D88DB default case, cases 206-301,308,309,313-316,318-342,365,366,369-372,374-378,380-397,399-401,403,404,406-421,423
+line 383427: 004D898D                 add     edi, 10h
+line 383428: 004D8990                 push    edi
+line 383429: 004D8991                 call    sub_575050
+line 383430: 004D8996                 pop     edi
+line 383431: 004D8997                 pop     esi
+line 383432: 004D8998                 retn    4
+line 632276: 00575050
+line 632277: 00575050 ; =============== S U B R O U T I N E =======================================
+line 632278: 00575050
+line 632279: 00575050
+line 632280: 00575050 sub_575050      proc near               ; CODE XREF: sub_4D8860+131↑p
+line 632281: 00575050                 mov     ecx, [ecx]
+line 632282: 00575052                 mov     eax, [ecx]
+line 632283: 00575054                 mov     eax, [eax+0E8h]
+line 632284: 0057505A                 jmp     eax
+line 632285: 0057505A sub_575050      endp
+line 632286: 0057505A
+line 632287: 0057505A ; ---------------------------------------------------------------------------
+line 2051391: 008977B0
+line 2051392: 008977B0 ; =============== S U B R O U T I N E =======================================
+line 2051393: 008977B0
+line 2051394: 008977B0
+line 2051395: 008977B0 sub_8977B0      proc near               ; DATA XREF: .rdata:01056C6C↓o
+line 2051396: 008977B0                                         ; .rdata:01056D3C↓o ...
+line 2051397: 008977B0
+line 2051398: 008977B0 var_B4          = byte ptr -0B4h
+line 2051399: 008977B0 var_B0          = dword ptr -0B0h
+line 2051400: 008977B0 var_AC          = dword ptr -0ACh
+line 2051401: 008977B0 var_A8          = dword ptr -0A8h
+line 2051402: 008977B0 var_A4          = dword ptr -0A4h
+line 2051403: 008977B0 var_A0          = byte ptr -0A0h
+line 2051404: 008977B0 var_60          = byte ptr -60h
+line 2051405: 008977B0 var_C           = dword ptr -0Ch
+line 2051406: 008977B0 var_4           = dword ptr -4
+line 2051407: 008977B0 arg_0           = dword ptr  4
+line 2051408: 008977B0 arg_4           = dword ptr  8
+line 2051409: 008977B0 arg_8           = dword ptr  0Ch
+line 2051410: 008977B0 arg_C           = byte ptr  10h
+line 2051411: 008977B0
+line 2051412: 008977B0 ; FUNCTION CHUNK AT 00EBE222 SIZE 0000004A BYTES
+line 2051413: 008977B0
+line 2051414: 008977B0 ; __unwind { // SEH_8977B0
+line 2051415: 008977B0                 push    0FFFFFFFFh
+line 2051416: 008977B2                 push    offset SEH_8977B0
+line 2051417: 008977B7                 mov     eax, large fs:0
+line 2051418: 008977BD                 push    eax
+line 2051419: 008977BE                 sub     esp, 0ACh
+line 2051420: 008977C4                 push    ebp
+line 2051421: 008977C5                 push    esi
+line 2051422: 008977C6                 push    edi
+line 2051423: 008977C7                 mov     eax, dword_12EA8B0
+line 2051424: 008977CC                 xor     eax, esp
+line 2051425: 008977CE                 push    eax
+line 2051426: 008977CF                 lea     eax, [esp+0C8h+var_C]
+line 2051427: 008977D6                 mov     large fs:0, eax
+line 2051428: 008977DC                 mov     edi, ecx
+line 2051429: 008977DE                 mov     eax, [esp+0C8h+arg_8]
+line 2051430: 008977E5                 mov     ebp, [esp+0C8h+arg_0]
+line 2051431: 008977EC                 push    eax
+line 2051432: 008977ED                 mov     ecx, ebp
+line 2051433: 008977EF                 call    sub_CC7A50
+line 2051434: 008977F4                 mov     [esp+0C8h+var_A4], eax
+line 2051435: 008977F8                 mov     [esp+0C8h+var_4], 0FFFFFFFFh
+line 2051436: 00897803                 xor     esi, esi
+line 2051437: 00897805                 mov     [esp+0C8h+var_B0], esi
+line 2051438: 00897809                 mov     [esp+0C8h+var_AC], esi
+line 2051439: 0089780D                 mov     [esp+0C8h+var_A8], esi
+line 2051440: 00897811                 mov     [esp+0C8h+var_4], 1
+line 2051441: 0089781C                 lea     ecx, [esp+0C8h+var_B4]
+line 2051442: 00897820                 push    ecx
+line 2051443: 00897821                 lea     ecx, [esp+0CCh+var_A0]
+line 2051444: 00897825                 call    sub_584E10
+line 2051445: 0089782A                 mov     byte ptr [esp+0C8h+var_4], 3
+line 2051446: 00897832                 mov     ecx, [esp+0C8h+var_B0]
+line 2051447: 00897836                 cmp     ecx, esi
+line 2051448: 00897838                 jz      short loc_897856
+line 2051449: 0089783A                 mov     eax, [esp+0C8h+var_A8]
+line 2051450: 0089783E                 sub     eax, ecx
+line 2051451: 00897840                 sar     eax, 2
+line 2051452: 00897843                 push    15h
+line 2051453: 00897845                 lea     edx, ds:0[eax*4]
+line 2051454: 0089784C                 push    edx
+line 2051455: 0089784D                 push    ecx
+line 2051456: 0089784E                 call    sub_44D350
+line 2051457: 00897853                 add     esp, 0Ch
+line 2051458: 00897856
+line 2051459: 00897856 loc_897856:                             ; CODE XREF: sub_8977B0+88↑j
+line 2051460: 00897856                 lea     eax, [esp+0C8h+var_A4]
+line 2051461: 0089785A                 push    eax
+line 2051462: 0089785B                 lea     ecx, [esp+0CCh+var_A0]
+line 2051463: 0089785F                 mov     [esp+0CCh+var_B0], esi
+line 2051464: 00897863                 mov     [esp+0CCh+var_AC], esi
+line 2051465: 00897867                 mov     [esp+0CCh+var_A8], esi
+line 2051466: 0089786B                 call    sub_748F20
+line 2051467: 00897870                 add     edi, 4
+line 2051468: 00897873                 push    edi
+line 2051469: 00897874                 lea     ecx, [esp+0CCh+var_A0]
+line 2051470: 00897878                 call    sub_748C80
+line 2051471: 0089787D                 lea     ecx, [esp+0C8h+arg_C]
+line 2051472: 00897884                 push    ecx
+line 2051473: 00897885                 lea     ecx, [esp+0CCh+var_A0]
+line 2051474: 00897889                 call    sub_748BF0
+line 2051475: 0089788E                 mov     edx, ds:dword_F67298
+line 2051476: 00897894                 push    edx             ; Size
+line 2051477: 00897895                 push    offset aOnpostevent ; "_onPostEvent"
+line 2051478: 0089789A                 lea     ecx, [esp+0D0h+var_60]
+line 2051479: 0089789E                 call    sub_447260
+line 2051480: 008978A3                 mov     byte ptr [esp+0C8h+var_4], 4
+line 2051481: 008978AB                 mov     edx, [esp+0C8h+arg_4]
+line 2051482: 008978B2                 lea     eax, [esp+0C8h+var_A0]
+line 2051483: 008978B6                 push    eax
+line 2051484: 008978B7                 lea     ecx, [esp+0CCh+var_60]
+line 2051485: 008978BB                 push    ecx
+line 2051486: 008978BC                 push    edx
+line 2051487: 008978BD                 mov     ecx, ebp
+line 2051488: 008978BF                 call    sub_CC7A90
+line 2051489: 008978C4                 mov     byte ptr [esp+0C8h+var_4], 3
+line 2051490: 008978CC                 lea     ecx, [esp+0C8h+var_60] ; void *
+line 2051491: 008978D0                 call    sub_446F50
+line 2051492: 008978D5                 mov     [esp+0C8h+var_4], 0FFFFFFFFh
+line 2051493: 008978E0                 lea     ecx, [esp+0C8h+var_A0]
+line 2051494: 008978E4                 call    sub_584540
+line 2051495: 008978E9                 mov     ecx, [esp+0C8h+var_C]
+line 2051496: 008978F0                 mov     large fs:0, ecx
+line 2051497: 008978F7                 pop     ecx
+line 2051498: 008978F8                 pop     edi
+line 2051499: 008978F9                 pop     esi
+line 2051500: 008978FA                 pop     ebp
+line 2051501: 008978FB                 add     esp, 0B8h
+line 2051502: 00897901                 retn    10h
+line 2051503: 00897901 ; } // starts at 8977B0
+line 2051504: 00897901 sub_8977B0      endp
+line 2051505: 00897901
+line 2051506: 00897901 ; ---------------------------------------------------------------------------
+line 4233005: 00DC014A ; ---------------------------------------------------------------------------
+line 4233006: 00DC014A
+line 4233007: 00DC014A loc_DC014A:                             ; CODE XREF: sub_DBFD10+25↑j
+line 4233008: 00DC014A                                         ; DATA XREF: .text:jpt_DBFD35↓o
+line 4233009: 00DC014A                 mov     esi, [ecx]      ; jumptable 00DBFD35 case 304
+line 4233010: 00DC014C                 add     eax, 10h
+line 4233011: 00DC014F                 push    eax
+line 4233012: 00DC0150                 mov     eax, [esi+0C4h]
+line 4233013: 00DC0156                 push    edx
+line 4233014: 00DC0157                 mov     edx, [esp+0Ch+arg_0]
+line 4233015: 00DC015B                 push    edx
+line 4233016: 00DC015C                 call    eax
+line 4233017: 00DC015E                 pop     esi
+line 4233018: 00DC015F                 retn    8
+line 4233019: 00DC0162 ; ---------------------------------------------------------------------------
+line 4233020: 00DC0162
+line 4233021: 00DC0162 loc_DC0162:                             ; CODE XREF: sub_DBFD10+25↑j
+line 4233022: 00DC0162                                         ; DATA XREF: .text:jpt_DBFD35↓o
+line 4233023: 00DC0162                 mov     esi, [ecx]      ; jumptable 00DBFD35 case 305
+line 4233024: 00DC0164                 add     eax, 10h
+line 4233025: 00DC0167                 push    eax
+line 4233026: 00DC0168                 mov     eax, [esi+0C8h]
+line 4233027: 00DC016E                 push    edx
+line 4233028: 00DC016F                 mov     edx, [esp+0Ch+arg_0]
+line 4233029: 00DC0173                 push    edx
+line 4233030: 00DC0174                 call    eax
+line 4233031: 00DC0176                 pop     esi
+line 4233032: 00DC0177                 retn    8
+line 5683396: 01056AA4 aOnpreevent     db '_onPreEvent',0      ; DATA XREF: sub_897660+D4↑o
+line 5683397: 01056AB0 aOnpostevent    db '_onPostEvent',0     ; DATA XREF: sub_8977B0+E5↑o
+line 5683452: 01056C58                 dd offset unk_1171E50
+line 5683453: 01056C5C off_1056C5C     dd offset sub_899D40    ; DATA XREF: sub_891FB0+30↑o
+line 5683454: 01056C5C                                         ; sub_892020+25↑o ...
+line 5683455: 01056C60                 dd offset sub_897570
+line 5683456: 01056C64                 dd offset nullsub_17
+line 5683457: 01056C68                 dd offset sub_897660
+line 5683458: 01056C6C                 dd offset sub_8977B0
+line 5683459: 01056C70                 dd offset __purecall
+line 5683460: 01056C74                 dd offset __purecall
+line 5683461: 01056C78                 dd offset __purecall
+line 5683462: 01056C7C                 dd offset __purecall
+line 5683463: 01056C80                 dd offset sub_899050
+line 5683464: 01056C84                 dd offset __purecall
+line 5683465: 01056C88                 dd offset __purecall
+line 5683508: 01056D28                 dd offset unk_1171F94
+line 5683509: 01056D2C off_1056D2C     dd offset loc_899330    ; DATA XREF: sub_899230+3F↑o
+line 5683510: 01056D2C                                         ; sub_8992A0+25↑o
+line 5683511: 01056D30                 dd offset sub_897570
+line 5683512: 01056D34                 dd offset nullsub_17
+line 5683513: 01056D38                 dd offset sub_897660
+line 5683514: 01056D3C                 dd offset sub_8977B0
+line 5683515: 01056D40                 dd offset sub_899300
+line 5683516: 01056D44                 dd offset sub_899310
+line 5683517: 01056D48                 dd offset __purecall
+line 5683518: 01056D4C                 dd offset __purecall
+line 5683519: 01056D50                 dd offset sub_899050
+line 5683520: 01056D54                 dd offset __purecall
+line 5683521: 01056D58                 dd offset __purecall

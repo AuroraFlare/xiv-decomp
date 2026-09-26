@@ -1,0 +1,19 @@
+# tools/outputs/lpb/decomp_more_20260617/luac/director/quest/simplequestbattle/questdirectorcom0l601.luac
+
+## <root>
+pc 000 off 0x000020 raw 00000005  GETGLOBAL R0 0 ; K0='require'
+pc 001 off 0x000024 raw 00004041  LOADK     R1 1 ; K1='/Director/Quest/SimpleQuestBattle/SimpleQuestBattleBaseClass'
+pc 002 off 0x000028 raw 0100401C  CALL      R0 2 1
+pc 003 off 0x00002C raw 00008005  GETGLOBAL R0 2 ; K2='_defineClass'
+pc 004 off 0x000030 raw 0000C041  LOADK     R1 3 ; K3='QuestDirectorCom0l601'
+pc 005 off 0x000034 raw 00010081  LOADK     R2 4 ; K4='SimpleQuestBattleBaseClass'
+pc 006 off 0x000038 raw 0180401C  CALL      R0 3 1
+pc 007 off 0x00003C raw 0000C005  GETGLOBAL R0 3 ; K3='QuestDirectorCom0l601'
+pc 008 off 0x000040 raw 00000064  CLOSURE   R1 0 ; root/proto0
+pc 009 off 0x000044 raw 82804009  SETTABLE  R0 K5('getOwnClientQuestIdAsSimple') R1
+pc 010 off 0x000048 raw 0080001E  RETURN    R0 1 0
+
+## getOwnClientQuestIdAsSimple
+pc 000 off 0x000125 raw 00000041  LOADK     R1 0 ; K0=111406.0
+pc 001 off 0x000129 raw 0100005E  RETURN    R1 2 0
+pc 002 off 0x00012D raw 0080001E  RETURN    R0 1 0
