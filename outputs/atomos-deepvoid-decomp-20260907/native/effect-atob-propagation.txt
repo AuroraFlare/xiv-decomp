@@ -1,0 +1,45 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+
+===== 0080a810 =====
+entry=0080a810
+body=[[0080a810, 0080a819]]
+completed=true
+message=
+
+void __thiscall FUN_0080a810(int param_1,undefined4 param_2)
+
+{
+  *(undefined4 *)(param_1 + 0x4c) = param_2;
+  return;
+}
+
+
+-- listing --
+0080a810  MOV EAX,dword ptr [ESP + 0x4]
+0080a814  MOV dword ptr [ECX + 0x4c],EAX
+0080a817  RET 0x4
+
+===== 0082eab0 =====
+entry=0082eab0
+body=[[0082eab0, 0082eac0]]
+completed=true
+message=
+
+void __thiscall FUN_0082eab0(int param_1,undefined4 param_2)
+
+{
+  if (*(int *)(param_1 + 0x7c) != 0) {
+    *(undefined4 *)(*(int *)(param_1 + 0x7c) + 0x60) = param_2;
+  }
+  return;
+}
+
+
+-- listing --
+0082eab0  MOV EAX,dword ptr [ECX + 0x7c]
+0082eab3  TEST EAX,EAX
+0082eab5  JZ 0x0082eabe
+0082eab7  MOV ECX,dword ptr [ESP + 0x4]
+0082eabb  MOV dword ptr [EAX + 0x60],ECX
+0082eabe  RET 0x4

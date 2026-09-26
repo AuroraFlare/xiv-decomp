@@ -1,0 +1,138 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+
+===== 00a1ffb0 =====
+entry=00a1ffb0
+body=[[00a1b790, 00a1b797] [00a1ffb0, 00a1ffb7] [00a21430, 00a21450]]
+completed=true
+message=
+
+undefined4 __thiscall FUN_00a1ffb0(int param_1,int param_2)
+
+{
+  int iVar1;
+  int iVar2;
+  
+  iVar1 = *(int *)(*(int *)(param_1 + 0xc) + 0x34);
+  iVar2 = *(int *)(iVar1 + 0x10);
+  if (((iVar2 != 0) && (-1 < param_2)) && (param_2 < iVar2)) {
+    return *(undefined4 *)(*(int *)(iVar1 + 8) + param_2 * 4);
+  }
+  return 0;
+}
+
+
+-- listing --
+00a1b790  MOV ECX,dword ptr [ECX + 0x34]
+00a1b793  JMP 0x00a21430
+00a1ffb0  MOV ECX,dword ptr [ECX + 0xc]
+00a1ffb3  JMP 0x00a1b790
+00a21430  MOV EAX,dword ptr [ECX + 0x10]
+00a21433  TEST EAX,EAX
+00a21435  JZ 0x00a2144c
+00a21437  MOV EDX,dword ptr [ESP + 0x4]
+00a2143b  TEST EDX,EDX
+00a2143d  JL 0x00a2144c
+00a2143f  CMP EAX,EDX
+00a21441  JLE 0x00a2144c
+00a21443  MOV EAX,dword ptr [ECX + 0x8]
+00a21446  MOV EAX,dword ptr [EAX + EDX*0x4]
+00a21449  RET 0x4
+00a2144c  XOR EAX,EAX
+00a2144e  RET 0x4
+
+===== 00a20070 =====
+entry=00a20070
+body=[[00a20070, 00a20073]]
+completed=true
+message=
+
+undefined4 __fastcall FUN_00a20070(int param_1)
+
+{
+  return *(undefined4 *)(param_1 + 0xc);
+}
+
+
+-- listing --
+00a20070  MOV EAX,dword ptr [ECX + 0xc]
+00a20073  RET
+
+===== 00a1b700 =====
+entry=00a1b700
+body=[[00a1b700, 00a1b71b]]
+completed=true
+message=
+
+undefined * __thiscall FUN_00a1b700(int param_1,int param_2)
+
+{
+  if (*(int *)(param_1 + 0x50) == 0) {
+    return &UNK_00f7faa4;
+  }
+  return *(undefined **)(*(int *)(*(int *)(param_1 + 0x50) + 0x58) + param_2 * 8);
+}
+
+
+-- listing --
+00a1b700  MOV EAX,dword ptr [ECX + 0x50]
+00a1b703  TEST EAX,EAX
+00a1b705  JNZ 0x00a1b70f
+00a1b707  MOV EAX,0xf7faa4
+00a1b70c  RET 0x4
+00a1b70f  MOV EAX,dword ptr [EAX + 0x58]
+00a1b712  MOV ECX,dword ptr [ESP + 0x4]
+00a1b716  MOV EAX,dword ptr [EAX + ECX*0x8]
+00a1b719  RET 0x4
+
+===== 00a20f30 =====
+entry=00a20f30
+body=[[00a20f30, 00a20f83]]
+completed=true
+message=
+
+void __fastcall FUN_00a20f30(int param_1)
+
+{
+  undefined4 uVar1;
+  
+  uVar1 = func_0x00a20110(**(undefined4 **)(param_1 + 0x18));
+  *(uint *)(param_1 + 0x30) = *(uint *)(param_1 + 0x30) & 0xfffeffff;
+  *(undefined4 *)(param_1 + 0x24) = uVar1;
+  *(undefined4 *)(param_1 + 0x1c) = 1;
+  *(undefined4 *)(param_1 + 0x20) = 0;
+  uVar1 = func_0x00a20100();
+  *(uint *)(param_1 + 0x30) = *(uint *)(param_1 + 0x30) | 0xffff;
+  *(undefined4 *)(param_1 + 0x28) = uVar1;
+  *(undefined4 *)(param_1 + 0x2c) = 0;
+  uVar1 = FUN_00a20070();
+  *(undefined4 *)(param_1 + 0x34) = uVar1;
+  return;
+}
+
+
+-- listing --
+00a20f30  PUSH ESI
+00a20f31  MOV ESI,ECX
+00a20f33  MOV EAX,dword ptr [ESI + 0x18]
+00a20f36  MOV ECX,dword ptr [EAX]
+00a20f38  PUSH EDI
+00a20f39  MOV EDI,dword ptr [ESP + 0xc]
+00a20f3d  PUSH ECX
+00a20f3e  MOV ECX,EDI
+00a20f40  CALL 0x00a20110
+00a20f45  AND dword ptr [ESI + 0x30],0xfffeffff
+00a20f4c  MOV ECX,EDI
+00a20f4e  MOV dword ptr [ESI + 0x24],EAX
+00a20f51  MOV dword ptr [ESI + 0x1c],0x1
+00a20f58  MOV dword ptr [ESI + 0x20],0x0
+00a20f5f  CALL 0x00a20100
+00a20f64  OR dword ptr [ESI + 0x30],0xffff
+00a20f6b  MOV ECX,EDI
+00a20f6d  MOV dword ptr [ESI + 0x28],EAX
+00a20f70  MOV dword ptr [ESI + 0x2c],0x0
+00a20f77  CALL 0x00a20070
+00a20f7c  POP EDI
+00a20f7d  MOV dword ptr [ESI + 0x34],EAX
+00a20f80  POP ESI
+00a20f81  RET 0x4

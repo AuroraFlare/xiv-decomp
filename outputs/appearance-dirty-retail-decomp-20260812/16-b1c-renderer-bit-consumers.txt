@@ -1,0 +1,536 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+prepared=0065bb00..0065bb16 decoded=true function=0065bb00
+prepared=0065bb20..0065bb2b decoded=true function=0065bb20
+prepared=00832420..008325b2 decoded=true function=00832420
+prepared=006b5b60..006b5e3f decoded=true function=006b5b60
+prepared=006b5e40..006b6276 decoded=true function=006b5e40
+
+===== TARGET 0065bb00 =====
+function=0065bb00
+raw_window:
+  0065b813  CALL EDX
+  0065b815  RET 0x8
+  0065b818  TEST dword ptr [ECX + 0x2b70],0x200
+  0065b822  JZ 0x0065b833
+  0065b824  MOV EAX,dword ptr [ECX]
+  0065b826  MOV EDX,dword ptr [ESP + 0x4]
+  0065b82a  MOV EAX,dword ptr [EAX + 0x294]
+  0065b830  PUSH EDX
+  0065b831  CALL EAX
+  0065b833  RET 0x8
+  0065bb00  MOV EAX,dword ptr [ESP + 0x4]
+  0065bb04  LEA EDX,[EAX + EAX*0x1]
+  0065bb07  XOR EDX,dword ptr [ECX + 0x2830]
+  0065bb0d  AND EDX,0x2
+  0065bb10  XOR dword ptr [ECX + 0x2830],EDX
+  0065bb16  RET 0x4
+  0065bb20  MOV EAX,dword ptr [ECX + 0x2830]
+  0065bb26  SHR EAX,0x1
+  0065bb28  AND EAX,0x1
+  0065bb2b  RET
+  0065bd70  ADD ECX,0x1960
+  0065bd76  JMP 0x00846e00
+  0065be50  MOV ECX,dword ptr [ECX + 0x2b10]
+  0065be56  TEST ECX,ECX
+references_to_target:
+  <none>
+callers=<none>
+callees=<none>
+decompile_completed=true
+decompile_message=
+--- DECOMPILED C ---
+
+void __thiscall focused_65bb00(int param_1,int param_2)
+
+{
+  *(uint *)(param_1 + 0x2830) =
+       *(uint *)(param_1 + 0x2830) ^ (param_2 * 2 ^ *(uint *)(param_1 + 0x2830)) & 2;
+  return;
+}
+
+
+
+===== TARGET 0065bb20 =====
+function=0065bb20
+raw_window:
+  0065b82a  MOV EAX,dword ptr [EAX + 0x294]
+  0065b830  PUSH EDX
+  0065b831  CALL EAX
+  0065b833  RET 0x8
+  0065bb00  MOV EAX,dword ptr [ESP + 0x4]
+  0065bb04  LEA EDX,[EAX + EAX*0x1]
+  0065bb07  XOR EDX,dword ptr [ECX + 0x2830]
+  0065bb0d  AND EDX,0x2
+  0065bb10  XOR dword ptr [ECX + 0x2830],EDX
+  0065bb16  RET 0x4
+  0065bb20  MOV EAX,dword ptr [ECX + 0x2830]
+  0065bb26  SHR EAX,0x1
+  0065bb28  AND EAX,0x1
+  0065bb2b  RET
+  0065bd70  ADD ECX,0x1960
+  0065bd76  JMP 0x00846e00
+  0065be50  MOV ECX,dword ptr [ECX + 0x2b10]
+  0065be56  TEST ECX,ECX
+  0065be58  JZ 0x0065be5f
+  0065be5a  JMP 0x00850ed0
+  0065be5f  XOR AL,AL
+  0065be61  RET
+  0065bf30  FLD float ptr [ESP + 0xc]
+  0065bf34  MOV EAX,dword ptr [ESP + 0x8]
+references_to_target:
+  00832470 UNCONDITIONAL_CALL
+callers=00832420
+callees=<none>
+decompile_completed=true
+decompile_message=
+--- DECOMPILED C ---
+
+uint __fastcall focused_65bb20(int param_1)
+
+{
+  return *(uint *)(param_1 + 0x2830) >> 1 & 1;
+}
+
+
+
+===== TARGET 00832470 =====
+function=00832420
+raw_window:
+  00832455  PUSH 0x0
+  00832457  MOV ECX,EDI
+  00832459  CALL EAX
+  0083245b  PUSH EAX
+  0083245c  CALL 0x009da6cc
+  00832461  MOV ESI,EAX
+  00832463  ADD ESP,0x14
+  00832466  TEST ESI,ESI
+  00832468  JZ 0x008325a0
+  0083246e  MOV ECX,ESI
+  00832470  CALL 0x0065bb20
+  00832475  TEST EAX,EAX
+  00832477  JZ 0x008325a0
+  0083247d  CMP dword ptr [ESI + 0xe0],0x7fffffff
+  00832487  JNZ 0x0083257a
+  0083248d  TEST byte ptr [ESI + 0x2b74],0x10
+  00832494  JZ 0x0083257a
+  0083249a  MOV ESI,dword ptr [ESP + 0x10]
+  0083249e  PUSH 0x10371f4
+  008324a3  PUSH ESI
+  008324a4  CALL 0x009d6090
+  008324a9  ADD ESP,0x8
+  008324ac  TEST EAX,EAX
+  008324ae  JZ 0x008324fb
+references_to_target:
+  <none>
+callers=<none>
+callees=0065bb20,009da6cc
+decompile_completed=true
+decompile_message=
+--- DECOMPILED C ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void focused_832420(undefined4 param_1,int *param_2,undefined4 param_3,undefined4 param_4,
+                   undefined4 param_5,undefined4 param_6,undefined4 param_7)
+
+{
+  undefined4 uVar1;
+  int iVar2;
+  int iVar3;
+  uint uVar4;
+  undefined4 uStack_28;
+  undefined1 auStack_24 [32];
+  uint uStack_4;
+  
+  uStack_4 = _DAT_012ea8b0 ^ (uint)&uStack_28;
+  uStack_28 = param_3;
+  uVar1 = (**(code **)(*param_2 + 0x5c))(0,0x12b7c48,0x12b7810,0);
+  iVar2 = FUN_009da6cc(uVar1);
+  if ((iVar2 != 0) && (iVar3 = focused_65bb20(), uVar1 = uStack_28, iVar3 != 0)) {
+    if ((*(int *)(iVar2 + 0xe0) == 0x7fffffff) && ((*(byte *)(iVar2 + 0x2b74) & 0x10) != 0)) {
+      iVar2 = func_0x009d6090(uStack_28,&UNK_010371f4);
+      if (iVar2 == 0) {
+        iVar2 = func_0x009d6090(uVar1,&UNK_01037244);
+        if (((iVar2 != 0) || (iVar2 = func_0x009d6090(uVar1,&UNK_01037254), iVar2 != 0)) ||
+           (iVar2 = func_0x009d6090(uVar1,&UNK_01037264), iVar2 != 0)) {
+          uVar4 = 0;
+          do {
+            func_0x009d4f08(auStack_24,&UNK_01037280,*(undefined4 *)(uVar4 + 0x12ced64));
+            func_0x00a08a80(param_1,param_2,auStack_24,param_4,param_5,param_6,param_7);
+            uVar4 = uVar4 + 4;
+            uVar1 = uStack_28;
+          } while (uVar4 < 0x10);
+        }
+      }
+      else {
+        uVar4 = 0;
+        do {
+          func_0x009d4f08(auStack_24,&UNK_01037238,*(undefined4 *)(uVar4 + 0x12ced74));
+          func_0x00a08a80(param_1,param_2,auStack_24,param_4,param_5,param_6,param_7);
+          uVar4 = uVar4 + 4;
+          uVar1 = uStack_28;
+        } while (uVar4 < 0x38);
+      }
+    }
+    func_0x00a08a80(param_1,param_2,uVar1,param_4,param_5,param_6,param_7);
+  }
+  func_0x009d20f4();
+  return;
+}
+
+
+
+===== TARGET 006b5d41 =====
+function=006b5b60
+raw_window:
+  006b5d21  LEA ECX,[ESP + 0x60]
+  006b5d25  CALL 0x00446f50
+  006b5d2a  TEST BL,BL
+  006b5d2c  JZ 0x006b5d41
+  006b5d2e  PUSH 0x0
+  006b5d30  LEA EAX,[ESP + 0xb8]
+  006b5d37  PUSH EAX
+  006b5d38  PUSH 0xa
+  006b5d3a  MOV ECX,ESI
+  006b5d3c  CALL 0x006320c0
+  006b5d41  TEST dword ptr [ESI + 0x40],0x4000
+  006b5d48  JZ 0x006b5e03
+  006b5d4e  LEA ECX,[ESP + 0x20c]
+  006b5d55  PUSH ECX
+  006b5d56  PUSH 0xfd2bbc
+  006b5d5b  LEA EDX,[ESP + 0x110]
+  006b5d62  PUSH 0x104
+  006b5d67  PUSH EDX
+  006b5d68  CALL 0x009d4f83
+  006b5d6d  MOV EAX,[0x00f67298]
+  006b5d72  ADD ESP,0x10
+  006b5d75  PUSH EAX
+  006b5d76  PUSH 0xfd2bc4
+  006b5d7b  LEA ECX,[ESP + 0x68]
+references_to_target:
+  006b5d2c CONDITIONAL_JUMP
+callers=<none>
+callees=<none>
+decompile_completed=true
+decompile_message=
+--- DECOMPILED C ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __fastcall focused_6b5b60(int param_1)
+
+{
+  char cVar1;
+  int *unaff_FS_OFFSET;
+  undefined1 *puStack_344;
+  undefined1 *puStack_340;
+  undefined *puStack_33c;
+  undefined4 *puStack_338;
+  undefined1 *puStack_334;
+  undefined1 *puStack_330;
+  undefined1 *puStack_32c;
+  undefined *puStack_328;
+  undefined1 *puStack_324;
+  uint uStack_320;
+  undefined1 auStack_314 [36];
+  undefined1 auStack_2f0 [16];
+  undefined1 auStack_2e0 [16];
+  undefined1 auStack_2d0 [52];
+  undefined1 auStack_29c [16];
+  undefined1 auStack_28c [16];
+  undefined1 auStack_27c [60];
+  undefined1 auStack_240 [8];
+  undefined1 auStack_238 [8];
+  undefined1 auStack_230 [8];
+  undefined1 auStack_228 [8];
+  undefined1 auStack_220 [8];
+  undefined1 auStack_218 [228];
+  undefined1 auStack_134 [16];
+  undefined1 auStack_124 [16];
+  undefined1 auStack_114 [224];
+  undefined1 uStack_34;
+  int iStack_2c;
+  int iStack_24;
+  undefined1 uStack_1c;
+  undefined1 uStack_14;
+  uint uStack_10;
+  int iStack_c;
+  undefined *puStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0xffffffff;
+  puStack_8 = &UNK_00e90e7d;
+  iStack_c = *unaff_FS_OFFSET;
+  uStack_10 = _DAT_012ea8b0 ^ (uint)auStack_314;
+  uStack_320 = _DAT_012ea8b0 ^ (uint)&stack0xfffffce4;
+  *unaff_FS_OFFSET = (int)&iStack_c;
+  puStack_324 = (undefined1 *)0x6b5ba6;
+  puStack_324 = (undefined1 *)func_0x00445210();
+  puStack_328 = &UNK_00fd2b94;
+  puStack_330 = auStack_114;
+  puStack_32c = (undefined1 *)0x104;
+  puStack_334 = (undefined1 *)0x6b5bbe;
+  func_0x009d4f83();
+  puStack_334 = (undefined1 *)0x1;
+  puStack_338 = (undefined4 *)auStack_114;
+  puStack_33c = &UNK_00fd2b9c;
+  puStack_344 = auStack_218;
+  puStack_340 = (undefined1 *)0x104;
+  func_0x009d4f83();
+  puStack_324 = (undefined1 *)0x6b5bee;
+  func_0x00445cf0();
+  uStack_4 = 0;
+  puStack_324 = _DAT_00f67298;
+  puStack_328 = &UNK_00fd2ba4;
+  puStack_32c = (undefined1 *)0x6b5c0d;
+  func_0x00447260();
+  iStack_c = CONCAT31(iStack_c._1_3_,1);
+  puStack_32c = _DAT_00f67298;
+  puStack_330 = auStack_220;
+  puStack_334 = (undefined1 *)0x6b5c2d;
+  func_0x00447260();
+  uStack_14 = 2;
+  puStack_334 = (undefined1 *)0x0;
+  puStack_338 = &puStack_324;
+  puStack_33c = auStack_2d0;
+  puStack_340 = auStack_27c;
+  puStack_344 = (undefined1 *)0x6b5c4e;
+  cVar1 = func_0x00d39290();
+  uStack_14 = 1;
+  puStack_334 = (undefined1 *)0x6b5c64;
+  func_0x00446f50();
+  uStack_14 = 0;
+  puStack_334 = (undefined1 *)0x6b5c75;
+  func_0x00446f50();
+  if (cVar1 != '\0') {
+    puStack_334 = (undefined1 *)0x0;
+    puStack_338 = (undefined4 *)auStack_27c;
+    puStack_33c = (undefined *)0x1;
+    puStack_340 = (undefined1 *)0x6b5c8c;
+    func_0x006320c0();
+  }
+  puStack_334 = auStack_124;
+  puStack_338 = (undefined4 *)&UNK_00fd2bac;
+  puStack_340 = auStack_228;
+  puStack_33c = (undefined *)0x104;
+  puStack_344 = (undefined1 *)0x6b5cab;
+  func_0x009d4f83();
+  puStack_334 = _DAT_00f67298;
+  puStack_338 = (undefined4 *)&UNK_00fd2bb4;
+  puStack_33c = (undefined *)0x6b5cc2;
+  func_0x00447260();
+  uStack_1c = 3;
+  puStack_33c = _DAT_00f67298;
+  puStack_340 = auStack_230;
+  puStack_344 = (undefined1 *)0x6b5ce2;
+  func_0x00447260();
+  iStack_24._0_1_ = 4;
+  puStack_344 = (undefined1 *)0x0;
+  cVar1 = func_0x00d39290(auStack_28c,&puStack_334,auStack_2e0);
+  iStack_24._0_1_ = 3;
+  puStack_344 = (undefined1 *)0x6b5d19;
+  func_0x00446f50();
+  iStack_24 = (uint)iStack_24._1_3_ << 8;
+  puStack_344 = (undefined1 *)0x6b5d2a;
+  func_0x00446f50();
+  if (cVar1 != '\0') {
+    puStack_344 = (undefined1 *)0x0;
+    func_0x006320c0(10,auStack_28c);
+  }
+  if ((*(uint *)(param_1 + 0x40) & 0x4000) != 0) {
+    puStack_344 = auStack_134;
+    func_0x009d4f83(auStack_238,0x104,&UNK_00fd2bbc);
+    puStack_344 = _DAT_00f67298;
+    func_0x00447260(&UNK_00fd2bc4);
+    iStack_2c = CONCAT31(iStack_2c._1_3_,5);
+    func_0x00447260(auStack_240,_DAT_00f67298);
+    uStack_34 = 6;
+    cVar1 = func_0x00d39290(auStack_29c,&puStack_344,auStack_2f0,0);
+    uStack_34 = 5;
+    func_0x00446f50();
+    uStack_34 = 0;
+    func_0x00446f50();
+    if (cVar1 != '\0') {
+      puStack_344 = (undefined1 *)0x0;
+      func_0x006320c0(0xd,auStack_28c);
+    }
+  }
+  iStack_24 = 0xffffffff;
+  puStack_344 = (undefined1 *)0x6b5e1a;
+  func_0x00446f50();
+  *unaff_FS_OFFSET = iStack_2c;
+  puStack_338 = (undefined4 *)0x6b5e39;
+  func_0x009d20f4();
+  return;
+}
+
+
+
+===== TARGET 006b60d9 =====
+function=006b5e40
+raw_window:
+  006b60b9  LEA ECX,[ESP + 0x24]
+  006b60bd  CALL 0x00446f50
+  006b60c2  TEST BL,BL
+  006b60c4  JZ 0x006b60d9
+  006b60c6  PUSH 0x2
+  006b60c8  LEA EAX,[ESP + 0xd0]
+  006b60cf  PUSH EAX
+  006b60d0  PUSH 0xb
+  006b60d2  MOV ECX,ESI
+  006b60d4  CALL 0x006320c0
+  006b60d9  TEST dword ptr [ESI + 0x40],0x4000
+  006b60e0  JZ 0x006b6199
+  006b60e6  LEA ECX,[ESP + 0x224]
+  006b60ed  PUSH ECX
+  006b60ee  PUSH 0xfd2c98
+  006b60f3  LEA EDX,[ESP + 0x330]
+  006b60fa  PUSH 0x104
+  006b60ff  PUSH EDX
+  006b6100  CALL 0x009d4f83
+  006b6105  MOV EAX,[0x00f67298]
+  006b610a  ADD ESP,0x10
+  006b610d  PUSH EAX
+  006b610e  PUSH 0xfd2ca0
+  006b6113  LEA ECX,[ESP + 0x2c]
+references_to_target:
+  006b60c4 CONDITIONAL_JUMP
+callers=<none>
+callees=<none>
+decompile_completed=true
+decompile_message=
+--- DECOMPILED C ---
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall focused_6b5e40(int *param_1,int param_2,int param_3)
+
+{
+  char cVar1;
+  undefined4 uVar2;
+  undefined4 unaff_ESI;
+  int *unaff_FS_OFFSET;
+  undefined4 *puStack_444;
+  undefined4 *puStack_440;
+  uint uStack_43c;
+  undefined4 uStack_428;
+  undefined4 uStack_424;
+  undefined4 uStack_420;
+  undefined1 auStack_41c [4];
+  undefined1 auStack_418 [124];
+  undefined1 auStack_39c [16];
+  undefined1 auStack_38c [72];
+  undefined1 auStack_344 [4];
+  undefined1 auStack_340 [16];
+  undefined1 auStack_330 [8];
+  undefined1 auStack_328 [232];
+  undefined1 auStack_240 [12];
+  undefined1 auStack_234 [16];
+  undefined1 auStack_224 [236];
+  undefined1 auStack_138 [8];
+  undefined1 auStack_130 [256];
+  undefined1 uStack_30;
+  undefined1 uStack_28;
+  undefined4 uStack_20;
+  undefined1 uStack_18;
+  uint uStack_10;
+  int iStack_c;
+  undefined *puStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0xffffffff;
+  puStack_8 = &UNK_00e90f19;
+  iStack_c = *unaff_FS_OFFSET;
+  uStack_10 = _DAT_012ea8b0 ^ (uint)&uStack_428;
+  uStack_43c = _DAT_012ea8b0 ^ (uint)&stack0xfffffbc8;
+  *unaff_FS_OFFSET = (int)&iStack_c;
+  if (param_3 != 0) {
+    puStack_440 = &uStack_420;
+    puStack_444 = &uStack_428;
+    uStack_424 = 0;
+    uStack_428 = 0;
+    uStack_420 = 0;
+    if (param_2 == 0) {
+      func_0x00630660(param_3,&uStack_424,auStack_41c);
+    }
+    else {
+      func_0x006306a0(param_3,&uStack_424);
+    }
+    puStack_440 = (undefined4 *)param_1[0x16];
+    puStack_444 = (undefined4 *)param_1[0x15];
+    (**(code **)(*param_1 + 0x58))(auStack_418);
+    uStack_10 = 0;
+    uVar2 = func_0x00445210(*(undefined4 *)(param_2 * 4 + 0x12bf2a8),unaff_ESI,
+                            *(undefined4 *)(param_2 * 4 + 0x12bf2c8));
+    func_0x009d4f83(auStack_224,0x104,&UNK_00fd2c6c,uVar2);
+    uStack_10 = 0xffffffff;
+    func_0x00446f50();
+    func_0x009d4f83(auStack_328,0x104,&UNK_00fd2c78,auStack_224);
+    func_0x00445cf0();
+    uStack_10 = 1;
+    func_0x00447260(&UNK_00fd2c80,_DAT_00f67298);
+    uStack_18 = 2;
+    uVar2 = func_0x00447260(auStack_330,_DAT_00f67298);
+    uStack_20._0_1_ = 3;
+    cVar1 = func_0x00d39290(auStack_38c,uVar2,&stack0xfffffbcc,0);
+    uStack_20._0_1_ = 2;
+    func_0x00446f50();
+    uStack_20 = CONCAT31(uStack_20._1_3_,1);
+    func_0x00446f50();
+    if (cVar1 != '\0') {
+      func_0x006320c0(*(int *)(&UNK_00fd3e60 + param_2 * 4) + 2,auStack_38c,2);
+      func_0x009d4f83(auStack_344,0x104,&UNK_00fd2c88,auStack_240);
+      if (*(int *)(&UNK_00fd3e60 + param_2 * 4) == 0) {
+        func_0x00447260(&UNK_00fd2c90,_DAT_00f67298);
+        uStack_28 = 4;
+        uVar2 = func_0x00447260(auStack_340,_DAT_00f67298);
+        uStack_30 = 5;
+        cVar1 = func_0x00d39290(auStack_39c,uVar2,&puStack_444,0);
+        uStack_30 = 4;
+        func_0x00446f50();
+        uStack_30 = 1;
+        func_0x00446f50();
+        if (cVar1 != '\0') {
+          func_0x006320c0(0xb,auStack_38c,2);
+        }
+        if ((param_1[0x10] & 0x4000U) != 0) {
+          func_0x009d4f83(auStack_130,0x104,&UNK_00fd2c98,auStack_234);
+          func_0x00447260(&UNK_00fd2ca0,_DAT_00f67298);
+          uStack_28 = 6;
+          uVar2 = func_0x00447260(auStack_138,_DAT_00f67298);
+          uStack_30 = 7;
+          cVar1 = func_0x00d39290(auStack_39c,uVar2,&puStack_444,0);
+          uStack_30 = 6;
+          func_0x00446f50();
+          uStack_30 = 1;
+          func_0x00446f50();
+          if (cVar1 != '\0') {
+            func_0x006320c0(0xe,auStack_38c,2);
+          }
+        }
+      }
+      if (*(int *)(&UNK_00fd3e60 + param_2 * 4) == 1) {
+        func_0x00447260(&UNK_00fd2ca8,_DAT_00f67298);
+        uStack_28 = 8;
+        uVar2 = func_0x00447260(auStack_340,_DAT_00f67298);
+        uStack_30 = 9;
+        cVar1 = func_0x00d39290(auStack_39c,uVar2,&puStack_444,0);
+        uStack_30 = 8;
+        func_0x00446f50();
+        uStack_30 = 1;
+        func_0x00446f50();
+        if (cVar1 != '\0') {
+          func_0x006320c0(0xc,auStack_38c,2);
+        }
+      }
+    }
+    uStack_20 = 0xffffffff;
+    func_0x00446f50();
+  }
+  *unaff_FS_OFFSET = iStack_c;
+  func_0x009d20f4();
+  return;
+}
+
+

@@ -1,0 +1,693 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+
+===== 0058cca0 =====
+entry=0058cca0
+body=[[0058cca0, 0058cd16] [0058cd21, 0058cd70]]
+completed=true
+message=
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_0058cca0(int param_1,byte *param_2)
+
+{
+  byte bVar1;
+  ushort uVar2;
+  undefined8 *puVar3;
+  char cVar4;
+  int iVar5;
+  int iVar6;
+  uint uVar7;
+  undefined4 uVar8;
+  undefined4 *puVar9;
+  undefined4 *unaff_EBX;
+  ushort *puVar10;
+  int *unaff_FS_OFFSET;
+  float10 fVar11;
+  undefined4 *puStack_134;
+  undefined8 *puStack_130;
+  undefined8 *puStack_12c;
+  byte *pbStack_128;
+  code *pcStack_124;
+  byte *pbStack_120;
+  uint uStack_11c;
+  undefined1 *puStack_10c;
+  undefined4 uStack_108;
+  undefined8 *puStack_104;
+  undefined8 uStack_100;
+  undefined4 uStack_f8;
+  undefined4 uStack_f4;
+  undefined4 uStack_f0;
+  undefined4 uStack_ec;
+  undefined8 uStack_e8;
+  undefined8 uStack_e0;
+  undefined8 uStack_d8;
+  undefined8 uStack_d0;
+  byte abStack_b0 [132];
+  undefined4 uStack_2c;
+  undefined4 uStack_28;
+  uint uStack_1c;
+  int iStack_14;
+  undefined *puStack_10;
+  undefined4 uStack_c;
+  
+  uStack_c = 0xffffffff;
+  puStack_10 = &UNK_00e728ba;
+  iStack_14 = *unaff_FS_OFFSET;
+  uStack_1c = _DAT_012ea8b0 ^ (uint)&puStack_10c;
+  uStack_11c = _DAT_012ea8b0 ^ (uint)&stack0xfffffee8;
+  *unaff_FS_OFFSET = (int)&iStack_14;
+  pbStack_120 = (byte *)0x58ccea;
+  cVar4 = func_0x004d8830();
+  if (cVar4 == '\0') {
+    uVar2 = *(ushort *)(param_2 + 2);
+    if (0x134 < uVar2) {
+      switch(uVar2) {
+      case 0x137:
+      case 0x144:
+      case 0x145:
+      case 0x197:
+      case 0x1a0:
+        goto LAB_0058cd21;
+      default:
+        goto code_r0x0058d67d;
+      }
+    }
+    if (uVar2 != 0x134) {
+      switch(uVar2) {
+      case 0xf:
+      case 0xcc:
+      case 0xe2:
+      case 0xe3:
+        break;
+      default:
+        goto code_r0x0058d67d;
+      case 0xce:
+        if (*(int *)(param_2 + 0x14) != -1) goto code_r0x0058d67d;
+      }
+    }
+  }
+LAB_0058cd21:
+  uVar2 = *(ushort *)(param_2 + 2);
+  if (uVar2 < 0x135) {
+    if (uVar2 == 0x134) {
+      *(uint *)(param_2 + 0x10) = *(uint *)(param_2 + 0x10) & 0xff;
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)0x58d32b;
+      FUN_00588ba0();
+      goto code_r0x0058d67d;
+    }
+    switch(uVar2) {
+    case 0xf:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058cd7c;
+      func_0x00585e80();
+      break;
+    default:
+      goto LAB_0058d675;
+    case 0xce:
+      pbStack_120 = &UNK_0058ce0a;
+      iVar5 = FUN_004d6750();
+      pbStack_120 = &UNK_0058ce14;
+      iVar6 = func_0x004d7490();
+      if ((iVar6 == iVar5) &&
+         (*(byte *)(param_1 + 0x26d) = *(byte *)(param_1 + 0x26d) & 0xfe,
+         *(short *)(param_2 + 0x34) == 0x16)) {
+        pbStack_120 = *(byte **)(param_1 + 0x7c);
+        pcStack_124 = (code *)&UNK_0058ce2f;
+        FUN_00586fb0();
+      }
+      else {
+        uVar8 = *(undefined4 *)(param_2 + 0x20);
+        *(undefined8 *)(param_1 + 0x214) = *(undefined8 *)(param_2 + 0x18);
+        uStack_f4 = _DAT_00f54f70;
+        *(ulonglong *)(param_1 + 0x21c) = CONCAT44(_DAT_00f54f70,uVar8);
+        puStack_12c = *(undefined8 **)(param_2 + 0x24);
+        pbStack_120 = (byte *)(uint)*(ushort *)(param_2 + 0x36);
+        pcStack_124 = (code *)(uint)*(ushort *)(param_2 + 0x34);
+        uStack_100 = *(ulonglong *)(param_2 + 0x28);
+        uStack_f8 = *(undefined4 *)(param_2 + 0x30);
+        pbStack_128 = (byte *)&uStack_100;
+        uStack_e8 = *(undefined8 *)(param_2 + 0x18);
+        puStack_130 = &uStack_e8;
+        uStack_e0 = CONCAT44(uStack_f4,*(undefined4 *)(param_2 + 0x20));
+        puStack_134 = (undefined4 *)&UNK_0058cef2;
+        FUN_0058b2a0();
+      }
+      break;
+    case 0xcf:
+      pbStack_120 = &UNK_0058cefe;
+      iVar5 = FUN_004d6750();
+      pbStack_120 = &UNK_0058cf08;
+      iVar6 = func_0x004d7490();
+      if (iVar6 == iVar5) {
+        pcStack_124 = *(code **)(param_1 + 0x7c);
+        *(byte *)(param_1 + 0x26d) = *(byte *)(param_1 + 0x26d) & 0xfe;
+        pbStack_120 = (byte *)0x4fd;
+        pbStack_128 = &UNK_0058cf21;
+        func_0x00586f40();
+      }
+      else {
+        *(undefined2 *)(param_1 + 0x210) = *(undefined2 *)(param_2 + 0x28);
+      }
+      pcStack_124 = *(code **)(param_2 + 0x24);
+      pbStack_128 = (byte *)(uint)*(ushort *)(param_2 + 0x28);
+      pbStack_120 = (byte *)0x1;
+      uStack_e8 = *(undefined8 *)(param_2 + 0x18);
+      puStack_12c = &uStack_e8;
+      uStack_e0 = CONCAT44(_DAT_00f54f70,*(undefined4 *)(param_2 + 0x20));
+      puStack_130 = (undefined8 *)&UNK_0058cf7a;
+      func_0x0058f240();
+      uStack_f8 = *(undefined4 *)(param_2 + 0x30);
+      uStack_f4 = *(undefined4 *)(param_2 + 0x34);
+      uStack_f0 = *(undefined4 *)(param_2 + 0x38);
+      puStack_130 = (undefined8 *)0x1;
+      puStack_134 = &uStack_f8;
+      uStack_ec = _DAT_00f54f70;
+      func_0x0058f160();
+      break;
+    case 0xd0:
+      uVar7 = 0;
+      if (param_2[0x90] != 0) {
+        puVar9 = (undefined4 *)(param_1 + 0x188);
+        do {
+          if (uVar7 < 0x10) {
+            *(undefined2 *)(puVar9 + 1) = *(undefined2 *)(param_2 + uVar7 * 8 + 0x14);
+            *puVar9 = *(undefined4 *)(param_2 + uVar7 * 8 + 0x10);
+          }
+          uVar7 = uVar7 + 1;
+          puVar9 = puVar9 + 2;
+        } while ((int)uVar7 < (int)(uint)param_2[0x90]);
+      }
+      *(undefined2 *)(param_1 + 0x18c + (uint)param_2[0x90] * 8) = 0xffff;
+      pbStack_120 = (byte *)(param_1 + 0x188);
+      *(undefined2 *)(param_1 + 0x20c) = 0xffff;
+      pcStack_124 = (code *)&UNK_0058d0b2;
+      pbStack_128 = (byte *)func_0x0058ecb0();
+      pcStack_124 = (code *)0x88;
+      puStack_12c = (undefined8 *)0x10;
+      puStack_130 = (undefined8 *)&UNK_0058d0c1;
+      func_0x004d7980();
+      break;
+    case 0xd3:
+      pbStack_120 = *(byte **)(param_2 + 0x10);
+      pcStack_124 = (code *)&UNK_0058d044;
+      func_0x00587e70();
+      *(undefined4 *)(param_1 + 300) = *(undefined4 *)(param_2 + 0x10);
+      break;
+    case 0xd4:
+      pcStack_124 = (code *)(uint)*(ushort *)(param_2 + 0x14);
+      puStack_12c = *(undefined8 **)(param_2 + 0x10);
+      pbStack_128 = (byte *)(uint)*(ushort *)(param_2 + 0x16);
+      pbStack_120 = (byte *)0x1;
+      puStack_130 = (undefined8 *)&UNK_0058cfd6;
+      func_0x00587c10();
+      break;
+    case 0xd5:
+      pbStack_120 = (byte *)0x1;
+      pcStack_124 = (code *)0x0;
+      pbStack_128 = (byte *)0x0;
+      puStack_12c = (undefined8 *)0x1;
+      puStack_130 = (undefined8 *)&UNK_0058cfea;
+      fVar11 = (float10)func_0x004dd8b0();
+      puStack_130 = (undefined8 *)(float)fVar11;
+      puStack_134 = (undefined4 *)&UNK_0058cff5;
+      func_0x00587c10();
+      break;
+    case 0xd6:
+    case 0xd7:
+      if (uVar2 == 0xd7) {
+        bVar1 = param_2[0x90];
+      }
+      else {
+        bVar1 = param_2[0x110];
+      }
+      uStack_108 = (byte *)(uint)bVar1;
+      iVar5 = 0;
+      if (uStack_108 != (byte *)0x0) {
+        do {
+          pbStack_120 = *(byte **)(param_2 + iVar5 * 8 + 0x10);
+          pcStack_124 = (code *)(uint)param_2[iVar5 * 8 + 0x14];
+          pbStack_128 = &UNK_0058d101;
+          func_0x00586870();
+          iVar5 = iVar5 + 1;
+        } while (iVar5 < (int)uStack_108);
+      }
+      pbStack_120 = (byte *)0x1;
+      pcStack_124 = (code *)&UNK_0058d113;
+      func_0x0058ebd0();
+      *(uint *)(param_1 + 0xb1c) = *(uint *)(param_1 + 0xb1c) & 0xfffffffb;
+      pcStack_124 = (code *)0x1;
+      pbStack_128 = (byte *)((int)&uStack_108 + 3);
+      puStack_12c = (undefined8 *)0x46;
+      *(undefined1 *)(param_1 + 0xb20) = 1;
+      uStack_108 = (byte *)((uint)uStack_108 & 0xffffff);
+      puStack_130 = (undefined8 *)&UNK_0058d136;
+      func_0x004d7980();
+      puStack_130 = (undefined8 *)&UNK_0058d13e;
+      func_0x004d73b0();
+      puStack_130 = (undefined8 *)0x0;
+      puStack_134 = (undefined4 *)0x1e;
+      uVar8 = func_0x00443e40(7);
+      func_0x0058ebb0(uVar8);
+      break;
+    case 0xd8:
+      pbStack_120 = (byte *)(uint)*(ushort *)(param_2 + 0x14);
+      pcStack_124 = *(code **)(param_2 + 0x10);
+      pbStack_128 = &UNK_0058d302;
+      func_0x0058bf60();
+      break;
+    case 0xd9:
+      pbStack_120 = (byte *)0x0;
+      pcStack_124 = (code *)(param_2 + 0x10);
+      pbStack_128 = &UNK_0058d314;
+      func_0x00585320();
+      break;
+    case 0xda:
+      pbStack_120 = *(byte **)(param_2 + 0x10);
+      pcStack_124 = thunk_FUN_0058d67d;
+      FUN_0058cad0();
+      break;
+    case 0xdb:
+      if (((uint)*(byte **)(param_2 + 0x10) & 0xe0000000) != 0xc0000000) {
+        pcStack_124 = *(code **)(param_2 + 0x14);
+        pbStack_120 = (byte *)0x0;
+        puStack_12c = (undefined8 *)&UNK_0058d1c9;
+        pbStack_128 = *(byte **)(param_2 + 0x10);
+        func_0x00589290();
+      }
+      break;
+    case 0xdc:
+      pbStack_120 = *(byte **)(param_2 + 0x1c);
+      pcStack_124 = *(code **)(param_2 + 0x18);
+      pbStack_128 = *(byte **)(param_2 + 0x14);
+      puStack_12c = *(undefined8 **)(param_2 + 0x10);
+      puStack_130 = (undefined8 *)&UNK_0058d1f3;
+      func_0x00589350();
+      break;
+    case 0xdd:
+      pbStack_120 = *(byte **)(param_2 + 0x18);
+      pcStack_124 = *(code **)(param_2 + 0x14);
+      pbStack_128 = *(byte **)(param_2 + 0x10);
+      puStack_12c = (undefined8 *)&UNK_0058d216;
+      func_0x005893b0();
+      break;
+    case 0xde:
+      pbStack_120 = (byte *)0x1;
+      pcStack_124 = (code *)&UNK_0058d224;
+      func_0x00587ef0();
+      break;
+    case 0xdf:
+      pcStack_124 = *(code **)(param_2 + 0x14);
+      pbStack_120 = (byte *)0x0;
+      puStack_12c = *(undefined8 **)(param_2 + 0x10);
+      pbStack_128 = param_2 + 0x18;
+      puStack_130 = (undefined8 *)&UNK_0058d241;
+      func_0x005892e0();
+      break;
+    case 0xe0:
+      pcStack_124 = *(code **)(param_2 + 0x14);
+      pbStack_128 = *(byte **)(param_2 + 0x10);
+      pbStack_120 = (byte *)0x0;
+      puStack_12c = (undefined8 *)&UNK_0058d01b;
+      FUN_0058c690();
+      break;
+    case 0xe1:
+      pbStack_120 = (byte *)(uint)*(ushort *)(param_2 + 0x18);
+      pcStack_124 = *(code **)(param_2 + 0x14);
+      pbStack_128 = *(byte **)(param_2 + 0x10);
+      puStack_12c = (undefined8 *)&UNK_0058d034;
+      FUN_0058c690();
+      break;
+    case 0xe2:
+      pbStack_120 = &UNK_0058cd88;
+      iVar5 = FUN_004d6750();
+      pbStack_120 = &UNK_0058cd92;
+      iVar6 = func_0x004d7490();
+      if (iVar6 == iVar5) {
+        if (*(int *)(param_2 + 0x10) == 0x15) {
+          pbStack_120 = (byte *)0x15;
+          pcStack_124 = (code *)&UNK_0058cdee;
+          func_0x00574ed0();
+          break;
+        }
+        if (*(int *)(param_2 + 0x10) == 0x16) {
+          pbStack_120 = (byte *)0x16;
+          pcStack_124 = (code *)&UNK_0058cddc;
+          func_0x00574ee0();
+          break;
+        }
+        pcStack_124 = *(code **)(param_1 + 0x7c);
+        *(byte *)(param_1 + 0x26d) = *(byte *)(param_1 + 0x26d) | 1;
+        pbStack_120 = (byte *)0x4fe;
+        pbStack_128 = &UNK_0058cdb8;
+        func_0x00586f40();
+      }
+      pbStack_120 = &UNK_0058cdc3;
+      iVar5 = func_0x004d7390();
+      *(undefined1 *)(iVar5 + 0xbc) = 1;
+      break;
+    case 0xe3:
+      pbStack_120 = *(byte **)(param_2 + 0x10);
+      pcStack_124 = (code *)&UNK_0058cdfe;
+      func_0x00588a20();
+      break;
+    case 0xe4:
+      if (param_2[0x10] == 2) {
+        pbStack_120 = (byte *)(uint)param_2[0x11];
+        pcStack_124 = (code *)&UNK_0058d16b;
+        func_0x00587020();
+        *(byte *)(param_1 + 0x274) =
+             *(byte *)(param_1 + 0x274) ^
+             ((param_2[0x11] == 1) << 4 ^ *(byte *)(param_1 + 0x274)) & 0x10;
+      }
+      else if (param_2[0x10] == 3) {
+        pbStack_120 = (byte *)(uint)param_2[0x11];
+        pcStack_124 = (code *)&UNK_0058d19c;
+        func_0x00587080();
+      }
+      break;
+    case 0xe5:
+      uStack_e8 = *(undefined8 *)(param_2 + 0x28);
+      puVar3 = *(undefined8 **)(param_2 + 0x18);
+      uStack_e0 = *(undefined8 *)(param_2 + 0x30);
+      uStack_d8 = *(undefined8 *)(param_2 + 0x38);
+      uStack_108 = (byte *)CONCAT31(uStack_108._1_3_,param_2[0x10]);
+      pbStack_120 = _DAT_00f67298;
+      pcStack_124 = (code *)&uStack_e8;
+      uStack_d0 = *(undefined8 *)(param_2 + 0x40);
+      uStack_100 = CONCAT44(*(undefined4 *)(param_2 + 0x1c),(undefined4)uStack_100);
+      pbStack_128 = &UNK_0058d298;
+      func_0x00447260();
+      iStack_14 = 0;
+      pbStack_128 = abStack_b0;
+      puStack_12c = puStack_104;
+      puStack_134 = unaff_EBX;
+      puStack_130 = puVar3;
+      func_0x0058eb80();
+      puStack_104 = (undefined8 *)FUN_004d6750();
+      func_0x004d7470(&puStack_104);
+      func_0x00575e50();
+      uStack_28 = 0xffffffff;
+      func_0x00446f50();
+    }
+  }
+  else {
+    switch(uVar2) {
+    case 0x135:
+      uStack_100 = uStack_100 & 0xffffffff;
+      uStack_f8 = 0;
+      uStack_f4 = 0;
+      uStack_c = 1;
+      pbStack_120 = param_2 + 0x24;
+      pcStack_124 = (code *)&UNK_0058d4f9;
+      func_0x00813050();
+      puStack_10c = (undefined1 *)&puStack_134;
+      pcStack_124 = (code *)(param_2 + 0x10);
+      func_0x007c7870(&puStack_104);
+      iStack_14 = CONCAT31((int3)((uint)iStack_14 >> 8),1);
+      func_0x0058c120(*(undefined4 *)(param_2 + 0x20));
+      uStack_2c = 0xffffffff;
+      func_0x00965ec0();
+      break;
+    default:
+LAB_0058d675:
+      pbStack_120 = param_2;
+      pcStack_124 = FUN_0058d67d;
+      func_0x004d8860();
+      break;
+    case 0x139:
+      pbStack_120 = (byte *)0x1;
+      pcStack_124 = (code *)(param_2 + 0x10);
+      pbStack_128 = &UNK_0058d560;
+      func_0x0058c880();
+      break;
+    case 0x13a:
+      pbStack_120 = (byte *)0x1;
+      pcStack_124 = (code *)(param_2 + 0x10);
+      pbStack_128 = &UNK_0058d572;
+      func_0x0058c930();
+      break;
+    case 0x13b:
+      pbStack_120 = (byte *)0x1;
+      pcStack_124 = (code *)(param_2 + 0x10);
+      pbStack_128 = &UNK_0058d584;
+      func_0x0058c990();
+      break;
+    case 0x13c:
+      pbStack_120 = (byte *)0x1;
+      pcStack_124 = (code *)(param_2 + 0x10);
+      pbStack_128 = &UNK_0058d54e;
+      func_0x0058c7d0();
+      break;
+    case 0x144:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d456;
+      func_0x00588c50();
+      break;
+    case 0x145:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d4cb;
+      func_0x00588e30();
+      break;
+    case 0x177:
+      pbStack_120 = &UNK_0058d464;
+      func_0x0058eaf0();
+      pbStack_120 = (byte *)(uint)*(ushort *)(param_2 + 0x12);
+      pcStack_124 = (code *)(uint)param_2[0x10];
+      pbStack_128 = &UNK_0058d477;
+      func_0x0058eab0();
+      pbStack_128 = (byte *)&uStack_f0;
+      puStack_12c = (undefined8 *)&UNK_0058d483;
+      func_0x00588d20();
+      break;
+    case 0x179:
+      pbStack_120 = &UNK_0058d491;
+      func_0x0058eaf0();
+      uVar7 = 0;
+      puVar10 = (ushort *)(param_2 + 0x10);
+      do {
+        pbStack_120 = (byte *)(uint)*puVar10;
+        pbStack_128 = &UNK_0058d4a4;
+        pcStack_124 = (code *)uVar7;
+        func_0x0058eab0();
+        uVar7 = uVar7 + 1;
+        puVar10 = puVar10 + 1;
+      } while (uVar7 < 0x14);
+      pbStack_120 = (byte *)&uStack_e8;
+      pcStack_124 = (code *)&UNK_0058d4bb;
+      func_0x00588d20();
+      break;
+    case 0x194:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d598;
+      func_0x00575190();
+      break;
+    case 0x197:
+      uStack_108 = (byte *)CONCAT31(uStack_108._1_3_,param_2[0x15]);
+      pbStack_120 = &UNK_0058d35b;
+      iVar5 = func_0x004d7490();
+      pbStack_120 = &UNK_0058d364;
+      iVar6 = FUN_004d6750();
+      if ((iVar5 == iVar6) && (*(int *)(param_1 + 0xf0) != 0xf)) {
+        pbStack_120 = (byte *)(uint)param_2[0x14];
+        pcStack_124 = *(code **)(param_2 + 0x10);
+        pbStack_128 = uStack_108;
+        puStack_12c = (undefined8 *)&UNK_0058d38a;
+        func_0x00575150();
+      }
+      pbStack_120 = (byte *)&uStack_100;
+      uStack_100 = 0xf;
+      pcStack_124 = (code *)&UNK_0058d3a8;
+      FUN_00588ba0();
+      *(undefined1 *)(param_1 + 0x26a) = 0;
+      *(undefined1 *)(param_1 + 0x26c) = (undefined1)uStack_108;
+      break;
+    case 0x199:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d432;
+      func_0x00575160();
+      break;
+    case 0x19a:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d5ac;
+      func_0x005751a0();
+      break;
+    case 0x19b:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d5c0;
+      func_0x005751b0();
+      break;
+    case 0x19c:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d5d4;
+      func_0x005751d0();
+      break;
+    case 0x19d:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d5e8;
+      func_0x005751e0();
+      break;
+    case 0x19e:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d5fc;
+      func_0x005751f0();
+      break;
+    case 0x19f:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d610;
+      func_0x00575200();
+      break;
+    case 0x1a0:
+      bVar1 = param_2[0x10];
+      uStack_108 = (byte *)CONCAT31(uStack_108._1_3_,bVar1);
+      pbStack_120 = &UNK_0058d3cd;
+      iVar5 = func_0x004d7490();
+      pbStack_120 = &UNK_0058d3d6;
+      iVar6 = FUN_004d6750();
+      if ((iVar5 == iVar6) && (*(int *)(param_1 + 0xf0) != 0xf)) {
+        pbStack_120 = uStack_108;
+        pcStack_124 = (code *)&UNK_0058d3f3;
+        func_0x00575170();
+      }
+      pbStack_120 = (byte *)&uStack_100;
+      uStack_100 = 0xf;
+      pcStack_124 = (code *)&UNK_0058d411;
+      FUN_00588ba0();
+      *(undefined1 *)(param_1 + 0x26a) = 1;
+      *(byte *)(param_1 + 0x26c) = bVar1;
+      break;
+    case 0x1a1:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d446;
+      func_0x00575180();
+      break;
+    case 0x1a2:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d621;
+      func_0x00575210();
+      break;
+    case 0x1a4:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d632;
+      func_0x00575220();
+      break;
+    case 0x1a5:
+      pbStack_120 = param_2 + 0x10;
+      pcStack_124 = (code *)&UNK_0058d643;
+      func_0x00575230();
+      break;
+    case 0x1a7:
+      pcStack_124 = (code *)&UNK_0058d654;
+      pbStack_120 = param_2 + 0x10;
+      func_0x005751c0();
+      *(ushort *)(param_1 + 0xe8) =
+           (param_2[0x10] & 0x3f) << 8 | *(ushort *)(param_1 + 0xe8) & 0xc0ff;
+    }
+  }
+code_r0x0058d67d:
+  *unaff_FS_OFFSET = iStack_14;
+  func_0x009d20f4();
+  return;
+}
+
+
+-- listing --
+0058cca0  PUSH EBP
+0058cca1  MOV EBP,ESP
+0058cca3  AND ESP,0xfffffff8
+0058cca6  PUSH -0x1
+0058cca8  PUSH 0xe728ba
+0058ccad  MOV EAX,FS:[0x0]
+0058ccb3  PUSH EAX
+0058ccb4  SUB ESP,0xf8
+0058ccba  MOV EAX,[0x012ea8b0]
+0058ccbf  XOR EAX,ESP
+0058ccc1  MOV dword ptr [ESP + 0xf0],EAX
+0058ccc8  PUSH EBX
+0058ccc9  PUSH ESI
+0058ccca  PUSH EDI
+0058cccb  MOV EAX,[0x012ea8b0]
+0058ccd0  XOR EAX,ESP
+0058ccd2  PUSH EAX
+0058ccd3  LEA EAX,[ESP + 0x108]
+0058ccda  MOV FS:[0x0],EAX
+0058cce0  MOV ESI,dword ptr [EBP + 0x8]
+0058cce3  MOV EDI,ECX
+0058cce5  CALL 0x004d8830
+0058ccea  TEST AL,AL
+0058ccec  JNZ 0x0058cd21
+0058ccee  MOVZX EAX,word ptr [ESI + 0x2]
+0058ccf2  CMP EAX,0x134
+0058ccf7  JA 0x0058cd55
+0058ccf9  JZ 0x0058cd21
+0058ccfb  SUB EAX,0xf
+0058ccfe  CMP EAX,0xd4
+0058cd03  JA 0x0058d67d
+0058cd09  MOVZX EAX,byte ptr [EAX + 0x58d6b0]
+0058cd10  JMP dword ptr [EAX*0x4 + 0x58d6a4]
+0058cd21  MOVZX ECX,word ptr [ESI + 0x2]
+0058cd25  MOVZX EAX,CX
+0058cd28  CMP EAX,0x134
+0058cd2d  JA 0x0058d330
+0058cd33  JZ 0x0058d319
+0058cd39  SUB EAX,0xf
+0058cd3c  CMP EAX,0xd6
+0058cd41  JA 0x0058d675
+0058cd47  MOVZX EDX,byte ptr [EAX + 0x58d7e4]
+0058cd4e  JMP dword ptr [EDX*0x4 + 0x58d788]
+0058cd55  SUB EAX,0x137
+0058cd5a  CMP EAX,0x69
+0058cd5d  JA 0x0058d67d
+0058cd63  MOVZX ECX,byte ptr [EAX + 0x58d8c4]
+0058cd6a  JMP dword ptr [ECX*0x4 + 0x58d8bc]
+
+===== 0058ebd0 =====
+entry=0058ebd0
+body=[[0058ebd0, 0058ebef]]
+completed=true
+message=
+
+void __thiscall FUN_0058ebd0(int param_1,int param_2)
+
+{
+  *(undefined1 *)(param_1 + 0xb20) = 1;
+  *(uint *)(param_1 + 0xb1c) =
+       *(uint *)(param_1 + 0xb1c) ^ (param_2 * 2 ^ *(uint *)(param_1 + 0xb1c)) & 2;
+  return;
+}
+
+
+-- listing --
+0058ebd0  MOV EAX,dword ptr [ESP + 0x4]
+0058ebd4  LEA EDX,[EAX + EAX*0x1]
+0058ebd7  XOR EDX,dword ptr [ECX + 0xb1c]
+0058ebdd  MOV byte ptr [ECX + 0xb20],0x1
+0058ebe4  AND EDX,0x2
+0058ebe7  XOR dword ptr [ECX + 0xb1c],EDX
+0058ebed  RET 0x4
+
+===== 0058ebb0 =====
+entry=0058ebb0
+body=[[0058ebb0, 0058ebcc]]
+completed=true
+message=
+
+void __thiscall FUN_0058ebb0(int param_1,uint param_2)
+
+{
+  *(undefined1 *)(param_1 + 0xb20) = 1;
+  *(uint *)(param_1 + 0xb1c) =
+       *(uint *)(param_1 + 0xb1c) ^ (*(uint *)(param_1 + 0xb1c) ^ param_2) & 1;
+  return;
+}
+
+
+-- listing --
+0058ebb0  MOV EAX,dword ptr [ECX + 0xb1c]
+0058ebb6  XOR EAX,dword ptr [ESP + 0x4]
+0058ebba  MOV byte ptr [ECX + 0xb20],0x1
+0058ebc1  AND EAX,0x1
+0058ebc4  XOR dword ptr [ECX + 0xb1c],EAX
+0058ebca  RET 0x4

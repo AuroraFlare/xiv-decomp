@@ -1,0 +1,330 @@
+program=ffxivgame-ifrit.exe
+image_base=00400000
+
+===== 0063c210 =====
+entry=0063c210
+body=[[0063c210, 0063c297]]
+completed=true
+message=
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 FUN_0063c210(undefined4 param_1,undefined4 param_2,int param_3,undefined4 *param_4)
+
+{
+  int iVar1;
+  uint uVar2;
+  undefined4 uVar3;
+  undefined4 *unaff_FS_OFFSET;
+  undefined4 uStack_c;
+  undefined *puStack_8;
+  undefined4 uStack_4;
+  
+  puStack_8 = &UNK_00e84501;
+  uStack_c = *unaff_FS_OFFSET;
+  uVar2 = _DAT_012ea8b0 ^ (uint)&uStack_c;
+  *unaff_FS_OFFSET = &uStack_c;
+  if (param_4 != (undefined4 *)0x0) {
+    *param_4 = 0x68;
+    *unaff_FS_OFFSET = uStack_c;
+    return 0;
+  }
+  iVar1 = *(int *)(param_3 + 8);
+  *(int *)(param_3 + 8) = iVar1 + 0x68;
+  uStack_4 = 0;
+  if (iVar1 == 0) {
+    uVar3 = 0;
+  }
+  else {
+    uVar3 = func_0x0082fb30(param_1,param_2,uVar2);
+  }
+  *unaff_FS_OFFSET = uStack_c;
+  return uVar3;
+}
+
+
+-- listing --
+0063c210  PUSH -0x1
+0063c212  PUSH 0xe84501
+0063c217  MOV EAX,FS:[0x0]
+0063c21d  PUSH EAX
+0063c21e  MOV EAX,[0x012ea8b0]
+0063c223  XOR EAX,ESP
+0063c225  PUSH EAX
+0063c226  LEA EAX,[ESP + 0x4]
+0063c22a  MOV FS:[0x0],EAX
+0063c230  MOV EAX,dword ptr [ESP + 0x20]
+0063c234  TEST EAX,EAX
+0063c236  JZ 0x0063c250
+0063c238  MOV dword ptr [EAX],0x68
+0063c23e  XOR EAX,EAX
+0063c240  MOV ECX,dword ptr [ESP + 0x4]
+0063c244  MOV dword ptr FS:[0x0],ECX
+0063c24b  POP ECX
+0063c24c  ADD ESP,0xc
+0063c24f  RET
+0063c250  MOV EAX,dword ptr [ESP + 0x1c]
+0063c254  MOV ECX,dword ptr [EAX + 0x8]
+0063c257  LEA EDX,[ECX + 0x68]
+0063c25a  MOV dword ptr [EAX + 0x8],EDX
+0063c25d  MOV dword ptr [ESP + 0x20],ECX
+0063c261  MOV dword ptr [ESP + 0xc],0x0
+0063c269  TEST ECX,ECX
+0063c26b  JZ 0x0063c27e
+0063c26d  MOV EAX,dword ptr [ESP + 0x18]
+0063c271  MOV EDX,dword ptr [ESP + 0x14]
+0063c275  PUSH EAX
+0063c276  PUSH EDX
+0063c277  CALL 0x0082fb30
+0063c27c  JMP 0x0063c280
+0063c27e  XOR EAX,EAX
+0063c280  MOV dword ptr [ESP + 0xc],0xffffffff
+0063c288  MOV ECX,dword ptr [ESP + 0x4]
+0063c28c  MOV dword ptr FS:[0x0],ECX
+0063c293  POP ECX
+0063c294  ADD ESP,0xc
+0063c297  RET
+
+===== 0082fb30 =====
+entry=0082fb30
+body=[[0082fb30, 0082fba1]]
+completed=true
+message=
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined4 * __thiscall FUN_0082fb30(undefined4 *param_1,undefined4 param_2,undefined4 param_3)
+
+{
+  uint uVar1;
+  int unaff_ESI;
+  int *unaff_FS_OFFSET;
+  int iStack_c;
+  undefined *puStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0xffffffff;
+  puStack_8 = &UNK_00eb1e28;
+  iStack_c = *unaff_FS_OFFSET;
+  uVar1 = _DAT_012ea8b0 ^ (uint)&stack0xffffffec;
+  *unaff_FS_OFFSET = (int)&iStack_c;
+  func_0x00a179c0(param_2,param_3,uVar1);
+  *param_1 = &UNK_01033bec;
+  param_1[2] = &UNK_01033be0;
+  param_1[0xe] = &UNK_01033b54;
+  *unaff_FS_OFFSET = unaff_ESI;
+  return param_1;
+}
+
+
+-- listing --
+0082fb30  PUSH -0x1
+0082fb32  PUSH 0xeb1e28
+0082fb37  MOV EAX,FS:[0x0]
+0082fb3d  PUSH EAX
+0082fb3e  PUSH ECX
+0082fb3f  PUSH ESI
+0082fb40  MOV EAX,[0x012ea8b0]
+0082fb45  XOR EAX,ESP
+0082fb47  PUSH EAX
+0082fb48  LEA EAX,[ESP + 0xc]
+0082fb4c  MOV FS:[0x0],EAX
+0082fb52  MOV ESI,ECX
+0082fb54  MOV dword ptr [ESP + 0x8],ESI
+0082fb58  MOV EAX,dword ptr [ESP + 0x20]
+0082fb5c  MOV ECX,dword ptr [ESP + 0x1c]
+0082fb60  PUSH EAX
+0082fb61  PUSH ECX
+0082fb62  MOV ECX,ESI
+0082fb64  CALL 0x00a179c0
+0082fb69  MOV dword ptr [ESP + 0x14],0x0
+0082fb71  MOV dword ptr [ESI],0x1033bec
+0082fb77  MOV dword ptr [ESI + 0x8],0x1033be0
+0082fb7e  MOV dword ptr [ESI + 0x38],0x1033b54
+0082fb85  MOV dword ptr [ESP + 0x14],0xffffffff
+0082fb8d  MOV EAX,ESI
+0082fb8f  MOV ECX,dword ptr [ESP + 0xc]
+0082fb93  MOV dword ptr FS:[0x0],ECX
+0082fb9a  POP ECX
+0082fb9b  POP ESI
+0082fb9c  ADD ESP,0x10
+0082fb9f  RET 0x8
+
+===== 0082fe70 =====
+entry=0082fe70
+body=[[0082fe70, 0082ffb2]]
+completed=true
+message=
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void __thiscall FUN_0082fe70(int *param_1,undefined4 param_2)
+
+{
+  char cVar1;
+  uint uVar2;
+  int iVar3;
+  int *piVar4;
+  int iVar5;
+  int iVar6;
+  undefined4 uVar7;
+  int *unaff_FS_OFFSET;
+  int iStack_c;
+  undefined *puStack_8;
+  undefined4 uStack_4;
+  
+  uStack_4 = 0xffffffff;
+  puStack_8 = &UNK_00eb1e91;
+  iStack_c = *unaff_FS_OFFSET;
+  uVar2 = _DAT_012ea8b0 ^ (uint)&stack0xffffffc8;
+  *unaff_FS_OFFSET = (int)&iStack_c;
+  if ((char)param_1[0x10] != '\0') {
+    iVar3 = (**(code **)(*param_1 + 0xa4))(uVar2);
+    piVar4 = (int *)(**(code **)(*(int *)(iVar3 + 0xf0) + 0x6c))();
+    iVar3 = 0;
+    if (*piVar4 != 0) {
+      func_0x0080a810(param_2);
+    }
+    if (*(int *)(param_1[0xf] + 0x34) != 0) {
+      iVar5 = param_1[5];
+      func_0x00a1ff70(param_1[0xf]);
+      puStack_8 = (undefined *)0x0;
+      FUN_00a1ffa0(*(undefined1 *)(iVar5 + 3));
+      iVar5 = (**(code **)(*(int *)param_1[9] + 0xc))();
+      if ((iVar5 != 0) && (iVar5 = func_0x00a21460(), 0 < iVar5)) {
+        do {
+          piVar4 = (int *)func_0x00a21430(iVar3);
+          if ((piVar4 != (int *)0x0) &&
+             ((iVar6 = (**(code **)(*piVar4 + 0x2c))(), iVar6 == 2 &&
+              (cVar1 = (**(code **)(*piVar4 + 0x4c))(), cVar1 == '\0')))) {
+            uVar7 = (**(code **)(*piVar4 + 0x14))(_DAT_012ce7d4,0xf);
+            uVar7 = func_0x00a1b700(uVar7);
+            iVar6 = func_0x009d5475(uVar7);
+            if (iVar6 == 0) {
+              func_0x0082eab0(uStack_4);
+            }
+          }
+          iVar3 = iVar3 + 1;
+        } while (iVar3 < iVar5);
+      }
+      iStack_c = -1;
+      func_0x00a1ff90();
+    }
+  }
+  *unaff_FS_OFFSET = iStack_c;
+  return;
+}
+
+
+-- listing --
+0082fe70  PUSH -0x1
+0082fe72  PUSH 0xeb1e91
+0082fe77  MOV EAX,FS:[0x0]
+0082fe7d  PUSH EAX
+0082fe7e  SUB ESP,0x1c
+0082fe81  PUSH EBX
+0082fe82  PUSH EBP
+0082fe83  PUSH ESI
+0082fe84  PUSH EDI
+0082fe85  MOV EAX,[0x012ea8b0]
+0082fe8a  XOR EAX,ESP
+0082fe8c  PUSH EAX
+0082fe8d  LEA EAX,[ESP + 0x30]
+0082fe91  MOV FS:[0x0],EAX
+0082fe97  MOV EDI,ECX
+0082fe99  CMP byte ptr [EDI + 0x40],0x0
+0082fe9d  JZ 0x0082ff9d
+0082fea3  MOV EAX,dword ptr [EDI]
+0082fea5  MOV EDX,dword ptr [EAX + 0xa4]
+0082feab  CALL EDX
+0082fead  LEA ECX,[EAX + 0xf0]
+0082feb3  MOV EAX,dword ptr [ECX]
+0082feb5  MOV EDX,dword ptr [EAX + 0x6c]
+0082feb8  CALL EDX
+0082feba  MOV ECX,dword ptr [EAX]
+0082febc  XOR EBP,EBP
+0082febe  CMP ECX,EBP
+0082fec0  JZ 0x0082fecc
+0082fec2  MOV EAX,dword ptr [ESP + 0x40]
+0082fec6  PUSH EAX
+0082fec7  CALL 0x0080a810
+0082fecc  MOV EAX,dword ptr [EDI + 0x3c]
+0082fecf  MOV EBX,dword ptr [EAX + 0x34]
+0082fed2  CMP EBX,EBP
+0082fed4  MOV dword ptr [ESP + 0x14],EBX
+0082fed8  JZ 0x0082ff9d
+0082fede  MOV ESI,dword ptr [EDI + 0x14]
+0082fee1  PUSH EAX
+0082fee2  LEA ECX,[ESP + 0x20]
+0082fee6  CALL 0x00a1ff70
+0082feeb  MOV dword ptr [ESP + 0x38],EBP
+0082feef  MOVZX ECX,byte ptr [ESI + 0x3]
+0082fef3  PUSH ECX
+0082fef4  LEA ECX,[ESP + 0x20]
+0082fef8  CALL 0x00a1ffa0
+0082fefd  MOV ECX,dword ptr [EDI + 0x24]
+0082ff00  MOV EDX,dword ptr [ECX]
+0082ff02  MOV EAX,dword ptr [EDX + 0xc]
+0082ff05  CALL EAX
+0082ff07  CMP EAX,EBP
+0082ff09  JZ 0x0082ff8c
+0082ff0f  MOV ECX,EBX
+0082ff11  CALL 0x00a21460
+0082ff16  TEST EAX,EAX
+0082ff18  MOV dword ptr [ESP + 0x18],EAX
+0082ff1c  JLE 0x0082ff8c
+0082ff1e  JMP 0x0082ff24
+0082ff20  MOV EBX,dword ptr [ESP + 0x14]
+0082ff24  PUSH EBP
+0082ff25  MOV ECX,EBX
+0082ff27  CALL 0x00a21430
+0082ff2c  MOV ESI,EAX
+0082ff2e  TEST ESI,ESI
+0082ff30  JZ 0x0082ff83
+0082ff32  MOV EDX,dword ptr [ESI]
+0082ff34  MOV EAX,dword ptr [EDX + 0x2c]
+0082ff37  MOV ECX,ESI
+0082ff39  CALL EAX
+0082ff3b  CMP EAX,0x2
+0082ff3e  JNZ 0x0082ff83
+0082ff40  MOV EDX,dword ptr [ESI]
+0082ff42  MOV EAX,dword ptr [EDX + 0x4c]
+0082ff45  MOV ECX,ESI
+0082ff47  CALL EAX
+0082ff49  TEST AL,AL
+0082ff4b  JNZ 0x0082ff83
+0082ff4d  MOV ECX,dword ptr [0x012ce7d4]
+0082ff53  MOV EDX,dword ptr [ESI]
+0082ff55  MOV EAX,dword ptr [EDX + 0x14]
+0082ff58  MOV EBX,dword ptr [EDI + 0x3c]
+0082ff5b  PUSH 0xf
+0082ff5d  PUSH ECX
+0082ff5e  MOV ECX,ESI
+0082ff60  CALL EAX
+0082ff62  PUSH EAX
+0082ff63  MOV ECX,EBX
+0082ff65  CALL 0x00a1b700
+0082ff6a  PUSH EAX
+0082ff6b  CALL 0x009d5475
+0082ff70  ADD ESP,0xc
+0082ff73  TEST EAX,EAX
+0082ff75  JNZ 0x0082ff83
+0082ff77  MOV ECX,dword ptr [ESP + 0x40]
+0082ff7b  PUSH ECX
+0082ff7c  MOV ECX,ESI
+0082ff7e  CALL 0x0082eab0
+0082ff83  ADD EBP,0x1
+0082ff86  CMP EBP,dword ptr [ESP + 0x18]
+0082ff8a  JL 0x0082ff20
+0082ff8c  MOV dword ptr [ESP + 0x38],0xffffffff
+0082ff94  LEA ECX,[ESP + 0x1c]
+0082ff98  CALL 0x00a1ff90
+0082ff9d  MOV ECX,dword ptr [ESP + 0x30]
+0082ffa1  MOV dword ptr FS:[0x0],ECX
+0082ffa8  POP ECX
+0082ffa9  POP EDI
+0082ffaa  POP ESI
+0082ffab  POP EBP
+0082ffac  POP EBX
+0082ffad  ADD ESP,0x28
+0082ffb0  RET 0x4

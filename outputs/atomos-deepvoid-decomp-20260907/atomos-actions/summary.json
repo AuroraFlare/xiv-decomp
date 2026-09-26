@@ -1,0 +1,134 @@
+{
+  "scope": "Atomos m070 BID0000 and WSS0001..0010",
+  "timing_boundary": "SCB/MCB authored units preserved; MTB duration seconds only from explicit frame/fps header",
+  "counts": {
+    "source_manifest": 11,
+    "resource_manifest": 330,
+    "scheduler_manifest": 40,
+    "scheduler_blocks": 40,
+    "scheduler_clips": 395,
+    "motion_metrics": 23,
+    "motion_command_clips": 42,
+    "cibt_transitions": 83,
+    "cibc_slots": 30,
+    "effect_bindings": 24,
+    "action_wrapper_fields": 21,
+    "wss9_wss10_equality": 2
+  },
+  "control_equalities": [
+    {
+      "left_bank": "WSS0009",
+      "right_bank": "WSS0010",
+      "resource_id": "main",
+      "byte_identical": true,
+      "payload_bytes": 1936,
+      "sha256": "7da7c8b13a2096a23de59d6719c2e2cad385cb8e6e295974273b33e7a08c0422"
+    },
+    {
+      "left_bank": "WSS0009",
+      "right_bank": "WSS0010",
+      "resource_id": "mon_main",
+      "byte_identical": true,
+      "payload_bytes": 944,
+      "sha256": "f7dc984af869e86ee956f5c3f137abf428fcd58c24ab36648acf51e72813f90c"
+    }
+  ],
+  "model_state_mapping": {
+    "init_msb4_1": [
+      "skill09/m070sk9c0c",
+      "skill09/m070sk9c1c"
+    ],
+    "init_msb4_0": [
+      "skill10/m070sk10c0c",
+      "skill10/m070sk10c1c"
+    ]
+  },
+  "sources": [
+    {
+      "bank": "BID0000",
+      "relative_path": "mon/m070/act/emp_emp/bid/base/0000",
+      "bytes": 591664,
+      "sha256": "7c7ebfca0ec0e96737bd4420762c317c79719c327d184523c451140af9cbbf2b"
+    },
+    {
+      "bank": "WSS0001",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0001",
+      "bytes": 323248,
+      "sha256": "0f40ea69b4704931621abf5e319bee8637f75e0626a04688427bb93f7bfbaa11"
+    },
+    {
+      "bank": "WSS0002",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0002",
+      "bytes": 294176,
+      "sha256": "d222166fbf8ee40ae7c67ff4de6eb3eae74b5c359e8988d2e52a5a725f6da1af"
+    },
+    {
+      "bank": "WSS0003",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0003",
+      "bytes": 294640,
+      "sha256": "cba572949d3c9eeab8650dee19796878c40d29a72ea30c7d4ec7ff67f61e146c"
+    },
+    {
+      "bank": "WSS0004",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0004",
+      "bytes": 278784,
+      "sha256": "f631f1cd9f4d8234ff838d1dc910d3402f1cf3fedd1eda83c3b1616b2df9cc4d"
+    },
+    {
+      "bank": "WSS0005",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0005",
+      "bytes": 244512,
+      "sha256": "6c554fb42bc149f99fc58d33d9030c21eb0f33d8d84f60c209e0ca13d4dcc546"
+    },
+    {
+      "bank": "WSS0006",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0006",
+      "bytes": 308544,
+      "sha256": "0fd9f62b31360ece7348aaf8e88b659033e31e3650bab1cdba89f32bfabadd8b"
+    },
+    {
+      "bank": "WSS0007",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0007",
+      "bytes": 439504,
+      "sha256": "a1b3023abf3e98189cb9b3fc51ad88c4511e2321e314bbf8c45a6ac076a32437"
+    },
+    {
+      "bank": "WSS0008",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0008",
+      "bytes": 17424,
+      "sha256": "76948c4cf0506e3468b966c0f88356383bddde520ccdeef001ca7080a2b44446"
+    },
+    {
+      "bank": "WSS0009",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0009",
+      "bytes": 3216,
+      "sha256": "3a8762ab1138ec1071fa88b85b17abfb44baeacb0778277edd48b1dbc3f3e1c8"
+    },
+    {
+      "bank": "WSS0010",
+      "relative_path": "mon/m070/act/emp_emp/wss/base/0010",
+      "bytes": 3216,
+      "sha256": "f6f4e086473658e6ac1eb7c329fe748e68ff3e23584c72eb35d050e9b7c37165"
+    }
+  ],
+  "model_state_metadata": {
+    "source_relative_path": "client/chara/mon/m070/skl/0001",
+    "source_bytes": 11392,
+    "source_sha256": "54325160e1cf992afacffa08b76f1c0d8b6582bee7e1e545ae93f5edc660b95f",
+    "resource_id": "info_m070",
+    "resource_path": "cib\\cibb\\mon\\info_m070",
+    "resource_bytes": 84,
+    "resource_sha256": "3f06549fb94e77ed9974b164746a1661e7c483775073d1c9000952a0ca23d5e0",
+    "version_byte_0x00": 1,
+    "serialized_flags_byte_0x03": "0x00",
+    "ordinal_split_byte_0x35": 4,
+    "supported_mask_byte_0x3b": "0x10",
+    "derived_msn_ordinal_mask": "0x0F",
+    "derived_msb_bit_mask": "0xF0",
+    "bit4_advertised_and_in_msb_partition": true,
+    "loaded_ready_flag": "0x80 is set by Cibb initializer 0x850C10 after version/size validation",
+    "raw_record_hex": "01 00 00 00 20 03 84 03 e8 03 4c 04 b0 04 e8 03 e8 03 e8 03 00 00 00 00 e8 03 e8 03 05 00 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 00 00 02 00 e8 03 00 04 00 05 01 02 02 10 1e 00 00 00 00 00 00 00 20 03 84 03 e8 03 4c 04 b0 04 e8 03 e8 03 e8 03",
+    "executable_sha256": "9341f2b4567440b310a4d494f5cc5599ca334ba51c8042247317ff466492f2e9",
+    "native_listing": "cibb_loader_native.txt"
+  }
+}

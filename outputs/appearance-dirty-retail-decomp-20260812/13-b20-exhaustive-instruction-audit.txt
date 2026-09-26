@@ -1,0 +1,70 @@
+Binary SHA-256: 9341F2B4567440B310A4D494F5CC5599CA334BA51C8042247317FF466492F2E9
+Image base: 00400000
+
+All decoded x86 instructions in .text with a memory displacement exactly 0xB20:
+
+0055116E  lea      ecx,[esp+0xB20]                 ; stack address, not actor read
+00585DC2  mov      byte ptr [ebp+0xB20],1          ; actor write
+00585DD8  cmp      byte ptr [ebp+0xB20],0          ; SOLE GENUINE ACTOR READ
+00585E10  mov      byte ptr [ebp+0xB20],0          ; actor write/clear
+00586893  mov      byte ptr [ecx+0xB20],1          ; actor write
+00586917  mov      byte ptr [esi+0xB20],al         ; actor write
+00586B2C  mov      byte ptr [edi+0xB20],1          ; actor write
+00586B3C  mov      byte ptr [edi+0xB20],1          ; actor write
+00586B68  mov      byte ptr [edi+0xB20],1          ; actor write
+00586B7E  mov      byte ptr [edi+0xB20],1          ; actor write
+00586D08  mov      byte ptr [edi+0xB20],1          ; actor write
+00586D3A  mov      byte ptr [edi+0xB20],1          ; actor write
+00586D95  mov      byte ptr [edi+0xB20],1          ; actor write
+00586DFD  mov      byte ptr [edi+0xB20],1          ; actor write
+00586E47  mov      byte ptr [edi+0xB20],1          ; actor write
+0058B6D5  mov      byte ptr [esi+0xB20],bl         ; actor write
+0058D125  mov      byte ptr [edi+0xB20],1          ; actor write
+0058EBBA  mov      byte ptr [ecx+0xB20],1          ; actor write
+0058EBDD  mov      byte ptr [ecx+0xB20],1          ; actor write
+006A7754  mov      byte ptr [edi+0xB20],bl         ; actor-layout write
+006A777A  mov      byte ptr [edi+0xB20],bl
+006A779B  mov      byte ptr [edi+0xB20],bl
+006A77BE  mov      byte ptr [edi+0xB20],bl
+006A780A  mov      byte ptr [edi+0xB20],bl
+006A786C  mov      byte ptr [edi+0xB20],bl
+006A78AE  mov      byte ptr [edi+0xB20],bl
+006A8B40  mov      byte ptr [esi+0xB20],bl
+006A8B49  mov      byte ptr [esi+0xB20],bl
+006A8B6A  mov      byte ptr [esi+0xB20],bl
+006A8B84  mov      byte ptr [esi+0xB20],bl
+006A8B93  mov      byte ptr [esi+0xB20],bl
+006A8BA2  mov      byte ptr [esi+0xB20],bl
+006A8BB7  mov      byte ptr [esi+0xB20],bl
+006A8BC6  mov      byte ptr [esi+0xB20],bl
+006A8BD5  mov      byte ptr [esi+0xB20],bl
+006A8BE4  mov      byte ptr [esi+0xB20],bl
+006A8BF3  mov      byte ptr [esi+0xB20],bl
+006A8C02  mov      byte ptr [esi+0xB20],bl
+006A8C11  mov      byte ptr [esi+0xB20],bl
+006A8C20  mov      byte ptr [esi+0xB20],bl
+006A8C2F  mov      byte ptr [esi+0xB20],bl
+006A8C41  mov      byte ptr [esi+0xB20],bl
+006A8C53  mov      byte ptr [esi+0xB20],bl
+006A8C65  mov      byte ptr [esi+0xB20],bl
+006A8C77  mov      byte ptr [esi+0xB20],bl
+006A8C89  mov      byte ptr [esi+0xB20],bl
+006A8C9B  mov      byte ptr [esi+0xB20],bl
+006A8CAD  mov      byte ptr [esi+0xB20],bl
+006A8CBF  mov      byte ptr [esi+0xB20],bl
+006A8CD1  mov      byte ptr [esi+0xB20],bl
+006A8CE3  mov      byte ptr [esi+0xB20],bl
+006A8CF5  mov      byte ptr [esi+0xB20],bl
+006A8D07  mov      byte ptr [esi+0xB20],bl
+006A8D20  mov      byte ptr [esi+0xB20],bl
+006A8D5B  mov      byte ptr [esi+0xB20],bl
+006AA4BF  mov      byte ptr [ebx+0xB20],1
+006AA4E1  mov      byte ptr [ebx+0xB20],1
+006AA577  mov      byte ptr [ebx+0xB20],1
+006AA609  mov      byte ptr [ebx+0xB20],1
+006ACED1  mov      byte ptr [eax+0xB20],1
+006ACF01  mov      byte ptr [ecx+0xB20],1
+006ACF18  mov      byte ptr [ecx+0xB20],1
+00D55BC4  mov      dword ptr [edx+0xB20],0130F458h ; unrelated object layout, write
+
+Classification rule: a memory source/read-modify-write would count as a read. Apart from the CMP at 00585DD8, every actor-layout occurrence above has the memory operand only as a MOV destination. The LEA does not dereference memory.
