@@ -1,101 +1,79 @@
-# 110322 The Sound of Silence (Bsm306) — decomp
+# 110322 The Sound of Silence (Bsm306, Lv.36 Blacksmith/Armorer)
 
-- Class quest, Blacksmith (30) / Armorer (31), level 36. Type: Non-Combat.
-- Prerequisite: 110321. Offer: Bodenolf 1000144 (linkpearl call DAT row 1).
+VERIFIED: decompiled client scenario `tools/outputs/lpb/content_systems_20260612/lua/quest/scenario/bsm/bsm306.lua`
+(mains + full `danceIsland_*` system, read) + DAT `bsm306.csv` (rows 1-45 + 86-132, read) + DAT
+journals `xtx_journalxtxSea.csv` 108-114/142-143/145-146 (full read) + DAT `quest_marker.csv`
+11032201-20 + DAT `actorclass.csv`/`xtx_displayName.csv`/`xtx_itemName.csv` bindings + SQL
+quest/reward/recipe rows + walkthrough ([GamerEscape](https://ffxiv.gamerescape.com/wiki/The_Sound_of_Silence),
+ARM author). YouTube lore video references 1.0 footage
+([YouTube](https://www.youtube.com/watch?v=_mD_SxbTkzc)); not watched, no claims taken.
 
-## Sources (all inspected)
+## Sequence flow (VERIFIED: scenario + dialogue + journals + walkthrough)
 
-- DAT `docs/Dat Mining/bsm306.csv` (135 text rows) — full flow: Bodenolf
-  call/brief (1-9) → Mimidoa task (11-13: navigate for him; take
-  Sound-proofing Rubber 11000052 / Admiral Alloy 11000053 + mold/casing
-  recipe, "I'll do th' rest") → component turn-in (16) → Mimidoa forges
-  Brass Earplugs 11000080 from the component (19) → sail to Hope's
-  Bourn (87: "Hope's Bourn! Also known as Hope's Edge an' Hope's End";
-  DE Hoffenholm) → equip plugs (20) → free 8 lured souls (88) → plugs
-  block speech (94), victim lines (95-108: pain/spectacles/coinpurse/
-  hunger) → clue pickups one-at-a-time (119-125: "You cannot carry this
-  item while holding another") → sirens beaten (22-24) → gramophone
-  truth (25-34: Ailissie + R'piqoi borrowed it) → report/reward.
-- DAT `quest_marker.csv` 11032201-20: 01/02/05 at Mimidoa (guild);
-  03/04 replay-collision placeholders; 06 reward at (-490.38, 417.81,
-  display ???); 07-20 filler. NO island markers (zone 139 world-only).
-- DAT `actorclass.csv` + `xtx_displayName.csv`: R'piqoi 1000187
-  (1900039), Ailissie 1000188 (1300016) — the two "sirens". Neither has
-  any spawn row. The 8 lured souls are unnamed in DAT (generic
-  victims; actors unidentified).
-- GamerEscape live page (clue tableau: coconut/newt/glasses; "grab the
-  charred red newt and go back to the NPC") — mechanic corroboration.
-- YouTube V3 (1.23b cutscenes) — flow only.
+ACCEPT Bodenolf (`processEventBodenolfStart`: rows 2-4 + info gate + warp; requires 110321) ->
+0 Mimidoa `005` (rows 10-13): GRANTS branch source (Sound-proofing Rubber 11000052 BSM /
+Admiral Alloy 11000053 ARM) + mold/casing recipe, "I'll do th' rest" (journals 108-109/142) ->
+5 forge branch component (journals 109/142 state the full recipe, source INCLUDED) ->
+6 component turn-in (journal 110/143): Mimidoa FORGES Brass Earplugs 11000080 FROM it
+in-scene (row 19), `010` -> NQ `bsm30610`. NO player combine recipe exists or is needed ->
+10 equip plugs (EARS slot 17; rows 20/36/94; journal 111) -> sail to Hope's Bourn with
+Mimidoa, `020` -> NQ `bsm30620` (note: no fade-in — the instance transition) ->
+15 island puzzle: 8 `danceIsland_problem` victims, one clue at a time (`picked01`/
+`changeItem`), beckon souls to the boat (`solve01-08`, row 129; journal 113) ->
+cave finale `030` -> NQ `bsm30630` + warp back outside the guild (walkthrough step 10) ->
+20 guild reward `040` -> NQ `bsm30640` (journal 114; rows 22-24, 31-34: the "sirens" are
+Ailissie + R'piqoi partying with a borrowed gramophone; Mimidoa routs them off-screen).
 
-## Sequence flow (recovered numbering 0/5/6/10/15/20)
+## SQL DEFECT 5398/5399 (proven by DAT journals; reported, not edited)
 
-- ACCEPT Bodenolf (`processEventBodenolfStart`) → 0 Mimidoa: GRANTS
-  branch source (11000052 BSM / 11000053 ARM, verified grant) + recipe;
-  plays `processEvent005` (class recipe branch) → 5. (DAT row 13 IS the
-  grant evidence — closes "no documented grant".)
-- 5 component: forge branch component (snapshot-diff; traded credits)
-  → Mimidoa turn-in, bare advance (no scene maps 5→6) → 6.
-- 6 combine: Mimidoa + component → CONSUME component, GRANT earplugs
-  11000080 (Mimidoa forges them in-scene, DAT row 19); plays
-  `processEvent010` (earplug/island setup) → 10. CORRECTION: no player
-  combine recipe exists or is needed — the prior blocker is dissolved.
-- 10 equip: EARS-slot-17 gate (`HasItemEquippedInSlot`; ability-script
-  precedent) → bare → 15. (DAT rows 20/36/94: plugs must be worn;
-  removing them risks the song, rows 109-118.)
-- 15 island puzzle: 8 victim flags (0-7); one-clue enforcement (DAT
-  rows 119-125 + template `onlyOneClueHeldAtATime`); clues Charred Red
-  Newt 11000102 / Bent Glasses 11000103 / Island Coconut 11000104.
-  `bsm306_victimTalk` scaffold ready but UNWIRED (no victim/clue
-  trigger actors; zone 139 has no map/ground). 8/8 → 20.
-- 20 report: Mimidoa 8/8 check → `processEvent040` (final) → branch
-  marks 3600 → Complete. EXP 0 (post-1.20 amount UNREPORTED; archive
-  A4 carries no EXP row — never inferred).
+Live SQL omits the granted source from the component recipes: 5398 = 2x ingot only,
+5399 = plate only. Retail journals 109 (mold = rubber + 2x ingot) and 142 (casing = alloy +
+plate) prove the source is a SYNTH MATERIAL, and the walkthrough corroborates ("add a Bronze
+Plate / two Bronze Ingots of your own" atop Mimidoa's granted material). Prescription:
+5398 <- 11000052 + 10002011x2; 5399 <- 11000053 + 10002021 (quest-item materials are
+supported: gld200 recipe 5406 precedent). COUPLING: with SQL fixed, the source is consumed
+BY THE SYNTH, so live `bsm306.lua` seq-6 "consume component + source" must become
+consume-component-only or it double-counts the source. HOLD-gated: no live impact today.
 
-## NPCs
+## Island puzzle: client system decoded (VERIFIED: scenario + dialogue + walkthrough)
 
-| NPC | Actor | Display | Zone | Note |
-|---|---|---|---|---|
-| Bodenolf | 1000144 | 2200064 | 230 public | offer (id 306) |
-| Mimidoa | 1000176 | 1400012 | 230 public (NEW id 3382, shared Bsm200) | source grant/component/earplugs/finale |
-| R'piqoi ("siren") | 1000187 | 1900039 | 139 Hope's Bourn (unplaced) | NO spawn; island NPC |
-| Ailissie ("siren") | 1000188 | 1300016 | 139 Hope's Bourn (unplaced) | NO spawn; island NPC |
-| 8 lured souls | UNKNOWN | — | 139 (unplaced) | unnamed in DAT; rows 95-108 lines |
+Eight victims in four narration pairs: p01/p02 pain-woman (95; rows 96 head / 97 belly),
+p03/p04 searching-man (98; row 99 spectacles / 100 coinpurse), p05/p06 disquieted-woman
+(101; row 102 "Where is he!?" / 103 lost girl), p07/p08 sprawled-man (104; rows 105-108
+hungry/thirsty). Each problem: plugs-on narration + row 94 (can't hear) + ask 109 (remove
+plugs?) -> row 112 dizzy; plugs-off: the spoken line. Solves play row 129 gender-flagged
+(female 01/02/05/06, male 03/04/07/08 — matches narration). Walkthrough binds 3 clues:
+newt -> Pleading Petticoat, glasses -> Squinting Ser (p03!), coconut -> Sprawled Starveling
+(p07/08); Maiden + companion-choice (Spirited Smithy / Stentorian Shipwright, follow-me, no
+clue) covers p05/p06; p02/p04 mechanics stay residual. Clue pickups are glowing "???"
+ground objects at the lighthouse (left coconut / middle newt / right glasses); removing
+the plugs to talk (walkthrough step 5) is rows 109-111. Victim display names have NO
+`xtx_displayName.csv` entries (unresolvable to actors); R'piqoi 1000187 / Ailissie 1000188
+resolve but have no spawns. The scenario problem/solve set is clue-agnostic: the mapping
+lives in unrecovered island wiring. Server `bsm306_victimTalk` scaffold (8 flags +
+one-clue rule) is ready but UNWIRED, and the server never fires 020/030 (no island driver).
 
-## Objectives / journal / markers
+## NPCs/markers/instances (VERIFIED: DAT + live map tool)
 
-- States 0/5/6/10/15/20; markers 01 (accept) / 02 (component+combine)
-  / 05 (equip+puzzle) / 06 (reward). 03/04 + 07-20 never sent.
-- Counters: 0 component baseline, 1 locked branch. Flags 0-7 victims.
-- Journal: component gain / earplug possession / victims n/8.
+Bodenolf 306 + Mimidoa 3382 (shared Bsm200 row) public; R'piqoi/Ailissie unspawned.
+Markers 01/02/05 at Mimidoa (1400012); 06 reward at (-490.38, 417.81, display ??? — a guild
+hall-floor point, not the balcony); 03/04 replay-collision placeholders; 07-20 filler.
+Zone 139 "The Cieldalaes" verified live: world_only, 0 recorded nodes, no map binding —
+Hope's Bourn is unplaceable without invention. No island markers exist in DAT.
 
-## Instance / territory / spawns (guide-used)
+## Rewards/sync/lockouts (VERIFIED: SQL + DAT)
 
-- Guild leg: zone 230 public (shared Mimidoa row; grounded node 436).
-- Island leg: zone 139 The Cieldalaes — `maps` reports world_only,
-  0 recorded nodes, no native binding → NO placement is possible
-  without invention. Clue/victim triggers stay unplaced (gap).
-- No mounts: zero spawn APIs (validator enforced). Row-90 "row back
-  to Limsa" prompt is NPC travel dialogue, not a player mount.
+Gil 36000 central + marks 3600 script-side by LOCKED branch (central autoGrant=0) + EXP 0
+(post-1.20 amount UNREPORTED — never inferred; archive A4 has no EXP row). No tool (era
+unresolved). Non-combat: no sync, lockouts, or timeout; one-time quest. No chocobo
+involvement. NOTE: the walkthrough claims a level-38 MSQ prerequisite; no MSQ gate is
+evidenced in DAT (SQL prereq = 110321 + level 36) — not adopted.
 
-## Mobs / sync / lockouts
+## Gaps (quest stays HOLD-gated)
 
-- None (Non-Combat; the "sirens" are two girls + a gramophone, rows
-  31-34; Mimidoa routs them off-screen, row 22). No sync, no lockout,
-  no timeout; one-time.
-
-## Rewards
-
-- Gil 36000 central. Marks 3600 script-side by LOCKED branch (central
-  autoGrant=0). EXP 0 (unreported; A4 precedent Wvr306 proves L36
-  values deviate — never infer 4720). No tool (era unresolved).
-
-## Gaps (quest stays HOLD-gated; narrowed by this pass)
-
-1. Hope's Bourn island placement (zone 139 world-only, 0 nodes).
-2. Victim actors (8 souls unnamed) + clue trigger actors unplaced.
-3. Clue↔victim mapping unrecovered (DAT lines suggest: glasses→
-   spectacled man row 99; coconut→hungry/thirsty man rows 105-108;
-   newt→? — mapping speculation documented, NOT wired).
-- CLOSED this pass: source-item grant (DAT row 13); combine model
-  (Mimidoa forges in-scene, DAT row 19 — no recipe); R'piqoi/Ailissie
-  actor IDs; equip-gate slot precedent; Mimidoa public spawn (Bsm200).
+Zone-139 placement; victim/clue-trigger actors; clue<->victim DAT wiring (residual
+p02/p04/p06); 020/030 island driver; 5398/5399 SQL defect (above). CLOSED this pass:
+source grant (row 13 + journals); combine model (row 19); full danceIsland decode (8
+problems/solves + genders + one-clue swap); 3 walkthrough clue bindings; victim-pair
+structure; R'piqoi/Ailissie IDs; equip-gate slot; Hope's Bourn naming (row 87 + journal
+111); Mimidoa shared spawn.

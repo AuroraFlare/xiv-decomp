@@ -1,112 +1,83 @@
-# 110321 Song of the Sirens (Bsm300) — decomp
+# 110321 Song of the Sirens (Bsm300, Lv.30 Blacksmith/Armorer)
 
-- Class quest, Blacksmith (30) / Armorer (31), level 30. Type: Non-Combat.
-- Prerequisite: 110320. Offer: Bodenolf 1000144 (linkpearl call DAT row 1
-  routes to the forge; offer scene `processEventBodenolfStart`).
+VERIFIED: decompiled client scenario `tools/outputs/lpb/content_systems_20260612/lua/quest/scenario/bsm/bsm300.lua`
+(main events full read) + DAT `bsm300.csv` (rows 1-95 + item-ref sweep, read) + DAT journals
+`xtx_journalxtxSea.csv` 97-107 (full read) + DAT `quest_marker.csv` 11032101-20 + DAT
+`xtx_negotiationTable.csv` titles 4201/4302/4401/4601/4702/4901 + DAT `actorclass.csv`/
+`xtx_displayName.csv`/`xtx_itemName.csv` bindings + SQL quest/reward rows + walkthrough
+([GamerEscape](https://ffxiv.gamerescape.com/wiki/Song_of_the_Sirens), 21 steps, ARM author).
+YouTube lore video references 1.0 footage ([YouTube](https://www.youtube.com/watch?v=_mD_SxbTkzc));
+not watched, no claims taken.
 
-## Sources (all inspected)
+## Sequence flow (VERIFIED: scenario + dialogue + journals + walkthrough)
 
-- DAT `docs/Dat Mining/bsm300.csv` (158 text rows) — full retail flow:
-  Bodenolf call (1) → Mimidoa briefing (6-14: sirens, windwheel
-  11000022, Amajina contract) → Ul'dah denial (15-16) → Mimidoa
-  linkpearl (17-21: Nanawa parley for Seastone 11000023; DE row 20 also
-  names Reverberating Steel 11000024) → Nanawa cave-in rescue (22-25,
-  45-49: talk-to-calm, ore granted row 49) → supplies handoff (26-28) →
-  Mimidoa gives windwheel (29) → ferry captain delivery + ride (30-39)
-  → report + reward (40-44).
-- DAT `quest_marker.csv` 11032101-20 (01-12 MapMarkerQuest, 13-20
-  filler): 01/04/06 guild Mimidoa; 02 Linette/Ul'dah; 03 Z'ssapa/Nanawa
-  entrance; 05 ferry captain/docks; 07/08 Nanawa interior (display ???);
-  09 Limsa (display ???); 10/11/12 Nanawa miners.
-- DAT `xtx_negotiationTable.csv`: SIX titles carry "Song of the Sirens":
-  4201/4302/4401/4601/4702/4901 (six miners, three stages each per
-  template `documentedParleys`).
-- DAT `actorclass.csv` + `xtx_displayName.csv` identifications (see
-  NPC table). Walkthroughs: Allakhazam (Nanawa/ferry beats; page fetch
-  timed out, search snippet corroborates), GamerEscape 1.0 lineage,
-  garlemald-server #88 (third-party plan only, not evidence).
-- YouTube V3 (1.23b cutscenes) — flow only.
+ACCEPT Bodenolf (`processEventBodenolfStart` + warp; requires 110320) ->
+0 Mimidoa briefing `003` (sirens rumor, windwheel, Amajina contract; journals 97-98) ->
+5 Linette/Ul'dah denial `004`/`004_1` (Syndicate refuses export; journal 99) ->
+10 Mimidoa linkpearl `006` (NpcLS "Naldiq & Vymelli's" per journal 99 + walkthrough step 4;
+NpcLS id unrecovered; journal 100) ->
+15 Z'ssapa at the Nanawa entrance (cave-in brief, journals 101-102) -> warp into the mine
+instance (walkthrough step 6; no director recovered) ->
+20-24 six miner Parleys + talk-to-calm rescue `007`/`009` (journal 102: "parley tiles with
+the injured to keep their spirits up") -> shining-spot cutscene `010` -> NQ `bsm30010` ->
+25 survivor behind the rocks (journal 103) ->
+30 material in hand (journal 104: ore granted as thanks) ->
+35 supplies handoff `015` (rows 27-29: Mimidoa takes supplies, grants his pre-forged wheel;
+journal 105 "previously crafted"; walkthrough step 17) ->
+40 captain delivery `020` -> NQ `bsm30020` + ferry test ride `030` -> NQ `bsm30030`
+(journal 106: Vesper Bay) ->
+45 report `040` (rows 40-42 + melody ask 152: three siren options with scheduler playback;
+options 1/2 -> row 44, option 3 -> row 43; journal 107). Walkthrough "(Siren #3 is the
+correct one...)" corroborates option 3 as the dramatic answer.
 
-## Sequence flow (recovered numbering)
+## Miners: all six identified (CORRECTION this pass)
 
-- ACCEPT Bodenolf → 0 Mimidoa briefing (bare) → 5 Linette/Ul'dah:
-  denial (bare; no scene recovered) + linkpearl beat (NpcLS surface id
-  unrecovered → authored message advance, marked) → 10/15 miner legs.
-- 5/10/15 Nanawa miners: six opponents × three Parley stages = 18 win
-  flags (0-17). Talk stamps board idempotently (Hrv300 pattern:
-  `negotiation.*` temp vars + `SetNegotiatable`); `onNegotiationResult`
-  self-filters (class/level/prereq, window seq, introduced flag, exact
-  miner, stage order); loss → infinite retry message (retail rule);
-  win → next stage re-stamp; miner complete → board cleared.
-  Miner→title binding is positional by marker order (gld200 precedent,
-  marked): Z'ssapa→4201, ???→4302, ???→4401, melancholy→4601,
-  tear-struck→4702, disconcerted→4901. Pair completion advances
-  5→10→15 (marked: DAT has no stage↔seq map).
-- 20-24 Parley results → 25 material lead → 30 material choice
-  (Seastone 11000023 vs Reverberating Steel 11000024; DE row 20 proves
-  the alternative) → 35-39 second path → 40 windwheel → 45 report.
-- CORRECTION (DAT rows 28-29): the player does NOT synthesize the
-  windwheel — Mimidoa forges it and hands it over for delivery to the
-  ferry captain. No windwheel recipe exists or is needed; the prior
-  "recipe unrecovered" blocker is dissolved (grant-in-scene model).
+Walkthrough order: Qualmish (4000211) -> Melancholy (4000209, marker 10) -> Scathed (4000208)
+-> Tear-struck (4000204, marker 11) -> Disconcerted (4000205, marker 12) -> Overtired
+(4000206), then the shining-spot cutscene. Actor twins exist for all six: 1000699/1700022,
+1000697/1700020, 1000696/1700019, 1000692/1700015, 1000693/1700016, 1000694/1700017
+(which twin is the instance one is unrecovered). CORRECTION: Z'ssapa is the instance ENTRY
+(talk -> warp; cave-in briefer per journals 101-102), NOT a parley opponent — 6 titles + 6
+interior miners = the exact documented 6-count, and Z stands outside at marker 03. Markers
+07/08/09 are display ??? (4000257, literally "???"), NOT miners: 07/08 are Nanawa-interior
+trigger candidates (cave-in/shining-spot), 09 a Limsa trigger (likely ferry/instance exit).
+Miner<->title binding stays positional (walkthrough spatial order is the natural hypothesis).
+Open modeling note: CLASS_QUESTS says 3 stages/miner (18 flags, the live-lua model) but the
+walkthrough plays one win per miner and only 6 titles exist — 18-vs-6 unresolved (HOLD).
 
-## NPCs (display→actor via actorclass col 6)
+## Branch material + grant-in-scene wheel (VERIFIED, triple-confirmed)
 
-| NPC | Actor | Display | Zone | XYZ | Spawn |
-|---|---|---|---|---|---|
-| Bodenolf | 1000144 | 2200064 | 230 public | -500.06, 42.8, 416.06 | id 306 |
-| Mimidoa | 1000176 | 1400012 | 230 public (NEW id 3382, shared Bsm200) | -483.67, 44.5, 404.51 | markers 01/04/06 |
-| Linette (Amajina & Sons) | 1000861 | 1100016 | 209 public (Ul'dah) | -92.38, 195.6, 313.43 | id 177 = marker 02 EXACT |
-| Z'ssapa (Nanawa foreman) | 1000887 | 1900018 | 170 public (C. Thanalan) | 92.767, 183.826, -1030.44 | id 2464 ≈ marker 03 |
-| melancholy miner | 1000697 | 4000209 | 176 (marker, NO spawn) | 305.45, ~167.6, -1247.18 | marker 10; gld200 Ul'dah row exists (other quest) |
-| tear-struck miner | 1000692 | 4000204 | 176 (marker, NO spawn) | 306.73, ~167.6, -1222.86 | marker 11; NO spawn anywhere |
-| disconcerted miner | 1000693 | 4000205 | 176 (marker, NO spawn) | 292.65, ~167.6, -1228.44 | marker 12; gld200 Ul'dah row exists |
-| sprightly miner (alt display) | 1000698 | 4000210 | — | — | gld200 Ul'dah row; NO Nanawa link (not used) |
-| full-maned ferry captain | 1000539 | 4000212 | 230 docks (marker, NO spawn) | -823.76, ?, 191.84 | marker 05; NO spawn anywhere |
-| miner ??? (marker 07) | UNKNOWN | 4000257 | 176 (302, -1228) | — | display ???; actor unidentified |
-| miner ??? (marker 08) | UNKNOWN | 4000257 | 176 (303.67, -1181.87) | — | display ???; actor unidentified |
-| ??? (marker 09) | UNKNOWN | 4000257 | 230 (-807.66, 234.42) | — | likely ferry/exit trigger |
+Row 20 (JP/DE/FR switch) makes the material branch-determined: BSM parleys for Seastone
+11000023, ARM for Reverberating Steel 11000024 (walkthrough ARM author received the steel).
+The player NEVER synthesizes the wheel: Mimidoa forges it (rows 28-29 "the [wheel] I made"),
+journal 105 ("previously crafted ... during your absence"), walkthrough step 17 ("You will
+receive the Whistling Windwheel"). No windwheel recipe exists or is needed.
 
-## Objectives / journal / markers
+## NPCs/spawns (VERIFIED: displays + live SQL)
 
-- Journal states 0/5/10/15/20/25/30/35/40/45; markers 01-12 as above
-  (filler 13-20 never sent). Counter 0: windwheel baseline at seq 40
-  (delivery check — kept items model). Flags 0-17 parley wins.
-- Material legs advance on possession (Seastone→path A, Steel→path B;
-  authored, marked). Cave-in rescue (rows 22-25/45-49) has no trigger
-  actor binding → unwired (gap).
+Bodenolf 306, Mimidoa 3382 (shared Bsm200 row), Linette 177 (marker-exact), Z'ssapa 2464:
+all public. NO spawn anywhere for the ferry captain 1000539 (marker 05 ungrounded:
+-823.76/191.84 docks) or tear-struck 1000692 / scathed 1000696+1700019 / overtired
+1000694+1700017 / qualmish 1700022 / melancholy 1700020 / disconcerted 1700016; the
+100069x twins that do have rows (melancholy 3368, disconcerted 3370, qualmish 2634) belong
+to other content (gld200 zone-209 / zone-180), none in zone 176. Nanawa ground verified
+live: 26 recorded points at (305,-1230), nearest node 1175 Y=167.58 (miner Y≈167.6), 4
+existing mobs in 30 ylm — placements need care and are NOT made (HOLD quest).
 
-## Instance / territory / spawns (guide-used)
+## Instances/rewards/sync (VERIFIED: walkthrough + SQL + DAT)
 
-- Zones: 230 Limsa (guild + docks), 209 Ul'dah (Amajina), 170 C.
-  Thanalan (Nanawa entrance), 176 Nanawa Mines (interior, layout 412),
-  ferry ride Limsa↔Vesper Bay (no content owner recovered).
-- `locate --zone 176 --page 1600 --world 305 -1230`: 26 recorded
-  points; nearest (303.44, 167.58, -1228.0) → miner Y≈167.6 (4
-  existing mobs in 30 ylm — placements need care; NOT placed: quest
-  still HOLD).
-- No mounts: zero spawn APIs (validator enforced); ferry ride is NPC
-  travel dialogue, no player mount involved.
+Retail: guild instance + Nanawa mine instance (warp) + ferry instance; no directors
+recovered. Rewards: gil 30000 central + marks 3000 script-side by current class (central
+rows autoGrant=0) + EXP 3000 (post-1.20 L30 maximum). No tool grant (era unresolved).
+Non-combat: no sync, lockouts, or timeout; one-time quest. No chocobo involvement (the
+ferry ride is NPC travel + NQ cutscene, never a player mount).
 
-## Mobs / sync / lockouts
+## Gaps (quest stays HOLD-gated)
 
-- None (Non-Combat). No sync, no lockout, no timeout; one-time.
-
-## Rewards
-
-- Gil 30000 central. Marks 3000 script-side by CURRENT class at
-  completion (no branch content to lock; marked). EXP 3000 script-side
-  (post-1.20 L30 maximum). No tool (era unresolved).
-
-## Gaps (quest stays HOLD-gated; narrowed by this pass)
-
-1. Miners for markers 07/08 (display ???) unidentified.
-2. Ferry captain 1000539 has no spawn (docks marker ungrounded).
-3. Cave-in trigger actors/mechanics unbound (DAT dialogue only).
-4. Linkpearl NpcLS id/messages unrecovered (authored message stands in).
-5. Ferry-ride content owner unrecovered.
-6. Nanawa miner spawns (markers 10/11/12) spec'd but NOT placed until
-   gaps 1-3 close (no decorative world edits for a HOLD quest).
-- CLOSED this pass: 6 DAT parley titles; Linette=1000861;
-  Z'ssapa=1000887; 3 named-miner actors; ferry captain=1000539;
-  windwheel grant-in-scene (no recipe); Mimidoa public spawn (Bsm200).
+Title<->miner binding; ??? trigger bindings (07/08/09); Nanawa instance owner; captain
+spawn; NpcLS linkpearl id; ferry-ride owner; twin selection; 18-vs-6 flag model.
+LIVE-LUA DEFECT (reported, not edited — validators/tests pass on the current table):
+`MINERS[1]` = Z'ssapa-as-opponent with 2 nil slots contradicts the walkthrough + count
+arithmetic; the table should become the 6 interior miners above with positional titles.
+CLOSED this pass: 6 DAT titles; Linette/Z'ssapa/captain actors; all 6 miner identities;
+branch material; grant-in-scene wheel (triple-confirmed); melody-answer mapping; journals.
