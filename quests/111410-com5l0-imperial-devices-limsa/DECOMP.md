@@ -99,8 +99,13 @@ REWARD_EXP = 2160
   survive (standard availability semantics); entry additionally requires a
   Toto-Rak-unlocking GC story step (`hasTotorakGrandCompanyStoryAccess`).
 - Mutual exclusivity: retail blocks the other two cities' variants while active;
-  local availability enables all three offers (documented divergence; acceptance
-  of one does not auto-block the others in this build).
+  enforced at accept by `Player.AcceptQuest` via
+  `CanAcceptGrandCompanyOpeningQuest` (`GrandCompanyOpeningQuestRules`: family 1
+  = 111410/111610/111810 + company allegiance), with a player-facing refusal
+  message. The Lua availability list still shows all three offers, so a player
+  may see an offer that accept-time validation then refuses — a minor
+  offer-vs-accept presentation gap, not a holding loophole: two variants can
+  never be simultaneously active.
 
 ## Instance layout/bounds (zone 159, private content copy)
 
