@@ -1,0 +1,22 @@
+quest_id,code,name,level,prereq_ids,accept_type,sequences,kill_bnpc,kill_actor,director,reward_gil,reward_exp,reward_items,navmesh_verdict,decomp_file
+110001,Man0l0,Shapeless Melody,1,none,auto(creation),0;5;10,,,QuestDirectorMan0l001,0,0,,n/a (no kills),man0l0_shapeless_melody.md
+110002,Man0l1,Treasures of the Main,1,110001,auto(chain),0;3;5;6;7;35;40;48;50;55;60;65;70;75;80;85;90;92,,,QuestDirectorMan0l101,1000+3000+6000,200,,n/a (escort director-side),man0l1_treasures_of_the_main.md
+110005,Man0g0,Sundered Skies,1,none,auto(creation),0;5;10,,,QuestDirectorMan0g001,0,0,,n/a (no kills),man0g0_sundered_skies.md
+110006,Man0g1,Souls Gone Wild,1,110005,auto(chain),"0;5;10;12;15;40;50;55;60;65;70;71;72;75;80;85;90;95;100;105",,,QuestDirectorMan0g101,2000+3000+6000,200,,n/a (escort director-side),man0g1_souls_gone_wild.md
+110009,Man0u0,Flowers for All,1,none,auto(creation),0;5;10,,,QuestDirectorMan0u001,0,0,,n/a (no kills),man0u0_flowers_for_all.md
+110010,Man0u1,Court in the Sands,1,110009,auto(chain),"0;5;10;12;15;45;50;57;58;60;65;70;75;80;85;90;95;100;105;110",1362,2280157,"QuestDirectorMan0u101(fight)+Man0u102(escort)",2000+3000+6000,200,,NO COVERAGE zone175 (120ym; authored Y),man0u1_court_in_the_sands.md
+110007,Man1g0,Whispers in the Wood,8,110006,SEQ_ACCEPT(Miounne),"ACCEPT;0;5;10;15;20;25;30;35;40;45;50;55;60;65",,,none,15000,300,,n/a (no kills),man1g0_whispers_in_the_wood.md
+110003,Man1l0,Legends Adrift,8,110002,SEQ_ACCEPT(Baderon+guard),"ACCEPT;0;10;20;30;40;50;60;70;80;90;100;110;120;122",,,none,15000,300,,n/a (no kills),man1l0_legends_adrift.md
+110011,Man1u0,Golden Sacrifices,8,110010,SEQ_ACCEPT(Momodi+guard),"ACCEPT;0;5;10;15;20;25;28;30;35;40;45;50;55;60;65;70",,,none,15000,300,,n/a (no kills),man1u0_golden_sacrifices.md
+110008,Man2g0,Beckon of the Elementals,13,110007,SEQ_ACCEPT(Miounne),"ACCEPT;0;3;4;5;10;15;20;25;30;35;40;45;50;55;60",1364,2105201,QuestDirectorMan2g001,30000,500,,VERIFIED zone153 node111 d0.0,man2g0_beckon_of_the_elementals.md
+110004,Man2l0,Never the Twain Shall Meet,13,110003,SEQ_ACCEPT(Baderon),"ACCEPT;0;10;15;20;35;37;40;42;45;50;55;60;65;70",1290/1291(side),2280114/2280120,QuestDirectorMan2l001,30000,500,,NO COVERAGE zone192 world_only,man2l0_never_the_twain.md
+110012,Man2u0,Calamity Cometh,13,110011,SEQ_ACCEPT(Momodi),"ACCEPT;0;5;10;15;20;25;30;35;40;45;50;55",minemites x10,2202106,QuestDirectorMan2u001,30000,500,,NEARBY zone170 (10.6ym dY1.6),man2u0_calamity_cometh.md
+110013,Man200,Fade to White,18,"110004+110008+110012",object-script,0;5;10;20;25;27,,,QuestDirectorEventMan20001,45000,6500,2001031 whistle (HasItem-guarded),n/a (duty director-side),man200_fade_to_white.md
+110014,Man206,Together We Stand,22,110013,auto(SNPC carry),0;5;10;15;20;25;30,,,QuestDirectorMan20610,60000,11000,,NO COVERAGE zone151 (119ym),man206_together_we_stand.md
+110015,Man300,Toll of the Warden,30,110014,SEQ_ACCEPT(2-step),ACCEPT;0;10;15;20;25;30;35,,,QuestDirectorMan30001,0,19000,Ashcrown LS 7,NEARBY zone171 (17.1ym dY1.9),man300_toll_of_the_warden.md
+110016,Man304,Forever Taken,34,110015,SEQ_ACCEPT(Hedyn),ACCEPT;0;5;10;20;25,,,QuestDirectorEventMan30401,0,26500,,n/a (delivery; no kills),man304_forever_taken.md
+110017,Man308,Lord Errant,38,110016,SEQ_ACCEPT(court trigger),ACCEPT;0;5;10;15;20,,,QuestDirectorMan30801,0,32500,,NO COVERAGE zone174 (143ym),man308_lord_errant.md
+110018,Man402,Of Men They Sing,42,110017,SEQ_ACCEPT(Tataru),ACCEPT;0;5;15;20,,,QuestDirectorMan40201,0,39000,,NEARBY-STRONG zone151 (7.9ym dY0.06),man402_of_men_they_sing.md
+110019,Man406,Futures Perfect,46,110018,SEQ_ACCEPT(Minfilia),ACCEPT;0;5;10;15;20;25,,,QuestDirectorMan40601,0,46000,Goobbue mount (guarded onFinish),NEARBY-STRONG zone190 (2.9ym dY0.04),man406_futures_perfect.md
+110020,Man502,[en],52,0(none),scaffold-only,,,,,0,0,,n/a (reference-only),man502_man504_reference_only.md
+110021,Man504,[en],54,0(none),scaffold-only,,,,,0,0,,n/a (reference-only),man502_man504_reference_only.md

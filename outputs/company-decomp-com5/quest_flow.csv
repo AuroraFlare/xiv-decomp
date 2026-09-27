@@ -1,0 +1,50 @@
+code,questId,title,sequence,enpc,event,items,journal,marker,notes
+Com5l0,111410,Imperial Devices (Limsa Lominsa),ACCEPT,1500199 (Guincum),processEventGUINCUMStart(0+0 accept),+11000267 petition,246,,SEQ_ACCEPT gate verified
+Com5l0,111410,Imperial Devices (Limsa Lominsa),5,1000510 (Zerig),processEvent_005(0+0),-11000267 +11000268 urn,247,,name code-attested
+Com5l0,111410,Imperial Devices (Limsa Lominsa),10,1001150 (Bloisirant),processEvent_010(0+60) + ask 010_01 -> TotorakTryStartFromNpc,,248,,duration 2nd arg verified
+Com5l0,111410,Imperial Devices (Limsa Lominsa),15,1000327/28/29/0407 (moogles),processEvent_015(routeVariant) CanUseTotorakQuestNpc,-11000268 +11000263 accumulator,249,,routeVariant field1 verified
+Com5l0,111410,Imperial Devices (Limsa Lominsa),20,1001150 (Bloisirant),processEvent_020(0+0) proof-gated,,250,,
+Com5l0,111410,Imperial Devices (Limsa Lominsa),25,1500199 (Guincum),processEvent_025(0) seals-once+CompleteGCQuestOnce,-11000263,251,,2160exp+1000 Storm seals
+Com5g0,111610,Imperial Devices (Gridania),ACCEPT,1500200 (Fulke),processEventFULKEStart(0+0 accept),,292,,SEQ_ACCEPT gate verified
+Com5g0,111610,Imperial Devices (Gridania),10,1001150 (Bloisirant),processEvent_010(60) + ask 010_1 -> TotorakTryStartFromNpc,,293,,duration 1st arg verified
+Com5g0,111610,Imperial Devices (Gridania),20,1001571 (A Ruhnsenna),processEvent_020 CanUseTotorakQuestNpc,,294,,
+Com5g0,111610,Imperial Devices (Gridania),30,1000327/28/29/0407 (moogles),processEvent_030 CanUseTotorakQuestNpc,+11000260 plate,294,,
+Com5g0,111610,Imperial Devices (Gridania),50,1001150 (Bloisirant),processEvent_050 proof-gated,,295,,
+Com5g0,111610,Imperial Devices (Gridania),60,1500200 (Fulke),processEvent_060 (no trailing arg) seals-once+CompleteGCQuestOnce,-11000260,296,,2160exp+1000 Serpent seals
+Com5u0,111810,Imperial Devices (Ul'dah),ACCEPT,1500198 (Aubrey),processEventAUBREYStart(0 accept),,349,,SEQ_ACCEPT gate verified
+Com5u0,111810,Imperial Devices (Ul'dah),5,1000681 (Nuala),processEvent_005(0+0+0),,350,,name code-attested
+Com5u0,111810,Imperial Devices (Ul'dah),10,1001150 (Bloisirant),processEvent_010(60) + ask 010_01 -> TotorakTryStartFromNpc,,351,,
+Com5u0,111810,Imperial Devices (Ul'dah),15,1000327/28/29/0407 (moogles),processEvent_015(routeVariant) CanUseTotorakQuestNpc,+11000261 +11000262,352,,dual proof verified
+Com5u0,111810,Imperial Devices (Ul'dah),20,1001150 (Bloisirant),processEvent_020(0) proofs-gated,,353,,
+Com5u0,111810,Imperial Devices (Ul'dah),25,1500198 (Aubrey),processEvent_025(0) seals-once+CompleteGCQuestOnce,-11000261 -11000262,354,,2160exp+1000 Flame seals
+Com5l1,111411,Into the Dark (Limsa Lominsa),ACCEPT,1500199 (Guincum),processEventGUINCUMStart accept,,252,,offer commented partial
+Com5l1,111411,Into the Dark (Limsa Lominsa),10,1001064 (Hasthwab),processEvent_010,,253,,name code-attested
+Com5l1,111411,Into the Dark (Limsa Lominsa),20,1001635 (Quiliane),processEvent_020(45+4+8),+11000269 medallion,254,11155004,actor SQL visibility verified
+Com5l1,111411,Into the Dark (Limsa Lominsa),30,1001154 (Dyrstweitz),processEvent_030(60+4+8) + ask 030_1 -> DzemaelTryStartFromNpc,,255 (256 in zone 231),,inside journal projected
+Com5l1,111411,Into the Dark (Limsa Lominsa),CAPTAIN-CLEAR,- (DzemaelManager),AdvanceIntoTheDarkQuestOnCaptainClear flag20,+11000270 -11000269 seq30->40,257,,BNPC3140/2307001 verified
+Com5l1,111411,Into the Dark (Limsa Lominsa),40,1001635 (Quiliane),processEvent_040 proof-gated,-11000269 -11000270,257,11155004,
+Com5l1,111411,Into the Dark (Limsa Lominsa),50,1500199 (Guincum),processEvent_050 seals-once+CompleteGCQuestOnce,,258,,6231exp+4000 Storm seals
+Com5g1,111611,Into the Dark (Gridania),ACCEPT,1500200 (Fulke),processEventFULKEStart(45+4+8 accept),,297,,offer commented partial
+Com5g1,111611,Into the Dark (Gridania),10,1000370 (Yuhelmeric),processEvent_010(45+4+8),,298,11165003,actor SQL visibility verified
+Com5g1,111611,Into the Dark (Gridania),20,1001154 (Dyrstweitz),processEvent_020(60+4+8) + ask 020_1 -> DzemaelTryStartFromNpc,,299 (300 in zone 231),,inside journal projected
+Com5g1,111611,Into the Dark (Gridania),CAPTAIN-CLEAR,- (DzemaelManager),AdvanceIntoTheDarkQuestOnCaptainClear flag20,+11000264 seq20->40,301,,BNPC3140/2307001 verified
+Com5g1,111611,Into the Dark (Gridania),40,1000370 (Yuhelmeric),processEvent_040 proof-gated,-11000264,301,11165003,
+Com5g1,111611,Into the Dark (Gridania),50,1500200 (Fulke),processEvent_050 seals-once+CompleteGCQuestOnce,,302,,6231exp+4000 Serpent seals
+Com5u1,111811,Into the Dark (Ul'dah),ACCEPT,1500198 (Aubrey),processEventAUBREYStart accept,+11000265 sigil,356,,offer commented partial
+Com5u1,111811,Into the Dark (Ul'dah),10,1000586 (Vairemont),processEvent_010(45+4+8),,357,11175003,actor SQL visibility verified
+Com5u1,111811,Into the Dark (Ul'dah),20,1001154 (Dyrstweitz),processEvent_020(60+4+8) + ask 020_1 -> DzemaelTryStartFromNpc,,358 (359 in zone 231),,inside journal projected
+Com5u1,111811,Into the Dark (Ul'dah),CAPTAIN-CLEAR,- (DzemaelManager),AdvanceIntoTheDarkQuestOnCaptainClear flag20,+11000266 seq20->30,360,,BNPC3140/2307001 verified
+Com5u1,111811,Into the Dark (Ul'dah),30,1000586 (Vairemont),processEvent_030 proof-gated,-11000265 -11000266,360,11175003,
+Com5u1,111811,Into the Dark (Ul'dah),40,1500198 (Aubrey),processEvent_040 seals-once+CompleteGCQuestOnce,,361,,6231exp+4000 Flame seals
+Com5l2,111412,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5l3,111413,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5l4,111414,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5l5,111415,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5g2,111612,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5g3,111613,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5g4,111614,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5g5,111615,[en],-,-,-,-,-,,internal row prereq0 lv0 no wrapper route
+Com5u2,111812,[en],-,-,-,-,-,,internal row prereq0 lv0 NO LUA WRAPPER
+Com5u3,111813,[en],-,-,-,-,-,,internal row prereq0 lv0 NO LUA WRAPPER
+Com5u4,111814,[en],-,-,-,-,-,,internal row prereq0 lv0 NO LUA WRAPPER
+Com5u5,111815,[en],-,-,-,-,-,,internal row prereq0 lv0 NO LUA WRAPPER

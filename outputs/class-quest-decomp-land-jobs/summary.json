@@ -1,0 +1,571 @@
+{
+ "availability_note": "Only 110500 Fsh200 is enabled in quest_availability.lua; every other row in scope is commented out. No availability change was made in this phase.",
+ "evidence_roots": [
+  "Data/sql/gamedata_quests.sql",
+  "Data/sql/gamedata_quest_rewards.sql",
+  "Data/sql/server_battlenpc_mob_types.sql",
+  "Data/sql/server_battlenpc_skill_list.sql",
+  "Data/sql/server_eventnpc_spawn_locations.sql",
+  "Data/sql/server_fishing.sql",
+  "Data/sql/live migrations/min200_route.sql",
+  "Data/sql/live migrations/hrv300_route.sql",
+  "Data/scripts/quests/quest_availability.lua",
+  "Data/scripts/quests/class_quest_template.lua",
+  "Data/scripts/quests/job_quest_template.lua",
+  "FF14-Decomp outputs/class-quest-gathering-decomp-20260927"
+ ],
+ "fixes_this_phase": [
+  "hrv300 qtmap table-return -> multi-return (SEQ_011, SEQ_025)",
+  "fsh306 RNG seeded once at load instead of per-roll (fsh300 has no rolls)",
+  "fsh300 header: public Sisipu row 3329 noted; HOLD kept (Barrel blocker)",
+  "job template todos: War0j2 skill 4->6031, Pld0j3 skill 21->6024",
+  "main-SQL 8-row Brd/Pld/War block (3000,3064,3080,32730-32734); 32730-34 mirror existing migrations (+parity notes); new mirror brd_pld_job_quest_profiles.sql for 3080/3000/3064",
+  "extended tools/validate_job_quest_mob_types.py SCOPE to War0j/Pld0j/Brd0j (parallel-phase file, built for this)"
+ ],
+ "generated": "2026-09-27",
+ "open_gaps": [
+  "min300/min306/hrv200/hrv306/brd0j1/brd0j4-6/pld0j4/pld0j6/war0j3-6 have no recoverable route/fight surface; HOLD, do not invent",
+  "min200/hrv300 gathering pool entries are migration-only; fresh main-SQL builds cannot supply the finds",
+  "fsh300 Barrel zone/coords + boat travel; fsh306 timed-bell length, state-0 push owner, sale payout rule",
+  "wdk200 public Wybir/younglings/branch-search owners + recipes; wdk300 Parley subsystem + Marcelloix spawn; wdk306 ally-shooter driver + nodes/recipe + spawns",
+  "Jehantel (1060039) has no public spawn: Brd0j2/0j3 offer/completion unreachable until spawned or routed",
+  "hrv300 offer accepts on nil delegate result; left as-is pending scene-return evidence",
+  "job private-battle HP/MP are engine-derived (0); staged research values retained in loot staging tables; retail tuning unverified",
+  "navmesh: Bardi marker walked (44 nodes/60ylm, nearest 5.9ylm); Alux marker node 663 at 0.03ylm; all kills private-shell at caller Y, no invented heights"
+ ],
+ "phase": "3-land-jobs",
+ "quests": [
+  {
+   "avail": "disabled",
+   "chain": 0,
+   "code": "Fsh200",
+   "gap": null,
+   "id": 110500,
+   "impl": "playable bespoke",
+   "kills": null,
+   "level": 20,
+   "offer_npc": "1000153 N'nmulika (public row 325, zone 230)",
+   "title": "To Fight a Fishback"
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 110500,
+   "code": "Fsh300",
+   "gap": "Barrel coords/boat travel; public Sisipu row 3329 exists (zone 230) but state fit unverified",
+   "id": 110501,
+   "impl": "bespoke HOLD-gated",
+   "kills": null,
+   "level": 30,
+   "offer_npc": "1000153 N'nmulika"
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 110501,
+   "code": "Fsh306",
+   "gap": "timed-bell length; state-0 push owner; sale payout rule",
+   "id": 110502,
+   "impl": "bespoke HOLD-gated",
+   "kills": null,
+   "level": 36,
+   "offer_npc": "1000153 N'nmulika"
+  },
+  {
+   "avail": "disabled",
+   "chain": 0,
+   "code": "Hrv200",
+   "gap": "full route unrecovered",
+   "id": 110480,
+   "impl": "stub",
+   "kills": null,
+   "level": 20,
+   "offer_npc": "1000236 Opyltyl"
+  },
+  {
+   "avail": "disabled",
+   "chain": 110480,
+   "code": "Hrv300",
+   "gap": "pool entries migration-only; nil-accept semantics",
+   "id": 110481,
+   "impl": "playable bespoke (journal-marker bug fixed)",
+   "kills": null,
+   "level": 30,
+   "offer_npc": "1000236 Opyltyl (public row 547)"
+  },
+  {
+   "avail": "disabled",
+   "chain": 110481,
+   "code": "Hrv306",
+   "gap": "full route unrecovered",
+   "id": 110482,
+   "impl": "stub",
+   "kills": null,
+   "level": 36,
+   "offer_npc": "1000236 Opyltyl"
+  },
+  {
+   "avail": "disabled",
+   "chain": 0,
+   "code": "Min200",
+   "gap": "pool entries migration-only; 017 branches/Nenekko interlude unbound",
+   "id": 110460,
+   "impl": "playable bespoke",
+   "kills": null,
+   "level": 20,
+   "offer_npc": "1000861 Linette (public row 177)"
+  },
+  {
+   "avail": "disabled",
+   "chain": 0,
+   "code": "Min300",
+   "gap": "full route unrecovered",
+   "id": 110461,
+   "impl": "stub",
+   "kills": null,
+   "level": 30,
+   "offer_npc": "1000861 Linette"
+  },
+  {
+   "avail": "disabled",
+   "chain": 0,
+   "code": "Min306",
+   "gap": "full route unrecovered",
+   "id": 110462,
+   "impl": "stub",
+   "kills": null,
+   "level": 36,
+   "offer_npc": "1000861 Linette"
+  },
+  {
+   "avail": "disabled",
+   "chain": 0,
+   "code": "Wdk200",
+   "gap": "public Wybir/younglings/branch objects/recipes",
+   "id": 110300,
+   "impl": "bespoke HOLD-gated",
+   "kills": null,
+   "level": 20,
+   "offer_npc": "1000465 A'naidjaa (public row 675)"
+  },
+  {
+   "avail": "disabled",
+   "chain": 110300,
+   "code": "Wdk300",
+   "gap": "Parley subsystem; Marcelloix spawn",
+   "id": 110301,
+   "impl": "bespoke HOLD-gated",
+   "kills": null,
+   "level": 30,
+   "offer_npc": "1000465 A'naidjaa"
+  },
+  {
+   "avail": "disabled",
+   "chain": 110301,
+   "code": "Wdk306",
+   "gap": "ally-shooter driver; nodes/recipe/spawns; no journal archive",
+   "id": 110302,
+   "impl": "bespoke HOLD-gated",
+   "kills": null,
+   "level": 36,
+   "offer_npc": "1000596 Marcelloix (UNSPAWNED)"
+  },
+  {
+   "avail": "n/a (scaffold)",
+   "chain": 0,
+   "code": "Noc000",
+   "gap": "route unrecovered",
+   "id": 110809,
+   "impl": "scaffold stub",
+   "kills": null,
+   "level": 0,
+   "offer_npc": "-"
+  },
+  {
+   "avail": "n/a (scaffold)",
+   "chain": 0,
+   "code": "Noc001",
+   "gap": "route unrecovered",
+   "id": 110817,
+   "impl": "scaffold stub",
+   "kills": null,
+   "level": 0,
+   "offer_npc": "-"
+  },
+  {
+   "avail": "n/a (scaffold)",
+   "chain": 0,
+   "code": "Noc002",
+   "gap": "hamlet battle mechanics not in script",
+   "id": 110862,
+   "impl": "scaffold + read-only delegate shim",
+   "kills": null,
+   "level": 1,
+   "offer_npc": "-"
+  },
+  {
+   "avail": "n/a (scaffold)",
+   "chain": 0,
+   "code": "Noc003",
+   "gap": "route unrecovered",
+   "id": 110863,
+   "impl": "scaffold stub",
+   "kills": null,
+   "level": 1,
+   "offer_npc": "-"
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 0,
+   "code": "Brd0j1",
+   "gap": "2206306 no profile; Jehantel/Pukno unspawned; director empty",
+   "id": 111301,
+   "impl": "template HOLD (documentedTargets only)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2206306,
+      "count": 4,
+      "mob": null,
+      "name": "Qiqirn Shirrer"
+     }
+    ],
+    "status": "missing profile; HOLD, not invented"
+   }
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 111301,
+   "code": "Brd0j2",
+   "gap": "Jehantel spawn; public trigger owner",
+   "id": 111302,
+   "impl": "template live private adapter",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2101413,
+      "mob": 3003,
+      "name": "Bardi",
+      "skill": 6002
+     }
+    ],
+    "status": "exact row exists; verified"
+   }
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 111302,
+   "code": "Brd0j3",
+   "gap": "Jehantel spawn; public trigger owner",
+   "id": 111303,
+   "impl": "template live private adapter (mob row ADDED)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2101509,
+      "mob": 3080,
+      "name": "Phaia",
+      "skill": 6025
+     }
+    ],
+    "status": "row 3080 added this phase (job 4, 47/47 staged, NM skill 6025; HP/MP engine-derived per block convention)"
+   }
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111303,
+   "code": "Brd0j4",
+   "gap": "no profiles/copies/waves/owners",
+   "id": 111304,
+   "impl": "template HOLD (documentedTargets only)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2206412,
+      "mob": null,
+      "name": "Ixali Scout"
+     },
+     {
+      "actor": 2201428,
+      "mob": null,
+      "name": "Scout Wolf"
+     }
+    ],
+    "status": "missing; HOLD"
+   }
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111304,
+   "code": "Brd0j5",
+   "gap": "coffer actors/transforms/bindings",
+   "id": 111305,
+   "impl": "template HOLD (interactions, no objectives)",
+   "kills": null
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111305,
+   "code": "Brd0j6",
+   "gap": "copies/waves/kill rule/owners; 3117 no CNJ spells",
+   "id": 111306,
+   "impl": "template HOLD (documentedTargets only)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2206413,
+      "mob": 3117,
+      "name": "Yotoli Hueloc"
+     },
+     {
+      "actor": 2206414,
+      "mob": null,
+      "name": "Ixali sabreur"
+     },
+     {
+      "actor": 2206415,
+      "mob": null,
+      "name": "Ixali strongbeak"
+     },
+     {
+      "actor": 2206416,
+      "mob": null,
+      "name": "Ixali bravewing"
+     },
+     {
+      "actor": 2206417,
+      "mob": null,
+      "name": "Ixali fogcaller"
+     }
+    ],
+    "status": "all missing; HOLD"
+   }
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 0,
+   "code": "Pld0j1",
+   "gap": "retail count/formation/levels",
+   "id": 111281,
+   "impl": "template live private adapter (mob rows ADDED)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2201807,
+      "mob": 32731,
+      "name": "Wandering Soldier"
+     },
+     {
+      "actor": 2201808,
+      "mob": 32732,
+      "name": "Wandering Mage"
+     },
+     {
+      "actor": 2204318,
+      "mob": 32733,
+      "name": "Wandering Bogy"
+     },
+     {
+      "actor": 2206901,
+      "mob": 32734,
+      "name": "Specter"
+     }
+    ],
+    "status": "rows added this phase mirroring pld0j1_undead.sql (jobs 8/22/22/22, lvl 30, skills 88/5061/32/32); one-copy roster is adapter policy"
+   }
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 111281,
+   "code": "Pld0j2",
+   "gap": "public trigger owner",
+   "id": 111282,
+   "impl": "template live private adapter (mob row ADDED)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2102609,
+      "mob": 3000,
+      "name": "Alux",
+      "skill": 42
+     }
+    ],
+    "status": "row 3000 added this phase (job 23, 42/42 staged, family skill 42; HP/MP engine-derived per block convention)"
+   }
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 111282,
+   "code": "Pld0j3",
+   "gap": "public trigger owner",
+   "id": 111283,
+   "impl": "template live private adapter",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2107614,
+      "mob": 3078,
+      "name": "Old Six-arms",
+      "skill": 6024
+     }
+    ],
+    "status": "exact row exists; verified"
+   }
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111283,
+   "code": "Pld0j4",
+   "gap": "coffer actors/transforms/bindings",
+   "id": 111284,
+   "impl": "template HOLD (interactions, no objectives)",
+   "kills": null
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 111284,
+   "code": "Pld0j5",
+   "gap": "soldier roster; HP/MP analogue; scene ownership",
+   "id": 111285,
+   "impl": "template live slice (mob row ADDED)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2289035,
+      "mob": 3064,
+      "name": "Jenlyns Straightblade",
+      "skill": 15
+     }
+    ],
+    "status": "row 3064 added this phase (job 3, 52/52 staged, skill 15; HP/MP engine-derived per block convention); soldiers unresolved"
+   }
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111285,
+   "code": "Pld0j6",
+   "gap": "3069/3070 no rows; allies/waves/owners",
+   "id": 111286,
+   "impl": "template HOLD (documentedTargets only)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2201706,
+      "mob": 3069,
+      "name": "Manipulated Eye"
+     },
+     {
+      "actor": 2202503,
+      "mob": 3070,
+      "name": "Manipulated Ogre"
+     }
+    ],
+    "status": "missing; HOLD"
+   }
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 0,
+   "code": "War0j1",
+   "gap": "retail count; public owner",
+   "id": 111201,
+   "impl": "template live private adapter (mob row ADDED)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2203001,
+      "count": 4,
+      "mob": 32730,
+      "name": "Antling Worker"
+     }
+    ],
+    "status": "row 32730 added this phase mirroring war0j1_antling_workers.sql (job 8, lvl 30, ant-crawler skill 3); four-copy count is adapter policy"
+   }
+  },
+  {
+   "avail": "disabled (adapter)",
+   "chain": 111201,
+   "code": "War0j2",
+   "gap": "public trigger owner",
+   "id": 111202,
+   "impl": "template live private adapter",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2100309,
+      "mob": 3097,
+      "name": "Sirocco",
+      "skill": 6031
+     }
+    ],
+    "status": "exact row exists; verified"
+   }
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111202,
+   "code": "War0j3",
+   "gap": "no profile/count/lifecycle",
+   "id": 111203,
+   "impl": "template HOLD (documentedTargets only)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2201208,
+      "mob": null,
+      "name": "Canyon Condor"
+     }
+    ],
+    "status": "missing; HOLD"
+   }
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111203,
+   "code": "War0j4",
+   "gap": "coffer actors/transforms/bindings",
+   "id": 111204,
+   "impl": "template HOLD (interactions, no objectives)",
+   "kills": null
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111204,
+   "code": "War0j5",
+   "gap": "no profile/spawn owner",
+   "id": 111205,
+   "impl": "template HOLD (documentedTargets only)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2100804,
+      "mob": null,
+      "name": "Audhumbla"
+     }
+    ],
+    "status": "missing; HOLD (2100801/3045 is a different NM, not substituted)"
+   }
+  },
+  {
+   "avail": "disabled (HOLD)",
+   "chain": 111205,
+   "code": "War0j6",
+   "gap": "Cliffdiver profile/copies/waves; scene ownership",
+   "id": 111206,
+   "impl": "template HOLD (documentedTargets only)",
+   "kills": {
+    "needed": [
+     {
+      "actor": 2289037,
+      "mob": 3012,
+      "name": "Curious Gorge"
+     },
+     {
+      "actor": 2201209,
+      "mob": null,
+      "name": "Cliffdiver"
+     }
+    ],
+    "status": "both missing; HOLD"
+   }
+  }
+ ]
+}

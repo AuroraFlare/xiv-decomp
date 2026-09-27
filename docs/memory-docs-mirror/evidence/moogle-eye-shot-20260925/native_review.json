@@ -1,0 +1,484 @@
+{
+  "schema": 1,
+  "client_version": "2012.09.19.0001",
+  "scope": "Eye Shot visual warning inspection",
+  "sources": [
+    {
+      "path": "client/chara/mon/m701/act/emp_emp/wss/base/0007",
+      "bytes": 430752,
+      "sha256": "a85035f95dff8f2f08833c486c1cfc800806913460d3ddc5687621f59dfb2125"
+    },
+    {
+      "path": "client/chara/mon/m701/act/emp_emp/bid/base/0000",
+      "bytes": 611712,
+      "sha256": "9b0c73a319c1817a96507ec8c6c3799f9c08e96e243a78c01aa0c17965fb7514"
+    },
+    {
+      "path": "data/01/03/00/97.DAT",
+      "bytes": 113940,
+      "sha256": "54a8221c7d542793879c6c57d1ed259e5046fd5eed04495f55f502e220801790"
+    }
+  ],
+  "game_command_rows": [
+    {
+      "command": 23419,
+      "offset": 73260,
+      "bytes": 180,
+      "sha256": "74c8ef4042bfe55b0e785c93e9b3b2e667194a960b2bf6499cecdebaf79c5bc7"
+    },
+    {
+      "command": 23420,
+      "offset": 73440,
+      "bytes": 180,
+      "sha256": "74c8ef4042bfe55b0e785c93e9b3b2e667194a960b2bf6499cecdebaf79c5bc7"
+    }
+  ],
+  "schedules": [
+    {
+      "source": "client/chara/mon/m701/act/emp_emp/wss/base/0007",
+      "depth": "outer",
+      "id": "m701_0011",
+      "path": "vfx\\mon\\mowgli_701\\skl11\\m701_0011\\bin\\m701_0011",
+      "bytes": 1200,
+      "sha256": "0a8fdd18b2994e256bde6355848744cc3633089388e3f4b6bc2cbb566e903474",
+      "header": {
+        "scb_version": 2,
+        "scb_abi_hex": "0x00300000",
+        "outer_duration_units": 9000000,
+        "authored_block_count": 1,
+        "clip_count": 5,
+        "clip_classes": "BindActorClip;RaptureSoundClip;ActionClip;RaptureEffectAtoBClip;RaptureActionSelectDamageMccClip",
+        "ridt_count": 2,
+        "ridt_resources": "skl_c001b001;m701_11_tar",
+        "ridt_types": "brt;bca",
+        "cact_units": 9,
+        "actor_count": 1,
+        "actor_names": "ProxyActor_0011"
+      },
+      "actors": [
+        {
+          "actor_index": 0,
+          "actor_name": "ProxyActor_0011",
+          "record_offset_hex": "0xE0",
+          "record_bytes": 116,
+          "record_sha256": "4bbd0384d7606f50814a649ea349f7c0cdd335b9e8d2043f0d8836c46f6b83ed",
+          "remaining_strings": "TARGET;Empty"
+        }
+      ],
+      "blocks": [
+        {
+          "block_ordinal": 0,
+          "block_label": "Block000",
+          "block_label_raw_hex": "42 6c 6f 63 6b 30 30 30 00 00 00 00 00 00 00 00",
+          "block_offset_hex": "0x220",
+          "duration_units": 600000,
+          "duration_seconds": 0.6,
+          "entry_count": 5,
+          "padding_bytes": 0,
+          "clip_classes": "BindActorClip;RaptureSoundClip;ActionClip;RaptureEffectAtoBClip;RaptureActionSelectDamageMccClip"
+        }
+      ],
+      "clips": [
+        {
+          "clip_class": "BindActorClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureSoundClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "ActionClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "m701_11_tar",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureEffectAtoBClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureActionSelectDamageMccClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.08,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        }
+      ]
+    },
+    {
+      "source": "client/chara/mon/m701/act/emp_emp/wss/base/0007",
+      "depth": "outer",
+      "id": "mon_main",
+      "path": "vfx\\mon\\mowgli_701\\skl11\\mon_main\\bin\\mon_main",
+      "bytes": 1968,
+      "sha256": "623e0fd55b3a0b175db5a8c8748581536f9b5d5366127149abd67c5e23677d45",
+      "header": {
+        "scb_version": 2,
+        "scb_abi_hex": "0x00300000",
+        "outer_duration_units": 9000000,
+        "authored_block_count": 1,
+        "clip_count": 11,
+        "clip_classes": "BindActorClip;RaptureSoundClip;RaptureServerMoveStopClip;ActionClip;RaptureClientMoveStopClip;RaptureStatusLockClip;MotionClip;RaptureCasterSchClip;ClipSyncClip",
+        "ridt_count": 6,
+        "ridt_resources": "skl_m701b001;cbbm_sp_a02;cbbm_sp_a02;m701_11_ca3;m701_11_c2;m701_11_c1",
+        "ridt_types": "brt;bcm;btm;bca;bca;bca",
+        "cact_units": 9,
+        "actor_count": 1,
+        "actor_names": "ProxyActor_0011"
+      },
+      "actors": [
+        {
+          "actor_index": 0,
+          "actor_name": "ProxyActor_0011",
+          "record_offset_hex": "0xF0",
+          "record_bytes": 116,
+          "record_sha256": "21ae4d01ec6c4bfc3f18faa8deb876b8f046ef6aafb21b774cb748c26446b600",
+          "remaining_strings": "CASTER;Empty"
+        }
+      ],
+      "blocks": [
+        {
+          "block_ordinal": 0,
+          "block_label": "Block000",
+          "block_label_raw_hex": "42 6c 6f 63 6b 30 30 30 00 00 00 00 00 00 00 00",
+          "block_offset_hex": "0x240",
+          "duration_units": 1710000,
+          "duration_seconds": 1.71,
+          "entry_count": 11,
+          "padding_bytes": 12,
+          "clip_classes": "BindActorClip;RaptureSoundClip;RaptureServerMoveStopClip;ActionClip;ActionClip;RaptureClientMoveStopClip;RaptureStatusLockClip;MotionClip;ActionClip;RaptureCasterSchClip;ClipSyncClip"
+        }
+      ],
+      "clips": [
+        {
+          "clip_class": "BindActorClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureSoundClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureServerMoveStopClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "ActionClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "m701_11_c2",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "ActionClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "m701_11_c1",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureClientMoveStopClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureStatusLockClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "MotionClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "cbbm_sp_a02",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "ActionClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.21,
+          "resource_ref_id": "m701_11_ca3",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureCasterSchClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.25,
+          "resource_ref_id": "",
+          "scheduler_target_name": "m701_0011",
+          "scheduler_target_path": "gra_rapture\\vfx\\mon\\mowgli_701\\skl11\\m701_0011\\bin\\m701_0011.sch.pkl"
+        },
+        {
+          "clip_class": "ClipSyncClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 1.7,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        }
+      ]
+    },
+    {
+      "source": "client/chara/mon/m701/act/emp_emp/wss/base/0007",
+      "depth": "outer",
+      "id": "main",
+      "path": "vfx\\system\\shoot_mon\\main\\bin\\main",
+      "bytes": 1936,
+      "sha256": "7da7c8b13a2096a23de59d6719c2e2cad385cb8e6e295974273b33e7a08c0422",
+      "header": {
+        "scb_version": 2,
+        "scb_abi_hex": "0x00300000",
+        "outer_duration_units": 9000000,
+        "authored_block_count": 1,
+        "clip_count": 23,
+        "clip_classes": "BindActorClip;RaptureCancelChantSyncClip;RaptureActionSelectClip;RaptureCasterManagedSchClip;ClipSyncClip",
+        "ridt_count": 1,
+        "ridt_resources": "skl_c001b001",
+        "ridt_types": "brt",
+        "cact_units": 9,
+        "actor_count": 1,
+        "actor_names": "ProxyActor_0011"
+      },
+      "actors": [
+        {
+          "actor_index": 0,
+          "actor_name": "ProxyActor_0011",
+          "record_offset_hex": "0xE0",
+          "record_bytes": 116,
+          "record_sha256": "21ae4d01ec6c4bfc3f18faa8deb876b8f046ef6aafb21b774cb748c26446b600",
+          "remaining_strings": "CASTER;Empty"
+        }
+      ],
+      "blocks": [
+        {
+          "block_ordinal": 0,
+          "block_label": "Block000",
+          "block_label_raw_hex": "42 6c 6f 63 6b 30 30 30 00 00 00 00 00 00 00 00",
+          "block_offset_hex": "0x220",
+          "duration_units": 600000,
+          "duration_seconds": 0.6,
+          "entry_count": 23,
+          "padding_bytes": 4,
+          "clip_classes": "BindActorClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureActionSelectClip;RaptureCasterManagedSchClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCancelChantSyncClip;RaptureCasterManagedSchClip;ClipSyncClip"
+        }
+      ],
+      "clips": [
+        {
+          "clip_class": "BindActorClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureActionSelectClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureCasterManagedSchClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "sht00",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureCasterManagedSchClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.1,
+          "resource_ref_id": "",
+          "scheduler_target_name": "mon_main",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "ClipSyncClip",
+          "actor_name": "ProxyActor_0011",
+          "start_seconds": 0.58,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        }
+      ]
+    },
+    {
+      "source": "client/chara/mon/m701/act/emp_emp/bid/base/0000",
+      "depth": "outer/RES:s_bid00",
+      "id": "casb0",
+      "path": "chr\\sch\\mon\\m701\\emp_emp\\casb0\\bin\\casb0",
+      "bytes": 1248,
+      "sha256": "91c1581b08596814f3dfce853e6736888b121d6178aec2dce4277a3508bd91e7",
+      "header": {
+        "scb_version": 2,
+        "scb_abi_hex": "0x00300000",
+        "outer_duration_units": 9000000,
+        "authored_block_count": 1,
+        "clip_count": 4,
+        "clip_classes": "BindActorClip;RaptureClientMoveStopClip;RaptureServerMoveStopClip;MotionClip",
+        "ridt_count": 4,
+        "ridt_resources": "m008e001;cbbm_sp_b_1;cbbm_sp_b_1;skl_m008b001",
+        "ridt_types": "brt;bcm;btm;brt",
+        "cact_units": 9,
+        "actor_count": 1,
+        "actor_names": "caster"
+      },
+      "actors": [
+        {
+          "actor_index": 0,
+          "actor_name": "caster",
+          "record_offset_hex": "0xD0",
+          "record_bytes": 116,
+          "record_sha256": "9b291218e10edaee9fa0349c99cb2adb0550a22098b76ca4b9680cd93794e7ee",
+          "remaining_strings": "caster;Empty"
+        }
+      ],
+      "blocks": [
+        {
+          "block_ordinal": 0,
+          "block_label": "Block000",
+          "block_label_raw_hex": "42 6c 6f 63 6b 30 30 30 00 00 00 00 00 00 00 00",
+          "block_offset_hex": "0x220",
+          "duration_units": 300000,
+          "duration_seconds": 0.3,
+          "entry_count": 4,
+          "padding_bytes": 8,
+          "clip_classes": "BindActorClip;RaptureClientMoveStopClip;RaptureServerMoveStopClip;MotionClip"
+        }
+      ],
+      "clips": [
+        {
+          "clip_class": "BindActorClip",
+          "actor_name": "caster",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureClientMoveStopClip",
+          "actor_name": "caster",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "RaptureServerMoveStopClip",
+          "actor_name": "caster",
+          "start_seconds": 0.0,
+          "resource_ref_id": "",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        },
+        {
+          "clip_class": "MotionClip",
+          "actor_name": "caster",
+          "start_seconds": 0.0,
+          "resource_ref_id": "cbbm_sp_b_1",
+          "scheduler_target_name": "",
+          "scheduler_target_path": ""
+        }
+      ]
+    }
+  ],
+  "external_vfx_scan": {
+    "files": 828,
+    "bytes": 146857660,
+    "canonical_inventory_sha256": "af1d3375a66a6a3cfc5f9088d7427f569186a40646683fb066359b19dc2b1947",
+    "ascii_search": "m701|mowgli|lock.?on|sight|snip|[\\\\/]mark",
+    "matches": [
+      {
+        "path": "client/vfx/lib/3109",
+        "bytes": 36736,
+        "sha256": "936c74e08e1849e4030b482275ba2832448a41fe13440c94e30537a9c27f9797",
+        "strings": [
+          "D:\\gra_rapture\\vfx\\quest\\man406\\marker_bt\\veff\\marker_bt.veffbin",
+          "d:\\gra_rapture\\vfx\\quest\\man406\\marker_bt\\veff\\marker_bt.veff",
+          "sch\\marker_bt\\main\\bin\\4dKKhRm_bt",
+          "sch\\marker_bt\\main\\bin\\mark_bt",
+          "sch\\marker_bt\\main\\mark_bt\\VLeafIns\\bin\\0dv0Drvleafinst"
+        ]
+      },
+      {
+        "path": "client/vfx/lib/3110",
+        "bytes": 36736,
+        "sha256": "5e7cea2a26f2e97b7409429e7beefbd943c7b00d53960051acd4a3d9cc422cc4",
+        "strings": [
+          "D:\\gra_rapture\\vfx\\quest\\man406\\marker_bt\\veff\\marker_bt2.veffbin",
+          "d:\\gra_rapture\\vfx\\quest\\man406\\marker_bt\\veff\\marker_bt2.veff",
+          "sch\\marker_bt2\\main\\bin\\4EmMwImrk_bt2",
+          "sch\\marker_bt2\\main\\bin\\mrk_bt2",
+          "sch\\marker_bt2\\main\\mrk_bt2\\VLeafIns\\bin\\0wtF4jvleafinst"
+        ]
+      },
+      {
+        "path": "client/vfx/mgc/1135",
+        "bytes": 235376,
+        "sha256": "25d6f06e472cccca57f186ba95c5b808b55fc5b0930d23fcd424c7a960f74e6f",
+        "strings": [
+          "0dl1ZUm701_tar",
+          "gra_rapture\\vfx\\magic\\mgc\\mgc1_1135\\m701_0025\\bin\\m701_0025.sch.pkl",
+          "m701_0025",
+          "m701_0025\\bin\\0dl1ZUm701_tar",
+          "m701_0025\\bin\\m701_0025",
+          "m701_0025\\bin\\m701_tar",
+          "m701_0025\\m701_tar\\VLeafIns\\bin\\2gIBsIvleafinst",
+          "m701_tar",
+          "skl_m701b001"
+        ]
+      }
+    ]
+  },
+  "finding": "Native warning start selector, target binding and cancel path remain unresolved.",
+  "runtime_visual_selector": null,
+  "boundaries": [
+    "WSS7 contains shot/impact VFX and damage reaction; no independently identified warning selector.",
+    "casb0 contains caster movement stops and motion, with no target-effect clip.",
+    "23419 and 23420 gameCommand rows are identical; their shared field75 value does not identify a warning timer.",
+    "External VFX text scanning is source triage, not an exhaustive semantic proof of absence.",
+    "Actor icon 0x145, NPC hate marker and player party markings are distinct unproven warning substitutes.",
+    "No runtime behavior, command timing, player status or installed client assets changed by this audit."
+  ]
+}

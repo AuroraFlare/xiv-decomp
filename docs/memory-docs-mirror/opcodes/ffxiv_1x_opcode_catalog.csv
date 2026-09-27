@@ -1,0 +1,156 @@
+opcode,scope,direction,status,name,payload_or_trigger,notes,source
+0x0001,game,bidirectional,old_confirmed,Ping/Pong,time echo,Client sends ping; server replies with PongPacket,local code + wiki
+0x0002,game,server_to_client,old_confirmed,Login continue/unknown,login follow-up,Server sends _0x02/_0x2 during login,local code + wiki
+0x0003,game,bidirectional,old_confirmed,Chat message,chat socket or game message,Say/shout/tell/party message handling depends on channel,local code + wiki
+0x0005,game,server_to_client,old_confirmed,SetMapPacket,map id,Sets current map,local code + wiki
+0x0006,game,client_to_server,old_confirmed,LanguageCodePacket,language code,Client ready/language packet; server treats it as safe to continue login,local code + wiki
+0x0007,game,bidirectional,old_confirmed,Zone ready / mass delete end,zone-in complete or delete-all actors,Client sends zone-in completion; server can send DeleteAllActorsPacket,local code + wiki
+0x0008,game,bidirectional,old_confirmed,Ping/keepalive or actor-delete exception,world ping / actor list,World server ping packet; wiki also notes mass-delete exception list,local code + wiki
+0x000C,game,server_to_client,old_confirmed,SetMusicPacket,music id,Sets zone/music state,local code + wiki
+0x000D,game,server_to_client,old_confirmed,SetWeatherPacket,weather id,Sets weather,local code + wiki
+0x000E,game,server_to_client,old_confirmed,LogoutPacket,logout request/notice,Logout packet,local code + wiki
+0x0010,game,server_to_client,old_confirmed,SetDalamudPacket,dalamud/state byte,Login-era world state packet,local code + wiki
+0x0011,game,server_to_client,old_confirmed,QuitPacket,quit game,Requests client quit,local code + wiki
+0x00C7,game,client_or_chat,old_wiki,Party message,chat payload,Wiki-known party message opcode,wiki
+0x00C8,game,client_or_chat,old_confirmed,TellChatMessagePacket,tell payload,World server intercepts tells,local code + wiki
+0x00C9,game,client_or_chat,old_confirmed,PartyChatMessagePacket,party chat payload,World server intercepts party chat,local code + wiki
+0x00CA,game,bidirectional,old_confirmed,AddActorPacket / UpdatePlayerPositionPacket,actor add or position update,Server creates actor; client sends position update,local code + wiki
+0x00CB,game,server_to_client,old_confirmed,RemoveActorPacket,actor id,Deletes one actor,local code + wiki
+0x00CC,game,bidirectional,old_confirmed,ActorInstantiatePacket / LockTargetPacket,actor init or locked target,Server sends class/script init; client lock-target uses same opcode,local code + wiki
+0x00CD,game,client_to_server,old_confirmed,SetTargetPacket,target actor ids,Client target selection / attack target,local code + wiki
+0x00CE,game,bidirectional,old_confirmed,SetActorPositionPacket,position,Server sets actor position; client also emits during some spawn/cutscene cases,local code + wiki
+0x00CF,game,bidirectional,old_confirmed,MoveActorToPositionPacket / CountdownRequestPacket,position or countdown,Server movement packet; client countdown request,local code + wiki
+0x00D0,game,server_to_client,old_confirmed,SetActorSpeedPacket,speeds,Sets actor speed values,local code + wiki
+0x00D2,game,server_to_client,old_wiki,Unknown mob interaction,mob actor id,Wiki notes player action against mob; no local packet class found,wiki
+0x00D3,game,server_to_client,old_confirmed,SetActorTargetAnimatedPacket,target actor,Animated target change,local code + wiki
+0x00D4,game,server_to_client,old_wiki,TurnActorToTarget,target actor,Wiki-known actor-facing packet; no local packet class found,wiki
+0x00D6,game,server_to_client,old_confirmed,SetActorAppearancePacket,appearance blob,Updates actor appearance,local code + wiki
+0x00D7,game,server_to_client,old_wiki,FlashAppearanceAndTarget,appearance/target state,Wiki notes appearance flash plus target set; good shifted-opcode fingerprint candidate,wiki
+0x00D8,game,server_to_client,old_confirmed,SetActorBGPropertiesPacket,bg/map object bind,Binds background/map object to actor,local code + wiki
+0x00D9,game,server_to_client,old_confirmed,PlayBGAnimation,animation name,Plays background object animation,local code + wiki
+0x00DA,game,server_to_client,old_confirmed,PlayAnimationOnActorPacket,animation/effect,Plays particle/animation on actor,local code + wiki
+0x00DB,game,server_to_client,old_confirmed,SetActorTargetPacket,target actor,Non-animated target change,local code + wiki
+0x00DC,game,server_to_client,old_wiki,SetActorTargetUnknown,target state,Wiki-known target packet variant; no local packet class found,wiki
+0x00DD,game,server_to_client,old_wiki,Unknown actor state,unknown,Wiki-known gap in actor/target packet cluster,wiki
+0x00DE,game,server_to_client,old_wiki,ClearActorTarget,target state,Wiki notes target clear behavior; strong shifted-opcode fingerprint candidate,wiki
+0x00DF,game,server_to_client,old_wiki,SetActorTargetVariant,target actor,Wiki-known target packet variant; no local packet class found,wiki
+0x00E0,game,server_to_client,old_wiki,PlayAnimationEffect,animation/effect,Wiki notes animation/effect with unknown second parameter,wiki
+0x00E1,game,server_to_client,old_confirmed,ActorDoEmotePacket,emote id,Plays actor emote,local code + wiki
+0x00E2,game,server_to_client,old_confirmed,_0xE2Packet,ui/mapchange state,Mapchange and show/hide UI helper,local code + wiki
+0x00E3,game,server_to_client,new_confirmed,SetActorQuestGraphicPacket,actor quest/important icon,Actor/object quest graphic; not arbitrary map coordinate marker,local code + investigation
+0x00E5,game,server_to_client,old_confirmed,StartCountdownPacket,countdown data,Starts countdown UI,local code + wiki
+0x012C,game,unknown,old_wiki,Unknown event prefix,unknown,Wiki-known gap immediately before event start; no local packet class found,wiki
+0x012D,game,client_to_server,new_confirmed,EventStartPacket,event owner/name + lua params,Full-map journal View Map requests arrive through command event starts,local code + investigation
+0x012E,game,bidirectional,old_confirmed,SetTalkEventCondition / EventUpdatePacket,event condition or event update,Server sets talk condition; client sends event updates,local code + wiki
+0x012F,game,bidirectional,new_confirmed,KickEventPacket / WorkSyncRequestPacket,event kick or work sync request,Client work sync request; useful when tracing map/journal/guildleve UI,local code + investigation
+0x0130,game,server_to_client,old_confirmed,RunEventFunctionPacket,function name + lua params,Server runs client event function,local code + wiki
+0x0131,game,bidirectional,old_confirmed,EndEventPacket / UpdateItemPackagePacket,end event or item package request,Server ends event; client asks for item package,local code + wiki
+0x0132,game,server_to_client,old_confirmed,_0x132Packet,pc creation/setup unknown,Wiki labels setup on PC creation; local send packet exists,local code + wiki
+0x0133,game,bidirectional,new_confirmed,GenericDataPacket / GroupCreatedPacket,lua params requestedData/qtmap/activegl or group id,Full-map journal data rides here; client group-created confirm also uses this opcode,local code + investigation
+0x0133:qtmap,game,server_to_client,new_confirmed,requestedData qtmap,"requestedData, qtmap, questId/leveId, markerIds","Full-map View Map marker route; marker ids are client DAT lookups in quest_marker.csv for position/icon/text/class. Active guildleves require owner=activeLeveId.",local scripts + investigation
+0x0133:activegl,game,server_to_client,new_confirmed,requestedData activegl,"requestedData, activegl, leveId, padding...",Journal-side active guildleve list/detail response,local scripts + investigation
+0x0134,game,server_to_client,old_confirmed,SetActorStatePacket,state value,Sets actor state,local code + wiki
+0x0135,game,client_to_server,new_confirmed,AchievementProgressRequestPacket,achievement id,Client requests achievement progress; server responds with progress packet,local code
+0x0136,game,server_to_client,old_confirmed,SetEventStatusPacket,event status,Enables/disables event status,local code + wiki
+0x0137,game,server_to_client,new_confirmed,SetActorPropetyPacket,actor work/property sync,SyncMemory/actor property packet; guildleve markerX/Y/Z values drive minimap-style marker state,local code + investigation
+0x0137:guildleve_marker,game,server_to_client,new_confirmed,guildleveWork marker sync,guildleveWork.markerX/Y/Z[n],Dynamic guildleve marker coordinates are sent as actor/director/player work properties,local code + investigation
+0x0138,game,server_to_client,old_wiki,SetTargetTime,time value,Wiki-known event/target timing packet; no local packet class found,wiki
+0x0139,game,server_to_client,old_confirmed,CommandResultX01Packet,battle action result,General attack/log/effect result x01,local code + wiki
+0x013A,game,server_to_client,old_confirmed,BattleActionX10Packet / CommandResultX10Packet,battle action result,EXP/chain style action result x10,local code + wiki
+0x013B,game,server_to_client,old_confirmed,BattleActionX18Packet / CommandResultX18Packet,battle action result,Battle action result x18,local code + wiki
+0x013C,game,server_to_client,old_confirmed,CommandResultX00Packet,battle action result,No-log/effect action result; used by some mount animation flows,local code + wiki
+0x013D,game,server_to_client,old_confirmed,SetActorNamePacket,name string,Sets actor name,local code + wiki
+0x0143,game,server_to_client,old_confirmed,DeleteGroupPacket,group id,Deletes group,local code + wiki
+0x0145,game,server_to_client,old_confirmed,SetActorIconPacket,icon/stat,Actor icon/extra stat change,local code + wiki
+0x0146,game,server_to_client,old_confirmed,InventorySetBeginPacket,inventory type/count,Inventory chunk start,local code + wiki
+0x0147,game,server_to_client,old_confirmed,InventorySetEndPacket,empty/end,Inventory chunk end,local code + wiki
+0x0148,game,server_to_client,old_confirmed,InventoryListX01Packet,item entry,Inventory add/list x01,local code + wiki
+0x0149,game,server_to_client,old_confirmed,InventoryListX08Packet / InventoryItemEndPacket,item entries,Inventory add/list x08 or item end packet,local code + wiki
+0x014A,game,server_to_client,old_confirmed,InventoryListX16Packet / InventoryItemPacket,item entries,Inventory add/list x16,local code + wiki
+0x014B,game,server_to_client,old_confirmed,InventoryListX32Packet,item entries,Inventory add/list x32,local code + wiki
+0x014C,game,server_to_client,old_confirmed,InventoryListX64Packet,item entries,Inventory add/list x64,local code + wiki
+0x014D,game,server_to_client,old_confirmed,LinkedItemListX01Packet,equipment/item entry,Linked/equipment item list x01,local code + wiki
+0x014E,game,server_to_client,old_confirmed,LinkedItemListX08Packet / SetInitialEquipmentPacket,equipment entries,Linked/equipment item list x08,local code + wiki
+0x014F,game,server_to_client,old_confirmed,LinkedItemListX16Packet,equipment entries,Linked/equipment item list x16,local code + wiki
+0x0150,game,server_to_client,old_confirmed,LinkedItemListX32Packet,equipment entries,Linked/equipment item list x32,local code + wiki
+0x0151,game,server_to_client,old_confirmed,LinkedItemListX64Packet,equipment entries,Linked/equipment item list x64,local code + wiki
+0x0152,game,server_to_client,old_confirmed,InventoryRemoveX01Packet,item removal,Remove item x01,local code + wiki
+0x0153,game,server_to_client,old_confirmed,InventoryRemoveX08Packet,item removals,Remove item x08,local code + wiki
+0x0154,game,server_to_client,old_confirmed,InventoryRemoveX16Packet,item removals,Remove item x16,local code + wiki
+0x0155,game,server_to_client,old_confirmed,InventoryRemoveX32Packet,item removals,Remove item x32,local code + wiki
+0x0156,game,server_to_client,old_confirmed,InventoryRemoveX64Packet,item removals,Remove item x64,local code + wiki
+0x0157-0x016A,game,server_to_client,old_wiki,GameMessagePacket family,text ids + params,Text-sheet/custom-sender/display-name/no-source message packet family,wiki + local GameMessagePacket
+0x016B,game,server_to_client,old_confirmed,SetNoticeEventCondition,condition name,Sets notice event condition,local code + wiki
+0x016C,game,server_to_client,old_confirmed,SetEmoteEventCondition,condition name,Sets emote event condition,local code + wiki
+0x016D,game,server_to_client,old_confirmed,InventoryBeginChangePacket,actor id,Inventory change begin,local code + wiki
+0x016E,game,server_to_client,old_confirmed,InventoryEndChangePacket,actor id,Inventory change end,local code + wiki
+0x016F,game,server_to_client,new_confirmed,SetPushEventConditionWithCircle,radius/outward/silent/condition,World interaction trigger circle; not the yellow full-map circle,local code + investigation
+0x0170,game,server_to_client,new_confirmed,SetPushEventConditionWithFan,fan trigger data,World interaction trigger fan; not a map marker,local code + investigation
+0x0171,game,server_to_client,old_wiki,Unknown push/event gap,unknown,Wiki-known gap near push event conditions; no local packet class found,wiki
+0x0172,game,server_to_client,old_wiki,Unknown push/event gap,unknown,Wiki-known gap near push event conditions; no local packet class found,wiki
+0x0173,game,server_to_client,old_wiki,Unknown push/event gap,unknown,Wiki-known gap near push event conditions; no local packet class found,wiki
+0x0174,game,server_to_client,old_wiki,Unknown push/event gap,unknown,Wiki-known gap near push event conditions; no local packet class found,wiki
+0x0175,game,server_to_client,new_confirmed,SetPushEventConditionWithTriggerBox,box trigger data,World interaction trigger box; not a map marker,local code + investigation
+0x0176,game,server_to_client,old_wiki,EquipRelatedUnknown,equipment state,Wiki notes equip-related packet; compare against modern equipment/gearset handlers,wiki
+0x0177,game,server_to_client,old_confirmed,SetActorStatusPacket,status index/value,Sets one status effect slot,local code + wiki
+0x0179,game,server_to_client,old_confirmed,SetActorStatusAllPacket,status list,Sets all status effects,local code + wiki
+0x017A,game,server_to_client,old_confirmed,SynchGroupWorkValuesPacket,group work props,Group work property sync,local code + wiki
+0x017B,game,server_to_client,old_confirmed,SetActorIsZoningPacket,zone info,Marks actor as zoning/in different zone,local code + wiki
+0x017C-0x0186,game,server_to_client,old_confirmed,Group/content member packet family,group header/begin/body/end,Group and content member list chunks,local code + wiki
+0x0187,game,server_to_client,old_wiki,SingleGroupRelated,group id/name,Wiki notes single group packet with FFFFFFFF and possible name field,wiki
+0x0188-0x018A,game,server_to_client,old_confirmed,Named group/linkshell packet family,linkshell/group state,Create named group and set active linkshell,local code + wiki
+0x018B,game,server_to_client,old_wiki,GroupUpdateMemberX01,group member,Wiki-known group member update x1; no local packet class found,wiki
+0x018C,game,server_to_client,old_wiki,GroupUpdateMemberX08,group members,Wiki-known group member update x8; no local packet class found,wiki
+0x018D,game,server_to_client,old_wiki,GroupUpdateMemberX16,group members,Wiki-known group member update x16; no local packet class found,wiki
+0x018E,game,server_to_client,old_wiki,ChangeSystemStat,system stat,Wiki-known system stat packet; no local packet class found,wiki
+0x018F,game,server_to_client,old_wiki,UnknownTagStart,tag/group state,Wiki notes possible start tag; sequence with 0x0190/0x0191,wiki
+0x0190,game,server_to_client,old_wiki,UnknownTagBody,tag/group state,Wiki notes possible body opcode; sequence with 0x018F/0x0191,wiki
+0x0191,game,server_to_client,old_wiki,UnknownTagEnd,tag/group state,Wiki notes possible end tag; sequence with 0x018F/0x0190,wiki
+0x0192,game,server_to_client,old_wiki,Unknown group/control gap,unknown,Wiki-known gap before control packet,wiki
+0x0193,game,server_to_client,old_wiki,ControlStopStart,control state,Wiki notes stop/start control values 0x14/0x15; useful shifted-opcode candidate,wiki
+0x0194,game,server_to_client,old_confirmed,SetGrandCompanyPacket,company data,Grand Company state,local code + wiki
+0x0195,game,server_to_client,old_confirmed,SetEnmityIndicatorPacket,actor id + enmity level,Sets enmity indicator,local code + wiki
+0x0196,game,server_to_client,old_confirmed,SetSpecialEventWorkPacket,event work,Special event work packet,local code + wiki
+0x0197,game,server_to_client,old_confirmed,SetCurrentMountChocoboPacket,chocobo appearance,Current chocobo mount appearance,local code + wiki
+0x0198,game,server_to_client,old_confirmed,SetChocoboNamePacket,name,Chocobo name,local code + wiki
+0x0199,game,server_to_client,old_confirmed,SetHasChocoboPacket,boolean/state,Has chocobo flag,local code + wiki
+0x019A-0x019F,game,server_to_client,old_confirmed,Achievement packet family,achievement lists/points/rates,Completed/latest/points/title/earned/rate achievement packets,local code + wiki
+0x01A0,game,server_to_client,old_confirmed,SetCurrentMountGoobbuePacket,goobbue appearance,Current goobbue mount appearance,local code + wiki
+0x01A1,game,server_to_client,old_confirmed,SetHasGoobbuePacket,boolean/state,Has goobbue mount flag,local code + wiki
+0x01A2,game,server_to_client,old_wiki,JobQuestCompleteTriple,quest/job flags,Wiki-known job quest completion packet; no local packet class found,wiki
+0x01A3,game,server_to_client,old_confirmed,SetCutsceneBookPacket,quest/cutscene flags,Completed quest/book state,local code + wiki
+0x01A4,game,server_to_client,old_confirmed,SetCurrentJobPacket,job id,Current job packet,local code + wiki
+0x01A5,game,server_to_client,old_confirmed,SetPlayerItemStoragePacket,storage flags,Entrust/item storage flags,local code + wiki
+0x01A6,game,server_to_client,new_candidate,HamletSupplyRanking,ranking/provision data,Public 1.23b name plus local debug builder; native parser recovered as 20 x 0x4C rows / 0x5F0 bytes; field semantics still need validation,local code + wiki + IDA
+0x01A7,game,server_to_client,old_confirmed,SetPlayerDreamPacket,dream result,Waking/dream result packet,local code + wiki
+0x01A8,game,server_to_client,new_candidate,HamletDefenseScore,score rows,Public 1.23b name plus local debug builder; payload layout not safely recovered,local code + wiki
+0x01C2,game,server_to_client,old_wiki,DoesNotExist,none,Wiki explicitly marks this as does not exist; useful negative-control slot,wiki
+0x01C3-0x01C8,game,bidirectional,old_confirmed,Recruitment packet family,recruitment state/search/detail,Open party/recruitment request and response packet range,local code + wiki
+0x01C9-0x01CF,game,server_to_client,old_confirmed,Social list packet family,blacklist/friendlist state,Blacklist and friendlist add/remove/list/status packets,local code + wiki
+0x01D0-0x01D6,game,server_to_client,old_confirmed,Support desk packet family,faq/issues/gm ticket,Support desk and GM ticket packets,local code + wiki
+0x01D7-0x01E1,game,server_to_client,old_confirmed,Search result packet family,item/retainer/player search,Market/search result begin/body/end/update/close packets,local code + wiki
+0x01F4,game,server_to_client,old_wiki,UnusedCandidate,unknown,Wiki marks unused; high-priority old-unused candidate,wiki
+0x01F5,game,server_to_client,old_wiki,UnusedCandidate,unknown,Wiki marks unused; high-priority old-unused candidate,wiki
+0x01F6,game,server_to_client,old_wiki,UnusedCandidate,unknown,Wiki marks unused; high-priority old-unused candidate,wiki
+0x01,lobby,server_to_client,old_wiki,UnknownLobbyPacket,unknown,Wiki-known lobby server packet with no local packet class found,wiki
+0x02,lobby,server_to_client,old_confirmed,ErrorPacket,error code,Lobby error packet,local code + wiki
+0x03,lobby,client_to_server,old_confirmed,Get Characters,request,Lobby PacketProcessor handles character-list request,local code + wiki
+0x04,lobby,client_to_server,old_confirmed,Select Character,request,Lobby PacketProcessor handles character selection request,local code + wiki
+0x05,lobby,client_to_server,old_confirmed,Get Accounts,request,Lobby PacketProcessor handles account/content request,local code + wiki
+0x0B,lobby,client_to_server,old_confirmed,Modify Character,request,Lobby PacketProcessor handles character modify request,local code + wiki
+0x0C,lobby,server_to_client,old_confirmed,AccountListPacket,account list,Lobby account list,local code + wiki
+0x0D,lobby,server_to_client,old_confirmed,CharacterListPacket,character list,Lobby character list,local code + wiki
+0x0E,lobby,server_to_client,old_confirmed,CharaCreatorPacket,creation data,Lobby character creation response/data,local code + wiki
+0x0F,lobby,bidirectional,old_confirmed,SelectCharacterConfirmPacket / retainer GM finish,selection result,Lobby select character reply; wiki also notes client retainer GM tool finish,local code + wiki
+0x10,lobby,server_to_client,old_wiki,UnknownLobbyPacket,unknown,Wiki-known lobby server packet with no local packet class found,wiki
+0x15,lobby,server_to_client,old_confirmed,WorldListPacket,world list,Lobby world list,local code + wiki
+0x16,lobby,server_to_client,old_confirmed,ImportListPacket,import names,Lobby import name list,local code + wiki
+0x17,lobby,server_to_client,old_confirmed,RetainerListPacket,retainer list,Lobby retainer list,local code + wiki
+0x1F4,lobby,server_to_client,old_wiki,UnknownLobbyPacket,unknown,Wiki-known high lobby opcode with no local packet class found,wiki
+0x1F5,lobby,server_to_client,old_wiki,UnknownLobbyPacket,unknown,Wiki-known high lobby opcode with no local packet class found,wiki
+0x1000,world,bidirectional,old_confirmed,SessionBeginPacket / SessionBeginConfirmPacket,session begin,World-zone session begin and confirm,local code
+0x1001,world,bidirectional,old_confirmed,SessionEndPacket / SessionEndConfirmPacket,session end,World-zone session end and confirm,local code
+0x1002,world,zone_to_world,old_confirmed,WorldRequestZoneChangePacket,zone id/spawn/position,Map asks world server to change zone,local code
+0x100A,world,world_to_zone,old_confirmed,ErrorPacket,error code,World error routed to map server,local code
+0x1020,world,bidirectional,old_confirmed,PartySyncPacket / PartyModifyPacket,party state,World party sync and map party modify packets,local code
+0x1021-0x1032,world,bidirectional,old_confirmed,Party/linkshell packet family,party and linkshell operations,Party leave/invite/results and linkshell create/modify/delete/invite/rank packets,local code

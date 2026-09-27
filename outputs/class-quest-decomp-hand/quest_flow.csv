@@ -1,0 +1,124 @@
+quest_id,code,from_seq,to_seq,trigger_npc,delegate_event,mechanic,note
+110420,Alc200,ACCEPT,0,1000597,processEventNogeloixStart,offer ask==1 + AcceptQuest,HOLD gate false
+110420,Alc200,0,5,1001392,processEvent010,grant Mole + snapshot baseline,verified grant
+110420,Alc200,5,7,1000597,processEvent015,inspect keep-item + set counter2=1,medication NOT consumed
+110420,Alc200,7,10,1000932,processEvent015_6,ask==1 then consume 1 medication,handoff; HOLD no spawn
+110420,Alc200,10,15,1000932,processEvent020,ward scene bare advance,client-scene-only authored
+110420,Alc200,15,DONE,1000597,processEvent030,CompleteQuest + AddExp 1760,single completion
+110421,Alc300,ACCEPT,0,1000597,processEventNogeloixStart,offer ask==1 + AcceptQuest,HOLD gate false
+110421,Alc300,0,5,Damielliot-any,processEvent003,bare advance,accept-any candidates authored
+110421,Alc300,5,10,1001035,processEvent005,bare advance,HOLD no spawn
+110421,Alc300,10,15,1000597,processEvent007,grant Funds 1,verified grant
+110421,Alc300,15,20,1700001,processEvent008,bare advance,paid-info scenes unwired
+110421,Alc300,20,20,1700001,-,Parley HOLD never advances,no subsystem
+110421,Alc300,25,30,1000597,processEvent015,consume 1 grass,guarded
+110421,Alc300,30,DONE,1000932,processEvent020,CompleteQuest + AddExp 3420,HOLD no spawn
+110422,Alc306,ACCEPT,0,1000932,processEventSlyhhiaStart,offer ask==1 + AcceptQuest,HOLD gate false
+110422,Alc306,0,5,Damielliot-any,processEvent000,bare advance,HOLD no spawn
+110422,Alc306,5,5,Damielliot-any,processEvent005,Echo ask==1 but HOLD never advances,no past area
+110422,Alc306,10,12,Damielliot-any,processEvent008+009,grant poultice + snapshot salve,verified grant
+110422,Alc306,12,15,Damielliot-any,-,salve net-gain>=1 bare advance,recipe unregistered unreachable
+110422,Alc306,15,20,Damielliot-any,processEvent010,consume 1 salve,guarded
+110422,Alc306,20,DONE,1000597,processEvent030,CompleteQuest + AddExp 4720,single completion
+110320,Bsm200,ACCEPT,5,1000144,processEventBodenolfStart,offer ask==1 + lock branch + snapshot case,HOLD gate false
+110320,Bsm200,5,7,1000144,processEvent005,stage net-gain>=1 keep-item + re-baseline trembler,traded parts credit
+110320,Bsm200,7,8,1000144,-,stage net-gain>=1 bare advance,no recovered scene
+110320,Bsm200,8,9,1000144,processEvent010,stage net-gain>=1 + re-baseline horn,instrument test
+110320,Bsm200,9,DONE,1000176,processEvent020,verify 4 parts + consume each + marks + AddExp 2000,HOLD no spawn; branch marks
+110321,Bsm300,ACCEPT,0,1000144,processEventBodenolfStart,offer ask==1 + AcceptQuest,HOLD skeleton
+110321,Bsm300,0,5,1000144,-,bare advance,miner scenes belong elsewhere
+110321,Bsm300,45,DONE,1000176,processEvent040,consume windwheel + marks + AddExp 3000,holds until windwheel held
+110322,Bsm306,ACCEPT,0,1000144,processEventBodenolfStart,offer ask==1 + lock branch,HOLD gate false
+110322,Bsm306,0,5,1000144,processEvent005,bare advance + snapshot component,
+110322,Bsm306,5,6,1000144,-,component net-gain>=1 bare advance,no recovered scene
+110322,Bsm306,6,10,1000144,processEvent010,earplugs held>=1,combine unrecovered holds
+110322,Bsm306,10,15,1000144,-,equip gate EARS17 bare advance,colon-fix 2026-09-27
+110322,Bsm306,15,20,-,-,victim flags 8/8 via bsm306_victimTalk,ready but unwired
+110322,Bsm306,20,DONE,1000176,processEvent040,marks + AddExp(0 skipped),EXP unreported
+110440,Cul200,ACCEPT,5,1000138,processEventCharlysStart,offer ask==1 + snapshot both + branches=5,ENABLED live
+110440,Cul200,5,5,1000168,processEvent010,consume 1 crust branch=10 then 017 verdict branch=15,two-talk packing authored
+110440,Cul200,5,5,1000169,processEvent015,consume 1 pate branch=10 then 020 verdict branch=15,two-talk packing authored
+110440,Cul200,5,DONE,1000138,processEvent030,CompleteQuest + AddExp 1760,both branches 15 required
+110441,Cul300,ACCEPT,0,1000138,processEventCharlysStart,offer ask==1 + AcceptQuest,HOLD skeleton
+110441,Cul300,0,5,1000138,processEvent010,bare advance,route owners unknown
+110441,Cul300,15,15,thickset-any,-,Parley HOLD never advances,no subsystem
+110441,Cul300,35,40,1000138,processEvent035,bare advance,,
+110441,Cul300,40,DONE,1000138,-,CompleteQuest + AddExp 3420,no finale scene
+110442,Cul306,ACCEPT,5,1000168,processEventPrudentiaStart,offer ask==1 + snapshot foul+devil,HOLD skeleton
+110442,Cul306,30,DONE,1000138,processEvent070,flags echo2+late1+late2 then CompleteQuest + AddExp 4720,triggers unrecovered
+110400,Wvr200,ACCEPT,0,1000293,processEventDeaustieStart,offer ask==1 + AcceptQuest,HOLD gate false
+110400,Wvr200,0,5,Chuchumu-any,processEvent010,grant-or-hold ripped,HOLD no spawn
+110400,Wvr200,5,6,1000293,processEvent005_2,bare + snapshot hood,first variant authored
+110400,Wvr200,6,8,1000293,-,hood net-gain>=1 bare verify,delivery consumes at 8
+110400,Wvr200,8,10,Chuchumu-any,processEvent020,consume 1 hood,guarded
+110400,Wvr200,10,DONE,1000293,processEvent030,CompleteQuest + AddExp(0),EXP unreported
+110401,Wvr300,ACCEPT,0,1000293,processEventDeaustieStart,offer ask==1 + AcceptQuest,HOLD gate false
+110401,Wvr300,0,5,Chuchumu-any,-,bare advance,no recovered scene
+110401,Wvr300,5,10,1000234,processEvent012,bare advance,,
+110401,Wvr300,10,15,1000379,processEvent015,bare advance,,
+110401,Wvr300,15,15,opponent-any,-,Parley HOLD never advances x4,no subsystem
+110401,Wvr300,15,19,1000379,processEvent018,4 win flags then grant-or-hold slippers,positioned grant authored
+110401,Wvr300,19,20,Chuchumu-any,processEvent020,consume 1 slippers,guarded
+110401,Wvr300,20,DONE,1000293,processEvent030,CompleteQuest + AddExp 3420,single completion
+110402,Wvr306,ACCEPT,0,1000293,processEventDeaustieStart,offer ask==1 + AcceptQuest,HOLD gate false
+110402,Wvr306,0,5,1000293,processEvent010,bare advance,,
+110402,Wvr306,5,10,Chuchumu-any,-,bare + snapshot gloves,HOLD no spawn
+110402,Wvr306,10,15,Chuchumu-any,processEvent020,gloves net+held>=10,non-combat
+110402,Wvr306,15,20,Chuchumu-any,-,held>=10 bare advance,,
+110402,Wvr306,20,25,1000293,-,consume 10 gloves bare advance,no recovered scene
+110402,Wvr306,30,DONE,1000293,processEvent030,CompleteQuest + AddExp 3720,seq25 unroutable HOLD
+110360,Gld200,ACCEPT,0,1000950,processEventElecotteStart,offer ask==1 + AcceptQuest,HOLD gate false
+110360,Gld200,0,5,1000949,processEvent013,bare advance,HOLD no spawn
+110360,Gld200,5,10,Zssapa-any,processEvent020,grant-or-hold nuggets,,
+110360,Gld200,10,15,1000949,processEvent030,grant-or-hold pin + snapshot brooch,,
+110360,Gld200,15,15,miner-any,-,Parley HOLD never advances x3,no subsystem
+110360,Gld200,17,18,1000949,processEvent040,brooch net-gain>=1,recipe unregistered holds
+110360,Gld200,18,20,1000949,-,consume 1 brooch + AddGil 1000 bare handoff,mid-route gil
+110360,Gld200,20,25,Flhaminn-any,processEvent045+050,Echo ask==1 then scene,,
+110360,Gld200,25,DONE,1000950,processEvent060,CompleteQuest + AddExp 1760,single completion
+110361,Gld300,ACCEPT,0,1000950,processEventElecotteStart,offer ask==1 + AcceptQuest,HOLD gate false
+110361,Gld300,0,5,1000950,processEvent020,bare advance,,
+110361,Gld300,5,5,1000236,processEvent030,set flag0 Opyltyl heard,order gate
+110361,Gld300,5,10,1000458,processEvent040,requires flag0 then bare advance,order-gated authored
+110361,Gld300,10,10,1500098,-,escort HOLD never advances,no driver
+110361,Gld300,33,35,1000950,processEvent060,bare advance,,
+110361,Gld300,35,40,1000949,processEvent067,grant-or-hold flower once,HOLD no spawn
+110361,Gld300,40,48,Flhaminn-any,processEvent075,consume 1 flower,guarded
+110361,Gld300,48,50,Flhaminn-any,processEvent078,Echo ask==1 bare advance,re-entry prompt doubles
+110361,Gld300,50,DONE,1000949,processEvent090,CompleteQuest + AddExp 3420,single completion
+110362,Gld306,ACCEPT,0,1000950,processEventElecotteStart,offer ask==1 + AcceptQuest,HOLD gate false
+110362,Gld306,0,1,1000950,-,bare advance,no recovered scene
+110362,Gld306,1,1,1001498,processEvent011,setup scene but HOLD never advances,mandatory Parley
+110362,Gld306,2,3,1001498,processEvent015,3 materials held then consume all + snapshot replica,storehouse uncollectible
+110362,Gld306,3,4,1000950,-,replica net-gain>=1 bare verify,delivery consumes at 4
+110362,Gld306,4,5,1000950,processEvent020,consume 1 replica,guarded
+110362,Gld306,5,10,1000949,processEvent025,Ossuary entry ask==1,re-entry doubles authored
+110362,Gld306,10,15,1000949,processEvent030,Echo ask==1 bare advance,scene doubles authored
+110362,Gld306,15,DONE,1000949,processEvent040,CompleteQuest + AddExp 4720,top-variant central rewards
+110380,Tan200,ACCEPT,0,1000231,processEventHerewardStart,offer ask==1 + AcceptQuest,HOLD gate false
+110380,Tan200,0,5,Lalatta-any,processEvent010,grant-or-hold damaged,HOLD no spawn
+110380,Tan200,5,10,Lalatta-any,processEvent020,bare + snapshot repaired,,
+110380,Tan200,10,15,Lalatta-any,processEvent030,consume repaired + grant remnants1 + snapshot jacket,archived 3-set start
+110380,Tan200,15,15,1001396,-,top-up remnants to 3 verified grant,crate folded authored
+110380,Tan200,15,17,1000231,processEvent040,remnants>=3 + jacket net-gain then consume 3 remnants,jacket recipe missing holds
+110380,Tan200,17,18,1000231,processEvent033,held jacket>=1 bare advance,,
+110380,Tan200,18,20,1000231,processEvent037,equip gate BODY10 bare advance,colon-fix 2026-09-27
+110380,Tan200,20,DONE,1000231,processEvent050,consume 1 jacket + CompleteQuest + AddExp 1760,Gylbart folded authored
+110381,Tan300,ACCEPT,0,1000231,processEventHerewardStart,offer ask==1 + AcceptQuest,HOLD gate false
+110381,Tan300,0,5,1000231,processEvent010,grant-or-hold saddle,,
+110381,Tan300,5,10,Lalatta-any,processEvent020,bare advance,non-combat cinematic
+110381,Tan300,10,15,Lalatta-any,processEvent025,consume saddle + snapshot bag,Yuhelmeric folded authored
+110381,Tan300,15,20,Lalatta-any,processEvent030,bag net-gain>=1,,
+110381,Tan300,20,25,1000388,processEvent040,flag0 Parley win then consume bag ransom,Parley HOLD no subsystem
+110381,Tan300,25,DONE,1000231,processEvent050,CompleteQuest + AddExp 3420,single completion
+110382,Tan306,ACCEPT,0,1000231,processEventHerewardStart,offer ask==1 + AcceptQuest,HOLD gate false
+110382,Tan306,5,10,Lalatta-any,processEvent010,bare advance,,
+110382,Tan306,10,16,1000231,processEvent020,bare advance,,
+110382,Tan306,17,17,1001077,-,set flag Beli consult,order gate
+110382,Tan306,17,18,1001078,processEvent023,requires Beli flag then grant-or-hold boots,order-gated authored
+110382,Tan306,18,20,1001078,processEvent025,any prep variant>=5 consume 5 + snapshot vintage,held-count authored
+110382,Tan306,20,22,1001078,processEvent027,vintage net-gain>=1,,
+110382,Tan306,22,25,1000231,processEvent030,consume 1 vintage,guarded
+110382,Tan306,25,30,Lalatta-any,-,bare advance,no recovered scene
+110382,Tan306,30,30,Lalatta-any,processEvent040,Echo ask==1 sets flag Echo,,
+110382,Tan306,30,DONE,1000231,processEvent050,flag Echo then CompleteQuest + AddExp 4720,single completion

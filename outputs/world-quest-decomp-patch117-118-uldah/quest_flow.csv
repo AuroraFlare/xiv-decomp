@@ -1,0 +1,27 @@
+quest_id,code,name,patch,level,prereq_id,sequence,step_kind,actor_class_id,actor_name,zone_id,zone_name,delegate_event,event_args,journal_marker,reward_kind,reward_id,reward_qty,notes
+110753,Wld0u1,Of Archons and Muses,patch_1_17,10,0,ACCEPT,offer,1001203,Tyago Moui,209,Uldah,processEventTyagomouiStart,,11130002(async QFLAG_TALK),,,,
+110753,Wld0u1,Of Archons and Muses,patch_1_17,10,0,0,retalk_giver,1001203,Tyago Moui,209,Uldah,followEvent005,,11130001,,,,stay SEQ_000
+110753,Wld0u1,Of Archons and Muses,patch_1_17,10,0,0,advance,1000647,Lyngwaek,209,Uldah,processEvent010,,11130001,,,,-> SEQ_001
+110753,Wld0u1,Of Archons and Muses,patch_1_17,10,0,1,retalk_progress,1000647,Lyngwaek,209,Uldah,followEvent015,,11130002,,,,stay SEQ_001 idempotent
+110753,Wld0u1,Of Archons and Muses,patch_1_17,10,0,1,complete,1001203,Tyago Moui,209,Uldah,processEvent020,,11130002,,,,-> CompleteQuest
+110753,Wld0u1,Of Archons and Muses,patch_1_17,10,0,1,reward,1001203,Tyago Moui,209,Uldah,sqrwa,"300,1,1,9",,Exp,0,300,SQL Exp row 300 verified
+110753,Wld0u1,Of Archons and Muses,patch_1_17,10,0,1,reward_sql,,,,,,,Item,8071015,1,SQL auto-grant via CompleteQuest
+110754,Wld0u2,Sanguine Studies,patch_1_17,27,0,ACCEPT,offer,1001316,Papala,171,Eastern Thanalan,processEventPapalaStart,,11130101(async QFLAG_TALK),,,,
+110754,Wld0u2,Sanguine Studies,patch_1_17,27,0,0,retalk_giver,1001316,Papala,171,Eastern Thanalan,processEvent000,,11130102,,,,stay SEQ_000
+110754,Wld0u2,Sanguine Studies,patch_1_17,27,0,0,kill,2106537,Amaljaa Grunt,171,Eastern Thanalan,onKillBNpc,,11130102,,,,3x item 11000173 counter -> SEQ_001; mob type 32708 Lv30 4 spawns verified
+110754,Wld0u2,Sanguine Studies,patch_1_17,27,0,1,complete,1001316,Papala,171,Eastern Thanalan,processEvent010,,11130101,,,,-> CompleteQuest
+110754,Wld0u2,Sanguine Studies,patch_1_17,27,0,1,reward,1001316,Papala,171,Eastern Thanalan,sqrwa,"2170,1,1,9",,Exp,0,2170,SQL Exp row 2170 verified
+110754,Wld0u2,Sanguine Studies,patch_1_17,27,0,1,reward_sql,,,,,,,Item,3010304,12,SQL auto-grant via CompleteQuest
+110755,Wld0u3,Secrets Unearthed,patch_1_18,17,0,ACCEPT,offer,1001165,Mumukiya,209,Uldah,processEventMUMUKIYAStart,,11130202(async QFLAG_TALK),,,,accept gate fixed to seq==SEQ_ACCEPT
+110755,Wld0u3,Secrets Unearthed,patch_1_18,17,0,0,retalk_giver,1001165,Mumukiya,209,Uldah,processEvent_000,,11130201,,,,stay SEQ_000
+110755,Wld0u3,Secrets Unearthed,patch_1_18,17,0,0,advance,1001596,Abelard,172,Western Thanalan,processEvent_010,,11130201,,,,-> SEQ_001
+110755,Wld0u3,Secrets Unearthed,patch_1_18,17,0,1,retalk_progress,1001596,Abelard,172,Western Thanalan,processEvent_010_1,,11130202,,,,stay SEQ_001 idempotent
+110755,Wld0u3,Secrets Unearthed,patch_1_18,17,0,1,complete,1001165,Mumukiya,209,Uldah,processEvent_020,,11130202,,,,-> CompleteQuest
+110755,Wld0u3,Secrets Unearthed,patch_1_18,17,0,1,reward,1001165,Mumukiya,209,Uldah,sqrwa,"960,1,1,9",,Exp,0,960,SQL Exp row 960 verified
+110755,Wld0u3,Secrets Unearthed,patch_1_18,17,0,1,reward_sql,,,,,,,Item,8070809,1,SQL auto-grant via CompleteQuest
+110756,Wld0u4,Rustproof,patch_1_18,28,110754,ACCEPT,offer,1001316,Papala,171,Eastern Thanalan,processEventPAPALAStart,OBJECTIVE_AMOUNT=6,11130302(async QFLAG_TALK),,,,prereq 110754 in SQL verified
+110756,Wld0u4,Rustproof,patch_1_18,28,110754,0,retalk_giver,1001316,Papala,171,Eastern Thanalan,processEvent_000_1,OBJECTIVE_AMOUNT=6,11130301,,,,stay SEQ_000
+110756,Wld0u4,Rustproof,patch_1_18,28,110754,0,kill,2106542,Amaljaa Drudge,171,Eastern Thanalan,onKillBNpc,,11130301,,,,6x item 11000303 counter -> SEQ_001; mob type 32709 Lv47-49 8 spawns verified; level-fit flagged
+110756,Wld0u4,Rustproof,patch_1_18,28,110754,1,complete,1001316,Papala,171,Eastern Thanalan,processEvent_010,,11130302,,,,-> CompleteQuest
+110756,Wld0u4,Rustproof,patch_1_18,28,110754,1,reward,1001316,Papala,171,Eastern Thanalan,sqrwa,"1980,1,1,9",,Exp,0,1980,SQL Exp row 1980 verified
+110756,Wld0u4,Rustproof,patch_1_18,28,110754,1,reward_sql,,,,,,,Gil,1000001,13000,SQL auto-grant via CompleteQuest

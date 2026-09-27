@@ -1,0 +1,49 @@
+quest_id,code,stage,action,delegate_or_handler,transition
+110634,etc1l1,ACCEPT,talk Hihine 1000267,processEventHihineStart(OBJECTIVE_AMOUNT=8),accept -> SEQ_000
+110634,etc1l1,SEQ_000,kill 8x Toll Puk 2100113,onKillBNpc counter0 + attention 50041/name 3100116,threshold -> SEQ_001
+110634,etc1l1,SEQ_001,talk Hihine,"processEvent010 + sqrwa(300,1,1,9) + CompleteQuest",done
+110638,etc1l5,ACCEPT,talk H'lahono 1000250,"processEventLahonoStart(0,8)",accept -> SEQ_000
+110638,etc1l5,SEQ_000,kill 8x Musk Roseling 2102717,onKillBNpc counter0 + attention 25226/item 11000149,threshold -> SEQ_001
+110638,etc1l5,SEQ_001,talk H'lahono,"processEventAfter(0) + sqrwa(1440,1,1,9) + CompleteQuest",done
+110639,etc1l6,ACCEPT,talk Nanapiri 1000136,processEventNanapiriStart(8),accept -> SEQ_000
+110639,etc1l6,SEQ_000,kill 8x Beryl Crab 2107613,onKillBNpc counter0 + attention 25226/item 11000150,threshold -> SEQ_001
+110639,etc1l6,SEQ_001,talk Nanapiri,"processEvent010 + sqrwa(1440,1,1,9) + CompleteQuest",done
+110640,etc1l7,ACCEPT,talk Imania 1001567,processEventImaniaStart(),accept -> SEQ_000
+110640,etc1l7,SEQ_000,talk Yuyubesu 1001166,"processEventYuyubesuStart(0,8)",-> SEQ_001
+110640,etc1l7,SEQ_001,kill 8x Bomb Ember 2101609,onKillBNpc counter0 + attention 25226/item 11000151,threshold -> SEQ_002
+110640,etc1l7,SEQ_002,talk Yuyubesu,processEventYuyubesuAfter(0),-> SEQ_003
+110640,etc1l7,SEQ_003,talk Hildie 1000787,"processEventHildie(0) + sqrwa(3040,1,1,9) + CompleteQuest",done
+110654,etc1g0,ACCEPT,talk Sandre 1001102 (alias 1000223),processEventSandreStart(3),accept+grant 11000140 -> SEQ_000
+110654,etc1g0,SEQ_000,fuel 3 Watchers 1090193/94/95,"onTalk flags 0/1/2, counter recomputed, no double-count",all 3 -> SEQ_001
+110654,etc1g0,SEQ_001,talk Sandre,"processEvent010(botanistFlag) + sqrwa(300,1,1,9) + CompleteQuest",done; onFinish removes 11000140
+110655,etc1g1,ACCEPT,talk Maroile 1000512,"processEventMaroileStart(conjurerFlag,3)",accept+grant 11000141 -> SEQ_000
+110655,etc1g1,SEQ_000,push 3 hearths 1090196/97/98,"onPush processBUSH, flags, counter recomputed",all 3 -> SEQ_001
+110655,etc1g1,SEQ_001,talk Maroile,"processEvent010 + sqrwa(500,1,1,9) + CompleteQuest",done; onFinish removes 11000141
+110656,etc1g2,ACCEPT,talk V'nabyano 1001101,"processEventV_NabyanoStart(1,8)",accept -> SEQ_000
+110656,etc1g2,SEQ_000,talk Mestonnaux 1001103,processEvent00(0),-> SEQ_001
+110656,etc1g2,SEQ_001,kill 8x Popoto-opo 2100509,onKillBNpc counter0 + attention 25226/item 11000142,threshold -> SEQ_002
+110656,etc1g2,SEQ_002,talk V'nabyano,"processEvent05_3 + sqrwa(1891,1,1,9) + CompleteQuest",done
+110659,etc1g5,ACCEPT,talk Beli 1001077,"processEventLahonoStart(0,8)",accept -> SEQ_000
+110659,etc1g5,SEQ_000,kill 8x Bristletail Marmot 2104022,onKillBNpc counter0 + attention 25226/item 11000144,threshold -> SEQ_001
+110659,etc1g5,SEQ_001,talk Beli,"processEventAfter(0) + sqrwa(300,1,1,9) + CompleteQuest",done
+110660,etc1g6,ACCEPT,talk Nicoliaux 1000409,processEventNicoliauxStart(),accept -> SEQ_000
+110660,etc1g6,SEQ_000,talk Sylbyrt 1000428,"processEvent000(2,3)",-> SEQ_001
+110660,etc1g6,SEQ_001,kill 3x Wandering Wight 2101908,onKillBNpc counter0 + attention 25226/item 11000145,threshold -> SEQ_002
+110660,etc1g6,SEQ_002,talk Sylbyrt,processEvent010(2) + IncCounter(1) marionette,-> SEQ_003
+110660,etc1g6,SEQ_003,talk Nicoliaux,"processEvent020(0) + sqrwa(3360,1,1,9) + CompleteQuest",done
+110662,etc1g8,ACCEPT,talk Francis 1000566,processEventFrancisStart1g8(8),accept -> SEQ_000
+110662,etc1g8,SEQ_000,kill 8x Gnawing Gnat 2100609,onKillBNpc kill-counter + attention 50041/name 3100611,threshold -> SEQ_001
+110662,etc1g8,SEQ_001,talk Francis,processEventFrancisAfter(0) + wolftail bouquet notice,-> SEQ_002
+110662,etc1g8,SEQ_002,talk Imania 1001567,"processEventImania(0) + sqrwa(3040,1,1,9) + CompleteQuest",done
+110675,etc1u0,ACCEPT,talk Eleanor 1001565,processEventEleanorStart(8),accept -> SEQ_000
+110675,etc1u0,SEQ_000,kill 8x Cursed Eye 2101711,onKillBNpc counter0 + attention 25226/item 11000153,threshold -> SEQ_001
+110675,etc1u0,SEQ_001,talk Eleanor,"processEvent010 + sqrwa(3360,1,1,9) + CompleteQuest",done
+110676,etc1u1,ACCEPT,talk Kukusi 1001463,"processEventKukusiStart(0,8)",accept -> SEQ_000
+110676,etc1u1,SEQ_000,kill 8x Nutgrabber Marmot 2104021,onKillBNpc counter0 + attention 25226/item 11000154,threshold -> SEQ_001
+110676,etc1u1,SEQ_001,talk Kukusi,"processEvent000_2(1) + sqrwa(300,1,1,9) + CompleteQuest",done
+110680,etc1u5,ACCEPT,talk U'bokhn 1000668,"processEventUbokhnStart(0,8)",accept -> SEQ_000
+110680,etc1u5,SEQ_000,kill 8x Stuffed Dodo 2102009,onKillBNpc kill-counter + attention 50041/name 3102011,threshold -> SEQ_001
+110680,etc1u5,SEQ_001,talk U'bokhn,"processEvent010(5) + sqrwa(500,1,1,9) + CompleteQuest",done
+110681,etc1u6,ACCEPT,talk Mohtfryd 1001170,"processEventMohtfrydStart(0,8)",accept -> SEQ_000
+110681,etc1u6,SEQ_000,kill 8x Moiling Mole 2105717,onKillBNpc counter0 + attention 25226/item 11000157,threshold -> SEQ_001
+110681,etc1u6,SEQ_001,talk Mohtfryd,"processEventAfter(0,0) + sqrwa(500,1,1,9) + CompleteQuest",done

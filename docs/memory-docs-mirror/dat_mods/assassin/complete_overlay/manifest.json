@@ -1,0 +1,249 @@
+{
+  "class": "Assassin",
+  "new_command_range": [
+    29743,
+    29772
+  ],
+  "icon_policy": "preserve donor metadata; Quickstride uses packaged custom icon 30998 and Shade Shift uses packaged custom icon 30999",
+  "skill_name_policy": "present class 13 as Assassin/assassin skill instead of the retail Dark Arts placeholder",
+  "custom_action_icons": [
+    {
+      "command_id": 27415,
+      "name": "Quickstride",
+      "icon_id": 30998,
+      "donor_icon_id": 30055,
+      "resource": "data/1C/5C/03/E6.DAT",
+      "source": "docs/dat_mods/assassin/icons/quickstride.png",
+      "source_sha256": "e8a47ada0ce1fca906ef91b7c2b39b099e94eefbe30fd03532e552cedb61aa20",
+      "availability": "universal level-one action"
+    },
+    {
+      "command_id": 29744,
+      "name": "Shade Shift",
+      "icon_id": 30999,
+      "donor_icon_id": 30237,
+      "resource": "data/1C/5C/03/E7.DAT",
+      "source": "docs/dat_mods/assassin/icons/shade_shift.png",
+      "source_sha256": "05c347fae4c173ed0df5adec6d05d68e2db2bf8ca6b907540c247576d9f1dcc5"
+    }
+  ],
+  "actions": [
+    {
+      "id": 29743,
+      "donor_id": 26814,
+      "name": "Spinning Edge",
+      "description": "Delivers a melee attack. Damage increased when executed from behind the target."
+    },
+    {
+      "id": 29744,
+      "donor_id": 26511,
+      "name": "Shade Shift",
+      "description": "Allows you to evade the next two physical attacks. Effect ends after thirty seconds."
+    },
+    {
+      "id": 29745,
+      "donor_id": 26858,
+      "name": "Gust Slash",
+      "description": "Deals wind damage to the target.[@CR]Combo Action: Spinning Edge[@CR]Combo Bonus: Increased damage."
+    },
+    {
+      "id": 29746,
+      "donor_id": 26859,
+      "name": "Sneak Attack",
+      "description": "Delivers a critical melee attack. Damage increased when executed from behind the target. Damage reduced when executed from other directions. Hide nullifies the positional requirement."
+    },
+    {
+      "id": 29747,
+      "donor_id": 29873,
+      "name": "Hide",
+      "description": "Conceals you from sight detecting enemies. Duration varies between forty five and sixty five seconds. Ineffective against enemies with true sight. Effect ends upon reuse or when you execute an attack."
+    },
+    {
+      "id": 29748,
+      "donor_id": 26858,
+      "name": "Assassinate",
+      "description": "Delivers a powerful melee attack. Can only be used when the target has twenty percent HP or less."
+    },
+    {
+      "id": 29749,
+      "donor_id": 26518,
+      "name": "Steal",
+      "description": "Rifle through an enemy's belongings, stealing a random item. Chance of success increases when executed from behind the target or while hidden."
+    },
+    {
+      "id": 29750,
+      "donor_id": 26793,
+      "name": "Mindscatter",
+      "description": "Delivers a fury of attacks on the enemy."
+    },
+    {
+      "id": 29751,
+      "donor_id": 26859,
+      "name": "Trick Attack",
+      "description": "Delivers a melee attack. Damage increased when executed from the front of the target. Hide nullifies the positional requirement."
+    },
+    {
+      "id": 29752,
+      "donor_id": 26802,
+      "name": "Aeolian Edge",
+      "description": "Delivers a melee attack. Damage increased when executed from behind the target.[@CR]Combo Action: Gust Slash[@CR]Combo Bonus: Increased damage."
+    },
+    {
+      "id": 29753,
+      "donor_id": 27415,
+      "name": "Flee",
+      "description": "Increases movement speed by fifty percent. Effect ends after fifteen seconds and does not end when struck."
+    },
+    {
+      "id": 29754,
+      "donor_id": 26518,
+      "name": "Aura Steal",
+      "description": "Delivers a melee attack. Chance to steal one beneficial effect from the target. The selected effect is dispelled even when the steal attempt fails. Duration of stolen effect varies between sixty and one hundred twenty seconds."
+    },
+    {
+      "id": 29755,
+      "donor_id": 26802,
+      "name": "Shadow Fang",
+      "description": "Delivers a melee attack.[@CR]Combo Action: Spinning Edge[@CR]Combo Bonus: Increased damage and chance to inflict a bleed effect."
+    },
+    {
+      "id": 29756,
+      "donor_id": 26817,
+      "name": "Dancing Edge",
+      "description": "Delivers a fourfold melee attack.[@CR]Combo Action: Gust Slash[@CR]Combo Bonus: Increased damage and chance to reduce defense and evasion."
+    },
+    {
+      "id": 29757,
+      "donor_id": 26857,
+      "name": "Viper Bite",
+      "description": "Delivers a melee attack. Chance to inflict Poison, Evasion Down, and Defense Down."
+    },
+    {
+      "id": 29758,
+      "donor_id": 26795,
+      "name": "Whirlwind Edge",
+      "description": "Delivers a melee attack to nearby enemies."
+    },
+    {
+      "id": 29759,
+      "donor_id": 26701,
+      "name": "Ambush",
+      "description": "Grants an additional strike to your next weaponskill."
+    },
+    {
+      "id": 29760,
+      "donor_id": 26698,
+      "name": "Goad",
+      "description": "Gradually restores TP to self and nearby party members."
+    }
+  ],
+  "traits": [
+    {
+      "id": 29761,
+      "donor_id": 29467,
+      "name": "Triple Attack I",
+      "description": "Increases Triple Attack rate by 3%."
+    },
+    {
+      "id": 29762,
+      "donor_id": 29468,
+      "name": "Enhanced Physical Attack Power I",
+      "description": "Increases attack power by 8."
+    },
+    {
+      "id": 29763,
+      "donor_id": 29475,
+      "name": "Auto Attack Speed Up I",
+      "description": "Increases dagger auto-attack speed by 5%."
+    },
+    {
+      "id": 29764,
+      "donor_id": 29470,
+      "name": "Triple Attack II",
+      "description": "Increases Triple Attack rate by 4%."
+    },
+    {
+      "id": 29765,
+      "donor_id": 29469,
+      "name": "Enhanced Shade Shift",
+      "description": "Increases the number of physical attacks evaded by Shade Shift to three."
+    },
+    {
+      "id": 29766,
+      "donor_id": 29473,
+      "name": "Enhanced Hide",
+      "description": "Increases damage dealt by Sneak Attack and Trick Attack while Hide is active by 5%."
+    },
+    {
+      "id": 29767,
+      "donor_id": 29468,
+      "name": "Enhanced Sneak Attack",
+      "description": "Increases damage dealt by Sneak Attack by 10%."
+    },
+    {
+      "id": 29768,
+      "donor_id": 29475,
+      "name": "Auto Attack Speed Up II",
+      "description": "Increases dagger auto-attack speed by 5%."
+    },
+    {
+      "id": 29769,
+      "donor_id": 29473,
+      "name": "Enhanced Trick Attack",
+      "description": "Increases damage dealt by Trick Attack by 10%."
+    },
+    {
+      "id": 29770,
+      "donor_id": 29476,
+      "name": "Enhanced Debilitation",
+      "description": "Increases the potency of enfeebling effects by 10."
+    },
+    {
+      "id": 29771,
+      "donor_id": 27289,
+      "name": "Enhanced Physical Attack Power II",
+      "description": "Increases attack power by 10."
+    }
+  ],
+  "presentation_commands": [
+    {
+      "id": 29772,
+      "donor_id": 29037,
+      "name": "a Trust",
+      "description": "Calls forth a trusted ally.",
+      "cast_seconds": 3.0,
+      "recast_seconds": 0.0,
+      "usage": "hidden Trust summon castbar presentation"
+    }
+  ],
+  "files": [
+    "data/01/03/00/8E.DAT",
+    "data/01/03/00/8F.DAT",
+    "data/01/03/00/90.DAT",
+    "data/01/03/00/EA.DAT",
+    "data/01/03/00/EB.DAT",
+    "data/01/03/00/EC.DAT",
+    "data/01/03/04/B5.DAT",
+    "data/01/03/04/B6.DAT",
+    "data/01/03/04/B7.DAT",
+    "data/0B/45/00/E9.DAT",
+    "data/0B/45/00/EA.DAT",
+    "data/0B/45/00/EB.DAT",
+    "data/0B/45/06/8B.DAT",
+    "data/0B/45/06/8C.DAT",
+    "data/0B/45/06/8D.DAT",
+    "data/0B/45/06/9A.DAT",
+    "data/0B/45/06/9B.DAT",
+    "data/0B/45/06/9C.DAT",
+    "data/0B/45/06/A9.DAT",
+    "data/0B/45/06/AA.DAT",
+    "data/0B/45/06/AB.DAT",
+    "data/0B/45/06/B8.DAT",
+    "data/0B/45/06/B9.DAT",
+    "data/0B/45/06/BA.DAT",
+    "data/1C/5C/03/E6.DAT",
+    "data/1C/5C/03/E7.DAT",
+    "decoded/quickstride_30998.png",
+    "decoded/shade_shift_30999.png"
+  ]
+}

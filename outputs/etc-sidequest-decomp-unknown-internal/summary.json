@@ -1,0 +1,989 @@
+{
+  "conventions": "verified = SQL/file/atlas/wiki evidence cited with line numbers; unrecovered = explicitly flagged per quest; inferred = flagged per quest and never stated as retail fact; placeholder DAT rows (generic marker 11060001, 301/-2/8090201 reward filler, ginoTest/comp_test) are NOT treated as evidence",
+  "coverage": "negative-evidence sweep per quest: script bytes or verified absence, SQL row, reward-table presence/absence, spawn-table absence, availability label, DAT quest/xtx/marker rows, wiki archive zero-match, atlas + parity verdicts, kill-binding absence; indepth flow/actor/hardening audit for the 13 real implementations",
+  "group": "Etc patch_unknown_or_internal (Lv.0 internal stubs + 13 real opening/tutorial implementations + Etc2g6 craft quest)",
+  "counts": {
+    "total": 95,
+    "real_implementations": 13,
+    "scaffold_stubs": 50,
+    "missing_script": 32
+  },
+  "real_vs_stub": {
+    "real": "110600-110603 (Etc0l1-l4), 110609-110612 (Etc0g1-g4), 110618-110621 (Etc0u1-u4), 110670 (Etc2g6). Evidence per quest: full handwritten Lua (grading in md), parity-CSV client scenario reference with matching delegate sets (sizes 2749-3491 bytes), all actor IDs present in gamedata_actor_class.sql, single sequence-gated CompleteQuest, colon-form calls. Availability still labels them Implemented (0l/0g/0u x4) / Partially implemented (2g6) but commented out (disabled).",
+    "scaffold_stub": "50 codes with exact-name 3-line InitQuestScaffold files + noOffer=true scaffold rows (lines 48-97). Parity CSV status missing/missing_local_script_gamedata_present with zero recovered events.",
+    "missing_script": "32 codes with no etc/<code>.lua file and no scaffold row (Etc1l2/1l4, Etc2l2/2l4/2l6-2l9, Etc1g3/1g7, Etc2g7-2g9, Etc1u3, Etc2u3/2u4/2u6-2u9, Etc1i4-1i9, Etc2i3, Etc3i4-3i6, Etc5u2/5u3). SQL + DAT rows exist; no runtime script, no offer path, no crash path.",
+    "etc1i1_note": "Parity CSV references a client etc1i1.lua shell with a single empty processEvent020; client source no longer in-repo; local file is the noOffer scaffold. Classified stub with explicit shell-only trace note, not an implementation."
+  },
+  "engine_verification": {
+    "offer_gating": "all 95 IDs commented out in quest_availability.lua side_quests.patch_unknown_or_internal (lines 585-679); scaffold isEligible additionally returns false on noOffer (generic_quest_scaffold.lua:266-267); missing-script codes have no handlers at all",
+    "reward_path": "completeScaffold unreachable for stubs (isEligible false at onStart:348, onStateChange:358, advanceScaffold:321, journal:379, markers:388); real quests grant only their Lua-coded items (Etc2g6 shards/juice) and never touch SQL filler rows directly",
+    "removeitem_safety": "Etc2g6 RemoveItem(id,4) is guarded by HasItem(id,4) quantity check (ItemPackage.cs:441 via Character.cs:4286-4298): short counts no-op safely, no crash or dupe path"
+  },
+  "scaffold_safety_verdict": {
+    "verdict": "SAFE -- stubs cannot crash, grant phantom rewards, or break offer/availability flows. No stub edits required; none made.",
+    "offer_abandon_reaccept": "onStart StartSequence(0) gated by isEligible (line 348); onStateChange sets no ENPC flags when ineligible (line 358); journal/markers return {} (lines 379-380, 388-390). Missing-script quests hold no Lua state at all.",
+    "completeQuest_safety": "completeScaffold (lines 301-318) reachable only via advanceScaffold, which EndEvents early when isEligible is false (lines 321-324). All 50 stub configs have noOffer=true so completion is unreachable.",
+    "crash_safety": "InitQuestScaffold errors only on unknown codes (lines 341-343); all 50 stub files pass their exact case-sensitive code and every code has a matching QUEST_SCAFFOLDS key (lines 48-97). Missing-script codes never call it.",
+    "kill_path": "scaffold defines no onKillBNpc; the 13 real quests define no kill objectives either. No kill-mob bindings exist for any of the 95 IDs; navmesh locate N/A (verified: dialogue/delivery/craft/push only)."
+  },
+  "lua_fixes": [],
+  "open_issues": [
+    "Lua-header (Level 1/Level 4) vs SQL lv 0 mismatch on all 13 real quests; availability labels Lv.0. Left unchanged: SQL edits require main-SQL + migration parity and are out of scope for verify-only stubs work.",
+    "Retail titles/journal/markers/reward rendering unverified for all 95 (DAT rows empty, wiki absent, no live-client check). Etc0l4/0g4/0u4 repair-branch args and Etc0u1 class-group args are authored reconstructions matching client delegate names, not proven retail values.",
+    "Etc2g6 completes with 1-3 cloth held (HasItem(any) gate; RemoveItem(4) safely no-ops): lenient vs a strict count>=4 turn-in; client presumably gates processEvent010 on count. Fidelity nuance only, no safety bug.",
+    "Etc0g4 helper globals lack the etc0g4 prefix (isRepairCrafter etc.); repo-wide grep finds no second definition so no active collision. Left as-is; prefix on next touch.",
+    "Etc1i1 client shell (single empty processEvent020) unrecoverable from in-repo sources; recovery blocked on client decomp restore."
+  ],
+  "quests": [
+    {
+      "id": 110600,
+      "code": "Etc0l1",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110600.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110601,
+      "code": "Etc0l2",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110601.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110602,
+      "code": "Etc0l3",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110602.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110603,
+      "code": "Etc0l4",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110603.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110604,
+      "code": "Etc0l5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110604.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110605,
+      "code": "Etc0l6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110605.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110606,
+      "code": "Etc0l7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110606.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110607,
+      "code": "Etc0l8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110607.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110608,
+      "code": "Etc0l9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110608.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110609,
+      "code": "Etc0g1",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110609.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110610,
+      "code": "Etc0g2",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110610.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110611,
+      "code": "Etc0g3",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110611.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110612,
+      "code": "Etc0g4",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110612.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110613,
+      "code": "Etc0g5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110613.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110614,
+      "code": "Etc0g6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110614.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110615,
+      "code": "Etc0g7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110615.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110616,
+      "code": "Etc0g8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110616.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110617,
+      "code": "Etc0g9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110617.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110618,
+      "code": "Etc0u1",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110618.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110619,
+      "code": "Etc0u2",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110619.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110620,
+      "code": "Etc0u3",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110620.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110621,
+      "code": "Etc0u4",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110621.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110622,
+      "code": "Etc0u5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110622.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110623,
+      "code": "Etc0u6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110623.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110624,
+      "code": "Etc0u7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110624.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110625,
+      "code": "Etc0u8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110625.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110626,
+      "code": "Etc0u9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110626.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110635,
+      "code": "Etc1l2",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110635.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110637,
+      "code": "Etc1l4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110637.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110645,
+      "code": "Etc2l2",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110645.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110647,
+      "code": "Etc2l4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110647.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110649,
+      "code": "Etc2l6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110649.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110650,
+      "code": "Etc2l7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110650.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110651,
+      "code": "Etc2l8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110651.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110652,
+      "code": "Etc2l9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110652.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110657,
+      "code": "Etc1g3",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110657.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110661,
+      "code": "Etc1g7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110661.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110670,
+      "code": "Etc2g6",
+      "title": "[en] opening/tutorial",
+      "level": 0,
+      "prereq": 0,
+      "md": "110670.md",
+      "status": "real-implementation",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110671,
+      "code": "Etc2g7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110671.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110672,
+      "code": "Etc2g8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110672.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110673,
+      "code": "Etc2g9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110673.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110678,
+      "code": "Etc1u3",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110678.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110688,
+      "code": "Etc2u3",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110688.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110689,
+      "code": "Etc2u4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110689.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110691,
+      "code": "Etc2u6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110691.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110692,
+      "code": "Etc2u7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110692.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110693,
+      "code": "Etc2u8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110693.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110694,
+      "code": "Etc2u9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110694.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110696,
+      "code": "Etc1i0",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110696.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110697,
+      "code": "Etc1i1",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110697.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110698,
+      "code": "Etc1i2",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110698.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110699,
+      "code": "Etc1i3",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110699.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110700,
+      "code": "Etc1i4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110700.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110701,
+      "code": "Etc1i5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110701.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110702,
+      "code": "Etc1i6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110702.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110703,
+      "code": "Etc1i7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110703.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110704,
+      "code": "Etc1i8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110704.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110705,
+      "code": "Etc1i9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110705.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110709,
+      "code": "Etc2i3",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110709.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110710,
+      "code": "Etc2i4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110710.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110711,
+      "code": "Etc2i5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110711.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110712,
+      "code": "Etc2i6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110712.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110713,
+      "code": "Etc2i7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110713.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110714,
+      "code": "Etc2i8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110714.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110715,
+      "code": "Etc2i9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110715.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110716,
+      "code": "Etc3i0",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110716.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110717,
+      "code": "Etc3i1",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110717.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110718,
+      "code": "Etc3i2",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110718.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110719,
+      "code": "Etc3i3",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110719.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110720,
+      "code": "Etc3i4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110720.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110721,
+      "code": "Etc3i5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110721.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110722,
+      "code": "Etc3i6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110722.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110723,
+      "code": "Etc3i7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110723.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110724,
+      "code": "Etc3i8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110724.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110725,
+      "code": "Etc3i9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110725.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110729,
+      "code": "Etc3u4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110729.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110730,
+      "code": "Etc3u5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110730.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110731,
+      "code": "Etc3u6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110731.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110732,
+      "code": "Etc3u7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110732.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110733,
+      "code": "Etc3u8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110733.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110738,
+      "code": "Etc3g4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110738.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110739,
+      "code": "Etc3g5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110739.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110740,
+      "code": "Etc3g6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110740.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110741,
+      "code": "Etc3g7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110741.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110742,
+      "code": "Etc3g8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110742.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110743,
+      "code": "Etc3g9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110743.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110747,
+      "code": "Etc3l4",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110747.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110748,
+      "code": "Etc3l5",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110748.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110749,
+      "code": "Etc3l6",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110749.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110750,
+      "code": "Etc3l7",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110750.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110751,
+      "code": "Etc3l8",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110751.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110752,
+      "code": "Etc3l9",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110752.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110815,
+      "code": "Etc105",
+      "title": "[en] unknown",
+      "level": 0,
+      "prereq": 0,
+      "md": "110815.md",
+      "status": "unrecovered-stub",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110850,
+      "code": "Etc5u2",
+      "title": "[en] unknown",
+      "level": 1,
+      "prereq": 0,
+      "md": "110850.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    },
+    {
+      "id": 110851,
+      "code": "Etc5u3",
+      "title": "[en] unknown",
+      "level": 1,
+      "prereq": 0,
+      "md": "110851.md",
+      "status": "unrecovered-noscript",
+      "events_wiki_verified": false
+    }
+  ]
+}

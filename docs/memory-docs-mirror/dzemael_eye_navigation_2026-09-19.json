@@ -1,0 +1,2331 @@
+{
+  "scope": "Production QuickNavmeshUtils.GetPath queries, both ping-pong directions, exact route XYZ; no source recording or manifest edits; captured graph is not a collision mesh or retail XYZ proof.",
+  "graph": {
+    "file": "Data/quicknavmesh/zone_231.tsv",
+    "sha256": "7d5cea696f4916a382ba569f96d8bdad947793629a76aecea7674110b71b029b"
+  },
+  "executable": {
+    "file": ".codex-build/dzemael-director-retention-review-20260919/Map Server.dll",
+    "sha256": "381d04654a2b44b160d5ed008905f0fa38551570243d1b88ff74f4c9596c6476"
+  },
+  "routes": [
+    {
+      "file": "Data/actorroutes\\dzemael_all_seeing_eye.json",
+      "sha256": "eb59d2b2ece45701ba03e4fac62db44c13a4539fe842fdc13260448aaaff1cd8",
+      "traversal": "pingPong",
+      "step": 0.15,
+      "maxPoints": 128,
+      "vertical": 0.25,
+      "tested": 164,
+      "complete": 142,
+      "missing": 20,
+      "partial": 2,
+      "retryCompleted": 2,
+      "exceptions": [
+        {
+          "from": "node_329",
+          "to": "node_330",
+          "start": [
+            4.97721,
+            174.10732,
+            132.34824
+          ],
+          "target": [
+            4.640855,
+            173.84721,
+            135.66461
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_330",
+          "to": "node_329",
+          "start": [
+            4.640855,
+            173.84721,
+            135.66461
+          ],
+          "target": [
+            4.97721,
+            174.10732,
+            132.34824
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_330",
+          "to": "node_331",
+          "start": [
+            4.640855,
+            173.84721,
+            135.66461
+          ],
+          "target": [
+            2.9511101,
+            172.28305,
+            142.71983
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_331",
+          "to": "node_330",
+          "start": [
+            2.9511101,
+            172.28305,
+            142.71983
+          ],
+          "target": [
+            4.640855,
+            173.84721,
+            135.66461
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_339",
+          "to": "node_340",
+          "start": [
+            17.184258,
+            173.92706,
+            135.51825
+          ],
+          "target": [
+            23.465303,
+            174.52003,
+            137.62598
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_340",
+          "to": "node_339",
+          "start": [
+            23.465303,
+            174.52003,
+            137.62598
+          ],
+          "target": [
+            17.184258,
+            173.92706,
+            135.51825
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_347",
+          "to": "node_348",
+          "start": [
+            25.359987,
+            176.16605,
+            145.69174
+          ],
+          "target": [
+            31.64498,
+            175.30492,
+            142.54004
+          ],
+          "status": "partial",
+          "attempts": 2,
+          "reachedAfterRetries": true,
+          "finalEndpoint": [
+            31.64498,
+            175.30492,
+            142.54004
+          ]
+        },
+        {
+          "from": "node_348",
+          "to": "node_347",
+          "start": [
+            31.64498,
+            175.30492,
+            142.54004
+          ],
+          "target": [
+            25.359987,
+            176.16605,
+            145.69174
+          ],
+          "status": "partial",
+          "attempts": 2,
+          "reachedAfterRetries": true,
+          "finalEndpoint": [
+            25.359987,
+            176.16605,
+            145.69174
+          ]
+        },
+        {
+          "from": "node_356",
+          "to": "node_357",
+          "start": [
+            43.81958,
+            173.70135,
+            128.789
+          ],
+          "target": [
+            40.51233,
+            173.88983,
+            129.20502
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_357",
+          "to": "node_356",
+          "start": [
+            40.51233,
+            173.88983,
+            129.20502
+          ],
+          "target": [
+            43.81958,
+            173.70135,
+            128.789
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_357",
+          "to": "node_358",
+          "start": [
+            40.51233,
+            173.88983,
+            129.20502
+          ],
+          "target": [
+            33.707462,
+            173.4042,
+            129.73434
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_358",
+          "to": "node_357",
+          "start": [
+            33.707462,
+            173.4042,
+            129.73434
+          ],
+          "target": [
+            40.51233,
+            173.88983,
+            129.20502
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_362",
+          "to": "node_363",
+          "start": [
+            29.074377,
+            172.63934,
+            115.23001
+          ],
+          "target": [
+            26.320705,
+            172.71538,
+            121.295265
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_363",
+          "to": "node_362",
+          "start": [
+            26.320705,
+            172.71538,
+            121.295265
+          ],
+          "target": [
+            29.074377,
+            172.63934,
+            115.23001
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_364",
+          "to": "node_365",
+          "start": [
+            20.519396,
+            173.4842,
+            122.64302
+          ],
+          "target": [
+            16.379032,
+            173.81061,
+            117.115204
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_365",
+          "to": "node_364",
+          "start": [
+            16.379032,
+            173.81061,
+            117.115204
+          ],
+          "target": [
+            20.519396,
+            173.4842,
+            122.64302
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_367",
+          "to": "node_368",
+          "start": [
+            18.572582,
+            173.88252,
+            104.14131
+          ],
+          "target": [
+            21.09128,
+            173.70001,
+            97.26486
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_368",
+          "to": "node_367",
+          "start": [
+            21.09128,
+            173.70001,
+            97.26486
+          ],
+          "target": [
+            18.572582,
+            173.88252,
+            104.14131
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_368",
+          "to": "node_369",
+          "start": [
+            21.09128,
+            173.70001,
+            97.26486
+          ],
+          "target": [
+            25.911636,
+            173.68002,
+            92.71074
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_369",
+          "to": "node_368",
+          "start": [
+            25.911636,
+            173.68002,
+            92.71074
+          ],
+          "target": [
+            21.09128,
+            173.70001,
+            97.26486
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_374",
+          "to": "node_375",
+          "start": [
+            33.402786,
+            179.01048,
+            74.53439
+          ],
+          "target": [
+            32.548496,
+            180.56076,
+            67.8624
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_375",
+          "to": "node_374",
+          "start": [
+            32.548496,
+            180.56076,
+            67.8624
+          ],
+          "target": [
+            33.402786,
+            179.01048,
+            74.53439
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        }
+      ]
+    },
+    {
+      "file": "Data/actorroutes\\dzemael_approach_eye.json",
+      "sha256": "55b4a041f88c2cb2941eb5d04a0167723db241d654f55b0ef06987150bbdb542",
+      "traversal": "pingPong",
+      "step": 0.15,
+      "maxPoints": 128,
+      "vertical": 0.25,
+      "tested": 222,
+      "complete": 222,
+      "missing": 0,
+      "partial": 0,
+      "retryCompleted": 0,
+      "exceptions": []
+    },
+    {
+      "file": "Data/actorroutes\\dzemael_batraal_eye.json",
+      "sha256": "c80ea9c992173441f1e2a335eea5604ec87aa74a27ce2bb5c3e46323660c79a2",
+      "traversal": "pingPong",
+      "step": 0.15,
+      "maxPoints": 128,
+      "vertical": 0.25,
+      "tested": 24,
+      "complete": 18,
+      "missing": 6,
+      "partial": 0,
+      "retryCompleted": 0,
+      "exceptions": [
+        {
+          "from": "node_1108",
+          "to": "node_1109",
+          "start": [
+            36.658653,
+            151.37439,
+            -167.66779
+          ],
+          "target": [
+            40.940544,
+            150.07832,
+            -162.70053
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_1109",
+          "to": "node_1108",
+          "start": [
+            40.940544,
+            150.07832,
+            -162.70053
+          ],
+          "target": [
+            36.658653,
+            151.37439,
+            -167.66779
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_1109",
+          "to": "node_1110",
+          "start": [
+            40.940544,
+            150.07832,
+            -162.70053
+          ],
+          "target": [
+            45.91177,
+            149.54114,
+            -158.7578
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_1110",
+          "to": "node_1109",
+          "start": [
+            45.91177,
+            149.54114,
+            -158.7578
+          ],
+          "target": [
+            40.940544,
+            150.07832,
+            -162.70053
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_1111",
+          "to": "node_1112",
+          "start": [
+            51.05446,
+            149.65952,
+            -155.44574
+          ],
+          "target": [
+            56.123913,
+            149.15445,
+            -151.3301
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_1112",
+          "to": "node_1111",
+          "start": [
+            56.123913,
+            149.15445,
+            -151.3301
+          ],
+          "target": [
+            51.05446,
+            149.65952,
+            -155.44574
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        }
+      ]
+    },
+    {
+      "file": "Data/actorroutes\\dzemael_corridor_eye.json",
+      "sha256": "d0487f2bb698465aa0fc52308e627ce7205513151e9fa70e92efc542cad04ce0",
+      "traversal": "pingPong",
+      "step": 0.15,
+      "maxPoints": 128,
+      "vertical": 0.25,
+      "tested": 212,
+      "complete": 122,
+      "missing": 88,
+      "partial": 2,
+      "retryCompleted": 1,
+      "exceptions": [
+        {
+          "from": "node_416",
+          "to": "node_417",
+          "start": [
+            97.97333,
+            175.31381,
+            46.556667
+          ],
+          "target": [
+            104.763275,
+            173.38213,
+            47.691887
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_417",
+          "to": "node_416",
+          "start": [
+            104.763275,
+            173.38213,
+            47.691887
+          ],
+          "target": [
+            97.97333,
+            175.31381,
+            46.556667
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_417",
+          "to": "node_418",
+          "start": [
+            104.763275,
+            173.38213,
+            47.691887
+          ],
+          "target": [
+            111.339966,
+            171.33461,
+            46.7232
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_418",
+          "to": "node_417",
+          "start": [
+            111.339966,
+            171.33461,
+            46.7232
+          ],
+          "target": [
+            104.763275,
+            173.38213,
+            47.691887
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_423",
+          "to": "node_424",
+          "start": [
+            134.77878,
+            172.52411,
+            57.406734
+          ],
+          "target": [
+            131.38698,
+            171.74184,
+            57.642567
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_424",
+          "to": "node_423",
+          "start": [
+            131.38698,
+            171.74184,
+            57.642567
+          ],
+          "target": [
+            134.77878,
+            172.52411,
+            57.406734
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_425",
+          "to": "node_426",
+          "start": [
+            128.91612,
+            171.2735,
+            59.434143
+          ],
+          "target": [
+            126.59443,
+            171.33784,
+            64.56194
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_426",
+          "to": "node_425",
+          "start": [
+            126.59443,
+            171.33784,
+            64.56194
+          ],
+          "target": [
+            128.91612,
+            171.2735,
+            59.434143
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_427",
+          "to": "node_428",
+          "start": [
+            123.03384,
+            170.99274,
+            69.48813
+          ],
+          "target": [
+            125.33498,
+            169.00298,
+            75.86392
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_428",
+          "to": "node_427",
+          "start": [
+            125.33498,
+            169.00298,
+            75.86392
+          ],
+          "target": [
+            123.03384,
+            170.99274,
+            69.48813
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_428",
+          "to": "node_429",
+          "start": [
+            125.33498,
+            169.00298,
+            75.86392
+          ],
+          "target": [
+            126.50128,
+            167.72523,
+            82.16911
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_429",
+          "to": "node_428",
+          "start": [
+            126.50128,
+            167.72523,
+            82.16911
+          ],
+          "target": [
+            125.33498,
+            169.00298,
+            75.86392
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_430",
+          "to": "node_431",
+          "start": [
+            131.62071,
+            167.09929,
+            83.29263
+          ],
+          "target": [
+            136.78873,
+            165.39381,
+            79.77996
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_431",
+          "to": "node_430",
+          "start": [
+            136.78873,
+            165.39381,
+            79.77996
+          ],
+          "target": [
+            131.62071,
+            167.09929,
+            83.29263
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_431",
+          "to": "node_432",
+          "start": [
+            136.78873,
+            165.39381,
+            79.77996
+          ],
+          "target": [
+            143.56638,
+            163.27304,
+            80.335815
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_432",
+          "to": "node_431",
+          "start": [
+            143.56638,
+            163.27304,
+            80.335815
+          ],
+          "target": [
+            136.78873,
+            165.39381,
+            79.77996
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_432",
+          "to": "node_433",
+          "start": [
+            143.56638,
+            163.27304,
+            80.335815
+          ],
+          "target": [
+            150.17642,
+            163.53705,
+            79.46907
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_433",
+          "to": "node_432",
+          "start": [
+            150.17642,
+            163.53705,
+            79.46907
+          ],
+          "target": [
+            143.56638,
+            163.27304,
+            80.335815
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_433",
+          "to": "node_434",
+          "start": [
+            150.17642,
+            163.53705,
+            79.46907
+          ],
+          "target": [
+            155.23985,
+            164.16193,
+            83.620056
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_434",
+          "to": "node_433",
+          "start": [
+            155.23985,
+            164.16193,
+            83.620056
+          ],
+          "target": [
+            150.17642,
+            163.53705,
+            79.46907
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_439",
+          "to": "node_440",
+          "start": [
+            160.584,
+            164.06743,
+            67.15511
+          ],
+          "target": [
+            157.95949,
+            164.03862,
+            65.100235
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_440",
+          "to": "node_439",
+          "start": [
+            157.95949,
+            164.03862,
+            65.100235
+          ],
+          "target": [
+            160.584,
+            164.06743,
+            67.15511
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_440",
+          "to": "node_441",
+          "start": [
+            157.95949,
+            164.03862,
+            65.100235
+          ],
+          "target": [
+            157.92223,
+            164.08064,
+            58.91135
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_441",
+          "to": "node_440",
+          "start": [
+            157.92223,
+            164.08064,
+            58.91135
+          ],
+          "target": [
+            157.95949,
+            164.03862,
+            65.100235
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_441",
+          "to": "node_442",
+          "start": [
+            157.92223,
+            164.08064,
+            58.91135
+          ],
+          "target": [
+            159.11365,
+            164.21313,
+            52.352764
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_442",
+          "to": "node_441",
+          "start": [
+            159.11365,
+            164.21313,
+            52.352764
+          ],
+          "target": [
+            157.92223,
+            164.08064,
+            58.91135
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_442",
+          "to": "node_443",
+          "start": [
+            159.11365,
+            164.21313,
+            52.352764
+          ],
+          "target": [
+            161.66582,
+            165.07748,
+            46.586475
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_443",
+          "to": "node_442",
+          "start": [
+            161.66582,
+            165.07748,
+            46.586475
+          ],
+          "target": [
+            159.11365,
+            164.21313,
+            52.352764
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_444",
+          "to": "node_445",
+          "start": [
+            163.08412,
+            165.06532,
+            39.459743
+          ],
+          "target": [
+            164.72305,
+            164.67865,
+            32.99829
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_445",
+          "to": "node_444",
+          "start": [
+            164.72305,
+            164.67865,
+            32.99829
+          ],
+          "target": [
+            163.08412,
+            165.06532,
+            39.459743
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_445",
+          "to": "node_500",
+          "start": [
+            164.72305,
+            164.67865,
+            32.99829
+          ],
+          "target": [
+            161.30682,
+            165.36403,
+            35.966652
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_500",
+          "to": "node_445",
+          "start": [
+            161.30682,
+            165.36403,
+            35.966652
+          ],
+          "target": [
+            164.72305,
+            164.67865,
+            32.99829
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_500",
+          "to": "node_501",
+          "start": [
+            161.30682,
+            165.36403,
+            35.966652
+          ],
+          "target": [
+            160.11287,
+            165.37946,
+            29.87167
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_501",
+          "to": "node_500",
+          "start": [
+            160.11287,
+            165.37946,
+            29.87167
+          ],
+          "target": [
+            161.30682,
+            165.36403,
+            35.966652
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_503",
+          "to": "node_504",
+          "start": [
+            163.82097,
+            163.94145,
+            18.901482
+          ],
+          "target": [
+            163.06677,
+            163.78607,
+            15.902376
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_504",
+          "to": "node_503",
+          "start": [
+            163.06677,
+            163.78607,
+            15.902376
+          ],
+          "target": [
+            163.82097,
+            163.94145,
+            18.901482
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_505",
+          "to": "node_506",
+          "start": [
+            155.65941,
+            163.95128,
+            17.109465
+          ],
+          "target": [
+            148.80095,
+            164.02588,
+            19.306162
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_506",
+          "to": "node_505",
+          "start": [
+            148.80095,
+            164.02588,
+            19.306162
+          ],
+          "target": [
+            155.65941,
+            163.95128,
+            17.109465
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_506",
+          "to": "node_507",
+          "start": [
+            148.80095,
+            164.02588,
+            19.306162
+          ],
+          "target": [
+            142.57126,
+            164.44052,
+            18.814304
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_507",
+          "to": "node_506",
+          "start": [
+            142.57126,
+            164.44052,
+            18.814304
+          ],
+          "target": [
+            148.80095,
+            164.02588,
+            19.306162
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_508",
+          "to": "node_509",
+          "start": [
+            137.50362,
+            164.57831,
+            17.401794
+          ],
+          "target": [
+            130.87883,
+            163.55759,
+            15.600376
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_509",
+          "to": "node_508",
+          "start": [
+            130.87883,
+            163.55759,
+            15.600376
+          ],
+          "target": [
+            137.50362,
+            164.57831,
+            17.401794
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_524",
+          "to": "node_525",
+          "start": [
+            95.98655,
+            158.73315,
+            11.516758
+          ],
+          "target": [
+            93.516045,
+            156.20891,
+            4.7929745
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_525",
+          "to": "node_524",
+          "start": [
+            93.516045,
+            156.20891,
+            4.7929745
+          ],
+          "target": [
+            95.98655,
+            158.73315,
+            11.516758
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_525",
+          "to": "node_526",
+          "start": [
+            93.516045,
+            156.20891,
+            4.7929745
+          ],
+          "target": [
+            94.87079,
+            156.0156,
+            -1.2501491
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_526",
+          "to": "node_525",
+          "start": [
+            94.87079,
+            156.0156,
+            -1.2501491
+          ],
+          "target": [
+            93.516045,
+            156.20891,
+            4.7929745
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_530",
+          "to": "node_531",
+          "start": [
+            107.76273,
+            148.0522,
+            -15.554462
+          ],
+          "target": [
+            111.095436,
+            148.00273,
+            -15.61749
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_531",
+          "to": "node_530",
+          "start": [
+            111.095436,
+            148.00273,
+            -15.61749
+          ],
+          "target": [
+            107.76273,
+            148.0522,
+            -15.554462
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_531",
+          "to": "node_532",
+          "start": [
+            111.095436,
+            148.00273,
+            -15.61749
+          ],
+          "target": [
+            117.746346,
+            147.85387,
+            -15.257765
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_532",
+          "to": "node_531",
+          "start": [
+            117.746346,
+            147.85387,
+            -15.257765
+          ],
+          "target": [
+            111.095436,
+            148.00273,
+            -15.61749
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_533",
+          "to": "node_534",
+          "start": [
+            125.03999,
+            145.56554,
+            -14.496132
+          ],
+          "target": [
+            131.6786,
+            143.11671,
+            -13.903433
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_534",
+          "to": "node_533",
+          "start": [
+            131.6786,
+            143.11671,
+            -13.903433
+          ],
+          "target": [
+            125.03999,
+            145.56554,
+            -14.496132
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_534",
+          "to": "node_535",
+          "start": [
+            131.6786,
+            143.11671,
+            -13.903433
+          ],
+          "target": [
+            137.23877,
+            141.97215,
+            -15.423454
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_535",
+          "to": "node_534",
+          "start": [
+            137.23877,
+            141.97215,
+            -15.423454
+          ],
+          "target": [
+            131.6786,
+            143.11671,
+            -13.903433
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_543",
+          "to": "node_544",
+          "start": [
+            147.9971,
+            140.05238,
+            -17.10385
+          ],
+          "target": [
+            155.01987,
+            138.09589,
+            -16.439404
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_544",
+          "to": "node_543",
+          "start": [
+            155.01987,
+            138.09589,
+            -16.439404
+          ],
+          "target": [
+            147.9971,
+            140.05238,
+            -17.10385
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_546",
+          "to": "node_547",
+          "start": [
+            161.58041,
+            136.02226,
+            -17.586584
+          ],
+          "target": [
+            160.7695,
+            133.17839,
+            -24.080378
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_547",
+          "to": "node_546",
+          "start": [
+            160.7695,
+            133.17839,
+            -24.080378
+          ],
+          "target": [
+            161.58041,
+            136.02226,
+            -17.586584
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_547",
+          "to": "node_548",
+          "start": [
+            160.7695,
+            133.17839,
+            -24.080378
+          ],
+          "target": [
+            156.73909,
+            132.5272,
+            -29.076769
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_548",
+          "to": "node_547",
+          "start": [
+            156.73909,
+            132.5272,
+            -29.076769
+          ],
+          "target": [
+            160.7695,
+            133.17839,
+            -24.080378
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_551",
+          "to": "node_552",
+          "start": [
+            167.92155,
+            131.90004,
+            -40.611965
+          ],
+          "target": [
+            174.56549,
+            132.07794,
+            -39.900116
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_552",
+          "to": "node_551",
+          "start": [
+            174.56549,
+            132.07794,
+            -39.900116
+          ],
+          "target": [
+            167.92155,
+            131.90004,
+            -40.611965
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_552",
+          "to": "node_553",
+          "start": [
+            174.56549,
+            132.07794,
+            -39.900116
+          ],
+          "target": [
+            180.47289,
+            132.06544,
+            -36.394634
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_553",
+          "to": "node_552",
+          "start": [
+            180.47289,
+            132.06544,
+            -36.394634
+          ],
+          "target": [
+            174.56549,
+            132.07794,
+            -39.900116
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_555",
+          "to": "node_556",
+          "start": [
+            192.56773,
+            131.58282,
+            -35.05467
+          ],
+          "target": [
+            196.93425,
+            131.51672,
+            -30.495438
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_556",
+          "to": "node_555",
+          "start": [
+            196.93425,
+            131.51672,
+            -30.495438
+          ],
+          "target": [
+            192.56773,
+            131.58282,
+            -35.05467
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_557",
+          "to": "node_558",
+          "start": [
+            193.86043,
+            131.81746,
+            -25.60631
+          ],
+          "target": [
+            188.1247,
+            132.83635,
+            -22.23012
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_558",
+          "to": "node_557",
+          "start": [
+            188.1247,
+            132.83635,
+            -22.23012
+          ],
+          "target": [
+            193.86043,
+            131.81746,
+            -25.60631
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_558",
+          "to": "node_559",
+          "start": [
+            188.1247,
+            132.83635,
+            -22.23012
+          ],
+          "target": [
+            185.16411,
+            134.00027,
+            -16.604908
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_559",
+          "to": "node_558",
+          "start": [
+            185.16411,
+            134.00027,
+            -16.604908
+          ],
+          "target": [
+            188.1247,
+            132.83635,
+            -22.23012
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_561",
+          "to": "node_562",
+          "start": [
+            183.60703,
+            134.696,
+            -5.0541186
+          ],
+          "target": [
+            178.40237,
+            136.06041,
+            -1.0661432
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_562",
+          "to": "node_561",
+          "start": [
+            178.40237,
+            136.06041,
+            -1.0661432
+          ],
+          "target": [
+            183.60703,
+            134.696,
+            -5.0541186
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_563",
+          "to": "node_564",
+          "start": [
+            178.4338,
+            137.2383,
+            4.3777475
+          ],
+          "target": [
+            181.87527,
+            138.13184,
+            9.580813
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_564",
+          "to": "node_563",
+          "start": [
+            181.87527,
+            138.13184,
+            9.580813
+          ],
+          "target": [
+            178.4338,
+            137.2383,
+            4.3777475
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_578",
+          "to": "node_579",
+          "start": [
+            184.92766,
+            137.24826,
+            11.493372
+          ],
+          "target": [
+            188.96596,
+            134.08125,
+            12.859417
+          ],
+          "status": "partial",
+          "attempts": 2,
+          "reachedAfterRetries": true,
+          "finalEndpoint": [
+            188.96596,
+            134.08125,
+            12.859417
+          ]
+        },
+        {
+          "from": "node_579",
+          "to": "node_578",
+          "start": [
+            188.96596,
+            134.08125,
+            12.859417
+          ],
+          "target": [
+            184.92766,
+            137.24826,
+            11.493372
+          ],
+          "status": "partial",
+          "attempts": 2,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_580",
+          "to": "node_581",
+          "start": [
+            191.53851,
+            131.06941,
+            18.80392
+          ],
+          "target": [
+            191.20134,
+            131.85744,
+            25.251272
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_581",
+          "to": "node_580",
+          "start": [
+            191.20134,
+            131.85744,
+            25.251272
+          ],
+          "target": [
+            191.53851,
+            131.06941,
+            18.80392
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_582",
+          "to": "node_583",
+          "start": [
+            194.26404,
+            131.81537,
+            30.41919
+          ],
+          "target": [
+            198.31406,
+            130.71864,
+            25.464048
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_583",
+          "to": "node_582",
+          "start": [
+            198.31406,
+            130.71864,
+            25.464048
+          ],
+          "target": [
+            194.26404,
+            131.81537,
+            30.41919
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_584",
+          "to": "node_585",
+          "start": [
+            200.91713,
+            128.5231,
+            20.620113
+          ],
+          "target": [
+            201.08047,
+            128.81839,
+            14.24916
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_585",
+          "to": "node_584",
+          "start": [
+            201.08047,
+            128.81839,
+            14.24916
+          ],
+          "target": [
+            200.91713,
+            128.5231,
+            20.620113
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_585",
+          "to": "node_586",
+          "start": [
+            201.08047,
+            128.81839,
+            14.24916
+          ],
+          "target": [
+            204.84274,
+            128.40527,
+            8.745846
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_586",
+          "to": "node_585",
+          "start": [
+            204.84274,
+            128.40527,
+            8.745846
+          ],
+          "target": [
+            201.08047,
+            128.81839,
+            14.24916
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_586",
+          "to": "node_587",
+          "start": [
+            204.84274,
+            128.40527,
+            8.745846
+          ],
+          "target": [
+            207.726,
+            128.50769,
+            2.552942
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_587",
+          "to": "node_586",
+          "start": [
+            207.726,
+            128.50769,
+            2.552942
+          ],
+          "target": [
+            204.84274,
+            128.40527,
+            8.745846
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_587",
+          "to": "node_588",
+          "start": [
+            207.726,
+            128.50769,
+            2.552942
+          ],
+          "target": [
+            213.91136,
+            129.74232,
+            1.5884953
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_588",
+          "to": "node_587",
+          "start": [
+            213.91136,
+            129.74232,
+            1.5884953
+          ],
+          "target": [
+            207.726,
+            128.50769,
+            2.552942
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_588",
+          "to": "node_589",
+          "start": [
+            213.91136,
+            129.74232,
+            1.5884953
+          ],
+          "target": [
+            220.20667,
+            130.26646,
+            1.750531
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_589",
+          "to": "node_588",
+          "start": [
+            220.20667,
+            130.26646,
+            1.750531
+          ],
+          "target": [
+            213.91136,
+            129.74232,
+            1.5884953
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        }
+      ]
+    },
+    {
+      "file": "Data/actorroutes\\dzemael_gullet_eye.json",
+      "sha256": "b5beb5ad210872e94d4d4e1d54607a92ed0492f5975d579f1e4a6d49b1f7a0d0",
+      "traversal": "pingPong",
+      "step": 0.15,
+      "maxPoints": 128,
+      "vertical": 0.25,
+      "tested": 58,
+      "complete": 52,
+      "missing": 6,
+      "partial": 0,
+      "retryCompleted": 0,
+      "exceptions": [
+        {
+          "from": "node_265",
+          "to": "node_266",
+          "start": [
+            102.57652,
+            176.69093,
+            148.70654
+          ],
+          "target": [
+            97.01911,
+            177.54063,
+            153.87004
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_266",
+          "to": "node_265",
+          "start": [
+            97.01911,
+            177.54063,
+            153.87004
+          ],
+          "target": [
+            102.57652,
+            176.69093,
+            148.70654
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_266",
+          "to": "node_267",
+          "start": [
+            97.01911,
+            177.54063,
+            153.87004
+          ],
+          "target": [
+            95.09652,
+            178.48792,
+            160.11963
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_267",
+          "to": "node_266",
+          "start": [
+            95.09652,
+            178.48792,
+            160.11963
+          ],
+          "target": [
+            97.01911,
+            177.54063,
+            153.87004
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_267",
+          "to": "node_268",
+          "start": [
+            95.09652,
+            178.48792,
+            160.11963
+          ],
+          "target": [
+            95.56095,
+            177.70387,
+            166.71051
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        },
+        {
+          "from": "node_268",
+          "to": "node_267",
+          "start": [
+            95.56095,
+            177.70387,
+            166.71051
+          ],
+          "target": [
+            95.09652,
+            178.48792,
+            160.11963
+          ],
+          "status": "missing",
+          "attempts": 1,
+          "reachedAfterRetries": false,
+          "finalEndpoint": null
+        }
+      ]
+    }
+  ]
+}

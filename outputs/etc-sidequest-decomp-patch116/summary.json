@@ -1,0 +1,154 @@
+{
+  "package": "etc-sidequest-decomp-patch116",
+  "quests": [
+    {
+      "id": 110634,
+      "code": "etc1l1",
+      "title": "Bridging the Gap",
+      "kind": "kill",
+      "min_level": 10,
+      "prerequisite": 0,
+      "exp": 300,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110638,
+      "code": "etc1l5",
+      "title": "Till Death Do Us Part",
+      "kind": "kill",
+      "min_level": 20,
+      "prerequisite": 0,
+      "exp": 1440,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110639,
+      "code": "etc1l6",
+      "title": "Beryl Overboard",
+      "kind": "kill",
+      "min_level": 20,
+      "prerequisite": 110638,
+      "exp": 1440,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110640,
+      "code": "etc1l7",
+      "title": "Have You Seen My Son",
+      "kind": "kill-referral",
+      "min_level": 30,
+      "prerequisite": 0,
+      "exp": 3040,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110654,
+      "code": "etc1g0",
+      "title": "Proceed with Caution",
+      "kind": "interaction",
+      "min_level": 10,
+      "prerequisite": 0,
+      "exp": 300,
+      "mob_kind": "none"
+    },
+    {
+      "id": 110655,
+      "code": "etc1g1",
+      "title": "Playing with Fire",
+      "kind": "interaction",
+      "min_level": 15,
+      "prerequisite": 0,
+      "exp": 500,
+      "mob_kind": "none"
+    },
+    {
+      "id": 110656,
+      "code": "etc1g2",
+      "title": "A Well-Balanced Diet",
+      "kind": "kill-referral",
+      "min_level": 25,
+      "prerequisite": 0,
+      "exp": 1891,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110659,
+      "code": "etc1g5",
+      "title": "The Search for Sicksa",
+      "kind": "kill",
+      "min_level": 10,
+      "prerequisite": 0,
+      "exp": 300,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110660,
+      "code": "etc1g6",
+      "title": "The Ultimate Prank",
+      "kind": "kill-referral",
+      "min_level": 35,
+      "prerequisite": 110658,
+      "exp": 3360,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110662,
+      "code": "etc1g8",
+      "title": "Say it with Wolf Tails",
+      "kind": "kill-delivery",
+      "min_level": 30,
+      "prerequisite": 110640,
+      "exp": 3040,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110675,
+      "code": "etc1u0",
+      "title": "A Knock in the Night",
+      "kind": "kill",
+      "min_level": 35,
+      "prerequisite": 0,
+      "exp": 3360,
+      "mob_kind": "quest-pack"
+    },
+    {
+      "id": 110676,
+      "code": "etc1u1",
+      "title": "Sleepless in Eorzea",
+      "kind": "kill",
+      "min_level": 10,
+      "prerequisite": 0,
+      "exp": 300,
+      "mob_kind": "ordinary"
+    },
+    {
+      "id": 110680,
+      "code": "etc1u5",
+      "title": "An Inconvenient Dodo",
+      "kind": "kill",
+      "min_level": 15,
+      "prerequisite": 0,
+      "exp": 500,
+      "mob_kind": "ordinary"
+    },
+    {
+      "id": 110681,
+      "code": "etc1u6",
+      "title": "Besmitten and Besmirched",
+      "kind": "kill",
+      "min_level": 15,
+      "prerequisite": 0,
+      "exp": 500,
+      "mob_kind": "ordinary"
+    }
+  ],
+  "evidence": {
+    "V2_contracts": "tools/etc1-quest-runtime-tests/source-contracts.json",
+    "V8_manifest": "Data/mobplacements/etc1_quest_mobs.json",
+    "gaps": [
+      "meteor-wiki-quests/quests-archive.md absent from checkout",
+      "FF14-Decomp atlas indexes hold 0 rows for these 14 IDs",
+      "decomp_more_20260617 client .lua absent; V2 pins extracted contracts"
+    ]
+  }
+}
