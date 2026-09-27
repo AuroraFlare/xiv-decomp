@@ -1,0 +1,21 @@
+quest_id,code,item_id,item_name,required_count,credit_rule,consume_count,consume_timing,pool_or_source,marker_binding,script_mechanism
+110460,Min200,11000012,Sheep's-eye,1,"max(0,owned-baseline) at Z'ssapa 010 briefing",1,full pack at 020,"pools 30061/30071/30081 (all three finds in all three; live migration only)",11046006/11046007/11046008,bespoke MinNetGain + MinConsumeItem; flags counters 0-2
+110460,Min200,11000013,Petrified Wood,1,"max(0,owned-baseline) at Z'ssapa 010 briefing",1,full pack at 020,"pools 30061/30071/30081 (live migration only)",11046006/11046007/11046008,bespoke MinNetGain + MinConsumeItem; flags counters 0-2
+110460,Min200,11000014,Ewer Fragment,1,"max(0,owned-baseline) at Z'ssapa 010 briefing",1,full pack at 020,"pools 30061/30071/30081 (live migration only)",11046006/11046007/11046008,bespoke MinNetGain + MinConsumeItem; flags counters 0-2
+110480,Hrv200,11000018,Spiny Turnip Leaves,UNRESOLVED (HOLD),none (HOLD),UNRESOLVED,unbound (cleanup at state 10 per DAT),"NO POOL EXISTS (HOLD blocker)",11048002 Quarrymill area,unbound
+110481,Hrv300,11000086,Bowing Pine Branch,1,possession at Cicely exchange,1,with ink grant at 030-equivalent,"pool 20123 Bentbranch logging z150 (live migration only)",11048109,bespoke grantOnce/consumeHeld
+110481,Hrv300,11000087,Foul-smelling Nut,1,possession at Cicely exchange,1,with ink grant at 030-equivalent,"pool 20203 Humblehearth logging z150 (live migration only)",11048110,bespoke grantOnce/consumeHeld
+110481,Hrv300,11000085,Nostalgic Ink,1,granted for branch+nut; held through Parley,1,with tale at Cicely,quest grant (not gathered),n/a,bespoke grantOnce/consumeHeld
+110481,Hrv300,11000042,Pirate Ship Tale,1,Parley win (title 1301) with ink in hand,1,with ink at Cicely,Parley reward,n/a,"bespoke onNegotiationResult; ink never consumed by Parley"
+110481,Hrv300,11000135,Meracydian Olives,1,granted for ink+tale,1,at Linette marker (letter retained),quest grant (not gathered),11048105/11048106,bespoke grantOnce/consumeHeld
+110481,Hrv300,11000136,Letter to Nenekko,1,granted for ink+tale; presented at state 20 retained,1,at Linette for ceruleum,quest grant (not gathered),11048106,bespoke grantOnce/consumeHeld
+110481,Hrv300,11000137,Amajina Ceruleum,1,granted for letter (Nogeloix-first flag),1,at guild trigger,quest grant (not gathered),11048107,bespoke grantOnce/consumeHeld
+110482,Hrv306,11000128,Pearl Clover Seeds,DYNAMIC (HOLD),unbound (over-harvest branch exists),unbound,unbound,flower-field instance marker 11048202 (no node actors),11048202,unbound
+110482,Hrv306,11000043,Yarzon Faeces,"DYNAMIC correlated (HOLD)",unbound,unbound,Humblehearth instance marker 11048207 (no node actors),11048207,unbound
+110482,Hrv306,11000138,Pearl Clover Seedling,1,grant at Opyltyl state 43,1,at forest/moogle delivery,quest grant,11048210/11048211,unbound
+110500,Fsh200,11000127,Pixie Remora,5,"max(0,owned-baseline) at Maisie briefing",5,full pack at 020,"pools 10051 z128 / 10061 z129 / 10081 z130 (main server_fishing.sql + migration)",11050004/11050005/11050006/11050007/11050008,bespoke FshCountItem + FshConsumeItem; NQ-only; onFishCatch fanfare optional
+110501,Fsh300,11000025,Barrel Feed,1,granted by Sisipu at 010,1,on Barrel arrival (feed transition),quest grant,11050101/11050102,template grant + bespoke HOLD script
+110501,Fsh300,11000133,Wawalago Message,1,granted at Barrel push,1,at Rorojaru for subligar,quest grant,11050103/11050104,template grant + bespoke HOLD script
+110501,Fsh300,8050521,Star-Spangled Subligar,1,granted at Rorojaru; equipped check (bespoke) / inspected (template),0 retained,quest grant + reward,11050105,bespoke recovery re-issue
+110501,Fsh300,3011201|3011205|3011208,Barrel catch species (anyOf),1,any-species catch at Barrel (bespoke flag) / anyOf delivery (template),1,after catch,normal pools (Barrel has no pool),11050103/11050104/11050112/11050113,"bespoke onFishCatch flag; location unenforced until Barrel coords exist"
+110502,Fsh306,3011213|3011203|3011209|3011217|3011225,timed sale fish (1 of 5),1,"net-gain vs baseline (bespoke) / anyOf delivery (template)",1,sale at N'nmulika,"pools 10061/10081/10151/30081 (main fishing SQL)",11050202,"bespoke random selector + bell deadline (authored placeholder); payout = vendor sellPrice (authored)"

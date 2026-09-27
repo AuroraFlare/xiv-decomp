@@ -1,0 +1,54 @@
+quest_id,store,slot_or_flag,values,meaning,engine_backing
+110300,counter,2,1,blooming discovery,counter1..4 OK
+110300,counter,3,1,supple discovery,counter1..4 OK
+110300,flag,0,bool,"sturdy discovery (DAT slot 4 mirror, 2026-09-27 fix)",flags OK
+110300,flag,1,bool,"suitable repair (DAT slot 5 mirror, 2026-09-27 fix)",flags OK
+110301,flag,0,bool,Nicoliaux Parley win (new slot),flags OK
+110301,flag,1,bool,Ryd Parley win (new slot),flags OK
+110301,flag,2,bool,Elyn Parley win (new slot),flags OK
+110301,flag,3,bool,Marcelloix cured,flags OK
+110302,counter,0,baseline,leaf snapshot,counter1..4 OK
+110302,counter,1,baseline,fetish snapshot,counter1..4 OK
+110320,counter,0,rolling baseline,per-stage snapshot (reused),counter1..4 OK
+110320,counter,1,30/31,locked class branch,counter1..4 OK
+110322,counter,0,baseline,component snapshot,counter1..4 OK
+110322,counter,1,30/31,locked class branch,counter1..4 OK
+110322,flag,0-7,bool,island victims (ready but unwired),flags OK
+110360,counter,0,baseline,brooch snapshot at pin handoff,counter1..4 OK
+110360,flag,2,bool,miner Parley 1 (recovered slot),flags OK
+110360,flag,3,bool,miner Parley 2 (recovered slot),flags OK
+110360,flag,4,bool,miner Parley 3 (recovered slot),flags OK
+110361,flag,0,bool,Opyltyl heard (order gate),flags OK
+110362,counter,0,baseline,replica snapshot at approval,counter1..4 OK
+110380,counter,0,baseline,repaired-armor snapshot,counter1..4 OK
+110380,counter,1,baseline,jacket snapshot,counter1..4 OK
+110381,counter,0,baseline,bag snapshot at saddle delivery,counter1..4 OK
+110381,flag,0,bool,Vielle Parley win (new slot),flags OK
+110382,counter,0,baseline,vintage-boot snapshot,counter1..4 OK
+110382,flag,0,bool,novice Parley win (new slot),flags OK
+110382,flag,1,bool,Beli consulted (order gate),flags OK
+110382,flag,2,bool,Echo gazed,flags OK
+110400,counter,0,baseline,hood snapshot at report,counter1..4 OK
+110401,flag,0,bool,Cicely Parley win (new slot),flags OK
+110401,flag,1,bool,Nesta Parley win (new slot),flags OK
+110401,flag,2,bool,Keelty Parley win (new slot),flags OK
+110401,flag,3,bool,Miounne Parley win (new slot),flags OK
+110402,counter,0,baseline,glove snapshot at briefing,counter1..4 OK
+110420,counter,0,baseline,medication snapshot at Mole grant,counter1..4 OK
+110420,counter,2,1,"inspected (recovered literal, seq>=7)",counter1..4 OK
+110422,counter,0,baseline,salve snapshot at poultice grant,counter1..4 OK
+110440,counter,0,baseline,crust snapshot at accept,counter1..4 OK
+110440,counter,1,baseline,pate snapshot at accept,counter1..4 OK
+110440,counter,2,5/10/15,Prudentia challenged/delivered/verdict,counter1..4 OK
+110440,counter,3,5/10/15,Pulmia challenged/delivered/verdict,counter1..4 OK
+110442,counter,0,baseline,foulbelly snapshot at accept,counter1..4 OK
+110442,counter,1,baseline,devilbelly snapshot at accept,counter1..4 OK
+110442,counter,2,1,spice acquired (future binding),counter1..4 OK
+110442,counter,3,1,recipe acquired (future binding),counter1..4 OK
+110442,counter,4(DAT),1,"meat acquired: DAT slot, NOT engine-storable",EXCEEDS engine; FLAG_MEAT reserved 2026-09-27
+110442,counter,5(DAT),10,"devilbelly progress: DAT slot, inventory-derived",EXCEEDS engine; journal uses baseline diff
+110442,counter,6(DAT),10,"foulbelly progress: DAT slot, inventory-derived",EXCEEDS engine; journal uses baseline diff
+110442,flag,0,bool,second Echo gazed,flags OK
+110442,flag,1,bool,late chain 060,flags OK
+110442,flag,2,bool,late chain 065,flags OK
+110442,flag,3,bool,meat acquired (reserved 2026-09-27),flags OK

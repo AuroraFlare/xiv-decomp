@@ -1,0 +1,102 @@
+quest_id,code,seq,meaning,enpc_or_trigger,marker
+110160,Arc200,ACCEPT,Offer from Nonolato,1000463,
+110160,Arc200,0,Retry at Nonolato after duty failure,1000463,
+110160,Arc200,1,Keelty briefing at Quiver's Hold,1000587,11016001
+110160,Arc200,2,Fence rendezvous at Camp Emerald Moss,1000174,11016002
+110160,Arc200,10,Inside Fallgourd duty (internal),(content-owned),11016003
+110160,Arc200,20,Report to Nonolato,1000463,11016004
+110160,Arc200,30,Reward boundary (processEvent050),1000463,11016004
+110161,Arc300,ACCEPT,Offer from Nonolato,1000463,
+110161,Arc300,0,Speak with Keelty at Quiver's Hold,1000587,11016101
+110161,Arc300,5,Reach the Owl's Nest gate,1090199 push arc300_owl_gate,11016102
+110161,Arc300,10,Deliver papers to Vairemont,1000586,11016103
+110161,Arc300,15,Speak with Keelty at Owl's Nest,1000587,11016104
+110161,Arc300,16,Speak with Keelty again,1000587,11016105
+110161,Arc300,20,Walk into the road ambush,1090199 push arc300_ambush_trigger,11016106
+110161,Arc300,21,Inside the bandit ambush (internal),(content-owned),11016106
+110161,Arc300,25,Report to Keelty after the fight,1000587,11016107
+110161,Arc300,30,Return to Nonolato for reward,1000463,11016108
+110162,Arc306,ACCEPT,Offer from Nonolato,1000463,
+110162,Arc306,0,Question guild + find Keelty near Sorrel Haven,1000587 + informants,11016201
+110162,Arc306,6,Inside the Yarzon escape (internal),(content-owned),11016206
+110162,Arc306,7,Return to Keelty for the duel,1090199 push arc306_duel_trigger,11016202
+110162,Arc306,8,Inside the Siward duel (internal),(content-owned),11016206
+110162,Arc306,10,Aftermath at Quiver's Hold,1090199 push arc306_aftermath_trigger,11016203
+110162,Arc306,15,Speak with Keelty (confession),1000587,11016204
+110162,Arc306,20,Report to Nonolato for reward,1000463,11016205
+110180,Lnc200,ACCEPT,Offer from Willelda,1000242,
+110180,Lnc200,0,Retry at Willelda after duty failure,1000242,
+110180,Lnc200,1,J'moldva briefing,1000599,11018001
+110180,Lnc200,10,Inside chigoe-culling duty (internal),(content-owned),11018002
+110180,Lnc200,20,J'moldva aftermath,1000599,11018003
+110180,Lnc200,21,Willelda payment speech,1000242,11018004
+110180,Lnc200,30,Reward boundary (processEvent030),1000242,11018004
+110181,Lnc300,ACCEPT,Offer/briefing from J'moldva,1000599,
+110181,Lnc300,0,Retry at J'moldva after duty failure,1000599,
+110181,Lnc300,1,Platinum Mirage canvass (Gagaruna),1000862,11018101
+110181,Lnc300,2,Dreues scene-only test,1000402,11018107
+110181,Lnc300,3,J'moldva caravan order,1000599,11018102
+110181,Lnc300,4,Caravan rendezvous push,1000174 push,11018103
+110181,Lnc300,10,Inside south-road defense (internal),(content-owned),11018103
+110181,Lnc300,20,Broker aftermath (moogle + merchant),1000403,11018104
+110181,Lnc300,21,J'moldva report,1000599,11018105
+110181,Lnc300,30,Reward boundary (processEvent075 Willelda),1000242,11018106
+110182,Lnc306,ACCEPT,Offer/oath from Willelda,1000242,
+110182,Lnc306,0,Retry at Willelda after duty failure,1000242,
+110182,Lnc306,1,J'moldva good/bad-news briefing,1000599,11018201
+110182,Lnc306,2,South-road duty-trigger push,1000174 push,11018202
+110182,Lnc306,10,Inside caravan defense (internal),(content-owned),11018202
+110182,Lnc306,20,Campfire aftermath push,1000174 push,11018202
+110182,Lnc306,21,Broker Echo gate,1000403,11018203
+110182,Lnc306,22,J'moldva report,1000599,11018204
+110182,Lnc306,30,Reward boundary (processEvent060 Willelda),1000242,11018205
+110240,Thm200,ACCEPT,Offer from Yayake,1000846,
+110240,Thm200,0,Retry at Yayake after duty failure,1000846,
+110240,Thm200,1,I'loofii briefing,1000847,11024001
+110240,Thm200,2,Western Thanalan vengeance-trigger push,1000174 push,11024002
+110240,Thm200,10,Inside vengeance duty (internal),(content-owned),11024002
+110240,Thm200,20,Reward boundary (processEvent030 I'loofii),1000847,11024003
+110241,Thm300,ACCEPT,Offer from Yayake,1000846,
+110241,Thm300,0,Retry at Yayake after duty failure,1000846,
+110241,Thm300,1,Rival talk,1000607,11024101
+110241,Thm300,2,Baderon talk,1000137,11024102
+110241,Thm300,3,Besieged-smith trigger push,1001008 push,11024103
+110241,Thm300,10,Inside rescue duty (internal),(content-owned),11024103
+110241,Thm300,20,Bodenolf branched report (028/027),1000144,11024104
+110241,Thm300,21,Bodenolf Echo gate,1000144,11024106
+110241,Thm300,22,Yayake talk,1000846,11024107
+110241,Thm300,23,Rival aftermath,1000607,11024108
+110241,Thm300,30,Reward boundary (processEvent050 Yayake),1000846,11024109
+110242,Thm306,ACCEPT,Offer from Yayake,1000846,
+110242,Thm306,0,Retry at Yayake after duty failure,1000846,
+110242,Thm306,1,I'loofii briefing,1000847,11024201
+110242,Thm306,2,Wreck-site rival talk,1000607,11024202
+110242,Thm306,3,Rival Echo gate,1000607,11024203
+110242,Thm306,10,Inside nonlethal duel (internal),(content-owned),11024203
+110242,Thm306,20,Reward boundary (processEvent060 I'loofii),1000847,11024205
+110260,Cnj200,ACCEPT,Offer from Soileine,1000234,
+110260,Cnj200,0,Retry at Soileine after duty failure,1000234,
+110260,Cnj200,1,Telent briefing,1000504,11026001
+110260,Cnj200,10,Inside coywolf-clearing duty (internal),(content-owned),11026002
+110260,Cnj200,20,Telent report,1000504,11026003
+110260,Cnj200,30,Reward boundary (processEvent040 Soileine),1000234,11026004
+110261,Cnj300,ACCEPT,Offer from Soileine,1000234,
+110261,Cnj300,0,Retry at Soileine after duty failure,1000234,
+110261,Cnj300,1,Lifemend Morys talk,1000505,11026101
+110261,Cnj300,2,Amberscale duty-trigger push,1000174 push,11026102
+110261,Cnj300,10,Inside six-elemental duty (internal),(content-owned),11026102
+110261,Cnj300,20,Soileine return,1000234,11026103
+110261,Cnj300,21,Owl's Nest Yuhelmeric,1000370,11026104
+110261,Cnj300,22,Rescued-knight Echo gate,1000573,11026105
+110261,Cnj300,23,Forest-border Morys,1000505,11026106
+110261,Cnj300,30,Reward boundary (processEvent070 Soileine),1000234,11026107
+110262,Cnj306,ACCEPT,Offer from Soileine,1000234,
+110262,Cnj306,0,Ingram briefing + leather bag grant,1000372,11026201
+110262,Cnj306,5,Amberscale escort request (ask gate),1000505,11026202
+110262,Cnj306,15,Meet Morys at Camp Emerald Moss,1000505,11026203
+110262,Cnj306,16,Inside the escort duty (internal),(content-owned),11026203
+110262,Cnj306,25,Use the Echo on unconscious Morys,1000505,11026205
+110262,Cnj306,30,Cave edge push into Echo defense,1000174 push,11026206
+110262,Cnj306,31,Inside the Echo defense (internal),(content-owned),11026206
+110262,Cnj306,40,Report to Ingram + bag return,1000372,11026207
+110262,Cnj306,45,Reward boundary (processEvent095 Soileine),1000234,11026208

@@ -1,0 +1,149 @@
+quest_id,sequence,objective,event_or_gate,enpc_actor
+110300,0,"meet younglings, arrow lesson",processEvent010,1000465
+110300,5,deliver Vibrant Arrows to Wybir,bare advance,1000556
+110300,10,"search for suitable wood (??? objects, no callbacks)",HOLD,none
+110300,12,branch choice ask-85 + bow repair,processEvent020 ask85,1000556
+110300,15,show repaired bow to Wybir,processEvent030,1000556
+110300,20,Marcelloix meeting (scene-internal) + report,processEvent040,1000465
+110301,0,watch the younglings,processEvent010,1000465
+110301,5,keep children from leaving,processEvent020,1000465
+110301,10,hide-and-seek: 3 child Parleys (Nicoliaux/Ryd/Elyn),HOLD Parley,1000242
+110301,14,Aunillie never left,processEvent025_2,1000465
+110301,15,bring every child back,processEvent030,1000465
+110301,20,deliver Colorful Building Blocks to Phrontistery,processEvent040,1000597
+110301,25,receive Nogeloix package for Marcelloix,processEvent050,1000597
+110301,30,bring package to Marcelloix at Roost,processEvent055 ask108,1000596
+110301,35,cure Marcelloix (consume salve) + return,processEvent060/070,1000458+1000465
+110302,0,excursion preparation + children,processEvent010,1000596
+110302,5,"gather leaves + craft fetishes (10 each, snapshot-diff)",processEvent020,1000596
+110302,10,scouting report to Nonolato (petition grant),processEvent023,1000463
+110302,12,accompany Wybir (rendezvous),processEvent025,1000556
+110302,13,"arrow-support route: Wybir shoots, player supplies (0 kills)",HOLD ally-shooter,1000556
+110302,14,report clear path,processEvent030,1000465
+110302,15,join excursion at Mirror,processEvent040,1000596
+110302,20,speak with each child (collapsed to Ryd),processEvent050,1000412
+110302,25,rain drawings ask-108,processEvent055 ask108,1000412
+110302,28,artwork handoff (consumes nothing),processEvent060,1000596
+110320,0,accept commission (branch locks: BSM/ARM),offer,1000144
+110320,5,forge branch case,processEvent005,1000144
+110320,7,forge poor trembler,bare advance,1000144
+110320,8,forge middle coil + instrument test,processEvent010,1000144
+110320,9,"report to Mimidoa: verify+consume all 4, marks+EXP",processEvent020,1000176
+110321,0,investigate siren-song commission,bare advance,1000144
+110321,5,question six miners (Parley stage 1),HOLD Parley,none
+110321,10,three-stage miner Parleys cont.,HOLD Parley,none
+110321,15,finish testimony,HOLD Parley,none
+110321,20-24,intermediate Parley results,HOLD,none
+110321,30,choose acoustic material (Seastone vs Reverberating Steel),HOLD,none
+110321,35-39,second material path,HOLD,none
+110321,40,synthesize Whistling Windwheel (recipe unrecovered),HOLD,none
+110321,45,"report to Mimidoa (consume windwheel, marks+EXP)",processEvent040,1000176
+110322,0,accept soundproofing commission (branch locks),processEvent005,1000144
+110322,5,craft branch earplug component (snapshot-diff),bare advance,1000144
+110322,6,combine into Brass Earplugs (recipe unrecovered),HOLD,1000144
+110322,10,EQUIP earplugs (EARS slot 17 gate),processEvent010,1000144
+110322,15,"eight-victim island puzzle, one clue at a time",HOLD victims,none
+110322,20,"report to Mimidoa (8 flags, marks, EXP 0)",processEvent040,1000176
+110360,0,"accept commission, Colbernoux briefing",processEvent013,1000949
+110360,5,consult Z'ssapa (nuggets grant),processEvent020,1000887/1001217
+110360,10,"return nuggets, receive Brooch Pin (synth baseline)",processEvent030,1000949
+110360,15,"three miner Parleys (flags 2/3/4, sketches)",HOLD Parley,miners
+110360,17,synthesize Z'ssapa's Brooch (recipe unregistered),processEvent040,1000949
+110360,18,show brooch to Colbernoux + 1000 gil (bare),gil handoff,1000949
+110360,20,F'lhaminn Echo (045 ask + 050 scene),processEvent045/050,F'lhaminn candidates
+110360,25,Elecotte reward,processEvent060,1000950
+110361,0,ten-blossom commission,processEvent020,1000950
+110361,5,Opyltyl refusal (flag 0) then V'korolon,processEvent030/040,1000236+1000458
+110361,10,spriggan escort prep (Camp Tranquil),HOLD escort,1500098
+110361,15,"escort clearing: 3 attacks, augite heal/buff, death fails",HOLD escort,none
+110361,20-24,Moogle Parley (title 3801),HOLD Parley,none
+110361,25-32,"win Parley, obtain 1 Pearl Clover Blossom",HOLD,none
+110361,33,guild report to Elecotte,processEvent060,1000950
+110361,35,Colbernoux delivery request (flower grant),processEvent067,1000949
+110361,40,deliver repaired flower to F'lhaminn,processEvent075,F'lhaminn candidates
+110361,48,Echo (078 re-entry ask),processEvent078,F'lhaminn candidates
+110361,50,Colbernoux reward,processEvent090,1000949
+110362,0,storehouse assignment,bare advance,1000950
+110362,1,"mandatory Sence Parley (011 setup, never advances)",HOLD Parley,1001498
+110362,2,"collect 3 storehouse materials, Sence approval",HOLD objects,1001498
+110362,3,synthesize Heartstrike Replica (recipe unregistered),verify bare,1000950
+110362,4,Elecotte delivery (consume + 020 scene),processEvent020,1000950
+110362,5,Ossuary meeting (025 entry ask),processEvent025,1000949
+110362,10,Niellefresne/Greinfarr Echo (030 gate),processEvent030,1000949
+110362,15,Colbernoux reward,processEvent040,1000949
+110380,0,evaluation intro (damaged armor grant),processEvent010,Lalatta candidates
+110380,5,observe + briefing (repaired baseline),processEvent020,Lalatta candidates
+110380,10,"repair synth + deliver (consume, 1 remnant grant)",processEvent030,Lalatta candidates
+110380,15,Lefwyne remnant top-up to 3 + jacket probe (consume remnants),processEvent040,1001396+1000231
+110380,17,Hereward showing,processEvent033,1000231
+110380,18,BODY-slot equip gate (stable inspection folded),processEvent037,1000231
+110380,20,jacket delivery + finale (consume jacket),processEvent050,1000231
+110381,0,saddle delivery briefing,processEvent010,1000231
+110381,5,"ambush scene (cinematic, non-combat)",processEvent020,Lalatta candidates
+110381,10,saddle delivery folded + bag baseline,processEvent025,Lalatta candidates
+110381,15-19,craft Fen-Yll Birkin Bag (snapshot-diff),processEvent030,Lalatta candidates
+110381,20-24,Vielle Parley title-1101 (flag 0),HOLD Parley,1000388
+110381,25,ransom handoff (consume bag) + Hereward reward,processEvent040/050,1000231
+110382,0,question students (unroutable),HOLD,none
+110382,5,Lifemend Stump assignment,processEvent010,Lalatta candidates
+110382,10,stolen-goods discovery,processEvent020,1000231
+110382,16,novice Parley title-5401 (flag 0),HOLD Parley,none
+110382,17,Beli consult (flag 1) then Maddeline boot grant,processEvent023,1001077+1001078
+110382,18,"any-one-of-8 five-piece prep (held count, consume 5)",processEvent025,1001078
+110382,20,vintage repair probe (snapshot-diff),processEvent027,1001078
+110382,22,Hereward showing (consume boots),processEvent030,1000231
+110382,25,juggernaut investigation (bare),none,Lalatta candidates
+110382,30,Lalatta Echo ask-51030 (flag 2) + Hereward finale,processEvent040/050,Lalatta+1000231
+110400,0,Bazaar intro (Ripped Hood grant),processEvent010,Chuchumu candidates
+110400,5,Deaustie report (005_2 + hood baseline),processEvent005_2,1000293
+110400,6,repair verify (bare),none,1000293
+110400,8,Chuchumu delivery (consume + 020),processEvent020,Chuchumu candidates
+110400,10,"Deaustie reward (EXP 0, no Needle)",processEvent030,1000293
+110401,0,ball assignment (bare),none,Chuchumu candidates
+110401,5,Soileine lead,processEvent012,1000234
+110401,10,Theldry bargain,processEvent015,1000379
+110401,15,four Parleys Cicely/Nesta/Keelty/Miounne (flags 0-3),HOLD Parley,opponents+1000379
+110401,19,slipper grant + Chuchumu delivery (consume),processEvent018/020,Chuchumu candidates
+110401,20,Deaustie reward,processEvent030,1000293
+110402,0,ten-glove order,processEvent010,1000293
+110402,5,"Chuchumu silk briefing (glove baseline, bare)",none,Chuchumu candidates
+110402,10,Copperbell on-site probe: 10 gloves else 008,processEvent020/008,Chuchumu candidates
+110402,15,freeing confirm (008_2 when short),processEvent008_2,Chuchumu candidates
+110402,20,"glove delivery to Deaustie (consume 10, bare)",none,1000293
+110402,25,"Gold Court story (unroutable, actors unresolved)",HOLD,none
+110402,30,return + 030 finale (3720 EXP),processEvent030,1000293
+110420,0,Nomomo Mole grant + medication baseline,processEvent010,1001392
+110420,5,synthesize Potent Medication (recipe 5385),processEvent015,1000597
+110420,7,"Nogeloix inspection (item KEPT, work slot 2 = 1)",processEvent015,1000597
+110420,10,S'lyhhia handoff ask-44 (consume) + ward scene,processEvent015_6/020,1000932
+110420,15,Nogeloix report + reward,processEvent030,1000597
+110421,0,Damielliot visit (any of 3 candidates),processEvent003,Damielliot candidates
+110421,5,question sickly children,processEvent005,1001035
+110421,10,Nogeloix briefing + Funds grant,processEvent007,1000597
+110421,15,meet Penelope in Gridania,processEvent008,1700001
+110421,20,paid info + Parley (memos never granted),HOLD Parley,1700001
+110421,25,Starfall Grass delivery (consume),processEvent015,1000597
+110421,30,ward finale with S'lyhhia,processEvent020,1000932
+110422,0,sickroom visit,processEvent000,Damielliot candidates
+110422,5,Echo entry ask-51030 (HOLD: past area unknown),processEvent005,Damielliot candidates
+110422,10,find injured Damielliot + poultice grant + salve baseline,processEvent008/009,Damielliot candidates
+110422,12,"on-site salve synthesis (no transition scene, bare)",none,Damielliot candidates
+110422,15,salve delivery (consume),processEvent010,Damielliot candidates
+110422,20,Nogeloix report + reward,processEvent030,1000597
+110440,5,TWO branches order-free: Prudentia crust + Pulmia pate,"010/015 delivery, 017/020 verdict",1000168+1000169
+110441,0,Charlys investigation start,processEvent010,1000138
+110441,5,first Lominsan lead,processEvent012,none (unowned)
+110441,10,question thickset sailor/tailor,processEvent014,none (unowned)
+110441,15,mandatory thickset Parley,HOLD Parley,thickset candidates
+110441,20,continue investigation,processEvent020,none (unowned)
+110441,25,post-Parley lead,processEvent025,none (unowned)
+110441,30,resolve story,processEvent030,none (unowned)
+110441,35,Charlys report,processEvent035,1000138
+110441,40,Charlys reward,final,1000138
+110442,0,Prudentia request (accept event),offer,1000168
+110442,5,gather recipe + ingredients (owners unknown),HOLD grants,none
+110442,10,three specialist ingredients,HOLD grants,none
+110442,15,Foulbelly Meatball (recipe 5388),processEvent030/040,none
+110442,20,first Echo gate ask-51030,processEvent020,none
+110442,25,"Devilbelly Meatball (recipe 5389, x2 Devilshroom)",processEvent030/040,none
+110442,30,second Echo + lates + Charlys finale (flags 0-2),processEvent050/060/065/070,1000138

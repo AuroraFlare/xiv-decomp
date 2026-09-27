@@ -1,0 +1,27 @@
+quest_id,code,sequence,actor_class_id,actor_name,process_events,result_gate,notes
+110460,Min200,ACCEPT,1000861,Linette,processEventLinetteStart,accepted==1,class MIN + level 20 gate; UpdateENPCs + EndEvent
+110460,Min200,1,1000887,Z'ssapa,processEvent010,none (twin choice cosmetic),"briefing + baseline snapshot counters 3-5; advances to 2"
+110460,Min200,2,1000887,Z'ssapa,"processEvent015_1 + processEvent015_2",none,advances to 3
+110460,Min200,3,1000887,Z'ssapa,processEvent020 (always plays),full pack required,"consume 1x3 -> SEQ 0; partial holds with progress message"
+110460,Min200,0,1000861,Linette,processEvent050,none,CompleteQuest (gil/marks central)
+110461,Min300,0-40,various (see markers.csv),"processEventLinetteStart/010/013/017/020/025/030/040/050/060/070",Parley win + two Echo result-1,HOLD: no live script
+110462,Min306,0-20,"1000841 Momodi + 1000861 Linette",processEventLinetteStart/013/020/030/035/040,none recovered,HOLD: escort unowned; 020 fade-only
+110480,Hrv200,0-10,"1000236 Opyltyl + 1000326 Cicely",processEventOpyltylStart/010/020(+020_1 alt)/030,result 1 on offer ask 35,HOLD: no live script
+110481,Hrv300,ACCEPT,1000236,Opyltyl,processEventOpyltylStart,accepted==1 via AcceptQuest,class BTN + level 30 gate
+110481,Hrv300,0,1000326,Cicely,processEvent010,none,advances to 5
+110481,Hrv300,5,1700001,Penelope,processEvent020,none,"advances to 10; stamps negotiation temp vars on SEQ 12 intro"
+110481,Hrv300,10,1000326,Cicely,processEvent030,none,advances to 11
+110481,Hrv300,11,1000326,Cicely,processEvent030,"branch+nut possession","consume both; grant ink; advances to 12"
+110481,Hrv300,12,1700001,Penelope,processEvent020 (intro; Parley via command),Parley win + ink in hand (onNegotiationResult),win grants Pirate Ship Tale -> SEQ 18
+110481,Hrv300,18,1000326,Cicely,processEvent030,"ink+tale possession","consume both; grant olives+letter; advances to 20"
+110481,Hrv300,20,1000861,Linette,none (possession check),"olives possession","consume olives; letter retained; advances to 25"
+110481,Hrv300,25,1000597,Nogeloix,none,none (sets Nogeloix-first flag),then Linette
+110481,Hrv300,25,1000861,Linette,none,"Nogeloix-first flag + letter possession","consume letter; grant ceruleum; advances to 30"
+110481,Hrv300,30,1090046,guild trigger,onPush (no scene),"ceruleum possession","consume ceruleum; advances to 35; never despawns shared actor"
+110481,Hrv300,35,1000236,Opyltyl,processEvent040,none,CompleteQuest (gil/marks central)
+110482,Hrv306,0-55,"1000508 Rychyld + 1000326 Cicely + 1000236 Opyltyl",processEvent010/020/030/040/050/060/070,Echo 040 result-1,HOLD: no live script
+110500,Fsh200,ACCEPT,1000153,N'nmulika,processEventNnmulikaStart,accepted==1,class FSH + level 20 gate
+110500,Fsh200,0,1000173,Maisie,processEvent010,none,"briefing + baseline snapshot; advances to 1"
+110500,Fsh200,1,1000173,Maisie,"processEvent020 full / processEvent010 partial + progress message","caught>=5 && owned>=5","grant rod BEFORE consume (retry flag); consume 5; sqrwa+AddExp 1760; CompleteQuest"
+110501,Fsh300,0-45,"1000153/1000155/1000201/1000174/1000374","processEventNnmulikaStart/010/020/010_1001/025/030/040/050/060/070/075","ferry asks + Echo 070 result-1",HOLD-gated bespoke; boat legs hold without dev bypass
+110502,Fsh306,0-28,"1000153/1000155/1000173","processEventNnmulikaStart/010/015/015_2/015_3/016/020/030/040/050/060/070","Echo trio result-1; deadline check","HOLD-gated bespoke; authored 3-bell placeholder; timeout returns to state 5"

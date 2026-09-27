@@ -1,0 +1,75 @@
+quest_id,code,seq,meaning,owner,next
+110060,Pgl200,-1,Offer at Gagaruna (1000862),Gagaruna,0
+110060,Pgl200,0,Talk to Titinin (Platinum Ledger handoff msg),Titinin,5
+110060,Pgl200,5,Talk to Esperaunce 3 times (counters),Esperaunce,10
+110060,Pgl200,10,"Private-area: collect 5 Shiny Chips, then Esperaunce",coin triggers/Esperaunce,15
+110060,Pgl200,15,Wise Miser pay/decline (paid==1 advances),Naida Zamaida,25
+110060,Pgl200,25,PGL guild-entrance trigger (Lewena),trigger 1090042,30
+110060,Pgl200,30,Singleton: enter private Toothless Gladiator fight,Singleton,35
+110060,Pgl200,35,"Return to Titinin (reward, counter=1)",Titinin,done
+110061,Pgl300,-1,Offer at Gagaruna (1000862),Gagaruna,1
+110061,Pgl300,1,Astalicia/Waekbyrt handoff (pgl30020),Waekbyrt 1000003,2
+110061,Pgl300,2,Mytesyn/ship-object handoff + pre-fight scene,Mytesyn 1000167,10
+110061,Pgl300,10,Private Kraken Deckhand fight (director-owned),content,20
+110061,Pgl300,20,Titinin report + payment-pending continuation,Titinin 1000934,21
+110061,Pgl300,21,Echo on Hurrey (ask-gated),Hurrey 1000603,22
+110061,Pgl300,22,Echo on Melisie (ask-gated),Melisie 1001009,23
+110061,Pgl300,23,Echo on Halstein (ask-gated),Halstein 1001007,24
+110061,Pgl300,24,Gagaruna reward boundary (processEvent090),Gagaruna,done
+110062,Pgl306,-1,Offer at Gagaruna (1000862),Gagaruna,1
+110062,Pgl306,1,Hurrey/handmaiden Echo entrance scene,Hurrey 1000603,2
+110062,Pgl306,2,Echo gate ask 51030 (0 holds step),1001013,3
+110062,Pgl306,3,Silver Bazaar push trigger + Echo gate,trigger 1000174,10
+110062,Pgl306,10,Private Ossuary Almstaker fight (director-owned),content,20
+110062,Pgl306,20,"Lewena aftermath (pays thaumaturge, asks time)",Titinin 1000934,21
+110062,Pgl306,21,Titinin report,Titinin 1000934,22
+110062,Pgl306,22,Gagaruna scene 070,Gagaruna,23
+110062,Pgl306,23,Gagaruna final/reward (processEvent090),Gagaruna,done
+110080,Gla200,-1,Offer at Lulutsu (1000863),Lulutsu,0
+110080,Gla200,0,Lulutsu retry point / battle launch,Lulutsu,10
+110080,Gla200,10,Private Ala Mhigan challenger fight (director-owned),content,20
+110080,Gla200,20,Lulutsu post-fight scene (gla20020),Lulutsu,30
+110080,Gla200,30,Lulutsu reward (gla20030),Lulutsu,done
+110081,Gla300,-1,Offer at Lulutsu (1000863),Lulutsu,1
+110081,Gla300,1,Gridania/Miounne waypoint scene,Miounne 1000230,2
+110081,Gla300,2,Willelda spar choice (decline holds) + pre-fight,Willelda 1000242,10
+110081,Gla300,10,Private J'moldva fight (director-owned),content,20
+110081,Gla300,20,J'moldva Echo + linkpearl handoff (same talk),J'moldva 1000599,21
+110081,Gla300,21,Lulutsu scene 055,Lulutsu,22
+110081,Gla300,22,Yoyobina Echo (ask-gated) + aftermath,Yoyobina 1001076,23
+110081,Gla300,23,Yoyobina talk 070 (pure say chain),Yoyobina,24
+110081,Gla300,24,Yoyobina talk 080 (pure say chain),Yoyobina,25
+110081,Gla300,25,Lulutsu reward (processEvent090),Lulutsu,done
+110082,Gla306,-1,Offer at Lulutsu (1000863),Lulutsu,1
+110082,Gla306,1,Yoyobina Coliseum briefing,Yoyobina 1001076,2
+110082,Gla306,2,Yoyobina ready check (decline holds),Yoyobina,10
+110082,Gla306,10,Private Ala Mhigan challenger fight (director-owned),content,20
+110082,Gla306,20,Lulutsu final report/reward (055),Lulutsu,30
+110082,Gla306,30,Authoritative completion handshake,Lulutsu,done
+110100,Exc200,-1,Offer at Waekbyrt (1000003),Waekbyrt,1
+110100,Exc200,1,Nunuba briefing (result-gated),Nunuba 1000004,10
+110100,Exc200,10,Private Swiftperch Tower fight (director-owned),content,20
+110100,Exc200,20,"Nunuba report + aftermath, then reward (050)",Nunuba,done
+110101,Exc300,-1,Offer at Waekbyrt (1000003),Waekbyrt,0
+110101,Exc300,0,Rostnsthal briefing (result-gated),Rostnsthal 1001652,5
+110101,Exc300,5,"Steal valuables, none collected",triggers 1090199,7
+110101,Exc300,7,"Steal valuables, one collected",triggers 1090199,8
+110101,Exc300,8,"Steal valuables, two collected",triggers 1090199,9
+110101,Exc300,9,"Steal valuables, three collected",triggers 1090199,10
+110101,Exc300,10,"Steal valuables, four collected",triggers 1090199,11>12
+110101,Exc300,11,"All five collected (transient, same talk)",content,12
+110101,Exc300,12,Report to Rostnsthal,Rostnsthal,15
+110101,Exc300,15,Sell loot to Rorojaru (Ship Funds grant),Rorojaru 1000374,16
+110101,Exc300,16,"Waekbyrt reward (funds consumed, 3420 EXP)",Waekbyrt,done
+110102,Exc306,-1,Offer at Waekbyrt (1000003),Waekbyrt,0
+110102,Exc306,0,Push captain's-quarters door -> survival duty,door exc306_quarters_door,1
+110102,Exc306,1,"Unwinnable first attack (survive 300s, internal)",content,2
+110102,Exc306,2,"Check rum barrel (register grant, internal)",barrel exc306_warehouse_barrel,5
+110102,Exc306,5,Waekbyrt warning,Waekbyrt,10
+110102,Exc306,10,Lounge confrontation trigger,trigger exc306_lounge_trigger,15
+110102,Exc306,15,Deck oath + register handoff,Rostnsthal,20
+110102,Exc306,20,Waekbyrt routing talk,Waekbyrt,25
+110102,Exc306,25,Push rematch doors -> winning rematch,door exc306_quarters_door,26
+110102,Exc306,26,Rematch vs Moenskaet + hands (internal),content,30
+110102,Exc306,30,Rostnsthal report + Echo (ask-gated),Rostnsthal,35
+110102,Exc306,35,Waekbyrt reward (4720 EXP),Waekbyrt,done
