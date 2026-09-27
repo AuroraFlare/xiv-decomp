@@ -44,7 +44,7 @@ SEQUENCES = [
     (110061, -1, "Offer at Gagaruna (1000862)", "Gagaruna", 1),
     (110061, 1, "Astalicia/Waekbyrt handoff (pgl30020)", "Waekbyrt 1000003", 2),
     (110061, 2, "Mytesyn/ship-object handoff + pre-fight scene", "Mytesyn 1000167", 10),
-    (110061, 10, "Private Kraken Deckhand fight (director-owned)", "content", 20),
+    (110061, 10, "Private 5x Kraken Deckhand fight (director-owned)", "content", 20),
     (110061, 20, "Titinin report + payment-pending continuation", "Titinin 1000934", 21),
     (110061, 21, "Echo on Hurrey (ask-gated)", "Hurrey 1000603", 22),
     (110061, 22, "Echo on Melisie (ask-gated)", "Melisie 1001009", 23),
@@ -54,7 +54,7 @@ SEQUENCES = [
     (110062, 1, "Hurrey/handmaiden Echo entrance scene", "Hurrey 1000603", 2),
     (110062, 2, "Echo gate ask 51030 (0 holds step)", "1001013", 3),
     (110062, 3, "Silver Bazaar push trigger + Echo gate", "trigger 1000174", 10),
-    (110062, 10, "Private Ossuary Almstaker fight (director-owned)", "content", 20),
+    (110062, 10, "Private 2x Ossuary Almstaker fight (director-owned)", "content", 20),
     (110062, 20, "Lewena aftermath (pays thaumaturge, asks time)", "Titinin 1000934", 21),
     (110062, 21, "Titinin report", "Titinin 1000934", 22),
     (110062, 22, "Gagaruna scene 070", "Gagaruna", 23),
@@ -240,22 +240,38 @@ ACTORS = [
     (110102, 1090199, "-", "quarters door / lounge trigger / barrel (uid-keyed)", "bespoke"),
 ]
 
-# (quest_id, wave, actor_class, mob_type, display_name, unique_id, mechanic)
+# (quest_id, wave, actor_class, mob_type, display_name, unique_id, mechanic,
+#  evidence_source) — evidence_source is a short key; full source log
+# (URLs, dates, timestamps) lives in the pack doc §14 video-evidence addendum.
 FIGHTS = [
-    (110060, 1, 2289013, 3108, "toothless gladiator", "pgl200_toothless_gladiator", "single kill; director returns to seq 35; retry at Singleton"),
-    (110061, 1, 2280217, 3066, "Kraken Deckhand", "pgl300_kraken_deckhand", "single kill; retry seq 0"),
-    (110062, 1, 2289014, 3079, "Ossuary Almstaker", "pgl306_ossuary_almstaker", "single kill; retry seq 0"),
-    (110080, 1, 2289006, 3034, "Ala Mhigan challenger", "gla200_ala_mhigan_challenger", "single kill + gla20010 entry scene; retry seq 0"),
-    (110081, 1, 2289009, 3062, "J'moldva", "gla300_j_moldva", "single kill; retry seq 0"),
-    (110082, 1, 2289007, 3035, "Ala Mhigan challenger", "gla306_ala_mhigan_challenger", "single kill + gla30610 lead-in; observed bladedancer 2289010 stays scene-only"),
-    (110100, 1, 2204003, 3129, "Tower Lemming", "exc200_tower_lemming_1..7 (x7)", "single wave of 8 incl. Lord; requireAllTargets"),
-    (110100, 1, 2204004, 3130, "Lord of Swiftperch", "exc200_lord_of_swiftperch", "counts as 1 of 8 kills"),
-    (110101, 0, 0, 0, "(no battle; collection route)", "-", "5 distinct pickups + sale; no duty"),
-    (110102, 1, 2289004, 32743, "Moenskaet the Honorbound", "exc306_moenskaet_survival", "SURVIVE 300s (kill also advances); death retries at door"),
-    (110102, 2, 2289005, 32744, "Moenskaet the Honorbound", "exc306_moenskaet_rematch", "rematch: all 3 must fall; register consumed"),
-    (110102, 2, 2280219, 32745, "Moenskaet's right hand", "exc306_moenskaets_right_hand", "rematch add"),
-    (110102, 2, 2280220, 32746, "Moenskaet's left hand", "exc306_moenskaets_left_hand", "rematch add"),
+    (110060, 1, 2289013, 3108, "toothless gladiator", "pgl200_toothless_gladiator", "single kill; director returns to seq 35; retry at Singleton", "bespoke pgl200.lua + meteor-wiki s20"),
+    (110061, 1, 2280217, 3066, "Kraken Deckhand", "pgl300_kraken_deckhand_1..5 (x5)", "5x lv-25 deckhands; requireAllTargets; retry seq 0; mold stays corpse loot", "ge-walkthrough 5x lv25 + mob3066/SQL"),
+    (110062, 1, 2289014, 3079, "Ossuary Almstaker", "pgl306_ossuary_almstaker_1..2 (x2)", "2x almstakers; requireAllTargets; Hurrey assist unimplemented; retry seq 0", "ge-walkthrough 2x + mob3079/SQL"),
+    (110080, 1, 2289006, 3034, "Ala Mhigan challenger", "gla200_ala_mhigan_challenger", "single kill + gla20010 entry scene; retry seq 0", "ge-walkthrough single challenger + scenario scenes"),
+    (110081, 1, 2289009, 3062, "J'moldva", "gla300_j_moldva", "single kill; retry seq 0", "ge-walkthrough single J'moldva (lancer) + template"),
+    (110082, 1, 2289007, 3035, "Ala Mhigan challenger", "gla306_ala_mhigan_challenger", "single kill + gla30610 lead-in; observed bladedancer 2289010 stays scene-only", "template safe slice; ge-walkthrough confirms unbound Echo chain order (HOLD)"),
+    (110100, 1, 2204003, 3129, "Tower Lemming", "exc200_tower_lemming_1..7 (x7)", "single wave of 8 incl. Lord; requireAllTargets", "ge-walkthrough handful+Lord + DAT actors + mob3129"),
+    (110100, 1, 2204004, 3130, "Lord of Swiftperch", "exc200_lord_of_swiftperch", "counts as 1 of 8 kills", "ge-walkthrough lv20 Lord + DAT actor + mob3130"),
+    (110101, 0, 0, 0, "(no battle; collection route)", "-", "5 distinct pickups + sale; no duty", "bespoke exc300.lua + meteor-wiki s27; ge-walkthrough stealth variant unrecovered (HOLD)"),
+    (110102, 1, 2289004, 32743, "Moenskaet the Honorbound", "exc306_moenskaet_survival", "SURVIVE 300s (kill also advances); death retries at door", "bespoke exc306.lua + ge-walkthrough 5-min survive"),
+    (110102, 2, 2289005, 32744, "Moenskaet the Honorbound", "exc306_moenskaet_rematch", "rematch: all 3 must fall; register consumed", "bespoke exc306.lua + ge-walkthrough 1+2 rematch"),
+    (110102, 2, 2280219, 32745, "Moenskaet's right hand", "exc306_moenskaets_right_hand", "rematch add", "bespoke exc306.lua + ge-walkthrough"),
+    (110102, 2, 2280220, 32746, "Moenskaet's left hand", "exc306_moenskaets_left_hand", "rematch add", "bespoke exc306.lua + ge-walkthrough"),
 ]
+
+# Per-quest evidence key for sequences.csv (short keys; full source log with
+# URLs/dates lives in the pack doc §14 video-evidence addendum).
+SEQ_SOURCES = {
+    110060: "meteor-wiki s20 + bespoke pgl200.lua",
+    110061: "meteor-wiki s21 + template Pgl300 + ge-walkthrough",
+    110062: "meteor-wiki s22 + template Pgl306 + ge-walkthrough",
+    110080: "meteor-wiki s23 + template Gla200 + ge-walkthrough",
+    110081: "meteor-wiki s24 + template Gla300 + ge-walkthrough",
+    110082: "meteor-wiki s25 + template Gla306 safe slice + ge-walkthrough/journal",
+    110100: "meteor-wiki s26 + template Exc200 + ge-walkthrough",
+    110101: "meteor-wiki s27 + bespoke exc300.lua + scenario ==1 gate + ge-walkthrough (flow)",
+    110102: "meteor-wiki s28 + bespoke exc306.lua + ge-walkthrough",
+}
 
 # (quest_id, kind, ref, count, source, note)
 REWARDS = [
@@ -362,9 +378,10 @@ def write_csv(name, rows, fields):
 def main():
     qname = {qid: (code, title) for qid, code, title, _, _, _ in QUESTS}
     write_csv("sequences.csv",
-              [{"quest_id": q, "code": qname[q][0], "seq": s, "meaning": m, "owner": o, "next": n}
+              [{"quest_id": q, "code": qname[q][0], "seq": s, "meaning": m, "owner": o, "next": n,
+                "evidence_source": SEQ_SOURCES[q]}
                for q, s, m, o, n in SEQUENCES],
-              ["quest_id", "code", "seq", "meaning", "owner", "next"])
+              ["quest_id", "code", "seq", "meaning", "owner", "next", "evidence_source"])
     write_csv("process_events.csv",
               [{"quest_id": q, "code": qname[q][0], "event": e, "scene": sc, "role": r, "wired": w}
                for q, e, sc, r, w in EVENTS],
@@ -377,15 +394,15 @@ def main():
               ["quest_id", "code", "actor_class", "display_id", "role", "source"])
     mobinfo = parse_mob_levels()
     fight_rows = []
-    for q, wave, actor, mob, name, uid, mech in FIGHTS:
+    for q, wave, actor, mob, name, uid, mech, src in FIGHTS:
         info = mobinfo.get(mob, {})
         fight_rows.append({"quest_id": q, "code": qname[q][0], "wave": wave, "actor_class": actor,
                            "mob_type": mob, "level_min": info.get("min", ""), "level_max": info.get("max", ""),
                            "skill_list": info.get("skills", ""), "display_name": name,
-                           "unique_id": uid, "mechanic": mech})
+                           "unique_id": uid, "mechanic": mech, "evidence_source": src})
     write_csv("fight_waves.csv", fight_rows,
               ["quest_id", "code", "wave", "actor_class", "mob_type", "level_min", "level_max",
-               "skill_list", "display_name", "unique_id", "mechanic"])
+               "skill_list", "display_name", "unique_id", "mechanic", "evidence_source"])
     write_csv("rewards.csv",
               [{"quest_id": q, "code": qname[q][0], "kind": k, "ref": r, "count": c, "source": s, "note": n}
                for q, k, r, c, s, n in REWARDS],

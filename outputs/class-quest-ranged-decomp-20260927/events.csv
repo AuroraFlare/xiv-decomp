@@ -1,97 +1,97 @@
-quest_id,code,event,role,result_gate,bound_in
-110160,Arc200,processEventNonolatoStart,Offer,no,template-accept
-110160,Arc200,processEvent010,Keelty briefing,no,route[1]
-110160,Arc200,processEvent020,Fence rendezvous,no,route[2]
-110160,Arc200,processEvent030,Duty preEvent (entry scene),no,battle.preEvent
-110160,Arc200,processEvent040,Nonolato aftermath report,no,postBattleRoute[20]
-110160,Arc200,processEvent050,Reward boundary,no,decomp-complete-hook
-110160,Arc200,processEvent005_2..005_8 + 010_2..010_5 + 030_2..030_4 + 040_2..040_4,Unbound flavor variants,n/a,unbound-no-owner
-110161,Arc300,processEventNonolatoStart,Offer,result 1/nil to accept,arc300.lua-onTalk-ACCEPT
-110161,Arc300,processEvent010,Keelty Hold briefing,no,arc300.lua-KEELTY1
-110161,Arc300,processEvent015,Owl's Nest gate cutscene (push),no,arc300.lua-onPush-GATE
-110161,Arc300,processEvent020,Vairemont delivery,no,arc300.lua-VAIRE
-110161,Arc300,processEvent027,Keelty Owl talk 1,no,arc300.lua-KEELTY2
-110161,Arc300,processEvent030,Keelty Owl talk 2,no,arc300.lua-KEELTY3
-110161,Arc300,processEvent040,Road-ambush cutscene (push); duty launches after,not result-gated (native duty prompt carries decline),arc300.lua-onPush-AMBUSH
-110161,Arc300,processEvent050,Post-fight Keelty report,Yes gate: nil/1 advances explicit 0 holds,arc300.lua-POST
-110161,Arc300,processEvent025 + processEvent025_2,Pascaleret interlude (story rides in 027/030),n/a,unbound-no-owner
-110162,Arc306,processEventNonolatoStart,Offer,result 1/nil to accept,arc306.lua-onTalk-ACCEPT
-110162,Arc306,processEvent005_2..005_7,Optional informant hints (6 owners),never advances journal,arc306.lua-INFORMANT_EVENTS
-110162,Arc306,processEvent005_8,Unbound (no seventh owner),n/a,unbound-no-owner
-110162,Arc306,processEvent010,Sorrel Haven find; escape choice cutscene-internal,no result gate; duty launches unconditionally,arc306.lua-onTalk-ASK
-110162,Arc306,processEvent010_2,Unbound variant,n/a,unbound-no-owner
-110162,Arc306,processEvent020,Post-escape return cutscene (push); duel launches after,no,arc306.lua-onPush-RETURN
-110162,Arc306,processEvent030,Quiver's Hold aftermath (push),no,arc306.lua-onPush-AFTER
-110162,Arc306,processEvent040,Keelty confession,no,arc306.lua-KEELTY
-110162,Arc306,processEvent050,Nonolato final report (returns nothing); EXP granted explicitly,no,arc306.lua-REWARD
-110162,Arc306,processEvent040_2..040_8,Unbound variants,n/a,unbound-no-owner
-110180,Lnc200,processEventWilleldaStart,Offer,no,template-accept
-110180,Lnc200,processEvent010,J'moldva briefing,no,route[1]
-110180,Lnc200,processEvent020,J'moldva aftermath (after-warp exit as talk callback),no,postBattleRoute[20]
-110180,Lnc200,processEvent040,Willelda payment speech,no,postBattleRoute[21]
-110180,Lnc200,processEvent030,Reward boundary,no,decomp-complete-hook
-110181,Lnc300,processEventJMoldvaStart,Offer/briefing (Yes/No ask DAT 87-89 inside),no,template-accept
-110181,Lnc300,processEvent020,Gagaruna canvass,no,route[1]
-110181,Lnc300,processEvent030,Dreues scene-only test (100k-gil ask not a gate),no,route[2]
-110181,Lnc300,processEvent040,J'moldva caravan order,no,route[3]
-110181,Lnc300,processEvent050,Caravan rendezvous (push),no,route[4]
-110181,Lnc300,processEvent060,Garlean flyover battle preEvent (presentation-only),no,battle.preEvent
-110181,Lnc300,processEvent065,Broker aftermath (after-warp fade as talk callback),no,postBattleRoute[20]
-110181,Lnc300,processEvent068,Merchant thanks (chained same interaction),no,postBattleRoute[20].afterEvents
-110181,Lnc300,processEvent070,J'moldva report,no,postBattleRoute[21]
-110181,Lnc300,processEvent075,Reward boundary (Willelda rows 85/86),no,decomp-complete-hook
-110182,Lnc306,processEventWilleldaStart,Offer/oath,no,template-accept
-110182,Lnc306,processEvent010,J'moldva briefing (good/bad-news either answer),no result gate,route[1]
-110182,Lnc306,processEvent020,Duty-trigger (push),no,route[2]
-110182,Lnc306,processEvent030,Campfire aftermath (push),no,postBattleRoute[20]
-110182,Lnc306,processEvent035,Broker Echo gate (51030),requiredResult 1 (0 holds),postBattleRoute[21]
-110182,Lnc306,processEvent040,Echo scene (chained same interaction),no,postBattleRoute[21].afterEvents
-110182,Lnc306,processEvent050,J'moldva report,no,postBattleRoute[22]
-110182,Lnc306,processEvent060,Reward boundary (Willelda),no,decomp-complete-hook
-110240,Thm200,processEventYayakeStart,Offer,no,template-accept
-110240,Thm200,processEvent020,I'loofii briefing,no,route[1]
-110240,Thm200,processEvent030,Reward boundary (I'loofii report/reward),no,decomp-complete-hook
-110241,Thm300,processEventYayakeStart,Offer,no,template-accept
-110241,Thm300,processEvent020,Rival talk,no,route[1]
-110241,Thm300,processEvent025,Baderon talk,no,route[2]
-110241,Thm300,processEvent027,Bodenolf report if smith falls (counter branch),counter-selected (slot 2 != 5),postBattleRoute[20].counterEvent.else
-110241,Thm300,processEvent028,Bodenolf report if smith survives (counter branch),counter-selected (slot 2 == 5),postBattleRoute[20].counterEvent.match
-110241,Thm300,processEvent030,Bodenolf Echo gate (51030/2),requiredResult 1 (0 holds),postBattleRoute[21]
-110241,Thm300,processEvent035,Yayake talk,no,postBattleRoute[22]
-110241,Thm300,processEvent040,Rival aftermath,no,postBattleRoute[23]
-110241,Thm300,processEvent050,Reward boundary (Yayake final report),no,decomp-complete-hook
-110242,Thm306,processEventYayakeStart,Offer,no,template-accept
-110242,Thm306,processEvent020,I'loofii briefing,no,route[1]
-110242,Thm306,processEvent030,Wreck-site rival talk,no,route[2]
-110242,Thm306,processEvent035,Rival Echo gate (51030/2),requiredResult 1 (0 holds),route[3]
-110242,Thm306,processEvent040,Duel handoff preEvent (thm30640),no,battle.preEvent
-110242,Thm306,processEvent050,In-instance aftermath (thm30650; rival despawned alive),no,director.successEvent
-110242,Thm306,processEvent060,Reward boundary (I'loofii report/reward),no,decomp-complete-hook
-110260,Cnj200,processEventSoileineStart,Offer,no,template-accept
-110260,Cnj200,processEvent015,Telent briefing,no,route[1]
-110260,Cnj200,processEvent020,Duty preEvent (entry scene),no,battle.preEvent
-110260,Cnj200,processEvent030,Telent post-fight report,no,postBattleRoute[20]
-110260,Cnj200,processEvent040,Reward boundary (Soileine),no,decomp-complete-hook
-110261,Cnj300,processEventSoileineStart,Offer,no,template-accept
-110261,Cnj300,processEvent010,Lifemend Morys talk,no,route[1]
-110261,Cnj300,processEvent010_2,Linkpearl follow-up (folded into same interaction),no,route[1].afterEvents
-110261,Cnj300,processEvent015_1,Duty preEvent,no,battle.preEvent
-110261,Cnj300,processEvent020,Knight aftermath success scene (cnj30020),no,director.successEvent
-110261,Cnj300,processEvent030,Soileine return,no,postBattleRoute[20]
-110261,Cnj300,processEvent040,Owl's Nest Yuhelmeric,no,postBattleRoute[21]
-110261,Cnj300,processEvent050,Rescued-knight Echo gate,requiredResult 1,postBattleRoute[22]
-110261,Cnj300,processEvent060,Forest-border Morys,no,postBattleRoute[23]
-110261,Cnj300,processEvent070,Reward boundary (Soileine),no,decomp-complete-hook
-110262,Cnj306,processEventSoileineStart,Offer,result 1/nil to accept,cnj306.lua-onTalk-ACCEPT
-110262,Cnj306,processEvent010,Ingram briefing + bag grant,no,cnj306.lua-BRIEF
-110262,Cnj306,processEvent020,Amberscale escort request,no,cnj306.lua-REQUEST
-110262,Cnj306,processEvent025,Escort-request ask,answer 1 advances,cnj306.lua-REQUEST
-110262,Cnj306,processEvent030,Camp Emerald Moss escort launch; opens escort duty,no (launch owns event on success),cnj306.lua-MEET
-110262,Cnj306,processEvent040,Vanish aftermath in-duty (cnj30640),no,escort-director-completion
-110262,Cnj306,processEvent045,Unconscious-Morys Echo gate,echoed 1 advances,cnj306.lua-ECHO
-110262,Cnj306,processEvent050,Echo followup warp scene,no,cnj306.lua-ECHO
-110262,Cnj306,processEvent060,Cave-arrival duty preEvent (stages interior),no,echo-battle.preEvent
-110262,Cnj306,processEvent070,Post-fight aftermath (cnj30670),no,echo-director.successEvent
-110262,Cnj306,processEvent080,Ingram report + bag return,no,cnj306.lua-REPORT
-110262,Cnj306,processEvent095,Reward boundary (Soileine; 090 is after-warp variant),no,cnj306.lua-RETURN
-110262,Cnj306,processEvent005_2..005_12 + 010_2..010_4 + 030_2..030_3 + 070_2..070_10,Unbound dialogue variants,n/a,unbound-no-owner
+quest_id,code,event,role,result_gate,bound_in,video_source_url,video_evidence_note
+110160,Arc200,processEventNonolatoStart,Offer,no,template-accept,https://www.youtube.com/watch?v=1FwllHbw81Q (00:00 Filling the Quiver) + https://www.youtube.com/watch?v=hRTsFtZTPp8,counts/sequence/mechanics confirmed; no XYZ from footage
+110160,Arc200,processEvent010,Keelty briefing,no,route[1],https://www.youtube.com/watch?v=1FwllHbw81Q (00:00 Filling the Quiver) + https://www.youtube.com/watch?v=hRTsFtZTPp8,counts/sequence/mechanics confirmed; no XYZ from footage
+110160,Arc200,processEvent020,Fence rendezvous,no,route[2],https://www.youtube.com/watch?v=1FwllHbw81Q (00:00 Filling the Quiver) + https://www.youtube.com/watch?v=hRTsFtZTPp8,counts/sequence/mechanics confirmed; no XYZ from footage
+110160,Arc200,processEvent030,Duty preEvent (entry scene),no,battle.preEvent,https://www.youtube.com/watch?v=1FwllHbw81Q (00:00 Filling the Quiver) + https://www.youtube.com/watch?v=hRTsFtZTPp8,counts/sequence/mechanics confirmed; no XYZ from footage
+110160,Arc200,processEvent040,Nonolato aftermath report,no,postBattleRoute[20],https://www.youtube.com/watch?v=1FwllHbw81Q (00:00 Filling the Quiver) + https://www.youtube.com/watch?v=hRTsFtZTPp8,counts/sequence/mechanics confirmed; no XYZ from footage
+110160,Arc200,processEvent050,Reward boundary,no,decomp-complete-hook,https://www.youtube.com/watch?v=1FwllHbw81Q (00:00 Filling the Quiver) + https://www.youtube.com/watch?v=hRTsFtZTPp8,counts/sequence/mechanics confirmed; no XYZ from footage
+110160,Arc200,processEvent005_2..005_8 + 010_2..010_5 + 030_2..030_4 + 040_2..040_4,Unbound flavor variants,n/a,unbound-no-owner,https://www.youtube.com/watch?v=1FwllHbw81Q (00:00 Filling the Quiver) + https://www.youtube.com/watch?v=hRTsFtZTPp8,counts/sequence/mechanics confirmed; no XYZ from footage
+110161,Arc300,processEventNonolatoStart,Offer,result 1/nil to accept,arc300.lua-onTalk-ACCEPT,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent010,Keelty Hold briefing,no,arc300.lua-KEELTY1,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent015,Owl's Nest gate cutscene (push),no,arc300.lua-onPush-GATE,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent020,Vairemont delivery,no,arc300.lua-VAIRE,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent027,Keelty Owl talk 1,no,arc300.lua-KEELTY2,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent030,Keelty Owl talk 2,no,arc300.lua-KEELTY3,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent040,Road-ambush cutscene (push); duty launches after,not result-gated (native duty prompt carries decline),arc300.lua-onPush-AMBUSH,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent050,Post-fight Keelty report,Yes gate: nil/1 advances explicit 0 holds,arc300.lua-POST,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110161,Arc300,processEvent025 + processEvent025_2,Pascaleret interlude (story rides in 027/030),n/a,unbound-no-owner,https://www.youtube.com/watch?v=1FwllHbw81Q (04:23 Foreboding Forest) + https://www.youtube.com/watch?v=_2wtLRaKOXw,route/bandit-pair confirmed; Y/cap/offsets stay authored
+110162,Arc306,processEventNonolatoStart,Offer,result 1/nil to accept,arc306.lua-onTalk-ACCEPT,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent005_2..005_7,Optional informant hints (6 owners),never advances journal,arc306.lua-INFORMANT_EVENTS,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent005_8,Unbound (no seventh owner),n/a,unbound-no-owner,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent010,Sorrel Haven find; escape choice cutscene-internal,no result gate; duty launches unconditionally,arc306.lua-onTalk-ASK,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent010_2,Unbound variant,n/a,unbound-no-owner,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent020,Post-escape return cutscene (push); duel launches after,no,arc306.lua-onPush-RETURN,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent030,Quiver's Hold aftermath (push),no,arc306.lua-onPush-AFTER,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent040,Keelty confession,no,arc306.lua-KEELTY,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent050,Nonolato final report (returns nothing); EXP granted explicitly,no,arc306.lua-REWARD,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110162,Arc306,processEvent040_2..040_8,Unbound variants,n/a,unbound-no-owner,https://www.youtube.com/watch?v=1FwllHbw81Q (12:24 There Can Be Only One) + https://www.youtube.com/watch?v=uBYbi8AJ5sE,two-battle/nonlethal-option blocking confirmed; exits/counts stay authored
+110180,Lnc200,processEventWilleldaStart,Offer,no,template-accept,https://www.youtube.com/watch?v=teBSI2N4ql4 (00:00 A Wailing Welcome),4-chigoe sequence confirmed; Linkpearl grant stays unbound
+110180,Lnc200,processEvent010,J'moldva briefing,no,route[1],https://www.youtube.com/watch?v=teBSI2N4ql4 (00:00 A Wailing Welcome),4-chigoe sequence confirmed; Linkpearl grant stays unbound
+110180,Lnc200,processEvent020,J'moldva aftermath (after-warp exit as talk callback),no,postBattleRoute[20],https://www.youtube.com/watch?v=teBSI2N4ql4 (00:00 A Wailing Welcome),4-chigoe sequence confirmed; Linkpearl grant stays unbound
+110180,Lnc200,processEvent040,Willelda payment speech,no,postBattleRoute[21],https://www.youtube.com/watch?v=teBSI2N4ql4 (00:00 A Wailing Welcome),4-chigoe sequence confirmed; Linkpearl grant stays unbound
+110180,Lnc200,processEvent030,Reward boundary,no,decomp-complete-hook,https://www.youtube.com/watch?v=teBSI2N4ql4 (00:00 A Wailing Welcome),4-chigoe sequence confirmed; Linkpearl grant stays unbound
+110181,Lnc300,processEventJMoldvaStart,Offer/briefing (Yes/No ask DAT 87-89 inside),no,template-accept,https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent020,Gagaruna canvass,no,route[1],https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent030,Dreues scene-only test (100k-gil ask not a gate),no,route[2],https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent040,J'moldva caravan order,no,route[3],https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent050,Caravan rendezvous (push),no,route[4],https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent060,Garlean flyover battle preEvent (presentation-only),no,battle.preEvent,https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent065,Broker aftermath (after-warp fade as talk callback),no,postBattleRoute[20],https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent068,Merchant thanks (chained same interaction),no,postBattleRoute[20].afterEvents,https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent070,J'moldva report,no,postBattleRoute[21],https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110181,Lnc300,processEvent075,Reward boundary (Willelda rows 85/86),no,decomp-complete-hook,https://www.youtube.com/watch?v=teBSI2N4ql4 (04:25 Culture Shock) + https://www.youtube.com/watch?v=uE_1QjgHMLg + https://www.youtube.com/watch?v=yaDbmuyRAMo,"two-wave defense confirmed; caravan chocobos are set dressing, no actors spawned"
+110182,Lnc306,processEventWilleldaStart,Offer/oath,no,template-accept,https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110182,Lnc306,processEvent010,J'moldva briefing (good/bad-news either answer),no result gate,route[1],https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110182,Lnc306,processEvent020,Duty-trigger (push),no,route[2],https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110182,Lnc306,processEvent030,Campfire aftermath (push),no,postBattleRoute[20],https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110182,Lnc306,processEvent035,Broker Echo gate (51030),requiredResult 1 (0 holds),postBattleRoute[21],https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110182,Lnc306,processEvent040,Echo scene (chained same interaction),no,postBattleRoute[21].afterEvents,https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110182,Lnc306,processEvent050,J'moldva report,no,postBattleRoute[22],https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110182,Lnc306,processEvent060,Reward boundary (Willelda),no,decomp-complete-hook,https://www.youtube.com/watch?v=teBSI2N4ql4 (17:48 Necessary Evils) + https://www.youtube.com/watch?v=uvMGGOxFm94,single-elemental + Echo flow confirmed; no caravan-failure rule evidenced
+110240,Thm200,processEventYayakeStart,Offer,no,template-accept,https://www.youtube.com/watch?v=fzug_RoAlbA (00:00 The Big Payback) + https://www.youtube.com/watch?v=n6e7hK3KmWg,three-wave/herd-lure/boss structure confirmed; 4+1 wave split stays workaround
+110240,Thm200,processEvent020,I'loofii briefing,no,route[1],https://www.youtube.com/watch?v=fzug_RoAlbA (00:00 The Big Payback) + https://www.youtube.com/watch?v=n6e7hK3KmWg,three-wave/herd-lure/boss structure confirmed; 4+1 wave split stays workaround
+110240,Thm200,processEvent030,Reward boundary (I'loofii report/reward),no,decomp-complete-hook,https://www.youtube.com/watch?v=fzug_RoAlbA (00:00 The Big Payback) + https://www.youtube.com/watch?v=n6e7hK3KmWg,three-wave/herd-lure/boss structure confirmed; 4+1 wave split stays workaround
+110241,Thm300,processEventYayakeStart,Offer,no,template-accept,https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent020,Rival talk,no,route[1],https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent025,Baderon talk,no,route[2],https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent027,Bodenolf report if smith falls (counter branch),counter-selected (slot 2 != 5),postBattleRoute[20].counterEvent.else,https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent028,Bodenolf report if smith survives (counter branch),counter-selected (slot 2 == 5),postBattleRoute[20].counterEvent.match,https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent030,Bodenolf Echo gate (51030/2),requiredResult 1 (0 holds),postBattleRoute[21],https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent035,Yayake talk,no,postBattleRoute[22],https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent040,Rival aftermath,no,postBattleRoute[23],https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110241,Thm300,processEvent050,Reward boundary (Yayake final report),no,decomp-complete-hook,https://www.youtube.com/watch?v=fzug_RoAlbA (06:00 Revelry in Rivalry) + https://www.youtube.com/watch?v=GUui5bq7qOo + https://www.youtube.com/watch?v=9tB7b_cl544,single-bomb vs protected-smith + branched report confirmed; attrition rate stays authored
+110242,Thm306,processEventYayakeStart,Offer,no,template-accept,https://www.youtube.com/watch?v=fzug_RoAlbA (12:06 Law and the Order) + https://www.youtube.com/watch?v=mFHVGOK7Tuk,nonlethal-yield mechanic confirmed; exact 25pct threshold stays authored
+110242,Thm306,processEvent020,I'loofii briefing,no,route[1],https://www.youtube.com/watch?v=fzug_RoAlbA (12:06 Law and the Order) + https://www.youtube.com/watch?v=mFHVGOK7Tuk,nonlethal-yield mechanic confirmed; exact 25pct threshold stays authored
+110242,Thm306,processEvent030,Wreck-site rival talk,no,route[2],https://www.youtube.com/watch?v=fzug_RoAlbA (12:06 Law and the Order) + https://www.youtube.com/watch?v=mFHVGOK7Tuk,nonlethal-yield mechanic confirmed; exact 25pct threshold stays authored
+110242,Thm306,processEvent035,Rival Echo gate (51030/2),requiredResult 1 (0 holds),route[3],https://www.youtube.com/watch?v=fzug_RoAlbA (12:06 Law and the Order) + https://www.youtube.com/watch?v=mFHVGOK7Tuk,nonlethal-yield mechanic confirmed; exact 25pct threshold stays authored
+110242,Thm306,processEvent040,Duel handoff preEvent (thm30640),no,battle.preEvent,https://www.youtube.com/watch?v=fzug_RoAlbA (12:06 Law and the Order) + https://www.youtube.com/watch?v=mFHVGOK7Tuk,nonlethal-yield mechanic confirmed; exact 25pct threshold stays authored
+110242,Thm306,processEvent050,In-instance aftermath (thm30650; rival despawned alive),no,director.successEvent,https://www.youtube.com/watch?v=fzug_RoAlbA (12:06 Law and the Order) + https://www.youtube.com/watch?v=mFHVGOK7Tuk,nonlethal-yield mechanic confirmed; exact 25pct threshold stays authored
+110242,Thm306,processEvent060,Reward boundary (I'loofii report/reward),no,decomp-complete-hook,https://www.youtube.com/watch?v=fzug_RoAlbA (12:06 Law and the Order) + https://www.youtube.com/watch?v=mFHVGOK7Tuk,nonlethal-yield mechanic confirmed; exact 25pct threshold stays authored
+110260,Cnj200,processEventSoileineStart,Offer,no,template-accept,https://www.youtube.com/watch?v=bNofTseBId4 + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,4+alpha sequential waves confirmed; Morys appearance beat confirmed but unspawned (no content-owner variant)
+110260,Cnj200,processEvent015,Telent briefing,no,route[1],https://www.youtube.com/watch?v=bNofTseBId4 + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,4+alpha sequential waves confirmed; Morys appearance beat confirmed but unspawned (no content-owner variant)
+110260,Cnj200,processEvent020,Duty preEvent (entry scene),no,battle.preEvent,https://www.youtube.com/watch?v=bNofTseBId4 + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,4+alpha sequential waves confirmed; Morys appearance beat confirmed but unspawned (no content-owner variant)
+110260,Cnj200,processEvent030,Telent post-fight report,no,postBattleRoute[20],https://www.youtube.com/watch?v=bNofTseBId4 + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,4+alpha sequential waves confirmed; Morys appearance beat confirmed but unspawned (no content-owner variant)
+110260,Cnj200,processEvent040,Reward boundary (Soileine),no,decomp-complete-hook,https://www.youtube.com/watch?v=bNofTseBId4 + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,4+alpha sequential waves confirmed; Morys appearance beat confirmed but unspawned (no content-owner variant)
+110261,Cnj300,processEventSoileineStart,Offer,no,template-accept,https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent010,Lifemend Morys talk,no,route[1],https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent010_2,Linkpearl follow-up (folded into same interaction),no,route[1].afterEvents,https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent015_1,Duty preEvent,no,battle.preEvent,https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent020,Knight aftermath success scene (cnj30020),no,director.successEvent,https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent030,Soileine return,no,postBattleRoute[20],https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent040,Owl's Nest Yuhelmeric,no,postBattleRoute[21],https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent050,Rescued-knight Echo gate,requiredResult 1,postBattleRoute[22],https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent060,Forest-border Morys,no,postBattleRoute[23],https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110261,Cnj300,processEvent070,Reward boundary (Soileine),no,decomp-complete-hook,https://www.youtube.com/watch?v=Qb01veh35i8 + https://www.youtube.com/watch?v=KDkdL7XCBPg + https://www.youtube.com/watch?v=GuRCH9Zw3VQ,six-elemental single group + Morys-present-not-assisting confirmed; resists/seq-15 branch stay HOLD
+110262,Cnj306,processEventSoileineStart,Offer,result 1/nil to accept,cnj306.lua-onTalk-ACCEPT,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent010,Ingram briefing + bag grant,no,cnj306.lua-BRIEF,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent020,Amberscale escort request,no,cnj306.lua-REQUEST,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent025,Escort-request ask,answer 1 advances,cnj306.lua-REQUEST,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent030,Camp Emerald Moss escort launch; opens escort duty,no (launch owns event on success),cnj306.lua-MEET,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent040,Vanish aftermath in-duty (cnj30640),no,escort-director-completion,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent045,Unconscious-Morys Echo gate,echoed 1 advances,cnj306.lua-ECHO,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent050,Echo followup warp scene,no,cnj306.lua-ECHO,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent060,Cave-arrival duty preEvent (stages interior),no,echo-battle.preEvent,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent070,Post-fight aftermath (cnj30670),no,echo-director.successEvent,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent080,Ingram report + bag return,no,cnj306.lua-REPORT,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent095,Reward boundary (Soileine; 090 is after-warp variant),no,cnj306.lua-RETURN,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"
+110262,Cnj306,processEvent005_2..005_12 + 010_2..010_4 + 030_2..030_3 + 070_2..070_10,Unbound dialogue variants,n/a,unbound-no-owner,https://www.youtube.com/watch?v=nVO3Uw9XwqQ + FF Archive playlist PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs,"escort + 3-Dreadwolf defense confirmed; path/copies stay authored; Grover 25pct/4-wolf recollection conflicts wiki HP-0/3, retained"

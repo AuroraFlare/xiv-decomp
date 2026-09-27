@@ -179,3 +179,184 @@ Full table: `gaps.csv`.
   pre-existing, reported as blocked.
 - Map-coordinate suites not re-run (no coordinate/binding changes;
   `map-coordinates` + `map-registry` passed in the background run).
+
+## 8. Video/archived-source evidence addendum — 2026-09-27 (Min300/Min306/Hrv200/Hrv306)
+
+Scope: Min300 (110461), Min306 (110462), Hrv200 (110480), Hrv306 (110482).
+Min200, Hrv300, Fsh200/300/306 are DONE and out of scope; their CSV rows
+carry covering-chapter notes only, no new claims. Fsh300/306 stay HOLD-gated.
+
+Evidence rules applied (hard): footage may establish sequences, mechanics,
+counts, timing. It NEVER yields exact XYZ, pool/node positions, or missing
+actor identities as recovered data. No video-derived estimate is authored
+below: no XYZ, no pool/node positions, no actor identities, no counts
+changed. Unrecorded ground stays unresolved — footage does not substitute
+for navmesh. Shared map-coordinate workflow still applies; no Main-SQL
+change is made in this pass (main SQL already contains all prior data
+changes; no new pools/points/actors are added). No chocobos: no new Lua,
+no spawn APIs. Counter/flag contract untouched (no Lua edits, so slots
+0–3 / flags 0–31 need no new exemptions).
+
+### 8.1 Sources logged (URL, date, timestamps)
+
+YouTube (verified 2026-09-27 via page extract — title/channel/posted date):
+
+- Min300:
+  `https://www.youtube.com/watch?v=FovlRIqOqPg` (Oroelf, posted
+  2013-03-14, full quest 0:00–end).
+  `https://www.youtube.com/watch?v=Xy6DUi4Msdk` (ElysiaZalakria, posted
+  2011-10-03, recorded 2011-09-30 patch 1.18b, full 0:00–end; description:
+  "No mining involved this time! Just parley and some cute scenes").
+  `https://www.youtube.com/watch?v=dTMkeJlbHxU` (WotgAshiee LP547, posted
+  2012-07-20).
+  `https://www.youtube.com/watch?v=1TDAwECkPY0` (FFXIV Archived Miner
+  compilation, posted 2024-05-26 — modern compilation of 1.0 captures, not
+  a 1.0-era upload; ch 06:45–18:30 Little Saboteurs, ch 00:00–06:45 A Piece
+  of History, ch 18:31–28:28 Runaway Little Girl, ch 28:29 Alternate
+  Dialogue).
+  `https://www.youtube.com/watch?v=YHTP84yaLV8` (posted 2010-12-24, full;
+  description text gives the sequence parley → linkpearl → Camp Tranquil
+  ??? → Linette → Goldsmith-guild Nenekko instance → Echo on both twins,
+  reward 30,000 gil + 3,000 marks).
+- Min306:
+  `https://www.youtube.com/watch?v=BH7aGNzP0Jo` (ElysiaZalakria, posted
+  2011-11-25, recorded 2011-11-22 patch 1.19a; escort majority cut after
+  the first digging point by the uploader's own note).
+  `https://www.youtube.com/watch?v=ZGNWqe7EXuM` (MithraTales, posted
+  2011-03-10; description: NPC-linkpearl message → Linette → Momodi →
+  south-of-Ul'dah cutscene → road between Camp Black Brush and Camp
+  Horizon → follow Nenekko → dig pits "about 3 times" → ferry cutscene →
+  linkpearl → Linette reward).
+  `https://www.youtube.com/watch?v=020N-xh5Cm4` (WotgAshiee LP548, posted
+  2012-07-20).
+  `https://www.youtube.com/watch?v=1TDAwECkPY0` (same compilation, ch
+  18:31–28:28 Runaway Little Girl).
+- Hrv200:
+  `https://www.youtube.com/watch?v=y-cQuN5N5YI` (Slerp Lederp Botanist
+  Story v1.23b cutscene compilation, posted 2022-08-07 — modern compilation
+  of 1.23b cutscenes; ch 0:00–4:50 Gridanian Roots, ch 3:28–9:04 The Grass
+  Is Always Greener, ch 9:04–end A Moogle Bouquet; gameplay/timing not
+  shown).
+- Hrv306:
+  `https://www.youtube.com/watch?v=MtRv3x8Wh_M` (Oroelf, posted
+  2013-03-12, full 0:00–end; description confirms an extra cutscene variant
+  when over-gathering — "only changes one line of dialog").
+  `https://www.youtube.com/watch?v=y-cQuN5N5YI` (same compilation, ch
+  9:04–end A Moogle Bouquet).
+
+Archived text (1.0-era walkthrough content, accessed 2026-09-27):
+
+- `https://ffxiv.gamerescape.com/wiki/Little_Saboteurs` (obsolete
+  walkthrough: 8 steps Linette → V'korolon → Chocobo Stables parley →
+  Linkpearl → Camp Tranquil (46,51) ??? → Linette → Goldsmith-guild Nenekko
+  instance → Echo both twins).
+- `https://ffxiv.gamerescape.com/wiki/Runaway_Little_Girl` (obsolete
+  walkthrough, 8 steps; escort step: "At three points, the NPC will stop
+  and mining points will appear. Once two points are mined (one time each)
+  then the escort proceeds").
+- `https://ffxiv.gamerescape.com/wiki/Gridanian_Roots` (obsolete
+  walkthrough: Quarrymill near Camp Tranquil across bridge map marker
+  45,47; Botanist-gated initiation; Spiny Turnip harvest; instanced; ~20
+  skill points/harvest; 10-minute timer; moogle approach either way same
+  result).
+- `https://ffxiv.gamerescape.com/wiki/A_Moogle_Bouquet` (obsolete
+  walkthrough: Rychyld (17,35) near Camp Crimson Bark; harvest greenery
+  until Pearl Clover Seed, may continue until sparkles disappear with a
+  Rychyld complaint variant; Humblehearth (29,31) Yarzon sleep/wake cycles,
+  harvest sparkles avoiding Yarzon; faeces count "believed correlated" to
+  seeds — author's belief, not a formula; seedling → Echo on Cicely →
+  forest delivery → Cicely completion).
+- `http://elemen.sakura.ne.jp/ff14_dated_archives/quest/ClassQuest/Miner2.html`
+  (eLeMeN dated archive とっておき大作戦; JP journals confirm the full
+  Min300 chain; reward 30,000 gil + EXP ~3420 added patch 1.20, guild
+  tokens ×3000 removed).
+- `http://elemen.sakura.ne.jp/ff14_dated_archives/quest/ClassQuest/Miner3.html`
+  (eLeMeN 彼女の逃避行; JP journals confirm Quicksand/Momodi → Sil'dih
+  mirage → Vesper Bay escort with digging → linkpearl → Linette; reward
+  36,000 gil + EXP ~4720 added patch 1.20, tokens ×3600 removed).
+- `http://elemen.sakura.ne.jp/ff14_dated_archives/quest/ClassQuest/Botanist1.html`
+  (eLeMeN グリダニアの根っこ; 3 JP journals; reward 20,000 gil + Brass
+  Hatchet and EXP ~1760 both added patch 1.20, tokens ×2000 removed,
+  Linkpearl; condition Botanist 20+ plus a main-quest clear).
+- `http://elemen.sakura.ne.jp/ff14_dated_archives/quest/ClassQuest/Botanist3.html`
+  (eLeMeN モーグリの花畑; JP journals confirm Rychyld → flower-field seeds
+  → Cicely → Opyltyl cultivation via Yarzon faeces → seedling → Echo →
+  moogle delivery → Cicely; reward 36,000 gil + EXP ~4720 added patch 1.20,
+  tokens ×3600 removed).
+- Chain context only (no new claims):
+  `.../Miner1.html` (Min200 時のかけら),
+  `.../Botanist2.html` (Hrv300 憧れの大都会),
+  `https://ffxiv.gamerescape.com/wiki/A_Piece_of_History`,
+  `https://ffxiv.gamerescape.com/wiki/The_Grass_Is_Always_Greener`.
+
+### 8.2 Per-quest findings (what footage supports vs what stays HOLD)
+
+- Min300: footage + archives corroborate the decomp sequence (Linette →
+  Roost/V'korolon → Chocobo Stables instance → carriage-driver Parley →
+  Linkpearl report → Longroot flower-field ???/buried box → Linette →
+  Eshtaime Nenekko → Linette → Echo BOTH twins), the non-combat/parley-only
+  mechanic, and central 30k gil + 3k marks. Gaps CLOSED in Lua: none. Still
+  HOLD with reason: Parley 017 result-mutation owner, buried-box
+  actor/flag, Linkpearl command owner, private Chocobo-Stables/Eshtaime
+  transition owners, exact Nenekko/Popokkuli variants, per-twin Echo flag
+  ownership, and post-1.20 EXP scaling all require engine owners, actor
+  identities, or exact flags — footage NEVER yields these per the evidence
+  rules, and no XYZ may be taken from video or grid-square text (the (46,51)
+  Camp Tranquil cell is a historical integer grid reference, not a server
+  position; placeholder (−431,187) transforms must not become actors).
+- Min306: footage + archives corroborate the escort mechanic and its count:
+  three stops with two mining points each (Gamer Escape exact "three
+  points / two points mined once each"; MithraTales "about 3 times";
+  Elysia "first digging point" implying plurality; decomp already records
+  stopCount 3 / two-per-stop / six interactions). Also corroborated: pursuer
+  evasion by digging, killing the pursuer forbidden, Linkpearl summons, road
+  corridor between Camp Black Brush and Camp Horizon in words only. Gaps
+  CLOSED in Lua: none. Still HOLD: escort path/stop XYZ, six node actors,
+  pursuer actor, Linkpearl owner, failure/retry/cleanup, EXP amount, Master
+  of Rock (29724) grant — all need navmesh/recorded ground, actor
+  identities, or command owners that footage cannot supply; the road phrase
+  is not a path and the three-stop count does not place stops.
+- Hrv200: compilation + archives corroborate Opyltyl → Cicely → Quarrymill
+  weed-clear/Spiny Turnip harvest (instanced) → Cicely/moogle → Opyltyl,
+  plus a 10-minute instanced timer, ~20 skill/harvest, and the Brass Hatchet
+  / ~1760 EXP / Linkpearl reward frame (eLeMeN: both added patch 1.20).
+  Gaps CLOSED in Lua: none. Still HOLD: weed/leaf required count (no
+  footage frame shows a numeric journal count; the timer is timing, not a
+  count), NO pool carries 11000018 and no place-2011 pools/points exist
+  (needs a gathering-expansion workstream with new pools + points +
+  recorded ground, not a script edit), node actors/transforms, marker-02
+  area ownership (regional-frame coords, unresolved ground), 1090046
+  multiplex hazard (shared MSQ trigger must not be rebound), prerequisite
+  conflict (eLeMeN's main-quest-clear condition is a third data point
+  against SQL 0 vs archive 110013 — left as conflict, no SQL change on
+  archive text alone), Linkpearl semantics, EXP scaling.
+- Hrv306: footage + archives corroborate the dynamic/over-harvest mechanic
+  (Oroelf's extra one-line variant; Gamer Escape "continue until sparkles
+  disappear" + Rychyld complaint), Yarzon sleep/wake avoidance while
+  harvesting sparkles, the seed→faeces correlation as an author belief (not
+  a formula), seedling grant, Echo on Cicely, forest/moogle delivery, and
+  Cicely completion. Gaps CLOSED in Lua: none. Still HOLD: exact seed count,
+  faeces formula, node/hazard actors, sleep/wake aggro lifecycle, instance
+  handoffs, dynamic 030 payload, Greatloam/forest delivery actors, technical
+  reward owner, EXP — "believed correlated" is not a formula and the
+  one-line variant does not recover counts.
+
+Fsh300/306: untouched; Barrel coords/boat travel and timer/push-owner HOLDs
+stand per scope.
+
+### 8.3 Lua/validator impact
+
+No quest Lua changed (all four remain 3-line `InitClassQuest` stubs,
+template metadata-only, `noOffer`). No helpers, no validators, no SQL, no
+availability flips. Rationale: every remaining gap needs an engine owner,
+actor identity, recorded ground position, pool/point row, or exact
+counter/flag binding — none recoverable from footage under the hard rules —
+so any script edit now would fabricate owners/positions and fail review.
+Enablement stays as-is: none of the four meets the all-gaps-closed + green
+route-validator + annotation + `EXPECTED_ENABLED` bar.
+
+### 8.4 CSV changes
+
+All six machine tables gained `video_sources` + `archive_sources` columns
+(2026-09-27); every pre-existing column value is byte-identical. Rows for
+110460/110481/110500/110501/110502 carry out-of-scope notes only.

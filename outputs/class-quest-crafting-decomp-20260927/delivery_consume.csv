@@ -1,44 +1,44 @@
-quest_id,sequence,npc_actor,item,qty,mode,baseline_slot,retry_safe
-110300,5,1000556,11000026,1,consume-on-delivery (bare advance),-,yes: re-grant if missing
-110300,12,1000556,11000062,1,consume branch on suitable repair (ask-85),-,yes: decline keeps branch
-110300,15,1000556,11000058,1,consume-on-delivery,-,yes
-110301,20,1000597,11000029,1,consume-on-delivery,-,yes
-110301,35,1000458,11000027,1,consume-as-cure + flag,-,yes: flag gates finale
-110302,5,1000596,11000066+11000065,10,"snapshot-diff probe (kept, not consumed)",0+1,yes: probe only
-110320,5/7/8,1000144,branch part,1,snapshot-diff probe (KEPT until finale),0,yes
-110320,9,1000176,all 4 branch parts,1,"verify-all + consume-all, then marks+EXP",-,yes: marks verified before Complete
-110322,5,1000144,branch component,1,snapshot-diff probe,0,yes
-110360,10,1000949,11000109,1,grant pin + set brooch baseline,0,yes: idempotent grant
-110360,17,1000949,11000108,1,snapshot-diff probe (kept),0,yes
-110360,18,1000949,11000108,1,consume + 1000 gil script-side,-,yes: AddGil cannot fail
-110361,35,1000949,11000124,1,"grant flower (verified, once)",-,yes
-110361,40,F'lhaminn,11000124,1,consume-on-delivery,-,yes
-110362,2,1001498,ore+shards+water,1,consume-all-3 at approval + set replica baseline,0,yes
-110362,4,1000950,11000116,1,consume-on-delivery + 020,-,yes
-110380,10,Lalatta,11000045,1,snapshot-diff probe then consume + remnant grant,0,yes
-110380,15,1000231,11000046,3,consume remnants on jacket probe,1,yes: Lefwyne top-up
-110380,20,1000231,8030916,1,consume jacket at finale,-,yes
-110381,10,Lalatta,11000021,1,consume saddle (Yuhelmeric folded) + bag baseline,0,yes
-110381,15-19,Lalatta,11000047,1,snapshot-diff probe,0,yes
-110381,20-24,1000388,11000047,1,consume-as-ransom after Parley flag,-,yes
-110382,18,1001078,prep variant,5,"held-count (bought allowed), consume first qualifying set",-,yes
-110382,20,1001078,11000049,1,snapshot-diff probe,0,yes
-110382,22,1000231,11000049,1,consume-on-delivery + 030,-,yes
-110400,0,Chuchumu,11000055,1,grant ripped hood (verified),-,yes
-110400,5,1000293,11000054,1,set hood baseline (005_2),0,yes
-110400,8,Chuchumu,11000054,1,consume-on-delivery + 020,-,yes
-110401,15,1000379,11000139,1,grant slippers after 4 Parley flags + 018,-,yes
-110401,19,Chuchumu,11000139,1,consume-on-delivery + 020,-,yes
-110402,10,Chuchumu,11000056,10,snapshot-diff probe (per-strand loop bypassed),0,yes
-110402,20,1000293,11000056,10,"consume-10 (bare advance, no scene)",-,yes
-110420,0,1001392,11000076,1,grant Mole (verified) + medication baseline,0,yes: total-loss re-grant
-110420,7,1000597,11000077,1,"INSPECT (possession gate, item KEPT)",0,yes
-110420,10,1000932,11000077,1,consume-on-handoff (ask-44 gate),-,yes: decline keeps item
-110421,10,1000597,11000037,1,grant Funds (verified),-,yes
-110421,25,1000597,11000041,1,consume-on-delivery,-,yes
-110422,10,Damielliot,11000078,1,grant poultice (verified) + salve baseline,0,yes: total-loss re-grant
-110422,15,Damielliot,11000079,1,consume-on-delivery + rescue scene,-,yes
-110440,5,1000168,11000069,1,"snapshot-diff + consume-on-delivery, verdict next talk",0,yes
-110440,5,1000169,11000070,1,"snapshot-diff + consume-on-delivery, verdict next talk",1,yes
-110442,15,unowned,11000073,1,snapshot-diff (future binding),0,n/a HOLD
-110442,25,unowned,11000071,1,snapshot-diff (future binding),1,n/a HOLD
+quest_id,sequence,npc_actor,item,qty,mode,baseline_slot,retry_safe,video_evidence_20260927
+110300,5,1000556,11000026,1,consume-on-delivery (bare advance),-,yes: re-grant if missing,
+110300,12,1000556,11000062,1,consume branch on suitable repair (ask-85),-,yes: decline keeps branch,
+110300,15,1000556,11000058,1,consume-on-delivery,-,yes,
+110301,20,1000597,11000029,1,consume-on-delivery,-,yes,
+110301,35,1000458,11000027,1,consume-as-cure + flag,-,yes: flag gates finale,
+110302,5,1000596,11000066+11000065,10,"snapshot-diff probe (kept, not consumed)",0+1,yes: probe only,
+110320,5/7/8,1000144,branch part,1,snapshot-diff probe (KEPT until finale),0,yes,
+110320,9,1000176,all 4 branch parts,1,"verify-all + consume-all, then marks+EXP",-,yes: marks verified before Complete,
+110322,5,1000144,branch component,1,snapshot-diff probe,0,yes,
+110360,10,1000949,11000109,1,grant pin + set brooch baseline,0,yes: idempotent grant,
+110360,17,1000949,11000108,1,snapshot-diff probe (kept),0,yes,
+110360,18,1000949,11000108,1,consume + 1000 gil script-side,-,yes: AddGil cannot fail,
+110361,35,1000949,11000124,1,"grant flower (verified, once)",-,yes,
+110361,40,F'lhaminn,11000124,1,consume-on-delivery,-,yes,
+110362,2,1001498,ore+shards+water,1,consume-all-3 at approval + set replica baseline,0,yes,
+110362,4,1000950,11000116,1,consume-on-delivery + 020,-,yes,
+110380,10,Lalatta,11000045,1,snapshot-diff probe then consume + remnant grant,0,yes,
+110380,15,1000231,11000046,3,consume remnants on jacket probe,1,yes: Lefwyne top-up,A5 third-remnant-set walkthrough corroborates qty 3
+110380,20,1000231,8030916,1,consume jacket at finale,-,yes,
+110381,10,Lalatta,11000021,1,consume saddle (Yuhelmeric folded) + bag baseline,0,yes,
+110381,15-19,Lalatta,11000047,1,snapshot-diff probe,0,yes,
+110381,20-24,1000388,11000047,1,consume-as-ransom after Parley flag,-,yes,
+110382,18,1001078,prep variant,5,"held-count (bought allowed), consume first qualifying set",-,yes,
+110382,20,1001078,11000049,1,snapshot-diff probe,0,yes,
+110382,22,1000231,11000049,1,consume-on-delivery + 030,-,yes,
+110400,0,Chuchumu,11000055,1,grant ripped hood (verified),-,yes,
+110400,5,1000293,11000054,1,set hood baseline (005_2),0,yes,
+110400,8,Chuchumu,11000054,1,consume-on-delivery + 020,-,yes,A3 journal delivery step corroborates
+110401,15,1000379,11000139,1,grant slippers after 4 Parley flags + 018,-,yes,
+110401,19,Chuchumu,11000139,1,consume-on-delivery + 020,-,yes,
+110402,10,Chuchumu,11000056,10,snapshot-diff probe (per-strand loop bypassed),0,yes,A2 10-glove Copperbell walkthrough corroborates qty 10
+110402,20,1000293,11000056,10,"consume-10 (bare advance, no scene)",-,yes,A2 10-glove walkthrough corroborates consume-10
+110420,0,1001392,11000076,1,grant Mole (verified) + medication baseline,0,yes: total-loss re-grant,
+110420,7,1000597,11000077,1,"INSPECT (possession gate, item KEPT)",0,yes,
+110420,10,1000932,11000077,1,consume-on-handoff (ask-44 gate),-,yes: decline keeps item,
+110421,10,1000597,11000037,1,grant Funds (verified),-,yes,
+110421,25,1000597,11000041,1,consume-on-delivery,-,yes,
+110422,10,Damielliot,11000078,1,grant poultice (verified) + salve baseline,0,yes: total-loss re-grant,
+110422,15,Damielliot,11000079,1,consume-on-delivery + rescue scene,-,yes,
+110440,5,1000168,11000069,1,"snapshot-diff + consume-on-delivery, verdict next talk",0,yes,
+110440,5,1000169,11000070,1,"snapshot-diff + consume-on-delivery, verdict next talk",1,yes,
+110442,15,unowned,11000073,1,snapshot-diff (future binding),0,n/a HOLD,
+110442,25,unowned,11000071,1,snapshot-diff (future binding),1,n/a HOLD,

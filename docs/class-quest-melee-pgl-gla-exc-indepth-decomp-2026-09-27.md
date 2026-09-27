@@ -101,7 +101,8 @@ Markers: 8 live — 11006101 Waekbyrt (-752.53,382.14,1600217), 11006102 Mytesyn
 11006104 Titinin (-170.63,117.15,1400021), 11006105 Hurrey (-178.46,102.62,2200172),
 11006106 Melisie (-160.24,115.99,1300104), 11006107 Halstein (-157.08,110.13,1000134),
 11006108 Gagaruna (-184.94,108.87,1400019); 11006109–20 filler.
-Fight: 2280217 / mob 3066, lv 25, skill 15, single kill; director expected 10 →
+Fight: 5× 2280217 / mob 3066, lv 25, skill 15, requireAllTargets (walkthrough
+count, §14); director expected 10 →
 success 20 → retry 0. Rewards: central gil 30000 + marks 3000; Lua EXP 3420
 (template `sqrwa`+`AddExp`; no central Exp row). Validator
 `validate_pgl300_route.py` PASS. Open: ship-object server callback unrecovered
@@ -122,8 +123,8 @@ to trigger 1090042), 11006202 Hurrey (-181.91,70.12,2200172), 11006203
 (-181.81,71.35,4000515), 11006204 Silver Bazaar (-1387.26,304.20,4000257),
 11006205 Gagaruna (-184.94,108.87,1400019), 11006206 Titinin (-170.63,117.15,1400021);
 11006207–20 filler.
-Fight: 2289014 / mob 3079, lv 36, skill **14** (only non-15 humanoid list in
-this pack), single kill; director 10 → 20 → retry 0. Rewards: central gil 36000
+Fight: 2× 2289014 / mob 3079, lv 36, skill **14** (only non-15 humanoid list in
+this pack), requireAllTargets (walkthrough count, §14); director 10 → 20 → retry 0. Rewards: central gil 36000
 + marks 3600; Lua EXP 4720. Validator `validate_pgl306_route.py` PASS. Open:
 4000257 trigger actor-candidate Y/rotation scaffold; client marker X/Z + push
 semantics authoritative.
@@ -325,3 +326,151 @@ only on other packs' quests (Alc/Bsm/Cul/Hrv/Min/Gld/Wvr/Tan/Wdk) plus the same
 checkout-wide missing `decomp_more_20260617` lua tree — none of the 9 melee
 quests appear in its failure list; pre-existing and unrelated to this pack.
 No coordinates touched → map-coordinate suites not required.
+
+## 14. Video/retail-evidence pass — 2026-09-27 (footage-authorized work order)
+
+Evidence rule (AGENTS.md): footage and retail walkthroughs may establish
+counts, sequences, mechanics, dialogue flow, timing and approximate blocking.
+They NEVER yield exact XYZ — no video- or walkthrough-derived position is
+presented as recovered retail coordinates, and none was merged into any
+recorded-ground layer. All fight-formation offsets below remain explicitly
+adapter formation.
+
+### 14.1 Sources located and used
+
+All fetched 2026-09-27. "Used" = informed an implementation or doc change;
+"located" = confirms the footage genre exists but was not needed for a
+decision.
+
+Used (retail-era text + journal, counts/sequences/mechanics only):
+
+- `https://ffxiv.gamerescape.com/wiki/Here_There_be_Pirates` (+
+  `/Here_There_be_Pirates/Plot_Details`) — obsolete-quest journal + walkthrough.
+  Establishes: 5 Kraken Deckhands, each level 25, in the Misery hold; ???
+  chest spawns the Counterfeit Chip Mold (one mold suffices; killing all five
+  also yields one); linkpearl check with Titinin before returning; Echo on
+  Mirage pugilists incl. Hurrey/Halstein/Melisie. Formerly-required items list:
+  Bronze Kraken Key, Counterfeit Chip Mold.
+- `https://ffxiv.gamerescape.com/wiki/Two_Sides_to_Every_Chip` — obsolete
+  journal + walkthrough. Establishes: plateau ??? at map cell (12,33), west-side
+  entrance; duty is 2 Ossuary Almstakers with Hurrey assisting; Titinin then
+  Gagaruna close the quest.
+- `https://ffxiv.gamerescape.com/wiki/All_Bark_and_No_Bite` (+ Plot Details) —
+  journal + walkthrough. Establishes: single Ala Mhigan Challenger using
+  Gladiator abilities, entered through the guild back door; cutscene after the
+  kill; Lulutsu reward. Confirms the Gla200 safe slice unchanged.
+- `https://ffxiv.gamerescape.com/wiki/Unalienable_Rights` — walkthrough.
+  Establishes: single J'moldva (Lancer) spar; "30 minutes to defeat J'moldva"
+  (single-source timer, NOT adopted — see HOLD (f)); post-fight ambient NPCs
+  (Willelda, Ceinguled, Z'pahtalo, Burchard, Francis) stay unbound by design.
+- `https://ffxiv.gamerescape.com/wiki/Thrill_of_the_Fight` (+ Fandom
+  `Gladiator_Quests_(version_1.0)` journal) — walkthrough + full journal.
+  Establishes the complete Echo-chain order (tourney win → familiar Lalafell →
+  challenger Echo + repeat bout → observed defeat → Silver Bazaar Echo →
+  Yoyobina messenger scene → Lulutsu reward), which matches the template
+  `documentedUnboundChain` order; and a ~25%-HP crowd-performance emote beat
+  (no emote-forcing primitive recovered — documented only).
+- `https://ffxiv.gamerescape.com/wiki/Bloody_Baptism` — journal + walkthrough.
+  Establishes: handful of Tower Lemmings (lv 15) + Lord of Swiftperch (lv 20)
+  at Swiftperch Tower (ramp at 17-23); Trident Map handoff; tails as proof.
+  Confirms the Exc200 7+1 single wave unchanged.
+- `https://ffxiv.gamerescape.com/wiki/Two-man_Crew` — journal + walkthrough.
+  Flow matches the bespoke ladder (Rostnsthal → steal → report → fence to
+  Rorojaru on Sapphire Avenue → Waekbyrt reward), BUT describes a different
+  steal design: 4 interactables (3 chests + crate with a pirate to kill),
+  creaking-floorboard fail state (4 noises fail the instance), optional Escaped
+  Lemming. The scenario-decomp design (5 named valuables, trialObject
+  variants, no fail state) wins as client-code evidence; the walkthrough
+  variant is logged as a possible earlier-patch design, HOLD.
+- `https://ffxiv.gamerescape.com/wiki/Captain%27s_Orders` — journal +
+  walkthrough. Establishes: 5-minute survival vs Moenskaet (confirms 300 s);
+  ??? check waking in an empty room; lounge → deck oath flow; rematch vs
+  Moenskaet + two henchmen (confirms 1+2); Rostnsthal report + Waekbyrt reward.
+  Confirms Exc306 unchanged.
+- `https://finalfantasy.fandom.com/wiki/Pugilist_Quests_(version_1.0)` —
+  full Pgl300/306 journal text. Confirms route order; Pgl306 journal says "a
+  number of pugilists ... fighting against a thaumaturge" (singular) while the
+  walkthrough's played count is x2 — walkthrough wins on counts.
+
+Located but not used for decisions:
+
+- YouTube `Final Fantasy XIV 1.0 - Archer Class Quest Cutscenes`
+  (`https://www.youtube.com/watch?v=2vNfUJG7ZN4`, uploaded 2012-11-28) —
+  era-captured class-quest cutscene footage; proves the genre/medium only.
+- YouTube `Final Fantasy XIV 1.0 - Pugilist Class Quest Cutscenes` (title
+  confirmed via aggregator 2026-09-27; direct URL not recovered in-session —
+  NOT cited for any fact).
+- Mirke's Menagerie `FINAL FANTASY XIV 1.0 ARCHIVE` (1,500-page transcript
+  compendium, released 2023-08-28,
+  `https://mirkemenagerie.tumblr.com/post/726871548870393856/final-fantasy-xiv-10-archive`)
+  — logged as a corroboration lead; not parsed in-session (Google-Doc scale).
+
+### 14.2 Gaps closed by this pass (implemented or confirmed)
+
+(a) Pgl300 fight composition: single 2280217/3066 → five spawns of the same
+mob row (lv 25, skill 15), `requireAllTargets`, adapter cross formation
+(center + 4 corners at ±4 yalms). Template battle block + director CONFIG +
+comments; `validate_pgl300_route.py` now asserts 5+5+kill-all. Corroboration:
+main-SQL loot already maps mob 3066 → Counterfeit Chip Mold 11000019 at 20%,
+i.e. ~1 expected mold over five kills, matching the walkthrough's "only need
+one mold". The ???-chest spawn and linkpearl check stay HOLD (no recovered
+primitives); the mold remains corpse loot.
+(b) Pgl306 fight composition: single 2289014/3079 → two spawns of the same
+mob row (lv 36, skill 14), `requireAllTargets`, adapter ±3-yalm pair.
+Template + director + comments; `validate_pgl306_route.py` now asserts
+2+2+kill-all. Hurrey's in-duty assistance stays HOLD (no ally-combatant
+support in the private-battle shell; Hurrey remains a route actor).
+(c) Confirmation closes (no code change, recorded so they stop being gaps):
+Gla200 single-challenger slice; Exc200 7+1 single wave; Exc306 300-s survival
+and 1+2 rematch; Gla306 safe-slice boundary (walkthrough chain order matches
+`documentedUnboundChain`, still unwired — HOLD (e)).
+(d) CSVs: `fight_waves.csv` rows updated for (a)/(b) + new trailing
+`evidence_source` column; `sequences.csv` gains the same column (per-quest
+keys). All pre-existing evidence columns byte-identical (rebuild diff shows
+only the two fight rows + new columns). No XYZ added anywhere.
+(e) Exc300 briefing `==1` gate CONFIRMED CORRECT by scenario decomp (no code
+change needed): `exc300.lua` `processEvent020` returns the exc30020 cutscene
+result, and the Pgl300 Echo events (`processEvent060/070/080`) show the
+retail pattern explicitly — `if worldMaster:ask(...) == 1` plays the
+past-area vision, `else return 0`. Only an explicit accept advances;
+decline/nil holds the step through the shared UpdateENPCs/EndEvent
+fallthrough, mirroring the client's own else branch. Fail-closed and
+client-faithful; removed from the HOLD list. (The offer path stays
+nil-tolerant per template convention; the in-quest briefing stays strict.)
+
+### 14.3 Still HOLD (with reason)
+
+(a) Yoyobina/Hurrey/Silver-Bazaar Y scaffolds + all adapter formation
+offsets: footage/walkthroughs never yield exact XYZ by rule; no
+recorded-ground or client floor evidence exists. The Pgl306 (12,33) cell only
+corroborates the plateau region the DAT marker already pins.
+(b) Gla306 Echo/refugee chain: walkthrough + journal now confirm the full
+order, but wiring needs an Echo/past-area director (PrivateAreaPast scenes,
+repeat-bout and observed-match staging) that does not exist; the emote-at-25%
+beat has no forcing primitive either. Documented, not implemented.
+(c) Template completion-item inventory-full retry (Exc200 4040405, Gla200
+4030203): shared-driver change affecting 100+ quests; left for a driver-level
+pass. No footage evidence of the retail retry path in-session.
+(d) ~~Exc300 briefing `==1` hard gate~~ — CLOSED by scenario decomp, see
+§14.2(e). (Removed from HOLD; struck rather than deleted for audit trail.)
+(e) Pgl300 Echo order aside ("use echo on Hurrey last" in one walkthrough
+paragraph) vs numeric event order 060/070/080 = Hurrey/Melisie/Halstein and
+the same site's Plot Details listing Hurrey first: sources disagree → keep
+numeric order, logged as unresolved observation.
+(f) Gla300 "30 minutes" duty timer (single walkthrough line) vs shell default
+600 s: single-source, no scenario/corroboration → documented, not changed.
+(g) Exc300 4-container stealth-fail variant: contradicts scenario decomp;
+possible earlier patch; HOLD pending era-client evidence.
+(h) No enablement flipped: Y scaffolds, (b), offsets, (c) all remain (and
+the closed (d)/(e) items required no behavior change), so
+EXPECTED_ENABLED and `quest_availability.lua` are untouched (only 110102
+enabled in this pack).
+
+### 14.4 Tests (2026-09-27, this pass)
+
+FF14-Memory: `validate_pgl300_route.py` PASS (5x),
+`validate_pgl306_route.py` PASS (2x), `validate_class_quest_mob_types.py`
+PASS (41 pairs, 24 quests), `validate_class_quest_20_30_36.py`,
+`validate_quest_availability.py`, `tools/test_quest_counter_slots.py`, plus
+the remaining pack validators (pgl200/gla200-306/exc200-306) — see return
+report for the full list and results.

@@ -1,22 +1,22 @@
-quest_id,code,title,level,classes,offer_actor,reward_actor,prereq_sql,exp_script,status_20260927
-110300,Wdk200,The Mouths of Babes,20,CRP29,1000465,1000465,0,1760,HOLD skeleton
-110301,Wdk300,Hide and Seek Shenanigans,30,CRP29,1000465,1000465,110300,3420,HOLD skeleton
-110302,Wdk306,Spanning the Spectrum,36,CRP29,1000596,1000596,110301,4720,HOLD skeleton
-110320,Bsm200,An Ear for Quality,20,BSM30/ARM31,1000144,1000176,0,2000,HOLD gated (Mimidoa)
-110321,Bsm300,Song of the Sirens,30,BSM30/ARM31,1000144,1000176,110320,3000,HOLD skeleton
-110322,Bsm306,The Sound of Silence,36,BSM30/ARM31,1000144,1000176,110321,0,HOLD gated (combine+victims)
-110360,Gld200,She Walks in Beauty,20,GSM32,1000950,1000950,0,1760,HOLD gated (Parley+spawns+recipe)
-110361,Gld300,F'lhaminn's Flower,30,GSM32,1000950,1000949,110360,3420,HOLD gated (escort+Parley)
-110362,Gld306,Struck Through the Heart,36,GSM32,1000950,1000949,110361,4720,HOLD gated (Parley+storehouse+Echo)
-110380,Tan200,The Silent Partners,20,LTW33,1000231,1000231,0,1760,HOLD skeleton
-110381,Tan300,Designer Imposters,30,LTW33,1000231,1000231,110380,3420,HOLD skeleton (Parley)
-110382,Tan306,Head of the Class,36,LTW33,1000231,1000231,110381,4720,HOLD skeleton (Parley+selector)
-110400,Wvr200,Hoodwinked,20,WVR34,1000293,1000293,0,0,HOLD skeleton
-110401,Wvr300,Dance the Night Away,30,WVR34,1000293,1000293,110400,3420,HOLD skeleton (Parley x4)
-110402,Wvr306,A Fruitful Murder,36,WVR34,1000293,1000293,110401,3720,HOLD skeleton (non-combat SQB)
-110420,Alc200,"Sleep, Cousin of Death",20,ALC35,1000597,1000597,110013,1760,ENABLED playable
-110421,Alc300,The Boy and the Dragon Gay,30,ALC35,1000597,1000932,110420,3420,HOLD gated (NPCs+Parley)
-110422,Alc306,"Dream On, Dream Away",36,ALC35,1000932,1000597,110421,4720,HOLD gated (recipe+Echo)
-110440,Cul200,Showdown,20,CUL36,1000138,1000138,0,1760,ENABLED playable (reference)
-110441,Cul300,Mystery of the Gastronome Gone Home,30,CUL36,1000138,1000138,110440,3420,HOLD skeleton (Parley+owners)
-110442,Cul306,Something in the Soup,36,CUL36,1000168,1000138,110441,4720,HOLD skeleton (grants+Echo)
+quest_id,code,title,level,classes,offer_actor,reward_actor,prereq_sql,exp_script,status_20260927,video_evidence_20260927
+110300,Wdk200,The Mouths of Babes,20,CRP29,1000465,1000465,0,1760,HOLD skeleton,V1;V2 cutscene coverage only; no closable content
+110301,Wdk300,Hide and Seek Shenanigans,30,CRP29,1000465,1000465,110300,3420,HOLD skeleton,V1;V2 cutscene coverage only; Parley not implementable from footage
+110302,Wdk306,Spanning the Spectrum,36,CRP29,1000596,1000596,110301,4720,HOLD skeleton,V1;V2 cutscene coverage only; ally-shooter driver unrecoverable; NON-COMBAT stands
+110320,Bsm200,An Ear for Quality,20,BSM30/ARM31,1000144,1000176,0,2000,HOLD gated (Mimidoa),V3;A1 flow+rewards corroborated (Non-Combat; max ~2000 EXP)
+110321,Bsm300,Song of the Sirens,30,BSM30/ARM31,1000144,1000176,110320,3000,HOLD skeleton,V3 cutscene coverage only; no Parley/recipe content
+110322,Bsm306,The Sound of Silence,36,BSM30/ARM31,1000144,1000176,110321,0,HOLD gated (combine+victims),V3;A4 typed Non-Combat; archive carries no EXP row (stays 0)
+110360,Gld200,She Walks in Beauty,20,GSM32,1000950,1000950,0,1760,HOLD gated (Parley+spawns+recipe),V4 cutscene coverage only
+110361,Gld300,F'lhaminn's Flower,30,GSM32,1000950,1000949,110360,3420,HOLD gated (escort+Parley),V4 cutscene coverage only; escort driver unrecoverable
+110362,Gld306,Struck Through the Heart,36,GSM32,1000950,1000949,110361,4720,HOLD gated (Parley+storehouse+Echo),V4 cutscene coverage only
+110380,Tan200,The Silent Partners,20,LTW33,1000231,1000231,0,1760,HOLD skeleton,A5 remnant count=3 documented; V10 Leatherworker video unavailable
+110381,Tan300,Designer Imposters,30,LTW33,1000231,1000231,110380,3420,HOLD skeleton (Parley),V10 Leatherworker video unavailable; no closable content
+110382,Tan306,Head of the Class,36,LTW33,1000231,1000231,110381,4720,HOLD skeleton (Parley+selector),V10 Leatherworker video unavailable; no closable content
+110400,Wvr200,Hoodwinked,20,WVR34,1000293,1000293,0,0,HOLD skeleton,V5;V6;V8;A3 journal flow corroborated; no tool/EXP rows in archive (needle rejected; EXP stays 0)
+110401,Wvr300,Dance the Night Away,30,WVR34,1000293,1000293,110400,3420,HOLD skeleton (Parley x4),V5;V6;V7;V8 cutscene coverage only
+110402,Wvr306,A Fruitful Murder,36,WVR34,1000293,1000293,110401,3720,HOLD skeleton (non-combat SQB),V5;V6;V8;A2 exact maximum 3720 EXP + Non-Combat corroborated
+110420,Alc200,"Sleep, Cousin of Death",20,ALC35,1000597,1000597,110013,1760,ENABLED playable,V9 cutscene coverage only (quest already ENABLED)
+110421,Alc300,The Boy and the Dragon Gay,30,ALC35,1000597,1000932,110420,3420,HOLD gated (NPCs+Parley),V9 cutscene coverage only
+110422,Alc306,"Dream On, Dream Away",36,ALC35,1000932,1000597,110421,4720,HOLD gated (recipe+Echo),V9 cutscene coverage only
+110440,Cul200,Showdown,20,CUL36,1000138,1000138,0,1760,ENABLED playable (reference),V11 no 1.0 Culinarian quest video found (reference quest)
+110441,Cul300,Mystery of the Gastronome Gone Home,30,CUL36,1000138,1000138,110440,3420,HOLD skeleton (Parley+owners),V11 no 1.0 Culinarian quest video found
+110442,Cul306,Something in the Soup,36,CUL36,1000168,1000138,110441,4720,HOLD skeleton (grants+Echo),V11 no 1.0 Culinarian quest video found

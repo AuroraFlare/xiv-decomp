@@ -263,3 +263,169 @@ absence notes remain.
   defaults); Thm306 yield threshold/rival skills; Cnj300 aspect resists + seq-15 branch;
   Cnj306 escort path/mob copies; after-warp lifetimes of 010/040-class events; unbound
   flavor variants listed per quest above; Lnc200 Linkpearl; Cnj200 Morys appearance.
+
+## Video-evidence review — 2026-09-27 (archived/YouTube footage, authorized evidence)
+
+Evidence rules (hard): footage establishes counts, sequences, mechanics, dialogue flow,
+timing, and approximate blocking only. It NEVER yields exact XYZ — no video-estimated
+position is presented below as recovered retail coordinates or live-confirmed floor, and
+no video pixel was calibrated into world coordinates (shared map-coordinate workflow
+`docs/mob_map_coordinates.md` applies; all XYZ in this pack remain DAT/recorded-ground
+values, pre-existing authored estimates stay labeled estimated, and nothing was merged
+into recorded-ground layers). No position was derived from any video in this pass.
+Main-SQL completeness holds: this pass makes zero data changes (doc + CSV provenance
+columns only), so there is nothing to carry into main SQL and no migration-only fix.
+
+Driver/template finality (in-flight items verified landed, no pending diffs):
+`startClassBattle` in `Data/scripts/quests/class_quest_template.lua` and the
+`arc300.lua` / `arc306.lua` / `cnj306.lua` echo launchers propagate the
+`cleanupOwnsEvent` two-value contract; `QuestDirectorClassThm200/Thm300.lua` grant the
+Twisted Aldgoat Horn (11000015) / Writ of Access (11000030) once under a `HasItem`
+guard. No Lua/director/SQL change was needed in this pass: all 12 fights and edge
+paths were already implemented, chocobo-free, and validator-green (see below).
+
+Sources logged (URL + coverage timestamps; accessed 2026-09-27; upload dates are the
+platforms' own and are not asserted as run dates):
+- S01 `https://www.youtube.com/watch?v=1FwllHbw81Q` — "FFXIV Archived 1.0: Archer"
+  (00:00 Filling the Quiver, 04:23 The Foreboding Forest, 12:24 There Can Be Only One,
+  18:41 Alternate dialogue).
+- S02 `https://www.youtube.com/watch?v=hRTsFtZTPp8` — "FFXIV 1.0 - Filling The Quiver"
+  (Arc200 individual).
+- S03 `https://www.youtube.com/watch?v=_2wtLRaKOXw` — "FFXIV 1.0 - The Foreboding
+  Forest" (Arc300 individual; alternates `n7RXiAOQxjk`, `YLVFruiTBoM`, `hwfwO_hh8w8`,
+  1.23b compilation `gOrGAXkNS2w` noted but not separately relied on).
+- S04 `https://www.youtube.com/watch?v=uBYbi8AJ5sE` — "FFXIV 1.0 - There Can Be Only
+  One" (Arc306 individual, 12:39).
+- S05 `https://www.youtube.com/watch?v=fzug_RoAlbA` — "FFXIV Archived 1.0:
+  Thaumaturge" (00:00 The Big Payback, 06:00 Revelry in Rivalry, 12:06 Law and the
+  Order, 19:42 Alternate dialogue).
+- S06 `https://www.youtube.com/watch?v=n6e7hK3KmWg` — "FFXIV 1.0 - The Big Payback"
+  (Thm200 individual).
+- S07 `https://www.youtube.com/watch?v=GUui5bq7qOo` — "Thaumaturge R30 - FFXIV
+  Revelry In Rivalry" (bomb + protect-the-smith framing) plus
+  `https://www.youtube.com/watch?v=9tB7b_cl544` (Unending Journey replay) and
+  `https://www.youtube.com/watch?v=40ezVUbyQZ8` (FF Archive sidequest).
+- S08 `https://www.youtube.com/watch?v=mFHVGOK7Tuk` — "FFXIV 1.0 - Law And The Order"
+  (Thm306 individual).
+- S09 `https://www.youtube.com/watch?v=teBSI2N4ql4` — "FFXIV Archived 1.0: Lancer Job
+  Quests" (00:00 A Wailing Welcome, 04:25 Culture Shock, 17:48 Necessary Evils, 26:42
+  Alternate dialogue).
+- S10 `https://www.youtube.com/watch?v=uE_1QjgHMLg` (Culture Shock Part 5, chocobo
+  caravan of Ul'dahn tradesmen) + `https://www.youtube.com/watch?v=yaDbmuyRAMo`
+  (Lancer Rank 30) + FF Archive Lancer playlist `PLsnSIkqGz_BOi4WzXIXUiEVUt2Sc4exDJ`.
+- S11 `https://www.youtube.com/watch?v=uvMGGOxFm94` — "FFXIV 1.0 - Necessary Evils"
+  (Lnc306 individual; alternates `ukxcmnCooIU`, `4Z5aNS2hdlI` — the latter confirms
+  the 36,000 gil / 3,600-mark reward band — noted).
+- S12 `https://www.youtube.com/watch?v=bNofTseBId4` — "Final Fantasy XIV 1.0 -
+  Conjurer Class Quest Cutscenes" + FF Archive Conjurer playlist
+  `PLsnSIkqGz_BNCq_bASpHGlqXExG5A7SUs` (Dendrological Duties / Good Knight, Sweet
+  Dreams / The Call of Nature entries).
+- S13 `https://www.youtube.com/watch?v=Qb01veh35i8` (Good Knight, Sweet Dreams R30)
+  + `https://www.youtube.com/watch?v=KDkdL7XCBPg` (Part 1) +
+  `https://www.youtube.com/watch?v=GuRCH9Zw3VQ` (Part 2).
+- S14 `https://www.youtube.com/watch?v=nVO3Uw9XwqQ` — "FFXIV - Conjurer Quests - The
+  Call of Nature" (Unending Journey replay).
+- T01 (period text, corroborating only — not footage):
+  `https://www.groverwhim.com/2011/07/call-of-nature-contains-spoilers.html`
+  (2011-07-19: escort-fail-at-25%-HP claim; "four wolves" Echo recollection).
+- W01–W04 (walkthrough cross-checks, already-cited archive family, re-read
+  2026-09-27): `https://ffxiv.gamerescape.com/wiki/The_Big_Payback`,
+  `https://ffxiv.gamerescape.com/wiki/Good_Knight,_Sweet_Dreams`,
+  `https://ffxiv.gamerescape.com/wiki/The_Call_of_Nature`,
+  `https://ffxiv.gamerescape.com/wiki/Dendrological_Duties`.
+
+What footage supports (all already implemented — confirmation only, no code change):
+- Arc200 (S01/S02): five Yarzon Invaders in one wave with the Ixal fleeing (confirms
+  the 2/2/1 three-variant composition); Nonolato → Keelty → fence → duty → Nonolato
+  order.
+- Arc300 (S01/S03): Nonolato → Keelty Hold briefing → Owl's Nest gate → Vairemont
+  delivery → Keelty ×2 → road ambush versus exactly the Bandit Pathfinder + Bandit
+  Scout pair → Keelty Yes-gated report → Nonolato reward (confirms the custom-script
+  flow; the 30-minute cap is not visible and stays a documented reconstruction).
+- Arc306 (S01/S04): optional informant hints → Sorrel Haven find → Yarzon escape →
+  return cutscene → Siward duel with Siward as the sole required kill and nearby
+  Yarzons optional → Hold aftermath → Keelty confession → Nonolato reward (confirms
+  the two-battle contract and the never-spawned battle-ally handling).
+- Lnc200 (S09): Willelda → J'moldva → four Orchard Chigoes → J'moldva aftermath →
+  Willelda payment (confirms single-wave cull).
+- Lnc300 (S09/S10): J'moldva briefing → Gagaruna canvass → Dreues scene-only test →
+  J'moldva caravan order → rendezvous defense in two waves (five Woodsent Pterocs,
+  then two Woodsent Does) → broker aftermath → J'moldva report → Willelda reward.
+  Visible caravan chocobos are set dressing only — no chocobo actor or callback is
+  spawned (notes-only), and no escort-AI / caravan-failure rule is evidenced.
+- Lnc306 (S09/S11): Willelda oath → J'moldva briefing → trigger → single Woodsent
+  Elemental → campfire aftermath → broker Echo gate → J'moldva report → Willelda
+  reward (confirms; moogle-chase / Garlean-spy beats are story, not targets).
+- Thm200 (S05/S06 + W01): Yayake → I'loofii → Western Thanalan trigger → herd duty
+  (five Nannygoats with the Death-marked Billygoat lured when one herd goat is left,
+  Horn proof, then the Enraged Nannygoat) → I'loofii report (confirms the three-wave
+  structure; the 4+1 wave split stays the documented technical workaround and the
+  trigger Y stays a scaffold).
+- Thm300 (S05/S07): Yayake → rival → Baderon → smith trigger → single Ignis Fatuus
+  versus the protected bizarre blacksmith (bomb kill wins either way; smith outcome
+  selects the 027/028 Bodenolf report) → Echo → Yayake → rival → Yayake reward
+  (confirms; scripted attrition rate stays authored).
+- Thm306 (S05/S08): Yayake → I'loofii → wreck-site rival talk → Echo → nonlethal
+  duel with yield (confirms the yield mechanic; the exact 25% HP threshold stays
+  authored — an HP-bar pixel reading is approximate, never an exact retail number —
+  and rival skills stay unrecovered).
+- Cnj200 (S12 + W04): Soileine → Telent → four Rabid Coywolves in sequence + Alpha
+  Coywolf → Telent report → Soileine reward, with the journal/walkthrough Morys
+  post-kill appearance beat confirmed as story (see still-HOLD below).
+- Cnj300 (S12/S13 + W02): Soileine → Lifemend Morys (+ linkpearl follow-up) →
+  Amberscale duty with all six aspect elementals as a single group, Morys present
+  but not assisting, knight aftermath → Soileine → Owl's Nest Yuhelmeric →
+  rescued-knight Echo gate → forest-border Morys → Soileine reward. The walkthrough
+  patrol legs (Humblehearth / Camp Emerald Moss) have no DAT markers, so the direct
+  Lifemend → Amberscale route stands; Linkpearl duty-exit lines are presentation
+  (standard content return is the reconstruction).
+- Cnj306 (S12/S14 + W03): Soileine → Ingram briefing + bag → Amberscale escort
+  request → Camp Emerald Moss escort (Yarzon Stalker ambushes plus the Furline
+  Mosstrooper group spawning together at the clearing; HP-0/distance fail per the
+  walkthrough) → Echo gate → cave-edge defense versus exactly three Hungry
+  Dreadwolves with young Morys dressing → Ingram report + bag return → Soileine
+  reward (confirms; T01's "four wolves" is a conflicting single-observer
+  recollection against the walkthrough's explicit three — the three-wolf
+  implementation stands).
+
+Still HOLD (with reason — none blocks the current enabled/disabled split):
+- Owl-gate / Keelty-post / trigger Y scaffolds: Y is XYZ; footage never yields exact
+  XYZ → scaffolds stay.
+- Arc306 exit transforms + Yarzon counts: transforms are XYZ → stay; counts stay
+  authored (footage blocking is approximate; route validators pin the 4-escape /
+  3-duel split).
+- Spawn offsets / party caps: offsets are XYZ → stay; caps are rank defaults —
+  footage party size never proves a cap → stay.
+- Thm306 25% yield threshold + rival skills: threshold exactness needs client data;
+  skills unrecovered → stay authored.
+- Cnj300 aspect resists + seq-15 branch: resists need damage-table recovery;
+  footage damage numbers are approximate; the journal-data branch mapping is
+  unresolved → the neutral-resist linear-order approximation stays, documented.
+- Cnj306 escort path / mob copies / levels / young-Morys casting: path is XYZ →
+  stays authored (69-node North Shroud route, provenance-labeled); copies/levels stay
+  validator-pinned reconstructions.
+- Cnj306 escort fail-threshold conflict: T01 claims fail at Morys ≤25% HP while W03
+  says HP 0. Single 2011-07 observer recollection versus walkthrough + native route
+  semantics — unresolvable without client data → HP-0 + distance implementation
+  retained, conflict documented here.
+- After-warp lifetimes (010/040-class events): engine lifecycle; footage shows fades,
+  not server event ownership → stay as documented (preEvent vs talk-callback split).
+- Unbound flavor variants (Arc 005_8/010_2/040_2–8, Lnc none beyond Linkpearl,
+  Cnj306 005_2–005_12/010_2–010_4/030_2–030_3/070_2–070_10, etc.): no footage segment
+  binds them to owners; story rides in the bound events → stay unbound.
+- Lnc200 Linkpearl: dialogue mention ≠ item-transaction ownership; no grant
+  event/owner recovered → stays unbound (Thm200's Yayake-linkpearl line is the same
+  category and likewise unspawned).
+- Cnj200 Morys appearance: beat confirmed by journal/W04/S12, but no content-owner
+  variant is recovered — spawning the route actor inside the duty would invent
+  ownership (Cnj300's present-but-not-assisting Morys has an explicit content
+  variant 2290033; Cnj200 has none) → stays unspawned HOLD.
+- Enablement unchanged: Arc 110160–110162 stay enabled; Lnc/Thm/Cnj stay disabled.
+  Per the task gate (every gap closed AND route validator green AND
+  `EXPECTED_ENABLED` + availability annotation updated together), footage confirms
+  but does not close the XYZ/numeric/ownership gaps above, so no quest changes
+  enablement in this pass.
+
+Machine outputs: `outputs/class-quest-ranged-decomp-20260927/*.csv` gained two
+appended provenance columns (`video_source_url`, `video_evidence_note`) per row;
+all pre-existing columns/rows are byte-identical in content (no evidence rewritten).

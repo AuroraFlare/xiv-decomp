@@ -210,3 +210,121 @@ found and fixed/noted:
   Alc300/Bsm/Cul/Gld/Tan/Wvr/Wdk rows to stay commented — stale for the
   intentionally enabled Alc200/Cul200. Not touched (availability freeze);
   reported.
+
+## 9. Video/archived-evidence addendum — 2026-09-27 (no enablement)
+
+No quest Lua, SQL, availability annotation, or counter use changed in
+this pass: every pack quest retains at least one hard blocker (exact
+spawn actors/variants, Parley/escort/ally-shooter drivers, unrecovered
+recipes/grants, Echo past-area identity, storehouse/private-area
+owners). Footage and archived 1.0-era text may establish sequences,
+dialogue flow, delivery mechanics, counts, and timing — they NEVER
+yield exact XYZ or missing actor identities, so no spawn, trigger, or
+driver gap closes here. All 8 CSVs gain an additive
+`video_evidence_20260927` column; no existing cell was rewritten.
+
+### 9.1 Sources logged
+
+Cutscene/gameplay footage (YouTube; coverage from titles/descriptions —
+logged for sequence/dialogue-flow reference, not positions/actors):
+
+- V1 `https://www.youtube.com/watch?v=0xNPBmRdYW0` — 1.0 Carpenter
+  questline (1.23b cutscenes: Mouths of Babes / Hide and Seek
+  Shenanigans / Spanning the Spectrum).
+- V2 `https://www.youtube.com/watch?v=e_Ml5VF0rhA` — 1.0 Carpenter
+  class quest cutscenes.
+- V3 `https://www.youtube.com/watch?v=E2SgM_weO2I` — 1.0 Blacksmith
+  & Armorer questline (1.23b cutscenes).
+- V4 `https://www.youtube.com/watch?v=pCYh37O7sgk` — 1.0 Goldsmith
+  questline (1.23b: She Walks in Beauty / F'lhaminn's Flower / Struck
+  Through the Heart).
+- V5 `https://www.youtube.com/watch?v=DpwwBnzoU1c` — 1.0 Weaver
+  questline (1.23b: Hoodwinked / Dance the Night Away / A Fruitful
+  Murder).
+- V6 `https://youtu.be/oDtL8XMNf3k` — archived 1.0 Weaver quests
+  (00:00 Hoodwinked / 04:35 Dance the Night Away / 07:00 A Fruitful
+  Murder).
+- V7 `https://www.youtube.com/watch?v=TVmhaEiSbB0` — 1.0 Dance the
+  Night Away (Weaver 30).
+- V8 `https://www.youtube.com/watch?v=_RzGnztn9xM` — 1.0 Weaver
+  class quest cutscenes.
+- V9 `https://www.youtube.com/watch?v=fQVpudijPy8` — 1.0 Alchemist
+  questline (1.23b: Sleep Cousin of Death / Boy and the Dragon Gay /
+  Dream On, Dream Away).
+- V10 `https://m.youtube.com/watch?v=-tB8tIK2qCE` — 1.0
+  Leatherworker questline — searched 2026-09-27, page reports "This
+  content isn't available"; NOT viewable, logged only.
+- V11 Culinarian 1.0 questline video — searched 2026-09-27, none
+  found (only ARR-era lore retrospectives). Gap stands.
+
+Archived 1.0-era quest text (contemporary Gamer Escape 1.x snapshots
+plus Fandom 1.0 pages; journal/sequence/count/reward evidence only):
+
+- A1 local `docs/ffxiv-1.0-wiki/pages/An_Ear_for_Quality.html`
+  (snapshot 2013-01-26): Bsm200 typed Non-Combat; maximum ~2,000 EXP
+  at level 20; ~20,000 gil; Naldiq & Vymelli's Linkpearl; issuer
+  Bodenolf; Mimidoa instructs; quest runs inside an instance of the
+  guild area; branch recipe split (ARM 2x Bronze Plate vs BSM plate
+  + rivets) with the wrong-branch craft NOT triggering the Mimidoa
+  cutscene (as of 1.22c).
+- A2 local `docs/ffxiv-1.0-wiki/pages/A_Fruitful_Murder.html`
+  (snapshot 2013-01-26): Wvr306 typed Non-Combat; maximum 3,720 EXP
+  at level 36 (exact-maximum tooltip, NOT an average); ~36,000 gil;
+  walkthrough "make 10 Luxurious Gloves at Copperbell Mines; take 10
+  Undyed Velveteen and 10 Cotton Yarn".
+- A3 Wayback `.../wiki/Hoodwinked` snapshot 2013-01-26 (fetched
+  2026-09-27): Wvr200 typed Non-Combat; rewards list ~20,000 gil +
+  Sunsilk Tapestries Linkpearl with NO tool row and NO EXP row; four
+  journal entries name the hood inputs "Ripped Riding Hood, bolt of
+  mesa-red cotton cloth, spindle of cotton yarn" (flavor naming; the
+  registered recipe 5400 with red dye stands).
+- A4 Wayback `.../wiki/The_Sound_of_Silence` snapshot 2013-01-26
+  (fetched 2026-09-27): Bsm306 typed Non-Combat; rewards list
+  ~36,000 gil with NO EXP row.
+- A5 Wayback `.../wiki/The_Silent_Partners` snapshot 2013-01-26
+  (fetched 2026-09-27): Tan200 walkthrough documents THREE Armor
+  Remnant sets ("third set", "all three pieces", second quest synth
+  after the third); NPCs involved Gylbart/Lalatta/Lefwyne; item
+  required Wood Wailer's Jacket; wear-armor inspection walk to the
+  chocobo stables and back (status messages; no chocobo mechanics);
+  Gylbart delivery at Quarrymill.
+- A6 Fandom `*_Quests_(version_1.0)` pages (Weaver, Alchemist,
+  Carpenter, Leatherworker, Goldsmith, Culinarian; fetched
+  2026-09-27): rank-20 ~1,760 / rank-30 ~3,420 / rank-36 ~4,720 EXP
+  approximations (all "~"-marked averages) and rank-20 tool names.
+  Approximate-only: where A6 conflicts with contemporary archive
+  (A2: Wvr306 4,720 vs exact-maximum 3,720; A3: Wvr200 Brass Needle
+  vs no tool row) or recovered machine data, A1–A5 + machine data
+  win and A6 is recorded as approximate-only.
+
+### 9.2 Gap verdicts from this pass
+
+- Tan200 "remnant count" sub-gap: CLOSED as a documented count —
+  three remnant sets (A5). Jacket recipe binding, Lalatta/Gylbart/
+  inspector spawn actors, and equip/inspection owners stay HOLD
+  (identities/positions never from footage/text).
+- Wvr306 EXP 3720 + NON-COMBAT verdict: CORROBORATED (A2 exact
+  maximum 3,720; Type Non-Combat). Fandom's ~4,720 recorded as
+  superseded approximation. No code change (script already 3720).
+- Bsm200 EXP 2000 + non-combat: CORROBORATED (A1). No change.
+- Wvr200 EXP: stays 0. A3 (contemporary, lists EXP maxima
+  elsewhere) carries no EXP row; A6's ~1,760 is approximate-only.
+  Per "never inferred", the unreported status stands. Brass Needle
+  stays REJECTED (absent from A3 rewards and the central table;
+  A6 alone does not override).
+- Bsm306 EXP: stays 0. A4 carries no EXP row; unreported status
+  stands (Wvr306 precedent proves rank-36 values deviate, so the
+  4720 pattern must not be assumed).
+- Wdk300/306, Gld300/306, Tan300/306, Alc300/306, Cul300/306,
+  Bsm300, Wvr300, Gld200, Tan200(balance), Cul200: no closable
+  content — Parley/escort/ally-shooter drivers, exact spawn
+  actors/variants, recipes/grants, Echo areas, storehouse/private
+  owners, and Linkpearl ids are all outside what footage and
+  archived text may establish. V-series cutscene sources are logged
+  for future dialogue-flow cross-checks only.
+- Wvr306 Copperbell trigger actors: NON-COMBAT verdict STANDS
+  (A2 Type Non-Combat + A5-style walkthrough has no combat step) —
+  footage cannot invent combat; no kill targets added.
+- No-chocobo: PASS unchanged (A5's stable walk is on-foot movement
+  text, no chocobo mechanics; zero mount APIs in all 21 scripts).
+- Counter slots: untouched (0–3 only); no new slot use.
