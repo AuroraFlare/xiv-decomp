@@ -1,0 +1,12 @@
+source,subject,fact,verdict
+DAT-template,branches,slots 2+3 values {5/10/15}; state 5 needs BOTH order-free,KEPT (machine data wins over A7 exclusive walkthrough)
+DAT-template,scenes,offer CharlysStart; branches 010/015/017/020; final 030 afterWarp=true,KEPT (010/017 Prudentia 015/020 Pulmia best effort; 030 Charlys best effort)
+DAT-template,markers,range 11044001-11044008 filler 11044009-11044020,KEPT (01 offer 02-07 branches 08 final; filler never sent)
+DAT-template,rewards,gil 15000 + marks 1000120x1750 + expmax 1760 + frypan conflict,KEPT (gil/marks central; EXP script; frypan omitted)
+SQL-spawn,actors,Charlys/Prudentia/Pulmia public zone 230 with XYZ,VERIFIED (all three rows present)
+SQL-recipe,recipes,5386 crust + 5387 pate exact five-material sets no crystals,VERIFIED (main SQL + live migration mirror)
+SQL-gather,materials,Tiger Cod fished + Spinach harvested + 8 trade goods,VERIFIED (gather.csv pools present)
+V12-video,Showdown,YouTube hnIFw9aySOk R20 Culinarian Quest exists,LOGGED (closes V11 gap; flow reference only)
+A7-gamerescape,flow,Charlys offer; per-choice cook; instance; Prudentia rear cutscene,NOTED (exclusive/instance/finale conflict resolved for machine data)
+A7b-plot,scenes,Parts 1-5 incl recipe grant and token reward; Part4 Pulmia empty,NOTED (grant/token owners unrecovered; Pulmia path undocumented)
+A8-fandom,rewards/journals,Linkpearl+frypan+~20k+~1760; 4 journal bullets; Fade to White prev,NOTED (approximate-only; prereq/linkpearl/tool not adopted)

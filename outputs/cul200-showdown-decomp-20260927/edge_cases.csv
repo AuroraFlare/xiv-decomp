@@ -1,0 +1,15 @@
+case,expected,verified_by
+pre-cooked denial,baseline snapshot blocks pre-accept dishes,simulate_cul.py + code read cul200_branchTalk
+HQ delivery,NQ+HQ counted and consumed (NQ first),helpers CulCountItem/CulConsumeItem + mooncheck
+traded-dish credit,any gain while active counts (etc-delivery parity),code read CulNetGain
+extra-cook leftovers,delivery consumes 1; onFinish consume-all cleans rest,code read onFinish (2026-09-27 fix)
+abandon-reaccept,baselines reset to current holdings; no false credit,code read onStart + Quest.cs OnAbandon
+early-final refusal,Charlys reports X of 2; no completion until both verdicts,simulate_cul.py + code read onTalk
+class-change mid-quest,talks and ENPCs gate on CUL20; progress persists,code read onTalk/onStateChange
+consume-failure hold,delivery holds with message; no state advance,code read cul200_branchTalk
+offer-decline retry,offer advances only on explicit accept==1,code read onTalk SEQ_ACCEPT
+verdict repeatability,post-DONE talks replay verdict scene safely,code read progress>=DONE branch
+journal/markers,journal done/2; markers 01/02-07/08 by readiness,code read getJournal*
+counter-slots,slots 0-3 only; no slot>=4 use,test_quest_counter_slots.py PASS
+availability,110440 enabled; 110441/110442 commented,validate_quest_availability.py valid
+recipes-synthesis,5386/5387 registered; synthesis path works,validate_crafting_retail.ps1 PASS

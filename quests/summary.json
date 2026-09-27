@@ -1,0 +1,32 @@
+{
+  "package": "class-quest-normalized-20260927",
+  "scope": [
+    "pgl200",
+    "pgl300",
+    "pgl306",
+    "gla200",
+    "gla300",
+    "gla306",
+    "lnc200",
+    "lnc300",
+    "lnc306",
+    "man300-parley",
+    "man206-linkpearl",
+    "parley-blocked-hand"
+  ],
+  "counts": {
+    "per_quest_dirs": 12,
+    "class_quests": 9,
+    "bespoke": 1,
+    "template_stub": 8,
+    "enabled": 0
+  },
+  "normalization": "Per-quest dirs distilled from pack CSVs + indepth docs; no new mining. EXC/ARC/THM/CNJ intentionally excluded (already per-quest in class-quest-decomp-magic/).",
+  "gaps_carried_over": [
+    "PGL/GLA SQL prereq cells: 0 = Lua gates none (melee doc s1); SQL chain rows not re-mined here.",
+    "Live-client acceptance for all fights/scenes (adapter formation offsets, Y scaffolds).",
+    "3 melee validators blocked on missing scenario files in that checkout (gla200/exc300/exc306); non-scenario asserts verified manually by batch A.",
+    "No Parley subsystem in server: 9 HAND quests HOLD (see parley-blocked-hand/parley-blocks.csv); man300 tile play unimplementable.",
+    "Lnc200 Wailing Barracks Linkpearl grant unbound; Lnc300/306 no escort/caravan-failure rule evidenced."
+  ]
+}

@@ -8,7 +8,8 @@ Machine data: `outputs/class-quest-gathering-decomp-20260927/` (`quest_list.csv`
 Sources (FF14-Memory repo): `Data/scripts/quests/class_quest_template.lua` (template
 rows + `InitClassQuest` driver), per-quest Lua (`min/min200.lua` bespoke 2026-09-27,
 `min/min_quest_helpers.lua` new, `hrv/hrv300.lua` bespoke, `fsh/fsh200.lua`,
-`fsh/fsh300.lua`, `fsh/fsh306.lua` bespoke HOLD-gated, `fsh/fsh_quest_helpers.lua`;
+`fsh/fsh300.lua`, `fsh/fsh306.lua` bespoke (HOLD gates removed on
+enablement, see §9), `fsh/fsh_quest_helpers.lua`;
 all other Min/Hrv files are 3-line `InitClassQuest` stubs),
 `Data/sql/gamedata_quests.sql`, `Data/sql/gamedata_quest_rewards.sql`,
 `Data/sql/gamedata_items.sql`, `Data/sql/server_fishing.sql`,
@@ -17,22 +18,22 @@ all other Min/Hrv files are 3-line `InitClassQuest` stubs),
 `Data/sql/server_eventnpc_spawn_locations.sql`,
 `docs/Dat Mining/quest_marker.csv`, `docs/class_job_quest_implementation_2026-08-23.md`,
 `docs/min200_a_piece_of_history_2026-09-26.md`.
-Availability: `Data/scripts/quests/quest_availability.lua` — only 110500 enabled;
-all other pack quests stay as-is (no enablement flips in this pass).
+Availability: `Data/scripts/quests/quest_availability.lua` — 110500 enabled at
+first writing; 110460/110481/110501/110502 enabled in the §9 pass.
 
 ## 1. Implementation verdicts
 
 | Quest | Script truth | Status |
 |---|---|---|
-| Min200 A Piece of History (110460) | bespoke `min/min200.lua` + `min_quest_helpers.lua` (2026-09-27), template row kept as decomp source | Implemented, offer disabled (class-quest convention) |
+| Min200 A Piece of History (110460) | bespoke `min/min200.lua` + `min_quest_helpers.lua` (2026-09-27), template row kept as decomp source | Implemented, ENABLED (§9) |
 | Min300 Little Saboteurs (110461) | stub; template metadata-only (`noOffer`) | HOLD (see §5) |
 | Min306 Runaway Little Girl (110462) | stub; template metadata-only (`noOffer`) | HOLD (see §5) |
 | Hrv200 Gridanian Roots (110480) | stub; template metadata-only (`noOffer`) | HOLD (see §5) |
-| Hrv300 The Grass is Always Greener (110481) | bespoke `hrv/hrv300.lua`, no template row (Exc300 precedent) | Implemented, offer disabled |
+| Hrv300 The Grass is Always Greener (110481) | bespoke `hrv/hrv300.lua`, no template row (Exc300 precedent) | Implemented, ENABLED (§9) |
 | Hrv306 A Moogle Bouquet (110482) | stub; template metadata-only (`noOffer`) | HOLD (see §5) |
 | Fsh200 To Fight a Fishback (110500) | bespoke `fsh/fsh200.lua` + helpers, template row kept | Implemented, ENABLED |
-| Fsh300 The Beast of the Barrel (110501) | bespoke HOLD-gated (`FSH300_OFFER_ENABLED=false`) + template row | HOLD (see §5) |
-| Fsh306 Polishing the Mast (110502) | bespoke HOLD-gated (`FSH306_OFFER_ENABLED=false`) + template row | HOLD (see §5) |
+| Fsh300 The Beast of the Barrel (110501) | bespoke + template row | Implemented, ENABLED (§9) |
+| Fsh306 Polishing the Mast (110502) | bespoke + template row | Implemented, ENABLED (§9) |
 
 Class/level gates: MIN=39, BTN=40, FSH=41; levels 20/30/36. Every bespoke
 handler gates class+level, calls `UpdateENPCs()` + `EndEvent()` on all talk/push
@@ -139,14 +140,18 @@ Full table: `gaps.csv`.
 - Hrv306: dynamic seed/faeces counts + correlation formula, node/hazard
   actors, sleep/wake aggro lifecycle, instance handoffs, dynamic 030
   payload, Greatloam + forest delivery actors, reward owner, EXP.
-- Fsh300: Barrel zone/coords + boat travel (Rerenasu legs 5/20);
-  emote-round identity binding; fresh-catch rule; wider catch species.
-  Note: public Sisipu row 3329 (`fsh306_sisipu`, z230) now exists, so
-  the "no public Sisipu" HOLD note in `fsh300.lua` is partly stale —
-  but the gate stays until Barrel travel lands. Never enable for testing.
-- Fsh306: timed-assignment duration (bell source/length), state-0 push
-  owner, sale payout, state-20 extension, fresh-vs-preowned policy.
-  `FSH306_DEV_BYPASS` is GM-local-testing only.
+- Fsh300 (§9: enabled): Sisipu row 3329 verified DAT-exact for marker
+  11050101 (4.7 yalms from 11050108; 23-yalm documented offset for
+  11050109/10). Ferry legs are ask-gated with no zone movement
+  (driver precedent). Residual: emote-round identity binding,
+  fresh-catch rule, wider catch species, Barrel-trigger live
+  reachability (no navmesh proof at rows 3330-3333).
+- Fsh306 (§9: enabled): Sisipu row 3329 DAT-exact for 11050204/05;
+  state-0 push owner bound to stairs trigger row 3328 (DAT-exact for
+  11050201, driver precedent); sale payout 1,000 gil per Gamer
+  Escape's obsolete walkthrough. Residual: timed-assignment duration
+  (3-bell authored placeholder), single-sale simplification (retail
+  repeats), state-20 extension, fresh-vs-preowned policy.
 
 ## 6. No-chocobo verification (pack scope)
 
@@ -360,3 +365,84 @@ route-validator + annotation + `EXPECTED_ENABLED` bar.
 All six machine tables gained `video_sources` + `archive_sources` columns
 (2026-09-27); every pre-existing column value is byte-identical. Rows for
 110460/110481/110500/110501/110502 carry out-of-scope notes only.
+
+## 9. Enablement addendum — 2026-09-27 (Min200/Hrv300/Fsh300/Fsh306)
+
+Scope: offer enablement + hardening for 110460/110481/110501/110502 only.
+Min300/Min306/Hrv200/Hrv306 stay HOLD per §8. No new decomp claims below:
+closures reuse DAT/marker rows, spawn SQL, decompiled scenario order, and
+walkthrough text already cited in this pack.
+
+### 9.1 Script changes (FF14-Memory)
+
+- Min200: offer nil-accepts (battle-quest pattern; was strict `== 1`).
+  Baselines, net-gain credit, consume-on-full-pack, ENPC/EndEvent paths
+  unchanged. No grants, so grant-before-consume is N/A.
+- Hrv300: every exchange now grants before consuming with verified
+  once-grants (already-held copies satisfy without doubling); failed
+  grants hold the sequence with a make-room message. `onStart` clears
+  the Parley-introduced and Nogeloix-first flags; the offer path calls
+  `UpdateENPCs` after accept.
+- Fsh300: HOLD gate removed. Ferry legs are ask-gated with no zone
+  movement (driver precedent; all actors live in zone 230). The
+  Rorojaru trade is possession-gated and grants the subligar before
+  consuming the message, with a once-flag retry guard. `onStart`
+  clears emote/catch/grant flags. Offer nil-accepts.
+- Fsh306: HOLD gate removed. State 0 binds the stairs trigger push
+  (row 3328, driver precedent); sale payout is 1,000 gil per Gamer
+  Escape's obsolete walkthrough. `onStart` clears assignment/Echo
+  state. Offer nil-accepts. `PUSH_EXCEPTIONS` in
+  `tools/validate_class_quest_20_30_36.py` gains `Fsh306` (stairs push).
+- Shared: 110460/110481/110501/110502 uncommented in
+  `quest_availability.lua`; `EXPECTED_ENABLED` grows 6 → 10.
+
+### 9.2 Video/archived-source cross-check (this pass)
+
+YouTube (page-extract title verification 2026-09-27; no new frames
+claimed, per the §8 hard rules footage establishes sequences only):
+
+- Min200: `https://www.youtube.com/watch?v=1TDAwECkPY0` ("FFXIV
+  Archived 1.0: Miner", ch 00:00–06:45 A Piece of History, per the §8
+  log). Gamer Escape's obsolete walkthrough matches the route beat for
+  beat: Linette offer, Z'ssapa twins scene (choice cosmetic),
+  second Z'ssapa talk for the item list, three ??? areas (37-27
+  Eastern / 15-28 Western / 25-27 Central; Prospect unneeded, Lay of
+  the Land only), Z'ssapa appraisal, Nenekko instance (stays unbound:
+  no spawn row), Linette reward. Fade to White prerequisite
+  documented, unenforced (no driver prerequisite support).
+- Hrv300: `https://www.youtube.com/watch?v=y-cQuN5N5YI` ("Final
+  Fantasy XIV v1.23b: Botanist Story", ch 3:28–9:04 The Grass Is
+  Always Greener, per the §8 log; cutscene compilation, gameplay not
+  shown). Gamer Escape's obsolete walkthrough matches the route:
+  Opyltyl → Cicely → Penelope (Carline Canopy) → Cicely → branch
+  (directly outside Gridania) + nut (near Humblehearth) → Cicely →
+  Penelope Parley → Cicely → Nogeloix, then Linette, → guild →
+  Opyltyl reward. Nogeloix-before-Linette order confirmed.
+- Fsh300/Fsh306: no 1.0-era footage located after targeted searches
+  (queries: fisher Barrel/subligar/Polishing the Mast; FFXIV Archived
+  1.0 fisher). Cross-check rests on Gamer Escape's obsolete
+  walkthroughs + DAT + decomp. Fsh300: walkthrough order (feed →
+  dance → Ul'dah → dance → catch) differs from the decomp state
+  order (trade 15 before rounds 22); the script keeps trade-first
+  (documented deviation, same as the driver). Fsh306: walkthrough
+  confirms stairs → assignment → timed sale (1,000 gil) → Echoes
+  "multiple times until it no longer allows you" → N'nmulika reward;
+  multi-sale ("catch as many as you can") and the Wawalago extension
+  stay unmodeled (documented).
+
+### 9.3 Validators run (this pass, all PASS)
+
+- `validate_min200/hrv300/fsh300/fsh306_route.py` — PASS.
+- `validate_class_quest_20_30_36.py` — contract ok (51 quests, 10
+  enabled offers).
+- `validate_class_held_routes.py` — PASS (27 held contracts exact).
+- `validate_quest_availability.py` — valid (524 rows, 82 enabled).
+- `tools/test_quest_counter_slots.py` — PASS (flag 5 / push additions
+  fit the persisted engine contract).
+- `luaparser` parse check on all four quest scripts +
+  `quest_availability.lua` — OK.
+
+Residual live-verification risks (no footage/navmesh proof): Fsh300
+Barrel-trigger reachability at rows 3330-3333 (DAT-exact X/Z,
+scaffolded Y/rotation); Fsh306 3-bell timer length; per-round emote
+identity for Fsh300.

@@ -86,8 +86,9 @@ message and NO state advance — retry-safe). Every delivery consumes
 consume failure the quest holds with a progress message. Guild-mark
 grants on the dual-class BSM line are likewise verified before
 `CompleteQuest`. `onFinish` cleans leftover quest items (reference-
-consistent remove-1 for Alc/Cul/Bsm200/Bsm300/Alc300/Alc306/Cul200;
-consume-all for Wdk/Gld/Tan/Wvr/Bsm306).
+consume-all for Alc200/Alc300/Alc306/Cul200/Cul306 per the 2026-09-27
+Cul200-pattern hardening, plus Wdk/Gld/Tan/Wvr/Bsm306;
+reference-consistent remove-1 for Bsm200/Bsm300).
 
 ## 3. Recipes + material lists (`recipes.csv`)
 
