@@ -42,3 +42,13 @@ Target file (repo-blocked, staged here): `FF14-Decomp/docs/mnk0j5_five_easy_piec
 - STATUS: implemented-behind-capture-gate — code + SQL complete; Y/rotation for
   all four coffers + Darkhold content visibility need live capture before
   `offer=true`.
+
+## Amendment 2026-09-27 (MNK-B pass)
+
+Superseding package: `quests/111225-mnk0j5-five-easy-pieces/` (data.json +
+decomp.md + quest.md, incl. the 4-site locate table + capture checklist).
+Implemented in FF14-Memory this pass: objectives table (uniqueIds
+`mnk0j5_{darkhold,ughamaro,turning_leaf,deadwind}_coffer`),
+`completionOwner = "interaction"`, eventnpc rows 3383-3386 (X/Z exact,
+Y/rot capture-gated); offer stays closed. Prior draft IDs 3336-3339 are
+taken (Min300); 3359/3360 are Tanner rows.

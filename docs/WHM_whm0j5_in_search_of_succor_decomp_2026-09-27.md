@@ -30,10 +30,16 @@ close; shows no further item/ability. No NQ scenes or fades.
 ## Items (verified in gamedata_items.sql)
 
 8051406 Healer's Culottes, 8071406 Healer's Gloves, 8081806 Healer's Boots,
-8013506 Healer's Circlet. Marker-to-item bindings are UNRECOVERED and this pack
-does not invent them: each coffer grants the first still-unowned piece of the
-set (order-free), so all four visits always complete the set with no false
-binding. (Template precedent explicitly forbids list-order bindings.)
+8013506 Healer's Circlet. Coffer-to-item bindings at WALKTHROUGH confidence
+(NOT retail DAT — the client takes the item as server arg4):
+Darkhold 11222401 -> Culottes (period official-forum guide + GamerEscape
+walkthrough "The box containing the Healer's Culottes");
+Zahar'ak 11222402 -> Gloves (Garlemald-Server #148 + elimination: the only
+unnamed piece/chest pair); Turning Leaf 11222403 -> Boots (GamerEscape "18,39
+... to obtain your Healer's Boots"); Tiger Helm 11222404 -> Circlet
+(GamerEscape "41,28 to obtain your Healer's Circlet"). Fixed per-coffer grants
+replace the earlier order-free policy. (Template precedent forbids LIST-ORDER
+bindings; these bindings are walkthrough-attested, not list-order.)
 
 ## Coffers (adapter policy, EXPLICIT)
 
@@ -49,16 +55,25 @@ apart: the bespoke script matches `npc:GetUniqueId()` (pgl200 coin precedent).
 ## Implementation: bespoke `whm0j5.lua` (no director; no battle; no chocobo surface)
 
 SEQ: ACCEPT Raya -> 6 four coffer pushes (flags 0-3 + counter 0, unordered,
-idempotent: owned piece / set flag re-pushes are safe no-ops; inventory-full
-grant failures persist nothing and stay retryable) -> 10 return to Raya
-(`processEvent_RAYA_O_clear`) -> complete. Journal markers suppress visited
-coffers. Abandon/reacquire clears flags/counter in `onStart`. Every handler
-re-checks eligibility (WHM 45, THM 15, prereq 111244) and ends the event on all
-paths. Coffer visibility caveat: actors are public (per-spawn visibility does
-not exist); the push is fail-closed for non-quest players.
+idempotent: already-owned bound piece still records the visit; set-flag
+re-pushes are safe no-ops; inventory-full grant failures persist nothing and
+stay retryable) -> 10 return to Raya (`processEvent_RAYA_O_clear`) -> complete.
+Journal markers suppress visited coffers. Abandon/reacquire clears flags/counter
+in `onStart`. Every handler re-checks eligibility (WHM 45, THM 15, prereq
+111244) and ends the event on all paths. Coffer visibility caveat: actors are
+public (per-spawn visibility does not exist); the push is fail-closed for
+non-quest players.
 
 ## Sources
 
 - `job_war_mnk_whm_decomp_2026-09-27.md` Whm0j5 section
 - quest_marker.csv 11222401-5; gamedata_items.sql AF rows; actor_class 1200161
 - `OpenWorldCofferManager.cs` (coffer actor model); pgl200 coin-push precedent
+- GamerEscape In Search of Succor obsolete walkthrough (Culottes/Boots/Circlet
+  bindings; Zahar'ak chest at 49,40); Garlemald-Server #148 (all four bindings);
+  official-forum WHM guide (Darkhold Culottes, via dzemael AF coffer followup)
+- Map verification 2026-09-27 (`mob_map_coordinates.md` Agent workflow):
+  11222401 Darkhold z231 (no recorded ground at center; Y UNREVIEWED),
+  11222402 z171 -> (48.66,40.95) vs walkthrough 49,40,
+  11222403 z154 -> (18.39,40.10) vs walkthrough 18,39,
+  11222404 z128 -> (41.41,28.66) vs walkthrough 41,28

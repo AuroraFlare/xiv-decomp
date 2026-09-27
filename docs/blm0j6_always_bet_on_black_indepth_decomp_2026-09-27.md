@@ -65,3 +65,52 @@ Ququruka's confession -> Wizard's Coat. Status: ENABLED private adapter.
   cutscene-skip acknowledgement, disconnect, death-during-event, boundary
   circle, retrigger lease. Starts at Lalai (public Nald's Reflection
   trigger unrecovered - documented limitation, Mnk0j6 precedent).
+
+## Addendum 2026-09-27 (implement-blm-b pass; 100% audit)
+
+- Web (inspected bodies): Final Fantasy Wiki 1.0 journal confirms the
+  Dozol -> Kazagg -> linkpearl(Lalai) -> Milvaneth -> Nald's Reflection
+  route, "up to seven party members may accompany you (Recommended)"
+  (cap 8 total, matches adapter), and Wizard's Coat + Burst rewards.
+  Period forum thread "LFM Always Bet On Black" (search snippet):
+  "tank grabs Barbatos and runs him to the entrance", "Between pops,
+  damage Barbatos, but be sure to keep MP up to deal with adds" -
+  corroborates Barbatos-kite plus 45s add repop; the "weapons glow =
+  more damage" note is an unrecovered mechanic, not staged. No 1.0-era
+  YouTube footage found (results are ARR only).
+- Coordinates (mob_map_coordinates.md "All-zone interface" + "Agent
+  workflow" `locate`): 11223504 zone 174 (915.13, 661.27) -> map
+  (36.02, 37.33), cell (36,37) - matches the period "36,37 Black Mage
+  AF Quest Cave" report. 0 recorded nodes in selection (nearest 461u
+  away), so per "Generate placements" (recorded XYZ only, never
+  invented ground; private zones JSON-only, no public SQL) the fight
+  keeps owner-anchored private formation (Barbatos at leader +4 yalms,
+  lanterns +/-6) with Y from the owner. No public mob SQL written.
+- 100% checklist (all verified by file read this pass): NO chocobos -
+  launcher isMounted gates pre/post movie (gc_sqb_quest.lua) + engine
+  mount-restricted private areas (loophole-matrix rows 24-26) + new
+  director header note; FULL fight - Barbatos-only victory, 4 lanterns
+  with 45s repop + 10s simultaneous-kill suppression, 1200s timeout,
+  skill lists 10/5010 (AoEs/enmity via engine AI); death/abandon/
+  re-enter/disconnect/logout via gc_sqb_runtime branches + Disable-
+  Reentry + lifecycle lease (loophole-matrix rows 1-13); leash via
+  45-yalm boundary circle; reset via retry seq 0 (route flags persist)
+  or seq-5 direct relaunch; aggro/sequence-break via exact-actor kill
+  reconciliation + boundQuestIsCurrent + inert quest onKillBNpc.
+- Item-loss fix (this pass, shared template): completeJobQuest now
+  refuses completion unless every promised key item/item is visibly
+  possessed (engine AddItem is void over tri-state AddItem and
+  swallows ERROR_FULL); grantItems skips re-granting possessed
+  single-copy items so the retry cannot duplicate the coat. Harness
+  test "Black Mage 50 full inventory refuses completion and retries
+  without loss" added to test_content_rewards.lua.
+- Tests: validate_job_blm0j6_route PASS; MoonSharp content_rewards
+  group 17/17; full MoonSharp suite 993 passed / 1 failed where the
+  single failure is the parallel MNK worker's in-flight Mnk0j5
+  objectives ("Unverified coffer/object actors remain absent"),
+  untouched by this pass. validate_quest_availability PASS (42 rows);
+  blm0j1/blm0j2/blm0j3 routes PASS; counter slots PASS (527 scripts).
+- Open: linkpearl-contact journal stage 493 push owner; public Nald's
+  Reflection trigger owner; retail lantern count/simultaneity window
+  (4 copies + 10s stay labeled tuning); weapons-glow damage-shift
+  mechanic unrecovered.

@@ -42,3 +42,35 @@ Status: HOLD (coffer actors unrecoverable; set + destinations staged).
 2. Add spawn rows + `interactions.objectives` (4x {actor, marker, item,
    event getAF_info}); template machinery already handles unordered
    acquisition bits, inventory-full retry, and fourth-pickup completion.
+
+## Addendum 2026-09-27 (implement-blm-b pass; HOLD reaffirmed)
+
+- Web (inspected bodies): Final Fantasy Wiki "Black Mage Quests (version
+  1.0)" journal - Da Za's tablet names four garb destinations: Aurum
+  Vale (W of Camp Ever Lakes), Dusk Vigil (N of Camp Riversmeet), cave W
+  of Camp Brittlebark, cave S of Camp Broken Water; rewards Wizard's
+  Crakows/Gloves/Petasos/Tonban + ~5,340 EXP. Matches the staged set and
+  four markers. No coffer visuals/positions published.
+- Coordinates (mob_map_coordinates.md "All-zone interface" + "Agent
+  workflow" `locate`; center heights unresolved per "nearby heights
+  belong only to their recorded positions"):
+  - 11223401 zone 147 (-368.99, 1397.95) -> map (33.43, 35.42), 2 pts
+    in radius.
+  - 11223402 zone 148 (-1838.30, -703.93) -> map (18.74, 14.40), 31 pts
+    in radius.
+  - 11223403 zone 190 (191.11, 608.84) -> map (14.71, 19.53), 35 pts
+    in radius.
+  - 11223404 zone 174 (1761.81, 1428.56) -> map (44.49, 45.01), 11 pts
+    in radius.
+  Area/entrance X/Z confirmed; coffer transforms and marker-to-item
+  binding still unknown, so no placement (public SQL or private JSON)
+  is supportable.
+- Actor search: no quest-coffer class in gamedata_actor_class.sql; only
+  1200161 (GuildleveBonusTreasureBox) - still explicitly not a legal
+  substitute. No blm0j5 scenario chunk in lpb outputs.
+- Registry: quest_availability 111265 stays "Partially implemented"
+  (commented, validator-enforced); template row stays marker-only HOLD.
+  A parallel MNK worker's capture-gated 1200161 objectives for Mnk0j5
+  currently break tools/validate_job_af_interaction_runtime.py; BLM rows
+  PASS as held. BLM enablement needs the same live-capture +
+  validator-coordination route, not taken here.

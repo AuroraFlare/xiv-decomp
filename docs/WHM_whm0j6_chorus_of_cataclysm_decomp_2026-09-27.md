@@ -69,3 +69,11 @@ matrix as Whm0j1. No chocobo surface (private area engine ban + 0 spawn APIs).
 - `job_war_mnk_whm_decomp_2026-09-27.md` Whm0j6 section + whm0j605/whm0j610.json
 - quest_marker.csv 11222501/2; tmp staging rows 3020/3055; actor_class 2204x/2205x
 - GamerEscape plot details (Bentbranch); fandom journal; mob_types 3134-39
+- GamerEscape plot details (inspected 2026-09-27): Raya-O sends the PC SW of
+  Camp Bentbranch to pacify the elementals one after the next; Oha-Sok intervenes
+  ("Let go thy rage, my brothers and sisters") and becomes the robe
+- Map verification 2026-09-27 (`mob_map_coordinates.md` Agent workflow +
+  Calibration): 11222501 z150 -> (27.27,38.64) matches walkthrough X27 Y38; 0
+  recorded points in radius -> private entrant-relative spawns, no public SQL
+- Cutscene compilation (NOT retail fight footage): YouTube `Fl5tkBuF9Yc`
+  (v1.23b CNJ/WHM story via private server), Chorus of Cataclysm at 27:32

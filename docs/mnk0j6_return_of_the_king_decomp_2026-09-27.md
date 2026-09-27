@@ -40,3 +40,13 @@ not SimpleQuestBattle; timeout 900s is the fail pressure).
   party cap 8; mounts engine-handled; no sync (retail fixed). Cutscene skip:
   entry scene skippable (launch already staged); aftermath AfterWarp reload
   re-lands safely; reward independent of playback.
+
+## Amendment 2026-09-27 (MNK-B pass)
+
+Superseding package: `quests/111226-mnk0j6-return-of-the-king-of-ruin/`
+(data.json + decomp.md + quest.md). Corrections: (1) the Lv50 reward is
+Hundred Fists 27106 (1.0 quest page + official forum), NOT Form Shift
+(ARR anachronism); (2) retail levels are boss 55 / adds 53, shaman CNJ 23
+(Jan-2013 Gamerescape archive, local nm-pages) — mob_types rows aligned
+this pass (the loot-file staging already carried these values and wins at
+load); bowman 32762 likewise Lv53 (archive: Bowman 53/Archer).

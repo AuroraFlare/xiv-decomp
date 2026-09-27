@@ -62,3 +62,12 @@ wipe/retry/re-entry/abandon/disconnect/death/OOB/retrigger matrix as Whm0j1.
 - `job_war_mnk_whm_decomp_2026-09-27.md` Whm0j4 section + whm0j410.json
 - quest_marker.csv 11222301/2; actorclass_graphic.csv 2289031-34
 - fandom/GamerEscape journal; Garlemald-Server #147 (walkthrough confidence)
+- GamerEscape obsolete walkthrough (inspected 2026-09-27): instance in La Noscea
+  at 27-34 vs Butcher/Lancer/Grappler/Archer + Rowland; journal "up to seven
+  party members may accompany you" (maxPartySize 8)
+- Map verification 2026-09-27 (`mob_map_coordinates.md` Agent workflow +
+  Calibration): 11222301 z128 -> (27.51,34.50) matches walkthrough 27-34; 28
+  recorded points in radius, center Y unresolved -> private entrant-relative
+  spawns, no public SQL (All-zone interface: private zones use runtime homes)
+- Cutscene compilation (NOT retail fight footage): YouTube `Fl5tkBuF9Yc`
+  (v1.23b CNJ/WHM story via private server), Wheel of Disaster at 26:10

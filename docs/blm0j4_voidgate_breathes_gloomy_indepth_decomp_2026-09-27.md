@@ -48,3 +48,28 @@ actor unrecoverable; everything recoverable is staged, nothing fabricated).
    item = nil, event = "processEvent005"}}`; template onPush/flags/counter
    machinery already handles grant-once, inventory-full retry, and
    completion (proven by the Blm0j4 synthetic-actor test).
+
+## Addendum 2026-09-27 (implement-blm-b pass; HOLD reaffirmed)
+
+- Web (inspected bodies): Final Fantasy Wiki "Black Mage Quests (version
+  1.0)" journal - Dozol Meloc sends the player to a stela NW of Turning
+  Leaf, West Shroud; reward Sleepga + ~5,340 EXP; next quest from Da Za.
+  Matches staged offer/EXP/action surface. No 1.0-era YouTube footage
+  found (results are ARR only); no lurking-beast fight evidenced - the
+  single offer line stays flavor, no battle staged.
+- Coordinates (mob_map_coordinates.md "All-zone interface" + "Agent
+  workflow" `locate`): zone 153 (-1691.36, 124.54) -> map (14.13, 39.33),
+  0 recorded nodes in selection, nearest node 121 `!pos 153 -1939.459
+  0.147 -891.202` at 1045.6 yalms. Height stays unresolved; GM `!where`
+  capture still required. No public/private placement is supportable.
+- Actor search (gamedata_actor_class.sql): no Stela/Stele/StoneTablet
+  class; only guildleve-treasure object is 1200161
+  (GuildleveBonusTreasureBox) - still explicitly not a substitute. No
+  blm0j4/5 scenario chunk exists in lpb outputs (only blm0j1/blm0j6
+  recovered), so offer text IDs 3/32/15/14 and world texts 24/25/33 are
+  audit-carried, not chunk-verified.
+- Registry: quest_availability 111264 stays "Partially implemented"
+  (commented, validator-enforced); template row stays marker-only HOLD.
+  Enabling without a recovered stela actor + transform would be
+  fabrication and breaks tools/validate_job_af_interaction_runtime.py
+  (Blm0j4 rows PASS as held this pass).

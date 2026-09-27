@@ -36,3 +36,10 @@ entrant validation + pre-publish recheck. Instrument dupe: RemoveItemAtSlot on
 reward only if held; re-use impossible (no registry entry for 11000555).
 Mounts: engine-handled. No sync (retail fixed-level; eligibility PGL/MNK45).
 Cutscene: none (no skip surface).
+
+## Amendment 2026-09-27 (MNK-B pass)
+
+Superseding package: `quests/111224-mnk0j4-good-vibrations/` (data.json +
+decomp.md + quest.md). Corrections: mob is 32761 (moved off BRD range
+32750-32756; the director's stale 32750 reference is fixed in FF14-Memory
+this pass — it would have spawned a brd0j1 shirrer, not Apep).
